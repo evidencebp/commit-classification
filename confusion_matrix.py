@@ -27,16 +27,20 @@ def sk_to_grouped_df(labels
             , classifier : predictions}
     df = DataFrame(dict)
     df = df.reset_index()
-    grouped_df = group_df_for_cm(df, classifier, concept)
+    grouped_df = group_df_for_cm(df
+                                 , classifier
+                                 , concept
+                                 , count)
 
     return grouped_df
 
 
 def group_df_for_cm(df
                     , classifier
-                    , concept):
+                    , concept
+                    , count='count'):
     grouped_df = df.groupby([concept, classifier], as_index=False).agg({'index': 'count'})
-    grouped_df = grouped_df.rename(columns={'index': 'count'})
+    grouped_df = grouped_df.rename(columns={'index': count})
 
     return grouped_df
 
