@@ -3,6 +3,7 @@
     For details see https://en.wikipedia.org/wiki/Confusion_matrix
 """
 
+from pandas import DataFrame
 
 def ifnull(var, val=0):
   if var is None:
@@ -15,6 +16,22 @@ def safe_divide(numerator, divisor, default=None):
         return ifnull(numerator)/ifnull(divisor)
     else:
         return default
+
+def sk_to_grouped_df(labels
+                     , predictions
+                     , classifier='classifier'
+                     , concept='concept'
+                     , count='count'
+                     ):
+    dict = {concept: labels
+            , classifier : predictions}
+    df = DataFrame(dict)
+    df = df.reset_index()
+    grouped_df = df.groupby([concept,classifier], as_index=False).agg({'index' : 'count'})
+    grouped_df = grouped_df.rename(columns={'index' : 'count'})
+
+    return grouped_df
+
 
 class ConfusionMatrix(object):
     def __init__(self
