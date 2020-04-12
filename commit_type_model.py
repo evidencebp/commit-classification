@@ -1,4 +1,3 @@
-
 """
 This file contain a python implementation of the corrective commit linguistic model
 and the English linguistic model.
@@ -19,6 +18,8 @@ import re
 
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
+
+SCHEMA_NAME = 'ccp'
 
 # Positive
 bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
@@ -828,12 +829,12 @@ def refactor_to_bq():
 
     print( "# Refactor")
 
-    print('ccp.bq_positive_refactor(message)')
-    print(' - ccp.bq_non_code_refactor(message)')
-    print(' - ccp.bq_non_positive_linguistic_refactor(message)')
-    print(' - ccp.bq_non_positive_linguistic_refactor_goals(message)')
-    print(' - ccp.bq_non_positive_linguistic_refactor_removal(message)')
-    print(' - ccp.bq_documentation_entities_context_refactor(message)')
+    print('{schema}.bq_positive_refactor(message)'.format(schema=SCHEMA_NAME))
+    print(' - {schema}.bq_non_code_refactor(message)'.format(schema=SCHEMA_NAME))
+    print(' - {schema}.bq_non_positive_linguistic_refactor(message)'.format(schema=SCHEMA_NAME))
+    print(' - {schema}.bq_non_positive_linguistic_refactor_goals(message)'.format(schema=SCHEMA_NAME))
+    print(' - {schema}.bq_non_positive_linguistic_refactor_removal(message)'.format(schema=SCHEMA_NAME))
+    print(' - {schema}.bq_documentation_entities_context_refactor(message)'.format(schema=SCHEMA_NAME))
 
     print( "# Refactor - end ")
 
@@ -850,8 +851,8 @@ def perfective_to_bq():
 
     print( "# Perfective")
 
-    print('ccp.bq_just_perfective(message)')
-    print(' + ccp.bq_refactor(message)')
+    print('{schema}.bq_just_perfective(message)'.format(schema=SCHEMA_NAME))
+    print(' + {schema}.bq_refactor(message)'.format(schema=SCHEMA_NAME))
 
     print( "# Perfective - end ")
 
@@ -871,45 +872,45 @@ def generate_bq_function(func_name
 
 def print_bq_functions():
     print()
-    generate_bq_function('ccp.bq_corrective', corrective_to_bq)
+    generate_bq_function('{schema}.bq_corrective'.format(schema=SCHEMA_NAME), corrective_to_bq)
     print()
-    generate_bq_function('ccp.bq_adaptive', adaptive_to_bq)
-    print()
-
-
-    generate_bq_function('ccp.bq_English', English_to_bq)
+    generate_bq_function('{schema}.bq_adaptive'.format(schema=SCHEMA_NAME), adaptive_to_bq)
     print()
 
 
-    generate_bq_function('ccp.bq_positive_refactor', positive_refactor_to_bq)
+    generate_bq_function('{schema}.bq_English'.format(schema=SCHEMA_NAME), English_to_bq)
     print()
 
-    generate_bq_function('ccp.bq_non_code_refactor', non_code_refactor_to_bq)
+
+    generate_bq_function('{schema}.bq_positive_refactor'.format(schema=SCHEMA_NAME), positive_refactor_to_bq)
     print()
 
-    generate_bq_function('ccp.bq_non_positive_linguistic_refactor', non_positive_linguistic_refactor_to_bq)
+    generate_bq_function('{schema}.bq_non_code_refactor'.format(schema=SCHEMA_NAME), non_code_refactor_to_bq)
     print()
 
-    generate_bq_function('ccp.bq_non_positive_linguistic_refactor_goals'
+    generate_bq_function('{schema}.bq_non_positive_linguistic_refactor'.format(schema=SCHEMA_NAME), non_positive_linguistic_refactor_to_bq)
+    print()
+
+    generate_bq_function('{schema}.bq_non_positive_linguistic_refactor_goals'.format(schema=SCHEMA_NAME)
                          , non_positive_linguistic_refactor_goals_to_bq)
     print()
 
-    generate_bq_function('ccp.bq_non_positive_linguistic_refactor_removal'
+    generate_bq_function('{schema}.bq_non_positive_linguistic_refactor_removal'.format(schema=SCHEMA_NAME)
                          , non_positive_linguistic_removal_to_bq)
     print()
 
 
-    generate_bq_function('ccp.bq_documentation_entities_context_refactor'
+    generate_bq_function('{schema}.bq_documentation_entities_context_refactor'.format(schema=SCHEMA_NAME)
                          , documentation_entities_context_refactor_to_bq)
     print()
 
-    generate_bq_function('ccp.bq_refactor', refactor_to_bq)
+    generate_bq_function('{schema}.bq_refactor'.format(schema=SCHEMA_NAME), refactor_to_bq)
     print()
 
-    generate_bq_function('ccp.bq_just_perfective', just_perfective_to_bq)
+    generate_bq_function('{schema}.bq_just_perfective'.format(schema=SCHEMA_NAME), just_perfective_to_bq)
     print()
 
-    generate_bq_function('ccp.bq_perfective', perfective_to_bq)
+    generate_bq_function('{schema}.bq_perfective'.format(schema=SCHEMA_NAME), perfective_to_bq)
     print()
 
 
@@ -941,3 +942,6 @@ def is_English(commit_text):
 
     return English_num > 0
 
+
+if __name__ == '__main__':
+    print_bq_functions()
