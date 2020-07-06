@@ -19,7 +19,7 @@ import re
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
-SCHEMA_NAME = 'ccp'
+SCHEMA_NAME = 'general'
 
 # Positive
 bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
@@ -869,6 +869,7 @@ def generate_bq_function(func_name
     print("# Model language based on commit: XXX ")
     code_generator()
     print(" ) ")
+    print(" ; ")
 
 def print_bq_functions():
     print()
