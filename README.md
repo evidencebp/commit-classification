@@ -39,3 +39,6 @@ Please cite as
  keywords = {Code quality, machine learning, refactoring},
 } 
 ```
+
+See here the [analysis utilities](https://github.com/evidencebp/analysis_utils)
+See here the [corrective commit probability code](https://github.com/evidencebp/corrective-commit-probability)
