@@ -13,7 +13,8 @@ Please cite as
     eprint={2007.10912},
     archivePrefix={arXiv},
     primaryClass={cs.SE}
-}```
+}
+```
 
 And the supplementary Materials of the ["Which Refactoring Reduces Bug Rate?"](http://www.cs.huji.ac.il/~feit/papers/Refactor19PROMISE.pdf) paper by Idan Amit and [Dror G. Feitelson](https://www.cs.huji.ac.il/~feit/). Promise 2019
 
