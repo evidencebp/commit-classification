@@ -41,4 +41,5 @@ Please cite as
 ```
 
 See here the [analysis utilities](https://github.com/evidencebp/analysis_utils)
+
 See here the [corrective commit probability code](https://github.com/evidencebp/corrective-commit-probability)
