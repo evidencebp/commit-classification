@@ -57,12 +57,80 @@ prefective_entities = documentation_entities +[
     , 'typo(s)?'
     , 'verbosity']
 
+software_goals = ['abstraction', 'coherence', 'cohesion', 'complexity', 'correctness', 'coupling', 'dependability'
+    , 'duplication', 'efficiency', 'extensibility', 'flexibility' ,'maintainability', 'naming', 'performance', 'portability', 'quality'
+    , 'readability', 'reliability', 're(?:-| )?use' ,'re(?:-| )?usability', 'security', 'simplicity', 'testability', 'testable', 're(?:-| )?usable'
+    , 'readable', 'portable', 'maintainable', 'flexible', 'efficient', 'encapsulation'
+                  ]
+
+software_goals_modification = [
+    'better','improv(?:e|es|ed|ing)', 'increas(?:e|es|ed|ing)', 'reduc(?:e|es|ed|ing)', 'worse', 'make', 'more', 'less'
+]
+
+software_terms = ['algorithm(?:s)?', 'assertion(?:s)?', 'assignment(?:s)?', 'class(?:es)?', 'code', 'collection(?:s)?'
+    , 'conditional(?:s)?', 'constant(?:s)?', 'constructor(?:s)?', 'control', 'definition(?:s)?'
+    , 'delegate', 'delegation'
+    , 'design pattern(?:s)?', 'error(?:-| )?code(?:s)?', 'exception(?:s)?', 'field(?:s)?', 'flag(?:s)?', 'function(?:s)?', 'getter(?:s)?'
+    , 'guard clause(?:s)?', 'hierarch(?:y|ies)', 'implementation(?:s)?', 'inheritance', 'inline'
+    , 'interface(?:s)?', 'internal', 'macro(?:s)?'
+    , 'magic number(?:s)?', 'member(?:s)?', 'method(?:s)?', 'modifier(?:s)?', 'null object(?:s)?', 'object(?:s)?', 'parameter(?:s)?'
+    , 'patch(?:es)?',  'pointer(?:s)?', 'polymorphism', 'quer(?:y|ies)',  'reference(?:s)?'
+    , 'ref(?:s)?'
+    , 'return type', 'setter(?:s)?', 'static', 'structure(?:s)?', 'sub(?:-| )?class(?:es)?', 'super(?:-| )?class(?:es)?', '(?:sub)?(?:-| )?system(?:s)?'
+    , 'template(?:s)?', 'type(?:s)?'
+    , 'uninline'
+    #, 'value(?:s)?'
+    , 'variable(?:s)?', 'handler', 'plugin'
+    #, '(?:in)?validation'
+    #, 'input', 'output'
+    , 'unit(?:s)?'
+    , 'contravariant', 'covariant'
+                  # , 'link(?:s)?'
+    ,
+                  'action(?:s)?'
+                  # , 'event(?:s)?'
+    , 'queue(?:s)?', 'stack(?:s)?'
+    #, 'change(?:\s)?log'
+    , 'driver(?:s)?'
+    #, 'hook(?:s)?'
+    #, 'target(?:s)?'
+    , 'storage', 'tool(?:s)?', 'module(?:s)?', 'log(?:s)?', 'setting(?:s)?'
+    #, '(?:index|indexes|indices)'
+    , 'fall(?: |-)back(?:s)?', 'memory', 'param(?:s)?', 'volatile', 'file(?:s)?'
+    , 'generic(?:s)?'
+    #, 'test(?:s)?'
+    , 'initialization(?:s)?', 'public', 'protected', 'private' ,'framework', 'singelton', 'declaration(?:s)?'
+    , 'init' , 'destructor(?:s)?', 'instances(?:s)?', 'primitive(?:s)?'
+    #, 'middle man'
+    #, 'hierarchy'
+                  ]
+
+
 def build_sepereted_term(term_list : List, just_before =False):
     if just_before:
         sep = "%s(%s)" % (term_seperator, "|".join(term_list))
     else:
         sep = "%s(%s)%s" % (term_seperator, "|".join(term_list), term_seperator)
     return sep
+
+
+def build_non_positive_linguistic(positive_re):
+
+    non_actionable_context = ['for(?:get|gets|got|geting)'
+        , 'allow(s|ed|ing)?']
+
+
+    return '(?:%s)' % "|".join([
+        '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(modals, just_before=True)
+                                      ,  positive_re)
+        , '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(negation_terms, just_before=True)
+                                        ,  positive_re)
+        , '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(non_actionable_context, just_before=True)
+                                        ,  positive_re)
+        # TODO - take care of documentation entities spereatly
+        #, '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(documentation_entities, just_before=True)
+        #                                ,positive_re)
+    ])
 
 
 def match(commit_text, regex):
