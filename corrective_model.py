@@ -17,12 +17,10 @@ This prevented us from using lookaheads and lookbehinds, which are not supported
 import re
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
-    , regex_to_big_query, generate_bq_function, match
+    , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities
 
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
-
-SCHEMA_NAME = 'general'
 
 # Positive
 bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
@@ -78,46 +76,6 @@ bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adject
              'wrong(nly)?',
              'trouble(?:s)?',
              'vulnerabilit(?:y|ies)']
-# TODO - check https://arxiv.org/pdf/2001.09148.pdf for more
-security_terms = [ 'vulnerabilit(?:y|ies)', 'cve(-d+)?(-d+)?', 'security', 'cyber', 'threat']
-
-documentation_entities = [
-    'change(?: |-)?log',
-    'comment(s)?',
-    'copy(?: |-)?right(?:s)?',
-    'doc(?:s)?',
-    'documentation',
-    'explanation(?:s)?',
-    'man(?: |-)?page(?:s)?',
-    'manual',
-    'note(?:s)?',
-    'readme(?:.md)?',
-    'translation(?:s)?',
-    'java(?: |-)?doc(?:s)?',
-    'java(?: |-)?documentation',
-    'example(?:s)?',
-    'diagram(?:s)?',
-    'guide(?:s)?',
-    'icon(?:s)?',
-    'doc(?: |-)?string(?:s)?',
-    'tutorials(?:s)?',
-    'help',
-    'man',
-    'doc(?: |-)?string(?:s)?',
-    'desc(?:ription)?(?:s)?',
-    'copy(?: |-)?right(?:s)?',
-    'explanation(?:s)?',
-    'release notes'
-
-]
-
-prefective_entities = documentation_entities +[
-    'indentation(?:s)?'
-    , 'style'
-    , 'todo(s)?'
-    , 'typo(s)?'
-    , 'verbosity']
-
 
 # Valid_fix_objects
 valid_fix_object = prefective_entities + ['#',

@@ -8,19 +8,61 @@ file_scheme = '([a-z  -Z0-9_\*\.])+\.[a-zA-Z]{1,4}'
 
 term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|\|)"
 
-def build_sepereted_term(term_list : List, just_before =False):
-    if just_before:
-        sep = "%s(%s)" % (term_seperator, "|".join(term_list))
-    else:
-        sep = "%s(%s)%s" % (term_seperator, "|".join(term_list), term_seperator)
-    return sep
-
 
 # Negation
 negation_terms = ["aren't", "didn't" ,"don't", "doesn't", "isn't", 'lack', "n't", 'never', 'no', 'nobody', 'none', 'not'
     , 'nothing', "weren't", 'without', "won't"]
 
 modals = ['can', 'could', 'ha(?:ve|s|d)', 'may', 'might', 'must', 'need', 'ought', 'shall', 'should', 'will', 'would']
+
+
+
+# TODO - check https://arxiv.org/pdf/2001.09148.pdf for more
+security_terms = [ 'vulnerabilit(?:y|ies)', 'cve(-d+)?(-d+)?', 'security', 'cyber', 'threat']
+
+documentation_entities = [
+    'change(?: |-)?log',
+    'comment(s)?',
+    'copy(?: |-)?right(?:s)?',
+    'doc(?:s)?',
+    'documentation',
+    'explanation(?:s)?',
+    'man(?: |-)?page(?:s)?',
+    'manual',
+    'note(?:s)?',
+    'readme(?:.md)?',
+    'translation(?:s)?',
+    'java(?: |-)?doc(?:s)?',
+    'java(?: |-)?documentation',
+    'example(?:s)?',
+    'diagram(?:s)?',
+    'guide(?:s)?',
+    'icon(?:s)?',
+    'doc(?: |-)?string(?:s)?',
+    'tutorials(?:s)?',
+    'help',
+    'man',
+    'doc(?: |-)?string(?:s)?',
+    'desc(?:ription)?(?:s)?',
+    'copy(?: |-)?right(?:s)?',
+    'explanation(?:s)?',
+    'release notes'
+
+]
+
+prefective_entities = documentation_entities +[
+    'indentation(?:s)?'
+    , 'style'
+    , 'todo(s)?'
+    , 'typo(s)?'
+    , 'verbosity']
+
+def build_sepereted_term(term_list : List, just_before =False):
+    if just_before:
+        sep = "%s(%s)" % (term_seperator, "|".join(term_list))
+    else:
+        sep = "%s(%s)%s" % (term_seperator, "|".join(term_list), term_seperator)
+    return sep
 
 
 def match(commit_text, regex):
@@ -55,6 +97,4 @@ def generate_bq_function(func_name
     code_generator()
     print(" ) ")
     print(" ; ")
-
-
 
