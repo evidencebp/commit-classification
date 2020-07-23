@@ -318,6 +318,24 @@ def build_perfective_regex():
     return perfective
 
 
+def just_perfective_to_bq():
+
+    print("# Just Perfective")
+    print( "# Perfective :build_perfective_regex()")
+    #print( ",")
+    print( regex_to_big_query(build_perfective_regex()))
+
+def perfective_to_bq():
+
+    print( "# Perfective")
+
+    print('{schema}.bq_just_perfective(message)'.format(schema=SCHEMA_NAME))
+    print(' + {schema}.bq_refactor(message)'.format(schema=SCHEMA_NAME))
+
+    print( "# Perfective - end ")
+
+
+
 def print_refactor_functions():
 
     generate_bq_function('{schema}.bq_positive_refactor'.format(schema=SCHEMA_NAME), positive_refactor_to_bq)
@@ -345,6 +363,13 @@ def print_refactor_functions():
     generate_bq_function('{schema}.bq_refactor'.format(schema=SCHEMA_NAME), refactor_to_bq)
     print()
 
+    print()
+
+    generate_bq_function('{schema}.bq_just_perfective'.format(schema=SCHEMA_NAME), just_perfective_to_bq)
+    print()
+
+    generate_bq_function('{schema}.bq_perfective'.format(schema=SCHEMA_NAME), perfective_to_bq)
+    print()
 
 if __name__ == '__main__':
     print_refactor_functions()
