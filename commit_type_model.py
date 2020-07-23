@@ -16,6 +16,9 @@ This prevented us from using lookaheads and lookbehinds, which are not supported
 
 import re
 
+from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
+    , regex_to_big_query, generate_bq_function, match
+
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
@@ -146,20 +149,7 @@ valid_terms = [
     '(if|would)[\s\S]{0,40}go wrong'
 ]
 
-# TODO - negation changed
-# Negation
-negation_terms = ["aren't", "didn't" ,"don't", "doesn't", "isn't", 'lack', "n't", 'never', 'no', 'nobody', 'none', 'not'
-    , 'nothing', "weren't", 'without', "won't"]
 
-# TODO - handle term seperator
-# From original CCP
-#term_seperator = "(\s|\.|\?|\!|\[|\]|\)|\:|^|$|\,|\'|\"|\n|/)"
-term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|\|)"
-#term_seperator = "(\s|\.|\?|\!|\[|\]|\)|\:|^|$|\,|\'|\"|\n|/|\-|/|[^a-z0-9_])"
-# From Refactoring
-#term_seperator = "(?:^|$|[^a-z_])"
-#term_seperator = "(?:^|$|[^a-z0-9_])"
-#term_seperator = "(\W)"
 
 fixing_verbs = ['correct(?:ing|s|ed)'
                     , 'fix(ed|s|es|ing)?'
@@ -172,14 +162,6 @@ corrective_header_entities = fixing_verbs + [
     'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent'
     #, "(does not|doesn't) need" , "cannot", "can not"
  ] #+ [ "do not" ,"don't"]
-
-
-def build_sepereted_term(term_list , just_before =False):
-    if just_before:
-        sep = "%s(%s)" % (term_seperator, "|".join(term_list))
-    else:
-        sep = "%s(%s)%s" % (term_seperator, "|".join(term_list), term_seperator)
-    return sep
 
 def build_valid_find_regex():
     fix_re = "(" + "|".join(fixing_verbs) + ")"
@@ -476,12 +458,6 @@ adaptive_entities = ['ability', 'configuration', 'conversion', 'debug', 'new', '
     , 'test(s)?', 'tweak(s)?', 'mode', 'option']
 
 
-def match(commit_text, regex):
-    text = commit_text.lower()
-
-    return len(re.findall(regex, text))
-
-
 
 def build_refactor_regex():
     header_regex =  '(?:^|^[\s\S]{0,25}%s)(?:%s)%s' % (term_seperator
@@ -624,8 +600,6 @@ adaptive_header_action = "|".join([
 
 ])
 
-file_scheme = '([a-z  -Z0-9_\*\.])+\.[a-zA-Z]{1,4}'
-
 adaptive_actions = [  # 'revert(?:s|ed|ing)?',
     #'merg(?:e|es|ed|ing)[\s\S]{1,5}(pull request|pr|branch)',
     'add(?:s|ed|ing)?[\s\S]{1,50}(?:version|v\d|ver\d)',
@@ -660,7 +634,6 @@ def build_adaptive_regex():
                             , term_seperator)
 
 
-modals = ['can', 'could', 'ha(?:ve|s|d)', 'may', 'might', 'must', 'need', 'ought', 'shall', 'should', 'will', 'would']
 
 def build_non_adaptive_context():
 
@@ -740,20 +713,6 @@ def classifiy_commits_df(df):
     df['adaptive_pred'] = df.message.map(lambda x: is_adaptive(x) > 0)
 
     return df
-
-
-def regex_to_big_query(reg_exp
-                       , text_field='message'):
-    # TODO - check
-    # Take care of encoding
-    reg_exp = reg_exp.replace("\\", "\\\\").replace("'", "\\'")
-    #reg_exp = reg_exp.replace("\\\\", "\\")
-    # No need for grouping
-    reg_exp = reg_exp.replace("(?:", "(")
-    str = "(" + "LENGTH(REGEXP_REPLACE(lower(" + text_field + ")," + "'%s', '@'))" % reg_exp + "-" \
-          + "LENGTH(REGEXP_REPLACE(lower(" + text_field + ")," + "'%s', ''))" % reg_exp + ")"
-
-    return str
 
 def corrective_to_bq():
     # TODO - the \n in the string seperator is printed as a new line and should be fixed
@@ -857,19 +816,6 @@ def perfective_to_bq():
     print( "# Perfective - end ")
 
 
-
-def generate_bq_function(func_name
-                         , code_generator):
-    print("# Run in Starndad sql ")
-    print("CREATE OR REPLACE FUNCTION ")
-    print(func_name)
-    print(" (message string) ")
-    print(" RETURNS int64 ")
-    print("AS (")
-    print("# Model language based on commit: XXX ")
-    code_generator()
-    print(" ) ")
-    print(" ; ")
 
 def print_bq_functions():
     print()
