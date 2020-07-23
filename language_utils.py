@@ -106,6 +106,11 @@ software_terms = ['algorithm(?:s)?', 'assertion(?:s)?', 'assignment(?:s)?', 'cla
                   ]
 
 
+# Well, we need them...
+unnedded_terms = ['unnecessary', 'unneeded', 'unused', '(?:not|never|no longer) used'
+    #, 'old'
+    , 'no longer needed', 'redundant', 'useless', 'duplicate(?:d)?', 'deprecated', 'obsolete(?:d)?', 'commented']
+
 def build_sepereted_term(term_list : List, just_before =False):
     if just_before:
         sep = "%s(%s)" % (term_seperator, "|".join(term_list))
