@@ -2,7 +2,21 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from confusion_matrix import ConfusionMatrix
-from commit_type_model import classifiy_commits_df
+
+from language_utils import match
+from adaptive_model import is_adaptive
+from corrective_model import is_fix
+from refactor_model import built_is_refactor, build_perfective_regex, build_refactor_regex
+
+def classifiy_commits_df(df):
+    df['corrective_pred'] = df.message.map(lambda x: is_fix(x))
+    df['is_refactor_pred'] = df.message.map(lambda x: built_is_refactor(x))
+    df['perfective_pred'] = df.message.map(lambda x: (match(x, build_perfective_regex())) +
+                                                     (match(x, build_refactor_regex())) > 0)
+    df['adaptive_pred'] = df.message.map(lambda x: is_adaptive(x) > 0)
+
+    return df
+
 
 def evaluate_bq_results(labels_file):
     df = pd.read_csv(labels_file
