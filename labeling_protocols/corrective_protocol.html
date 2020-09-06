@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bug fix labeling protocol</title>
+</head>
+<body>
+
+<B>Task</B>
+
+Our goal is to label git commit message and decide whether the commit contains a bug fix.
+
+For each commit we should fill two fields:
+<ol>
+  <li>Is_bug_fix, taking the values, True, False and ? (as intermediate value)</li>
+  <li>Justification which is the reason based on the text for the classification.</li>
+</ol>
+
+
+
+
+The labeling is based on the commit message for each commit.
+Ideally this will be enough for the classification.
+If needed, the commit content, linked ticket and other data can be used for finding the commit type.
+
+<BR>
+<B>Instructions</B>
+
+<ol>
+  <li>We consider only commit messages in English.</li>
+  <li>Unless we find an indication to a fix, the default should be False.</li>
+  <li>In case of uncertainty, the commit should be labeled by the option you consider most likely. Start the justification with the word “Uncertain” and then describe the source of the uncertainty and the reasons to your decision.</li>
+  <li>In case that it is hard to decide based on the commit message alone, one should check the commit content in git. The concept that we label is “Is the commit a bug fix?” and not “Does the commit message indicates a fix”. Hence, if a fix indication is found in git, the commit should be labeled as True.</li>
+  <li>The “Justification” field should contain the reason to the labeling.</li>
+  <li>In case of a specific common non fix action (e.g., refactor, performance improvement, adding a feature), the action should be named.</li>
+  <li>In case of an other action, the justification should be “other action”</li>
+  <li>In case of a fix, the justification should be support from the text (e.g., fixed, correct).</li>
+  <li>In case of messages not in English, the comment should be “Not in English”.</li>
+  <li>In case of English text but no a specific term indicating a bug, the comment should be “No syntactic evidence”. This cases are rare. Consider text like “The previous implementation of the multiplication function returned 5 for mult(2,2). Now it returns 4.” The commit should be labeled as True since it is a fix, though some methods cannot identify it.</li>
+  <li>Fixes that are not bug fixes (e.g., documentation, style) should be labeled as False.</li>
+  <li>Specifically, typos and spelling errors should be labeled as False.</li>
+  <li>Warning fix (e.g., pylint warning) are not considered to a bug fix and should be labeled as False.</li>
+  <li>Unless the change is aimed to solve a specific know problem, it is not a fix. For example, in “improving reliability”, one cannot point at the problem being fixed. These cases should be labeled as False.</li>
+  <li>In cases that the commit contains some modifications, if at least one of them is considered a bug fix, the commit should be labeled as True.</li>
+  <li>Fix to build/compile, are considered a bug fix and should be labeled as True.</li>
+  <li>Tests are considered to be a part of the system and its requirements. Therefore, a bug fix in the tests is a bug fix and should be labeled as True.</li>
+  <li>Merge is a technical instrument. Its usage alone is not an indication regarding the content or being a bug fix. A merge commit should be judged by its content.</li>
+</ol>
+
+
+</body>
+</html>
