@@ -299,7 +299,7 @@ Add tests to filters in alert definitions
 * Add waitForLoad function in testByUrl
 
 * Remove extra consoles",TRUE,,
-270,DEV-21873 Alert definitions - fix flaky tests (#6113),FALSE,,
+270,DEV-21873 Alert definitions - fix flaky tests (#6113),TRUE,,
 275,"DEV-21906 FIX FLAKY insights (#6114)
 
 * Some adjustments fix flaky
