@@ -111,7 +111,8 @@ valid_terms = [
     'fixed(?: |-)?point',
     'fix(?:ed) ticket(?:s)?',
     '(?:fix(?:ed)?|bug)(?: )?(?: |-|:)(?: )?\d+',
-    '(if|would)[\s\S]{0,40}go wrong'
+    '(if|would)[\s\S]{0,40}go wrong',
+    'cr(s)?(-)?(d+)?\sfix(es)?'
 ]
 
 
@@ -227,15 +228,17 @@ def evaluate_fix_classifier():
     print("False Positives")
     pd.options.display.max_columns = 50
     pd.options.display.max_rows = 2000
-    print(fp)
+    #print(fp)
 
 
 
 if __name__ == '__main__':
+
     #print_corrective_functions()
-    #evaluate_fix_classifier()
+    evaluate_fix_classifier()
     text = "ACM-1526: CR fixes ".lower()
     print(is_fix(text))
-    valid_num = len(re.findall('cr(s)?(-)?', text))
+    valid_num = len(re.findall(build_valid_find_regex(), text))
+    valid_num = len(re.findall('cr(s)?(-)?(d+)?\sfix(es)?', text))
     print(valid_num)
     print(build_valid_find_regex())
