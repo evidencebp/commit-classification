@@ -6,6 +6,8 @@ regex_list : List[str]
 SCHEMA_NAME = 'general'
 file_scheme = '([a-z  -Z0-9_\*\.])+\.[a-zA-Z]{1,4}'
 
+NEAR_ENOUGH = '[\S\s]{1,40}'
+
 term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|\|)"
 
 
@@ -67,23 +69,25 @@ software_goals_modification = [
     'better','improv(?:e|es|ed|ing)', 'increas(?:e|es|ed|ing)', 'reduc(?:e|es|ed|ing)', 'worse', 'make', 'more', 'less'
 ]
 
-software_terms = ['algorithm(?:s)?', 'assertion(?:s)?', 'assignment(?:s)?', 'class(?:es)?', 'code', 'collection(?:s)?'
-    , 'conditional(?:s)?', 'constant(?:s)?', 'constructor(?:s)?', 'control', 'definition(?:s)?'
+software_entities = ['algorithm(?:s)?', 'class(?:es)?', 'collection(?:s)?', 'constant(?:s)?', 'constructor(?:s)?'
+, 'field(?:s)?', 'function(?:s)?', 'interface(?:s)?', 'member(?:s)?', 'method(?:s)?', 'parameter(?:s)?'
+, 'structure(?:s)?', 'template(?:s)?', 'type(?:s)?', 'unit(?:s)?', 'module(?:s)?',]
+
+software_terms = [ 'assertion(?:s)?', 'assignment(?:s)?',  'code',  'conditional(?:s)?',  'control', 'definition(?:s)?'
     , 'delegate', 'delegation'
-    , 'design pattern(?:s)?', 'error(?:-| )?code(?:s)?', 'exception(?:s)?', 'field(?:s)?', 'flag(?:s)?', 'function(?:s)?', 'getter(?:s)?'
+    , 'design pattern(?:s)?', 'error(?:-| )?code(?:s)?', 'exception(?:s)?',  'flag(?:s)?',  'getter(?:s)?'
     , 'guard clause(?:s)?', 'hierarch(?:y|ies)', 'implementation(?:s)?', 'inheritance', 'inline'
-    , 'interface(?:s)?', 'internal', 'macro(?:s)?'
-    , 'magic number(?:s)?', 'member(?:s)?', 'method(?:s)?', 'modifier(?:s)?', 'null object(?:s)?', 'object(?:s)?', 'parameter(?:s)?'
+    ,  'internal', 'macro(?:s)?'
+    , 'magic number(?:s)?', 'modifier(?:s)?', 'null object(?:s)?', 'object(?:s)?'
     , 'patch(?:es)?',  'pointer(?:s)?', 'polymorphism', 'quer(?:y|ies)',  'reference(?:s)?'
     , 'ref(?:s)?'
-    , 'return type', 'setter(?:s)?', 'static', 'structure(?:s)?', 'sub(?:-| )?class(?:es)?', 'super(?:-| )?class(?:es)?', '(?:sub)?(?:-| )?system(?:s)?'
-    , 'template(?:s)?', 'type(?:s)?'
+    , 'return type', 'setter(?:s)?', 'static',  'sub(?:-| )?class(?:es)?', 'super(?:-| )?class(?:es)?'
+    , '(?:sub)?(?:-| )?system(?:s)?'
     , 'uninline'
     #, 'value(?:s)?'
     , 'variable(?:s)?', 'handler', 'plugin'
     #, '(?:in)?validation'
     #, 'input', 'output'
-    , 'unit(?:s)?'
     , 'contravariant', 'covariant'
                   # , 'link(?:s)?'
     ,
@@ -94,7 +98,7 @@ software_terms = ['algorithm(?:s)?', 'assertion(?:s)?', 'assignment(?:s)?', 'cla
     , 'driver(?:s)?'
     #, 'hook(?:s)?'
     #, 'target(?:s)?'
-    , 'storage', 'tool(?:s)?', 'module(?:s)?', 'log(?:s)?', 'setting(?:s)?'
+    , 'storage', 'tool(?:s)?',  'log(?:s)?', 'setting(?:s)?'
     #, '(?:index|indexes|indices)'
     , 'fall(?: |-)back(?:s)?', 'memory', 'param(?:s)?', 'volatile', 'file(?:s)?'
     , 'generic(?:s)?'
@@ -103,7 +107,7 @@ software_terms = ['algorithm(?:s)?', 'assertion(?:s)?', 'assignment(?:s)?', 'cla
     , 'init' , 'destructor(?:s)?', 'instances(?:s)?', 'primitive(?:s)?'
     #, 'middle man'
     #, 'hierarchy'
-                  ]
+                  ] + software_entities
 
 
 # Well, we need them...

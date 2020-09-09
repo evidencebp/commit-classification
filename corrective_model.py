@@ -24,7 +24,7 @@ from labeling_util import get_false_positives, get_false_negatives
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
-    , static_analyzers
+    , static_analyzers, NEAR_ENOUGH, software_entities
 from model_evaluation import classifiy_commits_df, evaluate_performance
 
 # TODO - use split to find related tokens
@@ -115,6 +115,7 @@ valid_terms = [
     '(if|would)[\s\S]{0,40}go wrong',
     '(cr|pr)(s)?(-)?(d+)?\sfix(es)?',
     'typo(s)?\sfix(es)?',
+    'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
     build_sepereted_term(static_analyzers) + 'fix(es|ed)?',
 
 ]
@@ -213,6 +214,7 @@ def evaluate_fix_classifier():
     concept_column='expected'
 
     df = pd.read_csv(join(DATA_PATH, 'corrective_labels.csv'))
+    df = df[df.uncertain != 'TRUE']
 
     df = classifiy_commits_df(df
                               , classification_function=classification_function
