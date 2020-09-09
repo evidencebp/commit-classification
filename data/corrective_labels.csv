@@ -57,7 +57,7 @@
 28,ACM-1359: Merge remote-tracking branch 'origin/ACM-1539_pr_merged_while_in_status_incorrect_filter' into ACM-1359_pr_merge_without_review,FALSE,,
 157,ACM-1517: fix tooltip display,TRUE,,
 163,"ACM-1526 fixed prev migration and declatiosn, added prefix to create migration script, added migration for orchestrator",TRUE,,
-162,ACM-1526 fixed tests,FALSE,,
+162,ACM-1526 fixed tests,TRUE,,
 161,ACM-1526 tmp compilation fix,TRUE,,
 164,ACM-1526: CR fixes,FALSE,CR,
 159,ACM-1526: fix migration,TRUE,,
@@ -96,7 +96,7 @@
 235,ACM-1567: work table should match design,TRUE,should match,TRUE
 117,ACM-1573: Fix scss tabs and spaces,FALSE,tabs,
 256,ACM-1575: CR fixes,FALSE,CR,
-254,ACM-1575: fix db tests,FALSE,tests,
+254,ACM-1575: fix db tests,TRUE,tests,
 263,ACM-1575: fix migration,TRUE,,
 253,ACM-1575: fix response types for task,TRUE,,
 261,ACM-1575: fix status css,TRUE,,
@@ -253,7 +253,7 @@ Add tests to filters in alert definitions
 
 * Optimize",TRUE,,
 224,DEV-21749 Security Rules - add missing tests for protected security rules (#6125),FALSE,add missing (but tests),TRUE
-225,DEV-21760 Fix flaky e2e tests behaviour,FALSE,tests,
+225,DEV-21760 Fix flaky e2e tests behaviour,TRUE,tests,
 227,"DEV-21768 Convert shared-dashboard e2e-v2 (#6065)
 
 * Convert shared-dashboard test(made it better, and set it in share file) + bugFix
