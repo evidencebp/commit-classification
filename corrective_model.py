@@ -15,9 +15,16 @@ This prevented us from using lookaheads and lookbehinds, which are not supported
 """
 
 import re
+from os.path import join
+import pandas as pd
+
+from configuration import DATA_PATH
+
+from labeling_util import get_false_positives, get_false_negatives
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities
+from model_evaluation import classifiy_commits_df, evaluate_performance
 
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
@@ -192,6 +199,43 @@ def print_corrective_functions():
     generate_bq_function('{schema}.bq_corrective'.format(schema=SCHEMA_NAME), corrective_to_bq)
     print()
 
+def evaluate_fix_classifier():
+
+
+    text_name = 'message'
+    classification_function = is_fix
+    classification_column = 'corrective_pred'
+    concept_column='expected'
+
+    df = pd.read_csv(join(DATA_PATH, 'corrective_labels.csv'))
+
+    df = classifiy_commits_df(df
+                              , classification_function=classification_function
+                              , classification_column=classification_column
+                              , text_name=text_name
+                              )
+    cm = evaluate_performance(df
+                         , classification_column
+                         , concept_column
+                         , text_name=text_name)
+    print("corrective_labels CM")
+    print(cm)
+
+    fp = get_false_positives(df
+                        , classifier_column=classification_column
+                        , concept_column=concept_column)
+    print("False Positives")
+    pd.options.display.max_columns = 50
+    pd.options.display.max_rows = 2000
+    print(fp)
+
+
 
 if __name__ == '__main__':
-    print_corrective_functions()
+    #print_corrective_functions()
+    #evaluate_fix_classifier()
+    text = "ACM-1526: CR fixes ".lower()
+    print(is_fix(text))
+    valid_num = len(re.findall('cr(s)?(-)?', text))
+    print(valid_num)
+    print(build_valid_find_regex())
