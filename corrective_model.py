@@ -117,6 +117,7 @@ valid_terms = [
     'typo(s)?\sfix(es)?',
     'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
     build_sepereted_term(static_analyzers) + 'fix(es|ed)?',
+    '^### Bug Fix' # tends to be a title, later stating if the commit is a bug fix
 
 ]
 
