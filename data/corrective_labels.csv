@@ -113,7 +113,7 @@ RK-6849",FALSE,,
 100,Adding safe navigation. HON-13026,FALSE,,
 198,"Avoid promise chain
 
-RK-6789",FALSE,,
+RK-6789",TRUE,,TRUE
 240,"Change plans to match new plans in stripe - !DONT MERGE BEFORE SEPTEMBER 1ST! (#2594)
 
 <!--- What types of changes does your code introduce? remove redundant: -->
