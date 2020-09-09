@@ -203,7 +203,7 @@ Adapt backend to new stripe plans
 * DEV-21645: PR fixes",FALSE,,
 183,DEV-21645: PR fixes,FALSE,,
 186,DEV-21653 Fix wrong timeout bug  (#6060),TRUE,,
-185,DEV-21653 Security dashboards create  account failed message (#6042),FALSE,,
+185,DEV-21653 Security dashboards create  account failed message (#6042),FALSE,,TRUE
 189,DEV-21658 Metrics account should not index numbers,TRUE,,TRUE
 210,"DEV-21702 Create e2e alert definition filters (#6043)
 
@@ -271,7 +271,7 @@ Add tests to filters in alert definitions
 
 * Adjust code after tests failed
 
-* Remove changes from analytics nav and set mock in right test instead",FALSE,why did the tests fail?,uncertain
+* Remove changes from analytics nav and set mock in right test instead",FALSE,why did the tests fail?,TRUE
 105,"DEV-21793 Screenshot-service clean-up (#6056)
 
 * More error handling",FALSE,,
