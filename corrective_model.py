@@ -117,7 +117,8 @@ valid_terms = [
     'typo(s)?\sfix(es)?',
     'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
     build_sepereted_term(static_analyzers) + 'fix(es|ed)?',
-    '^### Bug Fix' # tends to be a title, later stating if the commit is a bug fix
+    '^### Bug Fix', # tends to be a title, later stating if the commit is a bug fix
+    'edit the jira link to the correct issue', # Another occurring title
 
 ]
 
@@ -243,7 +244,21 @@ if __name__ == '__main__':
 
     #print_corrective_functions()
     evaluate_fix_classifier()
-    text = "ACM-1526: CR fixes ".lower()
+    text = """Lambda metrics alerts endpoint ep 4239 (#2549)
+
+<!--- What types of changes does your code introduce? remove redundant: -->
+This pull request is new feature
+
+<!--- edit the jira link to the correct issue #: -->
+https://epsagon.atlassian.net/browse/EP-4239
+
+## Short description of Change
+Add metric alerts status to notifications rules api
+
+
+### All Code Changes
+- [x] Live environment test (`dev`)
+- [x] In-code documentation""".lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_valid_find_regex(), text))
     valid_num = len(re.findall('cr(s)?(-)?(d+)?\sfix(es)?', text))
