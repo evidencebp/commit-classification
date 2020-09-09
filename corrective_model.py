@@ -57,6 +57,7 @@ bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adject
              'fixing(?:s)?',
              'fix(?:-| )?up(?:s)?',
              'flaw(?:s|ed)?',
+             'hot(?:-| )?fix(?:ed|es|ing)?',
              #'hang',
              'heap overflow(?:s)?',
              'incorrect(ly)?',
@@ -253,13 +254,13 @@ if __name__ == '__main__':
 
     #print_corrective_functions()
     evaluate_fix_classifier()
-    text = """Merge branch 'master' into DEV-21847-fix-metrics-alerts-fail-to-send-pagerduty-payload-due-to-blank-description""".lower()
+    text = """Merge branch 'hotfix/all' of github.com:HoneyB""".lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
 
 
     valid_num = len(re.findall('(\\s|\\.|\\?|\\!|\\[|\\]|\\(|\\)|\\:|^|$|\\,|\'|"|/|#|\\$|\\%|&|\\*|\\+|=|`|;|<|>|@|~|{|}|\\|\-|/)' + "fix" , text))
-    valid_num = len(re.findall(term_seperator + "fix" + term_seperator , text))
+    valid_num = len(re.findall(term_seperator + "hotfix" + term_seperator , text))
     valid_num = len(re.findall("(=|\-)fix(=|\-)" , text))
     print(valid_num)
     print(build_bug_fix_regex())
