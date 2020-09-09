@@ -111,6 +111,9 @@ unnedded_terms = ['unnecessary', 'unneeded', 'unused', '(?:not|never|no longer) 
     #, 'old'
     , 'no longer needed', 'redundant', 'useless', 'duplicate(?:d)?', 'deprecated', 'obsolete(?:d)?', 'commented']
 
+
+static_analyzers = ['lint', 'pylint', 'tslint', 'jlint', 'jslint']
+
 def build_sepereted_term(term_list : List, just_before =False):
     if just_before:
         sep = "%s(%s)" % (term_seperator, "|".join(term_list))
