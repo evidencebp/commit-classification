@@ -132,7 +132,7 @@ fixing_verbs = ['correct(?:ing|s|ed)'
                 ]
 
 corrective_header_entities = fixing_verbs + [
-    'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent'
+    'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent', 'break(s|ed|ing)?', 'broken'
     #, "(does not|doesn't) need" , "cannot", "can not"
  ] #+ [ "do not" ,"don't"]
 
@@ -230,6 +230,7 @@ def evaluate_fix_classifier():
     print("corrective_labels CM")
     print(cm)
 
+    """
     fp = get_false_positives(df
                         , classifier_column=classification_column
                         , concept_column=concept_column)
@@ -237,30 +238,28 @@ def evaluate_fix_classifier():
     pd.options.display.max_columns = 50
     pd.options.display.max_rows = 2000
     print(fp)
+    """
 
+    fn = get_false_negatives(df
+                        , classifier_column=classification_column
+                        , concept_column=concept_column)
+    print("False Negatives")
+    pd.options.display.max_columns = 50
+    pd.options.display.max_rows = 2000
+    print(fn)
 
 
 if __name__ == '__main__':
 
     #print_corrective_functions()
     evaluate_fix_classifier()
-    text = """Lambda metrics alerts endpoint ep 4239 (#2549)
-
-<!--- What types of changes does your code introduce? remove redundant: -->
-This pull request is new feature
-
-<!--- edit the jira link to the correct issue #: -->
-https://epsagon.atlassian.net/browse/EP-4239
-
-## Short description of Change
-Add metric alerts status to notifications rules api
-
-
-### All Code Changes
-- [x] Live environment test (`dev`)
-- [x] In-code documentation""".lower()
+    text = """Merge branch 'master' into DEV-21847-fix-metrics-alerts-fail-to-send-pagerduty-payload-due-to-blank-description""".lower()
     print(is_fix(text))
-    valid_num = len(re.findall(build_valid_find_regex(), text))
-    valid_num = len(re.findall('cr(s)?(-)?(d+)?\sfix(es)?', text))
+    valid_num = len(re.findall(build_bug_fix_regex(), text))
+
+
+    valid_num = len(re.findall('(\\s|\\.|\\?|\\!|\\[|\\]|\\(|\\)|\\:|^|$|\\,|\'|"|/|#|\\$|\\%|&|\\*|\\+|=|`|;|<|>|@|~|{|}|\\|\-|/)' + "fix" , text))
+    valid_num = len(re.findall(term_seperator + "fix" + term_seperator , text))
+    valid_num = len(re.findall("(=|\-)fix(=|\-)" , text))
     print(valid_num)
-    print(build_valid_find_regex())
+    print(build_bug_fix_regex())
