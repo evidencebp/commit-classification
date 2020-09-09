@@ -112,7 +112,9 @@ valid_terms = [
     'fix(?:ed) ticket(?:s)?',
     '(?:fix(?:ed)?|bug)(?: )?(?: |-|:)(?: )?\d+',
     '(if|would)[\s\S]{0,40}go wrong',
-    'cr(s)?(-)?(d+)?\sfix(es)?'
+    '(cr|pr)(s)?(-)?(d+)?\sfix(es)?',
+    'typo(s)?\sfix(es)?',
+
 ]
 
 
@@ -228,7 +230,7 @@ def evaluate_fix_classifier():
     print("False Positives")
     pd.options.display.max_columns = 50
     pd.options.display.max_rows = 2000
-    #print(fp)
+    print(fp)
 
 
 
