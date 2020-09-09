@@ -1,0 +1,1030 @@
+,message,expected,justification,uncertain
+181,"(FLOW-718) Save flow as template (#5894)
+
+* change param name to be more generic for saving as template
+
+* support reset context
+
+* new api to save flow as template
+
+* let flow model decide if contexts should be reset on clone
+
+* fix params",TRUE,,
+37,"(FLOW-730) Override update question and add question_type prop (#5893)
+
+* override update question and add question_type prop
+
+* call super",FALSE,,
+276,"(FLOW-816) Linked questions (#5926)
+
+* support more variables types
+
+* update questions variables
+
+* move relation
+
+* add project id relation
+
+* trigger flow variables update
+
+* fix test
+
+* only create variable when there's a question
+
+* fix test
+
+* use flow.editable_revision when editing a revision
+
+* fix id
+
+* rename and skip if no connected property preset
+
+* add connecetd block id
+
+* fix relations
+
+* fix for updating
+
+* new variables types
+
+* return empty array and not [nil]
+
+* try to fix annoying inheritance bug
+
+* fix
+
+* use variable_id instead of block_id when updating variable",TRUE,fix relations,
+28,ACM-1359: Merge remote-tracking branch 'origin/ACM-1539_pr_merged_while_in_status_incorrect_filter' into ACM-1359_pr_merge_without_review,FALSE,,
+157,ACM-1517: fix tooltip display,TRUE,,
+163,"ACM-1526 fixed prev migration and declatiosn, added prefix to create migration script, added migration for orchestrator",TRUE,,
+162,ACM-1526 fixed tests,FALSE,,
+161,ACM-1526 tmp compilation fix,TRUE,,
+164,ACM-1526: CR fixes,FALSE,CR,
+159,ACM-1526: fix migration,TRUE,,
+160,ACM-1526: fix view,TRUE,,
+10,ACM-1529: change filters; make settings req; change max periods to 35,FALSE,,
+9,ACM-1529: reset filters when changing teams,FALSE,,
+173,ACM-1531: Added missing entity tester,TRUE,added missing,
+172,ACM-1531: Fixed missing privileges,TRUE,,
+171,ACM-1531: Initial preparer tests along with some bug fixes,TRUE,,
+174,ACM-1531: Permission fix for api,TRUE,,
+169,ACM-1531: Typo fix,FALSE,typo,
+176,ACM-1531: bug fix + tests for the graph client,TRUE,,
+175,ACM-1531: fix typing issue when iterating over union of arrays,FALSE,,TRUE
+167,ACM-1531: some bug fixes along with a new test for the processor,TRUE,,
+168,ACM-1531: test fixes for (changed metric name),FALSE,test,TRUE
+170,ACM-1531: yet another test fix,FALSE,test,TRUE
+177,ACM-1532: CR fix,FALSE,cr,
+17,ACM-1534 - HotFix filter count,TRUE,hotfix,TRUE
+19,ACM-1534: replace quotes with single quotes,FALSE,,
+188,ACM-1537: fix jsx className,TRUE,name,TRUE
+187,ACM-1537: tslint fix,FALSE,lint,TRUE
+191,"ACM-1538: Fixed port bug caused by prometheus, used port name instead",TRUE,,
+192,"ACM-1538: Metrics for the cayley service, fixed small jira bug on the way",TRUE,,
+29,ACM-1539: Merge remote-tracking branch 'origin/dev' into ACM-1539_pr_merged_while_in_status_incorrect_filter,TRUE,incorrect,
+31,ACM-1539: add event data to insight pull request,FALSE,,
+27,ACM-1539: ensure only 1 insight is generated per rule in tester,TRUE,ensure,TRUE
+30,ACM-1539: support for parsing by pull request integraiton type,FALSE,,
+43,ACM-1548: rename interface,FALSE,,
+96,ACM-1553: Add tests,FALSE,,
+94,ACM-1553: Update ownable entity,FALSE,,
+102,ACM-1556: remove unused var,FALSE,,
+104,ACM-1557: Add task counter,FALSE,,
+106,ACM-1559 changed ordering to id as it doesnt matter,FALSE,,
+233,ACM-1565: Fix css layout,TRUE,css layout,TRUE
+232,ACM-1565: fix layout,TRUE,,
+235,ACM-1567: work table should match design,TRUE,should match,TRUE
+117,ACM-1573: Fix scss tabs and spaces,FALSE,tabs,
+256,ACM-1575: CR fixes,FALSE,CR,
+254,ACM-1575: fix db tests,FALSE,tests,
+263,ACM-1575: fix migration,TRUE,,
+253,ACM-1575: fix response types for task,TRUE,,
+261,ACM-1575: fix status css,TRUE,,
+255,ACM-1575: fix status formatter file formatting,FALSE,formatting,TRUE
+258,ACM-1575: fix statuses colors,TRUE,,
+257,"ACM-1575: fix view""",TRUE,,
+260,ACM-1575: push temporary fix for setuptools being broken,TRUE,,
+262,ACM-1575: reverting back changes and replacing old status view with new one,TRUE,,
+272,ACM-1579: Fix user side menu to look as required,TRUE,,
+274,ACM-1579: fix clicking outside the menu logs out the user,TRUE,,
+112,"Add runtime to node digsets
+
+RK-6849",FALSE,,
+100,Adding safe navigation. HON-13026,FALSE,,
+198,"Avoid promise chain
+
+RK-6789",FALSE,,
+240,"Change plans to match new plans in stripe - !DONT MERGE BEFORE SEPTEMBER 1ST! (#2594)
+
+<!--- What types of changes does your code introduce? remove redundant: -->
+This pull request is a chore
+
+<!--- edit the jira link to the correct issue #: -->
+JIRA link: https://epsagon.atlassian.net/browse/EP-4341
+
+## Short description of Change
+<!-- Describe your change in a few sentences -->
+Adapt backend to new stripe plans
+
+
+## PR Checklist
+<!-- Remove sections that are irrelevant for your PR -->
+### All Code Changes
+- [ ] Live environment test (`dev`)
+- [ ] In-code documentation
+
+### Bug Fix
+- [ ] CI test that reproduces bug and validates correct behaviour
+
+### New feature
+- [ ] New CI tests for the new feature different use cases
+- [ ] Update `README` or `RUNBOOK` if required
+
+### New Service / Big Feature
+- [ ] `README`
+- [ ] Monitoring
+  - [ ] Alerts on possible errors
+  - [ ] `RUNBOOK` updated with responses to these alerts
+- [ ] Test on `meta`",FALSE,,
+156,"DEV-21552-custom-sawmill-pipeline (#7188)
+
+* [+] add ability for custom sawmill pipeline that can be added
+
+* [+] add ability for custom sawmill pipeline that can be added
+
+* [*] add some more logic, and fix the logic an the validateFeed function
+
+* [*] fix the tests, due to last changes
+
+* [/] work on yasmin's 1st PR
+
+* [/] work on yasmin's 2st PR
+
+* [+] add missing test - conclusions from demo
+[*] fix minor bug with errorCode
+
+* [/] fix last round of yasmin's PR #3",TRUE,,
+3,DEV-21598: flaky,FALSE,,TRUE
+6,DEV-21598: repeat test,FALSE,,
+165,"DEV-21610 Remove Amplitude success log (#5992)
+
+* Remove log of amplitude log event successfully
+
+* Fix test
+
+* Fix log error and test",TRUE,,
+13,DEV-21612 Hide menu when previewing alert in Kibana,FALSE,,
+12,"DEV-21612 Hide menu when previewing alert in Kibana (#5998)
+
+* DEV-21612 Hide menu when previewing alert in Kibana
+
+* Add comment",FALSE,,
+178,DEV-21639 Remove logzio-analyzer and logzio_content from metrics indices - fix puppet manifest,TRUE,,
+21,DEV-21642-viewInKibana-link-broken,FALSE,,
+22,DEV-21642-viewInKibana-link-broken (#6002),FALSE,,
+182,"DEV-21645: CRUD endpoints siem (#7189)
+
+* DEV-21645: Admin CRUD in services
+
+* DEV-21645: get owner CRUD
+
+* DEV-21645: get owner CRUD
+
+* DEV-21645: ServicesTestClient
+
+* DEV-21645: ServicesTestClient
+
+* DEV-21645: siem endpoints
+
+* DEV-21645: audit
+
+* DEV-21645: PR fixes
+
+* DEV-21645: PR fixes",FALSE,,
+183,DEV-21645: PR fixes,FALSE,,
+186,DEV-21653 Fix wrong timeout bug  (#6060),TRUE,,
+185,DEV-21653 Security dashboards create  account failed message (#6042),FALSE,,
+189,DEV-21658 Metrics account should not index numbers,TRUE,,TRUE
+210,"DEV-21702 Create e2e alert definition filters (#6043)
+
+* Fix when an alert is disable, we should apply filter again, in case the 'Active' filter is on.
+Add tests to filters in alert definitions
+
+* Fix tests
+
+* Remove new line
+
+* Disable alert and then filter by Active
+
+* Fix update by test
+
+* Fix tests",TRUE,due to first fix,
+211,"DEV-21706 Add config to e2e-v2 toolbox (#6028)
+
+* Add config to e2e-v2 toolbox
+
+* Fix return type",TRUE,,
+214,DEV-21707 add resolve to email metrics alerts notifications,FALSE,,
+215,"DEV-21707 add resolve to metrics alerts email notification (#7198)
+
+* DEV-21707 add resolve to email metrics alerts notifications
+
+* DEV-21707 fixed template name in config
+
+* DEV-21707 changed email subject
+
+* DEV-20170 CR fix",FALSE,fixed name and cr,
+213,DEV-21707 fixed template name in config,FALSE,name,
+49,DEV-21719 SIEM-Bug Cannot edit protected rules (#6054),TRUE,bug,
+53,DEV-21720 Click on 'Preview in kibana' breaks when asking for user settings,TRUE,breaks when,
+52,DEV-21720 Preview Alert Query - Return user settings when authenticated (#6036),TRUE,requires semantic,TRUE
+60,"DEV-21731 Change order of Logzio api call inside kibana fetch method (#6064)
+
+* Move the logzioFetch call before the msearch plus added debounce
+
+* Add changes to kibana76",FALSE,,
+223,"DEV-21746 Migrate 'alerts-from-kibana' from e2e to e2e-v2 (#6053)
+
+* DEV-21746 Migrate 'alerts-from-kibana' from e2e to e2e-v2
+
+* Flaky fix
+
+* Fix
+
+* Optimize",TRUE,,
+224,DEV-21749 Security Rules - add missing tests for protected security rules (#6125),FALSE,add missing (but tests),TRUE
+225,DEV-21760 Fix flaky e2e tests behaviour,FALSE,tests,
+227,"DEV-21768 Convert shared-dashboard e2e-v2 (#6065)
+
+* Convert shared-dashboard test(made it better, and set it in share file) + bugFix
+
+* Rebase issues
+
+* Remove unwanted adjustment
+
+* Rename file
+
+* Use right filterBar location",TRUE,,
+228,"DEV-21787 Disable deprecated vis (#6075)
+
+* Move logic to filtered icons without prevent register
+
+* Adjust code after tests failed
+
+* Remove changes from analytics nav and set mock in right test instead",FALSE,why did the tests fail?,uncertain
+105,"DEV-21793 Screenshot-service clean-up (#6056)
+
+* More error handling",FALSE,,
+234,"DEV-21813 add feature flag to resolve email notifications (#7220)
+
+* add feature flag to resolve email notifications
+
+* changed email subject aswell
+
+* DEV-21813 WIP
+
+* DEV-21813 changed email subject again
+
+* DEV-21813 feature flag not relevant anymore. just changing the email subject",FALSE,,
+111,DEV-21818 Alert Edit unit tests -disable (#6078),FALSE,,
+250,DEV-21830 Alert Correlations - fix empty field name (#6108),FALSE,fix name,
+252,DEV-21833 Add shard failure metric to alert checks (#7226),FALSE,,
+120,DEV-21834 Security dashboard iframe nir (#6084),FALSE,,
+269,"DEV-21870 FIX FLAKY drilldown e2ev2 (#6102)
+
+* Add wait for exact log recieved + add wait for exact hits after login
+
+* Wait for dash load after label linked + add prints for pipeline tests
+
+* Add waitForLoad function in testByUrl
+
+* Remove extra consoles",TRUE,,
+270,DEV-21873 Alert definitions - fix flaky tests (#6113),FALSE,,
+275,"DEV-21906 FIX FLAKY insights (#6114)
+
+* Some adjustments fix flaky
+
+* Minor adjustments
+
+* Named log amount variables with right roles",TRUE,,
+149,"DEV-21920 insight work alert handler npe (#7295)
+
+* DEV-21920-Insight-work-alert-handler-NPE
+
+* add validation and logging",TRUE,NPE,TRUE
+148,DEV-21920-Insight-work-alert-handler-NPE,TRUE,NPE,TRUE
+150,DEV-21920-Insight-work-alert-handler-NPE (#7260),TRUE,NPE,TRUE
+280,DEV-21921 Fix -i argument,TRUE,,
+283,DEV-21921 Fix populate_consul.sh script,TRUE,,
+286,"DEV-21923 Account selector transition (#6117)
+
+* Fix url transition with timeout
+
+* Fix transition and forceReload
+
+* Fix transition and forceReload",TRUE,,
+212,"EP-4277 support moving_avg aggregation in spans aggregated charts (#2597)
+
+<!--- What types of changes does your code introduce? remove redundant: -->
+This pull request is a new feature. 
+
+<!--- edit the jira link to the correct issue #: -->
+JIRA link: https://epsagon.atlassian.net/browse/EP-4277
+
+## Short description of Change
+<!-- Describe your change in a few sentences -->
+Support moving_average pipeline aggregation (currently only over avg aggregation) in spans aggregated charts. 
+
+## PR Checklist
+<!-- Remove sections that are irrelevant for your PR -->
+### All Code Changes
+- [x] Live environment test (`dev`)
+- [x] In-code documentation
+
+### New feature
+- [ ] New CI tests for the new feature different use cases
+- [ ] Update `README` or `RUNBOOK` if required",FALSE,,
+251,"EP-4354 edit charts from custom dashboard (#1660)
+
+* EP-4354 edit charts from custom dashboard - navigate from dashboard to spans search
+
+* CR fixes + button name changes
+
+* better handlign of older dashboards; capital letter errors
+
+* CR fixes - cosmetics",,,
+216,FLOW-739 update hbui and fix type issues,TRUE,,
+217,"FLOW-739 update hbui and fix type issues (#180)
+
+* FLOW-739 update hbui and fix type issues
+
+* update hbui",TRUE,,
+73,"FLOW-744 Change text-transform prop to come from props and not from customTheme
+
+FLOW-744 Change text-transform prop to come from props and not from customTheme",FALSE,,
+74,FLOW-744 make uppercase the default text-trasform for non custom buttons,FALSE,,
+71,FLOW-744 remove HBButton uppercase default,FALSE,,
+72,"FLOW-744 remove HBButton uppercase default
+
+FLOW-744 remove HBButton uppercase default",FALSE,,
+64,FLOW-744 update hbui (removes uppercase from button). Add uppercase manually everywhere,FALSE,,
+69,FLOW-744 update hbui to version with default uppercase buttons. Update any custom buttons that need to be uppercase,FALSE,,
+78,FLOW-745 update button bold weight to 700,FALSE,,
+80,"FLOW-746 - Add size support to checkbox, radio and input
+
+FLOW-746 - Add size support to checkbox, radio and input",FALSE,,
+88,FLOW-746 add theme support (size) to checkbox and radio button,FALSE,,
+81,FLOW-746 apply theme to RTE label + Text block (editor + display),FALSE,,
+97,FLOW-758 make send button upper case,FALSE,,
+237,"FLOW-775 - Add ""DONE"" button to selected bg image sidebar
+FLOW-773 - Fix builder sidebar scroll to apply only inside he sidebar content",TRUE,,
+241,"FLOW-776 - fix input issue when background  is transparent
+
+FLOW-776 - fix input issue when background  is transparent",TRUE,,
+243,FLOW-776 fixes input hover state,TRUE,,
+247,FLOW-783 add error boundary component + builder fallback screen,FALSE,,
+268,"FLOW-809 validations (#202)
+
+* WIP
+
+* WIP - handle options errors
+
+* FLOW-809 validations working with HBToast
+
+* update hbui to temp version
+
+* fix merge errors
+
+* move horizontal block showErrors to be computed
+
+* Add time to toast + fix warning icon alignment
+
+* update hbui
+
+* Update hbui (Fixes FLOW-832)",TRUE,,
+146,FLOW-815 retain currently selected page on flow refetch,FALSE,,
+153,FLOW-820 handle exit preview click when user navigated directly to preview url,FALSE,,
+154,FLOW-821 fix custom button styling,FALSE,styling,
+242,Fix input hover state when background is transparent (Fixes FLOW-776),TRUE,,
+221,"Kotlin - support dynamic loading (RK-6839) (#3297)
+
+* Kotlin - support dynamic loading
+
+* rename
+
+* fixed comment
+
+* done
+
+* fixed SR",FALSE,comment. Is SR actually CR?,TRUE
+158,"Lambda metrics alerts endpoint ep 4239 (#2549)
+
+<!--- What types of changes does your code introduce? remove redundant: -->
+This pull request is new feature
+
+<!--- edit the jira link to the correct issue #: -->
+https://epsagon.atlassian.net/browse/EP-4239
+
+## Short description of Change
+Add metric alerts status to notifications rules api
+
+
+### All Code Changes
+- [x] Live environment test (`dev`)
+- [x] In-code documentation",FALSE,,
+14,Merge branch 'ACM-1530_dp_runner_throw_fix' into dev,TRUE,,
+145,Merge branch 'ACM-1580_missing_link' into dev,FALSE,,TRUE
+59,Merge branch 'DEV-21731-kibana-discover-parallel-logzio-and-kibana-msearch' into app-progress-bar,FALSE,,
+115,Merge branch 'EP-4346-epsagon-id-to-send-trace' of github.com:epsagon/epsagon-node into EP-4346-epsagon-id-to-send-trace,FALSE,,
+7,Merge branch 'dev' into ACM-1529_analytics_apply_filter_page_load_team_change,FALSE,,
+16,Merge branch 'dev' into ACM-1533_work_digest_stepper_bug,FALSE,,
+18,Merge branch 'dev' into ACM-1534_fix_filter,FALSE,,
+109,Merge branch 'feat/dash-fallback-EP-4332' of github.com:epsagon/epsagon-dashboard into feat/dash-fallback-EP-4332,FALSE,,
+70,Merge branch 'fix-tests' into one-flow/2020-08/FLOW-744-button-uppercase-with-master,FALSE,,
+125,Merge branch 'hotfix/all' of github.com:HoneyBook/HoneybookPaymentsDev into commandos/growth/hotfix/HON-13039,TRUE,,
+2,Merge branch 'master' into DEV-21589-fix-kibana-7-6-ff-by-user,FALSE,,
+11,Merge branch 'master' into DEV-21611-FixFlakyBug-MeteringItest,FALSE,,
+23,Merge branch 'master' into DEV-21642-viewInKibana-link-broken,FALSE,,
+38,Merge branch 'master' into DEV-21691-Fix-Flaky-ChargeITest.testAcceptableAvsLine1FailCard,FALSE,,
+58,Merge branch 'master' into DEV-21731-kibana-discover-parallel-logzio-and-kibana-msearch,FALSE,,
+110,Merge branch 'master' into DEV-21818-disable-alers-edit-unit-tests,FALSE,,
+119,"Merge branch 'master' into DEV-21825-Deadlock-on-creating-sub-account
+
+# Conflicts:
+#	gaia-infra/src/main/java/com/logshero/gaia/infra/configuration/AccountsManagementService.java
+#	gaia-infra/src/main/java/com/logshero/gaia/infra/configuration/AccountsSettingsService.java",TRUE,deadlock,uncertain
+121,Merge branch 'master' into DEV-21837-log-payload-for-http-notification-endpoints,FALSE,,
+132,Merge branch 'master' into DEV-21847-fix-metrics-alerts-fail-to-send-pagerduty-payload-due-to-blank-description,TRUE,,
+133,Merge branch 'master' into DEV-21852_Date_histogram_filter_fix_for_patterns_filters_and_alerts,TRUE,,
+142,Merge branch 'master' into DEV-21901-change-pagerduty-metrics-alerts-template-desctiption-to-alert-title,FALSE,,
+151,"Merge branch 'master' into DEV-21920-Insight-work-alert-handler-NPE
+
+# Conflicts:
+#	insights/insights-worker/src/main/java/io/logz/insights/worker/InsightsAlertHandler.java",,,
+42,Merge branch 'master' into EP-4268,,,
+113,Merge branch 'master' into EP-4346-epsagon-id-to-send-trace,,,
+55,Merge branch 'master' into SUPP-5592-secondary-emails,,,
+122,Merge branch 'master' into SUPP-5624-unable-to-resend-reg-confirmation-email,,,
+143,Merge branch 'master' into SUPP-5647,,,
+245,"Merge branch 'master' into bugfix/rooks-page-link
+
+* master: (33 commits)
+  RK-6876 - enable back Bitbucket tests (#2307)
+  bugfix // remember the orgid from the last session (#2314)
+  trimming filters in activity chart
+  fixing cropped activity chart label
+  renaming label to filter
+  redirecting to debugger if ff is off
+  redirecting to debugger if user isn't allowed to see ROI Dashboard
+  changing roi-dashboard to usage-report in url
+  fixing empty state showing instead of loader
+  Nir's CR
+  Explorook revisited (#2306)
+  RK-6884 - mark messages as read/unread in the messages table (#2312)
+  improved ScatterChart display
+  removing useless code
+  adding empty states to ROI Dashboard
+  changing error message
+  commenting whyDidYouRender
+  replacing Treemap with ScatterChart + refactoring
+  adding ROI feature flag
+  some refactoring
+  ...",TRUE,,
+107,Merge branch 'master' into feat/dash-fallback-EP-4332,,,
+1,Merge branch 'master' into feature/add-admin-tag-icon-to-admin-json-tags/EP-4244,,,
+65,Merge branch 'master' into one-flow/2020-08/FLOW-744-button-lowercase,,,
+89,Merge branch 'master' into one-flow/2020-08/FLOW-746-apply-flow-theme,,,
+40,"Merge branch 'master' into user-selection/the-end
+
+* master:
+  Auto fetch/support branch (#2286)
+  RK-6788 Added branch support for auto loaded SaaS sources (#2285)
+  RK-6744 - Server selection // dropdowns improvements (#2277)
+
+# Conflicts:
+#	src/components/State/Sources/WorkspaceSourcesState.js",,,
+50,"Merge branch 'master' into user-selection/the-end
+
+* master:
+  RK-6809 - remove auto-fetched source when server gets disconnected (#2290)
+  tracing: handling empty span in Java rook (#2288)
+  RK-6786 moved oauth data provider to a higher place in the tree so even the random source picker up there is covered (#2291)
+
+# Conflicts:
+#	src/components/State/Sources/WorkspaceSourcesState.js",,,
+87,"Merge branch 'master' of github.com:HoneyBook/hbui into one-flow/2020-08/FLOW-746-apply-flow-theme
+
+# Conflicts:
+#	package.json",,,
+86,"Merge branch 'master' of github.com:HoneyBook/hbui into one-flow/2020-08/FLOW-746-apply-flow-theme
+
+# Conflicts:
+#	package.json
+#	src/components/HBButton/HBButton.styles.ts",,,
+66,Merge branch 'master' of github.com:HoneyBook/honeybook-react into one-flow/2020-08/FLOW-744-button-uppercase,,,
+67,"Merge branch 'master' of github.com:HoneyBook/honeybook-react into one-flow/2020-08/FLOW-744-button-uppercase-with-master
+
+# Conflicts:
+#	package.json",,,
+85,"Merge branch 'master' of github.com:HoneyBook/honeybook-react into one-flow/2020-08/FLOW-746-apply-flow-theme
+
+# Conflicts:
+#	package-lock.json
+#	package.json",,,
+84,"Merge branch 'master' of github.com:HoneyBook/honeybook-react into one-flow/2020-08/FLOW-746-apply-flow-theme
+
+# Conflicts:
+#	package-lock.json
+#	package.json
+#	src/components/Builder/Block/QuestionBlock/EditableQuestionLabel.tsx
+#	src/components/Builder/Block/TextBlock/TextBlock.tsx",,,
+82,"Merge branch 'one-flow/2020-08/FLOW-746-apply-flow-theme' into one-flow/2020-08/FLOW-668-questions-cx
+
+# Conflicts:
+#	changelog.md",,,
+83,"Merge branch 'one-flow/2020-08/FLOW-746-apply-flow-theme' into one-flow/2020-08/FLOW-668-questions-cx
+
+# Conflicts:
+#	package-lock.json",,,
+92,"Merge pull request #131 from HoneyBook/styleguide/08-2020/fix-circle-shaped-resize-final
+
+Styleguide/08 2020/fix circle shaped resize final - FLOW-749",FALSE,,
+36,"Merge pull request #139 from HoneyBook/styleguide/08-2020/support-resize-in-media-element
+
+Styleguide/08 2020/support resize in media element -  FLOW-727",,,
+152,"Merge pull request #145 from HoneyBook/one-flow/2020-08/FLOW-821-fix-custom-button-styling
+
+FLOW-821 fix custom button styling, FLOW-819 fix hb text area border radius",FALSE,,
+155,"Merge pull request #145 from HoneyBook/one-flow/2020-08/FLOW-821-fix-custom-button-styling
+
+FLOW-821 fix custom button styling, FLOW-819 fix hb text area border radius",,,
+93,"Merge pull request #174 from HoneyBook/one-flow/2020-08/fix-circle-shaped-resize
+
+Remove handleDragForCircle prop - FLOW-749",FALSE,,
+91,"Merge pull request #179 from HoneyBook/one-flow/2020-08/video-block-leftovers
+
+One flow/2020 08/video block leftovers - FLOW-748",,,
+220,"Merge pull request #181 from HoneyBook/one-flow/2020-08/bug-fixes
+
+[FLOW-743] - Big plus delay + small bug fixes",TRUE,,
+79,"Merge pull request #183 from HoneyBook/one-flow/2020-08/FLOW-745-button-bold
+
+FLOW-745 update button bold weight to 700",,,
+101,"Merge pull request #187 from HoneyBook/one-flow/2020-08/add-video-icons
+
+Add video block icons to sidebar - FLOW-762",,,
+103,"Merge pull request #189 from HoneyBook/one-flow/2020-08/change-video-sidebar-copy
+
+Change copy & add links - FLOW-764",,,
+68,"Merge pull request #193 from HoneyBook/one-flow/2020-08/FLOW-744-button-uppercase-with-master
+
+[FLOW-744][FLOW-758] HBButton uppercase",,,
+35,"Merge pull request #196 from HoneyBook/one-flow/2020-08/support-crop-and-resize-in-preview
+
+Support crop and resize in preview -  FLOW-727",,,
+124,"Merge pull request #1995 from bizzabo/SUPP-5624-fix-resend-confirmation-email
+
+SUPP-5624 Filter null values for audience filters",FALSE,,
+246,"Merge pull request #205 from HoneyBook/one-flow/2020-08/FLOW-783-error-boundary
+
+FLOW-783 add error boundary component + builder fallback screen",,,
+236,"Merge pull request #212 from HoneyBook/one-flow/2020-08/builder-bug-fixes
+
+FLOW-805 / FLOW-786 / FLOW-715 / FLOW-793 / FLOW-775 / FLOW-773 - Builder bug fixes",TRUE,,
+147,"Merge pull request #220 from HoneyBook/one-flow/2020-09/FLOW-815-retain-selected-page-on-failure
+
+FLOW-815 Retain currently selected page on flow refetch",,,
+33,"Merge pull request #221 from HoneyBook/one-flow/2020-09/fix-svg-tooltip
+
+Update honeybook icons [FLOW-723]",FALSE,,
+20,"Merge pull request #2620 from bizzabo/SUPP-5579
+
+Update `agenda` version",,,
+48,"Merge pull request #2650 from bizzabo/SUPP-5586
+
+new prod tags",,,
+63,"Merge pull request #2653 from bizzabo/SUPP-5600
+
+Supp 5600",,,
+139,"Merge pull request #2710 from bizzabo/SUPP-5646
+
+[SUPP-5646] Unable to change session cap or make session visible",,,
+266,"Merge pull request #28 from Rookout/hotfix/add-local-node-performance-rook
+
+RK-6882 - Add local rook version of node performance after connection error",,,
+34,"Merge pull request #4 from HoneyBook/feat/remove-svg-title
+
+Feat/remove svg title [FLOW-723]",,,
+138,"Merge pull request #496 from bizzabo/SUPP-5646
+
+[SUPP-5646] Unable to change session cap or make session visible",,,
+140,"Merge pull request #497 from bizzabo/SUPP-5646
+
+[SUPP-5646] change response body from Session to SessionResponse due …",,,
+195,"Merge pull request #5890 from HoneyBook/commandos/growth/2020-08/top-nav-transitions
+
+GROWTH-722 Tools debt: Fix top nav transitions (+ GROWTH-717 Bug: Tools Button remains blur on FF)",TRUE,,
+25,"Merge pull request #5909 from HoneyBook/hotfix/2020-08/GROWTH-718
+
+get the pricing plan from the subscription [GROWTH-718]",FALSE,,
+77,"Merge pull request #5914 from HoneyBook/commandos/one-flow/2020-08/FLOW-745-button-bold
+
+[FLOW-745] default flow theme button font weight to bold",,,
+99,"Merge pull request #5922 from HoneyBook/hotfix/2020-08/HON-13025/mailto-for-2fa
+
+Creates a basic mailto [HON-13025]",FALSE,,
+128,"Merge pull request #5939 from HoneyBook/commandos/growth/2020-08/GROWTH-753
+
+Commandos/growth/2020 08/growth 753",,,
+135,"Merge pull request #7 from bizzabo/BPK-4129
+
+Bumped kotlin-commons version to 0.16. Kotlin lib bumped to 1.4.0",,,
+8,"Merge pull request #772 from acumenlabs/ACM-1529_analytics_apply_filter_page_load_team_change
+
+ACM-1529: change filters; make settings req; change max periods to 35",,,
+44,"Merge pull request #785 from acumenlabs/ACM-1548-pull-request-related-tasks-work-digest
+
+Acm 1548 pull request related tasks work digest",,,
+95,"Merge pull request #790 from acumenlabs/ACM-1553_bugfix_convert_ownable_entity
+
+ACM-1553: Update ownable entity",FALSE,,
+118,"Merge pull request #800 from acumenlabs/ACM-1573_click_on_sprint_filter_object_popup
+
+Click on the <n> items should open the filter popup",,,
+273,"Merge pull request #804 from acumenlabs/ACM-1579_user_profile_logout_button
+
+ACM-1579: Fix user side menu to look as required",TRUE,,
+32,Merge remote-tracking branch 'origin/dev' into ACM-1539_pr_merged_while_in_status_incorrect_filter,FALSE,,
+180,"Merge remote-tracking branch 'origin/hotfix/all' into commandos/one-flow/2020-08/FLOW-718-save-flow-as-template
+
+* origin/hotfix/all: (21 commits)
+  Fix csm incorrect fields (#5905)
+  Weekly fixtures creation (#5898)
+  Add delay for hiding toggle on hover
+  Commandos/growth/2020 08/hotfix/fix nil csm (#5901)
+  clean warnings ""Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call"" (#5900)
+  Fix blur function
+  Fix case
+  Commandos/growth/2020 08/hotfix/fix nil csm (#5899)
+  Center menu
+  Center menu
+  Fix timing function
+  (FLOW-730) Override update question and add question_type prop (#5893)
+  Fix spacing
+  Add animation to bottom links as well
+  Commandos/growth/2020 08/hotfix/fix nil csm (#5896)
+  Sorting time trackings by completed_on. HON-13012 (#5891)
+  Reduce delay, add animation for add ng-hide
+  Fix errors in Utils module after code hot-reload [DEVOPS-23] (#5853)
+  Fix top nav transitions
+  Fix Capital letter on Refer And Earn
+  ...",TRUE,,
+278,"Merge remote-tracking branch 'origin/hotfix/all' into commandos/one-flow/2020-08/submit-api
+
+* origin/hotfix/all:
+  (FLOW-816) Linked questions (#5926)
+  update workflow step worker execution time when changing project end date, not only project start date (#5951)
+  add tracking for lead invoice email
+  add tracking to main button
+  when there's a successful payment, update the subscription subtotal so that discounted new price is calculated correctly
+
+# Conflicts:
+#	app/models/flow/flow_context.rb
+#	app/models/flow/revision.rb
+#	app/workers/update_flow_variables_worker.rb
+#	test/controllers/flow_controller_test.rb",TRUE,,
+5,Merge remote-tracking branch 'origin/master' into DEV-21598-Flaky-in-ThreatsSecurityAccountsResourceITest,,,
+136,"Node arithmetic debug (RK-6893) (#3303)
+
+* test
+
+* Add debug condition env-var switched logging
+
+* rename and init properly
+
+* ups",,,
+166,"RK-6769 - Publish slack integration (#2281)
+
+* publish slack integration
+
+* fix",,,
+193,"RK-6775 RK-6781 Bugfix/node performance after connection error (#3294)
+
+* Avoid promise chain
+
+RK-6789
+
+* Reduce MAX_QUEUED_MESSAGES limit to 100
+
+RK-6778
+
+* Fix lambda connection get stuck bug
+
+Now resolve send function in all cases",TRUE,,
+26,"RK-6776 - Don't delete integration test workspace (#538)
+
+* Don't delete integration test workspace
+
+* Changed 'like' to '=' in the query",,,
+196,"RK-6782 - .NET Lambda support (#104)
+
+* Add flush support to AgentCom
+
+* cleanup
+
+* cleanup #2
+
+* Revert ""cleanup #2""
+
+This reverts commit 5a7c668de16704dcd465fd781b3f07f674a73866.
+
+* Various fixes
+
+* Start sendLoop before receive loop
+
+* added missing closing brace
+
+* Use python3
+
+* move LambdaStarter to its own file
+
+* add missing LambdaStarter.cs",TRUE,,
+197,"RK-6786 - Fix local run instructions (#541)
+
+* fix local run instructions
+
+* fix local run instructions
+
+* fix link",,,
+41,RK-6788 Added branch support for auto loaded SAS sources,,,
+46,"RK-6807 - Bit bucket api (#2289)
+
+* RK-6807 - bitbucket api teams endpoint to workspaces endpoint
+
+* more updates
+
+* more work",,,
+47,RK-6807 - bitbucket api teams endpoint to workspaces endpoint,,,
+51,"RK-6809 - remove auto-fetched source when server gets disconnected (#2290)
+
+* initial
+
+* comment
+
+* dudis cr",,,
+218,"RK-6815 - Log classname being retransformed under debug (for AppD Xactware debug session) (#3296)
+
+* Log classname being retransformed under debug (for AppD Xactware debug session)
+
+* Really fixed tests!",,,
+219,"RK-6825 - small changes to git on prem (#201)
+
+* dont fail clone if clean failed
+full clone instead of shallow
+
+* delete non git folders",,,
+130,RK-6886 Made domain check on inviting user case insensitive,,,
+131,RK-6886 Made domain check on inviting user case insensitive (#545),,,
+134,"RK-6888 - Filter out empty user ids + sandbox data (#546)
+
+* Filter out empty user ids
+
+* Filter out sandbox orgs
+
+* no need for error",,,
+271,"RK-6901 - Revert revert metrics + Added timeout context (#547)
+
+* Revert ""Revert ""RK-6726 - Metrics (#532)""""
+
+This reverts commit 577301ebf19035ed15434994e226a0219fa4a6f1.
+
+* add the timeout context to notifying msg-received metric
+
+* Revert ""Revert ""RK-6888 - Filter out empty user ids + sandbox data (#546)""""
+
+This reverts commit c396f17c01749bc627ff1035e013b0ed0976e087.",TRUE,,
+279,"RK-6904 - Add dop logs (#549)
+
+* Revert ""Revert ""RK-6726 - Metrics (#532)""""
+
+This reverts commit 577301ebf19035ed15434994e226a0219fa4a6f1.
+
+* Add DOP logs + fix unsubscribe closure
+
+* add more fields to goroutine param
+
+* removed goroutine params",TRUE,,
+231,"SG-230 Button component: V2 (#6138)
+
+* Deprecated button
+
+* Fix oopsies
+
+* Fix missing deprecations
+
+* Add theme and new button
+
+* Add colors
+
+* Add stylings
+
+* Add margin to the icons
+
+* Give space props to the button
+
+* No funnnyh
+
+* Reomve sketch story
+
+* Add disabled
+
+* Add story
+
+* Add all variants
+
+* Add subject and context support
+
+* Add snapshots
+
+* Fix unit-test
+
+* Grr
+
+* Add text colors
+
+* Change borders for focus using inset shadow
+
+* Fix width when saving
+
+* Move styles to different file
+
+* Better stories
+
+* Better stories
+
+* Add disabled tooltip and adjust tests and and and hi
+
+* Why didnt the webstorm find this usage ffs
+
+* Remove override stlying
+
+* Revert story
+
+* Hrrr
+
+* Blod
+
+* Fix missing screenshots
+
+* Remove variant
+
+* Grough
+
+* Happens all the time
+
+* Replace custom icons with string
+
+* Fix unit test
+
+* Remove conserving the button width on save and add width and subject props
+
+* Fix another import
+
+* Add tooltip placement
+
+* Change secondary background
+
+* Add font-family and enhance stories
+
+* Adjust screenshots",TRUE,,
+230,"SG-230 Colors V2 (#6109)
+
+* Add colors and story and upgrade eslint typescript
+
+* Remove old colors stories
+
+* Remove all redundant core stories
+
+* Deprecate old colors
+
+* Add colors screenshot
+
+* Prettify
+
+* Fix App api prettier
+
+* Prettify E2E
+
+* Prettify app=admin
+
+* Update screenshot and export correctly
+
+* Fix linting app-frontend
+
+* Fix linting
+
+* Not funnyh",,,
+229,"SG-230 Deprecating V1 button (#6081)
+
+* Deprecated button
+
+* Fix oopsies
+
+* Fix missing deprecations
+
+* Reomve sketch story
+
+* Fix unit-test
+
+* Grr
+
+* Why didnt the webstorm find this usage ffs
+
+* Revert story
+
+* Hrrr
+
+* Blod
+
+* Fix another import",TRUE,,
+15,SUPP-5566 Add eventId to speaker search,,,
+54,SUPP-5592 secondary email,,,
+123,SUPP-5624 Filter null values for audience filters,,,
+226,"Track successful scan EP-4313 (#2568)
+
+This pull request is a new feature
+
+JIRA link: https://epsagon.atlassian.net/browse/EP-4313
+
+## Short description of Change
+adding mixpanel events for k8s new cluster integration (succeeded / failed)
+
+
+## PR Checklist
+### All Code Changes
+- [V] Live environment test (`dev`)
+
+### New feature
+- [- ] New CI tests for the new feature different use cases - Will look into adding those
+
+### New Service / Big Feature
+- [N/A] Monitoring - adding analytics. Will monitor the next week or two manually, but I don't feel we need propriatery monitoring for it. WDYT?
+  - [-] Alerts on possible errors - will look into it",,,
+0,[EP-4233] Ignoring alerts with None values (#2557),,,
+76,[FLOW-745] default flow theme button font weight to bold,,,
+244,"[FLOW-776][FLOW-808] fix pages sidebar design + fix dropdown chevron  (#200)
+
+* Fix hover on page row
+
+* Add page hover design
+
+* Add hover state for plus icon
+
+* FLOW-776 fixes input hover state
+
+* update hbui (fixes share tab subject input focus state)
+
+* Fix FLOW-808
+
+Co-authored-by: yuval-ron <yuvaly2394@gmail.com>",TRUE,,
+126,[SUPP-5632] increase performance for sending sns/sqs messages when updating session during the agenda import,,,
+127,[SUPP-5632] make async sending session updates,,,
+137,[SUPP-5646] Unable to change session cap or make session visible,,,
+141,[SUPP-5646] change response body from Session to SessionResponse due to startDate format conflict,,,
+222,"reduce scan rate, change k8s resources ddb to on demand (#2566)
+
+<!--- What types of changes does your code introduce? remove redundant: -->
+This pull request is a bug fix
+
+<!--- edit the jira link to the correct issue #: -->
+JIRA link: https://epsagon.atlassian.net/browse/EP-4299
+
+## Short description of Change
+<!-- Describe your change in a few sentences -->
+
+
+## PR Checklist
+<!-- Remove sections that are irrelevant for your PR -->
+### All Code Changes
+- [ ] Live environment test (`dev`)
+- [ ] In-code documentation
+
+### Bug Fix
+- [ ] CI test that reproduces bug and validates correct behaviour
+
+### New feature
+- [ ] New CI tests for the new feature different use cases
+- [ ] Update `README` or `RUNBOOK` if required
+
+### New Service / Big Feature
+- [ ] `README`
+- [ ] Monitoring
+  - [ ] Alerts on possible errors
+  - [ ] `RUNBOOK` updated with responses to these alerts
+- [ ] Test on `meta`",,,
+194,version:24.12.23; email:lior@honeybook.com; user:Lior Pesoa; message:GROWTH-722 Tools debt: Fix top nav transitions (+ GROWTH-717 Bug: Tools Button remains blur on FF)  (yaniv),TRUE,,
+98,"version:24.13.10; email:lior@honeybook.com; user:Lior Pesoa; message:Creates a basic mailto [HON-13025]  (ian), GROWTH-753 Home screen and Membership Tab UI don’t reflect discount  (erez)",,,
+277,"version:24.13.13; email:lior@honeybook.com; user:Lior Pesoa; message:(FLOW-816) Linked questions (#5926)  (dvir), Add tracking to main button  (erez), Fix wrong plan amount when switching plans  (erez), update workflow step worker execution time when changing project end date, not only project start date (#5951)  (eyal)",TRUE,,
+116,version:24.13.16; email:lior@honeybook.com; user:Lior Pesoa; message:[HON-13036] schedule email send - selected time is in the past (#5958)  (dassi),,,
+75,version:24.13.1; email:lior@honeybook.com; user:Lior Pesoa; message:[FLOW-745] default flow theme button font weight to bold  (uri),,,
+24,"version:24.13.2; email:lior@honeybook.com; user:Lior Pesoa; message:GROWTH-731-tools-for-trialers  (yaniv), get the pricing plan from the subscription [GROWTH-718]  (erez)",,,
