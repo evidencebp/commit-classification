@@ -1,3 +1,7 @@
+"""
+Evaluation of the main models on the main data sets
+
+"""
 import pandas as pd
 
 from configuration import DATA_PATH
@@ -7,6 +11,7 @@ from language_utils import match
 from adaptive_model import is_adaptive
 from corrective_model import is_fix
 from refactor_model import built_is_refactor, build_perfective_regex, build_refactor_regex
+
 
 def classifiy_commits_df(df):
     df['corrective_pred'] = df.message.map(lambda x: is_fix(x))
@@ -42,26 +47,38 @@ def evaluate_regex_results(labels_file
               , index=False)
 
 def corrective_performance(df):
-    bug_g = df.groupby(['corrective_pred', 'Is_Corrective'], as_index=False).agg({'commit' : 'count'})
-    bug_cm = ConfusionMatrix(g_df=bug_g, classifier='corrective_pred', concept='Is_Corrective', count='commit')
-    print( "corrective commit performance")
-    print( bug_cm.summarize())
+    bug_g = df.groupby(
+        ['corrective_pred', 'Is_Corrective'], as_index=False).agg({'commit' : 'count'})
+    bug_cm = ConfusionMatrix(g_df=bug_g
+                             , classifier='corrective_pred'
+                             , concept='Is_Corrective'
+                             , count='commit')
+    print("corrective commit performance")
+    print(bug_cm.summarize())
 
     return bug_cm
 
 def refactor_performance(df):
-    refactor_g = df.groupby(['is_refactor_pred', 'Is_Refactor'], as_index=False).agg({'commit' : 'count'})
-    refactor_cm = ConfusionMatrix(g_df=refactor_g,classifier='is_refactor_pred',concept='Is_Refactor',count='commit')
-    print( "refactor commit performance")
-    print( refactor_cm.summarize())
+    refactor_g = df.groupby(
+        ['is_refactor_pred', 'Is_Refactor'], as_index=False).agg({'commit' : 'count'})
+    refactor_cm = ConfusionMatrix(g_df=refactor_g
+                                  , classifier='is_refactor_pred'
+                                  , concept='Is_Refactor'
+                                  , count='commit')
+    print("refactor commit performance")
+    print(refactor_cm.summarize())
 
     return refactor_cm
 
 def adaptive_performance(df):
-    adaptive_g = df.groupby(['adaptive_pred', 'Is_Adaptive'], as_index=False).agg({'commit' : 'count'})
-    adaptive_cm = ConfusionMatrix(g_df=adaptive_g,classifier='adaptive_pred',concept='Is_Adaptive',count='commit')
-    print( "adaptive commit performance")
-    print( adaptive_cm.summarize())
+    adaptive_g = df.groupby(
+        ['adaptive_pred', 'Is_Adaptive'], as_index=False).agg({'commit' : 'count'})
+    adaptive_cm = ConfusionMatrix(g_df=adaptive_g
+                                  , classifier='adaptive_pred'
+                                  , concept='Is_Adaptive'
+                                  , count='commit')
+    print("adaptive commit performance")
+    print(adaptive_cm.summarize())
 
     return adaptive_cm
 
@@ -76,13 +93,13 @@ def linguistic_model_perfomance(df
 
 
 def main():
-    print( "test performance")
-    print( "***********************************")
+    print("test performance")
+    print("***********************************")
     evaluate_regex_results(DATA_PATH + 'repo2018_test.csv')
     #evaluate_bq_results(DATA_PATH + '/labels/commits_updated2.csv')
 
-    print( "validation performance")
-    print( "***********************************")
+    print("validation performance")
+    print("***********************************")
     evaluate_regex_results(DATA_PATH + 'model_validation_samples.csv'
                            , just_corrective=True)
 
