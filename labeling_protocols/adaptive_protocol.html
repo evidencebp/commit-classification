@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive labeling protocol</title>
+</head>
+<body>
+
+<B>Task</B>
+
+Our goal is to label git commit message and decide whether the commit is adaptive, adding a new feature.
+
+For each commit we should fill these fields:
+<ol>
+  <li>Is_adaptive, taking the values, True, False and ? (as intermediate value).</li>
+  <li>Justification which is the reason based on the text for the classification.</li>
+  <li>Comment, any unstructured information of interest.</li>
+  <li>certain, default True, change to false when not sure in the classification.</li>
+</ol>
+
+The labeling is based on the commit message for each commit.
+Ideally this will be enough for the classification.
+If needed, the commit content, linked ticket and other data can be used for finding the commit type.
+
+<BR>
+<B>Instructions</B>
+
+<ol>
+  <li>We consider only commit messages in English.</li>
+  <li>Unless we find an indication to a adpative contant, the default should be False.</li>
+  <li>In case of uncertainty, the commit should be labeled by the option you consider most likely. Start the justification with the word “Uncertain” and then describe the source of the uncertainty and the reasons to your decision.</li>
+  <li>In case that it is hard to decide based on the commit message alone, one should check the commit content in git. The concept that we label is “Is the commit a adaptaive?” and not “Does the commit message indicates an adaptive work”.
+    Hence, if an adaptive indication is found in git, the commit should be labeled as True.</li>
+  <li>The “Justification” field should contain the reason to the labeling.</li>
+  <li>In case of a specific common non adaptive action (e.g., bug fix, refactor, performance improvement), the action should be named.</li>
+  <li>In case of an other action, the justification should be “other action”</li>
+  <li>In case of an adaptive, the justification should be support from the text (e.g., Added, Changed).</li>
+  <li>In case of messages not in English, the comment should be “Not in English”.</li>
+  <li>In case of English text but no a specific term indicating an adaptive, the comment should be “No syntactic evidence”. This cases are rare.</li>
+
+  <li>Adding a new feature is adaptive.</li>
+  <li>Changing a feature is adaptive.</li>
+  <li>Changing a feature implementation yet keeping its functionality is a refactor, not adaptive.</li>
+  <li>Code review fixes is adaptive</li>
+
+
+  <li>Tests are considered to be a part of the system and its requirements. Therefore, an adaptive change in the tests is adaptive and should be labeled as True.</li>
+  <li>Merge is a technical instrument. It is adaptive since it modifies the system. A merge commit might have more functions judged by its content.
+      Since merge commits can be identified by having more than a single parent, it is easy to be flexible in their usage.
+  </li>
+</ol>
+
+
+</body>
+</html>
