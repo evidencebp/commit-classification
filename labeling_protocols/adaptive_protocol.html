@@ -41,8 +41,19 @@ If needed, the commit content, linked ticket and other data can be used for find
   <li>Adding a new feature is adaptive.</li>
   <li>Changing a feature is adaptive.</li>
   <li>Changing a feature implementation yet keeping its functionality is a refactor, not adaptive.</li>
+  <li>Removing a feature is adaptive.</li>
+  <li>Performance improvement is adaptive.</li>
+  <li>Removing dead code is a refactor, not adaptive.</li>
   <li>Code review fixes is adaptive</li>
+  <li>Fixing (merge) conflicts is adaptive</li>
+  <li>Fixing static analysis warning, which are not bugs, is adaptive</li>
+  <li>Upgrading a library, is adaptive</li>
+  <li>Bumping self version is perfective, not adaptive</li>
 
+  <li>Debug message/ feature aimed not to the end user - adaptive. We consider the features for programmers as part of the features.</li>
+  <li>Changing an interface is adaptive.</li>
+  <li>Updating a library is adaptive</li>
+  <li>Porting code is adaptive</li>
 
   <li>Tests are considered to be a part of the system and its requirements. Therefore, an adaptive change in the tests is adaptive and should be labeled as True.</li>
   <li>Merge is a technical instrument. It is adaptive since it modifies the system. A merge commit might have more functions judged by its content.
