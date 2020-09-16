@@ -122,6 +122,10 @@ unnedded_terms = ['unnecessary', 'unneeded', 'unused', '(?:not|never|no longer) 
 
 static_analyzers = ['lint', 'pylint', 'tslint', 'jlint', 'jslint']
 
+code_review_fixes = ['(cr|pr)(s)?(-)?(d+)?\sfix(es)?', 'fix(?:ing|es|ed)?\s(cr|pr|code review|code-review|review)']
+
+no_message = ['no message', 'wip', 'work in progress', 'message']
+
 def build_sepereted_term(term_list : List, just_before =False):
     if just_before:
         sep = "%s(%s)" % (term_seperator, "|".join(term_list))

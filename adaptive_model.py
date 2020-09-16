@@ -8,7 +8,8 @@ from labeling_util import get_false_positives, get_false_negatives
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
-    , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, unnedded_terms
+    , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, unnedded_terms\
+    , code_review_fixes, no_message
 
 from model_evaluation import classifiy_commits_df, evaluate_performance
 
@@ -75,7 +76,8 @@ adaptive_header_action = "|".join([
     'remov(?:e|es|ed|ing)'
     #'re(-)?enabl(?:e|es|ed|ing)',
 
-])
+] +no_message
+)
 
 adaptive_actions = [  # 'revert(?:s|ed|ing)?',
     #'merg(?:e|es|ed|ing)[\s\S]{1,5}(pull request|pr|branch)',
@@ -91,7 +93,10 @@ adaptive_actions = [  # 'revert(?:s|ed|ing)?',
     # '^(?:version|v\d+\.\d|ver\d+\.\d)',
     '^\[(?:IMP|imp)\]',  # TODO - take care of upper/lower case
     'support(?:s|ed|ing)?\sfor\s',
-    'show(?:es|ed|ing)?[\s\S]instead']
+    'show(?:es|ed|ing)?[\s\S]instead',
+    'scal(?:e|es|ed|ing)?\s(up|down)'
+
+                   ] + code_review_fixes
 
 
 def build_adaptive_action_regex():
@@ -181,17 +186,18 @@ def evaluate_adaptive_classifier():
     text_name = 'message'
     classification_function = is_adaptive
     classification_column = 'corrective_pred'
-    """
-    concept_column='expected'
 
-    df = pd.read_csv(join(DATA_PATH, 'corrective_labels.csv'))
+    concept_column='Is_Adaptive'
 
-    df = df[df.uncertain != 'TRUE']
+    df = pd.read_csv(join(DATA_PATH, 'commit_classification_batch2.csv'))
+    df = df[df.certain != 'FALSE']
+    df = df[~df.Is_Corrective.isna()]
+
     """
     concept_column = 'is_adaptive'
-    df = pd.read_csv(join(DATA_PATH, "corrective_labels.csv"))
+    df = pd.read_csv(join(DATA_PATH, "commit_classification_batch2.csv"))
     df[concept_column] = df.expected.map(lambda x: not x)
-
+    """
     df = classifiy_commits_df(df
                               , classification_function=classification_function
                               , classification_column=classification_column
@@ -227,10 +233,11 @@ if __name__ == '__main__':
     #print_adaptive_functions()
     evaluate_adaptive_classifier()
 
-    text = """ACM-1526: CR fixes""".lower()
+    text = """Scale down back to 5 replicas""".lower()
     print(is_adaptive(text))
     valid_num = len(re.findall(build_adaptive_regex(), text))
-    valid_num = len(re.findall('cr(s)?(-)?\sfix(?:s|ed|ing)?', text))
+    valid_num = len(re.findall('scal(?:e|es|ed|ing)?\s(up|down)', text))
+    valid_num = len(re.findall(build_sepereted_term(['scal(?:e|es|ed|ing)?\s(up|down)']), text))
 
 
 
