@@ -52,7 +52,8 @@ documentation_entities = [
     'desc(?:ription)?(?:s)?',
     'copy(?: |-)?right(?:s)?',
     'explanation(?:s)?',
-    'release notes'
+    'release notes',
+    'tag(?:s)?', # Git commit tags
 
 ]
 
