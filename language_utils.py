@@ -42,6 +42,7 @@ documentation_entities = [
     'example(?:s)?',
     'diagram(?:s)?',
     'guide(?:s)?',
+    'gitignore',
     'icon(?:s)?',
     'doc(?: |-)?string(?:s)?',
     'tutorials(?:s)?',
