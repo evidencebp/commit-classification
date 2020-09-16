@@ -41,6 +41,7 @@ adaptive_entities = ['ability', 'configuration', 'conversion', 'debug', 'new', '
 adaptive_header_action = "|".join([
     'upgrad(?:e|es|ed|ing)',
     'configur(?:e|es|ed|ing)',
+    'chang(?:e|es|ed|ing)',
     '(?:keep|change)\s+(?:the\s+)?default',
     'new',
     # '(?:make(?:s)?|made|making)',
@@ -71,7 +72,6 @@ adaptive_header_action = "|".join([
     # , 'mark(?:s|ed|ing)?'
     # , 'us(?:e|es|ed|ing)'
     # , '(?:make|made|making)'
-    #'chang(?:e|es|ed|ing)',
     # , 'creat(?:e|es|ed|ing)'
     # , 'handl(?:e|es|ed|ing)'
     'remov(?:e|es|ed|ing)',
@@ -211,7 +211,7 @@ def evaluate_adaptive_classifier():
                               , text_name=text_name)
     print("corrective_labels CM")
     print(cm)
-    """
+    #"""
     fp = get_false_positives(df
                              , classifier_column=classification_column
                              , concept_column=concept_column)
@@ -220,7 +220,7 @@ def evaluate_adaptive_classifier():
     pd.options.display.max_rows = 2000
     print(fp)
 
-    """
+    #"""
     fn = get_false_negatives(df
                         , classifier_column=classification_column
                         , concept_column=concept_column)
@@ -235,7 +235,7 @@ if __name__ == '__main__':
     #print_adaptive_functions()
     evaluate_adaptive_classifier()
 
-    text = """cast event type as text""".lower()
+    text = """Merge branch 'master' into bugfix/reert-sidebar-design/EP-0000""".lower()
     print(is_adaptive(text))
     valid_num = len(re.findall(build_adaptive_action_regex(), text))
     valid_num = len(re.findall('cast(?:s|et|ing)?' + NEAR_ENOUGH + '\sas', text))
