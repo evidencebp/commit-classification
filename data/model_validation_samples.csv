@@ -64,7 +64,7 @@ TWRP-THEA/android_kernel_motorola_msm8226,e2a1b9ee2335c35e0e34c88a024481b194b3c9
   NFSv4: Fix the case where NFSv4 renewal fails
   nfs: fix build error in nfsroot with initconst
   XPRTRDMA: fix client rpcrdma FRMR registration on mlx4 devices
-",7,0,0,True,True,True,fix,,True,False,False,False
+",7,0,0,True,True,True,fix,,True,False,False,True
 DanielZhangQingLong/gitlabhq,45c39250209aa4bcfc41c82445cf4ae68a45b880,Better style for blockquote text in comments,"Better style for blockquote text in comments
 ",0,0,0,False,True,False,better style,,False,False,True,False
 bocharsky-bw/DoctrineExtensions,c2aba006aa376a6c76007e81f09fe3cf59e421f6,[tree] use root entity name for materialized path children query #693,"[tree] use root entity name for materialized path children query #693
@@ -75,7 +75,7 @@ TheJJ/linux,17d2cc25f04462fd5d835318f02fb5492576ab4b,ARM: at91: merge at91cap9_d
 
 Signed-off-by: Jean-Christophe PLAGNIOL-VILLARD <9fc55922e47e21cb004bb878f69efa10ab51cf02@jcrosoft.com>
 Acked-by: Nicolas Ferre <45b517be0e5ec6dc3a39715767c1d18e090d39b4@atmel.com>
-",0,0,0,False,False,False,other action,,False,False,False,False
+",0,0,0,False,False,False,other action,,False,False,False,True
 AOSPA-L/android_kernel_htc_msm8994,7a779490b9ea250e0b69e25fed4afc5e71fbb46c,staging: ti-soc-thermal: report alert events on OMAP4 devices,"staging: ti-soc-thermal: report alert events on OMAP4 devices
 
 OMAP4460 and OMAP4470 devices have the capability to generate
@@ -201,10 +201,10 @@ SymfonyId/symfony,a4f05ac7ab35e9c0e0be245ec3cc5033ae13ca48,added some tests,"add
 rsidorakin/SDWebImage,364f5c4d7a8e8289058dafe3b9e6fe9f7cee5566,"should not add url to failedURLs when timeout, cancel and so on. #707","should not add url to failedURLs when timeout, cancel and so on. #707
 ",0,0,0,False,True,True,"should not, code ades conditions to if",,True,False,False,True
 gcochard/shields,46450af165c844300f4258d7bb0e93c97558b04a,Merge remote-tracking branch 'wouterds/master',"Merge remote-tracking branch 'wouterds/master'
-",0,0,0,False,False,False,other action,,False,False,False,False
+",0,0,0,False,False,False,other action,,False,False,False,True
 Leatherface75/xbmc,64d269d12b5ea72c53cb37e806a3a087093364ca,Merge pull request #10788 from phil65/pvr_next_fallbacks,"Merge pull request #10788 from phil65/pvr_next_fallbacks
 
-[gui] - remove fallbacks for pvr next* infolabels",0,0,0,False,True,False,other action,,False,False,False,False
+[gui] - remove fallbacks for pvr next* infolabels",0,0,0,False,True,False,other action,,False,False,False,True
 Bronek/solidrun-linaro-linux.3.14,6c9cac89c009c049a9ad29cdf0f51892410fe751,[media] pwc: Replace control code with v4l2-ctrls framework,"[media] pwc: Replace control code with v4l2-ctrls framework
 
 Also remove all the converting from native range to 0-65535 and back
@@ -269,7 +269,7 @@ Signed-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-fou
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
 ",2,1,0,True,True,True,"add missing, bug",,True,False,False,False
 z3ntu/android_kernel_fairphone_fp2,fe05f54181db868c5720cc4dc0741227b9ba5a60,Merge git://git.kernel.org/pub/scm/linux/kernel/git/brodo/pcmcia-fixes-2.6,"Merge git://git.kernel.org/pub/scm/linux/kernel/git/brodo/pcmcia-fixes-2.6
-",0,0,0,False,False,True,fixes,"consider ""-"" context",False,False,False,False
+",0,0,0,False,False,True,fixes,"consider ""-"" context",False,False,False,True
 Note-2/android_kernel_samsung_smdk4412,e36c455c2f5fee08fed395e94c7ab156cd159360,PCI: power management: remove noise on non-manageable hw,"PCI: power management: remove noise on non-manageable hw
 
 Return early from pci_set_power_state() if hardware does not support
@@ -303,7 +303,7 @@ khoimt/cakephp-study,04f1b6cdfe2743cbfda68d221d2faa0e5ac13f6c,Remove Subversion 
 ",0,0,0,False,False,False,remove,,False,False,False,True
 gurneyalex/OpenUpgrade,2d1720811c2dc5f459d83c385ea5f05bb30a5e47,[MERGE] trunk-website-al,"[MERGE] trunk-website-al
 
-bzr revid: ddm@openerp.com-20131011141759-uqo52ta0haqyn3z6",0,0,0,False,False,False,other action,,False,False,False,False
+bzr revid: ddm@openerp.com-20131011141759-uqo52ta0haqyn3z6",0,0,0,False,False,False,other action,,False,False,False,True
 crystalfontz/linux-2.6,4de0d4a6d173351b023ab2855c3d331146a418e5,x86: EFI runtime code mapping enhancement,"x86: EFI runtime code mapping enhancement
 
 This patch enhances EFI runtime code memory mapping as following:
@@ -352,7 +352,7 @@ git-svn-id: e8541e15acce502a64c929015570ad1648e548cd@9503 2bbb7eff-a529-9590-31e
 ",0,0,0,False,True,False,remove not used,,False,True,False,False
 alexcuellar/odoo,12a591b45acfa6787af1281afd8d5783d1435a8f,[MERGE] lp:893626 (hr: improve stored function fields of hr.job),"[MERGE] lp:893626 (hr: improve stored function fields of hr.job)
 
-bzr revid: rco@openerp.com-20111130133749-h0qbls0lwsplkdlr",0,0,0,False,False,False,improve,,False,True,True,False
+bzr revid: rco@openerp.com-20111130133749-h0qbls0lwsplkdlr",0,0,0,False,False,False,improve,,False,True,True,True
 Euphoria-OS/android_kernel_msm,a294d97742568f429590cf2022d92e4b0c5f6ba0,tx4938ide: Fix build error due to read_sff_dma_status moving,"tx4938ide: Fix build error due to read_sff_dma_status moving
 
 Signed-off-by: Atsushi Nemoto <80aeab2fcc576fb9134b563f36af765199d49e90@mba.ocn.ne.jp>
@@ -388,7 +388,7 @@ thomasjm/LyX,6d4cde435d32d71475c4eb1e12877b11a53ce975,BufferParams.cpp: fix bug 
 ",1,0,0,True,True,False,"fix, bug",boh fix and bu should have been captured here,True,False,False,False
 cmluciano/kubernetes,b19837f4e20b8b6b5722427207d4afd41a1eee2d,Merge pull request #14767 from nikhiljindal/podConditionTransitionTime,"Merge pull request #14767 from nikhiljindal/podConditionTransitionTime
 
-Auto commit by PR queue bot",0,0,0,False,True,False,other action,,False,False,False,False
+Auto commit by PR queue bot",0,0,0,False,True,False,other action,,False,False,False,True
 skipisz/linux,bb4a340e075b7897ece109686bfa177f8518d2db,mm: rename anon_vma_lock to vma_lock_anon_vma,"mm: rename anon_vma_lock to vma_lock_anon_vma
 
 Rename anon_vma_lock to vma_lock_anon_vma.  This matches the naming style
@@ -545,7 +545,7 @@ andrey-utkin/linux,e64de3b96c1ba3c1de236a4a103ec21234a5849f,Merge 3.7-rc3 into c
 This brings in the various 3.7-rc3 char fixes into char-misc-next.
 
 Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@linuxfoundation.org>
-",1,0,0,True,True,True,fixes,,True,False,False,False
+",1,0,0,True,True,True,fixes,,True,False,False,True
 AOKP/kernel_samsung_exynos5410,716ad8750a3ffe6b458d52da2d1c01cbf3e2f60d,ide: fix race in device_create,"ide: fix race in device_create
 
 There is a race from when a device is created with device_create() and
@@ -560,7 +560,7 @@ Cc: Kay Sievers <a591390dde1303c55d531fd687bfa5ffd43e435e@vrfy.org>
 Acked-by: Bartlomiej Zolnierkiewicz <248de9df611a028e5eceb9d893a2ed6c24c89ef4@gmail.com>
 Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@suse.de>
 
-",2,0,0,True,True,True,"fix, race",,True,False,False,False
+",2,0,0,True,True,True,"fix, race",,True,False,False,True
 NamanArora/android_kernel_sony_flamingo,70688e4dd1647f0ceb502bbd5964fa344c5eb411,xip: support non-struct page backed memory,"xip: support non-struct page backed memory
 
 Convert XIP to support non-struct page backed memory, using VM_MIXEDMAP for
@@ -616,7 +616,7 @@ This patch also adds ibm405ep_fixup_clocks() to support
 
 Signed-off-by: Matthias Fuchs <c644bcc7adde749925d0c408d4079e12bd966888@esd-electronics.com>
 Signed-off-by: Josh Boyer <94755a79aca753e683bb6d0e796d473b797056eb@linux.vnet.ibm.com>
-",0,0,0,False,True,False,add support,,False,False,False,True
+",0,0,0,False,True,False,add support,,True,False,False,True
 lastzero/symlex-core,784c4a68123b475ae4ad3897d8cbef1b1d9290a0,Update README.md,Update README.md,0,0,0,False,False,False,"update, readme",,False,False,True,False
 simson/linux,b03e14fd4b9f91d0c6be864bf62c75933fa26cac,drm/omap: Take a fb reference in omap_plane_update(),"drm/omap: Take a fb reference in omap_plane_update()
 
@@ -815,7 +815,7 @@ Change-Id: I251dc33583fb049867594539b799ca3c6ebcba65
 Signed-off-by: Vinayak Menon <fe9d85ff94be24c6fde836056c8ec3b0d1ed83bc@broadcom.com>
 ",1,1,0,False,True,False,warning,,False,False,False,False
 jamielinux/discourse,78000fe870bf74eb0b467af1b5cce17fefd757ee,Fix category delete,"Fix category delete
-",1,0,0,True,False,True,fix,,True,False,False,False
+",1,0,0,True,False,True,fix,,True,False,False,True
 icepeda/linux,291248fd6e371bcbfb8a77689c5d741a1527488f,uml: remove unused variables in the context switcher,"uml: remove unused variables in the context switcher
 
 This patch removes a variable which was not used in two functions.  Yet
@@ -859,7 +859,7 @@ addition-it-solutions/project-all,733fe62640bc88bc49f02c217c754d05c3337de4,[FIX]
 bzr revid: stephane@openerp.com-20100531122708-hm1u61jl0ykvz2fa",1,0,0,True,True,True,fix,,True,False,False,False
 thhomas/ol3,e58f173c788cf4e793b0ba241a358adad4941119,Merge pull request #6475 from fredj/zoomify_url_template,"Merge pull request #6475 from fredj/zoomify_url_template
 
-Use an url template for ol.source.Zoomify",0,0,0,False,True,False,use template,,False,False,False,False
+Use an url template for ol.source.Zoomify",0,0,0,False,True,False,use template,,False,False,False,True
 rogersb11/android_kernel_samsung_d2,9e95922b1016ac941db7edcf6b6088b3c2e916c8,ARM: I-cache: Add invalidation for VIVT ASID tagged caches,"ARM: I-cache: Add invalidation for VIVT ASID tagged caches
 
 Signed-off-by: Russell King <f6aa0246ff943bfa8602cdf60d40c481b38ed232@arm.linux.org.uk>
@@ -996,7 +996,7 @@ Signed-off-by: David Woodhouse <b460d66aaf00c296a3db1c1d9eeafc081d5f7d70@intel.c
 Reported-by: Yinghai Lu <086d370ab7099a37fc1e7d4667336777772c5d99@gmail.com>
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
 ",1,0,0,True,True,True,fix,,True,False,False,False
-MuddyPlump/android_kernel_motorola_msm8226,8c48412f59d2ae51857516d8173a260f673c811f,"Merge ""msm: vidc: Handle FBD's with ARF flag""","Merge ""msm: vidc: Handle FBD's with ARF flag""",0,0,0,False,True,False,handle,,False,False,False,False
+MuddyPlump/android_kernel_motorola_msm8226,8c48412f59d2ae51857516d8173a260f673c811f,"Merge ""msm: vidc: Handle FBD's with ARF flag""","Merge ""msm: vidc: Handle FBD's with ARF flag""",0,0,0,False,True,False,handle,,False,False,False,True
 jejecrdroid/kernel_samsung_espresso10,fc2fa31f4eaa53995593ced14c73f2cf63dcfa17,V4L/DVB (4739): SECAM support for saa7113 into saa7115,"V4L/DVB (4739): SECAM support for saa7113 into saa7115
 
 Without the attached trivial patch, the saa7113 is set up for PAL when SECAM 
@@ -1043,7 +1043,7 @@ sileht/check_mk,6f8b51673899cbf0ff8a07852d3fb02a80afea6e,Livestatus: json handle
 ",1,0,0,True,False,True,correctly,,True,False,False,False
 Dannnno/Quasar,17bf7539a8dd908fa0cefa4dab948a49d4d60813,Merge pull request #1 from Dannnno/develop,"Merge pull request #1 from Dannnno/develop
 
-Develop",0,0,0,False,True,False,other action,,False,False,False,False
+Develop",0,0,0,False,True,False,other action,,False,False,False,True
 google/ktsan,5ab9a428cf1d118779554b6a20161d7b339310db,ARM: S3C24XX: prevent conflicts between ccf and non-ccf s3c24xx-socs,"ARM: S3C24XX: prevent conflicts between ccf and non-ccf s3c24xx-socs
 
 As the conversion to the common-clock-framework is done in multiple
@@ -1142,7 +1142,7 @@ Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@linu
 ",3,0,0,True,True,True,"correct, fix",,True,False,False,False
 acorncom/ember-cli,7d76b911d722632224eb6f16342043c7ba61d861,Merge pull request #3846 from trabus/addon-import-blueprint-normalize,"Merge pull request #3846 from trabus/addon-import-blueprint-normalize
 
-[BUGFIX] Prevent addon-import blueprint from generating if entity name is undefined",1,0,0,True,True,True,bugfix,,True,False,False,False
+[BUGFIX] Prevent addon-import blueprint from generating if entity name is undefined",1,0,0,True,True,True,bugfix,,True,False,False,True
 schacon/linux,9eb7115bcc423ae022ebf1844820d58a77c2d435,davinci: Move IO device mapping macros from io.h to hardware.h,"davinci: Move IO device mapping macros from io.h to hardware.h
 
 This patch takes out IO mapping macros from mach/io.h and puts them in
@@ -1216,9 +1216,9 @@ SGI-Modid: xfs-linux-melb:xfs-kern:29496a
 Signed-off-by: Christoph Hellwig <923f7720577207a44b32e59bbfbea59d27f1ae8e@infradead.org>
 Signed-off-by: David Chinner <d2f98f0f27147ca85564d32aa37577d3673e6910@sgi.com>
 Signed-off-by: Tim Shimmin <d1c056a983786a38ca76a05cda240c7b86d77136@sgi.com>
-",0,0,0,False,False,,,,False,False,False,False
+",0,0,0,False,False,,,,False,False,False,True
 turtlekiosk/coms4118,cbe9ee00cea58d1f77b172fe22a51080e90877f2,Merge branch 'x86/urgent' into x86/cleanups,"Merge branch 'x86/urgent' into x86/cleanups
-",0,0,0,False,True,False,cleanups,,False,True,True,False
+",0,0,0,False,True,False,cleanups,,False,True,True,True
 tyannad/cgm-remote-monitor,6461de61976b919916bed960eeb3c1e4c44e634b,Fix Simple Alarms threshold calculation when on mmol,"Fix Simple Alarms threshold calculation when on mmol
 ",1,0,0,True,True,True,fix,,True,False,False,False
 achals/servo,0cba3eec626a5156508bda0cc7d518aba6a29323,remove comments now that we have more descriptive names,"remove comments now that we have more descriptive names
@@ -1330,7 +1330,7 @@ Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@osdl.org
 evercam/evercam-media,486f03ff9fabf4699ea90b43a97917eec2d08850,Added memcached support using mcd,"Added memcached support using mcd
 ",0,0,0,False,False,False,added support,,False,False,False,True
 nimaghorbani/TelegramIOS,e81fd520782ae23cc1140c42a2270ed4bb97c92d,Merged dLog replacement,"Merged dLog replacement
-",0,0,0,False,False,False,replacement,,False,False,False,False
+",0,0,0,False,False,False,replacement,,False,False,False,True
 sbates130272/linux-donard,465393749da3a3229f6067246c7e8f97f7cc833d,at91: move clock subsystem init to soc generic init,"at91: move clock subsystem init to soc generic init
 
 Signed-off-by: Jean-Christophe PLAGNIOL-VILLARD <9fc55922e47e21cb004bb878f69efa10ab51cf02@jcrosoft.com>
@@ -1382,7 +1382,7 @@ Signed-off-by: Jason Wang <788d9e7aa742630b81247637e5d084394a0d027d@gmail.com>
 Acked-by: Stanislav Brabec <86c16928ab96ba64a9d782092aaacd20193fa8f0@suse.cz>
 Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@suse.de>
 
-",1,0,0,True,True,True,problem,,True,False,False,False
+",1,0,0,True,True,True,problem,,True,False,False,True
 shane87/android_kernel_lge_g3,93b6aa693a355932b69c96956596b03f91baec35,nl80211/cfg80211: add max_sched_scan_ssids in the hw description,"nl80211/cfg80211: add max_sched_scan_ssids in the hw description
 
 Some chips can scan more SSIDs with a single scheduled scan command
@@ -1804,7 +1804,7 @@ xHCI driver warnings, whenever an isochronous short packet happens on an xHCI
 The other two patches fix build warnings.
 
 Sarah Sharp
-",4,1,0,True,True,True,bug,,True,False,True,False
+",4,1,0,True,True,True,bug,,True,False,True,True
 TipsyOs-Devices/android_kernel_samsung_trlte,dfa5ec79d28300b0d1fdeafbeebf0a6b721edc38,USB: use DIV_ROUND_UP,"USB: use DIV_ROUND_UP
 
 The kernel.h macro DIV_ROUND_UP performs the computation (((n) + (d) - 1) /
@@ -1875,7 +1875,7 @@ Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@suse
 ",0,0,0,False,True,False,add support,,False,False,False,True
 tsl143/addons-frontend,5677c38e376a9d3525d94f4a89e7dcc387cda98f,Merge pull request #1407 from mstriemer/fix-install-button-and-travis-4035,"Merge pull request #1407 from mstriemer/fix-install-button-and-travis-4035
 
-Ensure installURL is set before calling withInstallHelpers ",0,0,0,False,True,True,fix,"check if ""/"" in context",False,False,False,False
+Ensure installURL is set before calling withInstallHelpers ",0,0,0,False,True,True,fix,"check if ""/"" in context",False,False,False,True
 jmartinc/video_visstrim,cbae787c0f288c3ad385ad4165ae30b5500a1f23,firewire: core: simplify broadcast channel allocation,"firewire: core: simplify broadcast channel allocation
 
 fw-iso.c has channel allocation code now, use it.
@@ -1951,7 +1951,7 @@ Signed-off-by: Jeff Garzik <f3e731dfa293c7a83119d8aacfa41b5d2d780be9@garzik.org>
 ",3,0,0,True,True,True,fix,,True,True,True,True
 IONISx/edx-platform,b9bd9ae3f63e8a917ff3e374a1f5599fc72fceb0,Merge pull request #9336 from edx/tasawer/bugfix/ecom-2019-fixing-mininmum-grade-value-error,"Merge pull request #9336 from edx/tasawer/bugfix/ecom-2019-fixing-mininmum-grade-value-error
 
-Fixing minimum grade value error",2,0,0,True,True,True,fixing,"check if ""-"" in context",True,False,False,False
+Fixing minimum grade value error",2,0,0,True,True,True,fixing,"check if ""-"" in context",True,False,False,True
 sztupy/samsung-kernel-herring,3a509bb11acded0dfebbfcc740d85e0774b0769a,[media] Re-write the s921 frontend,"[media] Re-write the s921 frontend
 
 On our tests with Leadership ISDBT, the s921 frontend were not work. As its
@@ -1981,7 +1981,7 @@ If max_reqs is 0, do nothing besides the usual dprintks.
 
 Signed-off-by: Weston Andros Adamson <2782014720c8dba08f7eb23e9f1d190c445c0c94@netapp.com>
 Signed-off-by: Trond Myklebust <6a1f9db795c9fc44be97d66ab114c53193bd3d13@netapp.com>
-",0,0,0,False,True,False,remove,,False,False,False,True
+",0,0,0,False,True,False,remove,,True,False,False,True
 DreamStar001/Vegito_vibe_k5,b40bf53effc0338ad7926aa1abce703af372cbd4,Xen: Add virt_to_pfn helper function,"Xen: Add virt_to_pfn helper function
 
 Signed-off-by: Alex Nixon <551b37afbb19cc0e0bb4047ef6ec1c201b6d98e5@citrix.com>
@@ -2006,7 +2006,7 @@ rename : dom/presentation/tests/mochitest/test_presentation_sender.html => dom/p
 rename : dom/presentation/tests/mochitest/test_presentation_sender_default_request.html => dom/presentation/tests/mochitest/test_presentation_tcp_sender_default_request.html
 rename : dom/presentation/tests/mochitest/test_presentation_sender_disconnect.html => dom/presentation/tests/mochitest/test_presentation_tcp_sender_disconnect.html
 rename : dom/presentation/tests/mochitest/test_presentation_sender_establish_connection_error.html => dom/presentation/tests/mochitest/test_presentation_tcp_sender_establish_connection_error.html
-",1,0,0,True,True,True,bug,,False,True,True,False
+",1,0,0,True,True,True,bug,,True,True,True,False
 mlaa/cbox-theme,ebf905d8368d9ed132a2c86e4b1e213886d57bf6,wrapped a div around the options field for layout,"wrapped a div around the options field for layout
 ",0,0,0,False,True,False,other action,,False,False,False,False
 ubports/android_kernel_oneplus_msm8994,f34fbb971368c20f757f8758833a534590b16518,[PKTGEN]: Deinitialise static variables.,"[PKTGEN]: Deinitialise static variables.
@@ -2204,7 +2204,7 @@ Signed-off-by: Jan Engelhardt <f383ed465f890d2e8ea864dd0c28cf8ec50a8942@medozas.
 ",0,0,0,False,False,False,other action,,False,False,False,False
 gnudeep/app-cloud,1d3840ac7704c5c04631f371f90559fa5e44d778,Merge pull request #873 from thiliniish/master,"Merge pull request #873 from thiliniish/master
 
-APPCLOUD-373",0,0,0,False,True,False,other action,,False,False,False,False
+APPCLOUD-373",0,0,0,False,True,False,other action,,False,False,False,True
 TeamEOS/kernel_htc_msm8960,6fe711658fcf92d39d84c0b7e6332ed6625dc520,[CPUFREQ] ondemand: trivial clean-ups,"[CPUFREQ] ondemand: trivial clean-ups
 
 Trivial ondemand governor clean-ups:
@@ -2295,7 +2295,7 @@ IonKiwi/android_kernel_samsung_kccat6,9720d75399fd2655a6b6fb06abcf548150f22362,M
 * 'for-2.6.40' of git://git.kernel.org/pub/scm/linux/kernel/git/oleg/misc:
   signal: sys_pause() should check signal_pending()
   ptrace: ptrace_resume() shouldn't wake up !TASK_TRACED thread
-",0,0,0,False,False,False,other action,,False,False,False,False
+",0,0,0,False,False,False,other action,,False,False,False,True
 zephiK/android_kernel_moto_shamuLP,31f6a29a58c0c9aa5c6e13abe0b00b81bb3c9601,"IIO: GYRO: ADXRS450: Don't issue two messages, use two transfers","IIO: GYRO: ADXRS450: Don't issue two messages, use two transfers
 
 Don't issue the same message twice, use two transfers and group them together
@@ -2397,7 +2397,7 @@ wit-ctel/moodle-3-1,d66e5720a111f4a7f63ef594c16060c8dbc6bbef,MDL-32117 - equella
 arter97/f2fs-backport,9aaeded72f923212e6d9d7b6b8e3830e983f323e,typo fixes: bandwith -> bandwidth,"typo fixes: bandwith -> bandwidth
 
 Signed-off-by: Adrian Bunk <0b86548ef377da0031a3ff3f0c4e06f016e20105@stusta.de>
-",1,0,0,True,False,False,typo,check why hit,True,True,True,False
+",1,0,0,True,False,False,typo,check why hit,False,True,True,False
 verygreen/green_kernel_omap,93562b537659fc0f63920fd4d9d24f54e434f4c4,Driver Core: add ability for class_for_each_device to start in middle of list,"Driver Core: add ability for class_for_each_device to start in middle of list
 
 This mirrors the functionality that driver_for_each_device has as well.
@@ -2427,7 +2427,7 @@ Signed-off-by: James Morris <10d11de3abc355eabe955bb734f0f8e71da56e16@namei.org>
 ",1,0,0,True,True,True,"fix, corruption",,True,False,False,False
 ocsbrandon/kubernetes,a4a87d9916b2cfd7a3feed2ac708f85c8bdd83fc,Merge pull request #1759 from scollier/man_pages,"Merge pull request #1759 from scollier/man_pages
 
-Man pages - initial release",0,0,0,False,True,False,man pages,,False,False,True,False
+Man pages - initial release",0,0,0,False,True,False,man pages,,False,False,True,True
 CyanideL/android_kernel_asus_grouper,2779e3ae39645515cb6c1126634f47c28c9e7190,svc: Move kfree of deferral record to common code,"svc: Move kfree of deferral record to common code
 
 The rqstp structure has a pointer to a svc_deferred_req record
@@ -2442,7 +2442,7 @@ kfree the dr structure in it's version of the xpo_release_rqst callback.
 
 Signed-off-by: Tom Tucker <96835dd8bfa718bd6447ccc87af89ae1675daeca@opengridcomputing.com>
 Signed-off-by: J. Bruce Fields <51738506c1b2ccb0761f23bdc612c93babf738ea@citi.umich.edu>
-",2,0,0,True,True,True,fixes,,True,True,True,False
+",2,0,0,True,True,True,fixes,,True,True,True,True
 r1mikey/linux-picoxcell,f05b7f5ee19de6de972020ea18e6c30b672d401b,V4L/DVB (13913): saa7127: Add support for generating SECAM output for the SAA712[89] chips,"V4L/DVB (13913): saa7127: Add support for generating SECAM output for the SAA712[89] chips
 
 This change fixes up saa7127_s_std() generate SECAM out, if the user has
@@ -2481,10 +2481,10 @@ Signed-off-by: Bala Shanmugam <20f23d02313b3c300d83ca8fd332cacde29470cb@qca.qual
 Signed-off-by: John W. Linville <2a53bac7a5d324865ef46ec4c38b2c0fba1456b4@tuxdriver.com>
 ",0,0,0,False,True,False,other action,,False,False,False,False
 schuel/hmmm,8aea4d44e3a016437b594b773e1f6bc5f8ff3798,rearrange buttons so delete is separated,"rearrange buttons so delete is separated
-",0,0,0,False,False,False,other action,,False,False,False,False
+",0,0,0,False,False,False,other action,,False,False,False,True
 sergey-buturlakin/DefinitelyTyped,2389a23345557615f25fda90907363064ebda419,Merge pull request #3210 from Steve-Fenton/master,"Merge pull request #3210 from Steve-Fenton/master
 
-Type Definitions for node-imap",0,0,0,False,True,False,other action,,False,False,False,False
+Type Definitions for node-imap",0,0,0,False,True,False,other action,,False,False,False,True
 TeamExodus/kernel_xiaomi_cancro,d7ba979d45272385ce0fdf141d922e61ff48e07b,"debug_core,x86,blackfin: Clean up hw debug disable API","debug_core,x86,blackfin: Clean up hw debug disable API
 
 The kgdb_disable_hw_debug() was an architecture specific function for
@@ -2519,7 +2519,7 @@ Rename to ata_pio_queue_task() and un-export it, as nobody outside of
 libata-core.c uses it.
 
 Signed-off-by: Jeff Garzik <15f615bf7d20c2937c7eb5aa759110fd6768848c@redhat.com>
-",0,0,0,False,True,False,make internal,,False,True,True,False
+",0,0,0,False,True,False,make internal,,False,True,True,True
 sandymanu/android_kernel_xiaomi_kenzo,ee1a47ab0e77600fcbdf1c87d461bd8f3f63150d,xfs: add support for large btree blocks,"xfs: add support for large btree blocks
 
 Add support for larger btree blocks that contains a CRC32C checksum,
@@ -2725,9 +2725,9 @@ DecimalMan/dkp,bca268565fd18f0b36ab8fff6e1623d8dffae2b1,Merge branch 'syscalls' 
   [CVE-2009-0029] System call wrappers part 16
   [CVE-2009-0029] System call wrappers part 15
   ...
-",0,0,0,False,False,False,other action,,False,False,False,False
+",0,0,0,False,False,False,other action,,False,False,False,True
 virtuoso/linux-perf,1fef891761ddcbd7e57ec3961a0fb748003222ac,Merge branch 'sgu/mxs-core-v8' of git://git.pengutronix.de/git/ukl/linux-2.6 into imx-for-2.6.38-new,"Merge branch 'sgu/mxs-core-v8' of git://git.pengutronix.de/git/ukl/linux-2.6 into imx-for-2.6.38-new
-",0,0,0,False,True,False,other action,,False,False,False,False
+",0,0,0,False,True,False,other action,,False,False,False,True
 sud-vastav/android_kernel_xiaomi_armani_old,467cc396fb4665957bc7d182c96e45a4d7c575e4,i2400m: firmware loading and bootrom initialization,"i2400m: firmware loading and bootrom initialization
 
 Implements the firmware loader (using the bus-specific driver's
@@ -2964,7 +2964,7 @@ patch-src_salloc_salloc.c from Aleksej Saushev.
 aliib/electron,5dfbaebd4c98e4a35c1c033bbdaedd483f9ac5d3,Upgrade brightray,"Upgrade brightray
 ",0,0,0,False,False,False,upgrade,,False,False,False,True
 podhrmic/paparazzi,59b73824efe984bfd5e06850af72f3da986fd8a3,Merge branch 'master' of github.com:paparazzi/paparazzi,"Merge branch 'master' of github.com:paparazzi/paparazzi
-",0,0,0,False,False,False,other action,,False,False,False,False
+",0,0,0,False,False,False,other action,,False,False,False,True
 nardholio/android_kernel_samsung_d2,df2f5e721ed36e21da27e1f415c71ba0e20f31b5,[ARM SMP] Disable lazy flush_dcache_page for SMP,"[ARM SMP] Disable lazy flush_dcache_page for SMP
 
 Lazy flush_dcache_page() causes userspace instability on SMP
@@ -3025,7 +3025,7 @@ needlessly flood the hotplug system with events.  (Defaults to 16 now.)
 Signed-off-by: Lars Marowsky-Bree <51fe72d9f07dfe94861978781ded7efe972fd383@suse.de>
 Signed-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@osdl.org>
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@osdl.org>
-",0,0,0,False,True,False,other action,,False,False,False,False
+",0,0,0,False,True,False,other action,,False,False,False,True
 CyanogenMod/android_kernel_samsung_manta,28675586f391fc14960de13c63359b25542ddec4,staging: r8712u: Do not queue cloned skb,"staging: r8712u: Do not queue cloned skb
 
 commit fa16e5ea25d7dd83f663f333e70713aa2fa5dffe upstream.
@@ -3114,7 +3114,7 @@ This patch changes michael_mic to the new shash interface.
 
 Signed-off-by: Adrian-Ken Rueegsegger <470bc578162732ac7f9d387d34c4af4ca6e1b6f7@codelabs.ch>
 Signed-off-by: Herbert Xu <ef65de1c7be0aa837fe7b25ba9a7739905af6a55@gondor.apana.org.au>
-",0,0,0,False,True,False,change,,False,False,False,False
+",0,0,0,False,True,False,change,,False,False,False,True
 LCameron/linux-xlnx,85600f7f8370fe5b4be0debd8b401de7986b52ae,[SCSI] zfcp: Fix erp escalation procedure,"[SCSI] zfcp: Fix erp escalation procedure
 
 If an action fails, retry it until the erp count exceeds the
@@ -3274,7 +3274,7 @@ mnuessler/buck,6532b14a5ede937fd3675ea0c588c8edc1be1c57,Skip tests in `ParserTes
 Summary: We can't create them, so we should skip them.
 
 Test Plan: Tests skip in IntelliJ instead of failing
-",0,0,0,False,True,False,other action,check failing,True,False,False,False
+",0,0,0,False,True,False,other action,check failing,True,False,False,True
 gnuhub/intellij-community,8db80b6c5a46194731a40fffc7290b280974bb85,new API version moved to master,"new API version moved to master
 ",0,0,0,False,True,False,"new, moved",,False,True,True,True
 Warmachine28/oneplus_8974,7fcc4ce37f0ccec846e32e1f5ff0647ded74fec9,mmc: cb710: implement get_cd() callback,"mmc: cb710: implement get_cd() callback
@@ -3368,9 +3368,9 @@ flashpixx/MecSim,be30a06bcc145d096c90a7f48f72ec1b60b05942,docu,"docu
 rhajamor/spatial4j,8db64717d15c94b0490db3831c5b729eeab87328,,"
 ",0,0,0,False,False,False,Commit changed the documentation,No syntatic evidence,False,False,False,False
 TeamTwisted/leanKernel-shamu,ef71b1b87521ff93ed77b3e8f3e149afb392761c,Merge branches 'topic/fix/hda' and 'topic/fix/misc' into for-linus,"Merge branches 'topic/fix/hda' and 'topic/fix/misc' into for-linus
-",0,0,0,False,True,True,fix,,True,False,False,False
+",0,0,0,False,True,True,fix,,True,False,False,True
 saeedhadi/linux-at91,ef71b1b87521ff93ed77b3e8f3e149afb392761c,Merge branches 'topic/fix/hda' and 'topic/fix/misc' into for-linus,"Merge branches 'topic/fix/hda' and 'topic/fix/misc' into for-linus
-",0,0,0,False,True,,,duplicated,True,False,False,False
+",0,0,0,False,True,,,duplicated,True,False,False,True
 srifqi/three.js,1d5b5cdd3c399722a019aed3fe5e6b7a3698f505,Raycaster: Support for Non-indexed BufferGeometries.,"Raycaster: Support for Non-indexed BufferGeometries.
 ",0,0,0,False,True,False,support,,False,False,False,True
 AirOne70/android_kernel_asus_grouper,23e353c8a681cc30d42fbd4f2c2be85c44fe209b,[CRYPTO] ctr: Add CTR (Counter) block cipher mode,"[CRYPTO] ctr: Add CTR (Counter) block cipher mode
@@ -3483,7 +3483,7 @@ yvaucher/odoo,71e815693ca7af0fc1a722a40c2203369c78a4a8,"[IMP] mrp,project: task 
 bzr revid: chm@openerp.com-20130130160011-2v1ym0ach0iuw0eg",0,0,0,False,True,False,other action,,False,False,False,True
 Urigo/angular.io,75464d585cac944e3cffb4401663e4c1185b7cb5,Merge pull request #2794 from IdeaBlade/chalin-guide-misc-fix-1113,"Merge pull request #2794 from IdeaBlade/chalin-guide-misc-fix-1113
 
-docs: guide/index misc Jade fixes",1,0,0,True,True,True,fixes,,False,False,True,False
+docs: guide/index misc Jade fixes",1,0,0,True,True,True,fixes,,False,False,True,True
 pragmatux/linux-db8060a,6618c3ada039116ca0392ce955df081adc5f015c,ARM: 6930/1: SPEAr3xx: Rework pmx_dev code to remove conflicts,"ARM: 6930/1: SPEAr3xx: Rework pmx_dev code to remove conflicts
 
 Prefix the pmx_devs to remove naming conflicts between the three
@@ -3826,7 +3826,7 @@ Signed-off-by: Bob Peterson <0c71a8c45d1c28c49aceef3749b4faa9d3c35c54@redhat.com
 Signed-off-by: Steven Whitehouse <9801c4ef11586b619a1c43ac9377eea2aee672dd@redhat.com>
 ",0,0,0,False,True,,,,False,False,False,False
 duhast/fog,017ce23a256baad9ba8870509c0740e59e75823b,First attempt at an S3 path_style flag,"First attempt at an S3 path_style flag
-",0,0,0,False,True,,,,False,False,False,False
+",0,0,0,False,True,,,,False,False,True,False
 jcbless/linux-xlnx,59b3db6c69ae9eeed1d8fc3aee6b88272ba38ba8,ALSA: usb-audio: dynamic detection of MIDI interfaces in uaxx-quirk,"ALSA: usb-audio: dynamic detection of MIDI interfaces in uaxx-quirk
 
 The MIDI interfaces have to be detected dynamically for Edirol devices
@@ -3990,7 +3990,7 @@ AICP/kernel_lge_msm8974,aa7677d40072a97a861390f0ed1a8c25ce312201,[PATCH] NULL no
 Signed-off-by: Al Viro <de609eb4d5d70b1d38ec6642adbfc33a2781f63c@zeniv.linux.org.uk>
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@osdl.org>
 ",0,0,0,False,False,,,,False,False,False,False
-Klozz/kernel_msm_osprey-stock,5f64947d2064285d0628e48cdc62c4435e714cea,"Merge ""msm: rmt_storage: Use smem_find_to_proc()""","Merge ""msm: rmt_storage: Use smem_find_to_proc()""",0,0,0,False,True,,,,False,False,False,False
+Klozz/kernel_msm_osprey-stock,5f64947d2064285d0628e48cdc62c4435e714cea,"Merge ""msm: rmt_storage: Use smem_find_to_proc()""","Merge ""msm: rmt_storage: Use smem_find_to_proc()""",0,0,0,False,True,,,,False,False,False,True
 ferdinandfly/sfere,c2d5e4e40f537e46f98e90ea54176e6758699399,fix security issue,"fix security issue
 ",1,0,0,True,False,,,,True,False,False,False
 matrinox/rails,0ca074712cf2388c9249648bf907fc3773f5f98a,Starting the documentation process,"Starting the documentation process
@@ -4020,7 +4020,7 @@ Hybrid-Power/bricked-mako,2b078cdd1073603625dacaac9757ef6a8789194c,ARM: mach-gem
 
 Signed-off-by: Nicolas Pitre <408789a210b05fb3b46935e815320d62ba00a06e@linaro.org>
 Acked-by: Arnd Bergmann <f2c659f01951776204a6c5b902787d9019fbeebd@arndb.de>
-",0,0,0,False,False,,,,False,False,False,False
+",0,0,0,False,False,,,,False,True,True,False
 kolab-groupware/kdepimlibs,eccb73ccdaa6386c051d42687097ef35da83fd97,SVN_SILENT: Tabs -> spaces,"SVN_SILENT: Tabs -> spaces
 
 svn path=/trunk/KDE/kdepim/libkcal/; revision=409259
@@ -4084,7 +4084,7 @@ acbodine/koding,9bcd798989f92db64f11ba6311657e7bd88ee0ee,klientctl: remove two l
 ",0,0,0,False,True,,,,False,False,False,False
 ZLLab-Mooc/edx-platform,d9b9630c5657f4e8386ea8652f0bb06a5d7794f6,Merge pull request #5265 from edx/zoldak/fix-test,"Merge pull request #5265 from edx/zoldak/fix-test
 
-Increase randomness of course name in testcase",0,0,0,False,True,,,,False,False,False,False
+Increase randomness of course name in testcase",0,0,0,False,True,,,,False,False,False,True
 Proteogenomics/trackhub-creator,0a6037240c10c71bf5f4d3f72e310cb0a83c5a35,prevent the script from running in standalone mode,"prevent the script from running in standalone mode
 ",0,0,0,False,True,,,,True,False,False,False
 doits/homebrew-cask,a848bcccdcba17f02d05057ddc51bbec758a9c98,updated knuff (1.0),"updated knuff (1.0)
@@ -4119,7 +4119,7 @@ Signed-off-by: Jakob Bornecrantz <6c68cabc7124e43c9b4d50f86510600f69e74c99@vmwar
 Signed-off-by: Dave Airlie <f2295d84e358395675bc8031be58672073ae065e@redhat.com>
 ",1,0,0,True,True,,,,True,False,False,True
 Kesshi/Babylon.js,bba0df1c9ac01f9a6c95edc15a0d9fac54018ce5,Merge branch 'master' of https://github.com/BabylonJS/Babylon.js,"Merge branch 'master' of https://github.com/BabylonJS/Babylon.js
-",0,0,0,False,False,,,,False,False,False,False
+",0,0,0,False,False,,,,False,False,False,True
 TeamNuclear/android_kernel_oneplus_msm8974,b1a78858c4579d678444c007617292ccf6f7a315,iwlagn: adjust starting action for rate scale,"iwlagn: adjust starting action for rate scale
 
 During rate scale, reset starting action after making action adjustment
@@ -4173,7 +4173,7 @@ LKML-Reference: <067984a847316755191ae9e78fce5975ed23a090@novell.com>
 Signed-off-by: Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@elte.hu>
 ",0,0,0,False,True,,,,False,True,True,True
 Jun-Yuan/percona-server,689748b548019dccb095eec0485831c20b636794,Merge from fix for Bug #7480  Mysqld crash in ha_ndbcluster using Query Browser,"Merge from fix for Bug #7480  Mysqld crash in ha_ndbcluster using Query Browser
-",2,0,0,True,True,,,,True,False,False,False
+",2,0,0,True,True,,,,True,False,False,True
 hausdorff/linux,ce5e5540c0e839781e7cd134517d5d2e9e819636,"x86, ds, bts: cleanup DS configuration","x86, ds, bts: cleanup DS configuration
 
 Cleanup the cpuid check for DS configuration.
@@ -4197,9 +4197,9 @@ dtaht/quagga-babeld,2518efd15b75687d4791a5eb4b0d7febc36cffbc,"[ospfd] Bug #134, 
 	  ospf_external_lsa_new.
 ",2,0,0,True,True,,,,True,True,False,False
 detule/lge-linux-msm,b656eba122929881c52d38ae16637167aaa5b88b,Merge branch 'for-linus' into for-next,"Merge branch 'for-linus' into for-next
-",0,0,0,False,True,,,,False,False,False,False
+",0,0,0,False,True,,,,False,False,False,True
 TheKang/kernel_lge_hammerhead,b656eba122929881c52d38ae16637167aaa5b88b,Merge branch 'for-linus' into for-next,"Merge branch 'for-linus' into for-next
-",0,0,0,False,True,,,,False,False,False,False
+",0,0,0,False,True,,,,False,False,False,True
 fbelzunc/jenkins,73c4de32cae7bb405433c546be636dbb2dc83ec8,[FIX JENKINS-10536] Package Groovy DSL descriptor for eclipse in core jar to ease creation of groovy views in eclipse,"[FIX JENKINS-10536] Package Groovy DSL descriptor for eclipse in core jar to ease creation of groovy views in eclipse
 ",1,0,0,True,True,,,,True,False,False,False
 biagidp/spree,f8f41b8061959df560ae6d8c202707bd6de6a513,Use lazily_find_element in order_details_spec rather than sleep,"Use lazily_find_element in order_details_spec rather than sleep
@@ -4330,7 +4330,7 @@ sd_done() to complete the I/O.
 Signed-off-by: Martin K. Petersen <0384aaef27f06874adbdb09a807bb339f4aff9fd@oracle.com>
 Reviewed-by: Mike Snitzer <85e533f2e78486213c4d69f71462342ec0c62734@redhat.com>
 Signed-off-by: James Bottomley <1acebbdca565c7b6b638bdc23b58b5610d1a56b8@Parallels.com>
-",0,0,0,False,True,,,,False,False,False,False
+",0,0,0,False,True,,,,False,False,False,True
 tiagovignatti/drm-intel,79bda4d510f80e403ef66fee852f8ccb17308581,fs/affs: use affs_test_opt(),"fs/affs: use affs_test_opt()
 
 Replace mount option test by affs_test_opt().
@@ -4470,7 +4470,7 @@ alexander3244/kernel_amazon_bowser-common,ba0a24e7387bb56425da07ed858ada37896ed3
 Signed-off-by: Barry Song <d80107dffbff3a1b0d911a6a6bd06711092a2453@gmail.com>
 Acked-by: Liam Girdwood <a57ef363056e61beffa2efa59c68550d40db03b0@slimlogic.co.uk>
 Signed-off-by: Mark Brown <b51b9a92386687a9ac927cebfa0f978adeb8cea5@opensource.wolfsonmicro.com>
-",1,1,0,False,False,,,,False,False,True,False
+",1,1,0,False,False,,,,False,False,True,True
 Fusion-Devices/android_kernel_oneplus_msm8974,fe4eb54845fff09ec01b8421f53f92e08b67229c,drivers/net/adm8211.c: remove exceptional & on function name,"drivers/net/adm8211.c: remove exceptional & on function name
 
 In this file, function names are otherwise used as pointers without &.
