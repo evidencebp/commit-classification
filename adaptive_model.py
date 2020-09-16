@@ -1,7 +1,16 @@
+import re
+from os.path import join
+import pandas as pd
+
+from configuration import DATA_PATH
+
+from labeling_util import get_false_positives, get_false_negatives
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
     , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, unnedded_terms
+
+from model_evaluation import classifiy_commits_df, evaluate_performance
 
 adaptive_context = [
     '(?:un)?hid(?:e|es|den)', 'add(?:s|ed|ing)?', 'allow(?:s|ed|ing)?'
@@ -33,24 +42,27 @@ adaptive_header_action = "|".join([
     'configur(?:e|es|ed|ing)',
     '(?:keep|change)\s+(?:the\s+)?default',
     'new',
-    # 'merg(?:e|es|ed|ing)',
     # '(?:make(?:s)?|made|making)',
-    # 'merg(?:e|es|ed|ing)',
+    'merg(?:e|es|ed|ing)',
     'clear(?:s|ed|ing)?',
+    #'comment(?:s|ed|ing)?\sout'
+    'creat(?:e|es|ed|ing)',
     # 'convert(?:s|ed|ing)?',
     # 'check(?:s|ed|ing)?',
     'add(?:s|ed|ing)?',
-    # 'build',
     # 'buil(?:d|t|ds|ing)',
+    'Initial revision',
     '(?:im)?port(?:s|ed|ing)?',
     '(?:un)?hid(?:e|es|den)',
     'updat(?:e|es|ed|ing)',
     'disabl(?:e|es|ed|ing)',
+    'delet(?:e|es|ed|ing)',
     'enabl(?:e|es|ed|ing)',
     'quirk(?:s|ed|ing)?',
+    'skip(?:s|ed|ing)?',
+    'switch(?:s|ed|ing)?\sto',
     'allow(?:s|ed|ing)?',
     'provid(e|es|ed|ing)',
-    # 'remov(e|es|ed|ing)'
 
     ###
     # , 'build'
@@ -59,15 +71,16 @@ adaptive_header_action = "|".join([
     # , '(?:make|made|making)'
     # , 'chang(?:e|es|ed|ing)'
     # , 'creat(?:e|es|ed|ing)'
-    # , 'enabl(?:e|es|ed|ing)'
     # , 'handl(?:e|es|ed|ing)'
     'remov(?:e|es|ed|ing)'
+    #'re(-)?enabl(?:e|es|ed|ing)',
 
 ])
 
 adaptive_actions = [  # 'revert(?:s|ed|ing)?',
     #'merg(?:e|es|ed|ing)[\s\S]{1,5}(pull request|pr|branch)',
     'add(?:s|ed|ing)?[\s\S]{1,50}(?:version|v\d|ver\d)',
+    #'(cr(s)?(-)?|code\sreview)\sfix(?:s|ed|ing)?',
     '(^|\s)implement(?:ed|s|ing)?\s',
     '(?:make(?:s)?|made|making)[\s\S]{1,50}consitent',
     'updat(?:e|es|ed|ing)[\s\S]{1,25}to[\s\S]{1,25}\d+.\d',
@@ -164,5 +177,62 @@ def print_adaptive_functions():
     print()
 
 
+def evaluate_adaptive_classifier():
+    text_name = 'message'
+    classification_function = is_adaptive
+    classification_column = 'corrective_pred'
+    """
+    concept_column='expected'
+
+    df = pd.read_csv(join(DATA_PATH, 'corrective_labels.csv'))
+
+    df = df[df.uncertain != 'TRUE']
+    """
+    concept_column = 'is_adaptive'
+    df = pd.read_csv(join(DATA_PATH, "corrective_labels.csv"))
+    df[concept_column] = df.expected.map(lambda x: not x)
+
+    df = classifiy_commits_df(df
+                              , classification_function=classification_function
+                              , classification_column=classification_column
+                              , text_name=text_name
+                              )
+    cm = evaluate_performance(df
+                              , classification_column
+                              , concept_column
+                              , text_name=text_name)
+    print("corrective_labels CM")
+    print(cm)
+    """
+    fp = get_false_positives(df
+                             , classifier_column=classification_column
+                             , concept_column=concept_column)
+    print("False Positives")
+    pd.options.display.max_columns = 50
+    pd.options.display.max_rows = 2000
+    print(fp)
+
+    """
+    fn = get_false_negatives(df
+                        , classifier_column=classification_column
+                        , concept_column=concept_column)
+    print("False Negatives")
+    pd.options.display.max_columns = 50
+    pd.options.display.max_rows = 2000
+    print(fn)
+
+
+
 if __name__ == '__main__':
-    print_adaptive_functions()
+    #print_adaptive_functions()
+    evaluate_adaptive_classifier()
+
+    text = """ACM-1526: CR fixes""".lower()
+    print(is_adaptive(text))
+    valid_num = len(re.findall(build_adaptive_regex(), text))
+    valid_num = len(re.findall('cr(s)?(-)?\sfix(?:s|ed|ing)?', text))
+
+
+
+    print(valid_num)
+    print(build_adaptive_regex())
