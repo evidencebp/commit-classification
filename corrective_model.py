@@ -130,6 +130,8 @@ fixing_verbs = ['correct(?:ing|s|ed)'
                     , 'repair(?:ing|s|ed)?'
                     ,  'revert(?:ing|s|ed)?'
                     , 'resolv(?:ing|e|es|ed)'
+                    , 'revok(?:ing|e|es|ed)'
+                    , 'und(?:oing|id)'
                 ]
 
 corrective_header_entities = fixing_verbs + [
@@ -214,10 +216,17 @@ def evaluate_fix_classifier():
     text_name = 'message'
     classification_function = is_fix
     classification_column = 'corrective_pred'
-    concept_column='expected'
 
-    df = pd.read_csv(join(DATA_PATH, 'corrective_labels.csv'))
-    df = df[df.uncertain != 'TRUE']
+    concept_column='Is_Corrective'
+
+    df = pd.read_csv(join(DATA_PATH, 'commit_classification_batch2.csv'))
+    
+    df = df[df.certain != 'FALSE']
+    df = df[~df.Is_Corrective.isna()]
+
+    #concept_column='is_corrective'
+    #df = pd.read_csv("/Users/idan/playground/commit-classification/data/change_samples.csv")
+
 
     df = classifiy_commits_df(df
                               , classification_function=classification_function
@@ -239,8 +248,8 @@ def evaluate_fix_classifier():
     pd.options.display.max_columns = 50
     pd.options.display.max_rows = 2000
     print(fp)
-    """
 
+    """
     fn = get_false_negatives(df
                         , classifier_column=classification_column
                         , concept_column=concept_column)
@@ -254,13 +263,11 @@ if __name__ == '__main__':
 
     #print_corrective_functions()
     evaluate_fix_classifier()
-    text = """Merge branch 'hotfix/all' of github.com:HoneyB""".lower()
+    text = """Add deprecated_since parameter
+""".lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
 
 
-    valid_num = len(re.findall('(\\s|\\.|\\?|\\!|\\[|\\]|\\(|\\)|\\:|^|$|\\,|\'|"|/|#|\\$|\\%|&|\\*|\\+|=|`|;|<|>|@|~|{|}|\\|\-|/)' + "fix" , text))
-    valid_num = len(re.findall(term_seperator + "hotfix" + term_seperator , text))
-    valid_num = len(re.findall("(=|\-)fix(=|\-)" , text))
     print(valid_num)
     print(build_bug_fix_regex())
