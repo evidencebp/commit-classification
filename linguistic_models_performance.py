@@ -70,6 +70,20 @@ def refactor_performance(df):
 
     return refactor_cm
 
+
+def perfective_performance(df):
+    perfective_g = df.groupby(
+        ['perfective_pred', 'Is_Perfective'], as_index=False).agg({'commit' : 'count'})
+    perfective_cm = ConfusionMatrix(g_df=perfective_g
+                                  , classifier='perfective_pred'
+                                  , concept='Is_Perfective'
+                                  , count='commit')
+    print("perfective commit performance")
+    print(perfective_cm.summarize())
+
+    return perfective_cm
+
+
 def adaptive_performance(df):
     adaptive_g = df.groupby(
         ['adaptive_pred', 'Is_Adaptive'], as_index=False).agg({'commit' : 'count'})
@@ -89,6 +103,7 @@ def linguistic_model_perfomance(df
     if not just_corrective:
         refactor_performance(df)
         adaptive_performance(df)
+        perfective_performance(df)
 
 
 
