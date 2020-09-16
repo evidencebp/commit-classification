@@ -36,6 +36,7 @@ documentation_entities = [
     'manual',
     'note(?:s)?',
     'readme(?:.md)?',
+    '[a-z\d]*.md',
     'translation(?:s)?',
     'java(?: |-)?doc(?:s)?',
     'java(?: |-)?documentation',
