@@ -9,7 +9,7 @@ from labeling_util import get_false_positives, get_false_negatives
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
     , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, unnedded_terms\
-    , code_review_fixes, no_message
+    , code_review_fixes, no_message, NEAR_ENOUGH
 
 from model_evaluation import classifiy_commits_df, evaluate_performance
 
@@ -48,6 +48,7 @@ adaptive_header_action = "|".join([
     'clear(?:s|ed|ing)?',
     #'comment(?:s|ed|ing)?\sout'
     'creat(?:e|es|ed|ing)',
+    'cast(?:s|et|ing)?' + NEAR_ENOUGH + '\sas',
     # 'convert(?:s|ed|ing)?',
     # 'check(?:s|ed|ing)?',
     'add(?:s|ed|ing)?',
@@ -70,10 +71,11 @@ adaptive_header_action = "|".join([
     # , 'mark(?:s|ed|ing)?'
     # , 'us(?:e|es|ed|ing)'
     # , '(?:make|made|making)'
-    # , 'chang(?:e|es|ed|ing)'
+    #'chang(?:e|es|ed|ing)',
     # , 'creat(?:e|es|ed|ing)'
     # , 'handl(?:e|es|ed|ing)'
-    'remov(?:e|es|ed|ing)'
+    'remov(?:e|es|ed|ing)',
+    'refresh(?:s|ed|ing)?',
     #'re(-)?enabl(?:e|es|ed|ing)',
 
 ] +no_message
@@ -233,13 +235,13 @@ if __name__ == '__main__':
     #print_adaptive_functions()
     evaluate_adaptive_classifier()
 
-    text = """Scale down back to 5 replicas""".lower()
+    text = """cast event type as text""".lower()
     print(is_adaptive(text))
-    valid_num = len(re.findall(build_adaptive_regex(), text))
-    valid_num = len(re.findall('scal(?:e|es|ed|ing)?\s(up|down)', text))
-    valid_num = len(re.findall(build_sepereted_term(['scal(?:e|es|ed|ing)?\s(up|down)']), text))
+    valid_num = len(re.findall(build_adaptive_action_regex(), text))
+    valid_num = len(re.findall('cast(?:s|et|ing)?' + NEAR_ENOUGH + '\sas', text))
+    valid_num = len(re.findall(build_sepereted_term(['cast(?:s|et|ing)?' + NEAR_ENOUGH + '\sas']), text))
 
 
 
     print(valid_num)
-    print(build_adaptive_regex())
+    print(build_adaptive_action_regex())
