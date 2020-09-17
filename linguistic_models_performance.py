@@ -19,6 +19,9 @@ def classifiy_commits_df(df):
     df['perfective_pred'] = df.message.map(lambda x: (match(x, build_perfective_regex())) +
                                                      (match(x, build_refactor_regex())) > 0)
     df['adaptive_pred'] = df.message.map(lambda x: is_adaptive(x) > 0)
+    df['adaptive_by_negation_pred'] = df.message.map(lambda x: (is_fix(x) == 0
+                                                               and built_is_refactor(x) == 0
+                                                               and match(x, build_perfective_regex()) ==0))
 
     return df
 
@@ -96,6 +99,22 @@ def adaptive_performance(df):
 
     return adaptive_cm
 
+def adaptive_by_negation_performance(df):
+
+    concept = 'Is_Adaptive'
+    classifier_name = 'adaptive_by_negation_pred'
+
+    adaptive_g = df.groupby(
+        [classifier_name, concept], as_index=False).agg({'commit' : 'count'})
+    adaptive_cm = ConfusionMatrix(g_df=adaptive_g
+                                  , classifier=classifier_name
+                                  , concept=concept
+                                  , count='commit')
+    print("adaptive_by_negation commit performance")
+    print(adaptive_cm.summarize())
+
+    return adaptive_cm
+
 def linguistic_model_perfomance(df
                                 , just_corrective=False):
 
@@ -103,6 +122,7 @@ def linguistic_model_perfomance(df
     if not just_corrective:
         refactor_performance(df)
         adaptive_performance(df)
+        adaptive_by_negation_performance(df)
         perfective_performance(df)
 
 
