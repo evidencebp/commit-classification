@@ -17,7 +17,7 @@ adaptive_context = [
     '(?:un)?hid(?:e|es|den)', 'add(?:s|ed|ing)?', 'allow(?:s|ed|ing)?'
     , 'buil(?:t|ds|ing)', 'calibirat(?:e|es|ed|ing)'
     , 'configure'
-    , 'creat(?:e|es|ing)' #   O created
+    , 'creat(?:e|es|ing)'
     , 'deferr(?:ed|s|ing)?'
     , 'disabl(?:e|es|ed|ing)'
     , 'enhanc(?:e|es|ed|ing)', 'extend(?:s|ed|ing)?', 'form(?:ed|s|ing)?'
@@ -58,12 +58,13 @@ adaptive_header_action = "|".join([
     '(?:im)?port(?:s|ed|ing)?',
     '(?:un)?hid(?:e|es|den)',
     'updat(?:e|es|ed|ing)',
+    'upload(?:s|ed|ing)?',
     'disabl(?:e|es|ed|ing)',
     'delet(?:e|es|ed|ing)',
     'enabl(?:e|es|ed|ing)',
     'quirk(?:s|ed|ing)?',
     'skip(?:s|ed|ing)?',
-    'switch(?:s|ed|ing)?\sto',
+    'switch(?:s|ed|ing)?',
     'allow(?:s|ed|ing)?',
     'provid(e|es|ed|ing)',
 
@@ -211,7 +212,7 @@ def evaluate_adaptive_classifier():
                               , text_name=text_name)
     print("corrective_labels CM")
     print(cm)
-    #"""
+    """
     fp = get_false_positives(df
                              , classifier_column=classification_column
                              , concept_column=concept_column)
@@ -220,7 +221,7 @@ def evaluate_adaptive_classifier():
     pd.options.display.max_rows = 2000
     print(fp)
 
-    #"""
+    """
     fn = get_false_negatives(df
                         , classifier_column=classification_column
                         , concept_column=concept_column)
@@ -235,13 +236,13 @@ if __name__ == '__main__':
     #print_adaptive_functions()
     evaluate_adaptive_classifier()
 
-    text = """Merge branch 'master' into bugfix/reert-sidebar-design/EP-0000""".lower()
+    text = """Update values-prod-tags.yaml""".lower()
     print(is_adaptive(text))
     valid_num = len(re.findall(build_adaptive_action_regex(), text))
-    valid_num = len(re.findall('cast(?:s|et|ing)?' + NEAR_ENOUGH + '\sas', text))
-    valid_num = len(re.findall(build_sepereted_term(['cast(?:s|et|ing)?' + NEAR_ENOUGH + '\sas']), text))
+    valid_num = len(re.findall('updat(?:e|es|ed|ing)', text))
+    valid_num = len(re.findall(build_non_adaptive_context(), text))
 
 
 
     print(valid_num)
-    print(build_adaptive_action_regex())
+    print(build_non_adaptive_context())
