@@ -38,7 +38,8 @@ bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adject
              'bad initialization(?:s)?',
              'buffer overflow(?:s)?',
              'bug(s|z)?',
-             'bug(?:-| )?fix(es)?',
+             'fixme',
+             'bug(?:-|\s)?fix(es)?',
              '(break|broke|breaking|broken)[\s\S]{0,20}(code|system|function|method)',
              'crash(?:ing|s|ed)?',
              'correct(?:ing|s|ed)?\\s*(a|the|some|few|this)', # make sure that correct serves as a verb
