@@ -31,7 +31,9 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
 # Positive
-bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
+bug_terms = ['actual.*expected',
+             'expected.*actual'
+             '(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
              "(not|isn't|doesn't)\\s+work(s|ing)?", # TODO - check with negation
              "doesn't recognize", # TODO Extend
              "caused a regression", # TODO Extend
@@ -65,6 +67,7 @@ bug_terms = ['(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adject
              '(?:im|im-)?proper'
              'memory(?:-| )?leak(?:s)?',
              'missing\s(default value|initialization|switch case)(?:s)?',
+             'is\smissing',
              'add(?:ing|s|ed)?\smiss(?:ing|es|ed)?',
              'mistake(s|n|nly)?',
              #'must not',
