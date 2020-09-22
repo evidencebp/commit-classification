@@ -48,5 +48,28 @@ Ideally this will be enough for the classification.
 If needed, the commit content, linked ticket and other data can be used for finding the commit type.
 
 
+<BR>
+<B>Instructions</B>
+
+<ol>
+  <li>We consider only commit messages in English.</li>
+  <li>In case of messages not in English, the comment should be “Not in English”.</li>
+  <li>Unless we find an indication to a type, the default should be False.</li>
+  <li>In case of uncertainty, the commit should be labeled by the option you consider most likely.
+      Mark “Certain” as False and then describe the source of the uncertainty and the reasons to your decision in the comment.</li>
+  <li>In case that it is hard to decide based on the commit message alone, one should check the commit content in git.
+      The concept that we label is “Is the commit of the type?” and not “Does the commit message indicates the type”.
+      Hence, if a fix indication is found in git, the commit should be labeled as True.</li>
+  <li>The “Justification” field should contain the reason to the labeling, usuelly part of the commit message.</li>
+  <li>In case of an other action, the justification should be “other action”</li>
+  <li>In case of English text but no a specific term indicating a bug, the comment should be “No syntactic evidence”.
+      This cases are rare. Consider text like “The previous implementation of the multiplication function returned 5 for mult(2,2).
+      Now it returns 4.” The commit should be labeled as True since it is a fix, though some methods cannot identify it.</li>
+  <li>Merge is a technical instrument.
+      Its usage alone is not an indication regarding the content or being a bug fix. A merge commit should be judged by its content.</li>
+
+</ol>
+
+
 </body>
 </html>
