@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta Perfective labeling protocol="UTF-8">
-    <title>Title</title>
+    <meta Commit labeling protocol="UTF-8">
+    <title>Commit labeling protocol</title>
 </head>
 <body>
 
 
-We follow the taxonomy of
+We base our taxonomy on the taxonomy of
 <a href="https://www.semanticscholar.org/paper/Characteristics-of-application-software-maintenance-Lientz-Swanson/2821ee262ee92a8c5c5bb90cda7d0702e9f61af5?p2df">“Characteristics of Application Software Maintenance”</a>
+The main difference in taxonomy is that we add a refactoring as a sub-category inside perfective.
+Other than that, we provide detailed protocols referring to cases that are usualy not considered by the high level definition.
 
 We divide commits into
 <ol>
   <li>Corrective - <a href="corrective_protocol.html">bug fixes</a>.</li>
   <li>Adaptive - <a href="adaptive_protocol.html">implementation of new features</a>.</li>
-  <li>Perfective - <a href="perfective_protocol.html">improvement of current system documentation or refactoring</a></li>
-  <li>Refactor - <a href="refactor_protocol.html">improvement of system design without changing its functionality</a></li>
+  <li>Perfective - <a href="perfective_protocol.html">improvement of current system with out changing its functionality. Typically documentation or refactoring</a></li>
+  <li>Refactor - <a href="refactor_protocol.html">improvement of system design without changing its functionality (part of perfective)</a></li>
   <li>Other - whatever not fall into the above. Should be a small category</li>
 </ol>
+
+
+
+<B>Task</B>
+
+Our goal is to label git commit message and decide on its type.
+A commit might have several types (e.g., corrective and refactor), hence each labeling protocol and label should be followed independently.
+
+
+For each commit we should following fields:
+<ol>
+  <li>Is_Corrective, taking the values, True, False and ? (as intermediate value)</li>
+  <li>Is_Adaptive, taking the values, True, False and ? (as intermediate value)</li>
+  <li>Is_Perfective, taking the values, True, False and ? (as intermediate value)</li>
+  <li>Is_Refactor, taking the values, True, False and ? (as intermediate value)</li>
+  <li>Justification which is the reason based on the text for the classification.</li>
+  <li>Certain, mark cases in which the annotator is not sure in the label</li>
+  <li>Comment, free text adding more information</li>
+</ol>
+
+
+
+
+The labeling is based on the commit message for each commit.
+Ideally this will be enough for the classification.
+If needed, the commit content, linked ticket and other data can be used for finding the commit type.
+
 
 </body>
 </html>
