@@ -7,20 +7,6 @@
 <body>
 
 
-We follow the taxonomy of
-<a href="https://www.semanticscholar.org/paper/Characteristics-of-application-software-maintenance-Lientz-Swanson/2821ee262ee92a8c5c5bb90cda7d0702e9f61af5?p2df">“Characteristics of Application Software Maintenance”</a>
-
-We divide commits into
-<ol>
-  <li>Corrective - fixes. For bug fix protocol see the CCP labeling protocol.</li>
-  <li>Adaptive - implementation of new features</li>
-  <li>Perfective - improvement of current system</li>
-  <li>Refactor - a perfective action. Code <a href="https://en.wikipedia.org/wiki/Code_refactoring">refactoring</a> is the process of restructuring existing computer code—changing
-      the <a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">factoring</a> — without changing its external behavior (wikipedia)
-</li>
-  <li>Other - whatever not fall into the above. Should be a small category</li>
-</ol>
-
 <BR>
 <B>Specific cases</B>
 
@@ -45,21 +31,6 @@ We divide commits into
         <li>Indentation, code style changes  are perfective but not refactor</li>
 
     </ol>
-  <li>Corrective</li>
-        <ol>
-        <li>See <a href="corrective_protocol.html">the corrective protocol</a></li>
-    </ol>
-
-  <li>Adaptive</li>
-        <ol>
-             <li>Debug message/ feature aimed not to the end user - adaptive. We consider the features for programmers as part of the features.</li>
-             <li>Changing an interface is adaptive.</li>
-             <li>Updating a library is adaptive</li>
-             <li>Porting code is adaptive</li>
-
-        </ol>
-  <li>Merge are judged by content. Lacking information, default is adaptive since the merge action itself adapt the software</li>
-  <li>In case of a commit the has some categories (e.g., adaptive and perfective), we won’t consider the perfective since we aim for a model of high precision.</li>
 </ol>
 
 
