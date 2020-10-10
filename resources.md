@@ -1,6 +1,7 @@
 Resources
 
 [The Corrective Commit Probability Code Quality Metric](https://arxiv.org/abs/2007.10912)
+
 [The Corrective Commit Probability Code Quality Metric - repository](https://github.com/evidencebp/corrective-commit-probability)
 
 
