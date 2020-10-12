@@ -19,7 +19,7 @@ Just R, Jalali D, Ernst MD (2014) [Defects4j: A database of existing faults to e
 
 Gyimesi P, Vancsics B, Stocco A, Mazinanian D, Beszedes A, Ferenc R, Mesbah A (2019) [Bugsjs: a benchmark of javascript bugs](https://www.researchgate.net/publication/333681142_BUGSJS_A_Benchmark_of_JavaScript_Bugs). In: 2019 12th IEEE Conference on Software Testing, Validation and Veriﬁcation (ICST), pp 90101
 
-Le Goues C, Holtschulte N, Smith EK, Brun Y, Devanbu P, Forrest S, Weimer W (2015) The manybugs and introclass benchmarks for automated repair of c programs. IEEE Transactions on Software Engineering 41(12):1236–1256
+Le Goues C, Holtschulte N, Smith EK, Brun Y, Devanbu P, Forrest S, Weimer W (2015) [The manybugs and introclass benchmarks for automated repair of c programs](https://squareslab.github.io/materials/LeGouesManyBugs2015.pdf). IEEE Transactions on Software Engineering 41(12):1236–1256
 
 Saha R, Lyu Y, Lam W, Yoshida H, Prasad M (2018) Bugs.jar: A largescale, diverse dataset of real-world java bugs. In: 2018 IEEE/ACM 15th International Conference on Mining Software Repositories (MSR), pp 10–13
 
