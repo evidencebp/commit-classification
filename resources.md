@@ -14,3 +14,20 @@ Resources
 [Commit Classification using Natural Language Processing: Experiments over Labeled Datasets - reporitory](https://github.com/gesteves91/fasttext-commit-classification)
 
 
+Just R, Jalali D, Ernst MD (2014) Defects4j: A database of existing faults to enable controlled testing studies for java programs. In: Proc. of the 2014 Int. Symposium on Softw. Testing and Analysis (ISSTA), ACM
+
+
+Gyimesi P, Vancsics B, Stocco A, Mazinanian D, Beszedes A, Ferenc R, Mesbah A (2019) Bugsjs: a benchmark of javascript bugs. In: 2019 12th IEEE Conference on Software Testing, Validation and Veriﬁcation (ICST), pp 90101
+
+Le Goues C, Holtschulte N, Smith EK, Brun Y, Devanbu P, Forrest S, Weimer W (2015) The manybugs and introclass benchmarks for automated repair of c programs. IEEE Transactions on Software Engineering 41(12):1236–1256
+
+Saha R, Lyu Y, Lam W, Yoshida H, Prasad M (2018) Bugs.jar: A largescale, diverse dataset of real-world java bugs. In: 2018 IEEE/ACM 15th International Conference on Mining Software Repositories (MSR), pp 10–13
+
+Herbold S, Trautsch A, Trautsch F, Ledel B (2019) Issues with szz: An empirical assessment of the state of practice of defect prediction data collection. 1911.08938
+
+Mills C, Parra E, Pantiuchina J, Bavota G, Haiduc S (2020) On the relationship between bug reports and queries for text retrieval-based bug localization. Empirical Software Engineering pp 1–42
+Wang Q, Parnin C, Orso A (2015) Evaluating the usefulness of ir-based fault localization techniques. In: Proceedings of the 2015 International Symposium on Software Testing and Analysis, Association for Computing Machinery, New York, NY, USA, ISSTA 2015, p 1–11, DOI 10.1145/2771783.2771797, URL https://doi.org/10.1145/2771783.2771797
+
+Ye X, Bunescu R, Liu C (2015) Mapping bug reports to relevant ﬁles: A ranking model, a ﬁne-grained benchmark, and feature evaluation. IEEE Transactions on Software Engineering 42(4):379–402
+
+Chaparro O, Marcus A (2016) On the reduction of verbose queries in text retrieval based software maintenance. In: 2016 IEEE/ACM 38th International Conference on Software Engineering Companion (ICSE-C), IEEE, pp 716–718
