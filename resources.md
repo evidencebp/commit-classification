@@ -14,7 +14,7 @@ Resources
 [Commit Classification using Natural Language Processing: Experiments over Labeled Datasets - reporitory](https://github.com/gesteves91/fasttext-commit-classification)
 
 
-Just R, Jalali D, Ernst MD (2014) Defects4j: A database of existing faults to enable controlled testing studies for java programs. In: Proc. of the 2014 Int. Symposium on Softw. Testing and Analysis (ISSTA), ACM
+Just R, Jalali D, Ernst MD (2014) [Defects4j: A database of existing faults to enable controlled testing studies for java programs](https://www.researchgate.net/publication/266659285_Defects4J_a_database_of_existing_faults_to_enable_controlled_testing_studies_for_Java_programs). In: Proc. of the 2014 Int. Symposium on Softw. Testing and Analysis (ISSTA), ACM [repository] (https://github.com/rjust/defects4j)
 
 
 Gyimesi P, Vancsics B, Stocco A, Mazinanian D, Beszedes A, Ferenc R, Mesbah A (2019) Bugsjs: a benchmark of javascript bugs. In: 2019 12th IEEE Conference on Software Testing, Validation and Veriﬁcation (ICST), pp 90101
