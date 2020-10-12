@@ -21,7 +21,7 @@ Gyimesi P, Vancsics B, Stocco A, Mazinanian D, Beszedes A, Ferenc R, Mesbah A (2
 
 Le Goues C, Holtschulte N, Smith EK, Brun Y, Devanbu P, Forrest S, Weimer W (2015) [The manybugs and introclass benchmarks for automated repair of c programs](https://squareslab.github.io/materials/LeGouesManyBugs2015.pdf). IEEE Transactions on Software Engineering 41(12):1236–1256
 
-Saha R, Lyu Y, Lam W, Yoshida H, Prasad M (2018) Bugs.jar: A largescale, diverse dataset of real-world java bugs. In: 2018 IEEE/ACM 15th International Conference on Mining Software Repositories (MSR), pp 10–13
+Saha R, Lyu Y, Lam W, Yoshida H, Prasad M (2018) [Bugs.jar: A largescale, diverse dataset of real-world java bugs](http://winglam2.web.engr.illinois.edu/publications/2018/bugs-dot-jar.pdf). In: 2018 IEEE/ACM 15th International Conference on Mining Software Repositories (MSR), pp 10–13
 
 Herbold S, Trautsch A, Trautsch F, Ledel B (2019) Issues with szz: An empirical assessment of the state of practice of defect prediction data collection. 1911.08938
 
