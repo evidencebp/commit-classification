@@ -17,7 +17,7 @@ Resources
 Just R, Jalali D, Ernst MD (2014) [Defects4j: A database of existing faults to enable controlled testing studies for java programs](https://www.researchgate.net/publication/266659285_Defects4J_a_database_of_existing_faults_to_enable_controlled_testing_studies_for_Java_programs). In: Proc. of the 2014 Int. Symposium on Softw. Testing and Analysis (ISSTA), ACM [repository] (https://github.com/rjust/defects4j)
 
 
-Gyimesi P, Vancsics B, Stocco A, Mazinanian D, Beszedes A, Ferenc R, Mesbah A (2019) Bugsjs: a benchmark of javascript bugs. In: 2019 12th IEEE Conference on Software Testing, Validation and Veriﬁcation (ICST), pp 90101
+Gyimesi P, Vancsics B, Stocco A, Mazinanian D, Beszedes A, Ferenc R, Mesbah A (2019) [Bugsjs: a benchmark of javascript bugs](https://www.researchgate.net/publication/333681142_BUGSJS_A_Benchmark_of_JavaScript_Bugs). In: 2019 12th IEEE Conference on Software Testing, Validation and Veriﬁcation (ICST), pp 90101
 
 Le Goues C, Holtschulte N, Smith EK, Brun Y, Devanbu P, Forrest S, Weimer W (2015) The manybugs and introclass benchmarks for automated repair of c programs. IEEE Transactions on Software Engineering 41(12):1236–1256
 
