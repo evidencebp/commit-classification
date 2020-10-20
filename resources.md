@@ -23,7 +23,7 @@ Le Goues C, Holtschulte N, Smith EK, Brun Y, Devanbu P, Forrest S, Weimer W (201
 
 Saha R, Lyu Y, Lam W, Yoshida H, Prasad M (2018) [Bugs.jar: A largescale, diverse dataset of real-world java bugs](http://winglam2.web.engr.illinois.edu/publications/2018/bugs-dot-jar.pdf). In: 2018 IEEE/ACM 15th International Conference on Mining Software Repositories (MSR), pp 10–13
 
-Herbold S, Trautsch A, Trautsch F, Ledel B (2019) Issues with szz: An empirical assessment of the state of practice of defect prediction data collection. 1911.08938
+Herbold S, Trautsch A, Trautsch F, Ledel B (2019) [Issues with szz: An empirical assessment of the state of practice of defect prediction data collection](https://arxiv.org/abs/1911.08938). 1911.08938
 
 Mills C, Parra E, Pantiuchina J, Bavota G, Haiduc S (2020) On the relationship between bug reports and queries for text retrieval-based bug localization. Empirical Software Engineering pp 1–42
 
