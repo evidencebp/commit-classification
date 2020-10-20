@@ -336,40 +336,55 @@ def perfective_to_bq():
 
 
 
-def print_refactor_functions():
+def print_refactor_functions(commit: str = 'XXX'):
 
-    generate_bq_function('{schema}.bq_positive_refactor'.format(schema=SCHEMA_NAME), positive_refactor_to_bq)
+    generate_bq_function('{schema}.bq_positive_refactor'.format(schema=SCHEMA_NAME)
+                         , positive_refactor_to_bq
+                         , commit=commit)
     print()
 
-    generate_bq_function('{schema}.bq_non_code_refactor'.format(schema=SCHEMA_NAME), non_code_refactor_to_bq)
+    generate_bq_function('{schema}.bq_non_code_refactor'.format(schema=SCHEMA_NAME)
+                         , non_code_refactor_to_bq
+                         , commit=commit)
     print()
 
-    generate_bq_function('{schema}.bq_non_positive_linguistic_refactor'.format(schema=SCHEMA_NAME), non_positive_linguistic_refactor_to_bq)
+    generate_bq_function('{schema}.bq_non_positive_linguistic_refactor'.format(schema=SCHEMA_NAME)
+                         , non_positive_linguistic_refactor_to_bq
+                         , commit=commit)
     print()
 
     generate_bq_function('{schema}.bq_non_positive_linguistic_refactor_goals'.format(schema=SCHEMA_NAME)
-                         , non_positive_linguistic_refactor_goals_to_bq)
+                         , non_positive_linguistic_refactor_goals_to_bq
+                         , commit=commit)
     print()
 
     generate_bq_function('{schema}.bq_non_positive_linguistic_refactor_removal'.format(schema=SCHEMA_NAME)
-                         , non_positive_linguistic_removal_to_bq)
+                         , non_positive_linguistic_removal_to_bq
+                         , commit=commit)
     print()
 
 
     generate_bq_function('{schema}.bq_documentation_entities_context_refactor'.format(schema=SCHEMA_NAME)
-                         , documentation_entities_context_refactor_to_bq)
+                         , documentation_entities_context_refactor_to_bq
+                         , commit=commit)
     print()
 
-    generate_bq_function('{schema}.bq_refactor'.format(schema=SCHEMA_NAME), refactor_to_bq)
+    generate_bq_function('{schema}.bq_refactor'.format(schema=SCHEMA_NAME)
+                         , refactor_to_bq
+                         , commit=commit)
     print()
 
     print()
 
-    generate_bq_function('{schema}.bq_just_perfective'.format(schema=SCHEMA_NAME), just_perfective_to_bq)
+    generate_bq_function('{schema}.bq_just_perfective'.format(schema=SCHEMA_NAME)
+                         , just_perfective_to_bq
+                         , commit=commit)
     print()
 
-    generate_bq_function('{schema}.bq_perfective'.format(schema=SCHEMA_NAME), perfective_to_bq)
+    generate_bq_function('{schema}.bq_perfective'.format(schema=SCHEMA_NAME)
+                         , perfective_to_bq
+                         , commit=commit)
     print()
 
 if __name__ == '__main__':
-    print_refactor_functions()
+    print_refactor_functions(commit='a8cf9c3e9b738c22b16936caeeffe6583d1397b5')
