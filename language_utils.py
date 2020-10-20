@@ -176,14 +176,15 @@ def regex_to_big_query(reg_exp
 
 
 def generate_bq_function(func_name
-                         , code_generator):
+                         , code_generator
+                         , commit: str ='XXX'):
     print("# Run in Standard sql ")
     print("CREATE OR REPLACE FUNCTION ")
     print(func_name)
     print(" (message string) ")
     print(" RETURNS int64 ")
     print("AS (")
-    print("# Model language based on commit: XXX ")
+    print("# Model language based on commit: {commit} ".format(commit=commit))
     code_generator()
     print(" ) ")
     print(" ; ")
