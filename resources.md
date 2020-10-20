@@ -55,3 +55,10 @@ Comprehension, pages 30–39, May 2009
 J. J. Amor, G. Robles, J. M. Gonzalez-Barahona, and A. Navarro.
 [Discriminating development activities in versioning systems: A
 case study](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.102.3673), Jan 2006.
+
+G. Antoniol, K. Ayari, M. Di Penta, F. Khomh, and Y.-G.
+Guéhéneuc. [Is it a bug or an enhancement? a text-based approach
+to classify change requests](http://swat.polymtl.ca/~foutsekh/docs/CASCON'08.pdf). In Proceedings of the 2008 Conference of
+the Center for Advanced Studies on Collaborative Research: Meeting of
+Minds, CASCON ’08, New York, NY, USA, 2008. Association for
+Computing Machinery
