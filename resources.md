@@ -43,3 +43,7 @@ study of programming languages and code quality in github](https://web.cs.ucdavi
 In Proceedings of the 22Nd ACM SIGSOFT International Symposium
 on Foundations of Software Engineering, FSE 2014, pages 155–165,
 New York, NY, USA, 2014. ACM.
+
+N. C. Shrikanth and T. Menzies. [Assessing practitioner beliefs
+about software defect prediction](https://arxiv.org/abs/1912.10093). In Intl. Conf. Softw. Eng.,
+number 42, May 2020.
