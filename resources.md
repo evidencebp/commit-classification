@@ -63,6 +63,10 @@ the Center for Advanced Studies on Collaborative Research: Meeting of
 Minds, CASCON ’08, New York, NY, USA, 2008. Association for
 Computing Machinery
 
-
 [On the Relationship between Refactoring Actions and Bugs:
 A Differentiated Replication](https://arxiv.org/pdf/2009.11685.pdf) [replication package](https://zenodo.org/record/4018691#.X47GOZMzZhE)
+
+[Can Refactoring be Self-Affirmed? An Exploratory
+Study on How Developers Document their
+Refactoring Activities in Commit Messages](https://www.researchgate.net/profile/Mohamed_Wiem_Mkaouer/publication/334282567_Can_Refactoring_Be_Self-Affirmed_An_Exploratory_Study_on_How_Developers_Document_Their_Refactoring_Activities_in_Commit_Messages/links/5d218f34458515c11c18d96c/Can-Refactoring-Be-Self-Affirmed-An-Exploratory-Study-on-How-Developers-Document-Their-Refactoring-Activities-in-Commit-Messages.pdf)
+
