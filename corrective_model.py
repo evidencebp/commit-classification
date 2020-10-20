@@ -208,9 +208,11 @@ def corrective_to_bq():
 
 
 
-def print_corrective_functions():
+def print_corrective_functions(commit: str = 'XXX'):
     print()
-    generate_bq_function('{schema}.bq_corrective'.format(schema=SCHEMA_NAME), corrective_to_bq)
+    generate_bq_function('{schema}.bq_corrective'.format(schema=SCHEMA_NAME)
+                         , corrective_to_bq
+                         , commit=commit)
     print()
 
 def evaluate_fix_classifier():
@@ -264,7 +266,7 @@ def evaluate_fix_classifier():
 
 if __name__ == '__main__':
 
-    print_corrective_functions()
+    print_corrective_functions(commit='a8cf9c3e9b738c22b16936caeeffe6583d1397b5')
     #evaluate_fix_classifier()
     text = """
 """.lower()
