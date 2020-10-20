@@ -62,3 +62,7 @@ to classify change requests](http://swat.polymtl.ca/~foutsekh/docs/CASCON'08.pdf
 the Center for Advanced Studies on Collaborative Research: Meeting of
 Minds, CASCON ’08, New York, NY, USA, 2008. Association for
 Computing Machinery
+
+
+[On the Relationship between Refactoring Actions and Bugs:
+A Differentiated Replication](https://arxiv.org/pdf/2009.11685.pdf) [replication package](https://zenodo.org/record/4018691#.X47GOZMzZhE)
