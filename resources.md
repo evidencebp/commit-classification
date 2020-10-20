@@ -51,3 +51,7 @@ number 42, May 2020.
 A. Hindle, D. M. German, M. W. Godfrey, and R. C. Holt.
 [Automatic classication of large changes into maintenance categories](https://softwareprocess.es/pubs/hindleICPC2009-large-changes-classification.pdf). In 2009 IEEE 17th International Conference on Program
 Comprehension, pages 30–39, May 2009
+
+J. J. Amor, G. Robles, J. M. Gonzalez-Barahona, and A. Navarro.
+[Discriminating development activities in versioning systems: A
+case study](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.102.3673), Jan 2006.
