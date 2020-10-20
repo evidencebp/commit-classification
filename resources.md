@@ -32,3 +32,8 @@ Wang Q, Parnin C, Orso A (2015) [Evaluating the usefulness of ir-based fault loc
 Ye X, Bunescu R, Liu C (2015) [Mapping bug reports to relevant ﬁles: A ranking model, a ﬁne-grained benchmark, and feature evaluation](https://www.researchgate.net/publication/281831915_Mapping_Bug_Reports_to_Relevant_Files_A_Ranking_Model_a_Fine-Grained_Benchmark_and_Feature_Evaluation). IEEE Transactions on Software Engineering 42(4):379–402
 
 Chaparro O, Marcus A (2016) [On the reduction of verbose queries in text retrieval based software maintenance](https://ieeexplore.ieee.org/document/7883382). In: 2016 IEEE/ACM 38th International Conference on Software Engineering Companion (ICSE-C), IEEE, pp 716–718
+
+S. Levin and A. Yehudai. [Boosting automatic commit classification into maintenance activities by utilizing source code changes](https://arxiv.org/pdf/1711.05340.pdf).
+In Proceedings of the 13th International Conference on Predictive
+Models and Data Analytics in Software Engineering, PROMISE,
+pages 97–106, New York, NY, USA, 2017. ACM
