@@ -29,6 +29,6 @@ Mills C, Parra E, Pantiuchina J, Bavota G, Haiduc S (2020) [On the relationship 
 
 Wang Q, Parnin C, Orso A (2015) [Evaluating the usefulness of ir-based fault localization techniques](http://chrisparnin.me/pdf/ISSTA15.pdf). In: Proceedings of the 2015 International Symposium on Software Testing and Analysis, Association for Computing Machinery, New York, NY, USA, ISSTA 2015, p 1–11, DOI 10.1145/2771783.2771797, URL https://doi.org/10.1145/2771783.2771797
 
-Ye X, Bunescu R, Liu C (2015) Mapping bug reports to relevant ﬁles: A ranking model, a ﬁne-grained benchmark, and feature evaluation. IEEE Transactions on Software Engineering 42(4):379–402
+Ye X, Bunescu R, Liu C (2015) [Mapping bug reports to relevant ﬁles: A ranking model, a ﬁne-grained benchmark, and feature evaluation](https://www.researchgate.net/publication/281831915_Mapping_Bug_Reports_to_Relevant_Files_A_Ranking_Model_a_Fine-Grained_Benchmark_and_Feature_Evaluation). IEEE Transactions on Software Engineering 42(4):379–402
 
 Chaparro O, Marcus A (2016) On the reduction of verbose queries in text retrieval based software maintenance. In: 2016 IEEE/ACM 38th International Conference on Software Engineering Companion (ICSE-C), IEEE, pp 716–718
