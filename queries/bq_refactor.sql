@@ -1,16 +1,17 @@
-# Run in Starndad sql
+# Run in Standard sql
 CREATE OR REPLACE FUNCTION
-ccp.bq_refactor
+general.bq_refactor
  (message string)
  RETURNS int64
 AS (
-# Model language based on commit: 5cd4738202154452854991b2714ce49459316371
+# Model language based on commit: a8cf9c3e9b738c22b16936caeeffe6583d1397b5
 # Refactor
-ccp.bq_positive_refactor(message)
- - ccp.bq_non_code_refactor(message)
- - ccp.bq_non_positive_linguistic_refactor(message)
- - ccp.bq_non_positive_linguistic_refactor_goals(message)
- - ccp.bq_non_positive_linguistic_refactor_removal(message)
- - ccp.bq_documentation_entities_context_refactor(message)
+general.bq_positive_refactor(message)
+ - general.bq_non_code_refactor(message)
+ - general.bq_non_positive_linguistic_refactor(message)
+ - general.bq_non_positive_linguistic_refactor_goals(message)
+ - general.bq_non_positive_linguistic_refactor_removal(message)
+ - general.bq_documentation_entities_context_refactor(message)
 # Refactor - end
  )
+ ;

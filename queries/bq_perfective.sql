@@ -1,12 +1,13 @@
-# Run in Starndad sql
+# Run in Standard sql
 CREATE OR REPLACE FUNCTION
-ccp.bq_perfective
+general.bq_perfective
  (message string)
  RETURNS int64
 AS (
-# Model language based on commit: 5cd4738202154452854991b2714ce49459316371
+# Model language based on commit: a8cf9c3e9b738c22b16936caeeffe6583d1397b5
 # Perfective
-ccp.bq_just_perfective(message)
- + ccp.bq_refactor(message)
+general.bq_just_perfective(message)
+ + general.bq_refactor(message)
 # Perfective - end
  )
+ ;
