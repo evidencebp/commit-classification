@@ -1,4 +1,4 @@
-# Run in Starndad sql
+# Run in Standard sql
 CREATE OR REPLACE FUNCTION
 general.bq_corrective
  (message string)
