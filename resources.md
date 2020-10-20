@@ -37,3 +37,9 @@ S. Levin and A. Yehudai. [Boosting automatic commit classification into maintena
 In Proceedings of the 13th International Conference on Predictive
 Models and Data Analytics in Software Engineering, PROMISE,
 pages 97–106, New York, NY, USA, 2017. ACM
+
+B. Ray, D. Posnett, V. Filkov, and P. Devanbu. [A large scale
+study of programming languages and code quality in github](https://web.cs.ucdavis.edu/~filkov/papers/lang_github.pdf).
+In Proceedings of the 22Nd ACM SIGSOFT International Symposium
+on Foundations of Software Engineering, FSE 2014, pages 155–165,
+New York, NY, USA, 2014. ACM.
