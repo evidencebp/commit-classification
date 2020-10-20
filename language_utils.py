@@ -177,7 +177,7 @@ def regex_to_big_query(reg_exp
 
 def generate_bq_function(func_name
                          , code_generator):
-    print("# Run in Starndad sql ")
+    print("# Run in Standard sql ")
     print("CREATE OR REPLACE FUNCTION ")
     print(func_name)
     print(" (message string) ")
