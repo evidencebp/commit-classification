@@ -179,9 +179,11 @@ def adaptive_to_bq():
     print("# Adaptive - end")
 
 
-def print_adaptive_functions():
+def print_adaptive_functions(commit: str = 'XXX'):
     print()
-    generate_bq_function('{schema}.bq_adaptive'.format(schema=SCHEMA_NAME), adaptive_to_bq)
+    generate_bq_function('{schema}.bq_adaptive'.format(schema=SCHEMA_NAME)
+                         , adaptive_to_bq
+                         , commit=commit)
     print()
 
 
@@ -233,7 +235,7 @@ def evaluate_adaptive_classifier():
 
 
 if __name__ == '__main__':
-    #print_adaptive_functions()
+    print_adaptive_functions(commit='a8cf9c3e9b738c22b16936caeeffe6583d1397b5')
     evaluate_adaptive_classifier()
 
     text = """Update values-prod-tags.yaml""".lower()
