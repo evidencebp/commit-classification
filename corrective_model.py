@@ -264,9 +264,9 @@ def evaluate_fix_classifier():
 
 if __name__ == '__main__':
 
-    #print_corrective_functions()
-    evaluate_fix_classifier()
-    text = """Add deprecated_since parameter
+    print_corrective_functions()
+    #evaluate_fix_classifier()
+    text = """
 """.lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
