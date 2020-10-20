@@ -47,3 +47,7 @@ New York, NY, USA, 2014. ACM.
 N. C. Shrikanth and T. Menzies. [Assessing practitioner beliefs
 about software defect prediction](https://arxiv.org/abs/1912.10093). In Intl. Conf. Softw. Eng.,
 number 42, May 2020.
+
+A. Hindle, D. M. German, M. W. Godfrey, and R. C. Holt.
+[Automatic classication of large changes into maintenance categories](https://softwareprocess.es/pubs/hindleICPC2009-large-changes-classification.pdf). In 2009 IEEE 17th International Conference on Program
+Comprehension, pages 30–39, May 2009
