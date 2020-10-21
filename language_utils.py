@@ -4,7 +4,7 @@ from typing import List
 regex_list : List[str]
 
 SCHEMA_NAME = 'general'
-file_scheme = '([a-z  -Z0-9_\*\.])+\.[a-zA-Z]{1,4}'
+file_scheme = '([a-zA-Z0-9_\*\.])+\.[a-zA-Z]{1,4}'
 
 NEAR_ENOUGH = '[\S\s]{1,40}'
 
