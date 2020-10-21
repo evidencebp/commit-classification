@@ -4,7 +4,7 @@ general.bq_perfective
  (message string)
  RETURNS int64
 AS (
-# Model language based on commit: a8cf9c3e9b738c22b16936caeeffe6583d1397b5
+# Model language based on commit: fd01abaffc30965f113a30bc97e9a83d9beec50d
 # Perfective
 general.bq_just_perfective(message)
  + general.bq_refactor(message)

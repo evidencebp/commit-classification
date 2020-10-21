@@ -387,4 +387,4 @@ def print_refactor_functions(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_refactor_functions(commit='a8cf9c3e9b738c22b16936caeeffe6583d1397b5')
+    print_refactor_functions(commit='fd01abaffc30965f113a30bc97e9a83d9beec50d')
