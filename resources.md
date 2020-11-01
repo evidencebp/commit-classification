@@ -71,3 +71,5 @@ Study on How Developers Document their
 Refactoring Activities in Commit Messages](https://www.researchgate.net/profile/Mohamed_Wiem_Mkaouer/publication/334282567_Can_Refactoring_Be_Self-Affirmed_An_Exploratory_Study_on_How_Developers_Document_Their_Refactoring_Activities_in_Commit_Messages/links/5d218f34458515c11c18d96c/Can-Refactoring-Be-Self-Affirmed-An-Exploratory-Study-on-How-Developers-Document-Their-Refactoring-Activities-in-Commit-Messages.pdf)
 
 [How Often Do Single-Statement Bugs Occur? The ManySStuBs4J Dataset](https://arxiv.org/pdf/1905.13334.pdf) [dataset](https://zenodo.org/record/3653444#.X5l8W5MzZ70)
+
+[How We Refactor and How We Document it? On the Use of Supervised Machine Learning Algorithms to Classify Refactoring Documentation](https://arxiv.org/pdf/2010.13890.pdf)
