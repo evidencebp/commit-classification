@@ -73,3 +73,5 @@ Refactoring Activities in Commit Messages](https://www.researchgate.net/profile/
 [How Often Do Single-Statement Bugs Occur? The ManySStuBs4J Dataset](https://arxiv.org/pdf/1905.13334.pdf) [dataset](https://zenodo.org/record/3653444#.X5l8W5MzZ70)
 
 [How We Refactor and How We Document it? On the Use of Supervised Machine Learning Algorithms to Classify Refactoring Documentation](https://arxiv.org/pdf/2010.13890.pdf)
+
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
