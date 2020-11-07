@@ -75,3 +75,5 @@ Refactoring Activities in Commit Messages](https://www.researchgate.net/profile/
 [How We Refactor and How We Document it? On the Use of Supervised Machine Learning Algorithms to Classify Refactoring Documentation](https://arxiv.org/pdf/2010.13890.pdf)
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+[On the Nature of Commits](https://www.inf.usi.ch/lanza/Downloads/Hatt2008a.pdf)
