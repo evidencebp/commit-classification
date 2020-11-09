@@ -290,7 +290,7 @@ def evaluate_fix_classifier():
 if __name__ == '__main__':
 
     print_corrective_functions(commit='fd01abaffc30965f113a30bc97e9a83d9beec50d')
-    print_core_bug_function()
+    print_core_bug_function(commit='77a2f4fecd385d89b071264bb1f7c697da42924e')
     #evaluate_fix_classifier()
     text = """
 """.lower()
