@@ -24,7 +24,7 @@ from labeling_util import get_false_positives, get_false_negatives
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
-    , static_analyzers, NEAR_ENOUGH, software_entities, code_review_fixes
+    , static_analyzers, NEAR_ENOUGH, software_entities, code_review_fixes, normalize
 from model_evaluation import classifiy_commits_df, evaluate_performance
 
 # TODO - use split to find related tokens
@@ -183,6 +183,7 @@ def build_negeted_bug_fix_regex():
 def is_fix(commit_text):
 
     text = commit_text.lower()
+    #text = normalize(text)
 
     fix_num = len(re.findall(build_bug_fix_regex(), text))
     valid_num = len(re.findall(build_valid_find_regex(), text))

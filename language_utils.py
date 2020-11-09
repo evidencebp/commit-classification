@@ -189,3 +189,9 @@ def generate_bq_function(func_name
     print(" ) ")
     print(" ; ")
 
+
+def normalize(string):
+    string = re.sub(r"\s+", " ", string.strip())
+    while "  " in string:
+        string = string.replace("  ", " ")
+    return string
