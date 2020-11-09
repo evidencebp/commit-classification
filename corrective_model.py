@@ -30,6 +30,19 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
+core_bug_terms = [
+             'bug(s|z)?',
+             'bug(?:-|\s)?fix(es)?',
+             'defect(?:s)?',
+             'error(?:s)?',
+             'failur(?:ing|e|es|ed)',
+             'fault(s)?',
+             'fix(ed|es|ing)?',
+             'fixing(?:s)?',
+             'incorrect(ly)?',
+             'mistake(s|n|nly)?',
+             'problem(?:s)?',
+             ]
 # Positive
 bug_terms = ['actual.*expected',
              'expected.*actual'
@@ -39,42 +52,31 @@ bug_terms = ['actual.*expected',
              "caused a regression", # TODO Extend
              'bad initialization(?:s)?',
              'buffer overflow(?:s)?',
-             'bug(s|z)?',
              'fixme(?:s)?',
-             'bug(?:-|\s)?fix(es)?',
              '(break|broke|breaking|broken)[\s\S]{0,20}(code|system|function|method)',
              'crash(?:ing|s|ed)?',
              'correct(?:ing|s|ed)?\\s*(a|the|some|few|this)', # make sure that correct serves as a verb
              'correct(ed|ion|ly|s)?',
              'dangling pointer(?:s)?',
              'deadlock(?:s)?',
-             'defect(?:s)?',
              'double(?:-| )free',
-             'error(?:s)?',
              'fail(?:ing|s|ed)?',
-             'failur(?:ing|e|es|ed)',
-             'fault(s)?',
              'faulty initialization(?:s)?',
-             'fix(ed|es|ing)?',
              'fix(?:-| )?in(?:s)?',
-             'fixing(?:s)?',
              'fix(?:-| )?up(?:s)?',
              'flaw(?:s|ed)?',
              'hot(?:-| )?fix(?:ed|es|ing)?',
              #'hang',
              'heap overflow(?:s)?',
-             'incorrect(ly)?',
              '(?:im|im-)?proper'
              'memory(?:-| )?leak(?:s)?',
              'missing\s(default value|initialization|switch case)(?:s)?',
              'is\smissing',
              'add(?:ing|s|ed)?\smiss(?:ing|es|ed)?',
-             'mistake(s|n|nly)?',
              #'must not',
              'null pointer(?:s)?',
              'over(?:-| )?run(?:s)?',
              'patch(?:ed|ing)',
-             'problem(?:s)?',
              'race condition(?:s)?',
              'data race(?:s)?',
              'repair(?:ing|s|ed)?',
@@ -88,7 +90,8 @@ bug_terms = ['actual.*expected',
              'workaround(?:s)?',
              'wrong(nly)?',
              'trouble(?:s)?',
-             'vulnerabilit(?:y|ies)']
+             'vulnerabilit(?:y|ies)'
+             ] + core_bug_terms
 
 # Valid_fix_objects
 valid_fix_object = prefective_entities + ['#',
@@ -179,6 +182,9 @@ def build_negeted_bug_fix_regex():
     return "%s[\s\S]{0,20}%s" % (negation_re, bug_fix_re)
 
 
+def bulid_core_bug_regex():
+
+    return '(%s)' % build_sepereted_term(core_bug_terms)
 
 def is_fix(commit_text):
 
@@ -213,6 +219,22 @@ def print_corrective_functions(commit: str = 'XXX'):
     print()
     generate_bq_function('{schema}.bq_corrective'.format(schema=SCHEMA_NAME)
                          , corrective_to_bq
+                         , commit=commit)
+    print()
+
+
+def core_bug_to_bq():
+    # TODO - the \n in the string seperator is printed as a new line and should be fixed
+    print("# Core Bug Term")
+    print( regex_to_big_query(bulid_core_bug_regex()))
+    print("#Core Bug Term - end")
+
+
+
+def print_core_bug_function(commit: str = 'XXX'):
+    print()
+    generate_bq_function('{schema}.bq_core_bug'.format(schema=SCHEMA_NAME)
+                         , core_bug_to_bq
                          , commit=commit)
     print()
 
@@ -268,6 +290,7 @@ def evaluate_fix_classifier():
 if __name__ == '__main__':
 
     print_corrective_functions(commit='fd01abaffc30965f113a30bc97e9a83d9beec50d')
+    print_core_bug_function()
     #evaluate_fix_classifier()
     text = """
 """.lower()
