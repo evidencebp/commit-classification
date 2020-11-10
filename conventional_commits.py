@@ -141,5 +141,5 @@ def evaluate_cc_fix_classifier():
     print(cm)
 
 if __name__ == '__main__':
-    print_cc_functions_for_bq()
+    print_cc_functions_for_bq(commit='60af4655d2baeb3aa15768a02cacf0bff5612e2b')
     evaluate_cc_fix_classifier()
