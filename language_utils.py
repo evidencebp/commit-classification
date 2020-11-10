@@ -128,6 +128,8 @@ code_review_fixes = ['(cr|pr)(s)?(-)?(d+)?\sfix(es)?', 'fix(?:ing|es|ed)?\s(cr|p
 
 no_message = ['no message', 'wip', 'work in progress', 'message', 'change(?:-|\s)?set', 'commit']
 
+
+
 def build_sepereted_term(term_list : List, just_before =False):
     if just_before:
         sep = "%s(%s)" % (term_seperator, "|".join(term_list))
@@ -195,3 +197,9 @@ def normalize(string):
     while "  " in string:
         string = string.replace("  ", " ")
     return string
+
+def print_logic_to_bq(regex_func
+                      , concept):
+    print("# " + concept)
+    print( regex_to_big_query(regex_func()))
+    print("# " + concept + " - end")
