@@ -10,9 +10,15 @@ from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq
 from model_evaluation import classifiy_commits_df, evaluate_performance
 
-cc_adaptive_terms = ['feat', 'build', 'chore', 'ci', 'test']
+cc_adaptive_terms = ['feat' # Feature
+                        , 'build'
+                        , 'chore'
+                        , 'ci' # continuous integration
+                        , 'test'
+                        , 'perf' # performance
+                     ]
 cc_corrective_terms = ['fix']
-cc_perfective_terms = ['docs', 'style', 'perf'] # TODO is perf -> perfective?
+cc_perfective_terms = ['docs', 'style'] # TODO is perf -> perfective?
 cc_refactor_terms = ['refactor']
 
 cc_actions = cc_adaptive_terms + cc_corrective_terms + cc_perfective_terms + cc_perfective_terms
