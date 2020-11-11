@@ -87,7 +87,7 @@ bug_terms = ['actual.*expected',
              # TODO - check generalization to leaks works in the other direction to expected (reduces FP, increases FN)
              'leak(?:s)?',
              'revert(?:ing|s|ed)?',
-             'segmentation fault(?:s)?',
+             'segmentation (fault|violation)(?:s)?',
              'resolv(?:ing|e|es|ed)',
              #'solv(?:ing|e|es|ed)',
              'workaround(?:s)?',
