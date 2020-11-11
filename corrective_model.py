@@ -45,6 +45,7 @@ core_bug_terms = [
              ]
 # Positive
 bug_terms = ['actual.*expected',
+             '((assignment|assign|=) in if|== instead of =)',
              'expected.*actual'
              '(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
              "(not|isn't|doesn't)\\s+work(s|ing)?", # TODO - check with negation
@@ -57,7 +58,7 @@ bug_terms = ['actual.*expected',
              'crash(?:ing|s|ed)?',
              'correct(?:ing|s|ed)?\\s*(a|the|some|few|this)', # make sure that correct serves as a verb
              'correct(ed|ion|ly|s)?',
-             'dangling pointer(?:s)?',
+             '(dangling|hanging) pointer(?:s)?',
              'deadlock(?:s)?',
              '(divid(e|es|ed|ing)|division) by (zero|0)',
              'double(?:-| )free',
@@ -99,13 +100,7 @@ bug_terms = ['actual.*expected',
              ] + core_bug_terms
 
 """
-Memory access errors/segmentation violations - I’ve seen this in C when trying to access an element that it out of bound of an array. Java, Python, etc. - these throw exception in blaring red letters. But C…well, when you write to an outside location, you’re pretty contaminating that data.
-Unlimited resource allocation - please don’t do this. Advanced languages such as Java can handle these, but not older languages.
-Hanging/dangling pointers
-Null pointers
-Initialization errors
-Spaghetti code 
-= and ==
+ = and ==
 out of bound 
 Unexpected reference occurred
 Can't implicitly convert the type
