@@ -66,6 +66,7 @@ bug_terms = ['actual.*expected',
              'fix(?:-| )?in(?:s)?',
              'fix(?:-| )?up(?:s)?',
              'flaw(?:s|ed)?',
+             '(float|integer) (under|over)(?:-| )?flow',
              'hot(?:-| )?fix(?:ed|es|ing)?',
              #'hang',
              'heap overflow(?:s)?',
@@ -93,13 +94,11 @@ bug_terms = ['actual.*expected',
              'wrong(nly)?',
              '(type(s)? mis(?:-| )?match|(not|non|none) matching type(s)?)',
              'trouble(?:s)?',
+             '(un(?:-| )?|not )initialized variable(s)?',
              'vulnerabilit(?:y|ies)'
              ] + core_bug_terms
 
 """
-# TypeError
-'Uninitialized variables'
-Integer overflow
 Memory access errors/segmentation violations - I’ve seen this in C when trying to access an element that it out of bound of an array. Java, Python, etc. - these throw exception in blaring red letters. But C…well, when you write to an outside location, you’re pretty contaminating that data.
 Unlimited resource allocation - please don’t do this. Advanced languages such as Java can handle these, but not older languages.
 Hanging/dangling pointers
