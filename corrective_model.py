@@ -97,15 +97,10 @@ bug_terms = ['actual.*expected',
              '(type(s)? mis(?:-| )?match|(not|non|none) matching type(s)?)',
              'trouble(?:s)?',
              '(un(?:-| )?|not )initialized variable(s)?',
+             # 'unexpected.*occurred', # very rare, 90% are bugs anyway
              'vulnerabilit(?:y|ies)'
              ] + core_bug_terms
 
-"""
-out of bound 
-Unexpected reference occurred
-Can't implicitly convert the type
-race conditions
-"""
 # Valid_fix_objects
 valid_fix_object = prefective_entities + ['#',
                     '(camel|snake|kebab|flat|lower|upper)\\s*case',
