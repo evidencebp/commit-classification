@@ -91,6 +91,7 @@ bug_terms = ['actual.*expected',
              #'solv(?:ing|e|es|ed)',
              'workaround(?:s)?',
              'wrong(nly)?',
+             '(type(s)? mis(?:-| )?match|(not|non|none) matching type(s)?)',
              'trouble(?:s)?',
              'vulnerabilit(?:y|ies)'
              ] + core_bug_terms
