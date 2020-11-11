@@ -189,7 +189,7 @@ def build_refactor_goals_regex():
 def build_non_code_perfective_regex():
 
     non_perfective_entities = ['warning(?:s)?'
-                               , 'format(?:ting)?'
+                               , 'format(?:ing)?'
                                , 'indentation(?:s)?'
                               ]
     # TODO - applied to perfective entities too here, which is a bug.
