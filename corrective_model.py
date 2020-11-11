@@ -79,6 +79,7 @@ bug_terms = ['actual.*expected',
              #'must not',
              'null pointer(?:s)?',
              'off(?:-| )by(?:-| )(one|1)',
+             'out of bound(?:s)?',
              'over(?:-| )?run(?:s)?',
              'patch(?:ed|ing)',
              'race condition(?:s)?',
@@ -100,7 +101,6 @@ bug_terms = ['actual.*expected',
              ] + core_bug_terms
 
 """
- = and ==
 out of bound 
 Unexpected reference occurred
 Can't implicitly convert the type
