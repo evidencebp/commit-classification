@@ -5,6 +5,12 @@ from language_utils import file_scheme, term_seperator, build_sepereted_term, ne
     , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals
 
 # TODO - add Technical Debt, fixme
+"""
+Directions to consider 
+
+Spaghetti code - indication of mess, not always a refactor
+"""
+
 # https://arxiv.org/pdf/2002.11049.pdf
 refactor_entities = software_terms + ['(helper|utility|auxiliary) function(?:s)?']
 
