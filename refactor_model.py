@@ -2,7 +2,7 @@ import re
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
-    , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals
+    , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, static_analyzers
 
 # TODO - add Technical Debt, fixme
 """
@@ -68,6 +68,9 @@ perfective_header_action = [
     , '(?:move|moved|moves|moving) to'
     , 'separat(?:e|es|ed|ing)'
     , 'split(?:s|ing)?', '->'
+    , build_sepereted_term(static_analyzers) + 'fix(es|ed)?'
+    , 'fix(es|ed)?' + build_sepereted_term(static_analyzers)
+
     #, '(private|public|protected|static)'
 ]
 
