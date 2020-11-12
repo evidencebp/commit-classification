@@ -122,7 +122,7 @@ unnedded_terms = ['unnecessary', 'unneeded', 'unused', '(?:not|never|no longer) 
     , 'no longer needed', 'redundant', 'useless', 'duplicate(?:d)?', 'deprecated', 'obsolete(?:d)?', 'commented']
 
 
-static_analyzers = ['lint', 'pylint', 'tslint', 'jlint', 'jslint']
+static_analyzers = ['lint', 'pylint', 'tslint', 'jlint', 'jslint', 'eslint', 'klint', 'xlint', 'linter']
 
 code_review_fixes = ['(cr|pr)(s)?(-)?(d+)?\sfix(es)?', 'fix(?:ing|es|ed)?\s(cr|pr|code review|code-review|review)']
 
