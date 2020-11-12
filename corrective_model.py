@@ -133,6 +133,7 @@ valid_terms = [
     'typo(s)?\sfix(es)?',
     'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
     build_sepereted_term(static_analyzers) + 'fix(es|ed)?',
+    'fix(es|ed)?' + build_sepereted_term(static_analyzers) ,
     '^### Bug Fix', # tends to be a title, later stating if the commit is a bug fix
     'edit the jira link to the correct issue', # Another occurring title
 
