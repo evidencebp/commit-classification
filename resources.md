@@ -80,3 +80,5 @@ Refactoring Activities in Commit Messages](https://www.researchgate.net/profile/
 
 [BugsInPy: A Database of Existing Bugs in Python Programs to
 Enable Controlled Testing and Debugging Studies](https://dl.acm.org/doi/pdf/10.1145/3368089.3417943) [repo](https://github.com/soarsmu/BugsInPy/)
+
+[Large-Scale Manual Validation of Bug Fixing Commits: A Fine-grained Analysis of Tangling] (https://arxiv.org/abs/2011.06244)
