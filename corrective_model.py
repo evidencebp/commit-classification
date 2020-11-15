@@ -192,7 +192,7 @@ def build_negeted_bug_fix_regex():
     return "%s[\s\S]{0,20}%s" % (negation_re, bug_fix_re)
 
 
-def bulid_core_bug_regex():
+def build_core_bug_regex():
 
     return '(%s)' % build_sepereted_term(core_bug_terms)
 
@@ -236,7 +236,7 @@ def print_corrective_functions(commit: str = 'XXX'):
 def core_bug_to_bq():
     # TODO - the \n in the string seperator is printed as a new line and should be fixed
     print("# Core Bug Term")
-    print( regex_to_big_query(bulid_core_bug_regex()))
+    print( regex_to_big_query(build_core_bug_regex()))
     print("#Core Bug Term - end")
 
 
