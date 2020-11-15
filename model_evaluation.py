@@ -66,3 +66,32 @@ def evaluate_regex_results_on_df(df: pd.DataFrame
                          , classification_column
                          , concept_column
                          , text_name=text_name)
+
+
+
+def evaluate_concept_classifier(concept
+                                , text_name
+                                , classification_function
+                                , samples_file
+                                , classification_column: str = None
+                                , concept_column: str = None):
+
+    if not classification_column:
+        classification_column = concept + '_pred'
+
+    if not concept_column:
+        concept_column = 'Is_' + concept
+
+    df = pd.read_csv(samples_file)
+
+    cm = evaluate_regex_results_on_df(df=df
+                                    , classification_column=classification_column
+                                    , classification_function=classification_function
+                                    , concept_column=concept_column
+                                    , text_name=text_name
+                                    )
+    print(concept + " CM")
+    print(cm)
+
+    return cm
+

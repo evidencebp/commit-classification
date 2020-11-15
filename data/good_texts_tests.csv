@@ -1,0 +1,4 @@
+id,message,Is_good, comment
+1,These are good news, 0,
+2,It is not good, 0,
+3,This is a good refactor, 1,
