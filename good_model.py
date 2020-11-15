@@ -9,7 +9,7 @@ Guess some terms related to the concept. Brainstorms are helpful.
 Look for synonyms of the terms.
 https://www.thesaurus.com/
 
-Look of common tokens in text contaning your terms.
+Look of common tokens in text containing your terms (use terms_related_to_concept.sql).
 
 Sort the terms by alphabetical order to group them by semantic meaning.
 It will be valuable in maintaining.
@@ -17,19 +17,25 @@ It will be valuable in maintaining.
 Sample some hits containing the terms.
 Browse them, see that you are OK and fine tune them.
 
-Add build_non_positive_linguistic,
-# TODO - others?
+Add build_non_positive_linguistic
 
 Add a list of supersets of your terms to be excluded
 
 Samples hits of core that are not hits of your model to improve model recall
 
-Tests
+Use tests and not just data sets in order to make sure that the classifier classify correctly cases of importance.
+
 Archimedes
+Use rules that disagree with your classifier concept (e.g., good vs. rejected PRs, low quality files), and use the cases
+in which both your classifier and they agree as a possible rich source for false positives.
+Similarly, rules that agree with the classifier that hit when it is not are a rich source of false negatives.
 
 Term evaluation
+In low positive rate, random sampling is not feasible.
+One can in an sample cases not covered by the current classifier yet identified by the new term.
+This way one can get the precision and additional recall.
 
-Maintain a list of cases that you are not ceartin about. Time helps.
+Maintain a list of cases that you are not certain about. Time helps.
 """
 
 
