@@ -18,7 +18,7 @@ cc_adaptive_terms = ['feat' # Feature
                         , 'perf' # performance
                      ]
 cc_corrective_terms = ['fix']
-cc_perfective_terms = ['docs', 'style'] # TODO is perf -> perfective?
+cc_perfective_terms = ['docs', 'style']
 cc_refactor_terms = ['refactor']
 
 cc_actions = cc_adaptive_terms + cc_corrective_terms + cc_perfective_terms + cc_perfective_terms
