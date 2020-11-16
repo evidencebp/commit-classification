@@ -20,36 +20,52 @@ unnedded_terms = ['unnecessary', 'unneeded', 'unused', '(?:not|never|no longer) 
     #, 'old'
     , 'no longer needed', 'redundant', 'useless', 'duplicate(?:d)?', 'deprecated', 'obsolete(?:d)?', 'commented']
 
+refactor_core_terms = [
+    'clean(?:ing)?(?:-| )?up(?:s)?',
+    'clean(?:ing|s|ed)?',
+    'combin(?:e|es|ed|ing)',
+    'compos(?:e|es|ed|ing)',
+    'de(?:-| )?compos(?:e|es|ed|ing)',
+    'deprecat(?:e|es|ed|ing)',
+    'encapsulat(?:e|es|ed|ing)',
+    'polish(?:ed|es|ing)?',
+    're(?:-|)?organiz(?:e|es|ed|ing)',
+    're(?:-|)?structur(?:e|es|ed|ing)',
+    'rebuil(?:d|ds|ding|t)',
+    'tid(?:y|ying|ied)'
+]
+
 
 modification_activity = [
-                            #'chang(?:e|esed|ing)'
- 'clean(?:ing|s|ed)?'
-#,
-                            'clean(?:ing)?(?:-| )?up(?:s)?'
-    , 'combin(?:e|es|ed|ing)',
-           'compos(?:e|es|ed|ing)','de(?:-| )?compos(?:e|es|ed|ing)', 'convert(?:ed|s|ing)?'
-                            #, 'creat(?:e|es|ed|ing)'
-                            , 'dead'
-#, 'delet(?:e|es|ed|ing)'
-                            , 'deprecat(?:e|es|ed|ing)'
-                            , 'drop(?:ed|s|ing)?', 'duplicat(?:e|es|ed|ing)', 'extract(?:ed|s|ing)?'
-           # Goals modification only?
-                            ,'improv(?:e|es|ed|ing)', 'increas(?:e|es|ed|ing)'
-                            #, 'instead'
-                            #, 'kill(?:ed|s|ing)?'
-                            , '(?:make|makes|made|making)'
-                            , 'mov(?:e|es|ed|ing)'
-           # , 'provid(?:e|es|ed|ing)'
-                            , 'rebuil(?:d|ds|ding|t)'
-                            , 'replac(?:e|es|ed|ing)', 'redundant', 're(?:-|)?organiz(?:e|es|ed|ing)'
-    , 're(?:-|)?structur(?:e|es|ed|ing)','separat(?:e|e s|ed|ing)'
-                            , 'split(?:s|ing)?', 'subsitut(?:e|es|ed|ing)', 'tid(?:y|ying|ied)'
-, 'short(:?en|er|ing|s)?', 'polish(?:ed|es|ing)?', '(?:get|got|getting) rid', 'encapsulate'
-                            , 'hide(?:e|es|ed|ing)', 'un(?:-| )?hid(?:e|es|ed|ing)'
-                            , 'parameteriz(?:e|es|ed|ing)'
-                            , 'substitut(?:e|es|ed|ing)'
-                            #, 'introduc(?:e|es|ed|ing)'
-                        , ] + unnedded_terms
+'(?:get|got|getting) rid',
+ '(?:make|makes|made|making)',
+ 'convert(?:ed|s|ing)?',
+ 'dead',
+ 'drop(?:ed|s|ing)?',
+ 'duplicat(?:e|es|ed|ing)',
+ 'extract(?:ed|s|ing)?',
+ 'hide(?:e|es|ed|ing)',
+ 'improv(?:e|es|ed|ing)',    # Goals modification only?
+ 'increas(?:e|es|ed|ing)',
+ 'mov(?:e|es|ed|ing)',
+ 'parameteriz(?:e|es|ed|ing)',
+ 'redundant',
+ 'replac(?:e|es|ed|ing)',
+ 'separat(?:e|e s|ed|ing)',
+ 'short(:?en|er|ing|s)?',
+ 'split(?:s|ing)?',
+ 'subsitut(?:e|es|ed|ing)',
+ 'substitut(?:e|es|ed|ing)',
+ 'un(?:-| )?hid(?:e|es|ed|ing)'
+
+    #'chang(?:e|esed|ing)'
+    #, 'creat(?:e|es|ed|ing)'
+    #, 'delet(?:e|es|ed|ing)'
+    #, 'instead'
+    #, 'kill(?:ed|s|ing)?'
+    # , 'provid(?:e|es|ed|ing)'
+    #, 'introduc(?:e|es|ed|ing)'
+] + refactor_core_terms + unnedded_terms
 
 feedbak_terms = [ 'py(?:-| )?lint', 'lint', 'review comments(?:s)?', 'code review', 'cr', 'pep8'
                   ]
