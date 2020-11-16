@@ -19,7 +19,7 @@ from os.path import join
 import pandas as pd
 
 from configuration import DATA_PATH
-
+from conventional_commits import build_cc_corrective_regex
 from labeling_util import get_false_positives, get_false_negatives
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
@@ -172,7 +172,7 @@ def build_valid_find_regex():
     return "((%s)|(%s)|(%s))" % (prefix, suffix, other_valid_re)
 
 
-def build_bug_fix_regex():
+def build_bug_fix_regex(use_conventional_commits=True):
     header_regex =  '(?:^|^[\s\S]{0,25}%s)(?:%s)%s' % (term_seperator
                                                        , "|".join(corrective_header_entities)
                                                        , term_seperator)
@@ -181,11 +181,16 @@ def build_bug_fix_regex():
 
     bug_fix_re = build_sepereted_term(bug_terms)
 
-    return "((%s)|(%s))" % (bug_fix_re, header_regex)
-    #return "((%s)|(%s)|(%s))" % (bug_fix_re, header_regex, strict_header)
+
+    if use_conventional_commits:
+        agg_re = "((%s)|(%s)|(%s))" % (bug_fix_re, header_regex, build_cc_corrective_regex())
+    else:
+        agg_re = "((%s)|(%s))" % (bug_fix_re, header_regex)
+
+    return agg_re
 
 def build_negeted_bug_fix_regex():
-    bug_fix_re = build_bug_fix_regex()
+    bug_fix_re = build_bug_fix_regex(use_conventional_commits=False)
     negation_re = build_sepereted_term(negation_terms)
 
 
