@@ -3,7 +3,7 @@ from os.path import join
 import pandas as pd
 
 from configuration import DATA_PATH
-
+from conventional_commits import build_cc_adaptive_regex
 from labeling_util import get_false_positives, get_false_negatives
 
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
@@ -123,14 +123,22 @@ def build_adaptive_action_regex():
 
 
 
-def build_adaptive_regex():
+def build_adaptive_regex(use_conventional_commits=True):
 
     adaptive_context_re = build_sepereted_term(adaptive_context, just_before=True)
 
 
-    return "((%s)\s[\s\S]{0,50}(%s)%s)" % (adaptive_context_re
+    base_re = "((%s)\s[\s\S]{0,50}(%s)%s)" % (adaptive_context_re
                             ,  "|".join(adaptive_entities + software_terms)
                             , term_seperator)
+
+    if use_conventional_commits:
+        agg_re = "((%s)|(%s))" % (base_re
+                                  , build_cc_adaptive_regex())
+    else:
+        agg_re = base_re
+
+    return agg_re
 
 
 
@@ -164,7 +172,7 @@ def build_non_adaptive_context():
 
 def build_non_adaptive_linguistic():
 
-    return build_non_positive_linguistic(build_adaptive_regex())
+    return build_non_positive_linguistic(build_adaptive_regex(use_conventional_commits=False))
 
 def is_adaptive(text):
 
