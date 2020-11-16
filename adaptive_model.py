@@ -277,7 +277,7 @@ def evaluate_adaptive_classifier():
 
 
 if __name__ == '__main__':
-    print_adaptive_functions(commit='fd01abaffc30965f113a30bc97e9a83d9beec50d')
+    print_adaptive_functions(commit='b7618c31efc5f3ae85f5300239c7bade872ad212')
     evaluate_adaptive_classifier()
 
     text = """Update values-prod-tags.yaml""".lower()
