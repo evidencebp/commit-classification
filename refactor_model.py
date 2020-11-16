@@ -1,5 +1,6 @@
 import re
 
+from conventional_commits import build_cc_refactor_regex
 from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
     , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, static_analyzers
@@ -181,7 +182,7 @@ def build_core_refactor_regex():
 
     return '(%s)' % build_sepereted_term(core_refactor_terms)
 
-def build_refactor_regex():
+def build_refactor_regex(use_conventional_commits=True):
     header_regex =  '(?:^|^[\s\S]{0,25}%s)(?:%s)%s' % (term_seperator
                                                        , "|".join(perfective_header_action)
                                                        , term_seperator)
@@ -193,9 +194,17 @@ def build_refactor_regex():
                                                                      , term_seperator
                                                                      , "|".join(refactor_entities)
                                                                      , term_seperator)
-    return "(%s)|(%s)|(%s)" % (build_sepereted_term(refactor_context)
+    if use_conventional_commits:
+        agg_re = "(%s)|(%s)|(%s)|(%s)" % (build_sepereted_term(refactor_context)
+                          , activity_regerx
+                          , header_regex
+                          , build_cc_refactor_regex())
+    else:
+        agg_re = "(%s)|(%s)|(%s)" % (build_sepereted_term(refactor_context)
                           , activity_regerx
                           , header_regex)
+    return agg_re
+
 
 
 def build_refactor_goals_regex():
@@ -300,7 +309,7 @@ def non_code_refactor_to_bq():
 def non_positive_linguistic_refactor_to_bq():
     print( "# Refactor :build_non_positive_linguistic(build_refactor_regex())")
     print( "-")
-    print( regex_to_big_query(build_non_positive_linguistic(build_refactor_regex())))
+    print( regex_to_big_query(build_non_positive_linguistic(build_refactor_regex(use_conventional_commits=False))))
 
 def non_positive_linguistic_refactor_goals_to_bq():
     print( "# Refactor :build_non_positive_linguistic(build_refactor_goals_regex())")
@@ -313,7 +322,8 @@ def non_positive_linguistic_removal_to_bq():
 
 def documentation_entities_context_refactor_to_bq():
     print("# Refactor :build_documentation_entities_context(build_refactor_regex())")
-    print(regex_to_big_query( build_documentation_entities_context(build_refactor_regex())))
+    print(regex_to_big_query(
+        build_documentation_entities_context(build_refactor_regex(use_conventional_commits=False))))
 
 
 
@@ -338,8 +348,10 @@ def built_is_refactor(commit_text):
             + match(commit_text, removal_re)
             + match(commit_text, build_refactor_goals_regex())
             - match(commit_text, build_non_code_perfective_regex())
-            - match(commit_text, build_documentation_entities_context(build_refactor_regex()))
-            - match(commit_text, build_non_positive_linguistic(build_refactor_regex()))
+            - match(commit_text
+                    , build_documentation_entities_context(build_refactor_regex(use_conventional_commits=False)))
+            - match(commit_text
+                    , build_non_positive_linguistic(build_refactor_regex(use_conventional_commits=False)))
             - match(commit_text, build_non_positive_linguistic(build_sepereted_term(removal)))
             - match(commit_text, build_non_positive_linguistic(build_refactor_goals_regex()))
             ) > 0
