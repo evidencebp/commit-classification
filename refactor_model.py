@@ -20,7 +20,7 @@ unnedded_terms = ['unnecessary', 'unneeded', 'unused', '(?:not|never|no longer) 
     #, 'old'
     , 'no longer needed', 'redundant', 'useless', 'duplicate(?:d)?', 'deprecated', 'obsolete(?:d)?', 'commented']
 
-refactor_core_terms = [
+core_refactor_terms = [
     'clean(?:ing)?(?:-| )?up(?:s)?',
     'clean(?:ing|s|ed)?',
     'combin(?:e|es|ed|ing)',
@@ -65,7 +65,7 @@ modification_activity = [
     #, 'kill(?:ed|s|ing)?'
     # , 'provid(?:e|es|ed|ing)'
     #, 'introduc(?:e|es|ed|ing)'
-] + refactor_core_terms + unnedded_terms
+] + core_refactor_terms + unnedded_terms
 
 feedbak_terms = [ 'py(?:-| )?lint', 'lint', 'review comments(?:s)?', 'code review', 'cr', 'pep8'
                   ]
@@ -176,6 +176,9 @@ adaptive_context = [
 
 ]
 
+def build_core_refactor_regex():
+
+    return '(%s)' % build_sepereted_term(core_refactor_terms)
 
 def build_refactor_regex():
     header_regex =  '(?:^|^[\s\S]{0,25}%s)(?:%s)%s' % (term_seperator
@@ -271,6 +274,11 @@ def build_documentation_entities_context(positive_re):
 # not used 72894b26c24b1ea31c6dda4634cfde67e7dc3050
 
 
+def core_refactor_to_bq():
+    print("# Core Refactor Term")
+    print( regex_to_big_query(build_core_refactor_regex()))
+    print("#Core Refactor Term - end")
+
 def positive_refactor_to_bq():
     print( "# Refactor :build_refactor_regex()")
     #print( ",")
@@ -362,6 +370,11 @@ def perfective_to_bq():
 
 
 def print_refactor_functions(commit: str = 'XXX'):
+
+    generate_bq_function('{schema}.bq_core_refactor'.format(schema=SCHEMA_NAME)
+                         , core_refactor_to_bq
+                         , commit=commit)
+    print()
 
     generate_bq_function('{schema}.bq_positive_refactor'.format(schema=SCHEMA_NAME)
                          , positive_refactor_to_bq
