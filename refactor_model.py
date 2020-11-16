@@ -29,6 +29,7 @@ core_refactor_terms = [
     'deprecat(?:e|es|ed|ing)',
     'encapsulat(?:e|es|ed|ing)',
     'polish(?:ed|es|ing)?',
+    're(?:-| )?factor(?:ed|s|ing|ings)?', # TODO - should be here - check why slightly decreases performance
     're(?:-|)?organiz(?:e|es|ed|ing)',
     're(?:-|)?structur(?:e|es|ed|ing)',
     'rebuil(?:d|ds|ding|t)',
