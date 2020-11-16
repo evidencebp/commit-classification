@@ -13,25 +13,38 @@ from language_utils import file_scheme, term_seperator, build_sepereted_term, ne
 
 from model_evaluation import classifiy_commits_df, evaluate_performance
 
-adaptive_context = [
-    '(?:un)?hid(?:e|es|den)', 'add(?:s|ed|ing)?', 'allow(?:s|ed|ing)?'
-    , 'buil(?:t|ds|ing)', 'calibirat(?:e|es|ed|ing)'
-    , 'configure'
-    , 'creat(?:e|es|ing)'
-    , 'deferr(?:ed|s|ing)?'
-    , 'disabl(?:e|es|ed|ing)'
-    , 'enhanc(?:e|es|ed|ing)', 'extend(?:s|ed|ing)?', 'form(?:ed|s|ing)?'
-    , 'implement(?:ed|s|ing)?', 'import(?:s|ed|ing)?', 'introduc(?:e|es|ed|ing)'
-    , 'port(?:s|ed|ing)?'
-    , 'provid(?:e|es|ed|ing)'
-    , 'report(?:s|ed|ing)?'
-    , 'support(s|ed|ing)?'
-    , 'updat(?:e|es|ed|ing)'
-    , 'upgrad(?:e|es|ed|ing)'
+core_adaptive_terms = [
+    'add(?:s|ed|ing)?',
+    'creat(?:e|es|ing)',
+    'disabl(?:e|es|ed|ing)',
+    'implement(?:ed|s|ing)?',
+    'import(?:s|ed|ing)?',
+    'introduc(?:e|es|ed|ing)',
+    'port(?:s|ed|ing)?',
+    'provid(?:e|es|ed|ing)',
+    'updat(?:e|es|ed|ing)',
+    'upgrad(?:e|es|ed|ing)'
 
-    # , 'mov(e|es|ed|ing)'
-    # , 'print(s|ed|ing)?'
 ]
+
+adaptive_context = [
+ '(?:un)?hid(?:e|es|den)',
+ 'allow(?:s|ed|ing)?',
+ 'buil(?:t|ds|ing)',
+ 'calibirat(?:e|es|ed|ing)',
+ 'configure',
+ 'deferr(?:ed|s|ing)?',
+ 'enhanc(?:e|es|ed|ing)',
+ 'extend(?:s|ed|ing)?',
+ 'form(?:ed|s|ing)?',
+ 'report(?:s|ed|ing)?',
+ 'support(s|ed|ing)?',
+
+# , 'mov(e|es|ed|ing)'
+# , 'print(s|ed|ing)?'
+
+] + core_adaptive_terms
+
 
 
 adaptive_entities = ['ability', 'configuration', 'conversion', 'debug', 'new', 'possibility', 'support'
@@ -160,6 +173,19 @@ def is_adaptive(text):
             - match(text, build_non_adaptive_context())
             - match(text, build_non_adaptive_linguistic()))
 
+
+
+def build_core_adaptive_regex():
+
+    return '(%s)' % build_sepereted_term(core_adaptive_terms)
+
+
+def core_adaptive_to_bq():
+    print("# Core Adaptive Term")
+    print( regex_to_big_query(build_core_adaptive_regex()))
+    print("#Core Adaptive Term - end")
+
+
 def adaptive_to_bq():
 
 
@@ -183,6 +209,14 @@ def print_adaptive_functions(commit: str = 'XXX'):
     print()
     generate_bq_function('{schema}.bq_adaptive'.format(schema=SCHEMA_NAME)
                          , adaptive_to_bq
+                         , commit=commit)
+    print()
+
+    core_adaptive_to_bq
+    print()
+
+    generate_bq_function('{schema}.bq_core_adaptive'.format(schema=SCHEMA_NAME)
+                         , core_adaptive_to_bq
                          , commit=commit)
     print()
 
