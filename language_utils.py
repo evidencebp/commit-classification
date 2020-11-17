@@ -27,6 +27,7 @@ security_terms = [ 'vulnerabilit(?:y|ies)', 'cve(-d+)?(-d+)?', 'security', 'cybe
 
 documentation_entities = [
     'change(?: |-)?log',
+    'change(?: |-)?set',
     'comment(s)?',
     'copy(?: |-)?right(?:s)?',
     'doc(?:s)?',
