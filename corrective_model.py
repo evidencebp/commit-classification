@@ -153,7 +153,7 @@ fixing_verbs = ['correct(?:ing|s|ed)'
 corrective_header_entities = fixing_verbs + [
     'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent', 'break(s|ed|ing)?', 'broken'
     #, "(does not|doesn't) need" , "cannot", "can not"
- ] #+ [ "do not" ,"don't"]
+ ] #+ [ "do not" ,"don't", "dont"]
 
 def build_valid_find_regex():
     fix_re = "(" + "|".join(fixing_verbs) + ")"
@@ -262,9 +262,9 @@ def evaluate_fix_classifier():
 
     concept_column='Is_Corrective'
 
-    df = pd.read_csv(join(DATA_PATH, 'commit_classification_batch2.csv'))
+    df = pd.read_csv(join(DATA_PATH, 'corrective_texts_tests.csv'))
     
-    df = df[df.certain != 'FALSE']
+    #df = df[df.certain != 'FALSE']
     df = df[~df.Is_Corrective.isna()]
 
     #concept_column='is_corrective'
@@ -304,9 +304,9 @@ def evaluate_fix_classifier():
 
 if __name__ == '__main__':
 
-    print_corrective_functions(commit='4c0baaa02d3e417017120b290115d10b4212376b')
-    print_core_bug_function(commit='4c0baaa02d3e417017120b290115d10b4212376b')
-    #evaluate_fix_classifier()
+    #print_corrective_functions(commit='4c0baaa02d3e417017120b290115d10b4212376b')
+    #print_core_bug_function(commit='4c0baaa02d3e417017120b290115d10b4212376b')
+    evaluate_fix_classifier()
     text = """
 """.lower()
     print(is_fix(text))
