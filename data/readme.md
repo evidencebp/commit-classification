@@ -1,5 +1,5 @@
 The data file BugsInPy_Labelled.csv is from [BugsInPy: A Database of Existing Bugs in Python Programs to
-Enable Controlled Testing and Debugging Studies] (https://dl.acm.org/doi/pdf/10.1145/3368089.3417943)
+Enable Controlled Testing and Debugging Studies](https://dl.acm.org/doi/pdf/10.1145/3368089.3417943)
 Please cite as
 ```
 @inproceedings{10.1145/3368089.3417943,
