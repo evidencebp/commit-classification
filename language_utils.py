@@ -13,10 +13,9 @@ NEAR_ENOUGH = '[\S\s]{1,40}'
 #term_seperator = "[^abcdefghijklmnopqrstuvwxyz]"
 term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)"
 
-
 # Negation
-negation_terms = ["aren't", "didn't" ,"don't", "doesn't", "isn't", 'lack', "n't", 'never', 'no', 'nobody', 'none', 'not'
-    , 'nothing', "weren't", 'without', "won't"]
+negation_terms = ["aren't", "arent", "didn't", "didnt" ,"don't", "dont", "doesn't", "doesnt", "isn't", "isnt", 'lack'
+, "n't", 'never', 'no', 'nobody', 'none', 'not', 'nothing', "weren't", "werent", 'without', "won't", "wont"]
 
 modals = ['can', 'could', 'ha(?:ve|s|d)', 'may', 'might', 'must', 'need', 'ought', 'shall', 'should', 'will', 'would']
 
@@ -26,8 +25,7 @@ modals = ['can', 'could', 'ha(?:ve|s|d)', 'may', 'might', 'must', 'need', 'ought
 security_terms = [ 'vulnerabilit(?:y|ies)', 'cve(-d+)?(-d+)?', 'security', 'cyber', 'threat']
 
 documentation_entities = [
-    'change(?: |-)?log',
-    'change(?: |-)?set',
+    'change(?: |-)?(list|log|set)',
     'comment(s)?',
     'copy(?: |-)?right(?:s)?',
     'doc(?:s)?',
