@@ -2,6 +2,8 @@ import pandas as pd
 from typing import Callable
 
 import sys
+
+DISABLE_TEST_COLUMN = 'disable'
 ANALYSIS_PATH = '/Users/idan/src/analysis_utils'
 sys.path.append(ANALYSIS_PATH)
 
@@ -20,6 +22,8 @@ def evaluate_performance(df
                          , classification_column
                          , concept_column
                          , text_name: str ='message'):
+    if DISABLE_TEST_COLUMN in df.columns:
+        df = df[(df[DISABLE_TEST_COLUMN] != 1)]
     g = df.groupby(
         [classification_column, concept_column]
         , as_index=False).agg({text_name : 'count'})
