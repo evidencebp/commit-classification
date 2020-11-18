@@ -152,7 +152,7 @@ fixing_verbs = ['correct(?:ing|s|ed)'
 
 corrective_header_entities = fixing_verbs + [
     'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent', 'break(s|ed|ing)?', 'broken'
-    , 'remov(?:ing|e|es|ed) change(?:s)?'
+    , 'remov(?:ing|e|es|ed) change(?:s)?', 'unable'
     #, "(does not|doesn't) need" , "cannot", "can not"
  ] #+ [ "do not" ,"don't", "dont"]
 
@@ -283,7 +283,7 @@ def evaluate_fix_classifier():
                          , text_name=text_name)
     print("corrective_labels CM")
     print(cm)
-
+    df = df[(df['disable'] != 1)]
     """
     fp = get_false_positives(df
                         , classifier_column=classification_column
