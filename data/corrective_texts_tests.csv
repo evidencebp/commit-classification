@@ -1,0 +1,11 @@
+id,message,Is_Corrective,disable,comment
+1,Merge pull request #456 from PRJ-123-add-button-fix, 1, 0
+2, Provide proper import, 1, 0, uncertain regarding the label
+3, Merge branch 'master' into PRJ-123-do-fix, 1, 0
+4, Unable to do stuff, 1, 0
+5, Dont do that , 1, 1
+6, Merge branch 'master' into PRJ-123-item-not-good, 1, 0
+7, PRJ-123 Do not remove it, 1, 1
+8, Merge branch 'master' into PRJ-123-cannot-do-it, 1, 1
+9, Removes changes, 1, 0
+10, Merge pull request #456 from PRJ-123-do-another-fix-afterwards, 1, 0
