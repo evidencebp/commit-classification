@@ -152,6 +152,7 @@ fixing_verbs = ['correct(?:ing|s|ed)'
 
 corrective_header_entities = fixing_verbs + [
     'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent', 'break(s|ed|ing)?', 'broken'
+    , 'remov(?:ing|e|es|ed) change(?:s)?'
     #, "(does not|doesn't) need" , "cannot", "can not"
  ] #+ [ "do not" ,"don't", "dont"]
 
