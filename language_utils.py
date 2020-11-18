@@ -25,7 +25,7 @@ modals = ['can', 'could', 'ha(?:ve|s|d)', 'may', 'might', 'must', 'need', 'ought
 security_terms = [ 'vulnerabilit(?:y|ies)', 'cve(-d+)?(-d+)?', 'security', 'cyber', 'threat']
 
 documentation_entities = [
-    'change(?: |-)?(list|log|set)',
+    'change(?:s)?(?: |-)?(list|log|set|file)',
     'comment(s)?',
     'copy(?: |-)?right(?:s)?',
     'doc(?:s)?',
