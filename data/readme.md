@@ -1,5 +1,7 @@
 The data file BugsInPy_Labelled.csv is from [BugsInPy: A Database of Existing Bugs in Python Programs to
 Enable Controlled Testing and Debugging Studies](https://dl.acm.org/doi/pdf/10.1145/3368089.3417943)
+The file BugsInPy_Labelled_text.csv contains the same commits, enhanched with the commit message and subject.
+
 Please cite as
 ```
 @inproceedings{10.1145/3368089.3417943,
