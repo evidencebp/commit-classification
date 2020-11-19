@@ -149,15 +149,16 @@ fixing_verbs = ['correct(?:ing|s|ed)'
                     , 'revok(?:ing|e|es|ed)'
                     , 'und(?:oing|id)'
                 ]
-
+MERGE_PREFIX = '(merge (branch|pull request).{0,25}|merge (branch|pull request).{0,25}(from|into).{0,25})'
 corrective_header_entities = fixing_verbs + [
     'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent', 'break(s|ed|ing)?', 'broken'
     , 'remov(?:ing|e|es|ed) change(?:s)?', 'unable'
+    , MERGE_PREFIX + "(%s)" % "|".join(core_bug_terms)
     #, "(does not|doesn't) need" , "cannot", "can not"
  ] #+ [ "do not" ,"don't", "dont"]
 
 def build_valid_find_regex():
-    fix_re = "(" + "|".join(fixing_verbs) + ")"
+    fix_re = "(" + "|".join(fixing_verbs + [MERGE_PREFIX]) + ")"
     prefix = term_seperator + fix_re + '[\s\S]{1,40}' + "(" + "|".join(valid_fix_object) + ")" + term_seperator
 
     suffix = "(" + "|".join \
