@@ -1,11 +1,28 @@
 id,message,Is_Corrective,disable,comment
-1,Merge pull request #456 from PRJ-123-add-button-fix, 1, 0
-2, Provide proper import, 1, 0, uncertain regarding the label
-3, Merge branch 'master' into PRJ-123-do-fix, 1, 0
+1,Merge pull request #456 from PRJ-123-add-button-fix, 1, 1
+2, Provide proper import, 1, 1, uncertain regarding the label
+3, Merge branch 'master' into PRJ-123-do-fix, 1, 1
 4, Unable to do stuff, 1, 0
 5, Dont do that , 1, 1
-6, Merge branch 'master' into PRJ-123-item-not-good, 1, 0
+6, Merge branch 'master' into PRJ-123-item-not-good, 1, 1
 7, PRJ-123 Do not remove it, 1, 1
 8, Merge branch 'master' into PRJ-123-cannot-do-it, 1, 1
 9, Removes changes, 1, 0
-10, Merge pull request #456 from PRJ-123-do-another-fix-afterwards, 1, 0
+10, Merge pull request #456 from PRJ-123-do-another-fix-afterwards, 1, 1
+11, Merge pull request #1497 from riga/fixLocalSchedTaskHist, 1,1
+12, This could be the cause of #2094 as well.,1,1
+13, BUG: 2D DTA/TDA arithmetic with object-dtype (#32185),1,0
+14, [MRG+1] Fix for KeyError in robots.txt middleware,1,1
+15, fixed CrawlerProcess when settings are passed as dicts,1,0
+16, [utils] Properly recognize AV1 codec (closes #17506),1,0
+17, fix coub with quotes,1,0
+18, Disallow media extensions unregistered with IANA  (#3954),1,1
+19, Fix the unzip rules and filenames with spaces,1,0
+20, Fix heroku_not_command for new stderr format,1,1
+21, Fix DateMinuteParameter format,1,1,
+22, Add server.start_serving  fixes #1754 (#1762),1,1
+23, Merge branch '632-empty-hook-fix' of #729,1,0
+24, [utils] Fix unified_timestamp for formats parsed by parsedate_tz(),1,0, fail due to formats which is usually good
+25, [utils] Fix unified_timestamp  parsed by parsedate_tz(),1,0
+
+
