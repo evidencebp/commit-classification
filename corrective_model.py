@@ -128,7 +128,7 @@ valid_terms = [
     'fixed(?: |-)?point',
     'fix(?:ed) ticket(?:s)?',
     'format(ing)?',
-    '(?:fix(?:ed)?|bug)(?: )?(?: |-|:)(?: )?\d+',
+    '(?:fix(?:ed)?|bug)(?: )?(?: |-|:)(?: )?\d+' + term_seperator,
     '(if|would)[\s\S]{0,40}go wrong',
     'typo(s)?\sfix(es)?',
     'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
@@ -301,6 +301,8 @@ def evaluate_fix_classifier():
     pd.options.display.max_columns = 50
     pd.options.display.max_rows = 2000
     print(fn)
+    #for _, i in fn.iterrows():
+    #    print(i.commit, i.message)
 
 
 if __name__ == '__main__':
@@ -308,10 +310,11 @@ if __name__ == '__main__':
     #print_corrective_functions(commit='4c0baaa02d3e417017120b290115d10b4212376b')
     #print_core_bug_function(commit='4c0baaa02d3e417017120b290115d10b4212376b')
     evaluate_fix_classifier()
-    text = """
+    text = """BUG: 2D DTA/TDA arithmetic with object-dtype
 """.lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
+    print(re.findall(build_valid_find_regex(), text))
 
 
     print(valid_num)
