@@ -153,7 +153,7 @@ fixing_verbs = ['correct(?:ing|s|ed)'
 MERGE_PREFIX = '(merge (branch|pull request).{0,25}|merge (branch|pull request).{0,25}(from|into).{0,25})'
 corrective_header_entities = fixing_verbs + [
     'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent', 'break(s|ed|ing)?', 'broken'
-    , 'remov(?:ing|e|es|ed) change(?:s)?', 'unable'
+    , 'remov(?:ing|e|es|ed) change(?:s)?', 'unable', 'proper(?:ly)?'
     , MERGE_PREFIX + "(%s)" % "|".join(core_bug_terms)
     #, "(does not|doesn't) need" , "cannot", "can not"
  ] #+ [ "do not" ,"don't", "dont"]
