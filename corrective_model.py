@@ -107,7 +107,7 @@ valid_fix_object = prefective_entities + ['#',
                     "code review('s|s)?",
                     'comment(?:s)?',
                     'cosmetic(?:s)?',
-                    'cr(s)?(-)?',
+                    'cr(s)?[^a-z0-9]',
                     'documentation(?:s)?',
                     #'format(s|ing)? fix(ed|es|ing)?',
                     'help',
@@ -136,6 +136,7 @@ valid_terms = [
     'fix(es|ed)?' + build_sepereted_term(static_analyzers) ,
     '^### Bug Fix', # tends to be a title, later stating if the commit is a bug fix
     'edit the jira link to the correct issue', # Another occurring title
+
 
 ] + code_review_fixes
 
@@ -169,8 +170,8 @@ def build_valid_find_regex():
     #suffix = "(" + "|".join \
     #    (valid_fix_object) + ")" + sepertion + fix_re + term_seperator
 
-    other_valid_re = "(%s)" % "|".join(valid_terms)
-
+    #other_valid_re = "(%s)" % "|".join(valid_terms)
+    other_valid_re = build_sepereted_term(valid_terms)
     return "((%s)|(%s)|(%s))" % (prefix, suffix, other_valid_re)
 
 
@@ -311,12 +312,10 @@ if __name__ == '__main__':
     #print_corrective_functions(commit='4c0baaa02d3e417017120b290115d10b4212376b')
     #print_core_bug_function(commit='4c0baaa02d3e417017120b290115d10b4212376b')
     evaluate_fix_classifier()
-    text = """BUG: 2D DTA/TDA arithmetic with object-dtype
-""".lower()
+    text = """fixed CrawlerProcess when settings are passed as dicts""".lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
-    print(re.findall(build_valid_find_regex(), text))
-
+    #print(re.findall(r'(merge (branch|pull request).{0,25}|merge (branch|pull request).{0,25}(from|into).{0,25}).{1,40}fix', text))
 
     print(valid_num)
-    print(build_bug_fix_regex())
+    print(build_negeted_bug_fix_regex())
