@@ -50,6 +50,8 @@ bug_terms = ['actual.*expected',
              '(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
              "(not|isn't|doesn't)\\s+work(s|ing)?", # TODO - check with negation
              "doesn't recognize", # TODO Extend
+             'double(?:-| )allocat(?:e|ion|ions)',
+             'double(?:-| )free(?:s)?',
              "caused a regression", # TODO Extend
              'bad initialization(?:s)?',
              'buffer overflow(?:s)?',
