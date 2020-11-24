@@ -17,7 +17,10 @@ term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`
 negation_terms = ["aren't", "arent", "didn't", "didnt" ,"don't", "dont", "doesn't", "doesnt", "isn't", "isnt", 'lack'
 , "n't", 'never', 'no', 'nobody', 'none', 'not', 'nothing', "weren't", "werent", 'without', "won't", "wont"]
 
-modals = ['can', 'could', 'ha(?:ve|s|d)', 'may', 'might', 'must', 'need', 'ought', 'shall', 'should', 'will', 'would']
+# TODO - consider adding if, maybe
+modals = [#'if', 'maybe',
+          'can', 'could', 'ha(?:ve|s|d)', 'may', 'might', 'must', 'need', 'ought', 'shall'
+    , 'should', 'will', 'would']
 
 
 
