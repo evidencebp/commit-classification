@@ -153,10 +153,11 @@ fixing_verbs = ['correct(?:ing|s|ed)'
                     , 'und(?:oing|id)'
                 ]
 MERGE_PREFIX = '(merge (branch|pull request).{0,25}|merge (branch|pull request).{0,25}(from|into).{0,25})'
+END_OF_LINE = r'(\r\n|\r|\n|$)'
 corrective_header_entities = fixing_verbs + [
     'miss(?:ing|es|ed)?', 'should', 'must', '(have|has) to', 'avoid', 'prevent', 'break(s|ed|ing)?', 'broken'
     , 'remov(?:ing|e|es|ed) change(?:s)?', 'unable', 'proper(?:ly)?'
-    , MERGE_PREFIX + "(%s)" % "|".join(core_bug_terms)
+    , MERGE_PREFIX + "(%s)" % "|".join(core_bug_terms) + '.{0,250}' + END_OF_LINE
     #, "(does not|doesn't) need" , "cannot", "can not"
  ] #+ [ "do not" ,"don't", "dont"]
 
@@ -314,10 +315,10 @@ if __name__ == '__main__':
     #print_corrective_functions(commit='4c0baaa02d3e417017120b290115d10b4212376b')
     #print_core_bug_function(commit='4c0baaa02d3e417017120b290115d10b4212376b')
     evaluate_fix_classifier()
-    text = """fixed CrawlerProcess when settings are passed as dicts""".lower()
+    text = """Merge pull request #456 from PRJ-123-fix-that""".lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
-    #print(re.findall(r'(merge (branch|pull request).{0,25}|merge (branch|pull request).{0,25}(from|into).{0,25}).{1,40}fix', text))
+    #print(re.findall(r'(merge (branch|pull request).{0,250}(\r\n|\r|\n|$)|merge (branch|pull request).{0,250}(from|into).{0,250}(\r\n|\r|\n|$))'fix', text))
 
     print(valid_num)
     print(build_negeted_bug_fix_regex())

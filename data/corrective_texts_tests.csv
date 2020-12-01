@@ -17,7 +17,7 @@ id,message,Is_Corrective,disable,comment
 16, [utils] Properly recognize AV1 codec (closes #17506),1,0
 17, fix coub with quotes,1,0
 18, Disallow media extensions unregistered with IANA  (#3954),1,1
-19, Fix the unzip rules and filenames with spaces,1,0
+19, Fix the unzip rules and filenames with spaces,1,1
 20, Fix heroku_not_command for new stderr format,1,1
 21, Fix DateMinuteParameter format,1,1,
 22, Add server.start_serving  fixes #1754 (#1762),1,1
