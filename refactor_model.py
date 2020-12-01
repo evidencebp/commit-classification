@@ -248,6 +248,7 @@ def build_non_code_perfective_regex():
         , '(?:make|made|making|makes)(?:%s|%s[\s\S]{0,50}%s)work' % (term_seperator, term_seperator, term_seperator)
         , '(?:make|made|making|makes)(?:%s|%s[\s\S]{0,50}%s)sense' % (term_seperator, term_seperator, term_seperator)
         , 'improv(?:e|es|ed|ing) handling'
+        , 'need(?:s|ing)?\srefactor(?:ing)?'
         , '(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)' %(build_sepereted_term(non_perfective_entities,just_before=True)
                                                    ,term_seperator
                                                    , term_seperator
