@@ -66,68 +66,68 @@ powsybl/powsybl-core,a2da1306b46f6649ba5c92cb285ec26be1bbe0f0,"Iidm util branchD
 * Delete structuralRatio in lines with different nominal voltage at the ends
 * Fix tests
 
-Signed-off-by: José Antonio Marqués <f01731253c330b582462ef33c31a6811e51a91cb@aia.es>",,,,,,,,random_batch_18_nov_2020
+Signed-off-by: José Antonio Marqués <f01731253c330b582462ef33c31a6811e51a91cb@aia.es>",FALSE,FALSE,TRUE,TRUE,"delete, fix",,,random_batch_18_nov_2020
 TechEmpower/FrameworkBenchmarks,a96c6989d59693827e4711ee175052f44d1e3913,"PHPixie framework
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,FALSE,random_batch_18_nov_2020
 shoopio/shoop,a8ba1c08ae56dfd62d5c604e853c00341db7dd1f,"GDPR: Add consent re-request
 
 If user had consented to something already and the page changes, request new consent.
-",,,,,,,,random_batch_18_nov_2020
-openstack/nova,debd702d90b7e39f02b438979365dd09f730f878,"Merge ""Use fixtures library for nova test fixtures.""",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
+openstack/nova,debd702d90b7e39f02b438979365dd09f730f878,"Merge ""Use fixtures library for nova test fixtures.""",FALSE,FALSE,TRUE,FALSE,use,,,random_batch_18_nov_2020
 RedHatInsights/insights-core,6d90f98767db0025bf870044a99f4e1e0e279a95,"Update config files and log in specs (#1087)
 
 - From OSP 12, OpenStack is containerization. The log and config files are put in new location
 
-Signed-off-by: lichen <a7eeceea24a7634e43c61507f50c70af0e6a8bc6@redhat.com>",,,,,,,,random_batch_18_nov_2020
+Signed-off-by: lichen <a7eeceea24a7634e43c61507f50c70af0e6a8bc6@redhat.com>",FALSE,FALSE,TRUE,FALSE,update config,,,random_batch_18_nov_2020
 Flexget/Flexget,868c3f7fbb545152e687d310ace832365c2ad8f0,"Fixed tests
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixed tests,,,random_batch_18_nov_2020
 PX4/Firmware,986145ac234af6d5014d3c6045bb0797361a4a5f,"ROMFS: Free flash by being less verbose
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,free...by,,,random_batch_18_nov_2020
 JGRennison/OpenTTD-patches,d2cd93fee28637859dfbd8e0b56c3e009ecc54dd,"(svn r20451) -Codechange: Add helper function Window::GetScrollbar() to get the Scrollbar belonging to a scrollbar widget.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,helper function,,,random_batch_18_nov_2020
 yast/yast-autoinstallation,74a13ced0cda4498beac353a5ecb719d92e4d694,"fix missing documentation regarding bnc#776631
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,missing documentation,,,random_batch_18_nov_2020
 kontalk/androidclient,b7468413cf0584d481845746c77d53919372332b,"Bump to version 36 (3.0-beta3)
 
 Signed-off-by: Daniele Ricci <08360db1a9d16422a67edfa3456e0fbc2c91e6e3@gmail.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,bump to version,,,random_batch_18_nov_2020
 cyclestreets/cyclescape,d7d1eedd0091aa42db1c6fc0b770bcb6e428666d,"add shortcut profile routes
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 CESNET/libyang,97d1e6fe7b284da51f56354a06881c89f2af47d3,"parser yang CHANGE support extension in action, rpc, input, output, notification statement
 
 not supported in substatements
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,change,,,random_batch_18_nov_2020
 openstates/openstates.org,d03006dac0a9803b40e94b7ee2404806bb496ec7,"view for admin to approve/reject user-suggested changes completed
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,view for admin,,,random_batch_18_nov_2020
 conda-forge/staged-recipes,ee155e9ce532282801d1ff87d366a143b44351d9,"update meta.yaml requirements
-",,,,,,,,random_batch_18_nov_2020
-Citadel-Station-13/Citadel-Station-13,6dd45dee7f29818d65505ad1504b5e572cc6f610,Automatic changelog generation for PR #547 [ci skip],,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,yaml,,,random_batch_18_nov_2020
+Citadel-Station-13/Citadel-Station-13,6dd45dee7f29818d65505ad1504b5e572cc6f610,Automatic changelog generation for PR #547 [ci skip],FALSE,TRUE,FALSE,FALSE,changelog,,,random_batch_18_nov_2020
 sborenst/ansible_agnostic_deployer,8aa9ed6f69f24e90fa245a639aa225ae99be5d49,"created babylon-job-runner role
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,created,,,random_batch_18_nov_2020
 koala-framework/koala-framework,c13e083fbe1fcffcc845b3688c772c76cad669f7,"cache reaktiviert, babytuch problem wurde umgangen
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,problem,"German, not in English",FALSE,random_batch_18_nov_2020
 MyCoRe-Org/mycore,5c93b1b864601a9f40efa049dafdab1e1bbd7e4f,"split up MCRServlet.getSession() in a getter and a setter
 added MCRSessionMgr.hasCurrentSession() to determine if a session is bound to the current thread
 
 git-svn-id: 5c3a6088a260de08063aa573fa0e2db6520eb9b6@19694 7089d063-bc14-496d-ac90-53de1872eb6c
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,split up,,,random_batch_18_nov_2020
 materialsproject/pymatgen,85e0e8d306041180090aea08d4238de9a189e06c,"Merge branch 'master' into pycdt
 
 # Conflicts:
 #	pymatgen/analysis/defects/point_defects.py
 #	pymatgen/analysis/defects/tests/test_point_defects.py
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"no text, defects in the source file",,,random_batch_18_nov_2020
 openssl/openssl,75dcf70a990d751f4bfe7844bcb7480fc1de3c84,"remove RAND_screen and friends
 
 Reviewed-by: Matt Caswell <1fa2ef4755a9226cb9a0a4840bd89b158ac71391@openssl.org>
 Reviewed-by: Tim Hudson <eb0be8e447f673b41b10eda09d63cd72526b0a42@openssl.org>
 Reviewed-by: Rich Salz <c04971a99e5a9ee80eaab4b1deb37e845b0bd697@openssl.org>
-(Merged from https://github.com/openssl/openssl/pull/1079)",,,,,,,,random_batch_18_nov_2020
+(Merged from https://github.com/openssl/openssl/pull/1079)",FALSE,FALSE,TRUE,FALSE,remove,,FALSE,random_batch_18_nov_2020
 llvm-mirror/lldb,391d612764b804b2f5c6b695fad847aeb56f3ffb,"Scratch that, the problem was elsewhere.
 
 
 git-svn-id: 4c4cc70b1ef44ba2b7963015e681894188cea27e@181582 91177308-0d34-0410-b5e6-96231b3b80d8
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"problem, by code",,,random_batch_18_nov_2020
 symfony/symfony,2ca73f9d7ea08be031673ca4258a09328fe420bb,"merged branch pborreli/posix-fix (PR #5047)
 
 Commits
@@ -146,15 +146,15 @@ Backwards compatibility break: no
 Symfony2 tests pass: master is broken
 Fixes the following tickets: None
 License of the code: MIT
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020
 gradle/gradle,6bba05fd537c61a09eca385271ab007f54738114,"Fix typo in upgrading guide
 
 Signed-off-by: Paul Merlin <a027184a55211cd23e3f3094f1fdc728df5e0500@gradle.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,"typo, guide",,,random_batch_18_nov_2020
 wikimedia/wikipedia-ios,7c4fc8847c7c9eebd7e1f5b69a284a0c1a72987f,"discrete states for the overlay height
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 alphagov/static,00cc5fa41473721f6f34ff5fdb8d139598de2948,"removed transparency link
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020
 Taeung/tip,0a9e63aa397711cb7dd8a5c3db33448740a0b844,"firmware: Use PTR_ERR_OR_ZERO()
 
 Fix ptr_ret.cocci warnings:
@@ -168,17 +168,17 @@ Signed-off-by: Vasyl Gomonovych <6f721404e611c2edafb8c2596fb355cebf423a30@gmail.
 Signed-off-by: Michael S. Tsirkin <255103e50249e3d658441816e0597170ebfc16ef@redhat.com>
 Acked-by: Gabriel Somlo <0bda901f34b59fdc0593dc5ef2b1790278d1dfd8@cmu.edu>
 Reviewed-by: Stefan Hajnoczi <484520986196e4a799496429ce8a499eb6488adb@redhat.com>
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,fix warnings,,,random_batch_18_nov_2020
 JetBrains/jdk8u_jdk,300886b9650b4425c43f1810f8b66b9351eae28f,"6921001: api/java_security/IdentityScope/IdentityScopeTests.html#getSystemScope fails starting from b78 JDK7
 Reviewed-by: mullan
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fails,,,random_batch_18_nov_2020
 buildkite/agent,42d3d595e9bdfc1454a1aba990dbe4a905ad5b7c,"Merge pull request #514 from buildkite/refactor-bootstrap-known-hosts
 
-Refactor bootstrap into knownhosts.go and locks.go",,,,,,,,random_batch_18_nov_2020
+Refactor bootstrap into knownhosts.go and locks.go",TRUE,TRUE,FALSE,FALSE,refactor,,,random_batch_18_nov_2020
 chef/omnibus-software,a3a2c80125c58e0c2d78636fd9ad3862c393fbb3,"Bump berkshelf to address http -> https redirects
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,bump,,FALSE,random_batch_18_nov_2020
 stinsonga/emacs-mirror,2f4c3d6df6d79fd49cb49cf3aa7f4610b78b21b4,"(ftfont_font_format) [! FC_FONTFORMAT]: Declare ""int len;"".
-",,,,,,,,random_batch_18_nov_2020
+",,,FALSE,TRUE,missing decleration,semantic,,random_batch_18_nov_2020
 Ensembl/ensembl,9e04596beb96f606833d38feabcb0fdf67d59e0c,"some edits ...
 ",,,,,,,,random_batch_18_nov_2020
 oat-sa/extension-tao-testqti,9bffd8a6053e0162251ad2cb17e209856e8429b9,"Merge pull request #986 from oat-sa/fix/TAO-4925-zoom
