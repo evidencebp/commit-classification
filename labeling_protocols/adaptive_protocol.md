@@ -30,7 +30,7 @@ Instructions
   1. In case that it is hard to decide based on the commit message alone, one should check the commit content in git. The concept that we label is “Is the commit a adaptaive?” and not “Does the commit message indicates an adaptive work”.
     Hence, if an adaptive indication is found in git, the commit should be labeled as True.
   1. The “Justification” field should contain the reason to the labeling.
-  1. In case of a specific common non adaptive action (e.g., bug fix, refactor, performance improvement), the action should be named.
+  1. In case of a specific common non adaptive action (e.g., bug fix, refactor), the action should be named.
   1. In case of an other action, the justification should be “other action”
   1. In case of an adaptive, the justification should be support from the text (e.g., Added, Changed).
   1. In case of messages not in English, the comment should be “Not in English”.
