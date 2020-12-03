@@ -178,46 +178,46 @@ Refactor bootstrap into knownhosts.go and locks.go",TRUE,TRUE,FALSE,FALSE,refact
 chef/omnibus-software,a3a2c80125c58e0c2d78636fd9ad3862c393fbb3,"Bump berkshelf to address http -> https redirects
 ",FALSE,TRUE,FALSE,FALSE,bump,,FALSE,random_batch_18_nov_2020
 stinsonga/emacs-mirror,2f4c3d6df6d79fd49cb49cf3aa7f4610b78b21b4,"(ftfont_font_format) [! FC_FONTFORMAT]: Declare ""int len;"".
-",,,FALSE,TRUE,missing decleration,semantic,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,missing decleration,semantic,,random_batch_18_nov_2020
 Ensembl/ensembl,9e04596beb96f606833d38feabcb0fdf67d59e0c,"some edits ...
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,FALSE,random_batch_18_nov_2020
 oat-sa/extension-tao-testqti,9bffd8a6053e0162251ad2cb17e209856e8429b9,"Merge pull request #986 from oat-sa/fix/TAO-4925-zoom
 
-Fix/tao 4925 zoom",,,,,,,,random_batch_18_nov_2020
+Fix/tao 4925 zoom",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 kiwitcms/Kiwi,50178e2d1cd9ebdb38d3174b9456880e6150f3a3,"Remove expression with no effect. Fixes CID #289974
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,no effect,some case of dead code,,random_batch_18_nov_2020
 root-mirror/root,31aefe06c3887a8c0f17542d24508db6ea1f5ef5,"Fix MSVC compilation error C2065: 'thread_local' : undeclared identifier
 
 Cannot use the proper 'static __declspec(thread)' definition, since it gives the following errors:
 error C2483: 'includeName' : object with constructor or destructor cannot be declared 'thread'
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,compilation error,,,random_batch_18_nov_2020
 InfiniteFlightAirportEditing/Airports,13dafe05f7ffd6db29ff07ec011397755fdf335b,"YSCB - Fixes
 
 Beacon added, taxiways overlapped with runway, some spawns' type was
 added
 
 #102
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020
 Mocha2007/mochalib,5ff7c0f0b4376aa65f4ad5904144f1031a800f4d,"electronegativity
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,FALSE,random_batch_18_nov_2020
 AlchemyCMS/alchemy_cms,c854fd8b5a6c94652a30cc5b3e85f128c17bdcff,"Deprecate external and controller redirects on page
 
 Instead use a menu node with either the external url or
 your controller path.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,deprecate,,,random_batch_18_nov_2020
 swisscom/open-service-broker,de52de22c6decd5a16b6fae7344f1c47605b7866,"chore: clean-up everything within ServiceLifeCycler
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,clean-up,,,random_batch_18_nov_2020
 facebookexperimental/eden,954ae64c775d92bbbce87ff451be1b9f615475b5,"tests: update check tests
 
 fbshipit-source-id: 7deb61c17bf461b7632a1d3f3d7f2ae8a8828ede
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 pkiraly/metadata-qa-marc,823103a3930d9f7b349be832e857644bb6956b87,"Update com.fasterxml.jackson.core version
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 alphagov/content-tagger,6ccdc15f71113b687a6d48e1e4741ab3cfeededd,"Merge pull request #612 from alphagov/fix_error_in_metrix
 
-Fix typo in record_taxons_per_level_metrics task",,,,,,,,random_batch_18_nov_2020
+Fix typo in record_taxons_per_level_metrics task",TRUE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020
 campsych/concerto-platform,8a4b7b7037fdd8eda0317b4538100ffaf1d1d5aa,"fixed check for test modification on import
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 Taeung/tip,76629165913a6d5542bbe735191b021f31dd3798,"f2fs: report -ENOENT for unreached data indices
 
 If inode has inline_data, it should report -ENOENT when accessing out-of-bound
@@ -225,29 +225,29 @@ region.
 This is used by f2fs_fiemap which treats -ENOENT with no error.
 
 Signed-off-by: Jaegeuk Kim <71255387a32c360dfbe6dfb7aaeb123bf1dc8cb6@kernel.org>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,error,,FALSE,random_batch_18_nov_2020
 getninjas/gaiden,c25d998ef351d3932c0683d672a48be7fd6c78c2,"Recursive on cp
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,,by  code,FALSE,random_batch_18_nov_2020
 Ocramius/ProxyManager,1d43fe8bacd0d854af88c8dd283a191f83c3072c,"Make PSR-2 pass on travis build
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,make pass,,,random_batch_18_nov_2020
 podverse/podverse-web,ec1d9e594afc5b2c15a4b832abe9af43c31d4b99,"Update src/redux/reducers/currentPage.ts
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 mozilla/addons-server,aac39f1b6f5cceecb59de3fdd5ae0b845e6e0a0a,"Pontoon: Update Georgian (ka) localization of AMO
 Co-authored-by: G12r <440f9315b603b34400d0b43b489d71dad6156682@outlook.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,Georgian localization,,,random_batch_18_nov_2020
 shish/shimmie2,286e75bef0cf0db9103dfeb2dacb47249499d5d8,"Scrutinizer complains that these functions aren't defined, yet they really are.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,kind of a warining fix,by code,,random_batch_18_nov_2020
 lucas-clemente/quic-go,ec04ea8756abc2ac97b3e24e36df5cb476971324,"Merge pull request #1519 from lucas-clemente/no-crypto-stream-window-updates
 
-never increase the flow control limit for the crypto stream",,,,,,,,random_batch_18_nov_2020
+never increase the flow control limit for the crypto stream",FALSE,FALSE,FALSE,TRUE,never,by code,,random_batch_18_nov_2020
 ng-vcl/ng-vcl,1f79fdd12cc4ea49a6dd9b8ba7574f49d19b933d,"Fixing - dropdown: scroll to marked item not working
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixing,,,random_batch_18_nov_2020
 electron/electron,63d8137da2b9b63260b525fb999e28daa118f6bc,"Use EventEmitter public methods instead of _events.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,use instead,,,random_batch_18_nov_2020
 lammps/lammps,c53730f2e9dfcedffc6040a7a1125749400341d2,"Added enthalpy to list of thermo attributes
 
 git-svn-id: 53f22b28e73aa627d2a2069eeb1f23c43fecd57f@203 f3b2605a-c512-4ea7-a41b-209d697bcdaa
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020
 scoophealth/oscar,9ae6bf658a74ebbfd55a0a2de2185dd0cbf4daac,"Increment batchCount in regards to the Provider's billing # instead of
 the provider_no.  This fixes the issue of submission files
 overwriting one another when created for 2 providers that have the same
@@ -255,12 +255,12 @@ Billing #.
 
 
 Change-Id: Ia1c2a0ef916d1d04c4b0c8c43fcc55849228c95f
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020
 fobo66/BookcrossingMobile,eaeb1672d62549bc6a710355b375ba807d49341c,"Improved kapt performance
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,improved performance,,,random_batch_18_nov_2020
 julienrf/endpoints,841e1038e3008ba2a54dd428404da52d9f18d94c,"Merge pull request #98 from julienrf/updated-deps-bis
 
-Update dependencies (cats and circe)",,,,,,,,random_batch_18_nov_2020
+Update dependencies (cats and circe)",FALSE,FALSE,TRUE,FALSE,updated dependencies,,,random_batch_18_nov_2020
 google/llvm-propeller,34ee3ff83df2ff60f48ad4f028f8a65ea53aaecd,"Emit all directives except for "".cprestore"" during asm printing rather than emit
 them as machine instructions. Directives "".set noat"" and "".set at"" are now
 emitted only at the beginning and end of a function except in the case where
@@ -275,30 +275,30 @@ Also, make the following changes:
   from an opcode and a list of operands.
 
 llvm-svn: 153552
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,TRUE,"doesn't fit, remove and use",,,random_batch_18_nov_2020
 JetBrains/intellij-community,257b8d29101353f6122dedd528f7171b150d9cbd,"IDEA-117223 Custom background image/colour for each project
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 DOAJ/doaj,3987c359344a16e50e4eb02e7808be38e744d405,"Merge branch 'hotfix/2018-10-26_nginx_metrics_hostname' into production
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,hotfix,,,random_batch_18_nov_2020
 keycloak/keycloak,71cfa11d2f4d2b18c802c08bc59644b2a627954d,"cleanup angular2-product example
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020
 travis-ci/travis-web,ee8dcad7a59a3d62f58fe0b6654e2b46d2b47a08,"Fix build state display (#1179)
 
-The referenced property in the `buildState` computed property was incorrect.",,,,,,,,random_batch_18_nov_2020
+The referenced property in the `buildState` computed property was incorrect.",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 ArduPilot/ardupilot,61507ccd20466f5d14dccc663ea6724189c36c4a,"autotest: build docs on each autotest run
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,build,,,random_batch_18_nov_2020
 marklogic/java-client-api,a9c2c25bce0fc435a207167b323411b3d3e7256d,"fix #52, pass transaction id through on read
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 flutter/flutter,141f87b32754267cc02bae03477c4b109b828324,"ensure that fe server is always built with tool (#29768)
 
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,ensure,by code,FALSE,random_batch_18_nov_2020
 advancedtelematic/aktualizr,ebd0a5031d09dfb01ed059a31475c80a608ae02b,"Tidy curl event loop
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,tidy,,,random_batch_18_nov_2020
 sfu-fas/coursys,3cafa05b5d5501f83b4d958acbbed3f249d0a7d5,"Allow the Grad Program Director to edit letter templates
-",,,,,,,,random_batch_18_nov_2020
-dtag-dev-sec/tpotce,6a1f4f9aea75b829e9cd5685827dd3a51290f784,Update update.sh,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,allow,,,random_batch_18_nov_2020
+dtag-dev-sec/tpotce,6a1f4f9aea75b829e9cd5685827dd3a51290f784,Update update.sh,FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 OpenRA/OpenRA,27d046589156eb9989930560ba12e3afaca035fa,"Remove workarounds for querying the PlayerActor in Created
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,remove worksarounds,,,random_batch_18_nov_2020
 git-cola/git-cola,c1f5cf5032d560755bd5ccd25cbbac865d0af3b6,"main.view: Remove 'Apply Changes from Branch...'
 
 This feature adds a lot of complexity and it's rarely used
@@ -310,10 +310,10 @@ normal index/worktree diff editor so there's less
 justification for this feature these days.
 
 Signed-off-by: David Aguilar <9de348c050f7cd1ca590883733c4e531ce610bf4@gmail.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 blockchain/My-Wallet-V3-iOS,d7179c116c8b74b5275e12d62b5ea8dee70803b5,"build(Fastlane): skip slack notifications on fastlane scan. (#129)
 
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,skip,,,random_batch_18_nov_2020
 root-mirror/root,4928744f1cf9143658a464cef2d8a58f72aa85c2,"From Axel:
 This patch circumvents backward compatibility issues with the constness
 of a method vs. constness of its return type, by adding a new
@@ -321,29 +321,29 @@ G__BIT_ISMETHCONSTANT. G__BIT_ISCONSTANT will still be set.
 
 
 git-svn-id: acec3fd5b7ea1eb9e79d6329d318e8118ee2e14f@14573 27541ba8-7e3a-0410-8455-c3a389f83636
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020
 openstreetmap/iD,855156ce7d97c795a5813f59e070d39672b440b0,"Historic presets
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 consulo/consulo,9a683bbc4aa793a9dc13cd1ef45d58ae7eba3df9,"formatter: field groups alignment: correctly process range (IDEA-98368; IDEA-98367)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,correctly,,,random_batch_18_nov_2020
 facebookexperimental/eden,8ef12c7d6e8acd2190469b0cacc2527b81d2b587,"bash_completion: untabify
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,untabify,,,random_batch_18_nov_2020
 projectcalico/felix,268648a30ee7fdf785ef80a7bc09767e43d8da44,"Have topology wait for any start-of-day Felix restarts.
 
 Ensures that tests don't have to worry about Felix restarting mid-test when
 its config arrives.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 ember-cli/ember-cli,3d73f22034a26d6ea32a261cfe4b133b23dda7ce,"Extract FileInfo object
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,extract,,,random_batch_18_nov_2020
 akvo/akvo-flow,ab905e809a0bbc3d01855e8356d0e7cca71da8b5,"[#2231] Remove SurveyalValue index definition
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 Jason-Rev/vscode-spell-checker,2d518e2134bae6e8d7a6889a0f109e6460121f42,"Performance fix
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,"though performance, it is a fix",,random_batch_18_nov_2020
 mozilla/addons-server,657b997619efd9fa374c2f6d1dcf59e9feaad8aa,"Pontoon: Update Upper Sorbian (hsb) localization of AMO
 
 Localization authors:
 - Michael Wolf <milupo@sorbzilla.de>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 Taeung/tip,f0201738b61b1adcf6b2c4719c5c415745014c1c,"ftrace: Avoid recording mcount on .init sections directly
 
 The init and exit sections should not be traced and adding a call to
@@ -353,14 +353,14 @@ for tracing from the build.
 
 Link: 275a482ef95aabe469de1669ca4bb54f9270e362@goodmis.org
 Signed-off-by: Steven Rostedt <43232e92d70cc7aa53504ad0397085ee47bad87f@goodmis.org>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,avoid,,FALSE,random_batch_18_nov_2020
 tradle/tim,3a72eceb6bdff8bba1a4c648c60d0de9215fe765,"refactor: signature became Photo
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactor,,,random_batch_18_nov_2020
 wch/r-source,9103cf71143d0571df624557129f9dc404013a6e,"Use PATH_MAX in getting the working directory.
 
 
 git-svn-id: f298e5bd0fb7dd56202a0647512068a43d54496a@4768 00db46b3-68df-0310-9c12-caf00c1e9a41
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,use,,,random_batch_18_nov_2020
 tgstation/tgstation,258f2825e87c370585101af5d6a623915a1682ce,windoor->window,,,,,,,,random_batch_18_nov_2020
 exteso/alf.io,47d976fc2451813d96b318fad4a46e20e5b0b7fc,"add additional test in the payload
 ",,,,,,,,random_batch_18_nov_2020
