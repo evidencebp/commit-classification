@@ -77,9 +77,25 @@ software_goals_modification = [
     'better','improv(?:e|es|ed|ing)', 'increas(?:e|es|ed|ing)', 'reduc(?:e|es|ed|ing)', 'worse', 'make', 'more', 'less'
 ]
 
-software_entities = ['algorithm(?:s)?', 'class(?:es)?', 'collection(?:s)?', 'constant(?:s)?', 'constructor(?:s)?'
-, 'field(?:s)?', 'function(?:s)?', 'interface(?:s)?', 'member(?:s)?', 'method(?:s)?', 'parameter(?:s)?'
-, 'structure(?:s)?', 'template(?:s)?', 'type(?:s)?', 'unit(?:s)?', 'module(?:s)?',]
+software_entities = ['algorithm(?:s)?',
+ 'class(?:es)?',
+ 'collection(?:s)?',
+ 'constant(?:s)?',
+ 'constructor(?:s)?',
+ 'field(?:s)?',
+ 'function(?:s)?',
+ 'interface(?:s)?',
+ 'member(?:s)?',
+ 'method(?:s)?',
+ 'module(?:s)?',
+ 'parameter(?:s)?',
+ 'procedure(?:s)?',
+ 'routine(?:s)?`',
+ 'structure(?:s)?',
+ 'template(?:s)?',
+ 'type(?:s)?',
+ 'unit(?:s)?',
+]
 
 software_terms = [ 'assertion(?:s)?', 'assignment(?:s)?',  'code',  'conditional(?:s)?',  'control', 'definition(?:s)?'
     , 'delegate', 'delegation'
