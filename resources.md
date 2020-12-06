@@ -81,6 +81,6 @@ Refactoring Activities in Commit Messages](https://www.researchgate.net/profile/
 [BugsInPy: A Database of Existing Bugs in Python Programs to
 Enable Controlled Testing and Debugging Studies](https://dl.acm.org/doi/pdf/10.1145/3368089.3417943) [repo](https://github.com/soarsmu/BugsInPy/)
 
-[Large-Scale Manual Validation of Bug Fixing Commits: A Fine-grained Analysis of Tangling] (https://arxiv.org/abs/2011.06244)
+[Large-Scale Manual Validation of Bug Fixing Commits: A Fine-grained Analysis of Tangling](https://arxiv.org/abs/2011.06244)
 
 Eman Abdullah AlOmar, Mohamed Wiem Mkaouer, and Ali Ouni, "[Can refactoring be self-affirmed? an exploratory study on how developers document their refactoring activities in commit messages](https://www.researchgate.net/publication/334282567_Can_Refactoring_Be_Self-Affirmed_An_Exploratory_Study_on_How_Developers_Document_Their_Refactoring_Activities_in_Commit_Messages)", the 3nd International Workshop on Refactoring (IWoR'2019). [dataset](https://smilevo.github.io/code.html)
