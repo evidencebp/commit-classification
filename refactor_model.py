@@ -439,4 +439,4 @@ def print_refactor_functions(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_refactor_functions(commit='d162ecf91404b3d894e8ce0810b6860b0cc8c5de')
+    print_refactor_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')

@@ -312,8 +312,8 @@ def evaluate_fix_classifier():
 
 if __name__ == '__main__':
 
-    #print_corrective_functions(commit='4c0baaa02d3e417017120b290115d10b4212376b')
-    #print_core_bug_function(commit='4c0baaa02d3e417017120b290115d10b4212376b')
+    print_corrective_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
+    print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
     text = """Merge pull request #456 from PRJ-123-fix-that""".lower()
     print(is_fix(text))
