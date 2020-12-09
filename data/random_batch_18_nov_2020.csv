@@ -361,44 +361,44 @@ wch/r-source,9103cf71143d0571df624557129f9dc404013a6e,"Use PATH_MAX in getting t
 
 git-svn-id: f298e5bd0fb7dd56202a0647512068a43d54496a@4768 00db46b3-68df-0310-9c12-caf00c1e9a41
 ",FALSE,FALSE,TRUE,FALSE,use,,,random_batch_18_nov_2020
-tgstation/tgstation,258f2825e87c370585101af5d6a623915a1682ce,windoor->window,,,,,,,,random_batch_18_nov_2020
+tgstation/tgstation,258f2825e87c370585101af5d6a623915a1682ce,windoor->window,FALSE,FALSE,FALSE,TRUE,,"by code, typo in path",,random_batch_18_nov_2020
 exteso/alf.io,47d976fc2451813d96b318fad4a46e20e5b0b7fc,"add additional test in the payload
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 PhilippC/keepass2android,d2a06617ebf6881da32ce0f63d06b1bfe55e08d0,"Refactoring:
 Wiped out the historical partial Java naming conventions, replaced by C#
 removed unused fields/parameters
 removed many unused usings
 ...
 (Thanks to ReSharper :-))
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020
 wagtail/wagtail,98a99b0fe7c929cb97b68df1957a2f142f2f28e9,"ongoing layout tweaks
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,layout tweaks,,,random_batch_18_nov_2020
 Bitcoin-com/Wallet,47dcc129102b4ed8e76e2873855e1b9933eebe0a,"Fix Conflicts:
 	js/models/core/Wallet.js
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 ClearcodeHQ/mirakuru,fc7e526f33e0506774583572fc723039097c8aa0,"Merge pull request #313 from mmaslowskicc/issue-310-mypy
 
-Run mypy and add type hints",,,,,,,,random_batch_18_nov_2020
+Run mypy and add type hints",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 google/wuffs,21682f403fb60fc2fcf7e2e90b9ad235e7efa3dc,"Add fuzz/c/std/json_fuzzer.c
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 concourse/concourse,9d325f1efcf68d3ddd217f846be9b87fbf7c45b5,"web: test sidebar team in isolation
 
 Signed-off-by: James Thomson <fbe171f55b1fc279ce7cbad317779b8c388c2486@pivotal.io>
 Co-authored-by: Jamie Klassen <d740210502544aa0776b92978c6db85774130b86@pivotal.io>
-",,,,,,,,random_batch_18_nov_2020
-PO-31/QtReports,1815edf47f76e8a8c1b8421cdec3725f7edde658,Update test.full.qrxml,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"by code, not a test code",,,random_batch_18_nov_2020
+PO-31/QtReports,1815edf47f76e8a8c1b8421cdec3725f7edde658,Update test.full.qrxml,FALSE,FALSE,TRUE,FALSE,updated,file is content for tests,,random_batch_18_nov_2020
 umbraco/Umbraco-CMS,96d570e7604c76af14e6c4f90e54aff85c9c9b1f,"Gets most of the configurable list view working, need to add some validation to the pre-value editor, some styling for the sorting of a field, add another system field for 'published date' (if possible), fix up the localized text for return to list view, fix up the persisting of the last page viewed in a list view
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,TRUE,TRUE,"add, fix style, all with need before",,FALSE,random_batch_18_nov_2020
 aelassas/Wexflow,bb4f7e8690e4ce638f38cf9a20e57114584926a0,"Removed .tfignore
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 datajoint/datajoint-python,7ce0a6ebdb69d1ddfdedb15091a323a8af8b07fd,"Update logger to increase precision and prevent timestamp collissions.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"update, prevent collisions",,,random_batch_18_nov_2020
 Return-To-The-Roots/s25client,92f7e2f3278e86408c970960363e802c5dec9c2f,"Missing include for Linux and pass cstring to (...)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,missing include,,,random_batch_18_nov_2020
 factor/factor,07881295c535c17429c714dea54de565d648c413,"ui.gadgets.slots: rewrite <slot-editor>
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,rewrite,,,random_batch_18_nov_2020
 d2l-ai/d2l-zh,70dba37c8faa32c331010aa07e4a7eabd31bcf6f,"revise lenet, alexnet, vgg
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,revise,,,random_batch_18_nov_2020
 hashicorp/terraform,26c1e40ad775297cc89b32794508f4d596615d5a,"configs/configupgrade: Normalize number literals to decimal
 
 The v0.12 language supports numeric constants only in decimal notation, as
@@ -413,16 +413,16 @@ We use tv.Value() here to mimick how HCL 1 itself would have interpreted
 these, and then format them back out in the canonical form, which
 implicitly converts any non-decimal constants to decimal on the way
 through.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,normalize,,,random_batch_18_nov_2020
 amazeeio/lagoon,74b399f75fc76ebcd13b9db74b02f239ba917e99,"Merge pull request #1891 from amazeeio/hotfix/upgrade_mysql
 
-Run mysql_upgrade on existing databases after upgrade",,,,,,,,random_batch_18_nov_2020
+Run mysql_upgrade on existing databases after upgrade",FALSE,FALSE,TRUE,FALSE,upgrade,,,random_batch_18_nov_2020
 blueriver/MuraCMS,10f7355d31be2944f6baec9ae7c266fca55d9ba0,"1. Missing separate class on dashboard
 
 git-svn-id: 21b548a4099155460be7c5687e01bdcfc7f289cc@733 50f7a5e4-a141-4b55-9860-49daa24b3293
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,missing,,,random_batch_18_nov_2020
 agourlay/cornichon,b6e40d6576d6aa3164cf6ef54378d2f3d4c6bbce,"Setting version to 0.12.6
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,setting version,,,random_batch_18_nov_2020
 bkaradzic/SwiftShader,88482256166f351b8e24fb84a59ce323db117b0a,"Added architecture details to DLL's descriptions
 
 Bug 18999966
@@ -431,7 +431,7 @@ Change-Id: If5efde5dfb6ae30f43b63358cf4f2e0ebfda38cc
 Reviewed-on: https://swiftshader-review.googlesource.com/1703
 Tested-by: Maxime Grégoire <7157ca3d4be4d4a13c17174568e571df181b14c5@google.com>
 Reviewed-by: Nicolas Capens <0612353e1fcebbfd4b302d9337447ca0cdfa9122@google.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,description,,,random_batch_18_nov_2020
 calonso-conabio/buscador,5cf19dde417597609e09a5be0ce537c7f0cff2f4,"Merge remote-tracking branch 'upstream/sql-server' into sql-server
 ",,,,,,,,random_batch_18_nov_2020
 eXeC64/imv,0fd57f58411bd82e48fd6a9be1de74ace6d74106,"README: Add unstable warning
