@@ -1,6 +1,13 @@
-# TODO https://www.rypeapp.com/blog/english-swear-words/
-# TODO https://en.wiktionary.org/wiki/Category:English_swear_words
-# TODO https://www.joe.co.uk/life/a-definitive-ranking-of-every-swear-word-from-worst-to-best-122544
+"""
+
+Sources
+# https://www.rypeapp.com/blog/english-swear-words/
+# https://en.wiktionary.org/wiki/Category:English_swear_words
+# https://www.joe.co.uk/life/a-definitive-ranking-of-every-swear-word-from-worst-to-best-122544
+# https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
+# https://core.ac.uk/download/pdf/162166124.pdf
+"""
+
 
 import re
 from os.path import join
@@ -18,23 +25,98 @@ from model_evaluation import classifiy_commits_df, evaluate_performance, evaluat
 #, 'poor'
 """
 
-positive_terms =['awful',
+positive_terms =[
+ 'arse',
+ 'arsehole',
+ 'ass(?:es)?',
+ 'asshole(?:s)?',
+ 'awful',
+ # 'bad', # In most cases not used as a swear in programming context
+ 'bastard(?:s)?',
+ 'bint',
+ 'bitch(?:s)?',
+ 'bloody',
+ 'bloody hell',
+ 'bloody oath',
+ 'bollocks',
+ 'bugger',
+ 'bullshit',
+ 'choad',
+ 'christ',
+ 'clunge',
+ 'cock',
  'crap',
+ 'cunt',
+ 'cow',
+ 'dammit',
+ 'damn',
+ 'damnit',
+ 'dick(?:s)?',
+ 'dick(?:-|\s)?head(?:s)?',
  'disgusting',
- 'fuck(en|ing|s|ed)?',
+ 'dumb',
+ 'effing',
+ 'fanny',
+ 'fool(ish)?',
+ '(fuck|f\*ck|f\*\*k)(er|en|ing|s|ed)?',
+ '(father|mother|brother|sister|child)(?:-|\s)?(fuck|f\*ck|f\*\*k)er',
+ 'freak',
+ 'jesus',
+ 'hell',
  'hideous',
+ 'horseshit',
  'horrible',
+ 'gash',
+ '(get|got) stuffed',
+ 'goddamn',
+ 'godsdamn',
  'lousy',
+ 'lunatic', 
+ 'lousy',
+ 'maniac',
+ 'moron',
  'mortifying',
+ 'nasty',
+ 'piss(ing|s|ed)',
+ 'piss(ing|s|ed)?(?:-|\s)?off',
+ 'poor',
+ 'prick',
+ 'punani',
+ 'punk',
+ 'pussy',
  'repulsive',
  'revolting',
  'rotten',
+ 'rubbish',
+ 'shag',
+ 'shame',
  'shameful',
  'shit',
+ 'shit(?:-|\s)?ass',
+ 'slut(?:s)?',
+ 'snatch',
+ 'sod',
+ 'son of a bitch',
  'stink(s|ing|ed)?',
- 'terrible']
+ 'stupid',
+ 'suck(s|ing|ed)?',
+ 'taking (a|the) piss',
+ 'terrible',
+ 'tit(?:s)?',
+ 'trash',
+ 'twat(?:s)?',
+ 'ugl(y|ies|iest)',
+ 'wanker(?:s)?',
+ 'whore(?:s)?',
 
-excluded_terms = ['awful\.[a-z]' # Name of a common component
+ ]
+
+excluded_terms = ['awful\.[a-z]', # Name of a common component
+                  'clever as hell',
+                  'nasty (bug|error)',
+                  'my bad',
+                  'not bad',
+                  'shit happens',
                   ]
 
 def build_positive_regex():
@@ -102,10 +184,10 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 def evaluate_swearing_classifier():
 
-    evaluate_concept_classifier(concept='Is_swearing'
-                                , text_name='message'
+    evaluate_concept_classifier(concept='Swearing'
+                                , text_name='body'
                                 , classification_function=is_swearing
-                                , samples_file=join(DATA_PATH, 'swearing_hits_dataset.csv'))
+                                , samples_file=join(DATA_PATH, 'pull_request_swearing_hits.csv'))
 
 
 if __name__ == '__main__':
