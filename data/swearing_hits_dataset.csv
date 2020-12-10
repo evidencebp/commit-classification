@@ -1,4 +1,4 @@
-repo_name,commit,author_name,author_email,commit_month,commit_timestamp,subject,message,Is_cursing,parents,is_corrective,is_adaptive,is_perfective,is_English,is_refactor,files,non_test_files,code_files,code_non_test_files,duration,prev_commit,prev_timestamp,same_date_as_prev
+repo_name,commit,author_name,author_email,commit_month,commit_timestamp,subject,message,Is_swearing,parents,is_corrective,is_adaptive,is_perfective,is_English,is_refactor,files,non_test_files,code_files,code_non_test_files,duration,prev_commit,prev_timestamp,same_date_as_prev
 payday-restoration/restoration-mod,3a4f88447b53e7cd6cb28a4abfc0b0bf7dc1c25a,Nelson01023,5aebd6d0cbc23954e4c50f986c35cf7d90631d85@gmail.com,2019-09-01,2019-09-13 19:51:59 UTC,fix for custom cop crash (thanks goof!!!!) uwu owo furry thing,"fix for custom cop crash (thanks goof!!!!) uwu owo furry thing
 
 - thanks goof
