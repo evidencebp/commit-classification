@@ -57,6 +57,7 @@ bug_terms = ['actual.*expected',
              'buffer overflow(?:s)?',
              'fixme(?:s)?',
              '(break|broke|breaking|broken)[\s\S]{0,20}(code|system|function|method)',
+             'break strict(?:-|\s)aliasing rule(s)?',
              'crash(?:ing|s|ed)?',
              'correct(?:ing|s|ed)?\\s*(a|the|some|few|this)', # make sure that correct serves as a verb
              'correct(ed|ion|ly|s)?',
