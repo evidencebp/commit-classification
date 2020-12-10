@@ -1,4 +1,6 @@
-
+# TODO https://www.rypeapp.com/blog/english-swear-words/
+# TODO https://en.wiktionary.org/wiki/Category:English_swear_words
+# TODO https://www.joe.co.uk/life/a-definitive-ranking-of-every-swear-word-from-worst-to-best-122544
 
 import re
 from os.path import join
