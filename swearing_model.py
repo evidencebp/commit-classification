@@ -52,7 +52,7 @@ def build_not_positive_regex():
     return build_non_positive_linguistic(build_positive_regex())
 
 
-def is_cursing(commit_text):
+def is_swearing(commit_text):
 
     return (len(re.findall(build_positive_regex(), commit_text))
             - len(re.findall(build_excluded_regex(), commit_text))
@@ -60,28 +60,28 @@ def is_cursing(commit_text):
 
 
 
-def cursing_to_bq():
-    concept = 'cursing'
+def swearing_to_bq():
+    concept = 'swearing'
     print("# " + concept)
     print( "# " + concept +  ": Core")
     #print( ",")
-    print("{schema}.bq_core_cursing(message)".format(schema=SCHEMA_NAME))
+    print("{schema}.bq_core_swearing(message)".format(schema=SCHEMA_NAME))
     print(" - ")
     print("# " + concept +  ": Excluded")
-    print("{schema}.bq_excluded_cursing(message)".format(schema=SCHEMA_NAME))
+    print("{schema}.bq_excluded_swearing(message)".format(schema=SCHEMA_NAME))
 
     print(" - ")
     print("# " + concept +  ": not positive")
-    print("{schema}.bq_not_positive_cursing(message)".format(schema=SCHEMA_NAME))
+    print("{schema}.bq_not_positive_swearing(message)".format(schema=SCHEMA_NAME))
     print("# end - " + concept)
 
 def print_concepts_functions_for_bq(commit: str = 'XXX'):
 
 
-    concepts = {'core_cursing' : build_positive_regex
-        , 'excluded_cursing': build_excluded_regex
-        , 'not_positive_cursing' : build_not_positive_regex
-        #, 'cursing': cursing_to_bq
+    concepts = {'core_swearing' : build_positive_regex
+        , 'excluded_swearing': build_excluded_regex
+        , 'not_positive_swearing' : build_not_positive_regex
+        #, 'swearing': swearing_to_bq
 
                 }
 
@@ -96,19 +96,19 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
         print()
 
     generate_bq_function('{schema}.bq_{concept}'.format(schema=SCHEMA_NAME
-                                                        , concept='cursing')
-                         , cursing_to_bq
+                                                        , concept='swearing')
+                         , swearing_to_bq
                          , commit=commit)
     print()
-def evaluate_cursing_classifier():
+def evaluate_swearing_classifier():
 
-    evaluate_concept_classifier(concept='Is_cursing'
+    evaluate_concept_classifier(concept='Is_swearing'
                                 , text_name='message'
-                                , classification_function=is_cursing
-                                , samples_file=join(DATA_PATH, 'cursing_hits_dataset.csv'))
+                                , classification_function=is_swearing
+                                , samples_file=join(DATA_PATH, 'swearing_hits_dataset.csv'))
 
 
 if __name__ == '__main__':
     print_concepts_functions_for_bq(commit='fedd454d2bf47de43b2bc80d52172ab8aac33bc7')
-    #evaluate_cursing_classifier()
+    evaluate_swearing_classifier()
 
