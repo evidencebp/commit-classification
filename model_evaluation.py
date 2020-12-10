@@ -87,6 +87,7 @@ def evaluate_concept_classifier(concept
         concept_column = 'Is_' + concept
 
     df = pd.read_csv(samples_file)
+    df = df[~df[concept_column].isna()]
 
     cm = evaluate_regex_results_on_df(df=df
                                     , classification_column=classification_column
