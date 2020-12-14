@@ -433,11 +433,11 @@ Tested-by: Maxime Grégoire <7157ca3d4be4d4a13c17174568e571df181b14c5@google.com
 Reviewed-by: Nicolas Capens <0612353e1fcebbfd4b302d9337447ca0cdfa9122@google.com>
 ",FALSE,TRUE,FALSE,FALSE,description,,,random_batch_18_nov_2020
 calonso-conabio/buscador,5cf19dde417597609e09a5be0ce537c7f0cff2f4,"Merge remote-tracking branch 'upstream/sql-server' into sql-server
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 eXeC64/imv,0fd57f58411bd82e48fd6a9be1de74ace6d74106,"README: Add unstable warning
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,readme,,,random_batch_18_nov_2020
 Unity-Technologies/ScriptableRenderLoop,58f21d3995380ecc7512e2d8e186d54cccbda9a6," Fixed AnimBool name collision with base editor.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"fix, name led to collision",by code,,random_batch_18_nov_2020
 GerritCodeReview/plugins_replication,8b2db583893c149c55dd47cf0fcb59b38150fb70,"Introduce remoteNameStyle = basenameOnly
 
 In order to replicate repositories below a certain namespace (e.g. foo/bar/),
@@ -453,30 +453,30 @@ enables Gerrit user to replicate whole namespaces to a special Github
 organization.
 
 Change-Id: Id12780948a4841c054eb76e359f02dae0816d576
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,introduce,,,random_batch_18_nov_2020
 betaflight/betaflight,9fd158412ad69751060160b9259628a090a48295,"Added rate limit settings to MSP API 1.42 for configurator.
 
 
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 beached/daw_json_link,faa84f9eb73d6575165b13859107319b9c723a60,"adding optional to_string to json members
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020
 kivy/python-for-android,295933ab9384f2733a5c947811198c86b2b094c5,"Adding -j$MAKE_JOBS to make commands were -jX is missing
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020
 nasa/Common-Metadata-Repository,fe0587a3dac8daf6429224aed7652e96b32b9327,"CMR-4695: Fixed/Analyzed the 14 failures of the relevancy tests. (#451)
 
 * CMR-4695: Fixed/Analyzed the 14 failures of the relevancy tests.
 * Documented all the fixes/analysis of the 14 failures in the ticket https://bugs.earthdata.nasa.gov/browse/CMR-4695
 
 * CMR-4695: Removed the two empty lines.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020
 puavo-org/puavo-os,fd3f22b3c8ef611b570a3913221c9111ddfa0558,"install: just code formatting
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,code formatting,,,random_batch_18_nov_2020
 telefonicaid/fiware-orion,bec08284357ea47cb332a82c95255f7ab472b5e4,"Update cookbook. Attributes and Attribute values
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 Taeung/tip,06784090ecb3f925616fc797164a74b03d5c0968,"drm/nvc0/gr: add initial support for nvd9, not quite there yet..
 
 Signed-off-by: Ben Skeggs <d9f27fb07c1e9f131223ad827fa5179f3846c30b@redhat.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 facebook/mcrouter,d90d6cef2e539c378ccd2cee9ab9c8a9182553ee,"Zero-copy for umbrella
 
 Summary:
@@ -493,15 +493,15 @@ Subscribers: trunkagent, alikhtarov
 FB internal diff: D1538327
 
 Tasks: 4889426
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 opendaylight/controller,d2d8e123aa7ee34c47f12b959592631c0538482b,"BUG 7799: Implement agent RPCs for singleton rapid un-registration testing
 
 Change-Id: I080a8af30c2a47e2046b0235ea75055e4c4a51cf
 Signed-off-by: Tomas Cere <0a8853d56a412aee48c4c5a5a6d548b976ff286c@cisco.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,implement,,,random_batch_18_nov_2020
 metasfresh/metasfresh,32cb1fbeeceed4005724259765ee80061a043033,"Update ReleaseNotes.md
 
-[#1035](https://github.com/metasfresh/metasfresh/issues/1035) DLM - restrict number of mass-archived records",,,,,,,,random_batch_18_nov_2020
+[#1035](https://github.com/metasfresh/metasfresh/issues/1035) DLM - restrict number of mass-archived records",FALSE,TRUE,FALSE,FALSE,release notes,,,random_batch_18_nov_2020
 google/llvm-propeller,d2659138da55d08e0e480dd9bce6a6b933bae294,"ARM cleanup of rot_imm encoding.
 
 Start of cleaning this up a bit. First step is to remove the encoder hook by
@@ -509,14 +509,14 @@ storing the operand as the bits it'll actually encode to so it can just be
 directly used. Map it to the assembly source values 8/16/24 when we print it.
 
 llvm-svn: 136152
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020
 igniterealtime/Openfire,6d57bd66cab52219a539f9d19ba57c63a4b56a1e,"Modified the way to figure out if a JID belongs to an anonymous user.
 
 git-svn-id: 4206c2c2bb40b5782672a0d03c2c381094954de9@3499 b35dd754-fafc-0310-a699-88a17e54d16e
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,modified,,,random_batch_18_nov_2020
 ARTbio/tools-artbio,3619136ed860f85e4af8890c3d93aac47030d2fa,"Bump version to 1.3.0 to indicate larger changes (FastQ support, elimination
 of multi-input (1.2 branch))
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,bump version,,,random_batch_18_nov_2020
 MaharaProject/mahara,1eb72aa435352a100fd973fd19f2623ff16d7306,"Bug 1774274: Added scenarios that incorporate checking popups
 
 To allow checking for a popup we need to stop the after_step hook
@@ -534,34 +534,34 @@ To use with steps:
 
 Change-Id: I5fa4827b12b355204141dd8b052bc4f5c77ae3a0
 Signed-off-by: Robert Lyon <ccc28dc4e353f32f975f2fb55ac00664299adc7a@catalyst.net.nz>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020
 AutomatedLab/AutomatedLab,7fab98d174633ee9d550fc4853b58f953e6871ae,"More help
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,help,,,random_batch_18_nov_2020
 stream-labs/streamlabs-obs,c7e2ec44546d870fb3c06890bfe143536af413fd,"single IPC client
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 opencb/opencga,b0ce064987e2c34ba85ce30f871a56cd6ec17500,"catalog: Fix minor issue with failing test
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,,,,random_batch_18_nov_2020
 slamdata/quasar,ee81b0b15eb17bd55a5be0c37f6a03480e863cba,"Minor adjustments to the dist and pandora build (cleanup and Xmx issue)
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020
 ArnaudBuchholz/gpf-js,68259fba7c4b1869284fd94ca783af53212db7a3,"WIP (#168)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,WIP,,,random_batch_18_nov_2020
 xyandro/NeoEdit,57efc59a75f24eed14cd0cc009b342dfdb3a45fd,"Improve transfer between text/binary, encoding options
 
 git-svn-id: e7e30609c7025851bf126c9c8e4063d5bbb6af0e@763 5519e62b-7011-5a40-965f-37cedbea8841
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,improve,,,random_batch_18_nov_2020
 Sage-Bionetworks/Synapse-Repository-Services,ccc555ee1ee1155eeaee9e8701fe98ce8c6c7ac8,"PLFM-5170-II
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,FALSE,random_batch_18_nov_2020
 tensorflow/ngraph-bridge,fba089b2ba51844fa16691cf63ea24525c7d2e3d,"Address comments
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,FALSE,random_batch_18_nov_2020
 cakephp/cakephp,13530f42dc32d3f4587cdc21947d6c6013e834c9,"""Correcting typo""
 
 git-svn-id: 5860920b332e8b1c20d5ac1ddb0cfb1512ef151a@6106 3807eeeb-6ff5-0310-8944-8be069107fe0
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020
 Taskana/taskana,c0a5775a390a01a02095a0a0bfcd091c51e9d1e2,"TSK-26: deploy script now updating WARarchive dependency
 
-temporary until someone fixes the issue",,,,,,,,random_batch_18_nov_2020
+temporary until someone fixes the issue",FALSE,FALSE,TRUE,FALSE,updating,,,random_batch_18_nov_2020
 orfeotoolbox/OTB,401c3254ae2cff5e155d6c35d93d53918cb838b8,"TEST Wavelet test modification
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,modification,,,random_batch_18_nov_2020
 root-mirror/root,3ddc58aa060b498e8eb3742acb8a55bb9ed2fc81,"
   Generalize RooArgSet to RooAbsCollection and introduce RooArgList
   and corresponding proxy. Introduce RooArgList where appropriate
@@ -619,37 +619,37 @@ root-mirror/root,3ddc58aa060b498e8eb3742acb8a55bb9ed2fc81,"
 
 
 git-svn-id: acec3fd5b7ea1eb9e79d6329d318e8118ee2e14f@2798 27541ba8-7e3a-0410-8455-c3a389f83636
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,generalize,,,random_batch_18_nov_2020
 chrisbanes/tivi,35218f8b51cb4fcd3c6655a043a46b5b0d886a0f,"Update IDEA codestyle for AS 3.3
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,codestyle,by code,FALSE,random_batch_18_nov_2020
 sigrokproject/libsigrok,7ae6a75826be6d7ddd885947630ecb26ba9fa1a5,"usb: sr_usb_find() uses standardized connection string to find a USB device
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,FALSE,random_batch_18_nov_2020
 redbuttegarden/redbuttegarden.github.io,6e041294ed60338c9f6dbc6ff894ab3ff16eb5b4,"changed pricing
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,changed,,,random_batch_18_nov_2020
 pattern-lab/patternlab-node,dc60f6d081c4c34452ce2ea0afeea02e536d2d21,"Move modal close btn
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,move button,,,random_batch_18_nov_2020
 DarkstarProject/darkstar,26113c8aac2805f42b11f9a3bf82dd112a6653d1,"Update .gitignore
 
-Added C/C++ specific files to .gitignore file.",,,,,,,,random_batch_18_nov_2020
+Added C/C++ specific files to .gitignore file.",FALSE,TRUE,FALSE,FALSE,.gitignore,,,random_batch_18_nov_2020
 bmwcarit/joynr,c5bd47eb7e356e0372d5033dd4db6e310936d1ea,"[Ts] Unit tests for adding unix domain socket addresses to routing table
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,unit tests,,,random_batch_18_nov_2020
 txtdirect/txtdirect,ee158283258b599925d9981523a0478ac07797fe,"Implement custom regex for path
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,implement,,,random_batch_18_nov_2020
 xwiki/xwiki-platform,8a7a18a42c1f607af316a8a0292a19a5d538ebf3,"XCOMMONS-1081: Upgrade to Mockito 2.2.15
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,upgrade,,,random_batch_18_nov_2020
 GeoNode/geonode,26af79a09bf105f07b508f7868c0ece4bff43472,"apply pep8/pyflakes fixes
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,pep8,,,random_batch_18_nov_2020
 arangodb/arangodb,b9a51d3d59bcd43ef8f8649cca3cf8e50e7a1234,"Removed dead code in ExampleMatcher (Json Variant)
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,dead code,,,random_batch_18_nov_2020
 gem/oq-engine,6858b5946024d51774f51fafaea418b18d49ce5a,"Fixed ses_ratio for non event_based_risk
 
 
-Former-commit-id: 6faf28e3f7f5d99a3969422266ebcf0e9b1d25ea",,,,,,,,random_batch_18_nov_2020
+Former-commit-id: 6faf28e3f7f5d99a3969422266ebcf0e9b1d25ea",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020
 servinglynk/servinglynk-hmis,8296b6bbe29d8ead112b7690a19d6589c2dc912e,"Following old code
-",,,,,,,,random_batch_18_nov_2020
-PufferPanel/PufferPanel,99f9999587fa99eac0f2933a85a87eabea2bc1a2,Increase browser history limit,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,FALSE,random_batch_18_nov_2020
+PufferPanel/PufferPanel,99f9999587fa99eac0f2933a85a87eabea2bc1a2,Increase browser history limit,FALSE,FALSE,TRUE,FALSE,increase limit,,,random_batch_18_nov_2020
 iipeace/guider,008e4b621e427d19e0aed50b7b19c8b66d22fe85,"Add storage section to json report data in TP
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 Taeung/tip,ff06c5ffbcb4ffa542fb80c897be977956fafecc,"scsi: storvsc: fix SRB_STATUS_ABORTED handling
 
 Commit 3209f9d780d1 (""scsi: storvsc: Fix a bug in the handling of SRB
@@ -663,7 +663,7 @@ Fixes: 3209f9d780d1 (""scsi: storvsc: Fix a bug in the handling of SRB status fl
 Signed-off-by: Vitaly Kuznetsov <282517a3cdaae14e79e6d52f012bddb9ec2b7f0e@redhat.com>
 Acked-by: K. Y. Srinivasan <bcbf172338421f26297a2592698edf8cc84ecbef@microsoft.com>
 Signed-off-by: Martin K. Petersen <0384aaef27f06874adbdb09a807bb339f4aff9fd@oracle.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 conan-io/conan,412d9d104e53f5ef4e711be02e8b9e6740cfc2e4,"Feature/vs2017 vcvars (#960)
 
 * trying to use vs2017 vcvars
@@ -671,11 +671,11 @@ conan-io/conan,412d9d104e53f5ef4e711be02e8b9e6740cfc2e4,"Feature/vs2017 vcvars (
 * proposed fix assuming vs150comntools is defined by user
 
 * fixing broken test for vs2017
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 consulo/consulo,a45e47e9e83bcabf05355ca647fe61ef8c318061,"Get rid of EMPTY_LIST and EMPTY_SET in favor to emptyList() and emptySet()
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,get rid,,,random_batch_18_nov_2020
 apache/airflow,42e7e38b4def9f86972346c87be3991830d282b3,"Fixing httphook
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixing,,,random_batch_18_nov_2020
 akinomyoga/ble.sh,c2aaab6b9e19e1b46b821774daf15810b85b9c57,"ble-edit.sh: \bugfix histexpand condition [[ -o histexpand ]] inverted.
 
 * \bugfix 履歴展開が効かなくなっていた。
@@ -683,38 +683,38 @@ akinomyoga/ble.sh,c2aaab6b9e19e1b46b821774daf15810b85b9c57,"ble-edit.sh: \bugfix
 * \bugfix 履歴展開に失敗した時に : が実行される。
   履歴展開が失敗すると history -p は標準出力に何も出力しないためであった。
   失敗した時は echo ""$BASH_COMMAND"" により手動で出力する。
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,bugfix,,,random_batch_18_nov_2020
 kivy/kivy,39d8f50a15b28e9cdec55b74ad33be1a5e7eb081,"merge master into branch
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 MarkZH/Genetic_Chess,3f2c4adae4a952a55f89dcc8e13cf124c438773f,"Board::clear_caches() is not a const function
 
 May lead to move caches being non-mutable in future
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,may lead,avoiding potential bug?,FALSE,random_batch_18_nov_2020
 ampproject/amphtml,ad9f64efb5ccaecb71ab27583b628e9a5858a7b7,"Add a few more required fields to <amp-user-notification> tag to stay in
 sync with the published spec.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 hfreire/browser-as-a-service,fdef14c6d56a072767772807d156fa5c86cb1f54,"chore(package): update lockfile
 
 https://npm.im/greenkeeper-lockfile
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 ciscospark/spark-js-sdk,52f95c94d0356ca335d1f7a0fd834791a5faa404,"fix(plugin-credentials): handle additional initial credentials shapes
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020
 liqd/a4-meinberlin,24429a2a352b05ebe692fd4902e5be269cecdd08,"link to filtered project list
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 Transkribus/TranskribusSwtGui,29ad8b52e9d56eca59167718a70ad828459d554e,"set min / max heap space size to 512 / 2048 MB in scripts and launch4j
 
-see also issue #145",,,,,,,,random_batch_18_nov_2020
+see also issue #145",FALSE,FALSE,TRUE,FALSE,set,,,random_batch_18_nov_2020
 SuperTux/supertux,7f787c8a6f5823eaa0ce7431c519190fa6d1fec9,"Remove translate/rotate/scale handling from Surface
 
 This should be done in a scenegraph'ish kind of class. It's better to
 keep Surface simple and limit it to plain rectangular regions with
 textures. The 'flip' property can stay as it's a texture space
 operation.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 arangodb/arangodb,36b68ec0b35621634a2405abb8792aa463c320bc,"removed Doxygen/web from .gitignore. Directory for HTML documentation is now Doxygen/doc
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,.gitignore,,,random_batch_18_nov_2020
 fpco/stackage,6f9c46842e0e8fc614c2883365a87429afdd7db6,"Remove upper bounds and close #114
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 juju/juju,e4a75cb1354387b649cffa151c9e2cb30fdd3454,"Merge pull request #6221 from natefinch/alias-cores
 
 add cores constraint & alias cpu-cores
@@ -730,31 +730,31 @@ Most of the changes are trivial conversion of ""cpu-cores"" to ""cores"" in test
 
 Note, this changes the output of machine hardware characteristics as well, so that change could break some people.  It does *not* change the API representation of cpu-cores for hardware characteristics, so we don't break the API (and that doesn't *really* matter anyway).
 
-(Review request: http://reviews.vapour.ws/r/5656/)",,,,,,,,random_batch_18_nov_2020
+(Review request: http://reviews.vapour.ws/r/5656/)",FALSE,FALSE,TRUE,TRUE,"add, fix",,,random_batch_18_nov_2020
 aws/aws-sdk-go,bae168494294b48b3fc9d6722a711246a8543034,"Release v1.19.2
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,release,,,random_batch_18_nov_2020
 OpenRA/OpenRA,c5df73d63a682ac00db1c57230ad832a0d7f65a9,"more cursors
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 giampaolo/psutil,3bebe188e0e3fc05f7c440664c6a49fccbe2db4a,"move system related tests in a separate class
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,move in seperate class,,,random_batch_18_nov_2020
 materialsproject/MPContribs,a31cf1b820ffd5000cea9b2b723df9f9c7afe6ec,"update carrier_transport NB
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 SAnsell/CombLayer,e2553992cb590a868d82d1b037efdce4fb334bed,"Adding more stuff that works
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,adding,message descirbes the way to go,,random_batch_18_nov_2020
 Ensembl/ensembl-compara,671fb6026b018264272574889c61c25707962cbc,"Not used anymore
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,not used,,,random_batch_18_nov_2020
 shopgate/theme-gmd,be9400da95db4a6ccba13570f976d547339efc7c,"CON-2555: fixed eslint error
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,eslint,,,random_batch_18_nov_2020
 google/guava,f753b087158d3b0f5bda8b5788ef2ab4f3d54581,"Add javadocs about O(1) support for Iterables.getLast() on RandomAccess lists.
 -------------
 Created by MOE: https://github.com/google/moe
 MOE_MIGRATED_REVID=119188139
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,javadocs,,,random_batch_18_nov_2020
 qtproject/qt-creator,8ba09eabca5054fb67b8da50d052e595c9ae8bfa,"Debugger: Handle per-instruction stepping with LLDB properly
 
 Change-Id: I0030b769e977c6ffced1a87715831386ef0d5319
 Reviewed-by: hjk <f81b91af79013637d070c18d38a75b90eaae8ba3@nokiamail.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,handle properly,by code,,random_batch_18_nov_2020
 dart-lang/sdk,569341cbe069fc4da4ed3027362589fba953db5a,"Improve CompressionOptions docs:
 
 * Don't use the word ""sets"" on a final (no setter) member.
@@ -768,12 +768,12 @@ Change-Id: I008c1bd0f32c7760dd64fc45fe4dd99e44498d10
 Reviewed-on: https://dart-review.googlesource.com/61482
 Reviewed-by: Zach Anderson <9f8b31e960a68dade71618f1ff6da6e23a1edfc9@google.com>
 Commit-Queue: Samuel Rawlins <5cf2cac5eec2ad6d0eb2b0f4ff6af9a590ce2bf6@google.com>
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,improve,,,random_batch_18_nov_2020
 domob1812/namecore,3451203b5c67c234d168a409d69ff9623573dae3,"[qa] Respond to getheaders and do not assume a getdata on inv
-",,,,,,,,random_batch_18_nov_2020
-terraform-providers/terraform-provider-google,36d8e3f4030ffe6a44191b0c6b11e711112dc0ea,Update CHANGELOG.md,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,do not assume,by code,,random_batch_18_nov_2020
+terraform-providers/terraform-provider-google,36d8e3f4030ffe6a44191b0c6b11e711112dc0ea,Update CHANGELOG.md,FALSE,TRUE,FALSE,FALSE,changelog,,,random_batch_18_nov_2020
 mlhartme/stool,c186046fae173466e1b848c2fb14b0e8b4075f34,"cleanup
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020
 KDE/kmymoney,86e6d3decc9fde62ec3d2b18f0cf702ccb874196,"Fixed MyMoneyStorageAnon regarding payeeIdentifiers and onlineJobs
 
 Simply remove all payeeIdentifiers and onlineJobs. Only the plugin can
@@ -783,7 +783,7 @@ being this is to complex and a clean sweep should be enough.
 Before this patch the anon.xml file could contain private data.
 
 (cherry picked from commit c79717e6b3c9e3191e48c39b78738105b052ea7b)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020
 Taeung/tip,ae72222d03fea3ff561e2a3aee483ef7bd1a2bbb,"i2c-designware: Initialize byte count variables just prior to being used
 
 As the driver and hardware always process the given data in parallel,
@@ -795,16 +795,16 @@ This will help us to send / receive as much data as possible.
 Signed-off-by: Shinya Kuribayashi <d2754d7ac0f98a027b401ab7a79478390ef3704b@necel.com>
 Acked-by: Baruch Siach <53ccad33e0625915318fb3bc832e5c1c413d1294@tkos.co.il>
 Signed-off-by: Ben Dooks <1177f64998f284a7348354b8e91cbbe575d9858a@fluff.org>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,semantic - this is an optimization,by code,,random_batch_18_nov_2020
 McLeodMoores/starling,b54adb1f1eead43a186aa14d1354b1c9b22350f6,"remove blotter link for now
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 BabylonJS/Babylon.js,88319310065e64d3a01e820bd942dc15b530b3c2,"Merge pull request #907 from jbousquie/doc.SPS
 
-added comments for the API doc",,,,,,,,random_batch_18_nov_2020
+added comments for the API doc",FALSE,TRUE,FALSE,FALSE,"comments, doc",,,random_batch_18_nov_2020
 calonso-conabio/buscador,e0ff4a33de23ec5285ad384e8c67503e10c176d5,"alineación de los checboxes en la cajita de capas del mapa
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,aligment,not in English,,random_batch_18_nov_2020
 unaio/una,f43c263c7d9ff49afa738063cd6431c44165f449,"Ticket #1164 - for Timeline.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 dart-lang/sdk,9c76fe554abb8f4a67ca8c28e82449c09641d92b,"Fix the spec generator to use test rather than unittest
 
 Review URL: https://codereview.chromium.org/2401463005 .
