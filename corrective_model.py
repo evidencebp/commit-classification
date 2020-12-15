@@ -100,6 +100,10 @@ bug_terms = ['actual.*expected',
              '(type(s)? mis(?:-| )?match|(not|non|none) matching type(s)?)',
              'trouble(?:s)?',
              '(un(?:-| )?|not )initialized variable(s)?',
+             'unintended',
+             'not intended',
+             'unintentionally',
+             'not intentionally',
              # 'unexpected.*occurred', # very rare, 90% are bugs anyway
              'vulnerabilit(?:y|ies)'
              ] + core_bug_terms
@@ -316,7 +320,7 @@ if __name__ == '__main__':
     print_corrective_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
-    text = """Merge pull request #456 from PRJ-123-fix-that""".lower()
+    text = """fixed, now what?""".lower()
     print(is_fix(text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
     #print(re.findall(r'(merge (branch|pull request).{0,250}(\r\n|\r|\n|$)|merge (branch|pull request).{0,250}(from|into).{0,250}(\r\n|\r|\n|$))'fix', text))
