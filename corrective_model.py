@@ -30,6 +30,8 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
+# NPE, prevent
+
 core_bug_terms = [
              'bug(s|z)?',
              'bug(?:-|\s)?fix(es)?',
@@ -80,6 +82,7 @@ bug_terms = ['actual.*expected',
              'is\smissing',
              'add(?:ing|s|ed)?\smiss(?:ing|es|ed)?',
              #'must not',
+             'npe'
              'null pointer(?:s)?',
              'off(?:-| )by(?:-| )(one|1)',
              'out of bound(?:s)?',
