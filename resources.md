@@ -86,3 +86,5 @@ Enable Controlled Testing and Debugging Studies](https://dl.acm.org/doi/pdf/10.1
 Eman Abdullah AlOmar, Mohamed Wiem Mkaouer, and Ali Ouni, "[Can refactoring be self-affirmed? an exploratory study on how developers document their refactoring activities in commit messages](https://www.researchgate.net/publication/334282567_Can_Refactoring_Be_Self-Affirmed_An_Exploratory_Study_on_How_Developers_Document_Their_Refactoring_Activities_in_Commit_Messages)", the 3nd International Workshop on Refactoring (IWoR'2019). [dataset](https://smilevo.github.io/code.html)
 
 [Early Life Cycle Software Defect Prediction. Why? How?](https://arxiv.org/abs/2011.13071) [dataset](https://github.com/anonymousseresearcher/EarlyDefectPrediction)
+
+[The Technical Debt Dataset](https://arxiv.org/pdf/1908.00827.pdf) [dataset]()https://github.com/clowee/The-Technical-Debt-Dataset
