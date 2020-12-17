@@ -29,6 +29,9 @@ Archimedes
 Use rules that disagree with your classifier concept (e.g., good vs. rejected PRs, low quality files), and use the cases
 in which both your classifier and they agree as a possible rich source for false positives.
 Similarly, rules that agree with the classifier that hit when it is not are a rich source of false negatives.
+https://patents.google.com/patent/US20190164086A1/en
+https://arxiv.org/pdf/2007.10912.pdf
+
 
 Term evaluation
 In low positive rate, random sampling is not feasible.
