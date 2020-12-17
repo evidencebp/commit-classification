@@ -7,7 +7,7 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq\
-    , build_sepereted_term, build_non_positive_linguistic
+    , build_sepereted_term, build_non_positive_linguistic, software_goals, software_entities
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
 thinking = ['think', 'know', 'thought']
@@ -65,7 +65,13 @@ def build_formatting_regex():
 
     return build_sepereted_term(formatting_terms)
 
+def build_software_goals_regex():
 
+    return build_sepereted_term(software_goals)
+
+def build_software_entities_regex():
+
+    return build_sepereted_term(software_entities)
 
 def build_formatting_excluded_regex():
 
@@ -101,10 +107,11 @@ def good_to_bq():
 
 def print_concepts_functions_for_bq(commit: str = 'XXX'):
 
-
     concepts = {'core_formatting' : build_formatting_regex
         , 'excluded_formatting': build_formatting_excluded_regex
         , 'not_positive_formatting' : build_not_formatting_regex
+        , 'core_build_software_goals' : build_software_goals_regex
+        , 'core_build_software_entities' : build_software_entities_regex
         #, 'good': good_to_bq
 
                 }
@@ -126,4 +133,4 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit=None)
+    print_concepts_functions_for_bq(commit='a942729125a8b28078af5ab49296e395dd05fb0d')
