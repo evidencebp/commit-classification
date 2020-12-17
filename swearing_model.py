@@ -53,6 +53,7 @@ positive_terms =[
  'damnit',
  'dick(?:s)?',
  'dick(?:-|\s)?head(?:s)?',
+ 'dirty',
  'disgusting',
  'dumb',
  'effing',
@@ -68,10 +69,11 @@ positive_terms =[
  'horrible',
  'gash',
  '(get|got) stuffed',
+ #'git', # Aware of it, not suitable for git commit messages
  'goddamn',
  'godsdamn',
  'lousy',
- 'lunatic', 
+ 'lunatic',
  'lousy',
  'maniac',
  'moron',
@@ -111,7 +113,7 @@ positive_terms =[
 
  ]
 
-excluded_terms = ['awful\.[a-z]', # Name of a common component
+excluded_terms = ['awful\.[a-z]*', # Name of a common component
                   'clever as hell',
                   'nasty (bug|error)',
                   'my bad',
