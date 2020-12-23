@@ -87,4 +87,4 @@ Eman Abdullah AlOmar, Mohamed Wiem Mkaouer, and Ali Ouni, "[Can refactoring be s
 
 [Early Life Cycle Software Defect Prediction. Why? How?](https://arxiv.org/abs/2011.13071) [dataset](https://github.com/anonymousseresearcher/EarlyDefectPrediction)
 
-[The Technical Debt Dataset](https://arxiv.org/pdf/1908.00827.pdf) [dataset]()https://github.com/clowee/The-Technical-Debt-Dataset
+[The Technical Debt Dataset](https://arxiv.org/pdf/1908.00827.pdf) [dataset](https://github.com/clowee/The-Technical-Debt-Dataset)
