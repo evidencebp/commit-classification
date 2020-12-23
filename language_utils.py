@@ -14,8 +14,41 @@ NEAR_ENOUGH = '[\S\s]{1,40}'
 term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)"
 
 # Negation
-negation_terms = ["aren't", "arent", "didn't", "didnt" ,"don't", "dont", "doesn't", "doesnt", "isn't", "isnt", 'lack'
-, "n't", 'never', 'no', 'nobody', 'none', 'not', 'nothing', "weren't", "werent", 'without', "won't", "wont"]
+negation_terms = ["aren't",
+ 'arent',
+ "can't",
+ 'cannot',
+ 'cant',
+ 'could not',
+ "couldn't",
+ 'couldnt',
+ "didn't",
+ 'didnt',
+ "doesn't",
+ 'doesnt',
+ "don't",
+ 'dont',
+ "hasn't",
+ "haven't",
+ "isn't",
+ 'isnt',
+ 'lack',
+ "n't",
+ 'never',
+ 'no',
+ 'nobody',
+ 'none',
+ 'not',
+ 'nothing',
+ "shouldn't",
+ 'shouldnt',
+ "weren't",
+ 'werent',
+ 'without',
+ "won't",
+ 'wont',
+ "wouldn't",
+ 'wouldnt']
 
 # TODO - consider adding if, maybe
 modals = [#'if', 'maybe',
