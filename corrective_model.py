@@ -30,7 +30,7 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
-# NPE, prevent, incompatible, roll back, nullptr
+# NPE, prevent, incompatible, roll back, nullptr, NullPointerException
 
 core_bug_terms = [
              'bug(s|z)?',
