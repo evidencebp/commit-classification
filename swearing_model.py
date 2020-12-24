@@ -29,7 +29,7 @@ positive_terms =[
  'arse',
  'arsehole',
  'ass(?:es)?',
- 'asshole(?:s)?',
+ 'ass(?: |-)?hole(?:s)?',
  'awful',
  # 'bad', # In most cases not used as a swear in programming context
  'bastard(?:s)?',
