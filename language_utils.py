@@ -6,6 +6,9 @@ regex_list : List[str]
 SCHEMA_NAME = 'general'
 file_scheme = '([a-zA-Z0-9_\*\.])+\.[a-zA-Z]{1,4}'
 
+REGULAR_SUFFIX = '(?:s|ed|ing)?'
+VERB_E_SUFFIX = '(?:e|es|ed|ing)'
+
 NEAR_ENOUGH = '[\S\s]{1,40}'
 
 #term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|-|\|)" # Adding - should be tuned
