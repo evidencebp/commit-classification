@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment for software engineering labeling protocol</title>
+</head>
+<body>
+
+We classify text for positive and negative sentiment.
+The notation of sentiment is quite subjective.
+Hence the general advice is more important than the usual here:in case of doubt, mark as uncertain".
+<BR>
+<B>Instructions</B>
+
+<ol>
+  <li>The sentiment should be directly in the text.
+      Hence, though other models consider 'easy', 'important' or 'hopefully' to be positive sentiment, we don't.
+      Indeed, the hope of positive outcome and sentiment due to doing an important task easily is understandable
+      , it is not direct.
+  </li>
+  <li>For many phrases, is it not clear if it should be associated with a sentiment.
+      A good way to solve that is to sample a set of texts containing it and make a general rule.
+      Note that for most case precision is more important than recall so: "Better safe than sorry"
+  </li>
+  <li>A text might contain both positive and negative sentiment. For example "better" and "sorry".</li>
+  <li>As always, context is very important in understanding the meaning.
+      Have in mind that software engineering context might be very different from the common one.
+      The term "better" in "I implemented a better sorting algorithm" is descriptive, not a sentiment.
+      This is true even if the developer will find out in the code review that the term "better" is also arguable.
+  </li>
+  <li>Though a term might have a sentiment in general, the way it used is important.
+      Hence, "Better safe than sorry" has netiehr positive or negative sentiment.
+  </li>
+ </ol>
+
+
+</body>
+</html>
