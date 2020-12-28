@@ -105,8 +105,8 @@ positive_sentiment = ['advantage',
  'huge',
  'hurtl(?:e|es|ed|ing)',
  'immune',
- 'importance',
- 'important',
+ #'importance', # consider
+ #'important', # consider
  'impress(?:es|ed|ing|ive)?',
  'impression(?:s)?',
  'indestructible',
@@ -114,7 +114,7 @@ positive_sentiment = ['advantage',
  'intelligent',
  'intense',
  'interest(?:ed|ing|ingly)?',
- 'invite',
+ #'invite', # consider
  'invulnerable',
  'jok(?:e|es|ing)',
  'joll(?:y|iness)',
@@ -140,14 +140,14 @@ positive_sentiment = ['advantage',
  #'lucki*',
  'lucks',
  'lucky',
- 'meaningful',
+ #'meaningful', # consider - might be descriptive
  'merry',
  'motivation',
- 'natural',
+ 'natural', #consider
  'nice(?:r|st)?',
  'nifty',
  'noble',
- 'optimistic',
+ 'optimistic', # consider optimistic scheduling
  'pardon',
  'peace',
  'perfect(?:s|ed|ing|ly)?',
@@ -162,7 +162,7 @@ positive_sentiment = ['advantage',
  'powerful',
  'prett(?:ier|iest|y)',
  'privileged',
- 'promis(?:e|ing)',
+ #'promis(?:e|ing)', # consider
  'prospect',
  'proudly',
  'rejoice',
@@ -184,7 +184,7 @@ positive_sentiment = ['advantage',
  'smile',
  'soothe',
  'sophisticated',
- 'spark',
+ #'spark', # consider removing Aphace spark
  'sparkle',
  'spirit',
  'strength',
@@ -203,12 +203,12 @@ positive_sentiment = ['advantage',
  'thanx',
  'tnx',
  'tolerant',
- 'top',
+ #'top', # consider
  'triumph',
- 'trust',
- 'unbiased',
+ #'trust', # consider
+ #'unbiased', # problematic in machine learning context
  'usefulness',
- 'vision',
+ #'vision', # consider
  'warm',
  'welcome',
  'win',
@@ -217,7 +217,7 @@ positive_sentiment = ['advantage',
  'woo',
  'worth',
  'worthy',
- 'wow',
+ #'wow', # consider
  #'yes', # Too common, not a strong sentiment
  'zealous']
 
@@ -225,7 +225,7 @@ negative_sentiment = ['abject',
  'abus(?:e|es|ed|ing|ive)',
  'afraid',
  'aghast',
- 'alarm(?:s|ed|ing)?',
+ #'alarm(?:s|ed|ing)?', # consider
  'alas',
  'anger(?:s|ed|ing)?',
  'angry',
@@ -257,7 +257,7 @@ negative_sentiment = ['abject',
  'careless(?:ly)?',
  'casualty',
  'catastroph(?:e|y)',
- 'challenge',
+ #'challenge', # consider
  'chaos',
  'chaotic(?:ly)?',
  'cheat' + REGULAR_SUFFIX,
@@ -285,7 +285,7 @@ negative_sentiment = ['abject',
  'despise',
  'destro(?:y|ing|ied)',
  'destruction',
- 'dickhead',
+ #'dickhead',  # We have a dedicated swearing model
  'difficult(?:y|ies)?',
  'dilemma',
  'dirt',
@@ -326,7 +326,7 @@ negative_sentiment = ['abject',
  'flop',
  'fool' + REGULAR_SUFFIX,
  'foolish',
- 'forgotten',
+ 'forgotten', # consider
  'frantic',
  'freak'  + REGULAR_SUFFIX,
  'frenzy',
@@ -336,7 +336,7 @@ negative_sentiment = ['abject',
  'frustration',
  #'fuck', # We have a dedicated swearing model for that
  'furious(?:ing|es|ed|ly)?',
- 'ghost',
+ #'ghost', # consider
  #'goddam',# We have a dedicated swearing model for that
  'grave(?:s)?',
  #'greed', # also a software trem, greedy algorithm
@@ -387,7 +387,7 @@ negative_sentiment = ['abject',
  'insensitive',
  'insignificant',
  'intimidat' + VERB_E_SUFFIX,
- 'irreversible',
+ 'irreversible', # consider
  'irrita(?:able|tion)',
  'jumpy',
  'lame',
@@ -395,11 +395,11 @@ negative_sentiment = ['abject',
  'laughable',
  'laughingstock',
  'loathing',
- 'lobby',
+ #'lobby', # consider
  'lonely',
  'loser',
  #'loss', # common in software, e.g., loss function
- 'lost',
+ 'lost', # consider
  'lurk',
  'mad',
  'madness',
@@ -414,7 +414,7 @@ negative_sentiment = ['abject',
  'misleading',
  'misread',
  #'mistak(?:e|ed|es|en)', # might be no sentimanet in software
- 'misunderstand',
+ 'misunder(?:stand|stood)',
  'misunderstanding',
  'moan(?:s|ed|ing)?',
  #'moron', # We have a dedicated swearing model for that
@@ -461,14 +461,14 @@ negative_sentiment = ['abject',
  'retreat',
  'ridiculous(?:ly)?',
  'rig',
- 'rip',
+ #'rip', # consider
  'ruin',
  'sad',
  'sadly',
  'scare',
  'scary',
  'scream' + REGULAR_SUFFIX,
- 'screwed',
+ 'screw(?:s|ed|ing)?',
  'severe(?:ly)?',
  'severity',
  'shaky',
@@ -502,14 +502,14 @@ negative_sentiment = ['abject',
  'stuck',
  'stupid',
  'stupidly',
- 'suck',
- 'sucks',
+ 'suck' + REGULAR_SUFFIX,
+ #'sucks', # covered above
  'suffer',
  'suicidal',
  'suspect',
  'suspicious',
- 'swear',
- 'swearing',
+ '(swear|swaers|swore|swearing)',
+ #'swearing',
  'terrible',
  'terribly',
  'threat',
@@ -543,8 +543,8 @@ negative_sentiment = ['abject',
  'vicious',
  'vile',
  'violent',
- 'waste',
- 'wasting',
+ 'wast' + VERB_E_SUFFIX,
+ #'wasting',
  #'weak', # consider
  'weakness',
  'weird',
@@ -559,8 +559,9 @@ negative_sentiment = ['abject',
  'wreck',
  'wtf']
 
-excluded_positive_sentiment=['trust me']
-excluded_negative_sentiment=['paranoia code']
+excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s)print(?:er|ing|ed|s)?'
+ , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?']
+excluded_negative_sentiment=['paranoia code', "april fool's", "april fool"]
 
 
 def build_positive_sentiment_regex():
@@ -684,10 +685,10 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
 if __name__ == '__main__':
     print_concepts_functions_for_bq(commit=None)
 
-    text = """Redo my changes on Box
+    text = """added another forgotten compile switch to F77 flags
 
-Hopefully this will fix the conflict with the fire alarms.
-""".lower()
+
+git-svn-id: 0ef30dc7da0b07cedfa074587325a6c153c0ae55@6409 fdbf22ae-c210-0410-be80-ca943da6b8f8""".lower()
 
     print(is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
