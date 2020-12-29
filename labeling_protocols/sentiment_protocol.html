@@ -29,8 +29,18 @@ Hence the general advice is more important than the usual here:in case of doubt,
       This is true even if the developer will find out in the code review that the term "better" is also arguable.
   </li>
   <li>Though a term might have a sentiment in general, the way it used is important.
-      Hence, "Better safe than sorry" has netiehr positive or negative sentiment.
+      Hence, "Better safe than sorry" is neither positive nor negative sentiment.
   </li>
+    <li> Politeness pose an interesting problem for sentiment analysis.
+         A developer saying "thank you" in a commit message expresses a positive sentiment though probably not due
+        to technical content of the commit.
+        We consider politeness to be positive sentiment.
+        We are aware that for some use cases this decision should be opposite.
+        Since politeness terms are few and identifiable, this decision is easily revertable and therefore not critical.
+    </li>
+    <li> As an implementation detail, there is a dedicated model for swearing.
+        However, for labeling swearing should be considered as negative sentiment.</li>
+    <Li>"Quick and dirty", the common reference to dirt is programming is negative sentiment. And it is also bad.</Li>
  </ol>
 
 
