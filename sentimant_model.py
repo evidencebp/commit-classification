@@ -9,7 +9,8 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq\
-    , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX
+    , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH\
+ , programming_languges
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
 positive_sentiment = ['advantage',
@@ -49,7 +50,7 @@ positive_sentiment = ['advantage',
  'desirable',
  'desperat(?:e|es|ed|ing)',
  'devot(?:e|es|ed|ing)',
- 'ease',
+ #'ease', # consider
  #'easy', # consider
  'elegan(?:t|ce)',
  'encourag(?:e|es|ed|ing|ment)',
@@ -96,13 +97,13 @@ positive_sentiment = ['advantage',
  'healthy',
  'heartwarming',
  'hero(?:s)?',
- 'honor',
+ 'honor', # consider
  'honorabl(?:y|e)',
- 'hope',
- 'hopeful',
- 'hopefully',
+ #'hope',
+ #'hopeful',
+ #'hopefully',
  'hug',
- 'huge',
+ 'huge', # consider
  'hurtl(?:e|es|ed|ing)',
  'immune',
  #'importance', # consider
@@ -110,10 +111,10 @@ positive_sentiment = ['advantage',
  'impress(?:es|ed|ing|ive)?',
  'impression(?:s)?',
  'indestructible',
- 'inspir(?:es|ed|ing|ingly)?',
+ #'inspir(?:es|ed|ing|ingly)?', # consider
  'intelligent',
  'intense',
- 'interest(?:ed|ing|ingly)?',
+ #'interest(?:ed|ing|ingly)?',
  #'invite', # consider
  'invulnerable',
  'jok(?:e|es|ing)',
@@ -169,10 +170,10 @@ positive_sentiment = ['advantage',
  'relieve',
  'rescue',
  'respected',
- 'restful',
+ #'restful', # Ahmmm, REST api...
  'revive',
  'reward',
- 'rich',
+ #'rich', # consider
  'rigorously',
  'safely',
  'salient',
@@ -189,7 +190,7 @@ positive_sentiment = ['advantage',
  'spirit',
  'strength',
  'strengthen',
- 'strong',
+ #'strong',
  'substantially',
  'success',
  'successful',
@@ -209,13 +210,13 @@ positive_sentiment = ['advantage',
  #'unbiased', # problematic in machine learning context
  'usefulness',
  #'vision', # consider
- 'warm',
+ #'warm', #consider
  'welcome',
- 'win',
+ 'win', # consider (win size refers to a window)
  'winner',
  'wonderful',
  'woo',
- 'worth',
+ 'worth', # consider
  'worthy',
  #'wow', # consider
  #'yes', # Too common, not a strong sentiment
@@ -237,7 +238,7 @@ negative_sentiment = ['abject',
  'attack(?:s|ed|ing)?',
  'awful(?:ly)?',
  'awkward(?:ly)?',
- #'bad', # consider, might be descriptive
+ 'bad', # consider, might be descriptive
  'badly',
  'bastard',
  'battle',
@@ -283,8 +284,8 @@ negative_sentiment = ['abject',
  'demean' + REGULAR_SUFFIX,
  'depress(?:ed|ing|ion)?',
  'despise',
- 'destro(?:y|ing|ied)',
- 'destruction',
+ #'destro(?:y|ing|ied)', # common due to object destruction, destructors
+ #'destruction', # common due to object destruction, destructors
  #'dickhead',  # We have a dedicated swearing model
  'difficult(?:y|ies)?',
  'dilemma',
@@ -399,7 +400,7 @@ negative_sentiment = ['abject',
  'lonely',
  'loser',
  #'loss', # common in software, e.g., loss function
- 'lost', # consider
+ #'lost', # consider
  'lurk',
  'mad',
  'madness',
@@ -488,7 +489,7 @@ negative_sentiment = ['abject',
  'sorry',
  'speculative',
  'stab' + REGULAR_SUFFIX,
- 'stalled',
+ #'stalled', # common as descriptive
  'stalling',
  #'starve' + VERB_E_SUFFIX,
  #'starvation', # starvation happens in programming
@@ -560,8 +561,13 @@ negative_sentiment = ['abject',
  'wtf']
 
 excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s)print(?:er|ing|ed|s)?'
- , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?']
-excluded_negative_sentiment=['paranoia code', "april fool's", "april fool"]
+ , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?', '(make|makes|made|making)' + NEAR_ENOUGH + 'happy'
+ , 'rich text', 'warm reset', '(false|true) positive(:?s)?', 'worth (doing|keeping)'
+ , 'respected for (' + "|".join(programming_languges) + ")"# extend
+                             ]
+excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?'
+ #, 'quick and dirty' #This is actually a sentiment
+                             ]
 
 
 def build_positive_sentiment_regex():
@@ -683,12 +689,19 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit=None)
+    print_concepts_functions_for_bq(commit='333479883759df67e47e59e35d6f076d071053df')
 
-    text = """added another forgotten compile switch to F77 flags
+    text = """
+"cgroup: move assignement out of condition in cgroup_attach_proc()
 
+Gcc complains about this: ""kernel/cgroup.c:2179:4: warning: suggest
+parentheses around assignment used as truth value [-Wparentheses]""
 
-git-svn-id: 0ef30dc7da0b07cedfa074587325a6c153c0ae55@6409 fdbf22ae-c210-0410-be80-ca943da6b8f8""".lower()
+Signed-off-by: Dan Carpenter <ff341aa343d564f9e53e9dcb6996be8c04859a66@oracle.com>
+Signed-off-by: Tejun Heo <546b05909706652891a87f7bfe385ae147f61f91@kernel.org>
+"
+
+ """.lower()
 
     print(is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
