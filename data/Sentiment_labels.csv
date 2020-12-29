@@ -1,0 +1,280 @@
+repo_name,commit,message,Is_Positive,Is_Negative,Justification,Certain,Comment,Sampling
+FStarLang/FStar,30cc16a827adbe9688dd8d504e9141eac49f1b68,"Fix test-perf.exe
+
+Interestingly enough, if individual files are compiled with -flto, this
+apparently brings in some sort of debugging library into scope that
+redefines main(), hence generating an error late at linking-time.
+",FALSE,FALSE,Don't consider interestingly to be positve,,,28_dec_2020_pos_hits_3334798837
+PowerDNS/pdns,a5238f6267ab570882b0dbc195e89c4fe9efac60,"Merge pull request #855 from cmouse/clang-fixes
+
+Clang fixes - thanks aki!",TRUE,FALSE,thanks,,,28_dec_2020_pos_hits_3334798837
+DCAFEngineering/dcaf_case_management,f8ad97fd7e69499d3fcdeb7bccc06671bb7e4564,"adjust strong params
+",FALSE,,strong is not positive here,,,28_dec_2020_pos_hits_3334798837
+rockdaboot/wget2,2c9f5945f5a83a4fad9525861ad15345c3514b03,"Honor --disable-threads and support no threading
+
+* include/libwget.h.in: Include <stdbool.h>.
+Define wget_thread_support().
+* libwget/thread.c: Change condition to check
+for threading support.
+(wget_thread_support): New function.
+(wget_thread_start): [!USE_POSIX_THREADS && !USE_PTH_THREADS]
+Invoke directly the function.
+* src/wget.c (main): If no threads are supported then set the
+number of max threads to 1.  If the queue is not empty, call again the
+downloader function.  It will be used only in case no threads are
+available.
+(downloader_thread): Do not wait for new elements in the queue
+when there are no threads.
+* tests/libtest.c (wget_test_start_server): Skip the test if
+there is no threads support.
+",FALSE,FALSE,honor is descriptive,,,28_dec_2020_pos_hits_3334798837
+gradle/gradle,42b4ece50b2adca9a90d4acead2b3430caf563ae,"Add test coverage for publishing option features to ivy repositories
+
+Inspired by the same test cases we have for publishing to maven
+repositories.
+",FALSE,FALSE,inspire is descriptive,,,28_dec_2020_pos_hits_3334798837
+arangodb/arangodb,9c26a90adfd423798de73447a310f651138c5f35,"hopefully fix version numbering
+",FALSE,FALSE,not considering hopefully to positive,,,28_dec_2020_pos_hits_3334798837
+tensorflow/probability,a40b6bb65c9b8c4bfb31f6268cc0924ff614ab0d,"making pylint happy
+",FALSE,FALSE,"making X happy is not happy, especially when X is pylint",,,28_dec_2020_pos_hits_3334798837
+google/llvm-propeller,49158908dceeccda0f37254b48ff5711695911c8,"Add a debug-only 'dump' method to the BlockChain structure to ease
+debugging.
+
+llvm-svn: 154286
+",FALSE,FALSE,ease is descriptive,,,28_dec_2020_pos_hits_3334798837
+advancetoolchain/advance-toolchain,2f4113192a2f39b8d83b987f5c39c1fe46a22cd4,"Replace links for further modification
+
+This commit replaces symbolic links with actual files, without changing its
+contents, in order to ease the track of differences with git diff.
+
+Signed-off-by: Erwan Prioul <9949cc68615082c237e6af925cacbd2ea7f2e953@linux.ibm.com>
+",FALSE,FALSE,ease is descriptive,,,28_dec_2020_pos_hits_3334798837
+vim-airline/vim-airline,7e1206469c87f16dab64dca264d12548f3d0da98,"basic support for hiding based on win size per part (#200).
+",FALSE,FALSE,"""win"" here is window",,,28_dec_2020_pos_hits_3334798837
+netty/netty,8f5eaaa740c6c58ddda48b7279a04aeef1d1eea7,"Make StreamTest finish sooner to make CI happy
+",FALSE,FALSE,"making X happy is not happy, especially when X is CI",,,28_dec_2020_pos_hits_3334798837
+massgov/mayflower,7957a5c5355d016ecea5bde573e4890bea5793dc,"Action Card / Rich Text - not centering properly
+
+",FALSE,FALSE,The text is rich,,,28_dec_2020_pos_hits_3334798837
+ManageIQ/manageiq,b52f08687f50ed9d550dd175125d268c5335a62b,"Converting some ems_middleware routes to RESTFul
+",FALSE,FALSE,Means rest API,,,28_dec_2020_pos_hits_3334798837
+tensorflow/probability,29d80b036eefba094cb01face83692fe7731ef9a,"Bump XLA accuracy tolerance for LogLogistic.
+
+Also note relevant bugs for some other huge error tolerances.
+
+PiperOrigin-RevId: 325463409
+",FALSE,FALSE,Huge (error),,,28_dec_2020_pos_hits_3334798837
+mroonga/mroonga,e204a63e4b507528f3de700c51401233c70eaf13,"Merge pull request #17 from naoa/doc-mroonga_vector_column_delimiter-variable
+
+doc: add mroonga_vector_column_delimiter variable
+
+Patch by Naoya Murakami. Thanks!!!",TRUE,FALSE,thanks,,,28_dec_2020_pos_hits_3334798837
+google/llvm-propeller,e03a25da70c6fd476d9be766eba0e46c9f3c1796,"Add Support to Recognize and Vectorize NON SIMD instructions in SLPVectorizer.
+
+This patch adds support to recognize patterns such as fadd,fsub,fadd,fsub.../add,sub,add,sub... and
+vectorizes them as vector shuffles if they are profitable.
+These patterns of vector shuffle can later be converted to instructions such as addsubpd etc on X86.
+Thanks to Arnold and Hal for the reviews. http://reviews.llvm.org/D4015 
+
+llvm-svn: 211339
+",TRUE,FALSE,thanks,,,28_dec_2020_pos_hits_3334798837
+jepler/linuxcnc-mirror,b38797a7d4bc81b0c0f9ea5e1df71e79cf770409,"hm2: fix long standing encoder velocity estimation error (thanks pcw and jepler)
+
+We located source of calculating Nan velocity in some configurations.
+It was when driver got some encoder pulses without changing timestamp, which is possible but mostly from electrical noise.
+Driver just skips calculating velocity in current cycle and uses last one.
+
+Signed-off-by: Michael Geszkiewicz <1353f14f196456fb320ac2b8adb59fdfeedb558b@wp.pl>
+",TRUE,FALSE,thanks,,,28_dec_2020_pos_hits_3334798837
+coreboot/coreboot,ce2c1cb742b17623978f3d9a9e414552189bc819,"mb/google/sarien: leave gpio pads unlocks during fsp
+
+The FSP will lock down the configuration of GPP_A12, which
+makes the configuration of the GPIO pin on warm reset not
+work correctly.
+
+This is only needed for the Arcada variant since it is the only variant
+that uses ISH.
+
+BRANCH=sarien
+BUG=b:132719369
+TEST=ISH_GP6 now works on warm resets on arcarda
+
+Change-Id: Icb3bae2c48eee053189f1a878f5975c6afe51c71
+Signed-off-by: Jett Rink <9d4aef0593e6843318d99df31597fb6153b89787@chromium.org>
+Reviewed-on: https://review.coreboot.org/c/coreboot/+/32831
+Reviewed-by: Furquan Shaikh <6be5c96c464778f89679b1062a2e0a6af93d2aa5@google.com>
+Reviewed-by: Duncan Laurie <70662b43bc1a20b57ded72a2b08be88dd0da4841@chromium.org>
+Tested-by: build bot (Jenkins) <8254d1186852c26c9fb3d343db6a5be86317fea9@coreboot.org>
+",FALSE,FALSE,warm reset,,,28_dec_2020_pos_hits_3334798837
+realm/SwiftLint,d61628289267107640657c0142e2577fd2489c44,"Add failing test for false positive in rule explicit_type_interface
+",FALSE,FALSE,false positive,second order false positive,,28_dec_2020_pos_hits_3334798837
+ngtcp2/ngtcp2,1e6968f46d56394cabbd14e55f37c68152951c70,"Stream creation and destruction; handling of stream fin
+",FALSE,FALSE,stream destruction,,,28_dec_2020_neg_hits_3334798837
+namics/generator-nitro,e3d46c9c38a37f06a2888d606293bace3899e5e4,"Fix merge - sorry.
+",FALSE,TRUE,sorry,,,28_dec_2020_neg_hits_3334798837
+sbt/sbt,a9cdd96152e08a1fb21e815eabe8fd1d27ef9b97,"Fixes #1181/#1501. Fixes ArrayIndexOutOfBoundsException: -1
+
+When the compiler reports back the error to CompilationUnit created by Eval#mkUnit, it sometimes returns OffsetPosition whose `source` is set to `NoSourceFile`.
+
+This causes ArrayIndexOutOfBoundsException. The current workaround is to pattern match on the passed in pos and create a new one when the incoming source looks suspicious.
+I have not figured out whether this is caused by our macro code or compiler.
+There are various build.sbt errors that would cause this behavior:
+
+```scala
+libraryDependencies ++= Seq(
+  depA
+  depB // missing comma
+)
+
+lazy val bob = scala.Console println
+
+test ++
+
+run+
+```
+",FALSE,TRUE,suspicious,,,28_dec_2020_neg_hits_3334798837
+htcondor/htcondor,4fe0b843000b4643a102ca7a172d86e343bac5c8,"document -set, -rset, -unset, -runset, -tilde, and -owner options and
+provide a quick and dirty example
+",FALSE,TRUE,quick and dirty is dirty,,,28_dec_2020_neg_hits_3334798837
+groue/GRDB.swift,5de7a5274ee42a1ece810a291172bf8b377d6ac7,"Remove useless #if swift(>=3.1)
+",FALSE,TRUE,useless,,,28_dec_2020_neg_hits_3334798837
+smrealms/smr,4523bb69bc83e218197e84075ab7fd88e7e9b950,"Some changes to optimise client-side performance, including moving inclusion of javascript files lower in the page (rendering is stalled until they are interpreted), and running all the javascript code through jslint.
+",FALSE,FALSE,stalled is descriptive,,,28_dec_2020_neg_hits_3334798837
+hazelcast/hazelcast,6d27b464e3839ccd3052f07d08be3323957d8007,"Made the simulateload a bit nicer for demonstrations
+
+What happened is when there are multiple threads, there is not always an equal balance of load.
+Sometimes, due to timing, a threads get an additional task. So e.g. if you are doing 16 tasks
+with 2 threads and each task takes 1 second, then you would expect after 8 seconds it to be
+complete. The 'bug' was that sometimes it is 9 seconds. With is perfectly fine, but it sucks
+for demo's. This commit fixes that problem
+",TRUE,TRUE,"nicer, sucks",,,28_dec_2020_neg_hits_3334798837
+OSEHRA/VistA-M,4390073f964a15877ac5b9092eecb21f6262ab70,"Install hooks quietly during developer setup
+
+Remove extra echo messages.  Use the '-q' option to Git commands to
+keep them quiet if nothing goes wrong.  This removes extra output
+during developer setup that includes unnecessary and possibly
+confusing information like the commit message of the hooks branch
+head.  For example, lines like
+
+  HEAD is now at ad08c20 Merge branch 'itk-hook-cleanup' into hooks
+
+are not useful.
+
+Change-Id: Iceccd9013e7f8cf15a76c9bc80f033726881afa5
+",FALSE,TRUE,confusing,,,28_dec_2020_neg_hits_3334798837
+unioslo/cerebrum,acd8a2f789150299dfcb45c754bfa1b62304347f,"Fixing stupid bug. We accessing a key in a dict inside an if-else block that we only use if the dict _doesn't_ have the key.
+",FALSE,TRUE,stupid,,,28_dec_2020_neg_hits_3334798837
+ant-design/ant-design,849746b361cfa23d5322e3b6a7559e4dc9af8d76,"fix: Select use value width instead of default fixed width (#20538)
+
+* init using content width
+
+* auto width
+
+* tmp magic number
+
+* clean useless style
+",FALSE,TRUE,useless,,,28_dec_2020_neg_hits_3334798837
+atom/atom,d3422786c37f72e8576dce09fed21ad405c271c2,"Unmount component when EditorView is detached
+
+Fixes #3431
+
+When a pane item is moved to another pane, we *detach* the associated
+view but we don’t fully remove it. This was to prevent removing a view
+when it was used as the pane item directly. However, this was causing
+the editor component not to be unmounted, which caused leaks and
+incorrect measurements.
+
+We need to unmount the component, but we don’t want to destroy the
+editor. So I’ve moved editor destruction to the wrapper view for now,
+and I only do it when the view is actually removed.
+
+Ultimately, we need to have a 1:1 relationship with pane items and their
+views and only allow a pane item to appear once in the pane tree. Then
+we can recycle the same view and avoid this confusing situation where
+the old view is detached and a new view is created.
+",FALSE,TRUE,confusing,,,28_dec_2020_neg_hits_3334798837
+catalyst-cooperative/pudl,f719ab1c8e80820cacdff9b73487f4ca06442e5b,"ferc small plant clean name integration
+
+There are plant_name_clean, which was previously only names that had
+been standardized by hand in a csv. In working on Issue #132, I was
+trying to find all the records of ferc plant names and this came up as
+an issue. I first tired to remove the dirty plant names but ran into a
+database relationship issue (bc there are no plant ids, we use the
+respondent and plant name as the composit id, but the name used is the
+dirty names which are currently generated from the id_mapping process.
+
+So, I made the plant_name_clean column a full list of names but did not
+remove the 'plant_name' which is the raw uncleaned names. Working on
+Issue #152.
+",FALSE,TRUE,dirty (tired is misspelled tried),,,28_dec_2020_neg_hits_3334798837
+uspgamedev/backdoor,23306bd861bf748dd8bbba8f3892c4bd20a5582d,"Merge pull request #187 from uspgamedev/player-death
+
+Player death
+
+Close #173 ",FALSE,FALSE,death is part of the content,,,28_dec_2020_neg_hits_3334798837
+Bitcoin-com/Wallet,7a2ee02899a1a57dd49cf6725425f0f400744a0d,"prevent ugly flashes on iOS
+",FALSE,TRUE,ugly,,,28_dec_2020_neg_hits_3334798837
+apache/airflow,b9f868b5ec30d028e52f49b5deafb5214320f521,"Remove errors raised during initialiation of virtualenv (#10896)
+
+Our migration scripts are written in the way that if you
+are running them to reset the db and you have some files in
+example_dags or dags, or some plugins in your plugins folder,
+you will get various kinds of errors.
+
+Those errors are printed to the user and even if they are
+ultimately ignored by the SqlAlchemy migration process,
+they are confusing whether the database reset
+(and thus the whole initialize-virtualenv) were successful
+or not.
+
+This change disables any DAGs that could be loaded during the
+DB reset (in case of running './breeze initialize-virtualenv'.
+
+Fixes #10894",FALSE,TRUE,confusing. Note the 'succesful' is questioned,,,28_dec_2020_neg_hits_3334798837
+Taeung/tip,ff9c114394aaed2061df112b75be9835a1394be4,"KVM: arm/arm64: GICv4: Handle MOVALL applied to a vPE
+
+The current implementation of MOVALL doesn't allow us to call
+into the core ITS code as we hold a number of spinlocks.
+
+Let's try a method used in other parts of the code, were we copy
+the intids of the candicate interrupts, and then do whatever
+we need to do with them outside of the critical section.
+
+This allows us to move the interrupts one by one, at the expense
+of a bit of CPU time. Who cares? MOVALL is such a stupid command
+anyway...
+
+Reviewed-by: Christoffer Dall <39e5ecfe2ecc327c3e39af72d8d83d1bd0709aad@linaro.org>
+Signed-off-by: Marc Zyngier <a16cc0c82647c52d401177f8e50567df5499e36c@arm.com>
+Signed-off-by: Christoffer Dall <39e5ecfe2ecc327c3e39af72d8d83d1bd0709aad@linaro.org>
+",FALSE,TRUE,stupid,,,28_dec_2020_neg_hits_3334798837
+fsharp/FSharp.Compiler.Service,dc0bf5eec3521be8bb6c196af34eb7a3a7e76cec,"Merge master to dev15.6 (#4071)
+
+* do not simplify open statements (#4068)
+
+* Do not trigger completion on operators (#4054)
+
+* No triggered completion on operators
+
+* Check with classification data instead of stupid custom stuff
+
+* Fix silly tests
+
+* Feedback
+",FALSE,TRUE,"stupid, silly",,,28_dec_2020_neg_hits_3334798837
+eXist-db/exist,043a3936a8e88d34917e69ff09fae67d075c5ee5,"[bugfix] work around xerces bug: already resolved entities get lost if a DTD is loaded from the grammar cache. This leads to a serious problem: an entity which was resolved at validation time may no longer be known when eXist tries to store the document. Xerces throws an exception and leaves eXist in an unclean state, since only a part of the document was stored. The result is a corruption.
+
+The bug fix works around the issue by disabling validation while eXist is actually storing the document's DOM.
+
+svn path=/branches/eXist-stable-1.2/; revision=9161
+",FALSE,FALSE,descriptive - the entities get lost,,,28_dec_2020_neg_hits_3334798837
+ProtonMail/WebClient,097811d28b1c4dcdebdf22f2ec818031b8337e10,"Remove useless call to updatePageName
+",FALSE,TRUE,useless,,,28_dec_2020_neg_hits_3334798837
+Taeung/tip,305f3c8b20ba1ca94829329acdbf22e689304dba,"cgroup: move assignement out of condition in cgroup_attach_proc()
+
+Gcc complains about this: ""kernel/cgroup.c:2179:4: warning: suggest
+parentheses around assignment used as truth value [-Wparentheses]""
+
+Signed-off-by: Dan Carpenter <ff341aa343d564f9e53e9dcb6996be8c04859a66@oracle.com>
+Signed-off-by: Tejun Heo <546b05909706652891a87f7bfe385ae147f61f91@kernel.org>
+",FALSE,FALSE,"While gcc complians, it probably doesn't do it with a negative sentiment",,,28_dec_2020_neg_hits_3334798837
