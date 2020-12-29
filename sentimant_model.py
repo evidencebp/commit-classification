@@ -29,6 +29,7 @@ positive_sentiment = ['advantage',
  #'better', # usually more description than sentiment
  'bless(?:s|ed|ing)?',
  'blissful',
+ 'bonus',
  #'boost', # usually decriptive in software
  'calm(?:s|ed|ing)?',
  'charm(?:s|ed|ing)?',
@@ -71,7 +72,7 @@ positive_sentiment = ['advantage',
  'fine',
  'fond',
  'forgiv(?:e|es|ed|ing|ment)',
- 'freedom',
+ #'freedom', # degrees of freedom
  'friendly',
  'fun',
  'funky',
@@ -103,7 +104,7 @@ positive_sentiment = ['advantage',
  #'hopeful',
  #'hopefully',
  'hug',
- 'huge', # consider
+ #'huge', # consider
  'hurtl(?:e|es|ed|ing)',
  'immune',
  #'importance', # consider
@@ -130,7 +131,7 @@ positive_sentiment = ['advantage',
  'laugh(?:es|ed|ing)?',
  #'legal',
  #'legally',
- 'lenient',
+ #'lenient',
  #'like', # TODO - too common as similarity, not sentiment
  'lively',
  'lol',
@@ -143,7 +144,7 @@ positive_sentiment = ['advantage',
  'lucky',
  #'meaningful', # consider - might be descriptive
  'merry',
- 'motivation',
+ #'motivation', # messages with structure "motivation: xxx"
  'natural', #consider
  'nice(?:r|st)?',
  'nifty',
@@ -188,9 +189,9 @@ positive_sentiment = ['advantage',
  #'spark', # consider removing Aphace spark
  'sparkle',
  'spirit',
- 'strength',
- 'strengthen',
- #'strong',
+ #'strength',
+ #'strengthen',
+ #'strong', # consider
  'substantially',
  'success',
  'successful',
@@ -212,7 +213,7 @@ positive_sentiment = ['advantage',
  #'vision', # consider
  #'warm', #consider
  'welcome',
- 'win', # consider (win size refers to a window)
+ #'win', # consider (win size refers to a window)
  'winner',
  'wonderful',
  'woo',
@@ -241,7 +242,7 @@ negative_sentiment = ['abject',
  'bad', # consider, might be descriptive
  'badly',
  'bastard',
- 'battle',
+ # 'battle', # consider
  'betra(?:y|ies|ied|ing)',
  #'bg', # too short, different meanings
  'bitch',
@@ -279,7 +280,7 @@ negative_sentiment = ['abject',
  'damn',
  'danger(?:ously|ous)?',
  'deadly',
- 'death',
+ #'death',
  'degrad' + VERB_E_SUFFIX,
  'demean' + REGULAR_SUFFIX,
  'depress(?:ed|ing|ion)?',
@@ -301,7 +302,7 @@ negative_sentiment = ['abject',
  'dispute',
  'disregard' + REGULAR_SUFFIX,
  'disrupt(?:s|ed|ing|ion)?',
- 'distort(?:s|ed|ing|ion)?',
+ 'distort(?:s|ed|ing|ion)?', # consider
  'distract(?:s|ed|ing|ion)?',
  'distress' + REGULAR_SUFFIX,
  'disturb' + REGULAR_SUFFIX,
@@ -339,7 +340,7 @@ negative_sentiment = ['abject',
  'furious(?:ing|es|ed|ly)?',
  #'ghost', # consider
  #'goddam',# We have a dedicated swearing model for that
- 'grave(?:s)?',
+ #'grave(?:s)?', # Also a last name
  #'greed', # also a software trem, greedy algorithm
  #'greedy', # also a software trem, greedy algorithm
  'grey',
@@ -563,9 +564,11 @@ negative_sentiment = ['abject',
 excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s)print(?:er|ing|ed|s)?'
  , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?', '(make|makes|made|making)' + NEAR_ENOUGH + 'happy'
  , 'rich text', 'warm reset', '(false|true) positive(:?s)?', 'worth (doing|keeping)'
- , 'respected for (' + "|".join(programming_languges) + ")"# extend
+ , 'respected for (' + "|".join(programming_languges) + ")"
+ , 'degrees of freedom', "I'm pretty", "I am pretty", 'positive (integer|number)', 'perfectly (good|ok|valid)'
+ , 'work(:?s|ed|ing)? fine', '(take|took|taking) advantage'
                              ]
-excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?'
+excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?', 'snmp trap'
  #, 'quick and dirty' #This is actually a sentiment
                              ]
 
@@ -689,18 +692,23 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='333479883759df67e47e59e35d6f076d071053df')
+    print_concepts_functions_for_bq(commit='e447a9eef835210c6edb9cb662112af2745899b3')
 
     text = """
-"cgroup: move assignement out of condition in cgroup_attach_proc()
+"Merge branch '2.8' into 3.0
 
-Gcc complains about this: ""kernel/cgroup.c:2179:4: warning: suggest
-parentheses around assignment used as truth value [-Wparentheses]""
+* 2.8:
+  [ci] use hirak/prestissimo
+  [Filesystem] Fix transient tests
+  [WebProfiler] Sidebar button padding
+  Updated some missing READMEs
+  [HttpFoundation] Avoid warnings when checking malicious IPs
+  [HttpFoundation] Set the Content-Range header if the requested Range is unsatisfied
 
-Signed-off-by: Dan Carpenter <ff341aa343d564f9e53e9dcb6996be8c04859a66@oracle.com>
-Signed-off-by: Tejun Heo <546b05909706652891a87f7bfe385ae147f61f91@kernel.org>
+Conflicts:
+	appveyor.yml
+	src/Symfony/Component/Intl/Tests/DateFormatter/AbstractIntlDateFormatterTest.php
 "
-
  """.lower()
 
     print(is_positive_sentiment(text))
