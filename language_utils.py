@@ -182,6 +182,29 @@ code_review_fixes = ['(cr|pr)(s)?(-)?(d+)?\sfix(es)?', 'fix(?:ing|es|ed)?\s(cr|p
 
 no_message = ['no message', 'wip', 'work in progress', 'message', 'change(?:-|\s)?set', 'commit']
 
+programming_languges = [i.lower() for i in ['Python', 'JavaScript', 'Java', 'C\+\+', 'PHP', 'TypeScript', 'C',
+       'C\#', 'Go', 'Ruby', 'HTML', 'Shell', 'CSS', 'Kotlin', 'Scala',
+       'Swift', 'Jupyter Notebook', 'Rust', 'Perl', 'Lua', 'Haskell', 'R',
+       'Objective\-C', 'Groovy', 'Vue', 'PowerShell', 'TSQL', 'Dart',
+       'Clojure', 'MATLAB', 'Emacs Lisp', 'OCaml', 'Erlang', 'Elixir',
+       'CoffeeScript', 'TeX', 'Fortran', 'Assembly', 'Vim script',
+       'PLpgSQL', 'Makefile', 'Julia', 'BitBake', 'F\#', 'Common Lisp',
+       'Vala', 'Coq', 'Smalltalk', 'Scheme', 'Visual Basic .NET',
+       'Puppet', 'HCL', 'Smarty', 'Dockerfile', 'XSLT', 'GLSL', 'Haxe',
+       'Cuda', 'Ada', 'SQF', 'Pascal', 'PLSQL', 'Gherkin', 'Jsonnet',
+       'Nix', 'Roff', 'Apex', 'QML', 'CMake', 'D', 'Perl 6',
+       'Visual Basic', 'Objective\-C\+\+', 'Prolog', 'Mathematica',
+       'Batchfile', 'Reason', 'Markdown', 'DM', 'Elm', 'FreeMarker',
+       'ABAP', 'M4', 'SystemVerilog', 'AutoHotkey', 'Verilog', 'IDL',
+       'Tcl', 'Rich Text Format', 'SaltStack', 'UnrealScript', 'Zig',
+       'WebAssembly', 'RAML', 'F\*', 'Stan', 'ColdFusion', 'Factor',
+       'LLVM', 'Pike', 'VBA', 'Isabelle', 'OpenSCAD', 'ASP', 'Arc',
+       'Racket', 'LookML', 'SMT', 'q', 'Xojo', 'ZenScript', 'Ceylon',
+       'Agda', 'Limbo', 'SuperCollider', 'Pawn', 'xBase', 'JSON', 'Nim',
+       'M', 'XC', 'SourcePawn', 'GDScript', 'LilyPond', 'SQLPL',
+       'PostScript', "Ren'Py", 'Gnuplot', 'OpenEdge ABL',
+       'Common Workflow Language', 'Xtend', 'Mercury', 'Genshi',
+       'Open Policy Agent', 'RobotFramework']]
 
 
 def build_sepereted_term(term_list : List, just_before =False):
@@ -199,11 +222,11 @@ def build_non_positive_linguistic(positive_re):
 
 
     return '(?:%s)' % "|".join([
-        '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(modals, just_before=True)
+        ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(modals, just_before=True)
                                       ,  positive_re)
-        , '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(negation_terms, just_before=True)
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(negation_terms, just_before=True)
                                         ,  positive_re)
-        , '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(non_actionable_context, just_before=True)
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(non_actionable_context, just_before=True)
                                         ,  positive_re)
         # TODO - take care of documentation entities spereatly
         #, '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(documentation_entities, just_before=True)
