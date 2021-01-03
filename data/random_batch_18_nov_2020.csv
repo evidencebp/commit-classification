@@ -808,11 +808,11 @@ unaio/una,f43c263c7d9ff49afa738063cd6431c44165f449,"Ticket #1164 - for Timeline.
 dart-lang/sdk,9c76fe554abb8f4a67ca8c28e82449c09641d92b,"Fix the spec generator to use test rather than unittest
 
 Review URL: https://codereview.chromium.org/2401463005 .
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 ethereumjs/ethereumjs-vm,e56e7716d1ef612a841625fc7e3b9da8f53db273,"another typo
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020
 edx/edx-platform,09eb8ee3335604913d86ad7bbfb2ad978d9333a2,"edx-enterprise version bump to 0.61.2 from 0.60.0
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,updting external library version,by code,,random_batch_18_nov_2020
 Alexpux/MINGW-packages,2b0f634bd488c587988d3653bda28535da235352,"pyqt5: Update to 5.9 and related changes (#2811)
 
 * sip: Update to 4.19.3
@@ -822,9 +822,9 @@ needed by PyQt5 5.9
 * pyqt5: Update to 5.9
 
 this version works with both Qt 5.9.0 and 5.9.1
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 kartta-labs/mapwarper,b0e3fbac99afc5297c4c2f7e461dcb1ee1ef295e,"remove task thats never been used, sorry
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 Taeung/tip,c5898636c440da91d58f10beac00f073e68378df,"tipc: reduce usage of context info in socket and link
 
 The most common usage of namespace information is when we fetch the
@@ -857,23 +857,23 @@ later in this series.
 Reviewed-by: Ying Xue <c1cbb87de349443b90fa63f6d2cc5403843bc133@windriver.com>
 Signed-off-by: Jon Maloy <0e60c7c02f6d30eccc82572d2a89766b1b2a3d45@ericsson.com>
 Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,reduce,,,random_batch_18_nov_2020
 stdlib-js/stdlib,42902eed6675cc8b4e7926163679727703363d03,"Wrap conditional in parentheses
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,wrap,by code,,random_batch_18_nov_2020
 uholeschak/ediabaslib,3cf7c4bc98884a4c70ff978163295e8ba25129a2,"Fixed error handing
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"Fixed , not error handling",by code,,random_batch_18_nov_2020
 lino-framework/lino,64fb94222ae1bbe3758af5cf167f682b0d4cc354,"http://www.lino-framework.org/blog/2014/1016.html
-",,,,,,,,random_batch_18_nov_2020
-lamsfoundation/lams,423d88c3f279da62c8802e3f9df86654a659fcb3,LDEV-4429 Open JLatexmath dialog when clicking on its image,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,,by code,,random_batch_18_nov_2020
+lamsfoundation/lams,423d88c3f279da62c8802e3f9df86654a659fcb3,LDEV-4429 Open JLatexmath dialog when clicking on its image,FALSE,FALSE,TRUE,FALSE,,by code,FALSE,random_batch_18_nov_2020
 xenodium/dotsies,5602bdb31e0e4158cf7a9c0370381442f3538b86,"Merge branch 'master' of https://github.com/xenodium/env
-",,,,,,,,random_batch_18_nov_2020
+",,,,,,"Nod found in git, no info in message",FALSE,random_batch_18_nov_2020
 MrMC/mrmc,57f00efbcd46f9cbda03a61de3b0260a97826111,"changed: removed recently added script by author request. will be replaced by a fork shortly
 
 
 git-svn-id: db833e0ee90ec991bef537dc011d070417d74c01@35355 568bbfeb-2a22-0410-94d2-cc84cf5bfa90
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,removed,might be part of a bigger refactoring,,random_batch_18_nov_2020
 ibissource/iaf,de8f5cb1fbbd6d4cd0e41abb7720324b4021ba88,"Merge branch 'master' into SapRefactoring
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactoring,might be part of a bigger refactoring,,random_batch_18_nov_2020
 angular/angular,d9648887b8b50e54083f47704b5b01323f73ec8b,"fix(metadata): Do not attach module names to metadata.
 
 The filename contains the module name as resolved by users, so the top-level module name is uneeded.
@@ -884,58 +884,58 @@ Fixes #8225
 Fixes #8082
 
 Closes #8256
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 randombit/botan,fe8b93c289b203e2d7ba2285221cc251bcb8cbd6,"Fix -Wshadow warning
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 rhinstaller/anaconda,ad3bfe5aae9cc65294fe354cd80f576efb13130f,"update by amanpreetalam@yahoo.com
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 eProsima/Fast-RTPS,f27738da91ddd4d4acfc9450a314fe2787513182,"Added missing function to CryptoKeyExchange interface
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,add missing,,,random_batch_18_nov_2020
 uwcirg/true_nth_usa_portal,1553a45f79623acfce40254bf783131b2c2d013b,"Merge pull request #1879 from uwcirg/bug/patch-patient-qnr-dstu2
 
-Add another DSTU2 patch",,,,,,,,random_batch_18_nov_2020
+Add another DSTU2 patch",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 rollbar/Rollbar.NET,99909a3a5a3dd4363f414161f340b582bb2e4161,"version update to 1.1.0
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,version update,,,random_batch_18_nov_2020
 google/llvm-propeller,3fe975b846eeedbea218d098d5a0e18ba1a78c38,"revert the previous patch, didn't mean to check it in yet
 
 llvm-svn: 26610
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,revert,,,random_batch_18_nov_2020
 stinsonga/emacs-mirror,c3d49b7a3100df3ca8bf02b69c6322ab1fa6ccf1,"(autoloads, custom-deps): Warn that parts of commands enclosed in $(ARGQUOTE)s
 should not be split between two lines, as that will break with GNU Make >3.80,
 when sh.exe is used and arg quoting is with '..'.
 (autoloads): Don't break the quoted --eval expression between several lines.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,break,,,random_batch_18_nov_2020
 PurpleI2P/i2pd,2e0e6fc6c44dcd2b4834de799d0b3a5874296752,"fixed memory leak
-",,,,,,,,random_batch_18_nov_2020
-scgmlz/STeCa2,8d715061eb319b00deeff52a4c8fbd311c229f44,Update CMakeLists.txt - disable tests on Windows,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"fixed, leak",,,random_batch_18_nov_2020
+scgmlz/STeCa2,8d715061eb319b00deeff52a4c8fbd311c229f44,Update CMakeLists.txt - disable tests on Windows,FALSE,FALSE,TRUE,FALSE,"update, disable",,,random_batch_18_nov_2020
 hashicorp/terraform,76b0eefaccf93293fb6914c223d5526dc9395c51,"Fix validation of the `name_prefix` parameter of the `aws_alb` resource (#13441)
 
-This parameter is being validated using the wrong validation function, which means that we are incorrectly disallowing a `name_prefix` value ending with a dash.",,,,,,,,random_batch_18_nov_2020
+This parameter is being validated using the wrong validation function, which means that we are incorrectly disallowing a `name_prefix` value ending with a dash.",FALSE,FALSE,FALSE,TRUE,"fix, wrong",,,random_batch_18_nov_2020
 swoole/swoole-src,470edc55cb6c6afa052a81a28afa4f9cc3fd8b7a,"Fix typo and remake the library
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,typo,how to consider remake?,FALSE,random_batch_18_nov_2020
 ElektraInitiative/libelektra,09d20269e0a0bbc60a077b1fdff137c23564aadf,"asciinema: fixed sudo command
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020
 hyrise/hyrise,e660a2f35585843d1a6112cd078569bb9b259bd2,"Add testing to pre-commit hook
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,add,,,random_batch_18_nov_2020
 ionic-team/ionic-site,2db9c29b0e897fea5858ba1ab91e68a370191461,"docs: update for 2.0.0-alpha.44
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,docs,,,random_batch_18_nov_2020
 SeleniumHQ/selenium,efb7c516a1ef4660afdfa1bd2ed9dd073e5e9341,"Bump version to 2.27.0.rc1
 
 r18239
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,bump version,,,random_batch_18_nov_2020
 zstackio/zstack-utility,cd78b944d6dae9fb0e10b436e641ad2d63eaa789,"fix check total size error
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"fix, error",,,random_batch_18_nov_2020
 Microsoft/ChakraCore,6e1220a097d032da476a343cd13705b41c91722d,"fix pinning number chunks for in-proc JIT
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 tensorflow/tensorflow,a9e73ddb3d40514af4144278f6450e5c1c806f8b,"Make exhaustive_f32_elementwise_op_test build again and mark it as broken
 
 It was not running as part of TAP and there have been some regressions.  Mark it
 as broken while we figure out what's going on to unblock b/114790989.
 
 PiperOrigin-RevId: 212494775
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,broken,,,random_batch_18_nov_2020
 metaborg/jsglr,9f301ba5c27c60dc74686a138c930f2629aad2e4,"Rewrite unwieldy EditorUpdate tests to String tests
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,rewrite,,,random_batch_18_nov_2020
 dmlc/tvm,d059dbabf0eefdb25f0e028ea2c83eeddc3dd6d0,"[WIP] Onnx1.0 (#294)
 
 * add more op for onnx 1.0
@@ -951,7 +951,7 @@ dmlc/tvm,d059dbabf0eefdb25f0e028ea2c83eeddc3dd6d0,"[WIP] Onnx1.0 (#294)
 * fix
 
 * update model
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,TRUE,TRUE,"add, fix, fix lint",,,random_batch_18_nov_2020
 Taeung/tip,231c3a1f0630c07a584905507a1cb7b705a56ab7,"ath9k: fix an aggregation start related race condition
 
 A new aggregation session start can be issued by mac80211, even when the
@@ -963,75 +963,75 @@ until the old one has been cleaned up.
 Signed-off-by: Felix Fietkau <118ed6118e893d16e8c6e0776e0ebc290952c897@openwrt.org>
 Cc: 4fbacc2fa0ffdbb11bf1ad6925b886ebd08dd15f@kernel.org
 Signed-off-by: John W. Linville <2a53bac7a5d324865ef46ec4c38b2c0fba1456b4@tuxdriver.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"fix, race condition",,,random_batch_18_nov_2020
 vanilla/vanilla,786819c1c6baebc019eb54bc1dc5a45b7c2a0df0,"Merge branch 'master' of github.com:vanilla/vanilla into stage
 
 Conflicts:
 	library/core/class.format.php
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 gocd/gocd,8f88e81e41c47311611093852caeed579092236f,"Merge pull request #1156 from ketan/cleanup-jruby-and-build-scripts
 
-Some build script cleanups",,,,,,,,random_batch_18_nov_2020
+Some build script cleanups",TRUE,TRUE,FALSE,FALSE,cleanups,,,random_batch_18_nov_2020
 datamade/la-metro-councilmatic,484f285025dd95a85e4d084d20814672a92545b4,"Add agenda url text
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 wikimedia/restbase,2212ec5124a950104e9eab1266528c61ac067508,"Merge pull request #226 from gwicke/master
 
-Add utility script to generate a WMF restbase domain config",,,,,,,,random_batch_18_nov_2020
+Add utility script to generate a WMF restbase domain config",TRUE,TRUE,FALSE,FALSE,add utility,,,random_batch_18_nov_2020
 finmath/finmath-lib,c2286448b21cf78bc397195d98650663231e1554,"Addition constructor for Swap (using SwapLegs).
 
 git-svn-id: 67a55e656427d4d95711d9444b3d4488f7ae1ad4@1675 48fcbb9e-5639-0410-8b25-842128a4905d
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,addition,,,random_batch_18_nov_2020
 UM-USElab/gradecraft-development,b865ede3fd72c2f24b399f049e44f223ecf592e8,"weightsCoinWidget directive uses element trigger instead of class trigger
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,uses instead,,,random_batch_18_nov_2020
 dart-lang/co19,a1e228ba3a64fe343752fbacd0db5420b9f21ff8,"added new LayoutTests/fast tests, fixed issues 714,715
 
 git-svn-id: 38feb1729fd842af57e1a6ea8a5dccce4272ed9b@795 2ecb45c1-dfb3-dc95-330a-13f216d23a04
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"added, fixed",,,random_batch_18_nov_2020
 OpenSprinkler/OpenSprinkler-App,1e120270f1f77044b19c3dfd286f94acc6b4fdc5,"Base: Allow device scan on all devices/browsers
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,allow,,,random_batch_18_nov_2020
 lonnieezell/CodeIgniter4,be35ee4f304efb2ce8f2c9262d2714e355e4bdcb,"A little cleanup
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020
 JMRI/EngineDriver,e2a507f8aa62523c15cc023fd55d40d1bfccaefe,"Merge pull request #313 from flash62au/master
 
-Additional German Translations by Daniel Sieber",,,,,,,,random_batch_18_nov_2020
+Additional German Translations by Daniel Sieber",FALSE,TRUE,FALSE,FALSE,translation,,,random_batch_18_nov_2020
 massgov/mayflower,69b3de1547f66b0ff25d2e3e58e80cac8a077352,"Release MD: Fixes typos/errors in readme doc
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,"typos, readme",,,random_batch_18_nov_2020
 jenkinsci/jenkins,337b44428f49a76100f7c915c6366e585e13966f,"Merge pull request #4628 from Wadeck/JENKINS-60866_job_view
 
-[JENKINS-60866] Un-inline JavaScript/Style in Job views",,,,,,,,random_batch_18_nov_2020
+[JENKINS-60866] Un-inline JavaScript/Style in Job views",TRUE,TRUE,FALSE,FALSE,un-inline,,,random_batch_18_nov_2020
 matecat/MateCat,600cd9ba4c1246a24592f4bd0fd7a1129ef32c71,"Warning message for not latin languages on OCR files
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code. changed message to user.,,random_batch_18_nov_2020
 androguard/androguard,31a26ea1cd06b474d0717c8115d76a77b5178620,"Add the original get_dex function
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 akvo/akvo-lumen,f2eeb04b6d4badaaafdc92962f71ad696efc632a,"Keywordize column keys and refactor aggregation ns(s)
 
 Adapt used fns and dependant references:
 + akvo.lumen.lib.dataset.utils/find-column
 + akvo.lumen.postgres.filter/sql-str
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactor,"Not sure how to treat ""Keywordize""",,random_batch_18_nov_2020
 buildaworldnet/IrrlichtBAW,63561f4badd5b867368c2642195e1e8c5c2ae151,"Fixes #123 and adds slight correction
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,correction,,,random_batch_18_nov_2020
 lairdubois/lairdubois,b7b8e33289f2fdb5d0d4586bd4c64aadb98997d6,"+ Events (3)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,"by code, updated version",,random_batch_18_nov_2020
 schwabdidier/GazePlay,93b876af876a38f18ef8f32259dfc6a59132c875,"Populated Home Page
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,populated,,,random_batch_18_nov_2020
 moodle/moodle,3ca53c0a2282cd39b0ec67ab71d8b39865d6ac28,"translated some.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,translated,,,random_batch_18_nov_2020
 openshift/openshift-ansible,625addec56337b940dd72ac187f3e9f3f652178e,"Merge pull request #1479 from mwoodson/dyn_update
 
-lib_dyn: updates to lib_dyn role",,,,,,,,random_batch_18_nov_2020
+lib_dyn: updates to lib_dyn role",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 QubesOS/qubes-core-admin,0218ab0b2a13784d25238761f5873460952889fe,"dom0/core: remove appmenus when removing NetVM (#627)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 NodeBB/NodeBB,1c19ae48bd8ede4626cab81430650573c87db501,"fixed #1143 -- also removed near-meaningless info messages saying that a Hook had been registered.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"fixed, removed",,,random_batch_18_nov_2020
 roundcube/roundcubemail,315a0b787c2b1409365226842751face7ab0974c,"Remove deprecated function usage (get_table_name)
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,removed deprecated,,,random_batch_18_nov_2020
 dawnlabs/carbon,dd5a996e72050178e5f4f3549e36a96fbc6f4804,"Fix twitter bug
 
 - Closes #347
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,bug,,,random_batch_18_nov_2020
 VulcanJS/Vulcan,572f58ef4f10a10e6784b33b69f218c567428e4b,"refactoring API/RSS to use server-side router
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020
 Taeung/tip,c7c85101afd0cb8ce497456d12ee1cad4aad152f,"drm/i915: remove loop in Ironlake interrupt handler
 
 On Ironlake, there is an interrupt master control bit. With the bit
@@ -1043,14 +1043,14 @@ Cc: Stable Team <4fbacc2fa0ffdbb11bf1ad6925b886ebd08dd15f@kernel.org>
 Signed-off-by: Zou Nan hai <8426c685cba4078307294856877ff9371cb3ec7d@intel.com>
 Signed-off-by: Zhenyu Wang <2be145655f058b1e18fb2a9466bd2b1b12e2cd7e@linux.intel.com>
 Signed-off-by: Eric Anholt <96f164ad4d9b2b0dacf8ebee2bb1eeb3aa69adf1@anholt.net>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 scgmlz/BornAgain,6a747c898cda7e1d1356850cbe168d7c52e2f197,"Remove lines containing std::cout used for debugging
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 zulip/zulip,f77c5fc086a5abdef2a3b170616c98ee312db696,"settings: Extend `DATA_UPLOAD_MAX_MEMORY_SIZE` from default value.
 
 - In django 1.10 was added `DATA_UPLOAD_MAX_MEMORY_SIZE` parameter,
   which controls max size of uploading files. By default it is 2.5MB.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,extend,,,random_batch_18_nov_2020
 terraform-providers/terraform-provider-aws,3807442c5a269e3017f469a2b2a7fd1cbde989d6,"service/elastictranscoder: Fixes for tfproviderlint R002 (#11944)
 
 Reference: https://github.com/terraform-providers/terraform-provider-aws/issues/9952
@@ -1084,23 +1084,23 @@ Output from acceptance testing:
 --- PASS: TestAccAWSElasticTranscoderPipeline_notifications (74.85s)
 
 --- PASS: TestAccAWSElasticTranscoderPreset_basic (39.61s)
-```",,,,,,,,random_batch_18_nov_2020
+```",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020
 PowerDNS/pdns,ec7f535c5fd535a4e716825abdbdc94ffdc832a4,"clarify/correct cache settings. Reported by Klaus Darilion.
 
 git-svn-id: 9656f0984f47d5c650935b65e785656835a2cd72@2271 d19b8d6e-7fed-0310-83ef-9ca221ded41b
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,correct,,,random_batch_18_nov_2020
 kieker-monitoring/kieker,4f685fc164be568bcd57fc5fbf27baf895c873ac,"Merge pull request #41 from kieker-monitoring/issue-1481-import-of-already-migrated-analysis-filters
 
-Issue 1481 import of already migrated analysis filters",,,,,,,,random_batch_18_nov_2020
+Issue 1481 import of already migrated analysis filters",FALSE,FALSE,TRUE,FALSE,import,,,random_batch_18_nov_2020
 elixir-lang/elixir,69bd7789d4505864c45f0572565fc600d1950187,"Merge pull request #3191 from lexmag/iex-b-module
 
-Make IEx `b` helper to accept single module argument",,,,,,,,random_batch_18_nov_2020
+Make IEx `b` helper to accept single module argument",TRUE,TRUE,FALSE,FALSE,make helper,,,random_batch_18_nov_2020
 magit/magit,cd2a9b8c5ac90c2cc7f945c9fd9b1e7884b9ee91,"Set file-local value of outline-regexp for makefiles
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,set,,,random_batch_18_nov_2020
 yade/trunk,a311b10cf8163d276e67c33396d87ed64d5ca170,"Fix starting point
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 sagemathinc/cocalc,d95d8ccb646d7011b636a10ba5d7415ceafaaa8f,"fix typos
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,typos,,,random_batch_18_nov_2020
 antalsz/hs-to-coq,d86add59a86eef7ad9ca0d32415c310e32bd49ce,"Conclude go_exit_all_WellScopedFloats
 
 with some mildly ugly proofs about `zap` and `pick`. I should define
