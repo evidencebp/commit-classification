@@ -42,7 +42,7 @@ core_bug_terms = [
              'fix(ed|es|ing)?',
              'fixing(?:s)?',
              'incorrect(ly)?',
-             'mistake(s|n|nly)?',
+             'mistake(s|n|d|nly)?',
              'problem(?:s)?',
              ]
 # Positive
