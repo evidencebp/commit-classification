@@ -170,7 +170,7 @@ positive_sentiment = ['advantage',
  'rejoice',
  'relieve',
  'rescue',
- 'respected',
+ #'respected', # consider
  #'restful', # Ahmmm, REST api...
  'revive',
  'reward',
@@ -194,7 +194,7 @@ positive_sentiment = ['advantage',
  #'strong', # consider
  'substantially',
  'success',
- 'successful',
+ 'successful', # consider
  'sunshine',
  'superior',
  'survivor',
@@ -214,7 +214,7 @@ positive_sentiment = ['advantage',
  #'warm', #consider
  'welcome',
  #'win', # consider (win size refers to a window)
- 'winner',
+ #'winner',
  'wonderful',
  'woo',
  'worth', # consider
@@ -343,7 +343,7 @@ negative_sentiment = ['abject',
  #'grave(?:s)?', # Also a last name
  #'greed', # also a software trem, greedy algorithm
  #'greedy', # also a software trem, greedy algorithm
- 'grey',
+ #'grey', # Common simply as the color
  'grief',
  #'gross', #different meanings
  'guilt(?:y)?',
@@ -386,8 +386,8 @@ negative_sentiment = ['abject',
  'insane',
  'insanity',
  #'insecur*', # more common as non sentiment in software
- 'insensitive',
- 'insignificant',
+ #'insensitive', # case insensitive
+ #'insignificant', # consider
  'intimidat' + VERB_E_SUFFIX,
  'irreversible', # consider
  'irrita(?:able|tion)',
@@ -489,7 +489,7 @@ negative_sentiment = ['abject',
  'sore',
  'sorry',
  'speculative',
- 'stab' + REGULAR_SUFFIX,
+ #'stab' + REGULAR_SUFFIX, # consider
  #'stalled', # common as descriptive
  'stalling',
  #'starve' + VERB_E_SUFFIX,
@@ -563,12 +563,13 @@ negative_sentiment = ['abject',
 
 excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s)print(?:er|ing|ed|s)?'
  , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?', '(make|makes|made|making)' + NEAR_ENOUGH + 'happy'
- , 'rich text', 'warm reset', '(false|true) positive(:?s)?', 'worth (doing|keeping)'
+ , 'rich text', 'warm reset', '(false|true) positive(:?s)?', 'worth (doing|keeping|it)'
  , 'respected for (' + "|".join(programming_languges) + ")"
  , 'degrees of freedom', "I'm pretty", "I am pretty", 'positive (integer|number)', 'perfectly (good|ok|valid)'
- , 'work(:?s|ed|ing)? fine', '(take|took|taking) advantage'
+ , 'work(:?s|ed|ing)? fine', '(take|took|taking) advantage', 'making good sense', 'user friendly', 'smart annotation'
                              ]
 excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?', 'snmp trap'
+ , 'kernel panic', 'bad service error'
  #, 'quick and dirty' #This is actually a sentiment
                              ]
 
@@ -692,23 +693,16 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='e447a9eef835210c6edb9cb662112af2745899b3')
+    print_concepts_functions_for_bq(commit='f5d826c527ad60862b599eda67ee56d8c541237b')
 
     text = """
-"Merge branch '2.8' into 3.0
+"ofbiz merge: 3cf1890b68 from trunk (fix bad service error handling)
 
-* 2.8:
-  [ci] use hirak/prestissimo
-  [Filesystem] Fix transient tests
-  [WebProfiler] Sidebar button padding
-  Updated some missing READMEs
-  [HttpFoundation] Avoid warnings when checking malicious IPs
-  [HttpFoundation] Set the Content-Range header if the requested Range is unsatisfied
-
-Conflicts:
-	appveyor.yml
-	src/Symfony/Component/Intl/Tests/DateFormatter/AbstractIntlDateFormatterTest.php
-"
+1 major bugfix commit (3cf1890b685a9be3e7c9dc792e16fd48e8e19c48), adds
+missing service result error checks (notorious in stock):
+""Implemented: Accounting: Handle service response effectively
+(OFBIZ-10021)""
+from https://github.com/apache/ofbiz-framework.git trunk"
  """.lower()
 
     print(is_positive_sentiment(text))
