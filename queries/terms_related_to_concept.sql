@@ -1,3 +1,40 @@
+WITH terms AS (
+  SELECT id
+        , title
+        , SPLIT(title, ' ' ) as doc
+  FROM ( SELECT 1 as id, 'few words' AS title
+UNION ALL SELECT 2, 'here is a sentence with few words'
+UNION ALL SELECT 3, 'the quick fox jumped over the lazy dog'
+)
+)
+-- we flatten the ngrams into a table, and JOIN to our names
+SELECT word
+, count(*) as cnt
+FROM terms, UNNEST(doc) as word
+group by
+word
+order by count(*) desc
+;
+
+
+select
+word
+, cnt
+from (
+SELECT
+     REGEXP_EXTRACT(message, r'([a-z0-9\._]*)') as word
+     , count(*) as cnt
+FROM (
+ SELECT *
+ FROM YourTable
+)
+GROUP BY
+word
+order by
+count(*) desc
+)
+;
+
 select
 word
 , cnt
