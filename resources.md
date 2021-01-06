@@ -25,6 +25,8 @@ Saha R, Lyu Y, Lam W, Yoshida H, Prasad M (2018) [Bugs.jar: A largescale, divers
 
 Herbold S, Trautsch A, Trautsch F, Ledel B (2019) [Issues with szz: An empirical assessment of the state of practice of defect prediction data collection](https://arxiv.org/abs/1911.08938). 1911.08938
 
+[Enabling the Continuous Analysis of Security Vulnerabilities with VulData7](https://orbilu.uni.lu/bitstream/10993/36157/1/scam18.pdf) [repository](https://github.com/electricalwind/data7)
+
 Mills C, Parra E, Pantiuchina J, Bavota G, Haiduc S (2020) [On the relationship between bug reports and queries for text retrieval-based bug localization](https://link.springer.com/article/10.1007/s10664-020-09823-w). Empirical Software Engineering pp 1–42
 
 Wang Q, Parnin C, Orso A (2015) [Evaluating the usefulness of ir-based fault localization techniques](http://chrisparnin.me/pdf/ISSTA15.pdf). In: Proceedings of the 2015 International Symposium on Software Testing and Analysis, Association for Computing Machinery, New York, NY, USA, ISSTA 2015, p 1–11, DOI 10.1145/2771783.2771797, URL https://doi.org/10.1145/2771783.2771797
