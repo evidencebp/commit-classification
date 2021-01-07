@@ -18,6 +18,14 @@ or
 general.bq_negative_sentiment(message) > 0
 ;
 
+select
+count(*)
+, sum(if(is_positive > 0, 1,0)) as positives
+, sum(if(is_negative > 0, 1,0)) as negatives
+from
+general.commit_sentiment
+;
+
 # Positive sentiment hits
 select
 repo_name
@@ -28,11 +36,13 @@ repo_name
 , '' as Justification
 , '' as Certain
 , '' as Comment
-, '28_dec_2020_pos_hits_3334798837' as Sampling
+, '6_jan_2021_good_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21' as Sampling
 from
 general.commit_sentiment
 where
 is_positive > 0
+and
+regexp_contains(lower(message), 'good')
 order by
 rand()
 limit 500
@@ -49,7 +59,7 @@ repo_name
 , '' as Justification
 , '' as Certain
 , '' as Comment
-, '28_dec_2020_neg_hits_3334798837' as Sampling
+, '5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21' as Sampling
 from
 general.commit_sentiment
 where
