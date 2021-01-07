@@ -10,6 +10,7 @@ from language_utils import file_scheme, term_seperator, build_sepereted_term, ne
 Directions to consider 
 
 Spaghetti code - indication of mess, not always a refactor
+Useless (as dead code)
 """
 
 # https://arxiv.org/pdf/2002.11049.pdf
