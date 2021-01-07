@@ -567,9 +567,16 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'respected for (' + "|".join(programming_languges) + ")"
  , 'degrees of freedom', "I'm pretty", "I am pretty", 'positive (integer|number)', 'perfectly (good|ok|valid)'
  , 'work(:?s|ed|ing)? fine', '(take|took|taking) advantage', 'making good sense', 'user friendly', 'smart annotation'
+ , 'at best', "(we|we're|I|I'm|you|you're|he|he's|she's) good", 'greater than', 'greater'+ NEAR_ENOUGH +'equal'
+ , "third time's the charm", 'good faith', 'good riddance', 'for good', 'good to have', 'probably good', 'good enough'
+ , 'usually good'
+ , 'good state' # consider
+ #, 'good idea(s)?' # consider
                              ]
 excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?', 'snmp trap'
- , 'kernel panic', 'bad service error'
+ , 'kernel panic', 'fix panic' # more like "fix kernel panic
+ , 'bad service error'
+
  #, 'quick and dirty' #This is actually a sentiment
                              ]
 
@@ -693,21 +700,48 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='f5d826c527ad60862b599eda67ee56d8c541237b')
+    print_concepts_functions_for_bq(commit='b471e816b55e8356a2d4c2ea3dcc851c68794f21')
 
     text = """
-"ofbiz merge: 3cf1890b68 from trunk (fix bad service error handling)
+'Merge "This sanity test is sporatically failing in Jenkins for no good reason.  Reverting to restabalize master."
+""".lower()
 
-1 major bugfix commit (3cf1890b685a9be3e7c9dc792e16fd48e8e19c48), adds
-missing service result error checks (notorious in stock):
-""Implemented: Accounting: Handle service response effectively
-(OFBIZ-10021)""
-from https://github.com/apache/ofbiz-framework.git trunk"
- """.lower()
-
+    text = """
+    This is failing for no good reason"
+    """.lower()
+    from language_utils import negation_terms
     print(is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
     print(re.findall(build_positive_sentiment_regex(), text))
+    print("neg", re.findall(build_not_positive_sentiment_regex(), text))
+    print("s0", build_non_positive_linguistic(build_sepereted_term(['good'])))
+    print("s1" , re.findall(build_non_positive_linguistic('good'), text))
+    print("s2" , re.findall(build_non_positive_linguistic(build_sepereted_term(['good'])), text))
+    print("s3", build_sepereted_term(['good']))
+    print("s4" , re.findall("no(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)(good)", text))
+    print("s5" , re.findall("no(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)(good)(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)", text))
+    #print("s6" , re.findall(r"(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|'|"|////|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)(good)(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|'|"|////|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)", text))
+    print("s7" , re.findall("no(\s|'|\"|////)(good)", text))
+    print("s8" , re.findall("no"+build_sepereted_term(['good']), text))
+    print("s9", ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
+                                        ,  'good'))
+    print("s10" , re.findall(('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
+                                        ,  'good'), text))
+    print("s11", re.findall(build_non_positive_linguistic('good', ['no']), text))
+    print("s12", '(?:%s)' % "|".join([
+        'aaa'
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
+                                        ,  'good')
+        , 'bb'
+    ]))
+    print("s13", re.findall('(?:%s)' % "|".join([
+        'aaa'
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
+                                        ,  'good')
+        , 'bb'
+    ]), text))
+    build_non_positive_linguistic
+    print("sepcific" , re.findall("(no|wouldn't|wouldnt)[\S\s]{1,40}(?:good)", text))
     print(is_negative_sentiment(text))
     valid_num = len(re.findall(build_negative_sentiment_regex(), text))
     print(re.findall(build_negative_sentiment_regex(), text))
