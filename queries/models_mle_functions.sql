@@ -1,4 +1,5 @@
-
+# See "The Corrective Commit Probability Code Quality Metric" for the classifier MLE method
+# https://arxiv.org/abs/2007.10912
 
 CREATE OR REPLACE FUNCTION
 general.bq_ccp_mle
