@@ -182,7 +182,7 @@ positive_sentiment = ['advantage',
  'scoop',
  'slick',
  'slicker',
- 'smart(?:er|s|ly)?',
+ 'smart(?:er|s|ly)',
  'smile',
  'soothe',
  'sophisticated',
@@ -193,8 +193,8 @@ positive_sentiment = ['advantage',
  #'strengthen',
  #'strong', # consider
  'substantially',
- 'success',
- 'successful', # consider
+ #'success',
+ #'successful', # consider
  'sunshine',
  'superior',
  'survivor',
@@ -572,7 +572,9 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'usually good', 'good match', 'good data'
  , 'pretty (sure|common|commonly|long|much|likely|unlikely|simple|straight(?:-|\s)?forward|big|small|useless)'
  , 'pretty (active|dead|misleading|expensive|trivial|ugly|hard|often|embarrassing|similar|complex)'
- , "'pretty'"
+ , "'pretty'", '"pretty"'
+ , 'best to', 'best(?:-|\s)practice(:?s)?', 'best(?:-|\s)effort(:?s)?', 'the best of', 'best regards'
+ , 'fine grain(:?ed)?', 'fine tun(:?e|ed|esing)'
  , 'good state' # consider
  , 'for good' # consider
  #, 'good idea(s)?' # consider
@@ -704,13 +706,22 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='b471e816b55e8356a2d4c2ea3dcc851c68794f21')
+    print_concepts_functions_for_bq(commit='8daddfcea558c6c2e6f772dc7f2baccae9b951ca')
 
 
     text = """
-"Added (the pretty much unsearchable) R recipes.
-"	
-    """.lower()
+"Make the clang module container format selectable from the command line.
+- introduces a new cc1 option -fmodule-format=[raw,obj]
+  with 'raw' being the default
+- supports arbitrary module container formats that libclang is agnostic to
+- adds the format to the module hash to avoid collisions
+- splits the old PCHContainerOperations into PCHContainerWriter and
+  a PCHContainerReader.
+
+Thanks to Richard Smith for reviewing this patch!
+
+llvm-svn: 242499
+"  """.lower()
     print(is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
     print(re.findall(build_positive_sentiment_regex(), text))
