@@ -8,18 +8,19 @@ general.bq_ccp_mle
 AS (
 # Function version: 113a57f9a9cc811a84256910855c256b73c3668a
 # Model version: 113a57f9a9cc811a84256910855c256b73c3668a
-1.253*base_prob -0.053
+1.205*base_prob -0.048
  )
 ;
 
+
 WITH tab AS (
   SELECT  0.0 AS prob
-            , -0.053 as expected
+            , -0.048 as expected
     UNION ALL SELECT 1.0
-                    , 1.2
+                    , 1.157
 
     UNION ALL SELECT 0.1
-                    , 0.0723
+                    , 0.07250000000000001
 
     UNION ALL SELECT null
                     , null
@@ -40,7 +41,7 @@ general.bq_refactor_mle
 AS (
 # Function version: 113a57f9a9cc811a84256910855c256b73c3668a
 # Model version: 113a57f9a9cc811a84256910855c256b73c3668a
-1.695*base_prob -0.034
+1.724*base_prob -0.034
  )
 ;
 
@@ -48,10 +49,10 @@ WITH tab AS (
   SELECT  0.0 AS prob
             , -0.034 as expected
     UNION ALL SELECT 1.0
-                    , 1.661
+                    , 1.69
 
     UNION ALL SELECT 0.1
-                    , 0.1355
+                    , 0.1384
 
     UNION ALL SELECT null
                     , null
