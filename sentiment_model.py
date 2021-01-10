@@ -561,7 +561,7 @@ negative_sentiment = ['abject',
  'wreck',
  'wtf']
 
-excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s)print(?:er|ing|ed|s)?'
+excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s)print(?:er|ers|ing|ed|s)?'
  , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?', '(make|makes|made|making)' + NEAR_ENOUGH + 'happy'
  , 'rich text', 'warm reset', '(false|true) positive(:?s)?', 'worth (doing|keeping|it)'
  , 'respected for (' + "|".join(programming_languges) + ")"
@@ -569,13 +569,17 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'work(:?s|ed|ing)? fine', '(take|took|taking) advantage', 'making good sense', 'user friendly', 'smart annotation'
  , 'at best', "(we|we're|I|I'm|you|you're|he|he's|she's) good", 'greater than', 'greater'+ NEAR_ENOUGH +'equal'
  , "third time's the charm", 'good faith', 'good riddance', 'for good', 'good to have', 'probably good', 'good enough'
- , 'usually good'
+ , 'usually good', 'good match', 'good data'
+ , 'pretty (sure|common|commonly|long|much|likely|unlikely|simple|straight(?:-|\s)?forward|big|small|useless)'
+ , 'pretty (active|dead|misleading|expensive|trivial|ugly|hard|often|embarrassing|similar|complex)'
+ , "'pretty'"
  , 'good state' # consider
+ , 'for good' # consider
  #, 'good idea(s)?' # consider
                              ]
 excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?', 'snmp trap'
  , 'kernel panic', 'fix panic' # more like "fix kernel panic
- , 'bad service error'
+ , 'bad service error', 'bad data'
 
  #, 'quick and dirty' #This is actually a sentiment
                              ]
@@ -702,59 +706,20 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
 if __name__ == '__main__':
     print_concepts_functions_for_bq(commit='b471e816b55e8356a2d4c2ea3dcc851c68794f21')
 
-    text = """
-'Merge "This sanity test is sporatically failing in Jenkins for no good reason.  Reverting to restabalize master."
-""".lower()
 
     text = """
-    This is failing for no good reason"
+"Added (the pretty much unsearchable) R recipes.
+"	
     """.lower()
-    from language_utils import negation_terms
     print(is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
     print(re.findall(build_positive_sentiment_regex(), text))
     print("neg", re.findall(build_not_positive_sentiment_regex(), text))
-    print("s0", build_non_positive_linguistic(build_sepereted_term(['good'])))
-    print("s1" , re.findall(build_non_positive_linguistic('good'), text))
-    print("s2" , re.findall(build_non_positive_linguistic(build_sepereted_term(['good'])), text))
-    print("s3", build_sepereted_term(['good']))
-    print("s4" , re.findall("no(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)(good)", text))
-    print("s5" , re.findall("no(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)(good)(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)", text))
-    #print("s6" , re.findall(r"(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|'|"|////|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)(good)(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|'|"|////|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)", text))
-    print("s7" , re.findall("no(\s|'|\"|////)(good)", text))
-    print("s8" , re.findall("no"+build_sepereted_term(['good']), text))
-    print("s9", ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
-                                        ,  'good'))
-    print("s10" , re.findall(('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
-                                        ,  'good'), text))
-    print("s11", re.findall(build_non_positive_linguistic('good', ['no']), text))
-    print("s12", '(?:%s)' % "|".join([
-        'aaa'
-        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
-                                        ,  'good')
-        , 'bb'
-    ]))
-    print("s13", re.findall('(?:%s)' % "|".join([
-        'aaa'
-        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'], just_before=True)
-                                        ,  'good')
-        , 'bb'
-    ]), text))
-
-    print("s14", re.findall('(?:%s)' % "|".join([
-        'aaa'
-        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'] #+ negation_terms
-                                                                      , just_before=True)
-                                        ,  'good')
-        , 'bb'
-    ]), text))
+    print("ex", re.findall(build_positive_sentiment_excluded_regex(), text))
 
 
-    build_non_positive_linguistic
-    print("sepcific" , re.findall("(no|wouldn't|wouldnt)[\S\s]{1,40}(?:good)", text))
-    print(is_negative_sentiment(text))
-    valid_num = len(re.findall(build_negative_sentiment_regex(), text))
-    print(re.findall(build_negative_sentiment_regex(), text))
+    print("s1", re.findall('pretty(?:-|\s)print(?:er|ing|ed|s)?', text))
+
 
 """
  Better safe than sorry
