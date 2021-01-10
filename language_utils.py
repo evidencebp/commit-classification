@@ -9,12 +9,14 @@ file_scheme = '([a-zA-Z0-9_\*\.])+\.[a-zA-Z]{1,4}'
 REGULAR_SUFFIX = '(?:s|ed|ing)?'
 VERB_E_SUFFIX = '(?:e|es|ed|ing)'
 
-NEAR_ENOUGH = '[\S\s]{1,40}'
+NEAR_ENOUGH = '[\S\s]{0,40}'
 
 #term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|-|\|)" # Adding - should be tuned
 #term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|\|)"
 #term_seperator = "[^abcdefghijklmnopqrstuvwxyz]"
 term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)"
+#term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|/|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)" # no ",'
+#term_seperator = "(\s|\.|\?|\!|\[|\]|\(|\)|\:|^|$|\,|\'|\"|#|\$|\%|&|\*|\+|=|`|;|<|>|@|~|{|}|_|\|)" # without /
 
 # Negation
 negation_terms = ["aren't",
@@ -215,16 +217,17 @@ def build_sepereted_term(term_list : List, just_before =False):
     return sep
 
 
-def build_non_positive_linguistic(positive_re):
+def build_non_positive_linguistic(positive_re
+                                  , neg=negation_terms):
 
-    non_actionable_context = ['for(?:get|gets|got|geting)'
+    non_actionable_context = ['for(?:get|gets|got|getting)'
         , 'allow(s|ed|ing)?']
 
 
     return '(?:%s)' % "|".join([
         ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(modals, just_before=True)
                                       ,  positive_re)
-        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(negation_terms, just_before=True)
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(neg, just_before=True)
                                         ,  positive_re)
         , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(non_actionable_context, just_before=True)
                                         ,  positive_re)

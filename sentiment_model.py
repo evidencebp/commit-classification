@@ -740,6 +740,16 @@ if __name__ == '__main__':
                                         ,  'good')
         , 'bb'
     ]), text))
+
+    print("s14", re.findall('(?:%s)' % "|".join([
+        'aaa'
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(['no'] #+ negation_terms
+                                                                      , just_before=True)
+                                        ,  'good')
+        , 'bb'
+    ]), text))
+
+
     build_non_positive_linguistic
     print("sepcific" , re.findall("(no|wouldn't|wouldnt)[\S\s]{1,40}(?:good)", text))
     print(is_negative_sentiment(text))
