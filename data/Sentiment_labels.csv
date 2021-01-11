@@ -2497,3 +2497,750 @@ I've messed up with parts of the compatibility files I had to commit.
 ",FALSE,TRUE,messed up,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
 claroline/Distribution,fdfb260de594c6e0464f9b22783611296c00035a,"[CoreBundle] Fixing root rights managament + removing useless controller + adding security on AdministrationToolController.
 ",FALSE,TRUE,useless,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+mesosphere/dcos-commons,0091c7a995b1ba8c885ac1cc8a3bf10a1db03867,"INFINITY-2975 Make plan status behave better in a race (#2174)
+
+- Fetch plan status after phase/step status. If the steps change in the middle of this, then we end up with e.g. a plan that's still IN_PROGRESS when its steps are all COMPLETE. This is less ugly for users.
+- Move some Element-level functions into internal utilities. Started on this in an earlier version of this fix, may as well keep it around.
+",TRUE,TRUE,"behave better, less ugly",,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4minitz/4minitz,2f50f2fa0b7b2d8d34b89206e6533108d5aa29c7,"Use Schema for updating the OnlineUser-Entry to use the doc validation
+
+Unfortunately, the `update` method of our schema class does not support the `upsert`-option. So we check if the entry already exists and perform an insert or an update depending on the findOne result.
+",FALSE,TRUE,unfortunately,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+google/blockly,02fc5bf19cae724d3ff3a12999349d554a080892,"Remove empty span from toolbox.
+
+Every row started with this useless tag:
+<span role=“presentation”></span>
+",FALSE,TRUE,useless,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+Willster419/RelhaxModpack,67997297653f69a474bac07d683dd34b33081ec2,"finally got tired of looking up and down, just move them into the same region
+",FALSE,TRUE,got tired,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+mc-server/MCServer,b0dedb01977fe4cd7ebd51db5784d8ca415f1567,"WebAdmin: Manually exported string conversion functions.
+
+ToLua generated an extra return value for GetHTMLEscapedString() and GetURLEncodedString(), making them difficult to use.
+",FALSE,TRUE,difficult,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+bywatersolutions/bws-package,100e6a9808ead4ee8d951da59ead1550e75bb4c3,"functions that were in C4::Interface::CGI::Output are now in C4::Output.
+So this implies quite a change for files.
+Sorry about conflicts which will be caused.
+directory Interface::CGI should now be dropped.
+I noticed that many scripts (reports ones, but also some circ/stats.pl or opac-topissues) still use Date::Manip.
+",FALSE,TRUE,sorry,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+giltayar/bildit,061bc2daa9ddbb9457c1aa7dbdfff6e0af29185d,"nbj: oops. bug in new isFirstBuild feature
+",FALSE,TRUE,oops,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+DIRACGrid/DIRAC,db1555464b157a3a71ec5e4d83c167ce39c4068c,Fixed bad merging,FALSE,TRUE,bad,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+cfillion/reapack,efedbcb3d206374b461059026a5df46737f0afa5,"manager: oops, fix the height of the repository list
+",FALSE,TRUE,oops,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+MSFTOSSMgmt/WPSDSCLinux,505f4f646cd5949599384aed25a5250357e382f8,Checking in threat model for this improvement,TRUE,FALSE,"threat model, improvment",,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+exponentcms/exponent-cms,79fa2b1b230e48f75c85fdbc20c1186066bcb821,"trap some exceptions in socialfeed module when there are distant end issues so we don't crash the page
+",FALSE,FALSE,trap,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+Homebrew/brew,abb81a52e604d9f76b2c586866801ad2ec26db9f,"Updated PR in response to suggestions
+    - changed require_relative to require
+    - removed useless begin
+    - removed unnecessary test
+    - updated brew info positive test case to verify a cask was found
+    - moved cask search logic to missing_formula.rb
+",FALSE,TRUE,useless,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+ghent360/lede-project,acbb3e50e7ab64b094c4031b899d8dd104d1c2eb,"ar71xx: frequent ethernet mac resets upset the MDIO bus on ar7240, so do not run them on every device open, only on tx timeouts
+
+SVN-Revision: 26392
+",FALSE,FALSE,upset,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+dewhisna/KingJamesPureBibleSearch,2e9a921f7d325253a89c939d34981972c2fa280f,"Reworked code to build with Emscripten.  Sorted and split apart the source/header files to isolate the GUI parts for separate pop-ups that cause problems in Emscripten.  Added configuration defines for the splash screen and application font loading so that they can be independently enabled/disabled on any platform.  Added configuration defines and split out the source files for database building and disabled that on the mobile and Emscripten targets, since they don't need it ever.  Updated build notes for building KJPBS in Emscripten.  Moved the startup error prompts to a special ReportError handler so that we can easily redefine how that's implemented -- with it being a QMessageBox on some targets or simple qDebug() logs on things like Emscripten.  Changed how our main CMyApplication object gets created, being on the heap now instead of the stack, as needed for Emscripten.  Changed code that caused dialogs to popup to not do so for Emscripten.  We might can bring some of this functionality back later, but it's easier to remove it now while we get the main part up and functioning.  Similarly, for simplicity, Emscripten emulates stealth mode for persistent setting functionality.
+This now completely builds in Emscripten and will come up with the splash screen, but am still having some issues on the QtSql part with it loading our database (actually, even loading the sqlite3 module).  Worst case, I might setup a method to dump the database object as a standalone memory image format of some sort and use that in place of SQL for loading.  That may even work better for desktop, since we don't really need SQL.  Though we would have to do the same for the dictionary and things.
+
+
+git-svn-id: 34e43b3e6e13ae01f7ef5199fa5bbda67fb155fd@788 523e89ec-37fb-4b40-b97f-42a194c95123
+",FALSE,FALSE,worst case,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+unrealircd/unrealircd,7193f9615fcecc5a4bdbfb89d1c32baf30485f80,"Hopefully fixed the weird Z:line bug on win32?
+",TRUE,TRUE,"hopefully, weird",,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+CanalTP/navitia,53ca632987e0e5a21ace621aaf185070ffb79b43,"Merge pull request #2270 from TeXitoi/disruption-fixes
+
+kraken: Disruption fixes",FALSE,FALSE,distruption as subject,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+psychopy/psychopy,4186308cc036fe79fc152a7f5f11535fc55a81ed,"FF: silly typo
+",FALSE,TRUE,silly,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+google/llvm-propeller,2b8c69204b1d37d91cc775d51af50df7f478cecd,"[Windows] Convert from UTF-8 to UTF-16 when writing to a Windows console
+
+Summary:
+Calling WriteConsoleW is the most reliable way to print Unicode
+characters to a Windows console.
+
+If binary data gets printed to the console, attempting to re-encode it
+shouldn't be a problem, since garbage in can produce garbage out.
+
+This breaks printing strings in the local codepage, which WriteConsoleA
+knows how to handle. For example, this can happen when user source code
+is encoded with the local codepage, and an LLVM tool quotes it while
+emitting a caret diagnostic. This is unfortunate, but well-behaved tools
+should validate that their input is UTF-8 and escape non-UTF-8
+characters before sending them to raw_fd_ostream. Clang already does
+this, but not all LLVM tools do this.
+
+One drawback to the current implementation is printing a string a byte
+at a time doesn't work. Consider this LLVM code:
+  for (char C : MyStr) outs() << C;
+
+Because outs() is now unbuffered, we wil try to convert each byte to
+UTF-16, which will fail. However, this already didn't work, so I think
+we may as well update callers that do that as we find them to print
+complete portions of strings. You can see a real example of this in my
+patch to SourceMgr.cpp
+
+Fixes PR38669 and PR36267.
+
+Reviewers: zturner, efriedma
+
+Subscribers: llvm-commits, hiraditya
+
+Differential Revision: https://reviews.llvm.org/D51558
+
+llvm-svn: 341433
+",FALSE,TRUE,unfortunate,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+mc-server/MCServer,83eb5cf419cfb745fc9653c3642af553703e7ac3,"Dragged in the latest core changes - got to automate this sometime.
+
+Squashed commit of the following:
+
+commit 42e95a6d32da7227a84a5202a2e72fcf4007aaf2
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Aug 10 17:04:36 2013 +0100
+
+    Fix concatenation issue
+
+commit 7432c25306b8125fca13100048b693bebad92d3d
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Aug 10 16:44:47 2013 +0100
+
+    Fix of bracket
+
+commit 4e0b3f905e2f937951eebd322b204f8da3e745cd
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Sat Aug 10 16:38:53 2013 +0100
+
+    Fixed bugs in the console command file that were stopping it from working.
+
+    There was an extra `end` and an extra `)`
+
+commit ea1215da739e65585b448103e0bf1bebec00dfac
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Aug 10 16:06:30 2013 +0100
+
+    Fixed duplicate leave messages
+
+commit b6ecb378ca6f213b4676ca17efcb5baa64f2f132
+Merge: b273df1 1a6f70f
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Sat Aug 10 06:05:32 2013 -0700
+
+    Merge pull request #13 from mc-server/give-console
+
+    Added a console command for giving players items.
+
+commit b273df17c759eba82342466cf6e2291d84b77ab3
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Sat Aug 10 08:27:14 2013 +0100
+
+    Hopefully fixed the /i command not working.
+
+    I had not defined the newSplit variable before using it.
+
+commit 8a74037cc092d048364299f18e07c02c85ae3737
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Thu Aug 8 10:18:48 2013 +0100
+
+    Fixed the contributors not being on their own lines.
+
+commit 0f61781047fbe3a4986dde3079be4fc1fb9ff14d
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 18:26:12 2013 +0100
+
+    Fix the README - fixes #15
+
+commit cc438b3229cdb730d308479c59491b5e66130118
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 18:01:48 2013 +0100
+
+    Alpha-sort the console commands.
+
+commit aa22f647c27d50b3ccf7e763927bd24329da3a56
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 18:00:44 2013 +0100
+
+    Alpha-sort the commands when they are bound.
+
+commit 5d9367fcdeeb8a5e1485aac539147edb7a0cd0ab
+Merge: a485101 01ccfaa
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 09:41:38 2013 -0700
+
+    Merge pull request #14 from mc-server/ireplace
+
+    Told the player receiving items what they are getting, and fixed the console log.
+
+commit 01ccfaa340afa8a4b909a923702da48b8b5f0d4a
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 17:39:36 2013 +0100
+
+    Told the player reveiving items what they are getting, and fixed the console log.
+
+commit 1a6f70f25ffa4c12a0d738c97435ae2c30cdb6a9
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 17:35:48 2013 +0100
+
+    Added a console command for giving players items.
+
+commit a4851010b2ff29bb55feb6331ea6ddec28532a0f
+Merge: 0ffbd4a ba923e4
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 09:01:47 2013 -0700
+
+    Merge pull request #12 from mc-server/ireplace
+
+    Re-implement the /i command and make /give conform to the vanilla standards
+
+commit ba923e4764b6a3064be6aacea86e059828b2d0e6
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 16:59:53 2013 +0100
+
+    Added /item and made /i an alias of it.
+
+commit 25652d2d5390d46a9cfe8bc80ab702b831bb49ed
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 16:46:14 2013 +0100
+
+    Kept the stuff alpha-sorted.
+
+commit 7fc56322420c0f99c1d0f0e6ba5df6169ef57fcc
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 16:45:09 2013 +0100
+
+    Removed some extra semicolons.
+
+commit 06b1adbcde3d4d610f9d3646ac3dd912b4071ea7
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Wed Aug 7 16:44:06 2013 +0100
+
+    Cleaned up the code a little and fixed the messed up stuff that tried to make sure a player was good.
+
+commit 0ffbd4adb80edf51cf7eb5117b0287c7ed286add
+Author: tonibm19 <tonibm19@gmail.com>
+Date:   Wed Aug 7 13:52:02 2013 +0200
+
+    Fixed typo
+
+commit b9503b977bdfeed8795fcacd8c6d15bc2e6a723a
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Tue Aug 6 18:23:51 2013 +0100
+
+    Re-implement the /i command and make /give conform to the vanilla standards.
+
+    This commit is experimental and may fail. Please test it!
+
+commit f4ac029a0f1903fc9e49365117a81293303c8811
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Fri Aug 2 23:23:15 2013 +0100
+
+    Miscellaneous Changes
+
+    Reduced ban/unban code size a little.
+    Clarified console commands.
+    Added commented code to onjoin when bugs are fixed.
+    Removed embarrassing server wide messages.
+
+commit da84f4977522ab48ead4af7a71efd43cdd4e3d0a
+Merge: cc77056 a631484
+Author: bearbin <bearbin@gmail.com>
+Date:   Thu Aug 1 10:58:05 2013 -0700
+
+    Merge pull request #10 from mc-server/tabmix
+
+    Fix the inconsistency of spaces and tabs.
+
+commit a6314849c2b474b6e17a245c91a2ac74c7acf7bf
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Thu Aug 1 16:47:15 2013 +0100
+
+    Changed everything to use the correct system of tabs.
+
+commit cc7705645b6b387c618c9448fa6b0d5c789370c6
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Wed Jul 31 16:56:41 2013 +0100
+
+    Rewrote Info Messages + Implemented #7 [SEE DESC]
+
+    Standardisation of info messages: [INFO] [WARNING] [JOIN] [LEAVE]
+    [FATALITY] with colours Green, Gold, Red, Rose, and Yellow.
+    Individual worlds have individual LimitWorld setting, with individual
+    WebAdmin setting as well.
+
+commit 16cae4cdc0ec067e7e71fa5c5a3ba8c248ce063b
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Mon Jul 29 14:47:45 2013 +0100
+
+    Fix of nil value in SpawnProtect
+
+commit 7c33f75e7da7fc104112c17fcb53bc9f06fe09fc
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Mon Jul 29 13:19:11 2013 +0100
+
+    Fixed potential SpawnProtect nil value issue
+
+    Now detects if PROTECTRADIUS is zero, and if so, cancels checks.
+
+commit 0c4a9d427620ab04ca01b5f31ed9b90530353d96
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Mon Jul 29 13:07:50 2013 +0100
+
+    Enhanced SpawnProtect greatly (thanks xoft)
+
+    Wow. Who knew ~30 lines of code could become one?
+
+commit 17f5ef4fed0b6f32900cc7473563848466139655
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Mon Jul 29 11:11:22 2013 +0100
+
+    Removed Development LOGINFOs
+
+commit 02034bf2d67f2ae62092b0688d81338f7b0788df
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Mon Jul 29 10:40:57 2013 +0100
+
+    Implemented Issue #5 Enhancement [SEE DESC]
+
+    Made spawn protection configurable in each world's world file. World has
+    to be listed in settings.ini!
+
+commit ccc73db8c51e45372069ec0a42f437cfb25253b1
+Merge: 6bf4b40 21c7c68
+Author: Alexander Harkness <bearbin@gmail.com>
+Date:   Sun Jul 28 14:00:15 2013 +0100
+
+    Merge branch 'master' of github.com:tigerw/MCSCore into tigerw-master
+
+    Conflicts:
+    	main.lua
+
+commit 21c7c68d20782a7dfd0d8f9ce0996397549dd425
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sun Jul 28 12:55:50 2013 +0100
+
+    Default WorldLimiter = Off
+
+commit 141298481f3adef30b68d0c4200204aa264cb3e2
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sun Jul 28 12:47:24 2013 +0100
+
+    Fixed Potential WorldLimit & OnDisable Bugs
+
+    Changed WorldLimiter if detection from nil value to config boolean.
+    Changed OnDisable to use hardcoded name as Plugin:GetName was apparently
+    a nil value. ??
+
+commit 6bf4b40a0e27677afa6df9cb3521266e6b99c4f7
+Merge: 1ca4217 bfd6c5f
+Author: bearbin <bearbin@gmail.com>
+Date:   Sat Jul 27 11:44:18 2013 -0700
+
+    Merge pull request #3 from tonibm19/master
+
+    Added /me command
+
+commit bfd6c5f2a47cda4ac98a7225736e2669eaf61849
+Author: tonibm19 <tonibm19@gmail.com>
+Date:   Sat Jul 27 20:35:22 2013 +0200
+
+    Added /me command
+
+commit d25abaf44a6f5828b90297ff80003d2cd2a90be5
+Author: tonibm19 <tonibm19@gmail.com>
+Date:   Sat Jul 27 20:30:31 2013 +0200
+
+    Added /me command
+
+commit 9047f7778aa1cdd42d22c4dcf925db792b4d684e
+Author: tonibm19 <tonibm19@gmail.com>
+Date:   Sat Jul 27 20:29:24 2013 +0200
+
+    added /me command
+
+commit 1ca42172391d41ba71c65a3f15d3a96d15a80496
+Merge: 52a6f4e 7a40336
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Jul 27 09:01:45 2013 -0700
+
+    Merge pull request #2 from tigerw/master
+
+    Fixed /give descriptor & removed webadmin
+
+commit 7a40336437525c447adae3d9800e75b39c0300c4
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Jul 27 17:00:38 2013 +0100
+
+    Fixed /give descriptor & removed webadmin
+
+commit 52a6f4e35bdea2ae9f33977928b6693f5800e515
+Merge: f5d56ff 2af1da8
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Jul 27 08:51:45 2013 -0700
+
+    Merge pull request #1 from tigerw/master
+
+    Added TPA (tonibm9's fork)
+
+commit 2af1da8a3cd8e94674b22805662b83de87ac4a95
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Jul 27 16:38:10 2013 +0100
+
+    Added TPA (tonibm9's fork)
+
+    With code from STR_Warrior.
+
+commit f5d56ffeb02fef4735e846661fa71d15622d25b9
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Sat Jul 27 15:51:18 2013 +0100
+
+    Integrated SpawnProtect & Bugfixes [SEE DESC.]
+
+    Integrated bearbin's SpawnProtect. Fixed config file bugs. Improved
+    SpawnProtect to use settings.ini. Variable cleanup (SHOW_PLUGIN_NAMES).
+    File and filename cleanup.
+
+commit 56dc51c00af4514253c04e38b5ccc9fbed2f0022
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Fri Jul 26 23:14:40 2013 +0100
+
+    Update README.md
+
+    Added info.
+
+commit acd7e2849dcd7f3ee7bdc6b0f9b777ee1d9cbb3c
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Fri Jul 26 19:37:59 2013 +0100
+
+    Implemented Block Property checking for Collisions
+
+    Used g_BlockIsSolid, instead of checking data values.
+
+commit 246d423ff9660a2b00a1c51e6276ec74eb3419de
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Fri Jul 26 15:49:55 2013 +0100
+
+    Updated Files
+
+    Buildpermandcollision: updated collision code to check for torches and
+    redstone torches.
+    Help: attempt at always showing page number
+    Web_serversettings: attempt at introducing a check for Maximum Players
+    (must be above zero).
+
+commit 868f99ab49edeee78f4fc1c212c6bf614b860378
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Thu Jul 25 19:46:08 2013 +0100
+
+    Update README.md
+
+    Extended 'GUI Redesign' section.
+
+commit e0df40bd082bdeb5c6823b485bc5001103a77502
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Thu Jul 25 19:43:00 2013 +0100
+
+    Update README.md
+
+    Added features and fixes and instructions for use.
+
+commit 332d8221f753f1a38d6c21bfc30af5890f48e3bb
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Thu Jul 25 19:35:27 2013 +0100
+
+    Uploaded All Files
+
+    All Core files, both modified and unmodified.
+
+commit 3dd191f6bed71c863ee264856fbc3660e52cf88b
+Author: Tiger Wang <ziwei.tiger@hotmail.co.uk>
+Date:   Thu Jul 25 04:59:50 2013 -0700
+
+    Initial commit
+",TRUE,TRUE,"good, thanks, messed, mbarresing",,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+kasymovga/DarkPlacesRM,14ddb7b29d4303fa2de2c78c6e666a1e94766a54,"fix severe bugs with the PRVM_64 support, which affected both modes of
+operation (PRVM_64 defined or not) - the OP_LOAD_ operations were
+converting between float and int unintentionally
+
+git-svn-id: 95f5f7c9af795abc11aca911b844697b26de5baa@11799 d7cf8633-e32d-0410-b094-e92efae38249
+::stable-branch::merge=b3a7dceeadcebc770ad668e3bbd23cefd2c6f14d
+",FALSE,TRUE,severe,,,11_jan_2021_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+OpenTTD/OpenTTD,97d558760c05b8d5fecfcf7eb1d03e64832170ff,"(svn r8279) -Regression (r8274): Removing signals could fail under certain circumstances (not the proper bits of p1/p2 were set to trackbits). Moved trackbits back to bits 0..2, ctrl to 3, semaphore to 4. Also lower the decision of the ctrl-override of signal/semaphore from the GUI into the cmd function since we are passing the ctrl-bit anyways. Bug(s) found by Frostregen; thanks
+",TRUE,FALSE,thanks,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+skyfielders/python-skyfield,125c8f3e607e2813ad2650e915c7ba5f171bac22,"Start rebuilding atop the new vector classes
+
+The task now is to go back through Skyfield and all its classes' odd
+special dunder-attributes that supported operations that we will now be
+supporting with vector math, and re-express all the old operations using
+sleek new ones that will let the cruft be removed in subsequent diffs.
+Exciting!  (Confession: I had to disable a test to get this to pass.)
+",TRUE,FALSE,exciting!,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+google/llvm-propeller,d25dfe43b94bdf9cbd967e254436e7846f45da54,"Significantly simplify gep_type_iterator, and make its interface more general/powerful
+
+llvm-svn: 11708
+",TRUE,FALSE,powerful,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3drepo/3drepo.io,3aceaa2bfbf0efe7d0bb749c1a00e4f93b812b70,"ISSUE #463 - Move to is present rather than displayed for tabs (lol Angular)
+",TRUE,FALSE,lol,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+dotnet/core,ed1c85de463156790130db65caa59e41fe67052d,"dotnetsay: use stdin for message when redirected
+
+This adds a feature to the dotnetsay program to allow using stdin as the message when stdin is redirected. This lets us do fun things like:
+
+    fortune | dotnetsay",TRUE,FALSE,fun,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+tomchristie/django-rest-framework,53921c5c0ce03cecd8d0ded7cc3c8de8eed6a1e2,"Added @natim, @mjumbewu - Thanks :)
+",TRUE,FALSE,thanks,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+tprrt/linux-stable,3d73cf5e18c47d416db4d0734245d3fb087603d9,"[PARISC] Abstract shift register left in .S
+
+Abstract existing shift register left macros as shift register
+right are. This lends itself to a nice clean up of some #ifdef
+blocks in entry.S
+
+Signed-off-by: Kyle McMartin <3c25b01657254677d3e1a8fd1f0742c5d489bd39@parisc-linux.org>
+",TRUE,FALSE,nice,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+alphagov/static,8cbb7976e85b918fc1bda98994a0e14b2fb2a280,"Made these PNGs IE6 friendly
+",FALSE,FALSE,ie6 friendly,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+zeromq/cppzmq,7a6c904f94e64007352f5b936eafa4101b4efcab,"Problem: Examples are not compiled
+
+Solution: Compile the examples when tests are compiled and using C++11
+or greater.
+",FALSE,FALSE,c++ 11 or greater,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+dslutz/qemu,ab08440a4ee09032d1a9cb22fdcab23bc7e1c656,"Merge remote-tracking branch 'remotes/rth/tags/pull-tcg-20180702' into staging
+
+Assorted tlb and tb caching fixes
+
+# gpg: Signature made Mon 02 Jul 2018 17:03:07 BST
+# gpg:                using RSA key 64DF38E8AF7E215F
+# gpg: Good signature from ""Richard Henderson <richard.henderson@linaro.org>""
+# Primary key fingerprint: 7A48 1E78 868B 4DB6 A85A  05C0 64DF 38E8 AF7E 215F
+
+* remotes/rth/tags/pull-tcg-20180702:
+  cpu: Assert asidx_from_attrs return value in range
+  accel/tcg: Avoid caching overwritten tlb entries
+  accel/tcg: Don't treat invalid TLB entries as needing recheck
+  accel/tcg: Correct ""is this a TLB miss"" check in get_page_addr_code()
+  tcg: Define and use new tlb_hit() and tlb_hit_page() functions
+  translate-all: fix locking of TBs whose two pages share the same physical page
+
+Signed-off-by: Peter Maydell <313afa09ce093b19ae1dd74f57c1ebd94508584c@linaro.org>
+",FALSE,FALSE,good signature,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+GSI-HPC/sys-chef-cookbook,25e1e15c95b4dcc78db4413b3e9939c2aa082bbe,"Implement a switch between old and new resource implementation based on the Chef version.
+
+Kudos to Dennis!
+This reverts commit cf34ad16c3813e22bd7ea20737a09aa48d6ff439.
+",TRUE,FALSE,kudos,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+HippieStation/HippieStation,d06b8c42b77d13fb4fc5b8c61491b2985309d32f,"Access Cleanup
+
+HONK! Access and Mime Access merged into Theatre access. They were used interchangably in most cases, with the exception being the Honker mech which is a joke item anyway.
+
+Airlock Electronics now require only maintenance access instead of engine access.
+",FALSE,FALSE,joke,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+cobbler/cobbler,5e2187c8c8781d37c4469db2a5184acbda2ebdf1,"Cobbler system objects can now descend from systems as well as objects, and images are generically PXE-bootable.  This is relatively awesome.
+",TRUE,FALSE,awesome,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+jruby/activerecord-jdbc-adapter,4a55323cdf007c507e921002b8c005f07b56f76b,"[sqlite3] works with bytes (-based string extractiib) just fine
+",TRUE,FALSE,fine,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+RichardTMiles/CarbonPHP,2982632cf0e68cfad279ed53612aa699ed092000,"Working smarter not harder
+",TRUE,FALSE,smarter,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+explosion/spaCy,ed7d268e9391e7257fcc197a71a809b13471afaa,"Fixing vocab doc
+
+Replacing ""like"" with ""love"", coffee suffix should be ""fee"" but not ""ffe""",FALSE,FALSE,"""like"", ""love""",,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+threatgrid/ctim,cad429c171dff89fa7859bef45ff0bc946e961bd,"Clarify relationship-type from sightings to indicators
+
+The STIX 2.0 specification recommends using the `sighting_of_ref` relationship type
+be the sole relationship type between sighting entities and other STIX object types:
+
+```
+  {
+    ""type"": ""sighting"",
+    ""id"": ""sighting--ee20065d-2555-424f-ad9e-0f8428623c75"",
+    ""created_by_ref"": ""identity--f431f809-377b-45e0-aa1c-6a4751cae5ff"",
+    ""created"": ""2016-04-06T20:08:31.000Z"",
+    ""modified"": ""2016-04-06T20:08:31.000Z"",
+    ""first_seen"": ""2015-12-21T19:00:00Z"",
+    ""last_seen"": ""2015-12-21T19:00:00Z"",
+    ""count"": 50,
+    ""sighting_of_ref"": ""indicator--8e2e2d2b-17d4-4cbf-938f-98ee46b3cd3f"",
+    ""observed_data_refs"": [""observed-data--b67d30ff-02ac-498a-92f9-32f845f448cf""],
+    ""where_sighted_refs"": [""identity--b67d30ff-02ac-498a-92f9-32f845f448ff""]
+  },
+```
+
+However, we distinguish between two different kinds of Indicators:
+1. Pattern-based indicators or engines (such as Snort rules or Threatbrain Indicators)
+2. Observable-based indicators and feeds (such as IP blacklists, domain watchlists, etc.)
+
+As the STIX 2.0 spec defines the ""indicates"" relationship type as something that only
+*Indicators* do, and as we also follow this in our other data sources, I strongly recommend
+that we revise our docs to bring the standard, recommended `relationship-types` for
+sightings into alignment with judgements.
+
+`matches` is a perfectly reasonable substitute for STIX's more verbose `sighting_of_ref`,
+for pattern and rule-based indicators, such as Snort rules.
+
+Related to https://github.com/threatgrid/iroh-ui/pull/1353
+",FALSE,FALSE,perfectly reasonable,,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+systemd/mkosi,8615d6a431e4980e40692402b93446332d65bc28,"mkosi: force 256byte inodes on ext4
+
+Let's add some reproducability. The inode size has effects on the mtime
+granularity, fscrypt support and more. mkfs.ext4's internal heuristic
+for determining the inode size hence has some weird effects where mtime
+problems suddenly arise when you build smaller images. Let's fix that,
+and stick to a fixed size, most powerful inode size.
+",TRUE,TRUE,"weird, powerful?",FALSE,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+ADicksonLab/wepy,ef7f9fe7742b8f84049b987efac077b3f14650f4,"updates run methods to new implementation
+
+[body]
+
+Reconfigured things so that the input orchestrator will only ever be
+read from so there is no need to copy and modify it in place anymore.
+
+Furthermore, the protocol for saving checkpoints should be faster
+since we now just have to serialize the intermediate snapshot.
+
+The update of the single checkpoint orch database doesn't require
+serializing the whole thing and so we can update it in place. FOr this
+I modified the _save_checkpoint method to do this in a way that is
+completely transactional (I assume using the write-ahead log of
+SQLite) and adds the new snapshot, removes the old one, removes the
+old run record and adds the new one.
+
+This is important since we are not just serializing the whole
+strucutre and so we have to worry about data integrity. This solves
+that problem.
+
+The _gen_checkpoint is gone now since it really wasn't necessary.
+
+Also there is another command that must be run to initialize the
+database at the beginning of the run for the checkpoint
+_init_checkpoint_db.
+
+The other significant thing to note which won't change the CLI
+interface inputs, but does change the way that files are outputted is
+that the final orch file won't be craeted. This is a good thing. In
+the past it was a highly inneficient thing that basically duplicated
+the entire input orchestrator causing huge bloat. Instead the final
+snapshot is written to the checkpoint.
+
+So the checkpoint file (checkpoint.chk, which should be changed to
+something better) is the only output containing snapshots. It contains
+2 snapshots (start and end) at any time, a single configuration, no
+metadata, and the run table (with 1 run in it). SO it is decently
+lightweight.
+
+Any other approach would require access to the main orchestrator
+database, which causes a huge operational problem because potentially
+many simulations will be needing access. This would require a
+significantly more complex system for managing concurrent connections
+that would probably end up causing a lot of problems (mainly because
+if a process blocks and then fails (very likely) it would halt all
+progress for the other simulations).
+
+So I think it is a good tradeoff.
+
+Still need to clear up some stuff, test it, and clean up the
+documentation so still WIP.
+
+WIP = true
+",TRUE,TRUE,"good, worry",,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+ximion/appstream,4c2178bfc2480aa23892ff0408fe75948faeaa7b,"Make cache builder smarter in detecting metadata changes
+
+This is especially nice for the new APT support.
+",TRUE,FALSE,"samrter, nice",,,11_jan_2021_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+12047883,51774876,:+1: thanks for updating the imports to es6!,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+9689115,41110624,Please check again and make sure and report back with results. Thanks in advance.,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+9119013,38800942,Thanks for adding tests. :),TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+13312355,59774335,"Ahh, OK.  Probably possible to change the config, but it might make sense to change Zulip to not have trailing newlines to avoid this issue in the future.  Thanks for the info!  I opened https://github.com/zulip/zulip/issues/666 to track the newline issue",TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+11431655,49084353,"Ah, yep, thanks.",TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+1696580,5043575,Good spot. Added.,TRUE,FALSE,good,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+7916444,32146318,"Good point; change pushed.    AFAIK, the contextVars are necessary to the intended use case: the function is designed to make python deployment-specific settings (`api_settings.API_PREFIX` and `api_settings.API_DOMAIN`) available to JS function calls.    ",TRUE,FALSE,good,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+10531165,45235887,Great idea.,TRUE,FALSE,great,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+15668118,70089262,Good catch here too. I didn't notice that we currently only cache the latest version. I'm wondering if maybe we should be Versioning into the PersistenceStore itself?,TRUE,FALSE,good,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+12806832,76445971,"I feel this rule and all of the above are just great! They allow you to split your database in a very sensible and powerful way for most salesmen.    However, there's still a problem: What if for any reason I need user from team B see a record from team A",TRUE,FALSE,great,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4523588,16961045,What we actually said was that finalizeContext should be changed to make a single call to write all the relation settings and all metrics in a single api call. Seems like a bit of work - I'm happy to pair on it with you,TRUE,FALSE,happy,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8209567,33591694,Thanks!  Fixed.,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+2476957,7754607,"IMO we should leave the protected properties unchanged as we create more problems than benefits at this stage. I agree that those should be private but the codebase concerning private/protected, underscore/non-underscore is very inconsistent throughout th",FALSE,FALSE,more problems than benefits,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4682748,18004889,"We can revisit this as the decision solidifies, that's fine",TRUE,FALSE,fine,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+9127767,39923850,"One year was fine, but it was arbitrary, and we offered no way to back out of the choice. To reset expectations and improve new-user experience with a dangerous-feeling feature like this, I looked for community guidance. Browser preload qualification star",TRUE,FALSE,fine,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8380698,34662156,Nice! I have updated similar cases.,TRUE,FALSE,nice,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+2007111,6133757,"Unconditionally getting a parameter from kwargs doesn't make a lot of sense to me. Is there a reason you couldn't do this?    ```python  @receiver(badge_was_awarded)   def notify_award_recipient(sender, award, **kwargs):      send_award_notification.delay",FALSE,FALSE,notify_award,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+16709586,77424333,"Oh nice catch, I set it to `KeyBuilderImpl`",TRUE,FALSE,nice,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+14173594,60897010,"Ohh, that's good to know! I will definitely switch to that. Will be honest, I followed what seemed to be conventional in the class before, and I may have missed the release part. ",FALSE,FALSE,good to know,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+5713329,23128871,You could define the uber resource that combines resource access or exec access or proxy access.  That is fine.  I think the larger point is the the access request should model kubernetes/origin resource patterns and not generic http.  The two names sugge,TRUE,FALSE,fine,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3925210,13873004,Thanks I add a todo with my PR,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+7715002,31101478,:+1: thanks that clarifies it,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+16637855,77321319,"Definitely worth discussing the effort but I think there is value in using this RFE to refactor/unify our usage of the API. Initial thoughts on a additional refactoring were  along the lines of:    ```  public static String getFilename(int series, int ima",FALSE,FALSE,worth discussing,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+6155980,24169178,"Good call, didn't see that when adding this. Will factor out the duplicate logic.",TRUE,FALSE,good call,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+6361513,25188288,"Something like this seems like a good idea, but it now seems like we'd want all the work to be scheduled on the same thread (to mimic the ""request"" thread in the Concord dispatcher).    I'm going to hold off on this for now...",TRUE,FALSE,seems like good idea,FALSE,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+13544200,58293270,"Yes, good idea. Done.",TRUE,FALSE,good idea,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+7334647,29469026,Ah I think you're right -- I was getting `scope_kind` and `scope.kind` reversed in my head. Cool,TRUE,FALSE,cool,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4362981,16135437,Good catch. Looks like a leftover from the test for release date source that this was taken from.,TRUE,FALSE,good catch,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3562852,12022175,"This particular part is a pain because of how render rich text works.  Only way i could get html span into paragraph    Could just let time stamp sit below introduction text. Less nice view,  nicer code. What do you think  On 26/04/2014 10:48 am, ""Robert ",TRUE,FALSE,nicer,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+5278484,21135915,Thanks! I've modified.,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8916743,37550129,Sure I'm fine with that.,TRUE,FALSE,sure,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3181484,10409406,Thanks for telling me that my own demotivation is indeed a strawman! I'll be sure to keep that in mind the next time I'm working on other fun weekend projects.,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3120557,10090226,"Portlet is named ""Manager"" but is available to ""Everyone"".  If that's correct, worth a comment here articulating why that's so and a change to the description of the portlet to reflect.  If this portlet should only be available to privileged users, would ",FALSE,FALSE,worth a comment,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+14266138,61503207,"thanks @kennyt     @MatApple totally agreed, but this particular line is already merged. ",TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4592922,17800210,"This just avoids having to write a base model or parse function that excludes the HAL _links _embedded stuff, which I think is a nice thing to keep out of our models.",TRUE,FALSE,nice,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+11993374,54119396,excellent SR text.,TRUE,FALSE,excellent,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+9074406,43196225,"oh i see, thanks!",TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8599746,35790738,Fixed. Thanks @hairmare.,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4316167,15729992,Thanks for fixing it! CC: @srowen,TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4159680,15040599,It is better to name this `installNpmPackage` as it is actually installing the package :smile:,FALSE,FALSE,smile,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3447384,11388377,"Thanks, already changed",TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+15206826,65580189,"Could use some help here on whether I should mention the jQuery license, or just remove the sentence about copyright altogether, or something else. Thanks!",TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+1865512,5625128,I feel like `$NAT_HEALTHY` is not the right conditional for this flip?  Isn't `$ROUTE_HEALTHY` what's actually set after the routing tables are changed to use the backup NAT?,FALSE,FALSE,healty,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+10622247,45765188,"@andy-armstrong nice catch!    ```  > 'one' === 'two' || 'three'    ""three""  > 'two' === 'two' || 'three'    true  > 'one' === 'two' || 'three'    ""three""  ```",TRUE,FALSE,nice,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4513513,16848691,"Good catch. I just refactored this code as-is, but I'm happy to fix it. BTW, I think we got lucky as the ids seems to start from 1.",TRUE,FALSE,good,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+12073388,52436121,Good catch :+1:,TRUE,FALSE,good,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+13602934,58571336,Great - thanks for the details.,TRUE,FALSE,"great, thanks",,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3929279,13901850,"I certainly agree that moving the actual business logic out of here, and only handling HTTP level operations is a good way to do it.  ",TRUE,FALSE,good way,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+255460,1450969,Awesome. Will do.,TRUE,FALSE,awesome,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8336487,34100623,"Thanks @mat    Why this badge, as opposed to https://godoc.org/github.com/influxdb/influxdb?status.png Any particular reason?",TRUE,FALSE,thanks,,,11_jan_2021_pr_pos_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+6564183,63880528,"Ah, okay. I never had to work with an explicit value ""w"" but rather constructed wk in a function. If you can construct wk directly, both perform roughly equally.    First of all the statement ""differences on the order 1e-7"" is misleading. The root mean sq",FALSE,TRUE,misleading,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+11967035,51366349,"You added a couple of unneeded lines. Sorry, pet peeve :smile: ",TRUE,TRUE,"sorry, smile",,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8568086,35300284,"But its the destination address size, so using the variable `next_hop_size`  is misleading here.  (it tricked me to ACK #3478, sorry for that)",FALSE,TRUE,misleading,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+9921352,42579536,"All the `par` type params were especially creatively non-conformist, as I recall from when I peeked under that hood/bonnet. It's too bad Dr Odersky didn't ask for straw man proposals for type param conventions for collections. Lets settle the fundamentals",FALSE,TRUE,bad,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+2070178,6623239,I'm not sure about the suggestion made by this paragraph. It's a bad sign when we have to show an example that bypasses Rails to achieve a more or less common use-case.    I think the first solution using a simple assignment after `permit` is the way to g,FALSE,TRUE,bad,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3003839,9625770,"Thanks.    well, unfortunately, I'm getting conflicting feedback on this feature. On one hand I've been asked to make the function names shorter (from @nedbat) , e.g. get_microsite_configuration_value() -> get_value(). However, if I make these straight up",TRUE,TRUE,"thanks, unfortunetly",,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+15774716,72458729,"If you further add a line like `echo ${CMD[@]}`  after `if [ ""$LAUNCHER_EXIT_CODE"" != 0 ]; then`, it will output something like `There is an error1`, which will report the error happened but the ending error code `1` looks ugly.",FALSE,TRUE,ugly,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8280092,36332605,"yeah, sorry... that was unclear... tests to make sure our project can round-trip a namespace (since we're doing that now)",FALSE,TRUE,sorry,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+11305978,48589266,This is odd. Why the $?,FALSE,TRUE,odd,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+10654152,45880371,"The part about meaningless flags is covered by https://github.com/openshift/origin/pull/5968.    Regarding implementing this upstream for ingress, think about it as a carry. If it doesn't match, we have to conform. So in our case I guess we would have to ",FALSE,TRUE,meaningless,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8303747,36500837,"Whoops, good spot. :flushed: I misread the code that was generating the UUID.",TRUE,TRUE,"whoops, good",,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+11795478,50626413,"Point taken, I've measured the clone data taking over 2s. Seems like the clone data gets slower proportionate to the overall game size.    Why is the casualty sorting so slow? Is it slow when game data is large, or just slow when there are lots of units?",FALSE,FALSE,casualty as subject,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8077313,32987605,oh... that's awful(ly subtle),FALSE,TRUE,awful,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+14529934,63128003,I note there's a very subtle behavior change where we (sadly) have different behavior when going [through the instance method first](https://github.com/manageiq/manageiq/blob/7af0731a671a5426697eebd612046508755f7760/app/models/miq_expression.rb#L436-L442),FALSE,TRUE,sadly,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+16480199,77023820,I find it rather difficult to differentiate between what `plan` and `planDetails` contain. Could we name it a bit differently? :),FALSE,TRUE,difficult,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+10636917,45688351,"Sorry, but do you mean we can change it to `DistributedLDAModel.DistributedWriter(this)` ?",FALSE,TRUE,sorry,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4316594,16013343,"Ugh, yeah maybe. `t`, as such, is kind of a hack. They way gettext and extraction are intended to work, `t` or whatever we call it would actually perform the translation, rather than just act as a stand in. If we want to go through the trouble of creating",FALSE,FALSE,trouble,FALSE,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+5846766,25096773,"the name of this value is very confusing. Say I'm a new user to Spark on Mesos and I see both `spark.cores.max` and `spark.mesos.coarse.cores.max`. Which one do I set, do I set both? Does one override the other?    I think a better name for this is probab",FALSE,TRUE,confusing,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8081500,33146259,"I think this will have the unintended side-effect of excluding *all* junit tests.  Its really unfortunate that the junit args & the scalatest args are incompatible.  From https://github.com/sbt/junit-interface, ""Any parameter not starting with - or + is t",FALSE,TRUE,unfortunate,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8321774,37053280,"Hmm... maybe if you don't trust the server from which you're fetching data? But in that case, you would have had to knowingly set `mode: 'cors'` anyway, so you could just as easily set `credentials: null`.    It's a bit more dangerous of a default, but I ",FALSE,TRUE,dangerous,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+4312453,16414654,"I don't know what is supposed to happen for a range request for something else than ""bytes"", so we answer ""Bad Request"".    Only ""bytes"" requests are supported.    And we check that the request can be split around ""="" and ""-"".    This is to parse ""bytes=f",FALSE,FALSE,bad request,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+16435986,75807703,"Kindly check in SwingComponents if there is a wrapper API for this Swing method (that avoids the useless first `null` arg). If not, please feel free to create one",FALSE,TRUE,useless,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+5189674,20214925,Ah sorry didn't see that line. Nevermind then.,FALSE,TRUE,sorry,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+14621842,63769537,"Adding two floats cannot produce not-float (in opposite to integer overflowing to bigint). In worst case it'll produce `infinity` but will never get out of range, so I assume no boundaries check are needed (?).",FALSE,FALSE,worst case,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+818086,2696854,"Ah, sorry, should have checked the next function first.  Just ignore the previous comment.",FALSE,TRUE,sorry,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+14811459,63788120,"Could those be considered special cases and treated individually? I just want to avoid replacing a good default with something that appeases a few broken build systems, but creates more harm than good. (As far as I'm aware `MACOSX_DEPLOYMENT_TARGET` is ju",FALSE,TRUE,more harm than good,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+15446207,68557426,A less awkward version that does not involve a pipeline?    ```sh  rose macro --config='../config' -V <<<'' >>'temp'  ```,FALSE,TRUE,akward,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+7297703,30463118,"Hm, okay, too bad.",FALSE,TRUE,too bad,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+16004276,73624530,Unfortunately they were hard-coded as `100px` and `200px` in reactjs-components :/    https://github.com/mesosphere/reactjs-components/blob/64b059a3417983370914c892177f3e3e5b3393f5/src/Form/form.less#L325  https://github.com/mesosphere/reactjs-components/,FALSE,TRUE,unfortunately,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+15616315,68984884,"This `min()` seems strange, especially since queue.size() can increase while processing. Why not just use `MAX_WRITES_BEFORE_FLUSH` directly?",FALSE,TRUE,strange,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+15431955,66720954,"Silly me, I just moved the code, commited and opened PR without thinking. You are right of course.",FALSE,TRUE,silly me,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+5707824,22400243,This is going to be a pain to maintain in the future. Wouldn't another call to App:classname() also work here?,FALSE,TRUE,pain,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+6575778,26114393,"Sorry, which one?",FALSE,FALSE,Sorry?,FALSE,the border between politness and sentiment is not clear,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+9092523,38269976,"Thats actually a bad practice, and also wasn't local'd. Better to just say that bit of code twice than to var it as ""mob"" when mob is already the argument name of the function if only so future editors/readers don't get confused.     General rule of thumb",FALSE,TRUE,"bad, confused",,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+9083819,38183023,The xml version of doing this is a fair bit more awkward,FALSE,TRUE,awkward,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+6088752,23967443,This seems like a really weird name for this object given that it won't actually be cached by the object.  That's made even weirder by the fact that `CompressedIndexedLongs` is actually caching the result already.,FALSE,TRUE,weird,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+6225381,24684196,"Haha, either git or the conflict resolution got messed, this change should have only gone in 15.sql ... I'll let it slide :laughing: ",TRUE,TRUE,"haha, laughing, messed",,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+6632994,26282925,"If you are in doubt, I would rather revert this as well.",FALSE,TRUE,"doubt, (not as well)",,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+11384530,48864355,"I'm sorry, I'm not quite sure what you mean.",FALSE,TRUE,sorry,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3290959,10787341,"Sorry that I'm a novice in Shogun community... Actually I'm currently learning the library for some existing functionality, including data loader.",FALSE,TRUE,sorry,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+7406970,29733753,`transaction` name is misleading. Maybe `dbConnection`?,FALSE,TRUE,misleading,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+13265629,61680222,"Oops, I see what you mean now. Yeah we should just fix it in a separate PR to use `chan` everywhere then.",FALSE,TRUE,oops,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+1442912,4119929,"The parser was freaking out, thinking that I was trying to subtract 'package' from :app, and I wanted to leave it consistant.",FALSE,TRUE,freaking out,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+13658098,58783248,"Unfortunately we can't, it brings a dialyzer warning.  There is one of the fix commits resulted from the linked issue: https://github.com/elixir-lang/elixir/pull/4432/commits/ee66a9d1096f29c513878ecac8162684b6a1f533.",FALSE,TRUE,unfortunatly,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+3445041,11418311,Resharper was complaining hence I made it uppercase. It is a static variable. Do you still want it to be  `_extensions`?,FALSE,TRUE,reshaper complaining,FALSE,Is mentioning that a tool complins complaining?,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+7718325,31119022,"oops you actually have added some `\ \ s*`, discard my comment",FALSE,TRUE,oops,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+15355477,66541600,"I'm confusing with these Catalog/SessionCatalog/ExternalCatalog here, thought this is SessionCatalog or ExternalCatalog, so it make sense to be here (together with other API related to cache).",FALSE,TRUE,confusing,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+8721534,37610508,"Yes they are. Sorry, my bad. Leave it as is",FALSE,TRUE,"sorry, my bad",,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+7670645,31065663,"... then it seems pretty bad to set it to 0 in that case, no? Isn't that going to permanently un-delete an object that should be deleted?",FALSE,TRUE,bad,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
+5139475,20218482,"```python  msg = 'Archive extraction failed. Bad archive?'  log.error(msg, exc_info=True)  raise SigningError(msg)  ```",FALSE,TRUE,bad,,,11_jan_2021_pr_neg_hits_040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3
