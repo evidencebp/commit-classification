@@ -278,3 +278,2222 @@ parentheses around assignment used as truth value [-Wparentheses]""
 Signed-off-by: Dan Carpenter <ff341aa343d564f9e53e9dcb6996be8c04859a66@oracle.com>
 Signed-off-by: Tejun Heo <546b05909706652891a87f7bfe385ae147f61f91@kernel.org>
 ",FALSE,FALSE,"While gcc complians, it probably doesn't do it with a negative sentiment",,,28_dec_2020_neg_hits_3334798837
+opensim-org/opensim-core,0f9d437db003f6fa8da5f22828e40b3a5ad7d113,"The pendulum now has two translational (x & z) and 3 rotational degrees of freedom between it and the ground.  y is up.
+
+git-svn-id: 9e047e1e624cce0a2485e750063112e834f85522@3204 fc29be9c-2cb0-420d-b520-73dbd18add6e
+",FALSE,FALSE,degrees of freedom is not the desired freedom,,,29_dec_2020_pos_hits_e447a9eef8
+stinsonga/emacs-mirror,dcb07ae9dc20c48dc4cd12a1e618e12ce6afa61a,"(XTread_socket) <ConfigureNotify>: Don't call
+x_wm_set_size_hint if window has no parent yet.
+Simplify the call to x_real_positions.
+(x_make_frame_visible): Use win_gravity to decide whether to
+call XMoveWindow.  Also, don't do it if frame already visible.
+",FALSE,FALSE,Not such an impressive win,,,29_dec_2020_pos_hits_e447a9eef8
+ulfalizer/Kconfiglib,67e890cc9d926213fbec93afb3ee14e6c24f9a50,"Handle multiple definition locations in a nicer way
+
+Instead of precalculating a set() to get unique symbols, precalculate a
+list with any duplicates from multiple definition locations removed, and
+preserve the order of the symbols within it.
+
+This makes it possible to get rid of the Symbol._written shenanigans in
+functions that only need to iterate through unique symbols in sorted
+order, which is all of them except write_config() (because it needs to
+walk the entire menu tree).
+",TRUE,FALSE,nicer,,,29_dec_2020_pos_hits_e447a9eef8
+dropwizard/dropwizard,bb6209d053995c4b2111a0525ae231902f662edb,"Exception Mapper Logging Enhancements (#2129)
+
+* Made master POM Eclipse friendly.
+
+Eclipse does not support the errorprone compiler; moved errorprone setup
+from build-plugins to profiles. There are now two profiles, one for
+Eclipse and one for everything else.
+
+* Exception mapper logging enhancements
+
+1) Implemented debug logging for JerseyViolationExceptionMapper.
+2) Fixed compiler warning regarding serialization for
+JerseyViolationException.
+3) Wrapped debug statement in JsonPropcessingExeptionMapper with
+""isDebugEnabled""; this will ensure the JVM does not bother loading and
+caching the log string unless debug is actually enabled. This will also
+allow more aggressive code optimization when running the server JVM.
+
+* New unit test.
+
+* Changes as per PR code review
+
+Removed if (LOG.isDebugEnabled()) checks from log statements with
+simplistic messages to match requested style.
+",FALSE,FALSE,"eclipse friendly, JVM doesn't bother",,,29_dec_2020_pos_hits_e447a9eef8
+moodle/moodle,f594143b56b7c54b47b93dc337263dd7344e6aa8,"Now the Wiki module seems to be working fine. But I've marked it as
+""PROG"" (progress) because I haven't been able to reproduce the load
+of binary data directly to DB reported by some moodlers in forums.
+
+I've created bug 2634 to see if somebody can point me in the correct
+direction to reproduce it.
+",TRUE,FALSE,fine,FALSE,,29_dec_2020_pos_hits_e447a9eef8
+GNOME/gnome-builder,9d84ba5009a41ab729d7421be1a4f09485600169,"code-index: port index builder to IdeTask
+
+We have more control over where things are freed using IdeTask,
+and we can use this object as a way to catch any issues that
+might still exist before we push things through the rest of the
+code base.
+
+That said, I've used IdeTask to catch lots of bugs already, so
+I'm pretty confident in it's usage now.
+",FALSE,FALSE,"I'm pretty confident that ""I'm pretty"" is not positive here",,,29_dec_2020_pos_hits_e447a9eef8
+yade/trunk,9b33018eb001a3acec56f00d447065a1713f412c,Previous commit correction. Thanks to Vaclav.,TRUE,FALSE,thanks,,,29_dec_2020_pos_hits_e447a9eef8
+vroyer/elassandra,52e6fdf3d68b7ba77b6a88d8a921c830d5c3200b,"Unmute WildFly tests in FIPS JVM (#32814)
+
+WildflyIT test fails in a FIPS JVM due to the amount of output in stderr. The excessive stderr output is due to https://bugs.openjdk.java.net/browse/JDK-8202893 and is not an indication of a failure that should be tracked.
+This commit adjusts the limit to something more lenient that would allow the test to succeed.
+Reverts #32543",FALSE,FALSE,The limit is lenient,,,29_dec_2020_pos_hits_e447a9eef8
+os-autoinst/openQA,d29cef5f96cdadf8004ca5ed47b957113ec00f50,"Timeout for wait_for_ajax
+
+This function currently has two flaws:
+
+- if jQuery is not defined, it'll produce errors forever
+- if jQuery.active is never set to  1, the test will run forever
+
+There should be a maximum timeout for the wait, as well as a check that
+avoids repeated Javascript errors which turn into redundant test failures.
+
+As a bonus, showing successful waits is probably nice to have.
+",TRUE,FALSE,nice,,,29_dec_2020_pos_hits_e447a9eef8
+artsy/metaphysics,4d1023f8c3f981a5c20ef7a1c46ce2a7612ee242,"Merge branch 'master' into strengthen_types
+",FALSE,FALSE,strengthen_types,,,29_dec_2020_pos_hits_e447a9eef8
+netty/netty,21720e4a7865b77d252a4263271663d7ed462440,"Allow to build on powerpc
+
+Motivation:
+
+At the moment it is not possible to build netty on a power 8 systems.
+
+Modifications:
+
+- Improve detection of the possibility of using Conscrypt
+- Skip testsuite-shading when not on x86_64 as this is the only platform for which we build tcnative atm
+- Only include classifier if on x86_64 for tcnative as dependency as this is the only platform for which we build tcnative atm
+- Better detect if UDT test can be run
+
+Result:
+
+Fixes https://github.com/netty/netty/issues/9479
+",FALSE,FALSE,motivation is part of the message structure,,,29_dec_2020_pos_hits_e447a9eef8
+openzipkin/zipkin,823cf58b5acc5b296032cb346e6aa2918d30f09c,"Changes server README to encourage pre-built artifacts (#1257)
+
+Before this change, the zipkin-server README directed people to build
+locally. This is not the easiest way to get started, especially on
+less used environments like Windows and Eclipse. This encourages users
+to download pre-built jars instead (similar to the root README).
+
+See #1256",TRUE,FALSE,encourages,FALSE,,29_dec_2020_pos_hits_e447a9eef8
+Jackett/Jackett,90959c1fc3c269d01dd67fea927b8cfb6c5fc2c3,"Best Friends: Fix parsing for users with waiting time (#696)
+
+",FALSE,FALSE,best friends?,FALSE,,29_dec_2020_pos_hits_e447a9eef8
+tensorflow/tensorflow,0330d3459015261587e60cf86f311772316c8eda,"Check `group_size` in collectives is a positive integer.
+
+PiperOrigin-RevId: 274866052
+Change-Id: I99f130e27e8ff3e126aaf8d382519cef6bb0d41e
+",FALSE,FALSE,positive integer,,,29_dec_2020_pos_hits_e447a9eef8
+qgis/QGIS,5c89fdfea39ffb454943a837b9b10ab2539464ba,"[SERVER][FEATURE] Add DescribeLayer Method to WMS
+
+*Styled Layer Descriptor profile of the Web Map Service* : DescribeLayer
+
+http://www.opengeospatial.org/standards/sld
+
+Defining a user-defined style requires information about the features being
+ symbolized, or at least their feature/coverage type. Since user-defined styles
+ can be applied to a named layer, there needs to be a mechanism by which a
+ client can obtain feature/coverage-type information for a named layer. This is
+ another example of bridging the gap between the WMS concepts of layers and
+ styles and WFS/WCS concepts such as feature-type and coverage layer. To allow
+ this, a WMS may optionally support the DescribeLayer request.
+
+DescribeLayer method has been thought to be a better approach than overloading
+ the WMS capabilities document even more.
+
+For each named layer, the description should indicate if it is indeed based on
+ feature data and if so it should indicate the WFS/WCS (by a URL prefix) and
+ the feature/coverage types. Note that it is perfectly valid for a named layer
+ not to be describable in this way.
+",FALSE,FALSE,perfectly valid,,,29_dec_2020_pos_hits_e447a9eef8
+coursier/coursier,e9aec8c51118aa9f83b8c85eaafac1d169766b43,"Merge pull request #497 from coursier/topic/fix-unidoc
+
+Ensure unidoc generation works fine with sbt-coursier",FALSE,FALSE,works fine,,,29_dec_2020_pos_hits_e447a9eef8
+darktable-org/darktable,049aeb7103e12e2d428aba8969e7e52261694a51,"Add Pentax K-5 enhanced matrix thanks to Denis Cheremisov
+",TRUE,FALSE,thanks,,,29_dec_2020_pos_hits_e447a9eef8
+puavo-org/puavo-os,ef61b3539c20d38633724b0ae7a42420a1775e65,"Rename README to README.rst to take advantage of Github rst-rendering
+",FALSE,FALSE,take advantage,,,29_dec_2020_pos_hits_e447a9eef8
+geneweb/geneweb,9b15e79d6344f7ec8879faf44aa79c5fc365a249,"Fix GEDCOM line alignement
+
+When GEDCOM lines split (CONC/CONT tag) text lines are not cut at the good length (not aligned)
+",FALSE,FALSE,good,,,29_dec_2020_pos_hits_e447a9eef8
+GoldenCheetah/GoldenCheetah,068dcf0fb2e9f129793454680188f3a46cd8ede4,"Fix Huge Fonts on R chart
+
+.. when on a hidpi display
+",FALSE,FALSE,huge,,,29_dec_2020_pos_hits_e447a9eef8
+flutter/flutter,18d5c5e7aec9c726fb2eaf74a5dab04979179c03,"didChangeNext()
+
+Replace didPushNext() and didReplaceNext() with didChangeNext(), and
+call it in more cases, so that a route can easily track the next route.
+
+Use this to make TransitionRoute properly track its next route so that
+you can do next-route-driven animations that work even with removes,
+replaces, and other crazy manipulations of the navigator stack.
+",FALSE,TRUE,crazy,,,29_dec_2020_neg_hits_e447a9eef8
+georchestra/georchestra,9833ff38259b5a8a2754082fa1cb3340831ff9da,"Add a 'testdelegatedadmin' user (#2112)
+
+* remove testuser & testeditor from ORGADMIN role, this was confusing. This
+  effectively reverts 7e62e684
+* adapt sample delegations in 05-console-data.sql
+",FALSE,TRUE,confusing,,,29_dec_2020_neg_hits_e447a9eef8
+davinkevin/Podcast-Server,e533bce22ca15c6cea9f9934dc392e5f88db8964,"chore(pom): remove useless repository server
+",FALSE,TRUE,useless,,,29_dec_2020_neg_hits_e447a9eef8
+JetBrains/intellij-community,f37ff775bc7f7b56e5deb362d66b306442855a97,"IDEA-145688 MacOSX: Default L&F: hidden password looks ugly
+",FALSE,TRUE,ugly,,,29_dec_2020_neg_hits_e447a9eef8
+facebookexperimental/eden,7f886187215fead216590c2a03a288fb20aa9d75,"hg rage: add environment variables to the output
+
+Reviewed By: phillco
+
+Differential Revision: D13042931
+
+fbshipit-source-id: bbd283021bce67f42811664db49e135e5564bb5d
+",FALSE,FALSE,rage?,,,29_dec_2020_neg_hits_e447a9eef8
+suffolklibraries/sljekyll,1cb72b6ea964a2b73a060d8181fd9037a323e64a,"alice is stupid
+",FALSE,TRUE,stupid,,,29_dec_2020_neg_hits_e447a9eef8
+Zarel/Pokemon-Showdown-Client,a9b8155b5dff890ce2c75f04d36a341e82faa65f,"Implement EV guesser test
+
+Also improve existing battle test.
+",FALSE,FALSE,battle,,,29_dec_2020_neg_hits_e447a9eef8
+librenms/librenms,86330d051ebfefe1d212c05319f7f57ee5f10d17,"Add doc stub for SNMP trap handling
+",FALSE,FALSE,trap,,,29_dec_2020_neg_hits_e447a9eef8
+SleepyTrousers/EnderIO,42a626136c5047e0829779cb63dbbcc9a7fa33b0,"Protect our server tick profiling against bad mods
+
+",FALSE,TRUE,bad,FALSE,,29_dec_2020_neg_hits_e447a9eef8
+kubernetes/kubernetes,6c059cb9a14d8f07b5812c8f7195c638e4abc68a,"Merge pull request #36169 from hpcloud/vsphere_bad_conditional
+
+Automatic merge from submit-queue
+
+Bad conditional in vSphereLogin function
+
+```release-note
+Fixes NotAuthenticated errors that appear in the kubelet and kube-controller-manager due to never logging in to vSphere
+```
+
+With this conditional being == instead of !=, a login would never actually be attempted by this provider, and disk attachments would fail with a NotAuthenticated error from vSphere.",FALSE,FALSE,bad is descriptive,,,29_dec_2020_neg_hits_e447a9eef8
+alphagov/smart-answers,a0f0b744f9672485e11663dc36168342fb0da918,"Further refactor of register birth and death abroad
+",FALSE,FALSE,death,,,29_dec_2020_neg_hits_e447a9eef8
+apache/spark,70f4bbccc511c60266511c752a1fa37b20be3f8d,"[SPARK-28414][WEBUI] UI updates to show resource info in Standalone
+
+## What changes were proposed in this pull request?
+
+Since SPARK-27371 has supported GPU-aware resource scheduling in Standalone, this PR adds resources info in Standalone UI.
+
+## How was this patch tested?
+
+Updated `JsonProtocolSuite` and tested manually.
+
+Master page:
+
+![masterpage](https://user-images.githubusercontent.com/16397174/62835958-b933c100-bc90-11e9-814f-22bae048303d.png)
+
+Worker page
+
+![workerpage](https://user-images.githubusercontent.com/16397174/63417947-d2790200-c434-11e9-8979-36b8f558afd3.png)
+
+Application page
+
+![applicationpage](https://user-images.githubusercontent.com/16397174/62835964-cbadfa80-bc90-11e9-99a2-26e05421619a.png)
+
+Closes #25409 from Ngone51/SPARK-28414.
+
+Authored-by: wuyi <315d129247cdf1c97adf1451120b7428ae20ce7e@163.com>
+Signed-off-by: Thomas Graves <a1a405b82800b492a7268cba6bc58270d2b527de@apache.org>
+",FALSE,FALSE,A developer named Graves,,,29_dec_2020_neg_hits_e447a9eef8
+MRPT/mrpt,81c96682ee9975f73ea29f7ed50499e53aa1cfe7,"FIX: pinhole must accept more distortion parameters (since opencv3)
+",FALSE,FALSE,distortion parameters,,,29_dec_2020_neg_hits_e447a9eef8
+BuddyForms/BuddyForms,c696ebce1b9e073c2d3dfdada8f1d053ddaa71bc,"update Validation Plugin - v1.15.0
+just added an if statement to avoid empty array issues
+Fixed a ugly validation error where hidden values with required attribute have been validated but could never have a value because they are hidden
+",FALSE,TRUE,ugly,,,29_dec_2020_neg_hits_e447a9eef8
+pfsense/pfsense,351ef3ef2ac1bbcfb0643a5efc46a3970d06d78c,"Fix #7151 Misleading setHelp for Interface Group Name
+
+Might as well use the same text as is given to the user in the error message already in this code.",FALSE,TRUE,misleading,FALSE,,29_dec_2020_neg_hits_e447a9eef8
+moodle/moodle,00da1e601095b132a95f384dd6184e1cf1f17a75,"MDL-59116 analytics: Multiple predictions for each analysable time range
+
+Now we only predict using the most recent range available, this means
+that if someone upgrades to moodle 3.4 at three quarters of a course
+we will only calculate the latest range, previous ranges were not
+displayed anyway once more recent predictions were available.
+
+This commit deletes all previous predictions :) this shouldn't be a
+problem in master as we don't provide any guarantee, the alternative
+(retrive sampleids from mdl_files) would have been slow and a waste of
+time as well as require horrible code in an upgrade step (text fields
+do not accept defaults nor we can use NOTNULL).
+",FALSE,TRUE,"waste, horrible",,,29_dec_2020_neg_hits_e447a9eef8
+ammobinDOTca/ammobin-api,1a9cf9f215668e7abe513b0ec5e3ba3203319bb7,try to prevent bad strings,FALSE,FALSE,bad is descriptive,,,29_dec_2020_neg_hits_e447a9eef8
+tensorflow/swift-apis,4ff21c95ef7875128f3a42b213778da2abd16f2f,"X10 bindings: appease `cl` (#841)
+
+Unfortunately, `clang` accepts the redeclaration with different linkage,
+`cl` objects.  This does an even worse workaround for this problem by
+relying on the implementation to mark the declarations with
+`__declspec(dllexport)` and getting the annotation incorrect for the
+user code.  This should have only a minor penalty for Windows in terms
+of performance.  Further complicating matters is that `cl` does not seem
+to accept `__declspec(dllexport)` after the return type with bazel for
+some reason, so explicitly place it before the decl, which would break
+clang's `__attribute__` usage.",FALSE,TRUE,", worse",,,29_dec_2020_neg_hits_e447a9eef8
+symfony/web-profiler-bundle,1c885307662cfa7414e5bdb2e65d3e3a9520636e,"Merge branch '2.8' into 3.0
+
+* 2.8:
+  [ci] use hirak/prestissimo
+  [Filesystem] Fix transient tests
+  [WebProfiler] Sidebar button padding
+  Updated some missing READMEs
+  [HttpFoundation] Avoid warnings when checking malicious IPs
+  [HttpFoundation] Set the Content-Range header if the requested Range is unsatisfied
+
+Conflicts:
+	appveyor.yml
+	src/Symfony/Component/Intl/Tests/DateFormatter/AbstractIntlDateFormatterTest.php
+",FALSE,FALSE, is descriptive,,,29_dec_2020_neg_hits_e447a9eef8
+shopgate/theme-gmd,daa292b7849ff79cf2159ab6c7e7a19199b19384,"CON-2837 - toast/snackbar message extended by possible action (first implementation for favorites - undo). (dirty)
+",FALSE,TRUE,dirty,,,29_dec_2020_neg_hits_e447a9eef8
+google/nomulus,1004ef5621eb70db72de1659180a7b9dbaa20384,"Allow unsetting of the support email group, disabling ""support users""
+
+In addition to just making good sense to not have support group for some
+environments (local? unittest? crash?) - connecting with G Suit requires
+additional permissions that are harder to find.
+
+Specifically, it requires the Json Credentials that just aren't set in the
+Dummy Keyring used on some environments.
+
+So we make sure to not even *try* to create the credentials if the support
+email isn't set
+
+-------------
+Created by MOE: https://github.com/google/moe
+MOE_MIGRATED_REVID=225589255
+",FALSE,FALSE,making good sense,,,29_dec_2020_pos_hits_f5d826c527ad
+Taeung/tip,8c56cacc724c7650b893d43068fa66044aa29a61,"libata: fix unexpectedly frozen port after ata_eh_reset()
+
+To work around controllers which can't properly plug events while
+reset, ata_eh_reset() clears error states and ATA_PFLAG_EH_PENDING
+after reset but before RESET is marked done.  As reset is the final
+recovery action and full verification of devices including onlineness
+and classfication match is done afterwards, this shouldn't lead to
+lost devices or missed hotplug events.
+
+Unfortunately, it forgot to thaw the port when clearing EH_PENDING, so
+if the condition happens after resetting an empty port, the port could
+be left frozen and EH will end without thawing it, making the port
+unresponsive to further hotplug events.
+
+Thaw if the port is frozen after clearing EH_PENDING.  This problem is
+reported by Bruce Stenning in the following thread.
+
+ http://thread.gmane.org/gmane.linux.kernel/1123265
+
+stable: I think we should weather this patch a bit longer in -rcX
+	before sending it to -stable.  Please wait at least a month
+	after this patch makes upstream.  Thanks.
+
+-v2: Fixed spelling in the comment per Dave Howorth.
+
+Signed-off-by: Tejun Heo <546b05909706652891a87f7bfe385ae147f61f91@kernel.org>
+Reported-by: Bruce Stenning <db71f527a14d0a1ec41dddcad31640e26f938545@indigovision.com>
+Cc: 4fbacc2fa0ffdbb11bf1ad6925b886ebd08dd15f@kernel.org
+Cc: Dave Howorth <f6512f61768d27eaad90be42d3d3021b8cb8e694@mrc-lmb.cam.ac.uk>
+Signed-off-by: Jeff Garzik <15f615bf7d20c2937c7eb5aa759110fd6768848c@pobox.com>
+",TRUE,TRUE,", thanks",,,29_dec_2020_pos_hits_f5d826c527ad
+tweepy/tweepy,cb442fb92eafcd8aa2521cec9ee66f417f44f3a6,"Merge pull request #401 from tweepy/s3_upload
+
+Upload HTTP record to S3 after a successful test",FALSE,FALSE,successful test,,,29_dec_2020_pos_hits_f5d826c527ad
+HerculesWS/Hercules,07f8458340bbf7eb7e037533385720f44fc26d37,"* Well, as it turns out, DETECTOR is actually detect hidden (not cast sense.) Elder is at least fixed though.
+- Reverted the mob mode change for nearly all mobs. Elder is exempt from this revert.
+- Adding some ""closer to official"" stats for the Okolnir Monsters, Wish Maiden, Piamette, Etc.
+* As an added bonus for that snaffu I'm implementing the Okolnir mob skills as well.
+
+
+git-svn-id: c1e39603916b71782cde5facdf0b79eff05c1414@13743 54d463be-8e91-2dee-dedb-b68131a5f0ec
+",false ,TRUE,bonus,,,29_dec_2020_pos_hits_f5d826c527ad
+hashicorp/vault,989b33483bf42fd1c4b109c45c6096bc2939d5a4,"Ensure that the 'file' audit backend can successfully open its given path before returning success. Fixes #550.
+",FALSE,FALSE,successfully,,,29_dec_2020_pos_hits_f5d826c527ad
+stinsonga/emacs-mirror,95fa1ff74aa9ae40d5ef4b680ea606287c40327f,"* mm-util.el, nnultimate.el, nnweb.el, nnslashdot.el: Sync with
+	the Gnus CVS.
+
+	* mm-util.el (mm-mime-mule-charset-alist): Move down and call
+	mm-coding-system-p. Don't correct it only in XEmacs.
+	(mm-charset-to-coding-system): Use mm-coding-system-p and
+	mm-get-coding-system-list.
+	(mm-emacs-mule, mm-mule4-p): New.
+	(mm-enable-multibyte, mm-disable-multibyte,
+	mm-enable-multibyte-mule4, mm-disable-multibyte-mule4,
+	mm-with-unibyte-current-buffer,
+	mm-with-unibyte-current-buffer-mule4): Use them.
+	(mm-find-mime-charset-region): Treat iso-2022-jp.
+
+	From  Dave Love  <fx@gnu.org>:
+
+	* mm-util.el (mm-mime-mule-charset-alist): Make it correct by
+	construction.
+	(mm-charset-synonym-alist): Remove windows-125[02].  Make other
+	entries conditional on not having a coding system defined for
+	them.
+	(mm-mule-charset-to-mime-charset): Use
+	find-coding-systems-for-charsets if defined.
+	(mm-charset-to-coding-system): Don't use
+	mm-get-coding-system-list.  Look in mm-charset-synonym-alist
+	later.  Add last resort search of coding systems.
+	(mm-enable-multibyte-mule4, mm-disable-multibyte-mule4)
+	(mm-with-unibyte-current-buffer-mule4): Just treat Mule 5 like
+	Mule 4.
+	(mm-find-mime-charset-region): Re-write.
+	(mm-with-unibyte-current-buffer): Restore buffer as well as
+	multibyteness.
+",FALSE,FALSE,Developer named Love,,,29_dec_2020_pos_hits_f5d826c527ad
+stinsonga/emacs-mirror,87fb1e38dc284a4e654a7592796d8e66e597f86e,"Fix winner in cl-lib not loaded case
+
+* lisp/winner.el (winner-change-fun): Don't use cl-lib functions
+without requiring CL
+",FALSE,FALSE,winner is subject,,,29_dec_2020_pos_hits_f5d826c527ad
+skyarch-networks/skyhopper,add251d819656b2085fc8c92db5d343ccb8dd62f,"User friendly UI
+",FALSE,FALSE,friendly,,,29_dec_2020_pos_hits_f5d826c527ad
+mltframework/shotcut,510b93da12bac5ed744364c23b83f1ec840c7aae,"Make Lens Correction keyframable.
+
+Thanks to sauron in the forum.
+",TRUE,FALSE,thanks,,,29_dec_2020_pos_hits_f5d826c527ad
+facebook/flow,d67c989530c36c94c2ad9fe0fa2144106e7f5e32,"Use lists instead of maps for parsed and unparsed heaps in saved state
+
+Summary:
+Maps are expensive to construct and manipulate, and in this case we don't need the `O(log n)` lookups that they provide. Plus, we actually convert these maps to lists anyway during init.
+
+This is a very small saved state size win, and a decent saved state init time win.
+
+I may explore doing something similar with the dependency graph, but I don't think there are significant wins to be had by doing something similar with the other fields here, since the others are consumed as maps so we would have to convert them to maps anyway, or make some more invasive change to Flow. I think it's unlikely to be worth it. The one exception is the dependency graph, which I might try converting at some point.
+
+Reviewed By: samwgoldman
+
+Differential Revision: D24315881
+
+fbshipit-source-id: ed2ff0e9487cd930660c6a5eacaca4d51caeea2b
+",FALSE,FALSE,worth it,,,29_dec_2020_pos_hits_f5d826c527ad
+rpherbig/dr-scripts,f47bfc8bdb1289b9e7953296c9fe4f1dd1a6fa29,"Updated the logic to be more accurate and useful.  (#3029)
+
+* Updated the logic to be more accurate and useful. It was using the wrong bag before, and now it checks count.
+
+* Updated logic, removed forced, made logic smarter.
+
+* Updated the logic in case a number of pets isn't entered and there is no hand_hand amount in the yaml.
+
+* Minor wording change for the error statement.
+",TRUE,FALSE,smarter,,,29_dec_2020_pos_hits_f5d826c527ad
+kriztan/Pix-Art-Messenger,3815d4efa378846c8aef840ad659268a0bef1536,"Fetch bundles on-demand, encrypt in background
+
+Bundles are now fetched on demand when a session needs to be
+established. This should lessen the chance of changes to the bundles
+occuring before they're used, as well as lessen the load of fetching
+bundles.
+
+Also, the message encryption is now done in a background thread, as this
+can be somewhat costly if many sessions are present. This is probably
+not going to be an issue in real use, but it's good practice anyway.
+",TRUE,FALSE,good practice,FALSE,,29_dec_2020_pos_hits_f5d826c527ad
+biosistemika/scinote-web,86667feb6b6b86d935a14b15ceae19a435c91a81,"Add remembered state for smart annotation
+",FALSE,FALSE,smart annotation,,,29_dec_2020_pos_hits_f5d826c527ad
+AshamaneProject/AshamaneCore,b7f46d680d657803dfa566938036f1e2c2b45288,"Core/SmartAI: Implement SMART_EVENT_FRIENDLY_HEALTH_PCT.
+
+ On current clean TDB, there are a total of 106 creatures using
+   SMART_EVENT_FRIENDLY_HEALTH (non-PCT) which has a flat first parameter, but
+   only 8 of these use the event correctly (and therefore only 8 of them
+   actually work).
+
+Closes #10520
+",FALSE,FALSE,subject -> SMART_EVENT_FRIENDLY_HEALTH_PCT,,,29_dec_2020_pos_hits_f5d826c527ad
+simpeg/simpeg,23a3768b5232ad15e553b627a56190297b2e9c16,"add spline fun
+",FALSE,FALSE,"spline fun? Well, the auther is amuzed",,,29_dec_2020_pos_hits_f5d826c527ad
+glimmerjs/glimmer-vm,de511d09f41f393e0ec7e08764a423339edcd707,"Ensure removal values are respected for safe attr/prop.
+
+Prior to this change it was not possible to remove one of our sanitized
+attributes/properties, because we always used the `setAttribute`
+logic (which explicitly noop's initial sets when a removal value is
+being used).
+
+This updates to sanitize and call `super.*` properly for both
+`setAttribute` and `updateAttribute`.
+",FALSE,FALSE,values are respected,,,29_dec_2020_pos_hits_f5d826c527ad
+Taeung/tip,07d3c4afc55870a4445d322adf4190463580da7d,"Merge branch 'dpaa-cleanups'
+
+yuan linyu says:
+
+====================
+net: dpaa: two minor cleanup
+
+original i try to remove duplicate code which clean allocated per-cpu area,
+thanks to David S. Miller, there are two build warning as errors.
+path 1: fix old code maybe-uninitialized warning.
+path 2: remove duplicate code and fix unused var warning.
+====================
+
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,FALSE,thanks,,,29_dec_2020_pos_hits_f5d826c527ad
+gcarq/freqtrade,28b1ecb109bccd426f9eb739aaa558a0cf104c8d,"Convert CryptoToFiatConverter into a Singleton
+
+Result in a speed up of the unittest from 60s to 4s
+
+Because it cost time to load Pymarketcap() every time we create
+a CryptoToFiatConverter, it worth it to change it into a
+Singleton.
+",FALSE,FALSE,worth it,,,29_dec_2020_pos_hits_f5d826c527ad
+airbnb/react-dates,83314b5cc2074755af0f68866ad24fc3866981dd,Replace dumb quotes with smart quotes,TRUE,FALSE,"dumb, smart",,Author is very emotional about the quotes,29_dec_2020_pos_hits_f5d826c527ad
+LLNL/spack,c907937ff48d2c5f004061a0caf4fe61452ca8c6,"ECP VELOC (#8581)
+
+* kvtree package file
+
+* MPI is default on
+
+* proper mpi compiler
+
+* rankstr package
+
+* better rankstr description
+
+* typo
+
+* redset package
+
+* shuffile package
+
+* er package
+
+* axl package
+
+* proper pythor
+
+* mpi is default on
+
+* alpha releases and master versions
+
+* veloc package with boost headers dep
+
+* cmake version
+
+* added C++11 requirement
+
+* flake8
+
+* flake8
+
+* ecp tag
+
+* axl: better async api option handling
+
+* veloc package description
+
+* prettier args list
+
+* C++11 flag handler
+
+* v1.0 of veloc
+",TRUE,FALSE,prettier args list,FALSE,,29_dec_2020_pos_hits_f5d826c527ad
+f-droid/fdroiddata,d66e4e2a24de321febc78eaebb2526671b229cfd,"Prepay Credit: weird build
+",FALSE,TRUE,weird,,,29_dec_2020_neg_hits_f5d826c527ad
+xwiki/xwiki-platform,ee3aa3caaa4d5a4be69edbdacf95b18e258450a2,"XWIKI-2721: I'm commenting the style sheet configuration for now because it affects the behavior of the new WYSIWYG editor in a very bad way. I'll investigate this for 1.7M1.
+
+git-svn-id: 04343649e741710b2e0f622af6defd1ac33e5ca5@13151 f329d543-caf0-0310-9063-dda96c69346f
+",FALSE,TRUE,very bad way,,,29_dec_2020_neg_hits_f5d826c527ad
+faucetsdn/faucet,89c533f297afbc9637815dd392b41444df9d61a9,"Make configuration of nailed forwarding less confusing.
+",FALSE,TRUE,confusing,,,29_dec_2020_neg_hits_f5d826c527ad
+Taeung/tip,78109d230b797077d58600694ca427b9830eb600,"Revert ""amdgpu/dc: drop dml display_mode_support.c (v2)""
+
+This reverts commit 5e0adbff084f33202db36be798c583a115990392.
+
+Unfortunately these clash with our DML update from the HW guys.
+Will attempt to reroll them after.
+
+Signed-off-by: Alex Deucher <08dc22c6156113f2deff178e35e3ed9b24d6af9e@amd.com>
+",FALSE,TRUE,unfortunately,,,29_dec_2020_neg_hits_f5d826c527ad
+apache/arrow,ed54dce64a4651a1d26aed373b09b9af9ee2123e,"ARROW-1253: [C++/Python] Speed up C++ / Python builds by using conda-forge toolchain for thirdparty libraries
+
+@pcmoritz I removed the travis_script_plasma.sh and combined the common bits with travis_script_python.sh; it seemed like there was some redundant work and would be easier to test everything in a single build. Let me know if I messed something up
+
+Author: Wes McKinney <wes.mckinney@twosigma.com>
+
+Closes #884 from wesm/ARROW-1253 and squashes the following commits:
+
+30a13ee3 [Wes McKinney] Formatting
+28bc6be8 [Wes McKinney] Run unit tests from installed library
+fcf7940d [Wes McKinney] Prevent existing LD_LIBRARY_PATH from being blown away
+c67bb68b [Wes McKinney] Speed up C++ / Python builds by using conda-forge toolchain to avoid rebuilding EPs. Use ninja for builds when using toolchain
+",FALSE,TRUE,Let me know if I messed something up,FALSE,regarding the future,29_dec_2020_neg_hits_f5d826c527ad
+bueler/p4pdes,c76ddd7899ee43dd31480545c0390188a1df5de3,"Set up for fish3, but too tired to start writing it now.
+",FALSE,TRUE,tired,,,29_dec_2020_neg_hits_f5d826c527ad
+Taeung/tip,59983439c09f0d319cd288d27c0f70cf8764e09a,"[media] usbvision: remove broken testpattern
+
+Enabling force_testpattern module parameter in usbvision causes kernel panic.
+Things like that does not belong to the kernel anyway so the fix is easy.
+
+Signed-off-by: Ondrej Zary <ba324ca7b1c77fc20bb970d5aff6eea9377918a5@rainbow-software.org>
+Signed-off-by: Mauro Carvalho Chehab <ad86ba2154032c9f55743a190faa2459a9d61d42@redhat.com>
+",FALSE,FALSE,kernal is cool even when panics,,,29_dec_2020_neg_hits_f5d826c527ad
+Taeung/tip,6373dca16c911b2828ef8d836d7f6f1800e1bbbc,"slub: fix a crash with SLUB_DEBUG + KASAN_SW_TAGS
+
+In process_slab(), ""p = get_freepointer()"" could return a tagged
+pointer, but ""addr = page_address()"" always return a native pointer.  As
+the result, slab_index() is messed up here,
+
+    return (p - addr) / s->size;
+
+All other callers of slab_index() have the same situation where ""addr""
+is from page_address(), so just need to untag ""p"".
+
+    # cat /sys/kernel/slab/hugetlbfs_inode_cache/alloc_calls
+
+    Unable to handle kernel paging request at virtual address 2bff808aa4856d48
+    Mem abort info:
+      ESR = 0x96000007
+      Exception class = DABT (current EL), IL = 32 bits
+      SET = 0, FnV = 0
+      EA = 0, S1PTW = 0
+    Data abort info:
+      ISV = 0, ISS = 0x00000007
+      CM = 0, WnR = 0
+    swapper pgtable: 64k pages, 48-bit VAs, pgdp = 0000000002498338
+    [2bff808aa4856d48] pgd=00000097fcfd0003, pud=00000097fcfd0003, pmd=00000097fca30003, pte=00e8008b24850712
+    Internal error: Oops: 96000007 [#1] SMP
+    CPU: 3 PID: 79210 Comm: read_all Tainted: G             L    5.0.0-rc7+ #84
+    Hardware name: HPE Apollo 70             /C01_APACHE_MB         , BIOS L50_5.13_1.0.6 07/10/2018
+    pstate: 00400089 (nzcv daIf +PAN -UAO)
+    pc : get_map+0x78/0xec
+    lr : get_map+0xa0/0xec
+    sp : aeff808989e3f8e0
+    x29: aeff808989e3f940 x28: ffff800826200000
+    x27: ffff100012d47000 x26: 9700000000002500
+    x25: 0000000000000001 x24: 52ff8008200131f8
+    x23: 52ff8008200130a0 x22: 52ff800820013098
+    x21: ffff800826200000 x20: ffff100013172ba0
+    x19: 2bff808a8971bc00 x18: ffff1000148f5538
+    x17: 000000000000001b x16: 00000000000000ff
+    x15: ffff1000148f5000 x14: 00000000000000d2
+    x13: 0000000000000001 x12: 0000000000000000
+    x11: 0000000020000002 x10: 2bff808aa4856d48
+    x9 : 0000020000000000 x8 : 68ff80082620ebb0
+    x7 : 0000000000000000 x6 : ffff1000105da1dc
+    x5 : 0000000000000000 x4 : 0000000000000000
+    x3 : 0000000000000010 x2 : 2bff808a8971bc00
+    x1 : ffff7fe002098800 x0 : ffff80082620ceb0
+    Process read_all (pid: 79210, stack limit = 0x00000000f65b9361)
+    Call trace:
+     get_map+0x78/0xec
+     process_slab+0x7c/0x47c
+     list_locations+0xb0/0x3c8
+     alloc_calls_show+0x34/0x40
+     slab_attr_show+0x34/0x48
+     sysfs_kf_seq_show+0x2e4/0x570
+     kernfs_seq_show+0x12c/0x1a0
+     seq_read+0x48c/0xf84
+     kernfs_fop_read+0xd4/0x448
+     __vfs_read+0x94/0x5d4
+     vfs_read+0xcc/0x194
+     ksys_read+0x6c/0xe8
+     __arm64_sys_read+0x68/0xb0
+     el0_svc_handler+0x230/0x3bc
+     el0_svc+0x8/0xc
+    Code: d3467d2a 9ac92329 8b0a0e6a f9800151 (c85f7d4b)
+    ---[ end trace a383a9a44ff13176 ]---
+    Kernel panic - not syncing: Fatal exception
+    SMP: stopping secondary CPUs
+    SMP: failed to stop secondary CPUs 1-7,32,40,127
+    Kernel Offset: disabled
+    CPU features: 0x002,20000c18
+    Memory Limit: none
+    ---[ end Kernel panic - not syncing: Fatal exception ]---
+
+Link: 321eed1c4ddece0601b6d2972ce2ef5ba61ab7d1@lca.pw
+Signed-off-by: Qian Cai <34dfae5cb27a24b6de91a38903bc4c3e46989dc4@lca.pw>
+Reviewed-by: Andrey Konovalov <248dd96652a047b675d8f9c63c018de72461a2f7@google.com>
+Signed-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>
+Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
+",FALSE,TRUE,messed,,,29_dec_2020_neg_hits_f5d826c527ad
+stratisproject/StratisBitcoinFullNode,ccab3fe960a02a65e206bb95433c367fd06286d1,"[SC] Integrate with PoA whitelisting (#3369)
+
+* Add empty class and tests
+
+* Add unit tests
+
+* Make tests pass
+
+* Rename interface
+
+* Implement interface
+
+* Add whitelisted hash checker implementation and tests
+
+* Add sha256 code hashing strategy implementation
+
+* Docs
+
+* Use hash repository interface everywhere
+
+* Add missing Initialize method to interface
+
+* Fix test
+
+* Add desired ContractWhitelist extension method
+
+* Add signed contract extensions
+
+* Remove old extension
+
+* Move UseSignedContracts
+
+* Add docs and DI
+
+* Docs
+
+* Fix NodeRunners
+
+* Remove need for SignedPoAMockChain
+
+* Add whitelisted contract PoA runner
+
+* Add whitelist tests
+
+* Add missing dispose
+
+* Update SC mempool validator
+
+* Remove useless test
+
+* Comments
+
+* Move interfaces
+
+* Singleton
+
+* Typo
+
+* Check hash width
+
+* Keccak
+
+* Keccak tests for consistency
+
+* Move length check
+
+* Fix fed gateway feature
+
+* Move interface
+
+* Unvar and rename
+
+* Move interface
+
+* Rename
+
+* Rename
+
+* Add partial and full tx validation rules. Make code hash rule full validation
+
+* Fix type
+
+* Fix typo
+
+* Use IEnumerable
+
+* Remove unnecessary list
+",FALSE,TRUE,useless,,,29_dec_2020_neg_hits_f5d826c527ad
+iomad/iomad,41a42c1d0268773117fa96d3d7ea5c3238bd2936,"mod-wiki MDL-25003 Wiki history diff view now uses divs for layout rather than table which fixes the nasty overflow problems that were occurring
+",FALSE,TRUE,nasty,,,29_dec_2020_neg_hits_f5d826c527ad
+JetBrains/intellij-community,bb9f96d0ce364510c4a8496988b8667b3c9c09da,"IDEA-89401 Grey current file in navigation bar while standing in the editor
+",FALSE,FALSE,grey,,,29_dec_2020_neg_hits_f5d826c527ad
+Taeung/tip,516cf1be07cf3ab52e6d2f64da33b0fa5d9e0042,"dynamic_debug: use printk(KERN_WARNING..) in stub function
+
+drivers/infiniband/ulp/srp/ib_srp.c #defines pr_fmt() PFX fmt, but PFX
+is not #defined until after <linux/*> headers are included.
+
+This results in a bad expansion of the pr_warn() in the stub function.
+
+2084c2084
+<   printk(""<4>"" PFX ""dyndbg supported only in "" ""CONFIG_DYNAMIC_DEBUG builds\n"")
+
+Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@linuxfoundation.org>
+",FALSE,TRUE,bad,,,29_dec_2020_neg_hits_f5d826c527ad
+BlackAndWhiteScallion/Night-of-Shooting-Stars,9057d77c33cd1a00c3b4ca548d86a17ee488e7f8,"slight updates
+
+updates to some AI, optimizing a few algorithms, changed some descriptions.
+
+The weird extension bug is still there.
+I honestly cannot see any reason for the inability of boss and boss1 to coexist. The names are different, they import different librarys, and the error message provided is completely non-sensical. No game at game.loadModeAsync? you can't even call the function if said error existed, how do you move into a directory successfully and then say the directory does not exist?
+However, the second file to import (which is boss1) is the consistently broken one. The problem might be function override, which can still happen in javascript, but should not have any reason to happen because there is no commonity between these files in terms of reference. Also, function override should cause the second function to be the functional one, not the errored one.
+I get the idea that the error is at some really obscure spot with some really trivial thing....
+",FALSE,TRUE,inability,,,29_dec_2020_neg_hits_f5d826c527ad
+llvm-mirror/llvm,1870f29c6c7db1230aedd44a93a8a2d9339c7dd5,"Separate out parsing of decimal number.  Use this to only allocate
+memory for the significand once up-front.  Also ignore insignificant
+trailing zeroes; this saves unnecessary multiplications later.
+
+
+git-svn-id: 0ff597fd157e6f4fc38580e8d64ab130330d2411@42964 91177308-0d34-0410-b5e6-96231b3b80d8
+",FALSE,FALSE,"insignificant
+trailing zeroes",,,29_dec_2020_neg_hits_f5d826c527ad
+astropy/astropy,b0c4c3462dde66ac7be9cf291734d013a29d1dc5,"took a first stab at adding more detail to designing new coordinate systems docs
+",FALSE,FALSE,stab,,,29_dec_2020_neg_hits_f5d826c527ad
+Taeung/tip,4d2c9d5ddc3a38abb12253b4fd6ac05bfc3b4462,"staging/android: Initial partial kernel-doc for ashmem.c
+
+I am beginning to understand the core concepts at play here.
+
+I am nowhere near finished with this class - However, it is better if
+I commit what I have documented so far tonight - That way, if I mess
+up tomorrow morning, I can just roll back to here.
+
+Sorry if this clutters things up. In the end, once *everything* is
+documented, it will make understanding the Android staging driver
+easier to understand as a programmer - Hopefully for both new developers
+and current ones.
+
+Signed-off-by: Cruz Julian Bishop <2ec049a14d87a31aea1a3d03a4724ab112720c17@gmail.com>
+Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@linuxfoundation.org>
+",FALSE,FALSE,sorry (but not mess tommorow),,,29_dec_2020_neg_hits_f5d826c527ad
+samba-team/samba,5bd7f9c61bb2fea1867ac6657c9b30799ba49d8f,"s3: OneFS implementation of change notify
+
+The OneFS Samba implementation of change notify is modeled after the
+usage of Linux's inotify kernel subsystem.  A single call is made
+into the onefs.so VFS module to initialize kernel tracking of certain
+file change events.  When these events occur a kernel notification is
+sent to smbd and the notification event is translated and given to the
+general Samba Change Notify layer through a callback function.
+
+The most difficult aspect is converting an SMB CompletionFilter to
+a matching ifs_event mask, and then back to an appropriate change
+notify action.  Currently, not all possible cases are handled by the
+this module, but the most prevalent ones, which are tested by
+smbtorture, are implemented.
+",FALSE,TRUE,difficult,,,29_dec_2020_neg_hits_f5d826c527ad
+GNOME/gnome-control-center,50b39dc570aaf0fc73016f6a647e11438497ad81,"wacom: Drop old_axes from calibration API
+
+The calibration utility was modified in cf408c27b0 to return unitless
+padding measurements instead of axis values for storage in gsettings.
+Unfortunately, the code still assumes in some places that it is working
+with axes rather than paddings. This causes subtle math errors that
+result in undesired cursor offsets after the calibration is applied.
+
+Fortunately, this can be simplified, since tablet area is always reset
+to the default state before starting calibration, we are sure that the
+value will remain constant. Since both axes are in the same 0..1 scale,
+calibration code doesn't need to swap X/Y back and forth to calculate
+each axis scale.
+
+Additionally, the code to get the calibrated axis values has been moved
+into its own function along with a new function that returns padding
+values suitable for consumption by g-c-c. All calculations are performed
+internally in the 0..1 range.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=784009
+
+Co-Authored-By: Carlos Garnacho <8aa797d77d86809a7bc4a8544e3c327451cf6b4f@gnome.org>
+",FALSE,TRUE,unfortunately,,,29_dec_2020_neg_hits_f5d826c527ad
+http4s/http4s,195cfe52170ed1ad11532dbf5dc87ad7e0ba4573,"I did this in GitHub editor
+
+And I'm probably going to regret it.",FALSE,TRUE,regret,,,29_dec_2020_neg_hits_f5d826c527ad
+ilscipio/scipio-erp,8a45f28f4980dabca6d4dc6fb1ff111a803be80d,"ofbiz merge: 3cf1890b68 from trunk (fix bad service error handling)
+
+1 major bugfix commit (3cf1890b685a9be3e7c9dc792e16fd48e8e19c48), adds
+missing service result error checks (notorious in stock):
+""Implemented: Accounting: Handle service response effectively
+(OFBIZ-10021)""
+from https://github.com/apache/ofbiz-framework.git trunk",FALSE,FALSE,bad service error,,,29_dec_2020_neg_hits_f5d826c527ad
+ArduPilot/ardupilot,bf0ce7917602d2c17ce9b15e098209566c46d4ec,"SITL: make it possible to use SITL-HIL
+
+strangely enough, using HIL in SITL is a great way to debug HIL!
+",FALSE,TRUE,strangely,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+edx/configuration,5ed2193b3430e6b7d8d7087c5d36147db090c548,"SEC-208, blackhole python_lib.zip
+
+missed file
+
+missed rename
+
+rename the file to make our convention
+
+clarifying comment.
+
+Stupid is as stupid does.
+
+whitespace
+",FALSE,TRUE,stupid,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+kythe/kythe,eb11d947d3b5b7870c8ca9e292caa61af9cb1d7d,"Go: Provide implicit package initializers with a definition.
+
+Summary:
+The call graph spec [1] requires that the caller blamed have a definition.  For
+implicit functions like the package initializer in Go, this was not previously
+satisfied. Follow C++ in attributing the initializer to the head of a file.
+
+[1]: http://www.kythe.io/docs/schema/callgraph.html
+
+Reviewers: #core_team, schroederc
+
+Reviewed By: #core_team, schroederc
+
+Subscribers: #core_team
+
+Differential Revision: https://phabricator-dot-kythe-repo.appspot.com/D2106
+",FALSE,TRUE,blamed,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+hlissner/doom-emacs,74c47d560b17cfb04856ff3967656189fa270fef,"Fix autoload tag for doom/evil-close-folds
+",FALSE,FALSE,evil as subject,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+facebook/folly,2586be5b22c43e5813ccdb9b7509d9908add41a0,"Deprecate AsyncTransportWrapper
+
+Summary:
+All implementations of transports in practice were all AsyncTransportWrappers
+(AsyncSocket, AsyncSSLSocket, AsyncFizzBase, etc.).
+
+AsyncTransportWrapper was confusing. The only additional functionality that
+it provided was the ability to query underlying transports, a piece of
+functionality which makes just as much sense on AsyncTransport.
+
+The simplified model:
+
+""AsyncTransport deals with bidirectional I/O. It is both an AsyncReader, and
+an AsyncWriter. It may be nested.""
+
+This diff changes AsyncTransportWrapper usages in folly to refer to
+AsyncTransport, and aliases AsyncTransportWrapper for compatibility.
+
+Reviewed By: yfeldblum
+
+Differential Revision: D21915048
+
+fbshipit-source-id: 741fad91b8f7c8080f942168f5513b12602cfe9a
+",FALSE,TRUE,confusing,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+dolphin-emu/dolphin,3bdf7d3711cb7ec2f750139531e2de52288756bb,"this is a ugly unstable commit but i'm going to be out for work some days so ...
+implemented donko's xfb in D3D:
+the bad things:
+*is solower in some cases, slower as opengl
+*it do not work in dual core mode, it seems direct3d has serious synchronization problems, to the other devs please if you can take a look and help me :)
+*real xfb still not working i have to give it more time to make it work.
+the good:
+*games that uses multiples xfbs will work now using the virtual XFB.
+*implemented a more hardware like approach to scaling, now to calculate the pixel scaling i use the xfb size not the efb so the screen pixels relation is more correct now.
+*simplified a little donko's virtual xfb to make it less memory consuming as xfb textures are the exact size of the scaled xfb and not full target width.
+* when it works even real xfb will let us use super sampling.
+I repeat this commit is totally unstable and in dual core mode it will for sure hang the emulator or at best give totally incorrect results.
+Other devs please help as thread sync is not one of my strong points :)
+i'll keep waiting for the comments an the -1 :)
+
+
+git-svn-id: 8321eaa3640e6e5bde40e398eb199b47712e1f8d@5195 8ced0084-cf51-0410-be5f-012b33b47a6e
+",TRUE,TRUE,"good, ugly, bad",,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+google/llvm-propeller,fac35c0a9b6bae81e8aa6827d750fc12435e1e6e,"In ExprEvaluatorBase::VisitOpaqueValueExpr() add a sanity check to avoid
+infinite recursion due to bad OpaqueValueExpr.
+
+llvm-svn: 146237
+",FALSE,TRUE,bad,FALSE,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+tgstation/tgstation,5035820e9c41d2d138df44257701e894a90b051f,"fixes me being stupid and not setting creator right
+
+Now for the conflicts...
+",FALSE,TRUE,stupid,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+kubernetes/client-go,32a482af2030e905b694c4308cc729f7bb50720d,"Merge pull request #66837 from deads2k/client-02-panic
+
+Automatic merge from submit-queue (batch tested with PRs 66870, 66929, 66837). If you want to cherry-pick this change to another branch, please follow the instructions <a href=""https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md"">here</a>.
+
+fix panic fake SAR client expansion
+
+if the object is nil, the type assertion fails.
+
+@kubernetes/sig-api-machinery-bugs
+
+```release-note
+NONE
+```
+
+Kubernetes-commit: a2223e9a9281ca83fd85814c8e7c32b3c8fde53f
+",FALSE,FALSE,fix panic,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+tgstation/tgstation,bfa572b186b079273f8ee1b506d75918cbc644d7,"Makes Zombies 2 spooky (#27984)
+
+* stun limit
+
+* Update zombies.dm
+
+* True extent of my laziness revealed
+
+* 4
+
+* moaning
+
+* actual code
+",FALSE,FALSE,moaning (of the zombies?),,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Taeung/tip,87590e26ff4e7d57dfdaa81780b1b0d9e9970a4c,"[MTD] OneNAND: Add missing files
+
+Simple bad block table source and header files
+
+Signed-off-by: Kyungmin Park <504c23c4986a3760712724894be3105092c27331@samsung.com>
+Signed-off-by: Thomas Gleixner <00e4cf8f46a57000a44449bf9dd8cbbcc209fd2a@linutronix.de>
+",FALSE,TRUE,bad,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+gdl-lang/common-clinical-models,f493e09508dfe70cfc25c0f362ffe113e125baf8,"RAPID Score for Acetabular Chondrolabral Disruption
+",FALSE,FALSE,distruption,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Citadel-Station-13/Citadel-Station-13,ad3608caebb6ef56411ddb5b6e257d2bde482801,"Merge pull request #4075 from Citadel-Station-13/upstream-merge-32699
+
+[MIRROR] Fixes hostile mobs attacking surrounding tiles when trying to attack someone: the stunning finale",FALSE,FALSE,hostile mobs,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+2Abendsegler/GClh,176262d6c299d54f75b88596f5a90d88bce2dfd6,"#807 remove some useless layers and add some settings: width, height, no tracklist, waypoint list and auto zoom
+",FALSE,TRUE,useless,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+projectbuendia/buendia,c1336ad61692c0d2d868f75f6f4c4996e2a4ce29,"Add execute_openmrs_sql function to test-harness.sh
+
+Also, ensure that openmrs_auth header is properly quoted. oops
+",FALSE,TRUE,oops,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+STJr/SRB2,6c1483266c05fe9fe496871ca0775dca349b37f2,"You know, I should've converted these with the earlier commit. Silly me.
+",FALSE,TRUE,silly,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+amazeeio/lagoon,ed59e0d2332057b9a335968f71d15236b19f0343,"4h instead of 10secs, oops
+",FALSE,TRUE,oops,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+alphagov/notifications-api,e1239bea06358d2ee71d0bf341dc7c7a404aa3c0,"Use model to work out whether to prefix message
+
+`service.sms_sender` has been deprecated; we should be looking at which
+of the service’s SMS senders is default to work out if the message
+has been sent from GOVUK or not (and if it has, then prefix the message
+with the service name).
+
+The arguments to `SMSMessageTemplate` are _super_ badly named – `sender`
+isn’t really used as a string, it’s a boolean that effectively means
+‘is this a custom sender (`True`) or the platform default (`False`)’. We
+should rename it once this bug is fixed.
+",FALSE,TRUE,badly,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+jollaman999/openwrt,f3d693c0eeffacf542c1bbaf024e38664dee9ebd,"ar71xx: do not reset the hardware on transmit timeout - this would mess up the up the PHY state
+
+SVN-Revision: 27568
+",FALSE,TRUE,mess up,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+cgeo/cgeo,6def683e9e0b6857597a38e90b58462b939528be,"Add forgotten change while upgrading RxJava
+",FALSE,TRUE,forgotten,,,5_jan_2021_neg_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+zippy2/libvirt,2f4d2496a88055a8343b3efca618522da8715d92,"util: Don't try to fchown files opened as non-root
+
+When virFileOpenAs is called with VIR_FILE_OPEN_AS_UID flag and uid/gid
+different from root/root while libvirtd is running as root, we fork a
+new child, change its effective UID/GID to uid/gid and run
+virFileOpenAsNoFork. It doesn't make any sense to fchown() the opened
+file in this case since we already know that uid/gid can access the file
+when open succeeds and one of the following situations may happen:
+
+- the file is already owned by uid/gid and we skip fchown even before
+  this patch
+- the file is owned by uid but not gid because it was created in a
+  directory with SETGID set, in which case it is desirable not to change
+  the group
+- the file may be owned by a completely different user and/or group
+  because it was created on a root-squashed or even all-squashed NFS
+  filesystem, in which case fchown would most likely fail anyway
+",FALSE,FALSE,desirable action,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Taeung/tip,90c215c47675be42f164a4bac282666753e09225,"cfg80211: fix SME connect
+
+There's a check saying
+	/* we're good if we have both BSSID and channel */
+	if (wdev->conn->params.bssid && wdev->conn->params.channel) {
+
+but that isn't true -- we need the BSS struct. This leads
+to errors such as
+
+    Trying to associate with 00:1b:53:11:dc:40 (SSID='TEST' freq=2412 MHz)
+    ioctl[SIOCSIWFREQ]: No such file or directory
+    ioctl[SIOCSIWESSID]: No such file or directory
+    Association request to the driver failed
+    Associated with 00:1b:53:11:dc:40
+
+in wpa_supplicant, as reported by Holger.
+
+Instead, we really need to have the BSS struct, and if we
+don't, then we need to initiate a scan for it. But we may
+already have the BSS struct here, so hang on to it if we
+do and scan if we don't.
+
+Signed-off-by: Johannes Berg <8398eb9892c5ab2ff439ca0b5e4b0706dd9ebef9@sipsolutions.net>
+Tested-by: Holger Schurig <7d2dad709f28de37ce9f3896977c502a3cc4d287@mail.mn-solutions.de>
+Signed-off-by: John W. Linville <2a53bac7a5d324865ef46ec4c38b2c0fba1456b4@tuxdriver.com>
+",FALSE,FALSE,we're good,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+symfony/security-bundle,6ac9de678a4d85dd6f91bc03284a92ff826693d4,"bug #19667 [SecurityBundle] Add missing deprecation notice for form_login.intention (ro0NL)
+
+This PR was squashed before being merged into the 2.8 branch (closes #19667).
+
+Discussion
+----------
+
+[SecurityBundle] Add missing deprecation notice for form_login.intention
+
+| Q             | A
+| ------------- | ---
+| Branch?       |  2.8
+| Bug fix?      | yes
+| New feature?  | no
+| BC breaks?    | no
+| Deprecations? | yes
+| Tests pass?   | yes
+| Fixed tickets | #19664, #19661, #19652
+| License       | MIT
+| Doc PR        | -
+By the grace of @chalasr
+
+ping @fabpot
+
+Commits
+-------
+
+2a7bbd1 [SecurityBundle] Add missing deprecation notice for form_login.intention
+",TRUE,FALSE,grace,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+kbase/narrative,2515fc3bdc2197fe045a1e58733a4f9c1a83a117,"Updated the narrative core code pretty substantially for widget state saving and loading. It should all work, but older narratives might be broken. Probably best to click the function buttons and run things from scratch.
+",FALSE,FALSE,pretty substantially,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+rpm-software-management/dnf,3edf4c6105750086885c32b9eec8b9980e05af4e,"Give nicer messages when we can't find things due to case sensitivity
+",FALSE,FALSE,nicer messages,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+mesonbuild/meson,894623ad5aabaac06fab219173183c4533af74ef,"docs/users: Add HarfBuzz [skip ci]
+
+Proudly a meson user now",TRUE,FALSE,Proudly,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+datawrapper/datawrapper,14f36bff60e7339545c65de8e853d8b2a662fcdd,"fixed XSS vulnerability
+
+Thank god the username is truncated, which kills most of the useful stuff you could do.
+Also, fixed one unrelated HTML error.
+",TRUE,FALSE,Thank god,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+vroyer/elassandra,a608db122de8f2a8fb4df6131395894c7b39428a,"Search: Remove the `count` search type.
+
+This commit brings the benefits of the `count` search type to search requests
+that have a `size` of 0:
+ - a single round-trip to shards (no fetch phase)
+ - ability to use the query cache
+
+Since `count` now provides no benefits over `query_then_fetch`, it has been
+deprecated.
+
+Close #7630
+",TRUE,FALSE,benefits,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Taeung/tip,09a4c02e58c1b3d9748f78242962b7f63c68477e,"drm/i915: Look for an active kernel context before switching
+
+We were not very carefully checking to see if an older request on the
+engine was an earlier switch-to-kernel-context before deciding to emit a
+new switch. The end result would be that we could get into a permanent
+loop of trying to emit a new request to perform the switch simply to
+flush the existing switch.
+
+What we need is a means of tracking the completion of each timeline
+versus the kernel context, that is to detect if a more recent request
+has been submitted that would result in a switch away from the kernel
+context. To realise this, we need only to look in our syncmap on the
+kernel context and check that we have synchronized against all active
+rings.
+
+v2: Since all ringbuffer clients currently share the same timeline, we do
+have to use the gem_context to distinguish clients.
+
+As a bonus, include all the tracing used to debug the death inside
+suspend.
+
+v3: Test, test, test. Construct a selftest to exercise and assert the
+expected behaviour that multiple switch-to-contexts do not emit
+redundant requests.
+
+Reported-by: Mika Kuoppala <cd221c71e765d1ce593d15b204fee351fb09fd98@intel.com>
+Fixes: a89d1f921c15 (""drm/i915: Split i915_gem_timeline into individual timelines"")
+Signed-off-by: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
+Cc: Mika Kuoppala <cd221c71e765d1ce593d15b204fee351fb09fd98@intel.com>
+Reviewed-by: Mika Kuoppala <cd221c71e765d1ce593d15b204fee351fb09fd98@linux.intel.com>
+Link: https://patchwork.freedesktop.org/patch/msgid/20180524081135.15278-1-711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk
+",TRUE,FALSE,bonus,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+pnpm/pnpm,fdad157392ace430dae2abdf1f84b6c980fb3caa,"feat: --shamefully-flatten (#42)
+
+* feat: this is a best attempt at flattening the dependency tree, similar to what npm does
+
+* test: shamefullyFlatten option
+
+* feat: when uninstalling, if shamefully-flatten is true, we need to re-flatten
+
+* fix: use new shrinkwrap, not the old one
+
+* fix: changes suggested in PR
+
+* test: remove test.only
+
+* fix: various bugs in uninstall and general install, added tests
+
+* test: fix test
+
+* test: use project.has and project.hasNot correctly
+
+* test: remove test.only
+
+* test: added tsconfig.json, added lint-test script, lint fixes
+
+* test: use correct message
+
+* fix: check should work on windows too
+",TRUE,TRUE,best attempt,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Taeung/tip,05f4c350ee02e9461c6ae3a880ea326a06835e37,"NFS: Discover NFSv4 server trunking when mounting
+
+""Server trunking"" is a fancy named for a multi-homed NFS server.
+Trunking might occur if a client sends NFS requests for a single
+workload to multiple network interfaces on the same server.  There
+are some implications for NFSv4 state management that make it useful
+for a client to know if a single NFSv4 server instance is
+multi-homed.  (Note this is only a consideration for NFSv4, not for
+legacy versions of NFS, which are stateless).
+
+If a client cares about server trunking, no NFSv4 operations can
+proceed until that client determines who it is talking to.  Thus
+server IP trunking discovery must be done when the client first
+encounters an unfamiliar server IP address.
+
+The nfs_get_client() function walks the nfs_client_list and matches
+on server IP address.  The outcome of that walk tells us immediately
+if we have an unfamiliar server IP address.  It invokes
+nfs_init_client() in this case.  Thus, nfs4_init_client() is a good
+spot to perform trunking discovery.
+
+Discovery requires a client to establish a fresh client ID, so our
+client will now send SETCLIENTID or EXCHANGE_ID as the first NFS
+operation after a successful ping, rather than waiting for an
+application to perform an operation that requires NFSv4 state.
+
+The exact process for detecting trunking is different for NFSv4.0 and
+NFSv4.1, so a minorversion-specific init_client callout method is
+introduced.
+
+CLID_INUSE recovery is important for the trunking discovery process.
+CLID_INUSE is a sign the server recognizes the client's nfs_client_id4
+id string, but the client is using the wrong principal this time for
+the SETCLIENTID operation.  The SETCLIENTID must be retried with a
+series of different principals until one works, and then the rest of
+trunking discovery can proceed.
+
+Signed-off-by: Chuck Lever <e7d8216bf9b1956703857d0050bd04192118f43d@oracle.com>
+Signed-off-by: Trond Myklebust <6a1f9db795c9fc44be97d66ab114c53193bd3d13@netapp.com>
+",FALSE,FALSE,"successful ping, good spot",,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+samba-team/samba,177ca764fc33e84f35fd6ffdf7c5dbb686704fb4,"vlv: better syntax for parsing greater than or equal strings
+
+This makes the gt_eq case different from the indexed case in the eyes
+of sscanf().
+
+Pair-programmed-with: Garming Sam <95d1856ad7e7e0b74b122929c1f1e47d287c99a8@catalyst.net.nz>
+Signed-off-by: Douglas Bagnall <ea5c2dd9e1e1bee052dcc821cab32bd228dd61c7@catalyst.net.nz>
+Reviewed-by: Andrew Bartlett <9503ccf2b9baea7c4d590fbd562f8b0a297738eb@samba.org>
+Reviewed-by: Garming Sam <95d1856ad7e7e0b74b122929c1f1e47d287c99a8@catalyst.net.nz>
+",FALSE,FALSE,greater than,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+NoraUi/NoraUi,dba5a52a51eb04e7d606bc8daa3033c774363eae,"Lastest javadoc on successful travis build 2451 auto-pushed to NoraUi
+",TRUE,FALSE,successful,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Taeung/tip,0cc698af36ff22295dce2f5e46b0cfe605789fa4,"vTPM: support little endian guests
+
+This patch makes the code endianness independent. We defined a
+macro do_endian_conversion to apply endianness to raw integers
+in the event entries so that they will be displayed properly.
+tpm_binary_bios_measurements_show() is modified for the display.
+
+Signed-off-by: Hon Ching(Vicky) Lo <586dce2b5b41882e50b9a0eefaf3387b8b8c8cc6@linux.vnet.ibm.com>
+Signed-off-by: Joy Latten <d52cec510126fd47fd8d2fded238791e9e5bd0bf@linux.vnet.ibm.com>
+Reviewed-by: Ashley Lai <782f9b10621e362d5bd0def3a279b5e0908c9ebb@ahsleylai.com>
+Reviewed-by: Ashley Lai <782f9b10621e362d5bd0def3a279b5e0908c9ebb@ahsleylai.com>
+Signed-off-by: Peter Huewe <014f16385c5a8ff1646b588a3d5169b595c0f10e@gmx.de>
+",FALSE,FALSE,Joy Latten,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+MaharaProject/mahara,ae7eab32c45f24af3e37e78052c666c0dabe3c59,"Provide some default content for the loading bar.
+
+It doesn't seem to appear in some browsers (I'm looking at you, Opera and Safari), but does make things a little nicer in IE.
+",TRUE,FALSE,nicer,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+amatriain/feedbunch,455b0b440b4d89d14932a12bac59eef3a35c57b7,"Prettier ""loading..."" message.
+",TRUE,FALSE,prettier,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+fieldtrip/fieldtrip,3655a6b43fa1b2b92a38e0e09649a555d2e6211b,"bugfix - channel selection with data as input argument was not done since r10217. See http://bugzilla.fcdonders.nl/show_bug.cgi?id=2841. Thanks to Pim for reporting.
+
+
+git-svn-id: acc6c3ca29b1786dc0c9899ede6e50e0d8935a36@10231 0cf7c7f0-3615-4144-b4e6-68da3bce3cd0
+",TRUE,FALSE,thanks,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+llvm-mirror/llvm,855d9da596062b5742a27d9d96c38528120f391b,"fix 255.vortex again, third time's the charm.
+
+
+git-svn-id: 0ff597fd157e6f4fc38580e8d64ab130330d2411@90217 91177308-0d34-0410-b5e6-96231b3b80d8
+",FALSE,FALSE,third time's the charm,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+TWExchangeSolutions/es-components,c9f2eff70312d18049648075e1f4145f35d2e6a7,"Breaking: add react@next and react-dom@next
+
+Update the required peer dependency to be greater than 16.7
+",FALSE,FALSE,greater than,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Taeung/tip,83e12a076e3587d60cfbe65a761ef54e14a264e3,"[IA64] correctly count CPU objects in the ia64/sn hwperf interface
+
+Correctly count CPU objects for SGI ia64/sn hwperf interface
+
+Signed-off-by: Mark Goodwin <e4fc943ceaa9ffc07753572262f09eacd9faf7c5@sgi.com>
+Signed-off-by: Jack Steiner <9fc09c92f9d4898dd6e5af3e81679b627e939258@sgi.com>
+Signed-off-by: Tony Luck <e7984595ec0368ff920a7b3521dc7093683f6f26@intel.com>
+",FALSE,FALSE,Tony Luck,,,5_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+angr/cle,a8ba769c58094c21cae153f05f06ddf52e868784,"Merge branch 'wip/arch' into 'dev'
+
+Wip/arch
+
+Yan: I'm only opening this one, but this needs to be merged in conjunction with the similarly named branches from:
+
+- angr
+- simuvex
+- fidget
+- pyvex
+
+Look it over and make any changes you like, but I'm pretty okay with this code now that the library path stuff is more explicit and the arm/armel/armhf weirdness has been resolved. We should probably re-abstract the names of all the Arm classes back to just ""ARM"" at some point, but I'm exhausted and really need to do homework for the next week.
+
+See merge request !21
+",TRUE,FALSE,pretty okay,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+SimpleMobileTools/Simple-Camera,7636f8ea9064be839e45ab2612a31d173f46a14b,"require Simple Thank You purchase for customizing colors
+",FALSE,FALSE,"""thank you"" is the message",,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+magnumjs/mag.js,4f4ceb6e3369bcb0f34d8d747ce0197595450049,"Create mag.0.20.6.min.js
+
+v0.20.6 -Fastdom revert- moved fun call after next frame if any to prevent blocking",FALSE,FALSE,fun call?,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+FriendsOfPHP/PHP-CS-Fixer,007a52587fbb48f770d5b8e6a9a577b61c318aad,"minor #944 Enable caching of composer downloads on Travis (stof)
+
+This PR was submitted for the 1.4 branch but it was merged into the 1.5 branch instead (closes #944).
+
+Discussion
+----------
+
+Enable caching of composer downloads on Travis
+
+This is possible thanks to 2 changes:
+
+- the new docker-based infrastructure allows to use the cache for public repos too.
+- since several months, Composer is smart enough to fallback to a source install in case it cannot download the dist, avoiding to break the build in case the Github API rate limit is reached on the Travis VM
+
+And thanks to the usage of the cache, most downloads will not count in the API rate limit because they will never reach Github (only new versions will be downloaded when one of the dependencies makes a new release).
+
+Note that the PR build will not show any improvement yet, because PR builds are loading the cache of their target branch, and the target branch does not have a cache yet of course.
+
+The target of this PR is 1.4 so that all maintained branches will get this improvement.
+
+Commits
+-------
+
+8663c23 Enable caching of composer downloads on Travis
+",FALSE,FALSE,thanks to changes,FALSE,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+kjambunathan/org-mode-ox-odt,0f175ea128f6a84898b46f81cf057e517a3f4acc,"org.el (org-refile-cache-check-set): More informative message
+
+* org.el (org-refile-cache-check-set): More informative message.
+
+Thanks to Samuel Wales for raising this.
+",TRUE,FALSE,thanks to changes,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+tprrt/linux-stable,524b62fdbef54e8afa37ec8bcdf3ff5723ea160f,"Merge tag 'perf-urgent-for-mingo-4.12-20170704' of git://git.kernel.org/pub/scm/linux/kernel/git/acme/linux into perf/urgent
+
+Pull perf/urgent fixes from Arnaldo Carvalho de Melo:
+
+User visible changes:
+
+ - Fix max attr.precise_ip probing to make perf use the best cycles:p
+   available in the processor for non root users (Arnaldo Carvalho de Melo)
+
+ - Fix processing of MMAP events for 32-bit binaries on 64-bit systems
+   when unwind support is not fully integrated, fixing DSO and symbol
+   resolution (Jiri Olsa)
+
+Signed-off-by: Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>
+Signed-off-by: Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@kernel.org>
+",TRUE,FALSE,,FALSE,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+wildfly/wildfly,805e599dbceb2e5201fbe48998506a6d865a732d,"temporarily reinstate messages after successful deploy and undeploy
+",FALSE,FALSE,succesful depoly,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+tprrt/linux-stable,94f826b8076e2cb92242061e92f21b5baa3eccc2,"net: fix a potential rcu_read_lock() imbalance in rt6_fill_node()
+
+Commit f2c31e32b378 (net: fix NULL dereferences in check_peer_redir() )
+added a regression in rt6_fill_node(), leading to rcu_read_lock()
+imbalance.
+
+Thats because NLA_PUT() can make a jump to nla_put_failure label.
+
+Fix this by using nla_put()
+
+Many thanks to Ben Greear for his help
+
+Reported-by: Ben Greear <a73a03e3b44aa05185cea6823d080c09a7808534@candelatech.com>
+Reported-by: Dave Jones <d5ec0d24602845f6f4b6a35ef729998d1fba5507@redhat.com>
+Signed-off-by: Eric Dumazet <a0baddf32b28d2f9429941ed4af2fe636e210591@gmail.com>
+Tested-by: Ben Greear <a73a03e3b44aa05185cea6823d080c09a7808534@candelatech.com>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,FALSE,thanks,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+tprrt/linux-stable,84cb8eb26cb9ce3c79928094962a475a9d850a53,"net: sched: action_ife: take reference to meta module
+
+Recent refactoring of add_metainfo() caused use_all_metadata() to add
+metainfo to ife action metalist without taking reference to module. This
+causes warning in module_put called from ife action cleanup function.
+
+Implement add_metainfo_and_get_ops() function that returns with reference
+to module taken if metainfo was added successfully, and call it from
+use_all_metadata(), instead of calling __add_metainfo() directly.
+
+Example warning:
+
+[  646.344393] WARNING: CPU: 1 PID: 2278 at kernel/module.c:1139 module_put+0x1cb/0x230
+[  646.352437] Modules linked in: act_meta_skbtcindex act_meta_mark act_meta_skbprio act_ife ife veth nfsv3 nfs fscache xt_CHECKSUM iptable_mangle ipt_MASQUERADE iptable_nat nf_nat_ipv4 nf_nat xt_conntrack nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 libcrc32c tun ebtable_filter ebtables ip6table_filter ip6_tables bridge stp llc mlx5_ib ib_uverbs ib_core intel_rapl sb_edac x86_pkg_temp_thermal mlx5_core coretemp kvm_intel kvm nfsd igb irqbypass crct10dif_pclmul devlink crc32_pclmul mei_me joydev ses crc32c_intel enclosure auth_rpcgss i2c_algo_bit ioatdma ptp mei pps_core ghash_clmulni_intel iTCO_wdt iTCO_vendor_support pcspkr dca ipmi_ssif lpc_ich target_core_mod i2c_i801 ipmi_si ipmi_devintf pcc_cpufreq wmi ipmi_msghandler nfs_acl lockd acpi_pad acpi_power_meter grace sunrpc mpt3sas raid_class scsi_transport_sas
+[  646.425631] CPU: 1 PID: 2278 Comm: tc Not tainted 4.19.0-rc1+ #799
+[  646.432187] Hardware name: Supermicro SYS-2028TP-DECR/X10DRT-P, BIOS 2.0b 03/30/2017
+[  646.440595] RIP: 0010:module_put+0x1cb/0x230
+[  646.445238] Code: f3 66 94 02 e8 26 ff fa ff 85 c0 74 11 0f b6 1d 51 30 94 02 80 fb 01 77 60 83 e3 01 74 13 65 ff 0d 3a 83 db 73 e9 2b ff ff ff <0f> 0b e9 00 ff ff ff e8 59 01 fb ff 85 c0 75 e4 48 c7 c2 20 62 6b
+[  646.464997] RSP: 0018:ffff880354d37068 EFLAGS: 00010286
+[  646.470599] RAX: 0000000000000000 RBX: ffffffffc0a52518 RCX: ffffffff8c2668db
+[  646.478118] RDX: 0000000000000003 RSI: dffffc0000000000 RDI: ffffffffc0a52518
+[  646.485641] RBP: ffffffffc0a52180 R08: fffffbfff814a4a4 R09: fffffbfff814a4a3
+[  646.493164] R10: ffffffffc0a5251b R11: fffffbfff814a4a4 R12: 1ffff1006a9a6e0d
+[  646.500687] R13: 00000000ffffffff R14: ffff880362bab890 R15: dead000000000100
+[  646.508213] FS:  00007f4164c99800(0000) GS:ffff88036fe40000(0000) knlGS:0000000000000000
+[  646.516961] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  646.523080] CR2: 00007f41638b8420 CR3: 0000000351df0004 CR4: 00000000001606e0
+[  646.530595] Call Trace:
+[  646.533408]  ? find_symbol_in_section+0x260/0x260
+[  646.538509]  tcf_ife_cleanup+0x11b/0x200 [act_ife]
+[  646.543695]  tcf_action_cleanup+0x29/0xa0
+[  646.548078]  __tcf_action_put+0x5a/0xb0
+[  646.552289]  ? nla_put+0x65/0xe0
+[  646.555889]  __tcf_idr_release+0x48/0x60
+[  646.560187]  tcf_generic_walker+0x448/0x6b0
+[  646.564764]  ? tcf_action_dump_1+0x450/0x450
+[  646.569411]  ? __lock_is_held+0x84/0x110
+[  646.573720]  ? tcf_ife_walker+0x10c/0x20f [act_ife]
+[  646.578982]  tca_action_gd+0x972/0xc40
+[  646.583129]  ? tca_get_fill.constprop.17+0x250/0x250
+[  646.588471]  ? mark_lock+0xcf/0x980
+[  646.592324]  ? check_chain_key+0x140/0x1f0
+[  646.596832]  ? debug_show_all_locks+0x240/0x240
+[  646.601839]  ? memset+0x1f/0x40
+[  646.605350]  ? nla_parse+0xca/0x1a0
+[  646.609217]  tc_ctl_action+0x215/0x230
+[  646.613339]  ? tcf_action_add+0x220/0x220
+[  646.617748]  rtnetlink_rcv_msg+0x56a/0x6d0
+[  646.622227]  ? rtnl_fdb_del+0x3f0/0x3f0
+[  646.626466]  netlink_rcv_skb+0x18d/0x200
+[  646.630752]  ? rtnl_fdb_del+0x3f0/0x3f0
+[  646.634959]  ? netlink_ack+0x500/0x500
+[  646.639106]  netlink_unicast+0x2d0/0x370
+[  646.643409]  ? netlink_attachskb+0x340/0x340
+[  646.648050]  ? _copy_from_iter_full+0xe9/0x3e0
+[  646.652870]  ? import_iovec+0x11e/0x1c0
+[  646.657083]  netlink_sendmsg+0x3b9/0x6a0
+[  646.661388]  ? netlink_unicast+0x370/0x370
+[  646.665877]  ? netlink_unicast+0x370/0x370
+[  646.670351]  sock_sendmsg+0x6b/0x80
+[  646.674212]  ___sys_sendmsg+0x4a1/0x520
+[  646.678443]  ? copy_msghdr_from_user+0x210/0x210
+[  646.683463]  ? lock_downgrade+0x320/0x320
+[  646.687849]  ? debug_show_all_locks+0x240/0x240
+[  646.692760]  ? do_raw_spin_unlock+0xa2/0x130
+[  646.697418]  ? _raw_spin_unlock+0x24/0x30
+[  646.701798]  ? __handle_mm_fault+0x1819/0x1c10
+[  646.706619]  ? __pmd_alloc+0x320/0x320
+[  646.710738]  ? debug_show_all_locks+0x240/0x240
+[  646.715649]  ? restore_nameidata+0x7b/0xa0
+[  646.720117]  ? check_chain_key+0x140/0x1f0
+[  646.724590]  ? check_chain_key+0x140/0x1f0
+[  646.729070]  ? __fget_light+0xbc/0xd0
+[  646.733121]  ? __sys_sendmsg+0xd7/0x150
+[  646.737329]  __sys_sendmsg+0xd7/0x150
+[  646.741359]  ? __ia32_sys_shutdown+0x30/0x30
+[  646.746003]  ? up_read+0x53/0x90
+[  646.749601]  ? __do_page_fault+0x484/0x780
+[  646.754105]  ? do_syscall_64+0x1e/0x2c0
+[  646.758320]  do_syscall_64+0x72/0x2c0
+[  646.762353]  entry_SYSCALL_64_after_hwframe+0x49/0xbe
+[  646.767776] RIP: 0033:0x7f4163872150
+[  646.771713] Code: 8b 15 3c 7d 2b 00 f7 d8 64 89 02 48 c7 c0 ff ff ff ff eb cd 66 0f 1f 44 00 00 83 3d b9 d5 2b 00 00 75 10 b8 2e 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 31 c3 48 83 ec 08 e8 be cd 00 00 48 89 04 24
+[  646.791474] RSP: 002b:00007ffdef7d6b58 EFLAGS: 00000246 ORIG_RAX: 000000000000002e
+[  646.799721] RAX: ffffffffffffffda RBX: 0000000000000024 RCX: 00007f4163872150
+[  646.807240] RDX: 0000000000000000 RSI: 00007ffdef7d6bd0 RDI: 0000000000000003
+[  646.814760] RBP: 000000005b8b9482 R08: 0000000000000001 R09: 0000000000000000
+[  646.822286] R10: 00000000000005e7 R11: 0000000000000246 R12: 00007ffdef7dad20
+[  646.829807] R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000679bc0
+[  646.837360] irq event stamp: 6083
+[  646.841043] hardirqs last  enabled at (6081): [<ffffffff8c220a7d>] __call_rcu+0x17d/0x500
+[  646.849882] hardirqs last disabled at (6083): [<ffffffff8c004f06>] trace_hardirqs_off_thunk+0x1a/0x1c
+[  646.859775] softirqs last  enabled at (5968): [<ffffffff8d4004a1>] __do_softirq+0x4a1/0x6ee
+[  646.868784] softirqs last disabled at (6082): [<ffffffffc0a78759>] tcf_ife_cleanup+0x39/0x200 [act_ife]
+[  646.878845] ---[ end trace b1b8c12ffe51e657 ]---
+
+Fixes: 5ffe57da29b3 (""act_ife: fix a potential deadlock"")
+Signed-off-by: Vlad Buslov <54be81a48e9a5a75ab4c8e4b52484e0a826a2298@mellanox.com>
+Acked-by: Cong Wang <0f114804888b88d50037b04b42e57b858d851b87@gmail.com>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",FALSE,FALSE,"context less ""grace""",,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+genome/genome,0fd5d848686211af533b0791bb33afc39fe9368e,"add new best_guess_date sub for sorting software result
+",FALSE,FALSE,best as subject,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+wagtail/wagtail,1b7a3f045bf7a23ef993d136b481f22258c4a778,"Refactor try-catch block by limiting code in the try block
+
+Always good to know which line will raise an exception and limit the try block to that statement
+",TRUE,FALSE,good to know,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+JohnstonCode/svn-scm,f276b45a6222f6d8c4bafa477aabbc9a1099a0f0,"chore: Added prettier config for eslint (#807)
+
+",TRUE,FALSE,prettier,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+nedbat/coveragepy,7dd0e1ec7abda0f8f9609c10f988792b26a1768e,"One more fine point of error handling in the C extension.
+",FALSE,FALSE,fine point,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+slidewiki/slidewiki-platform,3b18ee9489dee2acb48b2248ebc9df0ddae197cb,"Merge branch 'master' into SWIK-2135_Include_friendly_urls_everywhere
+",FALSE,FALSE,friendly_urls,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+Parsl/parsl,f6ad3a272fa3d62e72ac3b7c402e25f079d4ab98,"Remove use of 'noci' pytest marker (#1230)
+
+This leaves the marker implementation in case it is needed in the
+future, but removes its use in favor of implementing a
+`pytest_ignore_collect` function in `conftest.py`. The advantage of this
+is it removes the need to append each pytest invocation with `-k not
+noci`, which is needed by definition. The disadvantage is that, since we
+mix pytest and non-pytest tests in the testing directory, this
+obfuscates which tests will be ignored by pytest.
+",TRUE,FALSE,advantage,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+moodle/moodle,02f504729a4dea6e6cce9565b8f2647f74e4d0b3,"MDL-52154 lti: fix string errors
+
+Thanks to Helen
+",TRUE,FALSE,thanks,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+tsitu/MH-Tools,429089189522f1400becf17383ba514fdac6423f,"Minor renaming of Best Setup bookmarklet links
+",FALSE,FALSE,Best setup,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+tprrt/linux-stable,100d26e8ce65f33d229912be3bc563a93a786186,"soc: qcom: smem: initialize region struct only when successful
+
+Hold off initializing anything for the array entry representing a
+memory region in qcom_smem_map_memory() until we know we've
+successfully mapped it.
+
+Signed-off-by: Alex Elder <f429030cf5c0faf36fac3d102073b6e63a647baa@linaro.org>
+Signed-off-by: Andy Gross <4ba87047449f5700e8758e3b1af36e94376c2fff@linaro.org>
+",FALSE,TRUE,succesful depoly,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+openstack-infra/project-config,928765eacd4ea61ac3f95909a583d8ff86ebf768,"Remove temporary hack for translated releasenotes
+
+The releasenotes conf.py files are fine now, we can remove the hack.
+
+Instead test that the file is setup correctly and fail if not - that way
+new projects *with* translations are forced to do this properly.
+
+Change-Id: I38fdfac852c0b3007814d66f3c7cab87d6207c8c
+",TRUE,FALSE,properly,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+google/llvm-propeller,fb2398d0c43405a6b654c80560e38fb3ccd134b9,"Make the clang module container format selectable from the command line.
+- introduces a new cc1 option -fmodule-format=[raw,obj]
+  with 'raw' being the default
+- supports arbitrary module container formats that libclang is agnostic to
+- adds the format to the module hash to avoid collisions
+- splits the old PCHContainerOperations into PCHContainerWriter and
+  a PCHContainerReader.
+
+Thanks to Richard Smith for reviewing this patch!
+
+llvm-svn: 242499
+",TRUE,FALSE,thanks,,,10_jan_2021_pos_hits_b471e816b55e8356a2d4c2ea3dcc851c68794f21
+udevbe/greenfield,039f3495c5d3deb025e3fdfacb48b702445714a6,"make entries a bit nicer
+",TRUE,FALSE,nicer,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+AshamaneProject/AshamaneCore,655b04bb9b4bd6b68be36274e1632891a29012cb,DB/Waypoints: Pathing for Unending Voidwraith at Manaforge Ultrus. Only Visual but nice to have done :),TRUE,FALSE,nicer,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+deivid-rodriguez/byebug,8d6442284bb925f577c2936e9cf1cd00d274f262,"Encourage users to use at least 2.0.0-p247 to prevent #5
+",FALSE,FALSE,encourage users,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+alphagov/rummager,029b3c675d5f62f90f46cb55c7314e39e923fd0d,"Learning To Rank
+
+Trello: https://trello.com/c/P3pynH7k/1092-spike-validate-learn-to-rank
+
+This spike demonstrates how we can implement [Learning To Rank](https://en.wikipedia.org/wiki/Learning_to_rank)
+using Tensorflow’s [ranking module](https://github.com/tensorflow/ranking).
+
+The spike is functional, but not ready for merge.
+
+Contents:
+
+1. What is Learning To Rank?
+2. Implementation
+3. Results
+4. Next steps
+
+What is Learning To Rank?
+
+Learning To Rank (LTR) for our use case is the application of machine learning
+to create a ranking model that can be used to improve search relevance.
+
+This is a common approach for advanced search applications.
+
+There is a good explanation on what LTR is here:
+
+- https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html
+- https://opensourceconnections.com/blog/2017/02/24/what-is-learning-to-rank/
+
+It is easiest to explain with an example:
+
+Say you searched for 'Harry Potter'. Search API might return
+the following results:
+
+1. HMRC Sign in
+2. Harry Potter World
+3. Pottery barn
+4. Harry Potter
+
+These are not good results.
+
+How do we improve search results currently?
+
+Our approach now would be to manually rank these results,
+giving them a score of between 0-3 (0 being irrelevant, 3 being
+completely relevant):
+
+```
+query         rating    document
+harry potter  0         HMRC Sign in
+harry potter  2         Harry Potter World
+harry potter  0         Pottery barn
+harry potter  3         Harry Potter
+```
+
+These judgements are an expression of the ideal ordering.
+
+We can then use nDCG to tell us how good the results are.
+We might get a score of 0.3 for this result (from 0 to 1).
+
+We could then investigate why the results are bad. Perhaps
+there is a best bet. Or popularity might be pushing HMRC
+docs. We can fix these things, then re-run nDCG, and
+we might get 0.7 for this query. Good stuff.
+
+This works, but doesn't scale well. Eventually this process
+becomes a game of whack-a-mole. If we downgrade popularity
+boosting, then this query might have better results, but
+other queries might have worse results.
+
+Hand-tuning relevance doesn't work very well because
+field boosts are complex, and difficult to maintain.
+
+Learning to Rank makes tuning relevance:
+
+- automatable
+- scalable
+- more successful
+- more maintainable (arguable)
+
+LTR won't make relevance tuning easier. But it could make search
+results more relevant.
+
+How do we improve search results with Learn To Rank?
+
+The end goal is to make search results more relevant, without
+manually increasing the boost of a field.
+
+We would go through the same process of rating the search results:
+
+```
+harry potter  0         Pottery barn
+harry potter  3         Harry Potter
+...
+```
+
+However, after doing this, we would train a model with this data
+to rank the results better. The model would optimise for nDCG.
+
+We would provide the model features, such as the fields we boost on.
+
+For example, take the SVM dataset below for the query 'harry potter' (qid:1)
+
+```
+0 qid:1 popularity:0.3 title_score:0.2 description_score:0.3 recency:0.9 pagerank:5 ...
+3 qid:1 popularity:0.1 title_score:0.6 description_score:0.7 recency:0.5 pagerank:2 ...
+```
+
+This data, in addition to many other graded query:document pairs
+and their features can be used to train a model.
+
+The model might learn that title and description scores are
+slightly more useful that popularity and recency, and how much,
+in certain circumstances.
+
+Implementation
+
+I chose to use [TensorFlow's ranking library](https://github.com/tensorflow/ranking)
+for this.
+
+TensorFlow is well supported, and the ranking library is under active
+development.
+
+I wanted to try https://github.com/o19s/elasticsearch-learning-to-rank, but
+as we are using AWS Elasticsearch, we are not permitted to install custom plugins.
+
+Architecture:
+
+User searches
+Search API pulls results out of Elasticsearch
+Search API send results to LTR model served by TF Serving
+LTR model returns results re-ranked
+Search API returns results to user
+
+The model is trained on implicit and explicit relevancy judgements. Ratings
+are provided by manual raters and derived from user click data.
+
+Features can added and improved on.
+
+Notes on the code in this spike:
+
+Within this spike there is a new module `LearnToRank` which contains
+various utilities for training and using the ranking model.
+
+We needed to rewrite NDCG outside of Elasticsearch because the re-ranking
+happens outside of ES.
+
+`LearnToRank::Reranker` is called after the results have been extracted from
+Elasticsearch, it calls the separate process serving the model which
+re-ranks the results.
+
+There is also a directory of scripts for training and serving the model.
+
+Results
+
+This spike contains a working MVP of a ranking model that can be
+trained with relevancy judgements to re-rank results at query-time.
+
+The results are positive. For our existing dataset (explicit relevancy
+judgements) the model gets a higher score (9.2) compared to the original (0.89).
+This was done on local data, we might see different results in e.g. integration.
+
+For the combined dataset (explicit and implicit sourced from GA) we
+get a score of 0.88 with the model and the same score without. The
+model has a very slightly higher score (0.88265 vs 0.88011).
+
+I think this demonstrates that with some more work (data/feature
+engineering), the model can outperform our existing search algorithm.
+
+The model uses ndcg as one of the measures by which it trains itself,
+so it's not surprising that it can get a better score.
+
+We were able to beat our existing search's ndcg score within a
+few days. This doesn't mean that search is better, just better
+by this metric with these relevancy judgements available.
+
+In Bloomberg's talk on their project, they devote half of the talk
+to discussion of how they made query performance better after implementing
+LTR. I was worried that our search performance might also be hit.
+
+The re-ranking model is very quick. TF Serving is production ready;
+I think any performance bottlenecks will be in ruby and Elasticsearch.
+
+I didn't notice a performance hit, but I haven't done proper testing of this.
+
+The code is not much more complex. Architecturally the application is more
+complex. It requires a separate process to be running. It requires some
+knowledge of machine learning concepts and Learn To Rank from developers
+and product managers.
+
+It's harder to do, but will lead to better results. I am unclear whether
+this lead to a harder to maintain application.
+
+Pros:
+
+- Potentially significant improvements to relevancy
+- This is a well trodden path, as many orgs use LTR (Airbnb, Wikimedia,
+  commercial search engines, Bloomberg, Yelp, etc.)
+
+Cons:
+
+- Added architectural complexity
+- Harder to build and debug in contrast to hand-tuning
+
+Next Steps:
+
+Aside from making this more robust so that it is production ready,
+I see two main areas for further development:
+
+- Further research into how we should implement Learn To Rank
+- Feature engineering
+- Acquiring more/better relevancy judgements
+
+The tasks would be aimed at making the model give more precise
+relevancy predictions, should we decide to proceed with LTR.
+",TRUE,FALSE,good stuff,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+conan-io/conan,59e983f6d542dba5cfa48cef952b23ff1143a5f7,"Feature/upload revisions (#4533)
+
+* WIP
+
+* layout of dev
+
+* wip
+
+* Removed versions
+
+* working but not tested
+
+* local
+
+* Local, package failing because of none timestamp in PREV
+
+* WIP
+
+* search tests ok
+
+* Fixing tests and small refactor
+
+* renamed module
+
+* review
+
+* ISO in client, reviewed
+
+* Fixing tests
+
+* Fixing tests
+
+* New tests about metadata being updated
+
+* Review
+
+* Time cleared on export/package
+
+* Fix revisions list
+
+* fixed test
+
+* Unused import
+
+* WIP
+
+* Review
+
+* Fixed test message assert
+
+* Use env var instead of test client
+
+* Cool testing framework and a lot of remove with revisions tests
+
+* Remove tests revisions
+
+* Drafting tests
+
+* Test passing, a lot missing yet
+
+* PENDING MANY TESTS
+
+* some more tests
+
+* Pending many tests
+
+* Added more tests
+
+* No revisions tests passing
+
+* make BinariesAnalyzer the one responsible for the IDs
+
+* remove build mode check
+
+* Tests passing, only about 10 to complete
+
+* changing how binary IDs are computed
+
+* fixing tests
+
+* refactoring tests
+
+* binary ID belongs to graph Node
+
+* working in graph
+
+* Finished tests
+
+* Upload package id not reference
+
+* One more test
+
+* SVN test
+
+* IOError
+
+* Fixing tests
+
+* Fixing windows test with export package and package revisions
+
+* Fixed test
+
+* Pending migration
+
+* Migration OK
+
+* working...
+
+* renaming conan->recipe
+
+* Revisioning the revisions pull request
+
+* CONAN_REVISIONS_ENABLED
+
+* WIP
+
+* Safer migration
+
+* No revisions test
+
+* V2 WIP
+
+* WIP
+
+* Review
+
+* working except full_requires test broken
+
+* WIP
+
+* Rest routes
+
+* Refactor routes
+
+* Passing wihout revisions
+
+* Removed time from metadata
+
+* working but ConanInfo.full_requires test
+
+* Passing tests
+
+* Fixed more tests
+
+* binary analyzer refactor
+
+* Self review
+
+* Imports
+
+* small optimization of set_dirty(package_folder)
+
+* Fixed rest api test
+
+* Fixed slows
+
+* Fixed py2 issue with exception translation with http codes
+
+* rest api prepared revisions
+
+* Dani and Diego review
+
+* Fixing tests
+
+* Review
+
+* Imports
+
+* draft refactor
+
+* fixing restApi tests
+
+* fixing tests
+
+* do not ask more credentials than necessary
+
+* renamed bid->package_id
+
+* import and comment
+
+* renamed test
+
+* docs
+
+* fixed revisions tests
+
+* test to cover copy complete_recipe_sources
+
+* fixed test without revisions
+
+* review
+",,,,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+bywatersolutions/bws-package,63b7017bd36c80a80fb6e66edf8ee538e1bb38ed,"Bug 19539: Fix column index shift in cirulation rules
+
+This patch fixes an index shift introduced by bug 18857 when it introduced
+a new column.
+
+To test:
+- On the Circulation and fine rules page
+- Empty the value of 'Current on-site checkouts allowed' and save
+- Notice 'Unlimited' shows on the saved rule.
+- Click edit
+=> FAIL: the 'Unlimited' string displays instead of the empty string on the editing row.
+- Apply this patch
+- Re-open the circ rules page
+- Click edit
+=> SUCCESS: An empty string fills the 'Unlimited' fields
+- Sign off :-D
+
+Signed-off-by: David Bourgault <david.bourgault@inlibro.com>
+
+Signed-off-by: Jonathan Druart <90effa772b5c8a7a3420e6b7ea56e265888c5743@bugs.koha-community.org>
+
+Signed-off-by: Kyle M Hall <kyle@bywatersolutions.com>
+
+Signed-off-by: Jonathan Druart <90effa772b5c8a7a3420e6b7ea56e265888c5743@bugs.koha-community.org>
+",FALSE,FALSE,fine rules,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+phacility/phabricator,15e6e2adea61f27431b1c8a4d2a4552a89fed6b1,"Update install_ubuntu.sh to the new age
+
+Summary:
+Ref T4200. Since the last time this script was written, Ubuntu has made lots of changes.
+Try to keep up with those.
+
+Test Plan:
+Ran this on frash installs of Ubuntu 16.04 LTS and 18.04 LTS (Pre-release).
+Got to see Phabricator running.
+
+Reviewers: epriestley, #blessed_reviewers
+
+Reviewed By: epriestley, #blessed_reviewers
+
+Subscribers: amckinley, Korvin
+
+Maniphest Tasks: T4200
+
+Differential Revision: https://secure.phabricator.com/D19394
+",FALSE,FALSE,#blessed_reviewers,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+Alfresco/alfresco-repository,dd26455cf4f7d77126b50cd07933b4530f277664,"Merged HEAD-BUG-FIX (5.0/Cloud) to HEAD (5.0/Cloud)
+   84926: Merged PLATFORM1 (5.0/Cloud) to HEAD-BUG-FIX (5.0/Cloud)
+      83488: ACE-2639. Added a natural ordering (alphabetical) to FacetablePropertyData to ensure predictable result ordering.
+
+
+git-svn-id: 01653c09f76512ebba8fd589b05a699d8510a51f@85243 c4b6b30b-aa2e-2d43-bbcb-ca4b014f7261
+",FALSE,FALSE,natural,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+dslutz/qemu,220c21474535d5a859bb10eff2e2be0a48a15694,"unicore32-softmmu: Add is_default setting for puv3 machine
+
+This patch sets is_default to 1 for puv3 machine, so that
+find_default_machine() returns puv3 machine.
+Thanks Dunrong for pointing it out.
+
+Cc: Dunrong Huang <0c36fce70fa0cd89087deb8b79831a4cea16f5ca@gmail.com>
+Signed-off-by: Guan Xuetao <e3695cf74a76bd4528efcb62d7670a686738ecc1@mprc.pku.edu.cn>
+Signed-off-by: Blue Swirl <71067387f5d06443b335a306002ce1c8e5bf2777@gmail.com>
+",TRUE,FALSE,thanks,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+symfony/symfony,20cc065de0abf3c7cf4e3d095db2f86550fd9ced,"bug #27270 [Routing] Fix adding name prefix to canonical route names (ismail1432)
+
+This PR was merged into the 4.1 branch.
+
+Discussion
+----------
+
+[Routing] Fix adding name prefix to canonical route names
+
+| Q             | A
+| ------------- | ---
+| Branch?       | 4.1 for bug fixes <!-- see below -->
+| Bug fix?      | yes
+| New feature?  |no <!-- don't forget to update src/**/CHANGELOG.md files -->
+| BC breaks?    | no     <!-- see https://symfony.com/bc -->
+| Deprecations? | no <!-- don't forget to update UPGRADE-*.md and src/**/CHANGELOG.md files -->
+| Tests pass?   | yes    <!-- please add some, will be required by reviewers -->
+| Fixed tickets | #27244    <!-- #-prefixed issue number(s), if any -->
+| License       | MIT
+
+This PR resolve the [bug](https://github.com/symfony/symfony/issues/27244) in the [prefix imported routes name](https://symfony.com/blog/new-in-symfony-4-1-prefix-imported-route-names) feature. Reviews are always welcomed moreover as I touch a key element ( the `_canonical_route` attribute ). I need an expert in the Routing component to avoid side effect
+Thanks
+
+Commits
+-------
+
+cb5ce8f32e fix bug when imported routes are prefixed
+",TRUE,FALSE,thanks,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+Zarel/Pokemon-Showdown,fae8082cbb275f95deeda2c6e8c4c947157dc984,"Fixed problems with guessing
+
+Users weren't able to guess more than once in a question giveaway because their current name was in their list of previous names.
+http://prntscr.com/6c5r4p
+
+Added a line of code to fix that problem. Thanks to Cranham (and maybe a few others too) for pointing this out originally, btw.",TRUE,FALSE,thanks,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+lede-project/source,d70ec3008d4cd0540a9f6c88fb7e786107f1679a,"ramips: specify ""firmware"" partition format
+
+Specify firmware partition format by compatible string.
+
+formats in ramips:
+
+- denx,uimage
+- tplink,firmware
+- seama
+
+It's unlikely but the firmware splitting might not work any longer for
+the following boards, due to a custom header:
+
+- EX2700: two uImage headers
+- BR-6478AC-V2: edimax-header
+- 3G-6200N: edimax-header
+- 3G-6200NL: edimax-header
+- BR-6475ND: edimax-header
+- TEW-638APB-V2: umedia-header
+- RT-N56U: mkrtn56uimg
+
+But it rather looks like the uImage splitter is fine with the extra
+header.
+
+The following dts are not touched, due to lack of a compatible string in
+the matching firmware splitter submodule:
+
+- CONFIG_MTD_SPLIT_JIMAGE_FW
+    DWR-116-A1.dts
+    DWR-118-A2.dts
+    DWR-512-B.dts
+    DWR-921-C1.dts
+    LR-25G001.dts
+- CONFIG_MTD_SPLIT_TRX_FW
+    WCR-1166DS.dts
+    WSR-1166.dts
+- CONFIG_MTD_SPLIT_MINOR_FW
+    RBM11G.dts
+    RBM33G.dts
+- CONFIG_MTD_SPLIT_LZMA_FW
+    AR670W.dts
+- CONFIG_MTD_SPLIT_WRGG_FW
+    DAP-1522-A1.dts
+
+Signed-off-by: INAGAKI Hiroshi <638227ec0cbd67eab386b2e29d2c44a2415c7884@gmail.com>
+",FALSE,FALSE,fine,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+f-droid/fdroiddata,842ce3e55a4fc82c68de2379b20d5c50be54184d,"Update CV of Cool Reader to 3.1.2-50 (870)
+",FALSE,FALSE,cool reader,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+dmlc/tvm,0e189f01146c004f8a55840bb6c36d4449a25c34,"Fix tests for tflite unary elemwise operations (#4913)
+
+* add TFLite version check for 'ceil' and 'cos'
+* fix name check of test_op for positive inputs
+* add error message for operator not found in the installed fbs schema",FALSE,FALSE,positive inputs,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+juju/juju,5a0ee391ca1b349f379f54fd9cbe6d7dca715e6f,"Merge pull request #6348 from kat-co/fix-1616200-misleading-err-msg
+
+Corrects misleading error message when deploying
+
+This addresses lp:1616200, with caveats.
+
+Previously deploying a charm with an incorrect name would:
+- Add the charm to the environment
+- Display:
+
+> ""ERROR bad charm URL in response: URL has invalid charm or bundle name: ""local:<series>/<charm>-<rev>""""
+
+Subsequent deploys of the charm with an incorrect name would display:
+> ERROR POST https://10.1.118.174:17070/model/ba258aba-b24d-497f-8a38-aebba03105ee/charms?revision=0&schema=local&series=xenial: bad charm URL in response: URL has invalid charm or bundle name: ""local:<series>/<charm>-<rev>""""
+
+This patch corrects the chain of errors to have proper causes which implicitly corrects the error message to:
+> cannot upload charm: name ""b_1605096"" not valid
+
+or series, or whatever the case may be. However, because it fails faster, it takes a different path through the code. The bad charm won't be added to the `charms` mongo collection (good), but we now always see the verbose POST prepended in front of the error (bad).
+
+To correct this properly, I think we should modify the juju/httprequest `Do` method. I plan on doing this in a subsequent patch.",FALSE,FALSE,charm as object,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+mozilla/addons-server,1c2f1f4973ee6b775f901666c488b17d3eaee96b,"Extract/compile script.  Today's lucky number is 12268.
+",FALSE,FALSE,luky number,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+apache/airflow,40d2d6bc157ca8ff9e633d07782ccfe6a489bf3b,"Disable suppress_logs_and_warning in cli when debugging (#13180)
+
+* Disable suppress_logs_and_warning in cli when debugging
+
+In some cases commands like 'dags list' can be used for debug purposes.
+The problem is that we are suppresing logs and warnings in some cases
+to make the output nice and clean. This commit disable this functionality
+if logging level is set to DEBUG.
+
+* Add verbose flag
+
+* fixup! Add verbose flag",TRUE,FALSE,nice and clean,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+facebook/flow,5080477b116c0d03020356a613214c30e8b78f7e,"remove funky repositioning of arguments to parameters
+
+Summary: No need to reposition arguments to parameters in function calls. Use ops are good enough. Bonus: removed a piece of hacky code (and the comment that called it out).
+
+Reviewed By: panagosg7
+
+Differential Revision: D16979479
+
+fbshipit-source-id: cea2613e0f9c5fb5b5245e646ae093f5fd88528d
+",TRUE,FALSE,bonus,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+fieldtrip/fieldtrip,8018be0af5bf2d1f7f75c6026c5fba9c6d4eb916,"initialize with the selection of channels/trials from the user
+
+- use INCLUDED/EXCLUDED instead of GOOD/BAD
+- updated plotting, now using ft_plot_vector and ordered layout
+- update the automatic vertical scaling, now compatible with singleplot and multiplot
+",FALSE,FALSE,good/bad,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+Kirchhoff-/Android-links,0bf3f8cc630e6dfe3bfebe53e085cf2a42034ccd,SavedStateHandle to the Rescue,TRUE,FALSE,to the rescue,,,11_jan_2021_pos_hits_3046a4e1379f977d45216ed66972258d698f8437
+tprrt/linux-stable,1011d24a2148f77aaa2d4afc1c0f48e40589d020,"[media] stv090x: Fix delivery system setting
+
+As sparse complains:
+	drivers/media/dvb-frontends/stv090x.c:3471:30: warning: mixing different enum types
+	drivers/media/dvb-frontends/stv090x.c:3471:30:     int enum fe_delivery_system  versus
+	drivers/media/dvb-frontends/stv090x.c:3471:30:     int enum stv090x_delsys
+
+There's actually an error when setting the delivery system on
+stv090x_search(): it is using the DVBv5 macros as if they were
+the stv090x ones.
+
+Instead, we should convert between the two namespaces, returning
+an error if an unsupported delivery system is requested.
+
+Signed-off-by: Mauro Carvalho Chehab <ad86ba2154032c9f55743a190faa2459a9d61d42@osg.samsung.com>
+",FALSE,TRUE,complains,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+nwjs/chromium.src,fd0108896a7b448877803b67a15e34b3eb9e730c,"Revert 200481 ""Fix for mmap(2) sandboxing vs. Nvidia binary driver.""
+
+This revert is speculative. Reverting two other revisions from the same build
+did not fix the build. This change, however, is the only one that was
+dcommitted.
+
+> Fix for mmap(2) sandboxing vs. Nvidia binary driver.
+> 
+> I'll identify the exact flag causing this and consider additional CLs when I
+> get access to my workstation tomorrow.
+> 
+> TBR=jln@chromium.org
+> BUG=241340
+> TEST=hashimoto@chromium.org confirms fix.
+> 
+> Review URL: https://codereview.chromium.org/15104005
+
+TBR=cevans@chromium.org
+
+Review URL: https://codereview.chromium.org/14771024
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@200566 0039d316-1c4b-4281-b951-d872f2087c98
+",FALSE,TRUE,speculative,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+gphoto/libgphoto2,6ead6016dcd9df71ba98f4ebae0fb3bdc0ed3b9c,"
+New command ""EOS get body ID"" returns camera serial number.
+Added command and response lengths for ""Get available shot"" and ""Get
+ custom function""
+
+
+git-svn-id: 40dd595c6684d839db675001a64203a1457e7319@6030 67ed7778-7388-44ab-90cf-0a291f65f57c
+",FALSE,FALSE,shot,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+TrinityCore/TrinityCore,786834600f0fe17f8876f6bec958c6ce9813a49f,"Core/PacketIO: SMSG_ZONE_UNDER_ATTACK, SMSG_THREAT_CLEAR and enabled some opcodes
+",FALSE,FALSE,attack,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+tprrt/linux-stable,c2517f62dac608e43b652dc6ed1e478e8447e029,"HID: multitouch: add support for Nexio 42"" panel
+
+This device is the worst device I saw. It keeps TipSwitch and InRange
+at 1 for fingers that are not touching the panel.
+The solution is to rely on the field ContactCount, which is accurate
+as the correct information are packed at the begining of the frame.
+
+Unfortunately, CountactCount is most of the time at the end of the report.
+The solution is to pick it when we have the whole report in raw_event.
+
+Signed-off-by: Benjamin Tissoires <7a0e50e3f6a0939db82b6a8a423c08a163896f41@gmail.com>
+Signed-off-by: Jiri Kosina <ed58f755cc8caaf10c3e8c731a8b86fb8f13d6cb@suse.cz>
+",FALSE,TRUE,Unfortunately,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+cloudwu/skynet,f6679a778f7ab6e9a80b97459bbfd96f8e030884,"remove useless Intermediate variables
+",FALSE,TRUE,useless,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+Glain/FFTPatcher,9877caf66e8b05ff468eb7655d78409c7617fe76,"FFTPatcher Gameshark conditional codes use D0 format and support ATTACK.OUT and REQUIRE.OUT
+",FALSE,FALSE,attack,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+hyperledger/fabric,f8d6d933e0f2c3fc918c6dbad09a6aac34538961,"Merge ""FAB-4174 fix bad markup in CONTRIBUTING.rst""",FALSE,TRUE,bad,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+tprrt/linux-stable,21bd68f196ca91fc0f3d9bd1b32f6e530e8c1c88,"afs: Unlock pages for __pagevec_release()
+
+__pagevec_release() complains loudly if any page in the vector is still
+locked.  The pages need to be locked for generic_error_remove_page(), but
+that function doesn't actually unlock them.
+
+Unlock the pages afterwards.
+
+Signed-off-by: Marc Dionne <b9e52d4bad3c5c473649ff04b727bd3e40807edf@auristor.com>
+Signed-off-by: David Howells <ebac1d06c1688626821bb0e574a037a7a5354e49@redhat.com>
+Tested-by: Jonathan Billings <8c77b387839da6b25262d49d2fd1b1ecbb675fc4@umich.edu>
+",FALSE,TRUE,code complains,FALSE,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+mozilla/kitsune,c5c9f188300c7b692c20b8dda2f71517a186aac2,"Clean up and test while fixing the edit_threads template and removing the bad_reply template (yay).
+",TRUE,FALSE,"yay, bad_reply",,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+tprrt/linux-stable,b812982e6b9ce3797f160ad3778766db107b5086,"staging: rtl8188eu: explicitly convert from __le16 to integer
+
+BA_para_set (of type __le16) is implicitly cast into an integer for
+bitwise operations, after which the result is converted back into a
+__le16. Make the initial cast explicit to make the code clearer. In
+addition, refactor the code for readability.
+
+This also removes five sparse warnings of the following type:
+drivers/staging/rtl8188eu//core/rtw_mlme_ext.c:6114:70: warning: restricted __le16 degrades to integer
+
+Signed-off-by: Kristina Martšenko <54c7173f2bb040127d337a20071ec781edbec314@gmail.com>
+Signed-off-by: Peter P Waskiewicz Jr <019ca817bcedb2fce0c539efa1b71c24f7a6c1c1@intel.com>
+",FALSE,FALSE,degrades to integer,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+Homebrew/homebrew-core,978c20e67f8d47f8f709484c6582dd5f27cbea6e,"mess & ume 0.148u2
+
+* Update ume and its family to 0.148u2.
+* Let homebrew decide which compiler compiling ume and its family. Note
+  that ume's LD is abnormal.
+* Remove redefined header path.
+
+Closes Homebrew/homebrew#18613.
+
+Signed-off-by: Jack Nagel <43386ce32af96f5c56f2a88e458cb94cebee3751@gmail.com>
+",FALSE,FALSE,mess as a library,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+jbrowneuk/jblog,5208b2a4d25b1dfe76d3207c0020c59d4db55a01,"Remove storybook
+
+Maintenance burden and not being used
+",FALSE,TRUE,burden,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+00-Evan/shattered-pixel-dungeon,b7fc99901bdb11c9adf5c74411129ff9f3c84aa2,"v0.9.0: fixed DM-201s attacking while stunned
+",FALSE,FALSE,attacking,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+HippieStation/HippieStation,38695dec8cbe65263b4f0a578301792e8df3a205,"Necropolis curse mobs no longer fall into chasms
+",FALSE,FALSE,Necropolis curse,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+CanonicalLtd/subiquity,1a8aa04908996ec1429e807f1ed890cbec539bb8,"try to make control flow a bit less ridiculous
+",FALSE,TRUE,ridiculous,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+gatsbyjs/gatsby,54a94e2350c3e28217334ba72cfc30ebf538b377,"Fix data overwriting bug (#7720)
+
+So I hit a really weird bug in my project and with the help of @pieh we came to the conclusion that the order needs to be swapped as `{...props}` was overwriting the `data`",FALSE,TRUE,weird,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+apple/swift-corelibs-foundation,cc9e394ba506a0bac0c18c93772352820a3784f0,"Merge pull request #2667 from compnerd/follow-the-process
+
+Foundation: clear up string abuse on Windows",FALSE,TRUE,abuse,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+coq/coq,409bc943e8d8a0bc0d35ae63f3530b7324ca975e,"Fix previous commit.
+
+I've messed up with parts of the compatibility files I had to commit.
+",FALSE,TRUE,messed up,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
+claroline/Distribution,fdfb260de594c6e0464f9b22783611296c00035a,"[CoreBundle] Fixing root rights managament + removing useless controller + adding security on AdministrationToolController.
+",FALSE,TRUE,useless,,,11_jan_2021_neg_hits_3046a4e1379f977d45216ed66972258d698f8437
