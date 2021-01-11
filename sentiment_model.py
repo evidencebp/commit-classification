@@ -145,7 +145,7 @@ positive_sentiment = ['advantage',
  #'meaningful', # consider - might be descriptive
  'merry',
  #'motivation', # messages with structure "motivation: xxx"
- 'natural', #consider
+ #'natural', #consider
  'nice(?:r|st)?',
  'nifty',
  'noble',
@@ -236,7 +236,7 @@ negative_sentiment = ['abject',
  'apolog(?:ize|ies|y)',
  'ashamed',
  'ass(?: |-)?hole(?:s)?',
- 'attack(?:s|ed|ing)?',
+ #'attack(?:s|ed|ing)?',
  'awful(?:ly)?',
  'awkward(?:ly)?',
  'bad', # consider, might be descriptive
@@ -478,7 +478,7 @@ negative_sentiment = ['abject',
  #'shit*', # We have a dedicated swearing model for that
  #'shitty', # We have a dedicated swearing model for that
  'shock' + REGULAR_SUFFIX,
- '(shoot|shot|shoots|shooting)',
+ #'(shoot|shot|shoots|shooting)',
  'shy',
  'sick',
  'silly',
@@ -565,7 +565,7 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?', '(make|makes|made|making)' + NEAR_ENOUGH + 'happy'
  , 'rich text', 'warm reset', '(false|true) positive(:?s)?', 'worth (doing|keeping|it)'
  , 'respected for (' + "|".join(programming_languges) + ")"
- , 'degrees of freedom', "I'm pretty", "I am pretty", 'positive (integer|number)', 'perfectly (good|ok|valid)'
+ , 'degrees of freedom', "I'm pretty", "I am pretty", 'positive (integer|number|input(:?s)?)', 'perfectly (good|ok|valid)'
  , 'work(:?s|ed|ing)? fine', '(take|took|taking) advantage', 'making good sense', 'user friendly', 'smart annotation'
  , 'at best', "(we|we're|I|I'm|you|you're|he|he's|she's) good", 'greater than', 'greater'+ NEAR_ENOUGH +'equal'
  , "third time's the charm", 'good faith', 'good riddance', 'for good', 'good to have', 'probably good', 'good enough'
@@ -574,7 +574,8 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'pretty (active|dead|misleading|expensive|trivial|ugly|hard|often|embarrassing|similar|complex)'
  , "'pretty'", '"pretty"'
  , 'best to', 'best(?:-|\s)practice(:?s)?', 'best(?:-|\s)effort(:?s)?', 'the best of', 'best regards'
- , 'fine grain(:?ed)?', 'fine tun(:?e|ed|esing)', '(the|a) best case'
+ , 'fine grain(:?ed)?', 'fine tun(:?e|ed|esing)', '(the|a) best case', 'lucky number(:?s)?'
+ , r'good(/|\\)bad', r'bad(/|\\)good'
  , 'good state' # consider
  , 'for good' # consider
  #, 'good idea(s)?' # consider
@@ -706,39 +707,32 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='8ffb7b7b5b90fa5917fe08b8310bc3d5a28b898c')
+    print_concepts_functions_for_bq(commit='3046a4e1379f977d45216ed66972258d698f8437')
 
 
     text = """
-"Improve Phan's ability to track unconditionally true/false branches.
+"mess & ume 0.148u2
 
-And be stricter about how static blocks are analyzed.
-Stop treating static variables without defaults as having the empty
-union type.
+* Update ume and its family to 0.148u2.
+* Let homebrew decide which compiler compiling ume and its family. Note
+  that ume's LD is abnormal.
+* Remove redefined header path.
 
-Phan works best when the definitions of static variables are above their
-uses.
+Closes Homebrew/homebrew#18613.
 
-```
-static $a;
-static $b;
-if ($a === null) {
-    $a = e();
-    $b = expr();
-}
-use ($a, $b);
-```
+Signed-off-by: Jack Nagel <43386ce32af96f5c56f2a88e458cb94cebee3751@gmail.com>
 "
   """.lower()
-    print(is_positive_sentiment(text))
+    print("is positive", is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
     print(re.findall(build_positive_sentiment_regex(), text))
     print("neg", re.findall(build_not_positive_sentiment_regex(), text))
     print("ex", re.findall(build_positive_sentiment_excluded_regex(), text))
 
 
-    print("s1", re.findall('pretty(?:-|\s)print(?:er|ing|ed|s)?', text))
-
+    print("is negative", is_negative_sentiment(text))
+    valid_num = len(re.findall(build_negative_sentiment_regex(), text))
+    print(re.findall(build_negative_sentiment_regex(), text))
 
 """
  Better safe than sorry
