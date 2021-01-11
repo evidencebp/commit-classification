@@ -25,7 +25,7 @@ positive_sentiment = ['advantage',
  'beloved',
  'benefit(?:s|ed|ing)?',
  'beneficial',
- 'best',
+ #'best',
  #'better', # usually more description than sentiment
  'bless(?:s|ed|ing)?',
  'blissful',
@@ -574,14 +574,14 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'pretty (active|dead|misleading|expensive|trivial|ugly|hard|often|embarrassing|similar|complex)'
  , "'pretty'", '"pretty"'
  , 'best to', 'best(?:-|\s)practice(:?s)?', 'best(?:-|\s)effort(:?s)?', 'the best of', 'best regards'
- , 'fine grain(:?ed)?', 'fine tun(:?e|ed|esing)'
+ , 'fine grain(:?ed)?', 'fine tun(:?e|ed|esing)', '(the|a) best case'
  , 'good state' # consider
  , 'for good' # consider
  #, 'good idea(s)?' # consider
                              ]
 excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?', 'snmp trap'
  , 'kernel panic', 'fix panic' # more like "fix kernel panic
- , 'bad service error', 'bad data', 'dirty (state|range|bit(?:s)?)'
+ , 'bad service error', 'bad data', 'dirty (state|range|bit(?:s)?)', '(the|a) worse case'
 
  #, 'quick and dirty' #This is actually a sentiment
                              ]
@@ -706,22 +706,30 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='ee1cd85b6f59d2a1b6afb74d7532bd3a606565af')
+    print_concepts_functions_for_bq(commit='8ffb7b7b5b90fa5917fe08b8310bc3d5a28b898c')
 
 
     text = """
-"Make the clang module container format selectable from the command line.
-- introduces a new cc1 option -fmodule-format=[raw,obj]
-  with 'raw' being the default
-- supports arbitrary module container formats that libclang is agnostic to
-- adds the format to the module hash to avoid collisions
-- splits the old PCHContainerOperations into PCHContainerWriter and
-  a PCHContainerReader.
+"Improve Phan's ability to track unconditionally true/false branches.
 
-Thanks to Richard Smith for reviewing this patch!
+And be stricter about how static blocks are analyzed.
+Stop treating static variables without defaults as having the empty
+union type.
 
-llvm-svn: 242499
-"  """.lower()
+Phan works best when the definitions of static variables are above their
+uses.
+
+```
+static $a;
+static $b;
+if ($a === null) {
+    $a = e();
+    $b = expr();
+}
+use ($a, $b);
+```
+"
+  """.lower()
     print(is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
     print(re.findall(build_positive_sentiment_regex(), text))
