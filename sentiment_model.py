@@ -276,7 +276,7 @@ negative_sentiment = ['abject',
  'cry',
  'curs' + VERB_E_SUFFIX,
  'cynical(?:ly)',
- 'damag' + VERB_E_SUFFIX,
+ #'damag' + VERB_E_SUFFIX, # used as descriptive to content
  'damn',
  'danger(?:ously|ous)?',
  'deadly',
@@ -291,7 +291,7 @@ negative_sentiment = ['abject',
  'difficult(?:y|ies)?',
  'dilemma',
  'dirt',
- 'dirty',
+ #'dirty', # refers to dirty software objects
  'disadvantage(?:s)?',
  'disappoint' + VERB_E_SUFFIX,
  'disaster',
@@ -328,7 +328,7 @@ negative_sentiment = ['abject',
  'flop',
  'fool' + REGULAR_SUFFIX,
  'foolish',
- 'forgotten', # consider
+ #'forgotten', # consider
  'frantic',
  'freak'  + REGULAR_SUFFIX,
  'frenzy',
@@ -581,7 +581,7 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
                              ]
 excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?', 'snmp trap'
  , 'kernel panic', 'fix panic' # more like "fix kernel panic
- , 'bad service error', 'bad data'
+ , 'bad service error', 'bad data', 'dirty (state|range|bit(?:s)?)'
 
  #, 'quick and dirty' #This is actually a sentiment
                              ]
@@ -706,7 +706,7 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='8daddfcea558c6c2e6f772dc7f2baccae9b951ca')
+    print_concepts_functions_for_bq(commit='ee1cd85b6f59d2a1b6afb74d7532bd3a606565af')
 
 
     text = """
