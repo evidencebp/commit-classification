@@ -17,7 +17,7 @@ core_abstraction_terms = ['abstraction'
                         , 'abtract(:?s|ed|ing)?'
                      ]
 
-excluded_abstraction_terms = []
+excluded_abstraction_terms = ['#############PLACEHOLDER#############']
 
 # Corrective
 def build_core_abstraction_regex():
@@ -109,5 +109,5 @@ def evaluate_abstraction_classifier():
     print(cm)
 
 if __name__ == '__main__':
-    print_abstractionfunctions_for_bq(commit='60af4655d2baeb3aa15768a02cacf0bff5612e2b')
+    print_abstractionfunctions_for_bq(commit='c8635d2e58d1a5716dc185427bb5bf5c83a1376b')
     #evaluate_cc_fix_classifier()
