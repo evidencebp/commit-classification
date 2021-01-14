@@ -1,0 +1,461 @@
+repo_name,commit,message,Is_abstraction,Justification,Certain,Comment,Sampling
+jenkinsci/jenkins,3e8750699e08ec770976e8701a787bcab962bf8e,"tweaking the abstraction a bit so that this can be used not just with Build but all the other Actionable objects
+
+
+git-svn-id: 28f34f9aa52bc55a5ddd5be9e183c5cccadc6ee4@7729 71c3de6d-444a-0410-be80-ed276b4c234a
+",TRUE,abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+Accruent/zoomba,57a2309f4cb15ceee3f8c6468961b32544d7d8cc,"Maintenance/date suds (#16)
+
+* Suds object fix,
+Date Comparator abstraction with additional error handling
+
+* Suds object fix,
+Date Comparator abstraction with additional error handling
+
+* Expanding Date Comparator Function kwargs
+
+* Adding kwargs to other key_by_key validator calls
+
+* fixed doc_string indentation
+",TRUE,abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+researchstudio-sat/webofneeds,0d74fa530c48c96b4ebf8b57949f333794e16959,"Abstraction and type integration
+
+abstracted classes
+implemented Long and Date intervals
+commented code
+wrote new test cases
+
+there is a BUG! if you have an interval 15-25 and you look for 17-20, it will not be found
+",TRUE,"abstraction, abstracted classes",,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+nwjs/chromium.src,a9f68e673fccdf7948729413523dff9b577d660a,"Switch rendering tree selection code to to new layout types
+https://bugs.webkit.org/show_bug.cgi?id=63762
+
+Reviewed by Eric Seidel.
+
+Switch selection getters and selection gap calculation methods over to
+new layout abstraction.
+
+No new tests, no functionality changes.
+
+* rendering/InlineTextBox.cpp:
+(WebCore::InlineTextBox::selectionTop):
+(WebCore::InlineTextBox::selectionBottom):
+(WebCore::InlineTextBox::selectionHeight):
+(WebCore::InlineTextBox::isSelected):
+* rendering/InlineTextBox.h:
+* rendering/RenderBR.h:
+(WebCore::RenderBR::selectionRectForRepaint):
+* rendering/RenderBlock.cpp:
+(WebCore::RenderBlock::selectionGapRectsForRepaint):
+(WebCore::RenderBlock::selectionGaps):
+(WebCore::RenderBlock::inlineSelectionGaps):
+(WebCore::RenderBlock::blockSelectionGaps):
+(WebCore::RenderBlock::blockSelectionGap):
+(WebCore::RenderBlock::logicalLeftSelectionGap):
+(WebCore::RenderBlock::logicalRightSelectionGap):
+(WebCore::RenderBlock::logicalLeftSelectionOffset):
+(WebCore::RenderBlock::logicalRightSelectionOffset):
+(WebCore::RenderBlock::positionForPointWithInlineChildren):
+(WebCore::RenderBlock::desiredColumnWidth):
+* rendering/RenderBlock.h:
+(WebCore::RenderBlock::selectionRectForRepaint):
+* rendering/RenderListMarker.cpp:
+(WebCore::RenderListMarker::selectionRectForRepaint):
+* rendering/RenderListMarker.h:
+* rendering/RenderObject.h:
+(WebCore::RenderObject::selectionRect):
+(WebCore::RenderObject::selectionRectForRepaint):
+* rendering/RenderReplaced.cpp:
+(WebCore::RenderReplaced::selectionRectForRepaint):
+* rendering/RenderReplaced.h:
+* rendering/RenderSelectionInfo.h:
+(WebCore::RenderSelectionInfo::RenderSelectionInfo):
+* rendering/RenderText.cpp:
+(WebCore::RenderText::selectionRectForRepaint):
+* rendering/RenderText.h:
+* rendering/RootInlineBox.cpp:
+(WebCore::RootInlineBox::selectionTop):
+(WebCore::RootInlineBox::selectionBottom):
+* rendering/RootInlineBox.h:
+(WebCore::RootInlineBox::selectionHeight):
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@90596 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,layout abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+gengo/grpc-gateway,b56786c168e3c7bc187a5eaefc9d2827c0551234,"Merge pull request #78 from gengo/fix/golint
+
+Add abstraction of code generator implementation",TRUE,add abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+apollostack/apollo-client,894cb045383591faaa541dde02b39a7d40e20a4a,"Update optimism dependency to 0.8.3. (#4596)
+
+* Update apollo-cache-inmemory to use optimism@0.8.3.
+
+This upgrade allows us to drop the transitive dependency on the
+immutable-tuple package, while also replacing the CacheKeyNode abstraction
+with optimism's equivalent KeyTrie class.
+
+* Reduce bundle size limit for apollo-cache-inmemory.
+",TRUE,replacing the CacheKeyNode abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+Aptoide/aptoide-client-v8,0774c941c472f3687278e07b1cb8e0203d0328e9,"removed the ApplicationPreferences abstraction since it was un desired by the team software architect
+",TRUE,abstracion,,Subtle negative sentiment?,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+GNOME/gnome-builder,ba9fc9d0d7127e71934c1e907bbe355fa3cf9df8,"libide: add basic IdeFileSettings abstraction
+
+This will allow us to have various file settings backends, such as
+editorconfig, modelines, or gsettings.
+",TRUE,add abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+apollographql/apollo-client,882624826a30cd51d90b023a3a7c6548b0c82b0f,"Move QueryInfo class into its own module.
+
+It may seem like we're back to where we started with the separate
+QueryStore class, but what we've actually done is consolidated a lot of
+important logic into the existing QueryInfo abstraction.
+",TRUE,existing abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+silverstripe/silverstripe-cms,2bd9d00da0187558b7c76cd0bdc9d9664c140572,"API Remove filesystem sync
+API support new asset abstraction
+BUG Fix file link tracking for new asset abstraction
+",TRUE,support abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+google/closure-library,7fe16d9e88e5a5cf8421619ea936db39f82e487f,"Implement JsUnit Environments.
+
+Summary: JsUnit environments provide an abstraction for modifying the lifecycle of basic JsUnit tests by patching the existing setUp(Page)/tearDown(Page) methods with additional logic that can be shared across multiple tests.
+
+Design doc: https://docs.google.com/a/google.com/document/d/1SRh0ZRr1NYmtoJD8GNnJA-0qkiq_0b7GIXzo4JKrHq8/
+-------------
+Created by MOE: http://code.google.com/p/moe-java
+MOE_MIGRATED_REVID=68057562
+",TRUE,provide an abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+sippy/rtpproxy,576e99c3d7edd1b45709cbbcdf8ac824737345f4,"bulk_netio() - an abstraction API that can utilize either regular
+sockets or new ""bulk"" socket syscalls. For now works on send only,
+but receive part is to be added soon. WiP. Already fails down to
+the regular I/O if module is not loaded.
+",TRUE,abstraction API,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+apple/swift,c4ed7bd0bea80c0fd0873ed04edd3df40fe1ca49,"Merge pull request #30249 from gottesmm/pr-1c59567660f53bc35248d864c54d25e2760a74d0
+
+[ownership] Implement InteriorPointer abstraction/validate current recognized ones addresses are not used outside of parent object's borrowed lifetime.",TRUE,implement abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+apple/swift,d1066d16a20838d7505248bd15a4d6d87034c9a9,"[IRGen] Use a canonical generic environment rather than an archetype builder.
+
+Rather than directly using the ArchetypeBuilder associated with a
+canonical generic signature, use a canonical GenericEnvironment
+associated with that canonical generic signature. This has a few
+benefits:
+
+* It's cleaner to not have IRGen working with archetype builders;
+  GenericEnvironment is the right abstraction for mapping between
+  dependent types and archetypes for a specific context.
+* It helps us separate the archetype builder from a *specific*
+  set of archetypes. This is an ongoing refactor that is intended to
+  allow us to re-use archetype builders across different generic
+  environments.
+
+As part of this, ArchetypeBuilder::substDependentType() has gone away
+in favor of GenericEnvironment::mapTypeIntoContext().
+",TRUE,the right abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+tensorflow/tensorflow,12c0719d526343d07883d61c0d1805e5ce6f821b,"[MLIR] Introduce normalized single-result unbounded AffineApplyOp
+
+Supervectorization does not plan on handling multi-result AffineMaps and
+non-canonical chains of > 1 AffineApplyOp.
+This CL introduces a simpler abstraction and composition of single-result
+unbounded AffineApplyOp by using the existing unbound AffineMap composition.
+
+This CL adds a simple API call and relevant tests:
+
+```c++
+OpPointer<AffineApplyOp> makeNormalizedAffineApply(
+  FuncBuilder *b, Location loc, AffineMap map, ArrayRef<Value*> operands);
+```
+
+which creates a single-result unbounded AffineApplyOp.
+The operands of AffineApplyOp are not themselves results of AffineApplyOp by
+consrtuction.
+
+This represent the simplest possible interface to complement the composition
+of (mathematical) AffineMap, for the cases when we are interested in applying
+it to Value*.
+
+In this CL the composed AffineMap is not compressed (i.e. there exist operands
+that are not part of the result). A followup commit will compress to normal
+form.
+
+The single-result unbounded AffineApplyOp abstraction will be used in a
+followup CL to support the MaterializeVectors pass.
+
+PiperOrigin-RevId: 227879021
+",TRUE,simpler abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+AndroidX/androidx,e855454acac8e6d87aaa8b3e67731fb83a22e882,"Remove struct used to hold dialog data.
+
+Instead, just access this data off the Builder directly. If the values
+need to be held on to longer than the constructor, then the dialog
+should create individual fields for this.
+
+The reasoning is that this reduces abstraction. The DialogData objects
+also allowed values to change after its creation. This works for
+Builder, but should not be the case for the dialog itself.
+
+Refactoring in this way ensures the expected behavior.
+
+Fixes: 78349123
+Test: test on demo app for CarAlertDialog and CarListDialog. Ensured
+functionality is still the same with no crashes.
+
+Change-Id: I9316e76ca8691506fdab6726388a56c274f87014
+",FALSE,reduces abstraction,FALSE,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+palantir/atlasdb,74e4360365bc658d50812aee9f41d12b0ac24e13,"ETE Tests of TimeLock Migration [TimeLock ETE Tests, Part III] (#1676)
+
+* Wrote a failing test for the timelock migration ETE
+
+* Super hacky, but working timelock migration test
+
+* Multistage ETE test
+
+* Some reformatting/cleanup
+
+* Banish the Docker orchestration stuff to a separate layer of abstraction
+
+* Refactor some duplication/dirtiness in OrchestrationRule and EteTest
+
+* Use AssertJ's soft-assertions
+
+* Check timestamp values too
+
+* [no release notes]
+
+* Make the timestamp check more stringent
+
+* PR comments
+",TRUE,a seperate layer of astraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+nwjs/chromium.src,7f1935cd797540afa78326b3b59c2ee0603a66db,"Standardized the JS calling convention
+https://bugs.webkit.org/show_bug.cgi?id=72221
+        
+Reviewed by Oliver Hunt.
+
+This patch standardizes the calling convention so that the caller always
+sets up the callee's CallFrame. Adjustments for call type, callee type,
+argument count, etc. now always take place after that initial setup.
+        
+This is a step toward reversing the argument order, but also has these
+immediate benefits (measured on x64):
+        
+(1) 1% benchmark speedup across the board.
+        
+(2) 50% code size reduction in baseline JIT function calls.
+        
+(3) 1.5x speedup for single-dispatch .apply forwarding.
+        
+(4) 1.1x speedup for multi-dispatch .apply forwarding.
+
+This change affected the baseline JIT most, since the baseline JIT had
+lots of ad hoc calling conventions for different caller / callee types.
+
+* assembler/MacroAssemblerX86_64.h:
+(JSC::MacroAssemblerX86_64::branchPtr):
+(JSC::MacroAssemblerX86_64::branchAddPtr): Optimize compare to 0 into
+a test, like other assemblers do. (I added some compares to 0, and didn't
+want them to be slow.)
+
+* bytecode/CodeBlock.cpp:
+(JSC::CodeBlock::dump): Merged op_load_varargs into op_call_varargs so
+op_call_varargs could share code generation with other forms of op_call.
+This is also a small optimization, since op_*varargs no longer have to
+pass arguments to each other through the register file.
+
+(JSC::CallLinkInfo::unlink):
+* bytecode/CodeBlock.h: Added a new call type: CallVarargs. This allows
+us to link functions called through .apply syntax. We need to distinguish
+CallVarargs from Call because CallVarargs changes its argument count
+on each inovcation, so we must always link to the argument count checking
+version of the callee.
+
+* bytecode/Opcode.h:
+* bytecompiler/BytecodeGenerator.cpp:
+(JSC::BytecodeGenerator::emitCallVarargs):
+* bytecompiler/BytecodeGenerator.h: Merged op_load_varargs into op_call_varargs.
+
+* bytecompiler/NodesCodegen.cpp:
+(JSC::ApplyFunctionCallDotNode::emitBytecode): Ditto. Also, simplified
+some of this bytecode generation to remove redundant copies.
+
+* dfg/DFGJITCodeGenerator32_64.cpp:
+(JSC::DFG::JITCodeGenerator::emitCall):
+* dfg/DFGJITCodeGenerator64.cpp:
+(JSC::DFG::JITCodeGenerator::emitCall): Added a new call type: CallVarargs.
+DFG doesn't support this type, but its code needs to change slightly
+to accomodate a 3-state variable.
+
+Stopped passing the argument count in regT1 because this is non-standard.
+(The argument count goes in the CallFrame. This trades speed on the slow
+path for speed and code size on the fast path, and simplicity on all paths.
+A good trade, in my opinion.)
+
+* dfg/DFGJITCompiler.cpp:
+(JSC::DFG::JITCompiler::compileEntry):
+(JSC::DFG::JITCompiler::link):
+(JSC::DFG::JITCompiler::compile):
+(JSC::DFG::JITCompiler::compileFunction): Tweaked code to make CallFrame
+setup more obvious when single-stepping. Also, updated for argument count
+not being in regT1.
+
+* dfg/DFGJITCompiler.h:
+(JSC::DFG::JITCompiler::addJSCall):
+(JSC::DFG::JITCompiler::JSCallRecord::JSCallRecord): Added a new call
+type: CallVarargs.
+
+* dfg/DFGOperations.cpp: Do finish CallFrame setup in one place before
+doing anything else. Don't check for stack overflow because we have no callee
+registers, and our caller has already checked for its own registers.
+
+* dfg/DFGRepatch.cpp:
+(JSC::DFG::dfgLinkFor): We can link to our callee even if our argument
+count doesn't match -- we just need to link to the argument count checking
+version.
+
+* interpreter/CallFrameClosure.h:
+(JSC::CallFrameClosure::setArgument): BUG FIX: When supplying too many
+arguments from C++, we need to supply a full copy of the arguments prior
+to the subset copy that matches our callee's argument count. (That is what
+the standard calling convention would have produced in JS.) I would have
+split this into its own patch, but I couldn't find a way to get the JIT
+to fail a regression test in this area without my patch applied.
+
+* interpreter/Interpreter.cpp: Let the true code bomb begin!
+
+(JSC::eval): Fixed up this helper function to operate on eval()'s CallFrame,
+and not eval()'s caller frame. We no longer leave the CallFrame pointing
+to eval()'s caller during a call to eval(), since that is not standard.
+
+(JSC::loadVarargs): Factored out a shared helper function for use by JIT
+and interpreter because half the code means one quarter the bugs -- in my
+programming, at least.
+
+(JSC::Interpreter::execute): Removed a now-unused way to invoke eval.
+        
+(JSC::Interpreter::privateExecute): Removed an invalid ASSERT following
+putDirect, because it got in the way of my testing. (When putting a
+function, the cached base of a PutPropertySlot can be 0 to signify ""do
+not optimize"".)
+        
+op_call_eval: Updated for new, standard eval calling convention.
+        
+op_load_varargs: Merged op_load_varargs into op_call_varargs.
+
+op_call_varags: Updated for new, standard eval calling convention. Don't
+check for stack overflow because the loadVarargs helper function already
+checked.
+
+* interpreter/Interpreter.h:
+(JSC::Interpreter::execute): Headers are fun and educational!
+
+* interpreter/RegisterFile.cpp:
+(JSC::RegisterFile::growSlowCase):
+* interpreter/RegisterFile.h:
+(JSC::RegisterFile::grow): Factored out the slow case into a slow
+case because it was cramping the style of my fast case.
+
+* jit/JIT.cpp:
+(JSC::JIT::privateCompile): Moved initialization of
+RegisterFile::CodeBlock to make it more obvious when debugging. Removed
+assumption that argument count is in regT1, as above. Removed call to
+restoreArgumentReference() because the JITStubCall abstraction does this for us.
+
+(JSC::JIT::linkFor): Link even if we miss on argument count, as above.
+
+* jit/JIT.h:
+* jit/JITCall32_64.cpp:
+(JSC::JIT::emitSlow_op_call):
+(JSC::JIT::emitSlow_op_call_eval):
+(JSC::JIT::emitSlow_op_call_varargs):
+(JSC::JIT::emitSlow_op_construct):
+(JSC::JIT::emit_op_call_eval):
+(JSC::JIT::emit_op_call_varargs): Share all function call code generation.
+Don't count call_eval when accounting for linkable function calls because
+eval doesn't link. (Its fast path is to perform the eval.)
+
+(JSC::JIT::compileLoadVarargs): Ported this inline copying optimization
+to our new calling convention. The key to this optimization is the
+observation that, in a function that declares no arguments, if any
+arguments are passed, they all end up right behind 'this'.
+
+(JSC::JIT::compileCallEval):
+(JSC::JIT::compileCallEvalSlowCase): Factored out eval for a little clarity.
+
+(JSC::JIT::compileOpCall):
+(JSC::JIT::compileOpCallSlowCase): If you are still with me, dear reader,
+this is the whole point of my patch. The caller now unconditionally moves
+the CallFrame forward and fills in the data it knows before taking any
+branches to deal with weird caller/callee pairs.
+        
+This also means that there is almost no slow path for calls -- it all
+gets folded into the shared virtual call stub. The only things remaining
+in the slow path are the rare case counter and a call to the stub.
+
+* jit/JITOpcodes32_64.cpp:
+(JSC::JIT::privateCompileCTIMachineTrampolines):
+(JSC::JIT::privateCompileCTINativeCall): Updated for values being in
+different registers or in memory, based on our new standard calling
+convention.
+        
+Added a shared path for calling out to CTI helper functions for non-JS
+calls.
+
+* jit/JITPropertyAccess32_64.cpp:
+(JSC::JIT::emit_op_method_check): method_check emits its own code and
+the following get_by_id's code, so it needs to add both when informing
+result chaining of its result. This is important because the standard
+calling convention can now take advantage of this chaining.
+
+* jit/JITCall.cpp:
+(JSC::JIT::compileLoadVarargs):
+(JSC::JIT::compileCallEval):
+(JSC::JIT::compileCallEvalSlowCase):
+(JSC::JIT::compileOpCall):
+(JSC::JIT::compileOpCallSlowCase):
+* jit/JITOpcodes.cpp:
+(JSC::JIT::privateCompileCTIMachineTrampolines):
+(JSC::JIT::emit_op_call_eval):
+(JSC::JIT::emit_op_call_varargs):
+(JSC::JIT::emitSlow_op_call):
+(JSC::JIT::emitSlow_op_call_eval):
+(JSC::JIT::emitSlow_op_call_varargs):
+(JSC::JIT::emitSlow_op_construct): Observe, as I write all of my code a
+second time, now with 64 bits.
+
+* jit/JITStubs.cpp:
+(JSC::throwExceptionFromOpCall):
+(JSC::jitCompileFor):
+(JSC::arityCheckFor):
+(JSC::lazyLinkFor): A lot of mechanical changes here for one purpose:
+Exceptions thrown in the middle of a function call now use a shared helper
+function (throwExceptionFromOpCall). This function understands that the
+CallFrame currently points to the callEE, and the exception must be
+thrown by the callER. (The old calling convention would often still have
+the CallFrame pointing at the callER at the point of an exception. That
+is not the way of our new, standard calling convention.)
+
+(JSC::op_call_eval): Finish standard CallFrame setup before calling 
+our eval helper function, which now depends on that setup.
+
+* runtime/Arguments.h:
+(JSC::Arguments::length): Renamed numProvidedArguments() to length()
+because that's what other objects call it, and the difference made our
+new loadVarargs helper function hard to read.
+
+* runtime/Executable.cpp:
+(JSC::FunctionExecutable::compileForCallInternal):
+(JSC::FunctionExecutable::compileForConstructInternal): Interpreter build
+fixes.
+
+* runtime/FunctionPrototype.cpp:
+(JSC::functionProtoFuncApply): Honor Arguments::MaxArguments even when
+the .apply call_varargs optimization fails. (This bug appears on layout
+tests when you disable the optimization.)
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@100165 bbb929c8-8fbe-4397-9dbb-9b2b20218538",FALSE,the JITStubCall abstraction does this for us,FALSE,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+ucoin-io/ucoin-python-api,d31e9f6f65c4bf7b6259b2401c6b0d169e18fbf6,"[enh] #58 refactor client.connect_ws() with a new WSConnection class (break BC !)
+
+To simplify the use of the aiohttp web socket connection, use an abstraction layer with our own WSConnection class
+
+connect_ws is an async function now ! (break BC !)
+",TRUE,abstraction layer,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+DV8FromTheWorld/JDA,63329c956a79fb631c3068a28133c189f1667c66,"First pass on new event docs (#636)
+
+* Restructure GenericMessageEvent (#637)
+* Added UpdateEvent abstraction
+* Added note for TextChannel.deleteMessages in Message.delete documentation
+* Fixed &gt; tag in StatsUpdateEvent docs
+",TRUE,added UpdateEvent abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
