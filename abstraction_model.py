@@ -10,13 +10,7 @@ from language_utils import  regex_to_big_query, generate_bq_function, match, SCH
  , programming_languges, software_goals
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
-"""
-interface, encapsulation, composition, coupling, single responsibility, Liskov, virtual method, design, design patterns
-, inheritance, Structured programming, ADT (abstract data type),  polymorphism, delegation, template, generic, object oriented
-, Refinement, Reification
-, liskov substitution principle
-, solid, dry principle, composition, reuse
-"""
+
 core_abstraction_terms = [
 'abstraction',
 'abtract'  + REGULAR_SUFFIX,
@@ -52,7 +46,9 @@ core_abstraction_terms = [
 'facade(?:s)?',
 'factory',
 'flyweight(?:s)?',
-'generic(?:s)?',
+#'generic(?:s)?',
+'more generic',
+'generic type(?:s)?',
 'inheritance',
 'interface',
 'interface segregation',
@@ -89,7 +85,7 @@ core_abstraction_terms = [
 'strateg(?:y|ies)',
 'sub(?:-| )?class(?:es)?',
 'super(?:-| )?class(?:es)?',
-'template(?:s)?',
+#'template(?:s)?',
 'testabil(?:e|ity)',
 'twins(?:s)?',
 #'translator(?:s)?', # more common for languages
@@ -108,7 +104,8 @@ core_abstraction_terms = [
 excluded_abstraction_terms = ['reduc(es|e|ed|ing) abstraction'
 , 'updat' + VERB_E_SUFFIX + NEAR_ENOUGH + 'dependenc(?:y|ies)'
 , 'upgrad' + VERB_E_SUFFIX + NEAR_ENOUGH + 'dependenc(?:y|ies)'
-, '(useless|bad) abstraction']
+, '(useless|bad) abstraction', 'user interface', 'interface binding'
+                              ]
 
 # Corrective
 def build_core_abstraction_regex():
@@ -200,16 +197,55 @@ def evaluate_abstraction_classifier():
     print(cm)
 
 if __name__ == '__main__':
-    print_abstractionfunctions_for_bq(commit='0b713a426271a9ce9c8463ac224496ff8c99e138')
+    print_abstractionfunctions_for_bq(commit='047d51716e9324e5a574e35eb3c75475da55bc5a')
     #evaluate_cc_fix_classifier()
 
     text = """
-"	* dvp-opc.c (parse_vif_unpackloc,insert_vif_unpackloc): Delete.
-	(vif_operands): Update.
-	(vif_get_unpackloc): Delete.
-	(state_vif_unpackloc{,_star_p}): Delete.
-	(dvp_opcode_init_parse): Update.
-"    """.lower()
+
+"[ggj][engx] build: run pre-commit when goldens have changed (#439)
+
+* fix: support non-name fields with res-refs in resname def parsing
+
+* fix: add workaround for missing default_host and oauth_scopes annotation
+
+* fix: clarify LRO parsing error messages
+
+* feat: support deeply-nested types in AST and proto message parsing
+
+* fix: prevent resname tokens from matching subcomponents
+
+* fix: use TypeParser for proto message parsing
+
+* fix: use generic types in field instantiation in ServiceClientTest
+
+* fix: prevent descension into map types in nested message parsing
+
+* fix: merge master
+
+* fix: use both map generics in ServiceClientTest codegen
+
+* fix: dir structure of generated files
+
+* test: add asset API gradle pkg rules
+
+* fix: remove unused dep
+
+* test: add logging integration target and goldens, consolidate rules
+
+* fix: fix asset_java_gapic build
+
+* fix: fix test src packaging, update integration goldens
+
+* fix: pass all tokens to instansiate in resname 1-pattern case
+
+* fix: update goldens
+
+* fix: update goldens
+
+* build: add all integration tests to pre-commit hook
+
+* build: run pre-commit when goldens have changed"
+    """.lower()
 
     print("is_abstraction", is_abstraction(text))
     valid_num = len(re.findall(build_core_abstraction_regex(), text))
