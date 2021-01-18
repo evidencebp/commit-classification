@@ -14,9 +14,9 @@ from model_evaluation import classifiy_commits_df, evaluate_performance, evaluat
 core_abstraction_terms = [
 'abstraction',
 'abtract'  + REGULAR_SUFFIX,
-'adapter(?:s)?',
+#'adapter(?:s)?', # specific components, consider
 'adt',# Abstract Data Type
-'bridge(?:s)?',
+#'bridge(?:s)?',
 'chain of responsibility',
 'coherenc(?:e|y)',
 'cohesion',
@@ -36,23 +36,24 @@ core_abstraction_terms = [
 #'dependenc(?:y|ies)',
 'dependency injection',
 'dependency inversion',
-'design',
+'design (?:decision|requirment|constraint)(?:s)?',
 'design(?: |-)pattern(?:s)?',
 'dry principle', # Don't Repeat Yourself
-'duplication',
-'duplicat' + VERB_E_SUFFIX,
+'(code|function|method) duplication',
+'duplicat' + VERB_E_SUFFIX + NEAR_ENOUGH + '(code|function|method)',
 'encapsulat' + VERB_E_SUFFIX,
 'encapsulation',
 'facade(?:s)?',
 'factory',
 'flyweight(?:s)?',
 #'generic(?:s)?',
+'(make|makes|making|made)' + NEAR_ENOUGH + '(private|public|protected|virtual)',
 'more generic',
 'generic type(?:s)?',
 'inheritance',
 'interface',
 'interface segregation',
-'iterator(?:s)?',
+#'iterator(?:s)?', # too local and simple
 'lazy initialization',
 'liskov', # Liskov substitution principle
 #'marker(?:s)?',
@@ -64,8 +65,8 @@ core_abstraction_terms = [
 'object(?: |-)oriented',
 'open(?: |-)closed principle',
 'polymorphism',
-'prototype(?:s)?',
-'prox(?:y|ies)',
+#'prototype(?:s)?', # not relate to abstraction
+#'prox(?:y|ies)', # mostly proxy servers
 'publisher(?:s)?',
 'pub(?: |-|/)sub',
 're(?: |-)?us' + VERB_E_SUFFIX,
@@ -80,9 +81,9 @@ core_abstraction_terms = [
 'structured programming',
 'subscriber(?:s)?',
 'servant',
-'specification(?:s)?', # consider
+#'specification(?:s)?', # consider
 #'state(?:s)?', # consider
-'strateg(?:y|ies)',
+#'strateg(?:y|ies)', # consider
 'sub(?:-| )?class(?:es)?',
 'super(?:-| )?class(?:es)?',
 #'template(?:s)?',
@@ -197,55 +198,149 @@ def evaluate_abstraction_classifier():
     print(cm)
 
 if __name__ == '__main__':
-    print_abstractionfunctions_for_bq(commit='047d51716e9324e5a574e35eb3c75475da55bc5a')
+    print_abstractionfunctions_for_bq(commit='3e922c0344679d08b44f908623cc7d956b0bf0d1')
     #evaluate_cc_fix_classifier()
 
     text = """
+"Migrations changes (#30)
 
-"[ggj][engx] build: run pre-commit when goldens have changed (#439)
+* Start coding on readme.md
 
-* fix: support non-name fields with res-refs in resname def parsing
+* Device Api
 
-* fix: add workaround for missing default_host and oauth_scopes annotation
+* Missing files
 
-* fix: clarify LRO parsing error messages
+* activate user route bug fixed
 
-* feat: support deeply-nested types in AST and proto message parsing
+* Devices Api and  turn off notifications
 
-* fix: prevent resname tokens from matching subcomponents
+* Trip and User transformer
 
-* fix: use TypeParser for proto message parsing
+* Send Message Notification
 
-* fix: use generic types in field instantiation in ServiceClientTest
+* Renaming method removeUsertFromConversation
 
-* fix: prevent descension into map types in nested message parsing
+* Apply fixes from StyleCI
 
-* fix: merge master
+* Removing comments
 
-* fix: use both map generics in ServiceClientTest codegen
+* Fixing problem in download static image
 
-* fix: dir structure of generated files
+* Missing use namespace
 
-* test: add asset API gradle pkg rules
+* TripTrasformer on created and updated
 
-* fix: remove unused dep
+* Apply fixes from StyleCI
 
-* test: add logging integration target and goldens, consolidate rules
+* Trip Transformer for MyTrips
 
-* fix: fix asset_java_gapic build
+* fixing Trip test
 
-* fix: fix test src packaging, update integration goldens
+* Fix and Seeder
 
-* fix: pass all tokens to instansiate in resname 1-pattern case
+* Apply fixes from StyleCI
 
-* fix: update goldens
+* Missing file
 
-* fix: update goldens
+* page_size and page_number to comversations
 
-* build: add all integration tests to pre-commit hook
+* User list friends
 
-* build: run pre-commit when goldens have changed"
-    """.lower()
+* Apply fixes from StyleCI
+
+* fixing bugs
+
+* User fild description problems
+
+* UserTransforer apply
+
+* Test fixing
+
+* Cars fixid and timezone app
+
+* Changing responses methods
+
+* Apply fixes from StyleCI
+
+* Last connection user
+
+* Apply fixes from StyleCI
+
+* Search user for conversations
+
+* MessagesTransformer
+
+* Conversations changes
+
+* New unread messages api
+
+* who read the messages
+
+* Apply fixes from StyleCI
+
+* Addapting test to new specification
+
+* Apply fixes from StyleCI
+
+* Social change
+
+* Routing
+
+* Changes on passenger cancel
+
+* Apply fixes from StyleCI
+
+* fixing test
+
+* Notifications
+
+* fixing error
+
+* fixing error
+
+* Apply fixes from StyleCI
+
+* Ratings
+
+* Apply fixes from StyleCI
+
+* Rating methods
+
+* Can get rate from other users
+
+* Push notifications
+
+* Apply fixes from StyleCI
+
+* Update device
+
+* Rating things
+
+* Testing bugfix
+
+* Apply fixes from StyleCI
+
+* Prevent inecesary data send
+
+* turn off htmlentities
+
+* Fixing things
+
+* Apply fixes from StyleCI
+
+* Cambios varios
+
+* migrations
+
+* Migrations
+
+* Remove substring
+
+* Changes testing migrations DBs
+
+* Remove log create rates
+"
+""".lower()
 
     print("is_abstraction", is_abstraction(text))
     valid_num = len(re.findall(build_core_abstraction_regex(), text))
