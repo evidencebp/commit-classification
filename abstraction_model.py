@@ -105,7 +105,9 @@ core_abstraction_terms = [
 excluded_abstraction_terms = ['reduc(es|e|ed|ing) abstraction'
 , 'updat' + VERB_E_SUFFIX + NEAR_ENOUGH + 'dependenc(?:y|ies)'
 , 'upgrad' + VERB_E_SUFFIX + NEAR_ENOUGH + 'dependenc(?:y|ies)'
-, '(useless|bad) abstraction', 'user interface', 'interface binding'
+, '(useless|bad) abstraction', 'user interface', 'interface binding', 'subscriber(?:s)?:', 'publisher(?:s)?:'
+, "(we|you)'re using", 'wi(?: |-)?fi\sinterface',
+
                               ]
 
 # Corrective
@@ -198,147 +200,30 @@ def evaluate_abstraction_classifier():
     print(cm)
 
 if __name__ == '__main__':
-    print_abstractionfunctions_for_bq(commit='3e922c0344679d08b44f908623cc7d956b0bf0d1')
+    print_abstractionfunctions_for_bq(commit='52e96f58016b2ece2bfa44f37cc0d052e0c130e8')
     #evaluate_cc_fix_classifier()
 
     text = """
-"Migrations changes (#30)
-
-* Start coding on readme.md
-
-* Device Api
-
-* Missing files
-
-* activate user route bug fixed
-
-* Devices Api and  turn off notifications
-
-* Trip and User transformer
-
-* Send Message Notification
-
-* Renaming method removeUsertFromConversation
-
-* Apply fixes from StyleCI
-
-* Removing comments
-
-* Fixing problem in download static image
-
-* Missing use namespace
-
-* TripTrasformer on created and updated
-
-* Apply fixes from StyleCI
-
-* Trip Transformer for MyTrips
-
-* fixing Trip test
-
-* Fix and Seeder
-
-* Apply fixes from StyleCI
-
-* Missing file
-
-* page_size and page_number to comversations
-
-* User list friends
-
-* Apply fixes from StyleCI
-
-* fixing bugs
-
-* User fild description problems
-
-* UserTransforer apply
-
-* Test fixing
-
-* Cars fixid and timezone app
-
-* Changing responses methods
-
-* Apply fixes from StyleCI
-
-* Last connection user
-
-* Apply fixes from StyleCI
-
-* Search user for conversations
-
-* MessagesTransformer
-
-* Conversations changes
-
-* New unread messages api
-
-* who read the messages
-
-* Apply fixes from StyleCI
-
-* Addapting test to new specification
-
-* Apply fixes from StyleCI
-
-* Social change
-
-* Routing
-
-* Changes on passenger cancel
-
-* Apply fixes from StyleCI
-
-* fixing test
-
-* Notifications
-
-* fixing error
-
-* fixing error
-
-* Apply fixes from StyleCI
-
-* Ratings
-
-* Apply fixes from StyleCI
-
-* Rating methods
-
-* Can get rate from other users
-
-* Push notifications
-
-* Apply fixes from StyleCI
-
-* Update device
-
-* Rating things
-
-* Testing bugfix
-
-* Apply fixes from StyleCI
-
-* Prevent inecesary data send
-
-* turn off htmlentities
-
-* Fixing things
-
-* Apply fixes from StyleCI
-
-* Cambios varios
-
-* migrations
-
-* Migrations
-
-* Remove substring
-
-* Changes testing migrations DBs
-
-* Remove log create rates
+"[iOS][Thumb Strip] Fix crash when closing last incognito tab and app
+
+This fixes a few issues:
+1. Crash when deallocing the FullscreenDisabler when closing the last
+   incognito tab. This is probably because the underlying
+   FullscreenController has already been dealloced.
+2. Before, the entire thumb strip machinery wasn't alerted to the new
+   incognito BVC that is created when the incognito state is reset. Now,
+   it is.
+3. There was an intermittent crash when closing the app because of a
+   zombie ViewRevealingVerticalPanHandler. It is a web view observer,
+   but that is controlled by the ThumbStripMediator. However, when the
+   pan handler is dealloced, the observation isn't stopped.
+
+Fixed: 1155559, 1155607
+Change-Id: I1a2f6ea805cfc810bd36b5bab547fb179cacbaa5
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2593119
+Commit-Queue: Gauthier Ambard <9d4cf9c209f46d7011ec53b6e0d37d78e6e2845e@chromium.org>
+Reviewed-by: Gauthier Ambard <9d4cf9c209f46d7011ec53b6e0d37d78e6e2845e@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#837511}
 "
 """.lower()
 
