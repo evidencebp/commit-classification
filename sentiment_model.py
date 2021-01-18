@@ -93,6 +93,7 @@ positive_sentiment = ['advantage',
  'greatest',
  'greet',
  'greeting',
+ 'ha(?: |-)?ha((?: |-)?ha)?',
  'happi(?:ness|ly)',
  'happy',
  'healthy',
@@ -518,7 +519,7 @@ negative_sentiment = ['abject',
  'threatening',
  'tired',
  'torture',
- 'trap',
+ 'trap', #cosider
  'trauma(?:tic)?',
  'trickery',
  'trouble',
@@ -551,6 +552,7 @@ negative_sentiment = ['abject',
  'weakness',
  'weird',
  'wicked',
+ 'whoops',
  'woops',
  'worry',
  'worrying',
@@ -565,7 +567,8 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'pretty(?:-|\s)format(?:er|ing|ed|s)?', 'top level(?:s)?', '(make|makes|made|making)' + NEAR_ENOUGH + 'happy'
  , 'rich text', 'warm reset', '(false|true) positive(:?s)?', 'worth (doing|keeping|it)'
  , 'respected for (' + "|".join(programming_languges) + ")"
- , 'degrees of freedom', "I'm pretty", "I am pretty", 'positive (integer|number|input(:?s)?)', 'perfectly (good|ok|valid)'
+ , 'degrees of freedom', "I'm pretty", "I am pretty", 'positive (integer|number|input(:?s)?)'
+ , 'perfectly (good|ok|valid|reasonable)'
  , 'work(:?s|ed|ing)? fine', '(take|took|taking) advantage', 'making good sense', 'user friendly', 'smart annotation'
  , 'at best', "(we|we're|I|I'm|you|you're|he|he's|she's) good", 'greater than', 'greater'+ NEAR_ENOUGH +'equal'
  , "third time's the charm", 'good faith', 'good riddance', 'for good', 'good to have', 'probably good', 'good enough'
@@ -574,15 +577,16 @@ excluded_positive_sentiment=['trust me', 'best effort', 'on top', 'pretty(?:-|\s
  , 'pretty (active|dead|misleading|expensive|trivial|ugly|hard|often|embarrassing|similar|complex)'
  , "'pretty'", '"pretty"'
  , 'best to', 'best(?:-|\s)practice(:?s)?', 'best(?:-|\s)effort(:?s)?', 'the best of', 'best regards'
- , 'fine grain(:?ed)?', 'fine tun(:?e|ed|esing)', '(the|a) best case', 'lucky number(:?s)?'
- , r'good(/|\\)bad', r'bad(/|\\)good'
+ , 'fine grain(:?ed)?', 'fine tun(:?e|ed|esing)', 'best case', 'lucky number(:?s)?'
+ , r'good(/|\\)bad', r'bad(/|\\)good', 'good to know', 'worth (discussing|speaking|talking|mentioning)'
+ , 'more (harm|bad) than good'
  , 'good state' # consider
  , 'for good' # consider
  #, 'good idea(s)?' # consider
                              ]
 excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(false|true) negative(:?s)?', 'snmp trap'
  , 'kernel panic', 'fix panic' # more like "fix kernel panic
- , 'bad service error', 'bad data', 'dirty (state|range|bit(?:s)?)', '(the|a) worse case'
+ , 'bad service error', 'bad data', 'bad request', 'dirty (state|range|bit(?:s)?)', 'worse case', 'worst case'
 
  #, 'quick and dirty' #This is actually a sentiment
                              ]
@@ -707,22 +711,13 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='3046a4e1379f977d45216ed66972258d698f8437')
+    print_concepts_functions_for_bq(commit='040fdcc30ddd8fcc119b99151a74f8f4f2fa53a3')
 
 
     text = """
-"mess & ume 0.148u2
+If you are in doubt, I would rather revert this as well.
 
-* Update ume and its family to 0.148u2.
-* Let homebrew decide which compiler compiling ume and its family. Note
-  that ume's LD is abnormal.
-* Remove redefined header path.
-
-Closes Homebrew/homebrew#18613.
-
-Signed-off-by: Jack Nagel <43386ce32af96f5c56f2a88e458cb94cebee3751@gmail.com>
-"
-  """.lower()
+""".lower()
     print("is positive", is_positive_sentiment(text))
     valid_num = len(re.findall(build_positive_sentiment_regex(), text))
     print(re.findall(build_positive_sentiment_regex(), text))
