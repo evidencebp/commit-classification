@@ -1106,32 +1106,32 @@ antalsz/hs-to-coq,d86add59a86eef7ad9ca0d32415c310e32bd49ce,"Conclude go_exit_all
 with some mildly ugly proofs about `zap` and `pick`. I should define
 `zap` and `pick` on the top level and move the proofs there as separate
 lemmas.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,FALSE,not code,,FALSE,random_batch_18_nov_2020
 langurmonkey/gaiasky,4c82a989c77cc47d42d70618804c7e5f8a4c5926,"Added install4j script into build system, added all icon sizes
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020
 rpherbig/dr-scripts,49a8481e07d35bdc459d59e33dde4cbb3804abd7,"Exclude the samples dir from Rubocop
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,exclude,,,random_batch_18_nov_2020
 Azure/azure-quickstart-templates,7c5970f2f6ab4798d60d176c895c84754e72de43,"Merge pull request #5367 from rajbos/SonarQubeUpdateVersion
 
-Sonar qube update to support latest version (7.4)",,,,,,,,random_batch_18_nov_2020
+Sonar qube update to support latest version (7.4)",FALSE,FALSE,TRUE,FALSE,static analyzer update,,,random_batch_18_nov_2020
 dhis2/dhis2-android-sdk,ee29452506f67bfb636cd2533faee950681d3e6a,"[ANDROSDK-437] Add more tests to TrackedEntityDataValueStoreIntegrationShould
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add tests,,,random_batch_18_nov_2020
 wikimedia/apps-android-wikipedia,61adb009f767e202cf92ab68bd1eff8237464460,"Merge branch 'master' into navigationBar
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,Should consider such cases,,random_batch_18_nov_2020
 ibissource/iaf,74b5c429dd8d3655d7a3bc1fd89cd271591a42d2,"Initial version
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,initial version,,,random_batch_18_nov_2020
 aspnet/AspNetCore,3e319ae2aaeca98566babd31c55b7c7ce725c2fc,"React to Sdk changes
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,react,,,random_batch_18_nov_2020
 slimkit/thinksns-plus,3811ba95788a483247dbfae14d77554fa520f34c,"Merge branch 'master' into 'plus'
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,Should consider such cases,,random_batch_18_nov_2020
 therion/therion,262a42d971f02e903d1a0ac6864bcbb08bf68eb3,"Merge pull request #105 from EQuirogaR/master
 
-Updated Loch locale languages with missing messages - spanish 2 ",,,,,,,,random_batch_18_nov_2020
+Updated Loch locale languages with missing messages - spanish 2 ",FALSE,TRUE,FALSE,FALSE,update languages,by code,,random_batch_18_nov_2020
 Ensembl/ensembl,eb3a02daa5fc0b5726ee2a2432f7f2abd198f2fd,"moved some debugging aid functions into Utils module
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,move functions,,,random_batch_18_nov_2020
 metasfresh/metasfresh,9ce2865cb95fe28fc8cfba4f5e53d7e74cfaf8a4,"Merge pull request #2215 from metasfresh/gh2097
 
-Gh2097",,,,,,,,random_batch_18_nov_2020
+Gh2097",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 Taeung/tip,0b43fcdff6495958c39e3575848edef4b685ddef,"[media] mceusb: plug memory leak on data transmit
 
 Hans Petter Selasky pointed out to me that we're leaking urbs when
@@ -1143,12 +1143,12 @@ torn down. Do that in the tx callback.
 CC: Hans Petter Selasky <7b242d943fcf32e060e9005c389f6e64f0d376fc@c2i.net>
 Signed-off-by: Jarod Wilson <14059c7158912dcae849c377925c87d46da48cdf@redhat.com>
 Signed-off-by: Mauro Carvalho Chehab <ad86ba2154032c9f55743a190faa2459a9d61d42@redhat.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,memory leak,,,random_batch_18_nov_2020
 cakephp/cakephp,d9a4bfaaa2891c03e638d5d17dd33b545f199137,"Merge pull request #7256 from cakephp/master-tests-mcrypt
 
-Skip test if ext missing.",,,,,,,,random_batch_18_nov_2020
+Skip test if ext missing.",FALSE,FALSE,TRUE,FALSE,skip test,,,random_batch_18_nov_2020
 puavo-org/puavo-os,2a5be64355c768a182dffb1e5ed83866d04bdddf,"bootserver_munin: display load summary values as percentiles
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,display,,,random_batch_18_nov_2020
 guix-mirror/guix,c135577dbf916bcde7e90683bff82dd505b571f7,"gnu: khal: Move propagated inputs to inputs.
 
 As a package one would install we can rely on wrapping the package and
@@ -1157,13 +1157,13 @@ not propagating inputs to make it work correctly.
 * gnu/packages/calendar.scm (khal)[propagated-inputs]: Move all python
 packages...
 [inputs]: ... to here.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,TRUE,"wrapping, make it work correctly",,FALSE,random_batch_18_nov_2020
 balazssimon/meta-cs,34c1cfc5f1a4ae4066ec8118f263b489eb1c8135,"Trivia annotation for annotated grammars
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,annotation,,,random_batch_18_nov_2020
 ArduPilot/ardupilot,d226b875c8d944fc6d5c86d72ce2c4265c221700,"set first WP in wait_waypoint to 0
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,set,,,random_batch_18_nov_2020
 ganga-devs/ganga,017a3b9e4f5c23fc2418864b266fa4651f73fae4,"add listFiles function to GPI
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 JetBrains/intellij-community,5d153e599a0ec7ce8119cfaaf5538dd9d378c3c4,"vcs: fallback to legacy <Project> mappings for AbstractVcs without ""administrativeAreaName""
 
 ""Working only in trivial cases"" mappings are better than ""not working at all"".
@@ -1171,30 +1171,30 @@ Especially when it is a platform-side regression.
 
 Follow-up: 35d6ea3c76a5d851d40fa28bfab9fc3c2b0ca828
 
-GitOrigin-RevId: 27f80f3f5f81e52c93e662413327b4b6c3883703",,,,,,,,random_batch_18_nov_2020
+GitOrigin-RevId: 27f80f3f5f81e52c93e662413327b4b6c3883703",FALSE,FALSE,TRUE,FALSE,fallback,,,random_batch_18_nov_2020
 coleifer/peewee,d9839a2b6eb976024f1378b97c9defa3f3d97c86,"Add DeferredRelation helper.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,helper,,,random_batch_18_nov_2020
 Microsoft/ChakraCore,a468a07f0b81befacb9127586cf1a06bb7174411,"Fix missing instantiated template for PidHashNameLen which breaks on linux and MacOSX build
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix missing,,,random_batch_18_nov_2020
 ansible/ansible,945ee39a8974452b8130eef6c56c1ec052e98006,"Improve the issue template for dependency problems (#51657)
 
 So many reports of missing modules could be solved
 more quickly with the info from `python_requirements_facts`
 
 Replace the legacy issue template with a link to the
-new interface",,,,,,,,random_batch_18_nov_2020
+new interface",TRUE,TRUE,FALSE,FALSE,improve for dependency,,,random_batch_18_nov_2020
 mercadopago/px-ios,58bd563e96f73fe5e933ad23e6934a3029109cd1,"Minor fix
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 PATRIC3/p3_web,8ad73e61fb298f9962c21d7c6bc16e6f009ff3b9,"add in Taxonomy viewer as extension of the genomeList.  make the breadcrumbs linkable.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 sagemathinc/cocalc,69e2dec55bc119d95ef616e2f24a0597e2f43575,"Merge branch 'master' of github.com:sagemathinc/smc
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 inaturalist/iNaturalistAndroid,e19ad904837ac6bdb7529806f73f98e9ca1d8085,"Revamped user feed
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,Revamped,,,random_batch_18_nov_2020
 learningequality/kolibri,0359aa75c1d5c560eec9ce5a98423de47dcc1b54,"Add keyup handler to ensure proper triggering of input value event
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"add, proper",,FALSE,random_batch_18_nov_2020
 languagetool-org/languagetool,b2148839c1cd19a229aa01e8c1c41a8bb41eee5e,"[en] remove empty disjunction
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020
 frappe/frappe,bf57a1d79a85b01bd0de9b8adeba8af9ebef2967,"Patch(Tags): Check if column exists (#8682)
 
 * fix: tags patch
@@ -1212,7 +1212,7 @@ frappe/frappe,bf57a1d79a85b01bd0de9b8adeba8af9ebef2967,"Patch(Tags): Check if co
 * fix: use ignore in insert query for bulk insert
 
 * fix: add option to ignore duplicates
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 Alfresco/alfresco-repository,e0333cbb2f7d7f690fa1da117a22176436bef0b8,"Changed version number to 3.0.0 dev
 
 git-svn-id: 01653c09f76512ebba8fd589b05a699d8510a51f@8786 c4b6b30b-aa2e-2d43-bbcb-ca4b014f7261
