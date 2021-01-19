@@ -459,3 +459,3478 @@ DV8FromTheWorld/JDA,63329c956a79fb631c3068a28133c189f1667c66,"First pass on new 
 * Added note for TextChannel.deleteMessages in Message.delete documentation
 * Fixed &gt; tag in StatsUpdateEvent docs
 ",TRUE,added UpdateEvent abstraction,,,14_jan_2021_abstraction_c8635d2e58d1a5716dc185427bb5bf5c83a1376b
+google/clspv,806a5d8aa57b73fd7a291d11c88aad8121dc3713,"cl_khr_subgroups support (#603)
+
+Contributes to #602.
+
+
+* Added SPIRVProducerPass::addSPIRVGlobalVariable to also capture entry_point_interface when -spirv-std=1.4 or greater
+* Added builtin function mapping:
+  * get_sub_group_size - SubgroupSize
+  * get_num_sub_groups - NumSubgroups
+  * get_sub_group_id - SubgroupId
+  * get_sub_group_local_id - SubgroupLocalInvocationId
+
+  * sub_group_all - OpGroupNonUniformAll
+  * sub_group_any - OpGroupNonUniformAny
+  * sub_group_broadcast - OpGroupNonUniformBroadcast
+
+  * sub_group_<group_operation>_add
+    * INT: OpGroupNonUniformIAdd
+    * FLOAT: OpGroupNonUniformFAdd
+  * sub_group_<group_operation>_min
+    * INT: OpGroupNonUniformSMin
+    * UINT: OpGroupNonUniformUMin
+    * FLOAT: OpGroupNonUniformFMin
+  * sub_group_<group_operation>_max
+    * INT: OpGroupNonUniformSMax
+    * UINT: OpGroupNonUniformUMax
+    * FLOAT: OpGroupNonUniformFMax
+  * With <group_operation> correspondingly:
+    * reduce - GroupOperationReduce
+    * scan_exclusive - GroupOperationExclusiveScan
+    * scan_inclusive - GroupOperationInclusiveScan
+
+Added tests in test/SubGroup:
+
+* sub_group_broadcast.cl
+* sub_group_id.cl
+* sub_group_reduce.cl
+* sub_group_scan_exclusive.cl
+* sub_group_scan_inclusive.cl
+
+* Documented in OpenCLOnVulkan.md
+* make -spv-version a support command-line switch
+* require constant laneId for sub_group_barrier
+",TRUE,estended interface,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+wso2/wso2-axis2-transports,8a925969c4754504779c6640b2a966a8312e5461,"Resolve wso2/product-ei#2776
+
+When receiving messages from IBM-MQ through a JMS proxy the Content-Type
+the header is getting removed. This causes to understand the message as
+a plain/text. Beacause of this the response message is wrapped around a
+CDATA tag. The commit resolves this issue.
+",FALSE,proxy,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+kabisa/kudo-o-matic,54b06ab376cac5d9398c83800e82f3fb41fc6444,"Fixed typos in templates
+",FALSE,templates,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+apache/spark,d50d12b49f98e18abd1c0b054b23a64fefd92ea2,"[SPARK-19302][DOC][MINOR] Fix the wrong item format in security.md
+
+## What changes were proposed in this pull request?
+
+In docs/security.md, there is a description as follows.
+
+```
+ steps to configure the key-stores and the trust-store for the standalone deployment mode is as
+ follows:
+ * Generate a keys pair for each node
+ * Export the public key of the key pair to a file on each node
+ * Import all exported public keys into a single trust-store
+```
+
+According to markdown format, the first item should follow a blank line.
+
+## How was this patch tested?
+
+Manually tested.
+
+Following captures are rendered web page before and after fix.
+
+* before
+![before](https://cloud.githubusercontent.com/assets/4736016/22136731/b358115c-df19-11e6-8f6c-2f7b65766265.png)
+
+* after
+![after](https://cloud.githubusercontent.com/assets/4736016/22136745/c6366ff8-df19-11e6-840d-e7e894218f9c.png)
+
+Author: sarutak <sarutak@oss.nttdata.co.jp>
+
+Closes #16653 from sarutak/SPARK-19302.
+",FALSE,security,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+neos/flow-development-collection,8c1e3fb736ddff9fb845f9f4aee2bb9cadc3e5da,"Merge ""[TASK] Some cleanup to security (tests)""
+Original-Commit-Hash: 092fd81a19c3567d15ea586faedcc3a5c1118d41
+",FALSE,security,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+redhat-openstack/infrared,f942b6c154f34dfcb557b321534b5e37a86b61ff,"Update composition roles files to match OSP15
+
+References:
+https://github.com/openstack/tripleo-heat-templates/commit/f3b85e4ba527d8b4ddba8458b527b18e0e10efa8
+https://github.com/openstack/tripleo-heat-templates/commit/845bc3e845e737cebdc2dc93d80767c4c2682b3a
+https://github.com/openstack/tripleo-heat-templates/commit/7bebdefda849f078064f66b850114baf29a238c9
+https://github.com/openstack/tripleo-heat-templates/commit/f7f90539636e89a2a10d5238b88cc037ccfca50d
+
+Change-Id: Ifdd777496853c3941d3eb759264c7b87b2ad2a33
+",TRUE,composition rules,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+nwjs/chromium.src,5d01e7d6448d8bc11f270facabf274b25227f7ed,"Add remaining mojo methods to device::mojom::MtpManager.
+
+This CL makes device::mojom::MtpManager interface complete with
+remaining methods. Clients will be migrated to use MTP mojo
+interfaces in the subsequent CL.
+
+BUG=769630
+
+Change-Id: Ic0c443873f7645c4d221fb8892a322c2d2162bfe
+Reviewed-on: https://chromium-review.googlesource.com/1002572
+Commit-Queue: Donna Wu <95a9fba4595ae7f5767006c2716f9837a2a85c78@intel.com>
+Reviewed-by: Tom Sepez <47f022c5217a84c904816c5375403e20a45c37f6@chromium.org>
+Reviewed-by: Colin Blundell <e6fc70f7038230a5bea99aab14a7015756c42ad5@chromium.org>
+Reviewed-by: Lei Zhang <79648d9aca10df37c1b962af0b65ebfac3e19883@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#552652}",TRUE,interface,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+tprrt/linux-stable,49ce9c2cda18f62b13055dc715e7b514157c2da8,"drivers/net/ethernet: Fix (nearly-)kernel-doc comments for various functions
+
+Fix incorrect start markers, wrapped summary lines, missing section
+breaks, incorrect separators, and some name mismatches.  Delete
+a few that are content-free.
+
+Signed-off-by: Ben Hutchings <0672176982fbc629cc374f31a7a45ae1671abf90@solarflare.com>
+Acked-by: Jeff Kirsher <87e35f5be20bb3e67f4ba6b86f5f6be3085b1b3a@intel.com>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",FALSE,markers,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+hep-mirrors/herwig,dc1f9fc7b41fdba0ce2ed0293b04278e69a70dbc,"Efficiency improvements to MPIPDF. Now calling sea quark dists directly.
+",FALSE,efficiency,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+zstackio/zstack-utility,9435358f80ff9400cf2e74aad8fe630158f8837d,"improve the performance of sshfs with 20% faster
+
+Signed-off-by: Qun Li <1ea81f54854048d0a4d4fd61caceabb2a843281c@zstack.io>
+",FALSE,performance,,,14_jan_2021_abstraction_0b713a426271a9ce9c8463ac224496ff8c99e138
+gradle/gradle,54bf308bc54e2c632752ec4d5cdccf90122d6baf,"More work on experimental dependency graph api.
+
+1. Updated the experimental api to the types we decided on during pairing: DependencyGraph, ResolvedModuleVersionResult, ResolvedDependencyResult.
+2. It's just another step, more improvements / tidy up is coming soon.
+",FALSE,dependency api,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+spotify/luigi,4dcdc38f2478b52b5b57cd50ae8e4be5680d03cf,"Allows limiting of graph size returned by scheduler
+
+Like with task lists, excessively large graphs can render the visualiser
+unusable. To prevent this issue, we've added a max-graph-nodes parameter that
+cuts off the graph after enough nodes are seen.
+
+In order to achieve this, the graph recursion had to be re-written as a an
+iterative breadth-first traversal. The inverse dependency graph function was
+re-written to be able to call this same traversal, resulting in greatly improved
+complexity. Rather than scanning the entire graph once per node to find its
+reverse neighbors, we scan the whole graph exactly once and store the reverse
+edges in a lookup table. This improves the complexity from number of nodes times
+size of graph to just number of nodes.
+",FALSE,inverse dependenct function,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+chromium/chromium,a4a150e732023e312a86cdff2cac92a457a08518,"Add SafeBrowsingProtocolManagerDelegate class.
+
+This removes any direct dependency of SafeBrowsingService on SafeBrowsingProtocolManager, and should make it easier to unit test SafeBrowsingProtocolManager.
+
+BUG=158246
+
+
+Review URL: https://chromiumcodereview.appspot.com/11340020
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@165865 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,remove direct dependency,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+kubernetes-csi/csi-driver-nfs,04991c36afbc3f4eec2e6ff8e261ef2f65e25c18,"chore: upgrade k8s v0.19.0 dependency to v0.20.0
+",FALSE,upgrade dependency,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+Azure/azure-sdk-for-java,7174a0fbdc6ad880bcd12daf5f269b8bb77a9143,"Merge pull request #394 from stankovski/dev
+
+Added coreclr dependencies to nuspec and downgraded package dependencies to stable builds",FALSE,added dependencies,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+jetstack-experimental/cert-manager,c7034f6aacf8a8ceb41f44b763b52f3e60291ae3,"Update dependencies for route53
+",FALSE,updated dependencies,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+arlac77/uri-resolver,25e05536e3b6388bf39c1d9e3641be90149981f1,"chore(devDependencies): add rollup-plugin-executable:^1.2.0 from template
+chore(devDependencies): add babel-preset-env:^1.6.1 from template
+chore(devDependencies): update semantic-release:^15.3.1 from template",FALSE,devDepdendencies,FALSE,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+ampproject/worker-dom,67dea4c97ef10a2c65ce78a2b6bf6410710d26d2,"Merge pull request #29 from ampproject/renovate/babel-preset-env-1.x
+
+Update dependency babel-preset-env to v1.7.0",FALSE,updated dependencies,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+chromium/chromium,d11c6acb3fdf0b39c6cec99ce3a2724330d668a2,"Roll recipe dependencies (trivial).
+
+This is an automated CL created by the recipe roller. This CL rolls recipe
+changes from upstream projects (e.g. depot_tools) into downstream projects
+(e.g. tools/build).
+
+More info is at https://goo.gl/zkKdpD. Use https://goo.gl/noib3a to file a bug
+(or complain)
+
+build:
+  https://crrev.com/3e51f3b4787dcc251a4d751572e1c1fd234e874a Revert of Enable goma on pdfium buildbots by default. (patchset #1 id:1 of https://codereview.chromium.org/2367263002/ ) (tikuta@chromium.org)
+
+TBR=martiniss@chromium.org,phajdan.jr@chromium.org
+BUG=643139
+
+Recipe-Tryjob-Bypass-Reason: Autoroller
+Bugdroid-Send-Email: False
+Review-Url: https://codereview.chromium.org/2371073002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#421089}
+",FALSE,roll recipe dependencies,FALSE,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+TryGhost/Ghost-Admin,8ea37b4b1df0002f8640c78fb118671e67c2eb1a,"Update dependency @tryghost/timezone-data to v0.2.16
+",FALSE,aupdated depndency,,,14_jan_2021_abstraction_depend_0b713a426271a9ce9c8463ac224496ff8c99e138
+squid-cache/squid,182106f3fea29f13c3ed396e2e76dc36728de259,"WCCP: Fix memory leak in mask assignment, improve debuggsing.
+
+* Release temporary weight array allocated on each HERE_I_AM packet sent
+  by Squid. For mask assignment these were not released properly and may
+  build up to a significant size of memory over time.
+
+* Add debug traces to send() events to report failures sending packets
+
+* Also, on HERE_I_AM event send() failure, reduce the timeout to 2sec
+  for the retry in a crude attempt to prevent router state flapping.
+
+* Silence compiler warnings on use of connect() to disconnect a socket.
+  Inconsistent OS behaviour makes the result useless in this case.
+
+ Detected by Coverity Scan. Issues 740329, 740330, 740331, 740332,
+    740333, 740441.
+",FALSE,state flapping,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+stdlib-js/stdlib,d82e063f088655bd8efe395e86d4d9af951b82c7,"Add support for specifying a PRNG seed and/or state
+",FALSE,support state,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+projectestac/agora_moodle2,e5ada99f2bcb74972e47d18d856008405c5c4093,"
+Merged from STABLE:
+
+Fix for bug 4127:
+
+In the course participants page, selecting an initials filter in one course
+and then moving to another (the filter would propagate) could result in few
+or no results being displayed. The teacher would then have no way of
+resetting the filter and viewing all (or possibly any) participants.
+
+Fixed by making each course participant page independent. They no longer
+share sort orders, collapsed column state, or initials filters.
+",FALSE,column state,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+tprrt/linux-stable,eb1e1478b6f4e70d99fee3f49bb7f7143c8c871d,"Merge branch 'bpf-sockmap-listen'
+
+Jakub Sitnicki says:
+
+====================
+This patch set turns SOCK{MAP,HASH} into generic collections for TCP
+sockets, both listening and established. Adding support for listening
+sockets enables us to use these BPF map types with reuseport BPF programs.
+
+Why? SOCKMAP and SOCKHASH, in comparison to REUSEPORT_SOCKARRAY, allow
+the socket to be in more than one map at the same time.
+
+Having a BPF map type that can hold listening sockets, and gracefully
+co-exist with reuseport BPF is important if, in the future, we want
+BPF programs that run at socket lookup time [0]. Cover letter for v1 of
+this series tells the full story of how we got here [1].
+
+Although SOCK{MAP,HASH} are not a drop-in replacement for SOCKARRAY just
+yet, because UDP support is lacking, it's a step in this direction. We're
+working with Lorenz on extending SOCK{MAP,HASH} to hold UDP sockets, and
+expect to post RFC series for sockmap + UDP in the near future.
+
+I've dropped Acks from all patches that have been touched since v6.
+
+The audit for missing READ_ONCE annotations for access to sk_prot is
+ongoing. Thus far I've found one location specific to TCP listening sockets
+that needed annotating. This got fixed it in this iteration. I wonder if
+sparse checker could be put to work to identify places where we have
+sk_prot access while not holding sk_lock...
+
+The patch series depends on another one, posted earlier [2], that has
+been split out of it.
+
+v6 -> v7:
+
+- Extended the series to cover SOCKHASH. (patches 4-8, 10-11) (John)
+
+- Rebased onto recent bpf-next. Resolved conflicts in recent fixes to
+  sk_state checks on sockmap/sockhash update path. (patch 4)
+
+- Added missing READ_ONCE annotation in sock_copy. (patch 1)
+
+- Split out patches that simplify sk_psock_restore_proto [2].
+
+v5 -> v6:
+
+- Added a fix-up for patch 1 which I forgot to commit in v5. Sigh.
+
+v4 -> v5:
+
+- Rebase onto recent bpf-next to resolve conflicts. (Daniel)
+
+v3 -> v4:
+
+- Make tcp_bpf_clone parameter names consistent across function declaration
+  and definition. (Martin)
+
+- Use sock_map_redirect_okay helper everywhere we need to take a different
+  action for listening sockets. (Lorenz)
+
+- Expand comment explaining the need for a callback from reuseport to
+  sockarray code in reuseport_detach_sock. (Martin)
+
+- Mention the possibility of using a u64 counter for reuseport IDs in the
+  future in the description for patch 10. (Martin)
+
+v2 -> v3:
+
+- Generate reuseport ID when group is created. Please see patch 10
+  description for details. (Martin)
+
+- Fix the build when CONFIG_NET_SOCK_MSG is not selected by either
+  CONFIG_BPF_STREAM_PARSER or CONFIG_TLS. (kbuild bot & John)
+
+- Allow updating sockmap from BPF on BPF_SOCK_OPS_TCP_LISTEN_CB callback. An
+  oversight in previous iterations. Users may want to populate the sockmap with
+  listening sockets from BPF as well.
+
+- Removed RCU read lock assertion in sock_map_lookup_sys. (Martin)
+
+- Get rid of a warning when child socket was cloned with parent's psock
+  state. (John)
+
+- Check for tcp_bpf_unhash rather than tcp_bpf_recvmsg when deciding if
+  sk_proto needs restoring on clone. Check for recvmsg in the context of
+  listening socket cloning was confusing. (Martin)
+
+- Consolidate sock_map_sk_is_suitable with sock_map_update_okay. This led
+  to adding dedicated predicates for sockhash. Update self-tests
+  accordingly. (John)
+
+- Annotate unlikely branch in bpf_{sk,msg}_redirect_map when socket isn't
+  in a map, or isn't a valid redirect target. (John)
+
+- Document paired READ/WRITE_ONCE annotations and cover shared access in
+  more detail in patch 2 description. (John)
+
+- Correct a couple of log messages in sockmap_listen self-tests so the
+  message reflects the actual failure.
+
+- Rework reuseport tests from sockmap_listen suite so that ENOENT error
+  from bpf_sk_select_reuseport handler does not happen on happy path.
+
+v1 -> v2:
+
+- af_ops->syn_recv_sock callback is no longer overridden and burdened with
+  restoring sk_prot and clearing sk_user_data in the child socket. As child
+  socket is already hashed when syn_recv_sock returns, it is too late to
+  put it in the right state. Instead patches 3 & 4 address restoring
+  sk_prot and clearing sk_user_data before we hash the child socket.
+  (Pointed out by Martin Lau)
+
+- Annotate shared access to sk->sk_prot with READ_ONCE/WRITE_ONCE macros as
+  we write to it from sk_msg while socket might be getting cloned on
+  another CPU. (Suggested by John Fastabend)
+
+- Convert tests for SOCKMAP holding listening sockets to return-on-error
+  style, and hook them up to test_progs. Also use BPF skeleton for setup.
+  Add new tests to cover the race scenario discovered during v1 review.
+
+RFC -> v1:
+
+- Switch from overriding proto->accept to af_ops->syn_recv_sock, which
+  happens earlier. Clearing the psock state after accept() does not work
+  for child sockets that become orphaned (never got accepted). v4-mapped
+  sockets need special care.
+
+- Return the socket cookie on SOCKMAP lookup from syscall to be on par with
+  REUSEPORT_SOCKARRAY. Requires SOCKMAP to take u64 on lookup/update from
+  syscall.
+
+- Make bpf_sk_redirect_map (ingress) and bpf_msg_redirect_map (egress)
+  SOCKMAP helpers fail when target socket is a listening one.
+
+- Make bpf_sk_select_reuseport helper fail when target is a TCP established
+  socket.
+
+- Teach libbpf to recognize SK_REUSEPORT program type from section name.
+
+- Add a dedicated set of tests for SOCKMAP holding listening sockets,
+  covering map operations, overridden socket callbacks, and BPF helpers.
+
+[0] https://lore.kernel.org/bpf/20190828072250.29828-1-jakub@cloudflare.com/
+[1] https://lore.kernel.org/bpf/20191123110751.6729-1-jakub@cloudflare.com/
+[2] https://lore.kernel.org/bpf/20200217121530.754315-1-jakub@cloudflare.com/
+====================
+
+Signed-off-by: Daniel Borkmann <3d0f3b9ddcacec30c4008c5e030e6c13a478cb4f@iogearbox.net>
+",TRUE,generic,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+facebookexperimental/eden,22add277f90f8f338812e4a59843f218e46935da,"mononoke: update walker state to use eager hash memo
+
+Summary:
+DashMap takes the hash of its keys multiple times,  once outside the lock, and then once or twice inside the lock depending if the key is present in the shard.
+
+Pre-computing the hash value using EagerHashMemo means its done only once and more importantly, outside the lock.
+
+To use EagerHashMemo one needs to supply the BuildHasher, so its added as a struct member and the record method is made a member function.
+
+Reviewed By: farnz
+
+Differential Revision: D22975878
+
+fbshipit-source-id: c2ca362fdfe31e5dca329e6200029207427cd9a1
+",TRUE,walker state,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+vuejs/vuex,456ca8bd8914cba34c2942573316ea84fe089a21,"[Just Merge Me] Russian Translation Update (#657)
+
+* russian docs translation started
+
+* docs/ru/actions.md translated
+
+* docs/ru/api.md translated
+
+* docs/ru/forms.md translated
+
+* api translation fix
+
+* docs/ru/getters.md translated
+
+* docs/ru/getting-started.md translated
+
+* docs/ru/hot-reload.md translated
+
+* docs/ru/installation.md translated
+
+* docs/ru/intro.md translated
+
+* docs/ru/modules.md translated
+
+* docs/ru/README.md translated
+
+* docs/ru/strict.md translated
+
+* docs/ru/structure.md translated
+
+* docs/ru/SUMMARY.md translated (O_O for some reason it happens to be exactly the same as README.md)
+
+* docs/ru/mutations.md translated
+
+* docs/ru/plugins.md translated
+
+* docs/ru/state.md translated
+
+* docs/ru/testing.md translated
+
+* docs/ru/actions.md styling/proof-reading
+
+* docs/ru/api.md styling/proof-reading
+
+* docs/ru/forms.md styling/proof-reading
+
+* docs/ru/getters.md styling/proof-reading
+
+* docs/ru/getting-started.md styling/proof-reading
+
+* docs/ru/hot-reload.md styling/proof-reading
+
+* docs/ru/installation.md styling/proof-reading
+
+* docs/ru/intro.md styling/proof-reading
+
+* docs/ru/modules.md styling/proof-reading
+
+* docs/ru/mutations.md styling/proof-reading
+
+* docs/ru/plugins.md styling/proof-reading
+
+* docs/ru/state.md styling/proof-reading
+
+* docs/ru/strict.md styling/proof-reading
+
+* docs/ru/structure.md styling/proof-reading
+
+* docs/ru/testing.md styling/proof-reading
+
+* docs/ru/intro.md typo fix
+
+* Copyediting RU documentation
+
+* Fix typo
+
+* Change wording around alternative approaches to data handling
+
+* Fix typo
+
+* Fix typo
+
+* Better wording for linters
+
+* Fix header and change wording
+
+* fix typo
+
+* typos reported by @ipelekhan are fixed
+
+* Russian docs translation update
+
+* Fix typo
+
+* Sentence rephrasing and fix punctuation
+
+* Переключил на ветку translation-ru
+
+* - Исправлен пример
+
+* - getting-started.md исправлена ссылка на jsfiddle
+
+* - getters.md добавлена секция про возможность передачи функции в геттерах
+
+* - installation.md добавлен флаг --save
+
+* - modules.md мелкая правка в примере
+
+* Update modules.md
+
+* modules.md ещё мелкая правка в примере
+
+* modules.md добавлен пример регистрации модуля
+
+https://github.com/vuejs/vuex/pull/634
+
+* actions.md расширен пример
+
+* getters.md исправление
+
+* strict.md обновление и добавлено уточнение о затратности
+",FALSE,translation,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+vinriviere/m68k-atari-mint-binutils-gdb,cd53a9d95a3076987725846338c6f73518f518a8,"	* dvp-opc.c (parse_vif_unpackloc,insert_vif_unpackloc): Delete.
+	(vif_operands): Update.
+	(vif_get_unpackloc): Delete.
+	(state_vif_unpackloc{,_star_p}): Delete.
+	(dvp_opcode_init_parse): Update.
+",FALSE,?,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+cucumber/cucumber-ruby,d4751778672afb607ff1bc658cbca369f1fe9a33,"Fixed rerun formatter [#243 state:resolved]
+",FALSE,state:resolved,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+NethServer/nethserver-firewall-base,e49f3958da5c6fb37f0d0eeeec7af480fcf180da,"ui. added blank state in connections
+",FALSE,blank state,FALSE,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+wikimedia/mediawiki-extensions-Echo,d67e474d467df37e7a942c7c8b3a6502b0a04f1f,"Correct unseen animation in notifications
+
+The unseen animation should display whether the option is unread or
+read, because it should point out notifications that were unseen/new in
+this session even if they are immediately marked as read (in cases
+where the configuration is 'mark read when seen', like in alerts).
+
+However, the animation itself switched by default to white background
+which is an 'unread' state. This made cases like ""mark all as read""
+mark the notifications as read but still have a white background as
+if they are unread, and yet have no 'x' button because they are actually
+read. (Bear with me here)
+
+This commit organizes the animation better. We now have a proper clear
+naming for the two animations - unseen-to-read and unseen-to-unread and
+we use unseen-to-read as default. unseen-to-unread is used when
+the -unread class is applied and the other cases should reflect the
+correct state of the option read/unread status.
+
+Bug: T112826
+Change-Id: I7fe8ea5dcf8c3e31d16213313be34b2350d03655
+",FALSE,unread state,,,14_jan_2021_abstraction_state_0b713a426271a9ce9c8463ac224496ff8c99e138
+OPM/IFEM,e0025c27c892a6781249b18703406d776eef94ac,"Added: template class SIMdummy replacing SIMwrapper
+",TRUE,template class replacing,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+mantidproject/mantid,5ea534e981790e4fa3013b0e6924c576294f5398,"Corrected issue with function changeing
+
+Previously when you attempted to change functions in the template view it would attempt to reapply the values which led to an exception.",FALSE,template view,FALSE,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+Kronos-Integration/kronos-interceptor-decode-json,ebe8b5ceeec7d12cb08291228424d28533184d21,chore(npm): merge from template .npmignore,FALSE,.npmignore,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+akrherz/iem,8470463c8a7f7a52e1c6a5783e8f5b55cc38dce2,use template and not use warnings table with gtype,FALSE,template,FALSE,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+apache/allura,a779ed7993bddd2f32e5d69cee5c126a988397a0,"[#3154] call bulk_export_filename() just once per export; better status check; include filename & `c` in config templates
+",FALSE,config templates,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+openstack/nova,5e9eab1d477189fb3283842375d0665370cc5a1a,Adds the requisite infrastructure for automating translation templates import/export to Launchpad.,FALSE,translation templates,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+chromium/chromium,e018b5b1bad681272008f7528c36623d801297dc,"Roll src-internal b1128ddc5b31..7e1439b863bd (1 commits)
+
+https://chrome-internal.googlesource.com/chrome/src-internal.git/+log/b1128ddc5b31..7e1439b863bd
+
+
+Created with:
+  gclient setdep -r src-internal@7e1439b863bd
+
+If this roll has caused a breakage, revert this CL and stop the roller
+using the controls here:
+https://skia-autoroll.corp.goog/r/src-internal-chromium-autoroll
+Please CC 17d38a2d68c6a07a3ab0ce4a2873c5acefbd3dbb@google.com on the revert to ensure that a human
+is aware of the problem.
+
+To report a problem with the AutoRoller itself, please file a bug:
+https://bugs.chromium.org/p/skia/issues/entry?template=Autoroller+Bug
+
+Documentation for the AutoRoller is here:
+https://skia.googlesource.com/buildbot/+/master/autoroll/README.md
+
+Cq-Include-Trybots: luci.chrome.try:linux-chromeos-chrome
+Bug: None
+Tbr: 17d38a2d68c6a07a3ab0ce4a2873c5acefbd3dbb@google.com
+Change-Id: I05add8b578450054149350f9e8c75ed95c7e4132
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2121956
+Reviewed-by: chromium-internal-autoroll <c5e9ebca0a7c40fc806a71617eed506a564088c0@skia-corp.google.com.iam.gserviceaccount.com>
+Commit-Queue: chromium-internal-autoroll <c5e9ebca0a7c40fc806a71617eed506a564088c0@skia-corp.google.com.iam.gserviceaccount.com>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#753589}
+",FALSE,template in url,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+quintel/etengine,4deeee2101cd38041d2148f5aa2b024b91803fd4,"layouts: use common outer template
+",FALSE,outer template,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+ryanluker/vscode-coverage-gutters,24877c2919ccb8c21ac66446324aefbc5d9c888d,"[#170] Add PR template
+",FALSE,PR template,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+webdsl/webdsl,aa6867cfcdcf9d8563fa32ad1a8f941b243f391f,"fix template hygiene: html input names were overlapping
+currently causes issues with 'with' template calls + ajax in outliner app, also with ajax in combination with transient entities
+
+restore ajax engine redirect, normal redirect doesn't work when called with ajax
+
+svn path=/webdsls/trunk/; revision=3128
+",FALSE,template as subject,,,17_jan_2021_abstraction_template_047d51716e9324e5a574e35eb3c75475da55bc5a
+CDrummond/cantata,70f8aca3cabf7353d469ab370e56f70a1f2da2dc,"Re-add collapsing of interface
+",FALSE,collapsing (user) interface,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+AshamaneProject/AshamaneCore,946adf469c14deeaf202cba5378fb5edfd792bd6,"*** New core <-> script library interface - complete rewrite of the old one.
+* Removed the misdesigned on_events script/hooks.
+* Lots of related cleanups and assertions.
+* The interface is now fully object-oriented.
+** Scripts no longer use function pointers.
+** Scripts no longer use the general-purpose Script struct for everything.
+** Script types are split into separate classes which must be inherited depending on what functionality is desired.
+* Several script types have been added to allow extending functionality in a code-only manner (some script types require
+  assignment in the recently added ScriptName columns in the database, though).
+** SpellHandlerScript: Wrapper around spell scripts (returns new SpellScript objects (`spell_script_names`.`ScriptName`)).
+** ServerScript: Allows scripting events that occur in the network layer.
+** WorldScript: Allows scripting certain world-global events.
+** FormulaScript: Allows hooking and interfering with core formulas.
+** *MapScript: Allows hooking different map types (including world, instance, and battleground maps (`instance_template`.`ScriptName`)).
+** ItemScript: Allows scripting of items (like the old interface (`item_template`.`ScriptName`)).
+** CreatureScript: Allows scripting of creatures/AI (like the old interface (`creature_template`.`ScriptName`)).
+** GameObjectScript: Allows scripting of gameobjects (like the old interface (`gameobject_template`.`ScriptName`)).
+** AreaTriggerScript: Allows scripting triggered area triggers (like the old interface (`areatrigger_scripts`.`ScriptName`)).
+** OutdoorPvPScript: Script which should return OutdoorPvP objects for use by OutdoorPvPMgr (`outdoorpvp_template`.`ScriptName`).
+** CommandScript: Allows extending the in-core command table.
+** WeatherScript: Allows scripting of weather changes (`game_weather`.`ScriptName`).
+** AuctionHouseScript: Allows scripting of auction events.
+** ConditionScript: Allows scripting of conditions (`conditions`.`ScriptName`).
+** DynamicObjectScript: Allows scripting of dynamicobjects.
+** TransportScript: Allows scripting of transport events (`transports`.`ScriptName`).
+* OutdoorPvP objects are now created through scripts. This effectively means that they'll need to be moved to scripts
+  before the they're functional again.
+* The whole idea with this new interface is to allow expanding core functionality without touching core code. If further
+  hooks are needed to expand functionality of the core, let us know; we'll add them, if we agree that it is appropriate
+  to do so.
+*** NOTE: The scripts project will _not_ build before it has been adapted to the new interface.
+*** Thanks to everyone who helped out with related preparations and suggestions!
+
+--HG--
+branch : trunk
+",TRUE,interface is oo,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+chromium/chromium,a300a6aa67c6497089076848aa8a758ab45ccb50,"bindings: Fix variable name in comment.
+
+Small cosmetic fix with no effect on generated output.
+
+The comment describing the hacks we apply to the Iterator interface in
+interface_base.cpp.tmpl still referred to |iteratorPrototypeTemplate|, which
+was the original name |intrinsicIteratorPrototypeInterfaceTemplate| had when
+the patch was first reviewed. Use the right name to make the comment easier
+to understand.
+
+Change-Id: Icdd38e4c508b3b646e6b1db12993c51b7fc28472
+Reviewed-on: https://chromium-review.googlesource.com/558291
+Reviewed-by: Kentaro Hara <ef1728e9a9ee178abcf3af44b8924f4f0a6f4047@chromium.org>
+Reviewed-by: Yuki Shiino <e3bb199ef8a61005bf84cdc86ad9ebf7e094973a@chromium.org>
+Commit-Queue: Raphael Kubo da Costa (rakuco) <5fe4d20cf6ab8a2cf4e5e71d4c2d58346e96df0d@intel.com>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#484250}",TRUE,iterator interface,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+linuxdeepin/dde-daemon,10ad63131be8133fb87871ebe0e3971fbefbe0b3,"audio: sync interface with go-pulse
+",FALSE,"audio, sync interface",FALSE,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+openstack/heat,584efe3329143e28fdb42b5d9496977f5cdf275a,"Fix cancel update for nova server with defined port
+
+This particular patch fixes a behaviour of cancel update for
+nova server with defined port, so there are no ports manageable
+by nova. We have these issues while restoring ports after rollback:
+1) We doesn't detach any ports from current server, because we
+doesn't save them to resoruce data. (we store this data after
+succesfull create of the server)
+2) Detaching an interface from current server will fail, if the server
+will be in building state, so we need to wait until server will be
+in active or in error state.
+Refresh ports list to solve problem (1).
+Wait until nova moves to active/error state to solve (2).
+A functional test to prove the fix was added. Note, that this test is
+skipped for convergence engine tests until cancel update will work
+properly in convergence mode (see bug 1533176).
+Partial-Bug: #1570908
+Change-Id: If6fd916068a425eea6dc795192f286cb5ffcb794
+",TRUE,detaching an interface,FALSE,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+tprrt/linux-stable,4c67525849e0b7f4bd4fab2487ec9e43ea52ef29,"tcp: resets are misrouted
+
+After commit e2446eaa (""tcp_v4_send_reset: binding oif to iif in no
+sock case"").. tcp resets are always lost, when routing is asymmetric.
+Yes, backing out that patch will result in misrouting of resets for
+dead connections which used interface binding when were alive, but we
+actually cannot do anything here.  What's died that's died and correct
+handling normal unbound connections is obviously a priority.
+
+Comment to comment:
+> This has few benefits:
+>   1. tcp_v6_send_reset already did that.
+
+It was done to route resets for IPv6 link local addresses. It was a
+mistake to do so for global addresses. The patch fixes this as well.
+
+Actually, the problem appears to be even more serious than guaranteed
+loss of resets.  As reported by Sergey Soloviev <sol@eqv.ru>, those
+misrouted resets create a lot of arp traffic and huge amount of
+unresolved arp entires putting down to knees NAT firewalls which use
+asymmetric routing.
+
+Signed-off-by: Alexey Kuznetsov <55346d3bc0c58d58503ceaa50b259ca76fcb3262@ms2.inr.ac.ru>
+",FALSE,interface binding,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+ivan1993spb/clever-snake,80273fcbcc880810d8bb3a420513a81721b39c20,"Implement JSON Marshaler interface for OutputMessage
+",TRUE,impement interface,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+nwjs/chromium.src,9a73f1f57f9697b0ad74ad8d7d31aac02ca2cd8e,"Implement an OverflowEvent constructor for JSC
+https://bugs.webkit.org/show_bug.cgi?id=69907
+
+Reviewed by Adam Barth.
+
+Source/WebCore:
+
+There is no spec for the OverflowEvent constructor
+since it is WebKit-specific. However, judging from the current
+IDL of initOverflowEvent(), the constructor IDL should be as follows.
+
+[Constructor(DOMString type, optional OverflowEventInit eventInitDict)]
+interface OverflowEvent : Event {
+    ...;
+}
+
+dictionary OverflowEventInit : EventInit {
+    unsigned short orient;
+    boolean horizontalOverflow;
+    boolean verticalOverflow;
+}
+
+Note: In initOverflowEvent(), we cannot specify |bubbles| and |cancelable|.
+I do not know why, but we can find a comment in fast/events/script-tests/init-events.js
+that says ""initOverflowEvent has an interface that has a design that's
+inconsistent with the init functions from other events"".
+On the other hand, the above constructor enables to specify |bubbles| and |cancelable|,
+which is consistent with other constructors.
+
+Test: fast/events/constructors/overflow-event-constructor.html
+
+* bindings/generic/EventConstructors.h: Added a definition for the OverflowEvent constructor.
+* bindings/js/JSEventConstructors.cpp: Added #includes for OverflowEvent.
+* dom/OverflowEvent.cpp:
+(WebCore::OverflowEventInit::OverflowEventInit):
+(WebCore::OverflowEvent::OverflowEvent):
+(WebCore::OverflowEvent::initOverflowEvent):
+* dom/OverflowEvent.h: Added a definition for OverflowEventInit.
+(WebCore::OverflowEvent::create):
+(WebCore::OverflowEvent::orient):
+(WebCore::OverflowEvent::horizontalOverflow):
+(WebCore::OverflowEvent::verticalOverflow):
+* dom/OverflowEvent.idl: Makes OverflowEvent constructible.
+
+LayoutTests:
+
+overflow-event-constructor.html checks the behavior of the OverflowEvent constructor.
+
+* fast/dom/constructed-objects-prototypes-expected.txt: Added inner.OverflowEvent().
+* fast/dom/dom-constructors-expected.txt: Updated the test result.
+* fast/dom/dom-constructors.html: Removed OverflowEvent from test cases, since now OverflowEvent has a constructor.
+* fast/events/constructors/overflow-event-constructor-expected.txt: Added.
+* fast/events/constructors/overflow-event-constructor.html: Added.
+* platform/chromium/test_expectations.txt: Skipped overflow-event-constructor.html, since V8 does not yet have the OverflowEvent constructor.
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@97356 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,interface,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+Edt-2000/Edt-2000,7205a5afccb2dcaa0d67cf8a6924be088e3bbfda,"Merge pull request #27 from Edt-2000/feature/improvements-in-control-interface
+
+Feature/improvements in control interface",TRUE,improvments for interface,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+diadoc/diadocsdk-csharp,c90cb15b0cede0be8c3356678b3fbbd346c4c1ca,"add IAdditionalInfo interface for COM
+",TRUE,add interface,,,17_jan_2021_abstraction_interface_047d51716e9324e5a574e35eb3c75475da55bc5a
+junit-team/junit-lambda,699d164ed6a3fddc740c5a031e5a4990ee2f5299,"Introduce generic @After annotation
+",FALSE,generic annotation,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+rear/rear,26e2f303268bc3d36a598490475c06bc212bea7b,"In packaging/rpm/rear.spec replaced the incomplete and outdated
+changelog entries with one generic entry that is always valid.
+",FALSE,generic entry,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+astropy/astropy,ce5cc8c73939a0fd481cc44f0c2885263afed446,"Merge pull request #6165 from bsipocz/ci-helpers_use_generic_script
+
+Use the generic ci-helpers script, it will figure out OS",FALSE,generic script,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+NicholasRees/xspress3,44294302201a82bf00f0ace92038b4ba508fb6a0,"xspress3: changed the way the xspress3 clocks are set up, which fixes a problem I was having with scaler data readout. Fixed a bug in the driver for updating the number of frames read out each poll. Updated the test program to use the right clock setting, and improved it a bit to print out data. Made the test program Makefile more generic.
+
+git-svn-id: 92b5bda59fbd650986593b3f7f1c115b341ef4e0@87740 e099a375-04f9-0310-9d5f-a741eaff62e1
+",TRUE,more generic,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+lnls-dig/openMMC,03895e6c89ff42541ce5512adfc9090d17cd51f7,".travis.yml: add ci_build.sh script as it's more generic
+",TRUE,more generic,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+googleapis/gapic-generator-java,5247a6b2f6a66c730106eb4bddb990e79038a499,"[ggj][engx] build: run pre-commit when goldens have changed (#439)
+
+* fix: support non-name fields with res-refs in resname def parsing
+
+* fix: add workaround for missing default_host and oauth_scopes annotation
+
+* fix: clarify LRO parsing error messages
+
+* feat: support deeply-nested types in AST and proto message parsing
+
+* fix: prevent resname tokens from matching subcomponents
+
+* fix: use TypeParser for proto message parsing
+
+* fix: use generic types in field instantiation in ServiceClientTest
+
+* fix: prevent descension into map types in nested message parsing
+
+* fix: merge master
+
+* fix: use both map generics in ServiceClientTest codegen
+
+* fix: dir structure of generated files
+
+* test: add asset API gradle pkg rules
+
+* fix: remove unused dep
+
+* test: add logging integration target and goldens, consolidate rules
+
+* fix: fix asset_java_gapic build
+
+* fix: fix test src packaging, update integration goldens
+
+* fix: pass all tokens to instansiate in resname 1-pattern case
+
+* fix: update goldens
+
+* fix: update goldens
+
+* build: add all integration tests to pre-commit hook
+
+* build: run pre-commit when goldens have changed",TRUE,generic types,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+vinriviere/m68k-atari-mint-binutils-gdb,839087b7f198a379310e5d97e5bba60387ec1669,"	* archive.c (bfd_generic_archive_p): Preserve tdata in case of
+	failure.
+",FALSE,_generic_,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+CZ-NIC/turris-os,21c82adbb1400c2d42b30be8fc5922b06dde4cb6,"generic: ar8216: only set phy_ptr if packet mangling is used
+
+Signed-off-by: Gabor Juhos <juhosg@openwrt.org>
+
+git-svn-id: c673a1a018ba15e3442847f58d2337db82164816@35541 3c298f89-4303-0410-b956-a3cf2f4a3e73
+",FALSE,generic:,FALSE,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+GiovanniBussi/test-travis-ci,b2a4c18581f9186e47f446788d298bf0f0bce214,"Generic Center
+
+CENTER creates an atom as a weighted average of other atoms.
+",FALSE,generic center,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+ManageIQ/integration_tests,5adf6841b88b4240f095cb55fcbd7dcded06a650,"test names are anchors, browser error message is more generic
+",FALSE,error message is more generic,,,17_jan_2021_generic_047d51716e9324e5a574e35eb3c75475da55bc5a
+vuetifyjs/vuetify,fa91fa48de7f1f9f52b39a3af46e1768397991de,"removed duplicate focus call, fixed a bug with tags and items together, improved keyboard selection feel
+",FALSE,duplicate call,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+LLK/scratch-blocks,9a605e90e78797b39fce56fc861194362783d492,"Reduce duplicated code in text and list blocks.
+",TRUE,reduce duplicated code,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+WikiEducationFoundation/WikiEduDashboard,cf30837896adab5fd80ed2a9f3a6e88a4671b233,"Resolves #89
+Duplicates are detected and handled whenever Articles are imported
+
+Resolves #90
+Whenever Articles are deleted their revisions are checked against the replica and moved or marked as deleted
+",FALSE,duplicated are detected,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+carls-app/carls,070105f660f9c989754f207339047ea545571610,"Merge branch 'master' into greenkeeper/react-native-0.52.0
+
+* master: (130 commits)
+  fix onChangeOrder/onSaveOrder typo
+  shuffle around the types
+  prettierify
+  fix schema (add button enabled key)
+  comment out the facilities form idea
+  allow passing a custom message to explain why the tool is disabled
+  prettify validate.js
+  update <Button/> snapshots
+  add pretty-quick and replace prettier:changed with it
+  allow passing false to <Card header footer />
+  make buttons actually disable when disabled
+  extract Button props
+  fix too-common [object Object] stuff in validate-data
+  fix overzealous catching of errors in validate-data script
+  fix accidental duplicate momentjs inclusion
+  clean up the flowconfig
+  clean up tool code duplication and allow configuring basic tools from schema
+  return local copy of help data when offline + no cache, or in dev
+  update magical powers of help tool files and write a schema
+  allow international phone numbers in _defs#/phone
+  ...
+
+# Conflicts:
+#	package.json
+#	yarn.lock
+",FALSE,fix duplicate inclusion,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+mapillary/OpenSfM,7c90d6d0909aa5502b3c2642df6403d2411f9fb7,"removing duplicate import
+",FALSE,duplicate import,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+beaker-project/beaker,f791ed33bad45e732f901100df4e03ad9c28122c,"remove duplicate FQDNs in peer roles
+
+Bug: 951283
+Change-Id: I4d43bc8860dbeff47568232f72a4910890ca004d
+",FALSE,duplicate FQDN,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+turt2live/matrix-dimension,cc01a9ea93d3e25f1422ac686caa56c2517dbb75,"Remove duplicate guggy from the promo page
+
+Fixes https://github.com/turt2live/matrix-dimension/issues/220",FALSE,duplicate guggy,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+mroonga/mroonga,050fb8c8b6c27a696a96f8fcc7e689feb53d6fd7,"remove duplicated code.
+",TRUE,duplicated code,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+jscl-project/jscl,54a314991736a4c9e3633fd71801dde280aceace,"Add with-collector-function
+
+  Duplicated in boot.lisp and compat.lisp so it is available on the host
+  and the target respectively
+",TRUE,duplicated funtion,,,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+alphagov/notifications-utils,7e5d9630ab444fee2e791561d133e9cb9c4633dd,"Move antivirus client to utils repository.
+
+This code has been copied (and adjusted in the process) from
+document-download-api repo, since now we also need to use it
+in notifications-admin, so we need to have it in a place that
+will be accessible for both those apps.
+
+Next step will be to make make document-donwload-api call
+the antivirus client from here and to delete duplicate code from
+there.
+",TRUE,duplicated code,,will be removed in the future,17_jan_2021_duplicat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+rncbc/drumkv1,54e08095d5ec738d149e48152d52d06f838e6652,"- Load/Save preset methods moved to UI wrapper. (FIX)
+",TRUE,moved to wrapper,,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+EoRImaging/FHD,58dc0fdd65f82a95da8bd078480c18f4aaa8efe5,"Add Mike's observation wrapper
+",TRUE,add wrapper,,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+wikimedia/oojs-ui,02d2da0c157017b9850003772adb885d9ed0e78a,"Rewrite insufficient label mixin documentation
+
+Just saying, for example, that ""the label"" is returned can be
+confusing when there are so many possibilities what this means:
+Is it plain text or something else? What guarantees are given, if
+any? Does it include the wrapper element or not?
+
+This patch focuses exclusively on documentation, without touching
+any of the existing behavior.
+
+The ""do not call this …"" note is not correct. The methods can be
+called in any order.
+
+Bug: T249167
+Bug: T258337
+Change-Id: I518966c1c43ac871adeab3fb85efda19471fe27e
+",TRUE,does include wrapper,FALSE,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+symfony/symfony,38b369be3f47d0964e0af125359e533035225210,"[PropertyInfo] added handling of nullable types in PhpDoc
+
+While not specified in PSR-5, PhpDocumentor does support parsing
+nullable types in the PHP 7.1 syntax (i.e. ?string), and returns those
+in a Nullable wrapper. We currently don't handle this and neither throw
+an error, which results in all kind of weird breakage when this syntax
+is used (e.g. ""class string|int not found"").
+
+Correctly parse this syntax into a nullable type.
+",TRUE,nullable wrapper,,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+jenetics/jenetics,9e425f77cae58a364c79b1fdfd7d21014df4e309,"Add Graddle wrapper scripts.
+",TRUE,graddle wrapper,FALSE,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+erickok/transdroid,b9479b39dd9cf647a5fe350f673ed19aa36d9c70,"Update gradle wrapper
+",TRUE,graddle wrapper,FALSE,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,d9d04527c79f0f7d9186272866526e871ef4ac6f,"Merge tag 'powerpc-4.9-7' of git://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux
+
+Pull powerpc fixes from Michael Ellerman:
+ ""Four fixes, the first for code we merged this cycle and three that are
+  also going to stable:
+
+   - On 64-bit Book3E we were not placing the .text section where we
+     said we would in the asm.
+
+   - We broke building the boot wrapper on some 32-bit toolchains.
+
+   - Lazy icache flushing was broken on pre-POWER5 machines.
+
+   - One of the error paths in our EEH code would lead to a deadlock.
+
+  Thanks to: Andrew Donnellan, Ben Hutchings, Benjamin Herrenschmidt,
+  Nicholas Piggin""
+
+* tag 'powerpc-4.9-7' of git://git.kernel.org/pub/scm/linux/kernel/git/powerpc/linux:
+  powerpc/64: Fix placement of .text to be immediately following .head.text
+  powerpc/eeh: Fix deadlock when PE frozen state can't be cleared
+  powerpc/mm: Fix lazy icache flush on pre-POWER5
+  powerpc/boot: Fix build failure in 32-bit boot wrapper
+",FALSE,build wrapper,FALSE,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+Insire/MvvmScarletToolkit,45c7d081509ad0a1dd77d6bb192354e3f979406c,"general refactoring and added wrapper for CommandManager
+",TRUE,added wrapper,,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+erdc/proteus,71232f85b63683c278e2d60f331238dddd18c89f,"fixed bug in new cython wrapper for cnumericalFlux
+",TRUE,bug in wrapper,,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+supercollider/supercollider,7d738a62adc2cf60cb8c3e062281a66611faf425,"Fix a bunch of ugen-specific wrapper methods in SequenceableCollection to use multiChannelPerform.
+Also added a couple of missing wrappers, and updated docs.
+",TRUE,wrpper methods,,,17_jan_2021_wrapper_3e922c0344679d08b44f908623cc7d956b0bf0d1
+jszakmeister/old-packages,86e005dd99d585f60082bd4ead1394fef772cd48,"Coova-chilli: Adding Menu option for enabling chilli proxy.
+
+Chilli proxy is used when one does not want to setup AAA server
+but want to handle AAA through http.
+
+Developer's Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+have the right to submit it under the open source license
+indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the best
+of my knowledge, is covered under an appropriate open source
+license and I have the right under that license to submit that
+work with modifications, whether created in whole or in part
+by me, under the same open source license (unless I am
+permitted to submit under a different license), as indicated
+in the file; or
+
+(c) The contribution was provided directly to me by some other
+person who certified (a), (b) or (c) and I have not modified
+it.
+
+(d) I understand and agree that this project and the contribution
+are public and that a record of the contribution (including all
+personal information I submit with it, including my sign-off) is
+maintained indefinitely and may be redistributed consistent with
+this project or the open source license(s) involved.
+
+Signed-off-by: f30efda75d3c6d48ecaff4e6144fbd0044bc3258@gmail.com
+",FALSE,proxy server,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+wikimedia/mediawiki-services-restbase,e43675d50702daa8d5c116fa987a08592a827ba9,"Parsoid: Stash: Honour our own ETag when retrieving the stash
+
+If a client is switching between wikitext and HTML and in one of the two
+transforms they fail to provide the revision in the URI, trust that the
+ETag is correct and try to retrieve the stashed content using the
+information in the ETag. As a fall-back, though, try with the
+client-supplied revision as well.
+
+This is a port of #1208 to the proxy branch.
+
+Bug: T235465
+",FALSE,proxy branch,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+openmole/openmole,1e95277ca899c822dc236ad4d81ede6ddfe43a0f,"Preference for default my proxy time.
+",FALSE,proxy time,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+droolsjbpm/drools,fac35e15e4efc8849495e22332d121893bdd715e,"removing prefix from shadow proxy attributes
+
+git-svn-id: a243bed356d289ca0d1b6d299a0597bdc4ecaa09@6741 c60d74c8-e8f6-0310-9e8f-d4a2fc68ab70
+",FALSE,shadow proxy,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+voxpupuli/puppet-zabbix,a088ea099dd5b419775b7b82ebd0aa494705038f,"Updated the listen_ip for proxy so it same as for agent.
+",FALSE,proxy ip,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+mypaint/mypaint,d5abf2a1e17619fa1f5fea98e4d1bfd2934121cf,"gtk3: use set_related_action, not connect_proxy
+
+gtk.Action.connect_proxy() has gone away.
+",FALSE,connet proxy,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+OADA/oada-srvc-docker,4a259d56b823d7f41e3f4a17c6f90be1ef67344f,"Updated proxy to enable debug: in nginx.conf, set error log level to debug instead of warn, and then changed entrypoint to call nginx-debug instead of nginx
+",FALSE,debug proxy (server?),,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+Kotlin/dokka,e55f3b015faec3f62e829a2aa5984e4bd6d5037e,"Use maven directly to download additional dependencies (#1644)
+
+* Use maven instead of aether to resolve additional dependencies
+
+Aether is still used, but now indirectly by maven.
+Using maven directly allows to reuse all the configurations
+like repositories, mirrors, proxies and the local repository.",FALSE,proxies repositories,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+sapcc/helm-charts,3239c479ff314991480703b3be64cfdc5c5b1025,"Enables SSL Client Certificate Authentication for Grafana (#262)
+
+* Enables SSL Client Certificate Authentication
+
+This PR enables authentication via SSL client certificates. It subs out
+the basic auth with proxy auth. Grafana now expects the user to be
+passed in via the `X-Remote-User` header. This can be toggled with the
+`tls_client_auth.enabled` flag in the Helm values. It defaults to off
+and keeps things as they are.
+
+The ingress is configured to verify SSL certificates using the
+`nginx.ingress.kubernetes.io/auth-tls-*` annotations. This can be turned
+on/off per ingress spec.
+
+Additionally, this PR injects a bit of logic into the ingress config, to
+copy the relevant part (the user-id) into the `X-Remote-User` header.
+
+updte: slightly refactor values, do not disable basic_auth when using sso - required for the pipeline dashboard import
+",FALSE,proxy auth,,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+vespa-engine/vespa,f8d61167863b0d47e17cf469bd80ae496935bbe1,"Use shell script wrapper for vespa-configproxy-cmd.
+",FALSE,config proxy (server),,,17_jan_2021_proxy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,1715e0ccd3b8cd4c1ee76076e1e7452b113be193,"iio: accel: bmc150: optimize transfers in trigger handler
+
+Some i2c busses (e.g.: Synopsys DesignWare I2C adapter) need to
+enable/disable the bus at each i2c transfer and must wait for
+the enable/disable to happen before sending the data.
+
+When reading data in the trigger handler, the bmc150 accel driver does
+one bus transfer for each axis. This has an impact on the frequency
+of the accelerometer at high sample rates due to additional delays
+introduced by the bus at each transfer.
+
+Reading all axis values in one bus transfer reduces the delays
+introduced by the bus.
+
+Signed-off-by: Irina Tirdea <756d90dbe30c1aa83b724b214803f9c992482927@intel.com>
+Signed-off-by: Jonathan Cameron <09f65b71b7655725897b2fd41a09a0cefe2e1ace@kernel.org>
+",FALSE,design as subject,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+atom/github,a7b7bae3004bf184ea52a9009264fd4345b2f61f,"Update RFC to reflect editor-first design
+
+Co-Authored-By: simurai <86db473a295409aad177e8c93a2aa26057a6d2a1@users.noreply.github.com>
+",TRUE,design reflacted,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+solgenomics/sgn,5502f1196921dea42da61c5d308b5aeb5834ca23,"use the right cvterm for exp design
+",FALSE,cvterm,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+nana-4/materia-theme,61dc767de9928b6673f57cee2d899e07f19bb37a,"gtk: Change selected item style
+
+based on https://material.io/design/interaction/states.html#selected
+",FALSE,style,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+SAP/openui5,8137f5aecb6b2d6bb1d23a557f1d5e62758aa6bf,"[INTERNAL] sap.f.DynamicPage: visual design updated
+
+- sap.f.DynamicPage design updated
+- sap.f.DynamicPageTitle design updated
+- sap.f.sample.DynamicPageAnalyticalTable updated
+- sap.f.sample.DynamicPageAnalyticalTable updated
+
+JIRA: BGSOFUIPIRIN-2231
+JIRA: BGSOFUIPIRIN-2297
+
+Change-Id: I59759f9dacc63bedc57e6b988c8fa762f93dbe48
+",FALSE,visual design,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+Automattic/wp-calypso,fbe9c9af608893f8f0fedfbb08ee29f9bde5b5ca,"Signup: Design tweaks to user account step (#31559)
+
+* Design tweaks.
+
+* Ditch the card styling for the social signup section.
+
+* Remove the ""Log in now."" text from the bottom.
+
+* Removing some JP overrides that are no longer needed. Styling the site card.
+
+* Adjust the spacing for links below the form.
+",FALSE,graphical design,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+chromium/chromium,a80a86d8865f6feda3efe7f619e70e484b363ba6,"Change freshness of offline page previews to 7 days
+
+A design decision about the freshness threshold for offline page
+previews was made, and instead of 1 day, 7 days will be the freshness
+threshold for previews.
+
+BUG=
+
+Review-Url: https://codereview.chromium.org/2207703002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#410772}
+",TRUE,design decision,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+wongsyrone/lede-1,7004f681cd55e3ef38f2c705bd842c627ba45ce7,"ipq40xx: Add reserved memory for WPJ428
+
+The APPSBL and anything after that it not allowed to touch some of the
+memory regions which are used by other components. Still trying to write to
+the memory can lead to sudden device restarts
+
+  (IPQ40xx) # mw 87e80000 0
+  data abort
+  pc : [<873149f8>]          lr : [<87308578>]
+  sp : 86edfc28  ip : 86ef4412     fp : 00000000
+  r10: 00000000  r9 : 00000000     r8 : 86edff68
+  r7 : 00000003  r6 : 8737e624     r5 : 86ef4420  r4 : 8736c154
+  r3 : 00000000  r2 : 00000010     r1 : 00000000  r0 : 00000000
+  Flags: nZCv  IRQs off  FIQs off  Mode SVC_32
+  Resetting CPU ...
+
+The device manufacturer only provided a very rough list of regions:
+
+* rsvd1:     0x87000000 0x500000
+* wifi_dump: 0x87500000 0x600000
+* rsvd2:     0x87b00000 0x500000
+
+A more detailed list for devices using the AP.DK reference design memory
+maps was provided by Roman Yeryomin <roman@advem.lv> in commit 56f2df879fd
+(""ipq806x: ipq4019: add ap-dk01.1-c1 board support""):
+
+* apps_bl:          0x87000000 0x400000
+* sbl:              0x87400000 0x100000
+* cnss_debug:       0x87500000 0x600000
+* cpu_context_dump: 0x87b00000 0x080000
+* tz_apps:          0x87b80000 0x280000
+* smem:             0x87e00000 0x080000
+* tz:               0x87e80000 0x180000
+
+The u-boot function ipq_fdt_mem_rsvd_fixup seems to suggest that only the
+rsvd2 (tz_apps, smem, tz) should be protected. All other regions would have
+been removed by it when CONFIG_QCA_APPSBL_DLOAD is not enabled. This allows
+to reduce the 16MB reserved memory region to only 4.5MB.
+
+Signed-off-by: Sven Eckelmann <2ac7036d3528aff465f5d4b31a65c571c86fd591@openmesh.com>
+",FALSE,design maps,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+symfony/twig-bundle,b7ed57159669c2a3fef82fe6d54df7e3f28041f9,"Merge branch '3.4'
+
+* 3.4: (22 commits)
+  use Precise on Travis to keep PHP LDAP support
+  Fix case sensitive sameSite cookie
+  [PropertyInfo] Use rawurlencode to escape PSR-6 keys
+  fix(security): ensure the 'route' index is set before attempting to use it
+  Fix registering lazy command services with autoconfigure enabled
+  Fix the design of the profiler exceptions when there is no message
+  [Config] Minor fix
+  document the TwigRenderer class deprecation
+  [Security] added more tests
+  [Security] fixed default target path when referer contains a query string
+  [Security] simplified tests
+  [Security] refactored tests
+  [WebProfilerBundle][TwigBundle] Fix infinite js loop on exception pages
+  [FrameworkBundle] fix ValidatorCacheWarmer: use serializing ArrayAdapter
+  Change ""this"" to ""that"" to avoid confusion
+  [VarDumper] Move locale sniffing to dump() time
+  [VarDumper] Use ""C"" locale when using ""comma"" flags
+  [Config] Make ClassExistenceResource throw on invalid parents
+  [DebugBundle] Added min_depth to Configuration
+  [Console] Add a factory command loader for standalone application with lazy-loading needs
+  ...
+",TRUE,fix the design,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+opencart/opencart,cccf657dd1900695e377dee92f4abe560945a889,"more modification work done. also added icon pack for the new admin design
+",FALSE,icon,,,17_jan_2021_design_3e922c0344679d08b44f908623cc7d956b0bf0d1
+expertiza/expertiza,8f3b6814cdb96deaf498bc08a6b831c8cfea2997,"Configured some basic factory operations. I still need to set up the actual reviews.
+",TRUE,factory operations,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+AndroidX/androidx,174d08f823dcd8b8ae5e9e96d800904c532f9c00,"Merge changes I1d8d19a1,I5415604a,Id4506e38,Ib91e0da3,I60791111, ... into pi-androidx-dev
+
+* changes:
+  Revert ""Adding extension for timed logging (#537)""
+  Deperecate palette builder factory
+  Deprecate toast extensions for removal
+  Deprecate announceForAccessibility overload for removal
+  Mark HTML extensions as inline
+  Mark animator and transition extensions as inline
+",TRUE,builder factory,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+square/retrofit,7b573a2afc01f9d07d906ebd5d55c1aab3cf3257,"Merge pull request #980 from square/jw/result-helpers-public
+
+Make Result's factory methods public.",TRUE,make public,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+symfony/twig-bridge,66292b06510997ae151254668533b0e9cc8b8562,"Merge branch '3.4' into 4.0
+
+* 3.4:
+  [HttpKernel] Make ServiceValueResolver work if controller namespace starts with a backslash in routing
+  Add d-block to bootstrap 4 alerts
+  [Console] Don't go past exact matches when autocompleting
+  [DI] Improve error message for non-autowirable scalar argument
+  Disable autoloader call on interface_exists check
+  [Validator] Fix LazyLoadingMetadataFactory with PSR6Cache for non classname if tested values isn't an existing class
+  [HttpKernel] Dont create mock cookie for new sessions in tests
+",TRUE,factory,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+wikimedia/parsoid,77baf2568602cd76bfa426bf85b2bd6ca4bf2c75,"Fix signature and pipeline construction bugs
+
+* Looks like the JS code passes a string (title name) to
+  Frame. So, update PHP code and signatures to match.
+
+* Fix signature related to applying methods to pipeline stages
+
+* Fix minor bugs in parser pipeline construction + use
+  transform class references instead of strings in parser
+  pipeline factory recipes (where the associated class has
+  already been ported).
+
+Change-Id: Ifa2c1da8abfac770616909cc03f163e4b3b5ace2
+",TRUE,factory recepies,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+OpenConext/OpenConext-engineblock,63bb9e9141c56cb39c616fd762ad73a724433aaf,"Change behaviour based on review feedback
+
+1. The default values have been removed from the method signatures
+2. The fromXml response factory method was removed
+",TRUE,factory method,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+AndroidX/androidx,495a71c70d2ae2b00df41dbbea86c40a261727ee,"Merge ""Fix call to mHost.instantiate in default Factory"" into androidx-master-dev
+am: e3951615d7
+
+Change-Id: I3c36a7da72fe95ccb9e612700579e3c408a98832
+",TRUE,call in factory,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+Azure/azure-sdk-for-net,b036ae91a4043b28fa542ad855d406705b64c465,"fix build break from data factory
+",TRUE,data factory,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+pysmt/pysmt,70ef210017e53324f31d037f430c6479aa3ddb7e,"Improved handling of options in Solvers.
+
+!!! Breaking change wrt Solver.is_sat !!!
+
+- Calls to Factory.is_* are setting the options for model generation and
+  incrementality to False
+- Calls to Factory.get_model are done enablig model generation, but
+  disabling incrementality
+- Factory.Solver, returns a solver with both model generation and
+  incrementality enabled
+
+- ! Calls to Solver.is_sat, and related methods, do not pop the
+  assumption back, anymore. The idea of those methods is to use them one
+  shot.
+",TRUE,factory,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+chromium/chromium,56b471e0c719b3d87e1ab9dbf3d26653352105a5,"Fix gl_tests SharedImageBackingFactoryAHBTests.*
+
+There were a handful of unit tests which verified concurrency such as no
+reading while a write is in progress. Those tests began failing because
+they were hitting a DCHECK() which now lives inside the tested code to
+verify the same thing. The failing unit tests mistakenly tried to reuse
+the representation.
+
+Additionally, there was a DCHECK() that was being hit from inside
+EndAccess() which assumed it was only being called from
+EndWriteAccess(). But it was also being called from EndReadAccess().
+This DCHECK() was removed.
+
+Bug: 934254
+Change-Id: Ic527c1a30f2530fdd13477e55213c30fe56682a1
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1588169
+Commit-Queue: Chris Blume <e344d0bbe45b418fd45b2f4f6ba876c5b16d972f@chromium.org>
+Reviewed-by: Eric Karl <34121bafdd3848ba3a67ad2aae69c078fae28e52@chromium.org>
+Reviewed-by: Antoine Labour <9b5adc77717fb53f6e082b29cd49aa0d7f0ce7f0@chromium.org>
+Reviewed-by: Peng Huang <18764e26bc5bdc5f80483a2fbf46c7fcc384c153@chromium.org>
+Auto-Submit: Chris Blume <e344d0bbe45b418fd45b2f4f6ba876c5b16d972f@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#655404}
+",TRUE,factoy tests,,,17_jan_2021_factory_3e922c0344679d08b44f908623cc7d956b0bf0d1
+Subsurface-divelog/subsurface,0a64844abd8c507f58bdeea4862a919f19a3ead1,"Turn tag checkboxes code into a simple loop
+
+This makes the code much cleaner and also reuses the strings in the
+dtag_names array. This means the tag names are all lower case everywhere,
+but that seems like an acceptable trade-off.
+
+Suggested-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
+Suggested-by: Henrik Brautaset Aronsen <32f7e8cc23b69dff3584aa749971d973a5235aa6@henrik.synth.no>
+Signed-off-by: Dirk Hohndel <a00b27378a09822d5638cdfb8c2e7ccc36d74c56@hohndel.org>
+",TRUE,reuses,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,bbc318f6248e6da85cc9e2b15ded854654b56bf7,"Merge branch 'bridge-mrd'
+
+Linus Lüssing says:
+
+====================
+bridge: implement Multicast Router Discovery (RFC4286)
+
+This patchset adds initial Multicast Router Discovery support to
+the Linux bridge (RFC4286). With MRD it is possible to detect multicast
+routers and mark bridge ports and forward multicast packets to such routers
+accordingly.
+
+So far, multicast routers are detected via IGMP/MLD queries and PIM
+messages in the Linux bridge. As there is only one active, selected
+querier at a time RFC4541 (""Considerations for Internet Group Management
+Protocol (IGMP) and Multicast Listener Discovery (MLD) Snooping
+Switches"") section 2.1.1.a) recommends snooping Multicast Router
+Advertisements as provided by MRD (RFC4286).
+
+The first two patches are refactoring some existing code which is reused
+for parsing the Multicast Router Advertisements later in the fourth
+patch. The third patch lets the bridge join the all-snoopers multicast
+address to be able to reliably receive the Multicast Router
+Advertisements.
+
+What is not implemented yet from RFC4286 yet:
+
+* Sending Multicast Router Solicitations:
+  -> RFC4286: ""[...] may be sent when [...] an interface is
+     (re-)initialized [or] MRD is enabled""
+* Snooping Multicast Router Terminations:
+  -> currently this only relies on our own timeouts
+* Adjusting timeouts with the values provided in the announcements
+
+Changes in v2:
+
+* rebased to current net-next/master (no conflicts/changes)
+====================
+
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,reused,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+getsentry/raven-java,e08bb39e8808e7581d3b517f492d9560fe956581,"ref: Reuse logger instance if possible (getsentry/sentry-android#43)
+
+",TRUE,reuse instance,FALSE,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+igordejanovic/textX,003be5e9e631d93fb7b61e76c0acf5651f123032,"updated plantuml support (match rules table; reused `dot_match_str`). Tested interactively with `render_all_grammars.py`. Added unknown rules 8such as `Not` to be rendered in a generic way (also for the dot export).
+",TRUE,reused,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+Alfresco/alfresco-repository,e096d590765df6d4124a61f003d003ed68f5f1d0,"Merged V3.2 to HEAD
+    16030: Merged V3.1 to V3.2
+        16001: Merged V2.2 to V3.1
+            15999: Temp build/test (AVM permissions - testSimpleInternalLayer)
+    16223: WCM UI - simple perf improvement when displaying modified list (lock icon)
+    16472: Merged V3.1 to V3.2
+        16180: ETHREEOH-2821 - fix deployment of WCM layered (ie. across web project) file
+        16188: WCM - minor: display (localisable) ""File"" text (follow-on fix for r15970)
+        16255: WCM - ETHREEOH-2836
+        16257: AVM - minor updates to unit tests
+        16275: WCM - ETHREEOH-2844
+        16277: WCM - ETHREEOH-2829 - added simple unit test
+        16341: AVM - minor update to reuse core (path) utils
+        16344: Merged V2.2 to V3.1
+            16323: Fix ETWOTWO-1266 (unexpected AVM conflict)
+        16457: Fix ETHREEOH-2836 (WCM layered files) - follow-on fix, with additional unit test
+    16649: Fix ETHREEOH-1878 - configure WCM locking for CIFS/FTP
+    16654: Merged V3.1 to V3.2
+        16507: Fix ETHREEOH-2604 - update unsecured-public-services-security-context.xml.sample (to allow server to start)
+        16527: Fix ETHREEOH-2868 - can't submit removal of WCM layered file (Older version prevents update)
+        16607: AVM - additional tests when deleting LD + fix to avoid cycle
+        16612: AVM - console improvement (lsver, rmvers) to enable admin/support to list & purge snapshots between dates
+        16638: Fix ETHREEOH-2893 - stale WCM/AVM layered dir
+        16643: AVM - console improvement (setopacity) -> eg. to set stale/modifed WCM layered folder as opaque
+
+
+git-svn-id: 01653c09f76512ebba8fd589b05a699d8510a51f@16895 c4b6b30b-aa2e-2d43-bbcb-ca4b014f7261
+",TRUE,reuse core,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+developit/preact,a45ad68ac14ad8e8792eac73c453cd72c908645d,"Handle reused VNodes in the same diff (+6 B)
+",TRUE,rused vnodes,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,6094f86fb3713e1b7d0c7f264c3a76263745efae,"mt76: mt7915: add HE bss_conf support for interfaces
+
+Add basic HE BSS's info for interfaces. As for the advanced features
+will be added gradually in the future patches.
+(i.e. BSS color, TWT, spatial reuse and OFDMA)
+
+Signed-off-by: Ryder Lee <c888b2f23d7b208a47dcb456a896437ffc943708@mediatek.com>
+Tested-by: Shayne Chen <4f62ba356beca6978836e3b5c20ddd7b1fc9bae7@mediatek.com>
+Tested-by: Chih-Min Chen <648ac844e1264fe2917e2c5c2d210f2ed399ba8d@mediatek.com>
+Tested-by: Evelyn Tsai <4d600ae9830a935613033ba6d6dc07a9f3d8fa3b@mediatek.com>
+Acked-by: Yiwei Chung <64c1638b5068c881ec1e64b786184958d99c5fa9@mediatek.com>
+Acked-by: YF Luo <3aa749d12e4db468773f91b93da1839948703066@mediatek.com>
+Signed-off-by: Felix Fietkau <118ed6118e893d16e8c6e0776e0ebc290952c897@nbd.name>
+",TRUE,spatial reuse,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+oVirt/vdsm,082a9d7b933053613ae967626642587f236b9656,"tests: Remove duplication in monitor exception test
+
+Extract a helper function to run the test setup, and use it for testing
+different registration order.
+
+Move the BadMonitor helper class to the module, so it can be reused by
+future tests.
+
+Change-Id: I2beed3ed2c8ef2bddbad6629fe248bef23290450
+Signed-off-by: Nir Soffer <60258c486a9660a474d408e6013543d2add80a76@redhat.com>
+",TRUE,can be reused,FALSE,can be reused?,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,abfa7f4357e3640fdee87dfc276fd0f379fb5ae6,"crypto: testmgr - fix out of bound read in __test_aead()
+
+__test_aead() reads MAX_IVLEN bytes from template[i].iv, but the
+actual length of the initialisation vector can be shorter.
+The length of the IV is already calculated earlier in the
+function. Let's just reuses that. Also the IV length is currently
+calculated several time for no reason. Let's fix that too.
+This fix an out-of-bound error detected by KASan.
+
+Signed-off-by: Jerome Marchand <d3643b417d7bb29446cdadf5ebe2f94cac95db45@redhat.com>
+Signed-off-by: Herbert Xu <ef65de1c7be0aa837fe7b25ba9a7739905af6a55@gondor.apana.org.au>
+",TRUE,reuses that,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+openstack/bifrost,2a6fc72559a8248aebc32dd52e19bdb38db17c40,"Use random passwords by default
+
+It's easy to forget to override them, and you'll end up with a well known
+password used in your keystone and database. Use the password module
+to generate secure random passwords instead. Operators of production
+environments are still expected to provide their own passwords.
+
+The generated passwords are stored in /etc/bifrost and reused on the next
+installation. A new task is provided for upgrading the bootstrap (admin)
+user in keystone to the new password.
+
+Change-Id: I6771015f2b062233eeff85704655c8e2ab64364d
+",TRUE,reused on the next,,,17_jan_2021_reus_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,19343de279d28e4ed039c8ad00510d19dc4d6d12,"ixgbe: fix regression on some 82598 adapters
+
+The change to check the SFP+ module again on open() was
+causing the XFP (non-SFP+) adapters to be rejected. We
+only want to try and re-identify the SFP+ module if the
+original probe found that this device was an SFP+ device.
+So for this code path (driver loaded with SFP module, module
+inserted, ifconfig up of the device) the type will be
+ixgbe_phy_unknown for an unidentified SFP+ module.  So we
+only check if that is the case.
+
+This problem also shows up on Copper devices.
+
+Signed-off-by: Peter P Waskiewicz Jr <019ca817bcedb2fce0c539efa1b71c24f7a6c1c1@intel.com>
+Signed-off-by: Don Skidmore <db552506339f77ba9019f0c6d9084f81cf1d1757@intel.com>
+Signed-off-by: Jeff Kirsher <87e35f5be20bb3e67f4ba6b86f5f6be3085b1b3a@intel.com>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",FALSE,adapter device,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+CZ-NIC/turris-os,20c4cf924b3162cf471fae294c4e93dbfa72596f,"Add usbnet and asix ethernet based adapters support (#1481)
+
+
+git-svn-id: c673a1a018ba15e3442847f58d2337db82164816@6812 3c298f89-4303-0410-b956-a3cf2f4a3e73
+",FALSE,ethernet adapter,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+travis-ci/travis-web,5f06adc46a7b1a8401a375faf93b537c74639aa0,"Clean up repositories adapter and extend v3 adapter
+
+This commit moves setting the `include` property to V3 adapter, so it
+can be used in more adapters, not only repo.
+
+It also extends capabilities of V3 adapters:
+
+  * it replaces page_size with limit
+  * it joins arrays so instead of ['foo', 'bar'] we get 'foo,bar'
+
+These new capabilities will be needed to move forward with other V3
+models.
+",TRUE,repositories adapter,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+keycloak/keycloak,6b0a87c57a807dedc6087547b67a00c65da8b746,"Merge pull request #624 from patriot1burke/master
+
+add js adapter to dist",TRUE,js adapter,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+Flexberry/ember-flexberry-data,d6cd10c89e282ae5bc73b053726cbc23590b00ba,"Fix batch update for offline adapter (#174)
+
+",TRUE,offline adapter,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+google-research/ruse,90155646ee44650777deb01d801904a361c7f223,"updated version of adapter layers
+",TRUE,adapter layers,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+jruby/activerecord-jdbc-adapter,1c39fed5aa95ff5966b1035d8fe69c154d6caebd,"Fixed some connection test failures for the postgres adapter
+",FALSE,"protgres adapter, a tool",,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+teamon/tesla,2cd787c37557e76bd11c1ae7f54bf05986e26b26,"remove compile warning and don't create :ok tuple everytime
+
+lib/tesla/adapter/ibrowse.ex:48: warning: the underscored variable
+""_body"" is used after being set. A leading underscore indicates that
+the value of the variable should be ignored. If this is intended please
+rename the variable to remove the underscore
+lib/tesla/adapter/ibrowse.ex:51: warning: the underscored variable
+""_body"" is used after being set. A leading underscore indicates that
+the value of the variable should be ignored. If this is intended please
+rename the variable to remove the underscore
+lib/tesla/adapter/ibrowse.ex:52: warning: the underscored variable
+""_body"" is used after being set. A leading underscore indicates that
+the value of the variable should be ignored. If this is intended please
+rename the variable to remove the underscore
+lib/tesla/adapter/ibrowse.ex:57: warning: the underscored variable
+""_status"" is used after being set. A leading underscore indicates that
+the value of the variable should be ignored. If this is intended please
+rename the variable to remove the underscore
+lib/tesla/adapter/ibrowse.ex:57: warning: the underscored variable
+""_headers"" is used after being set. A leading underscore indicates that
+the value of the variable should be ignored. If this is intended please
+rename the variable to remove the underscore
+",FALSE,adapter file,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,1c79a5a8f4faec88f9f4632d0ef9b0365bff8e28,"Merge branch 'cxgb4-next'
+
+Hariprasad Shenai says:
+
+====================
+Doorbell drop Avoidance Bug fix for iw_cxgb4
+
+This patch series provides fixes for Chelsio T4/T5 adapters
+related to DB Drop avoidance and other small fix related to keepalive on
+iw-cxgb4.
+
+The patches series is created against David Miller's 'net-next' tree.
+And includes patches on cxgb4 and iw_cxgb4 driver.
+
+We would like to request this patch series to get merged via David Miller's
+'net-next' tree.
+
+We have included all the maintainers of respective drivers. Kindly review the
+change and let us know in case of any review comments.
+====================
+
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",FALSE,adapter tool,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+jruby/activerecord-jdbc-adapter,e15a592e5a9cf7ccfa7bd85011a5c371e687d837,"simplify native_database_types - now on adapter + overriden avoids jdbc
+previously it seems to be always called since connection performed database types initialization using JDBC (even when re-define in adapter sub-class)
+
+also added init_connection for possible code to execute when jdbc connection is getting initialized (first time)",FALSE,database adapter,,,18_jan_2021_adapter_3e922c0344679d08b44f908623cc7d956b0bf0d1
+rhomobile/rhodes,42527be80a5d88c51c323ce8d3e3765b5b53ee3a,"win32: fixing rhosimulator JS bridge
+",TRUE,js bridge,FALSE,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+dslutz/qemu,bb998645284924db6da93e777af5f29ef2f3c0a8,"spapr_pci: Advertise access to PCIe extended config space
+
+The (paravirtual) PCI host bridge on the 'pseries' machine in most
+regards acts like a regular PCI bus, rather than a PCIe bus.  Despite
+this, though, it does allow access to the PCIe extended config space.
+
+We already implemented the RTAS methods to allow this access.. but
+forgot to put the markers into the device tree so that guest's know it
+is there.  This adds them in.
+
+With this, a pseries guest is able to view extended config space on
+(for example an e1000e device.  This should be enough to allow guests
+to use at least some PCIe devices.
+
+Signed-off-by: David Gibson <aa743a0aaec8f7d7a1f01442503957f4d7a2d634@gibson.dropbear.id.au>
+",FALSE,pci bridge,,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+chromium/chromium,c2f544fabac27584b90331bb8e7be8b93e78398a,"2009-07-01  Robert Hogan <robert@roberthogan.net>
+
+        Reviewed by NOBODY.
+        
+        Fix Qt segfault when javascript disabled.
+        If clients call addToJavaScriptWindowObject even though JavascriptEnabled is false
+        webkit will segfault on the assert:
+          ASSERTION FAILED: _rootObject
+          (../../../WebCore/bridge/runtime.cpp:52
+          JSC::Bindings::Instance::Instance(WTF::PassRefPtr<JSC::Bindings::RootObject>))
+        Fix is to ensure JavaScript is enabled when client calls addToJavaScriptWindowObject.
+
+        https://bugs.webkit.org/show_bug.cgi?id=26906
+
+        * Api/qwebframe.cpp:
+        (QWebFrame::addToJavaScriptWindowObject):
+
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@45463 bbb929c8-8fbe-4397-9dbb-9b2b20218538",FALSE,brige file,FALSE,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+cncf/soc,728e31c6dc172382df0b0b7c8d28e8720bac0f30,"Merge pull request #285 from codesome/prometheus
+
+Add Prometheus to community bridge q3-q4",FALSE,community bridge?,FALSE,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+nwjs/chromium.src,c06c58c602d8f2d1dd1a271e30a329c3a797d294,"Switch the Java bridge to use RenderFrame instead of RenderView.
+
+BUG=304341
+
+Review URL: https://codereview.chromium.org/143363012
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@256626 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,java bridge,,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+pfsense/pfsense,376e8deb897f0df3a522ffc7ad0dfc6a9fde7fae,"Set bridgeif for new bridge creation.
+",FALSE,a real bridge,,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+RSS-Bridge/rss-bridge,47dc26c775a2158950cffe085c1781b6e6a71e26,"[NextINpact] Fix subtitle extraction in #LeBrief (#1780)
+
+The bridge was taking another article abstract as subtitle for #LeBrief articles",FALSE,,,in rss bridge,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+lyusupov/SoftRF,2519bf8b4382723e7c2e2237a8442dc9a9ee1ed9,"misc. update of 'bridge' firmware
+",FALSE,bridge firmware,FALSE,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,6fa13640aea7bb0760846981aa2da4245307bd26,"powerpc/eeh: Fix pseries_eeh_configure_bridge()
+
+If a device is hot unplgged during EEH recovery, it's possible for the
+RTAS call to ibm,configure-pe in pseries_eeh_configure() to return
+parameter error (-3), however negative return values are not checked
+for and this leads to an infinite loop.
+
+Fix this by correctly bailing out on negative values.
+
+Signed-off-by: Sam Bobroff <5005bd85686edd02bd9a1854bd2a0bebf4ce34dd@linux.ibm.com>
+Signed-off-by: Michael Ellerman <864f124608374e06e4da1fa5d2e47ed839b95411@ellerman.id.au>
+Reviewed-by: Nathan Lynch <1f34d8d29e2350bf5536b3f62cd29505f7de48ee@linux.ibm.com>
+Link: https://lore.kernel.org/r/1b0a6010a647dc915816e44845b64d72066676a7.1588045502.git.5005bd85686edd02bd9a1854bd2a0bebf4ce34dd@linux.ibm.com
+",TRUE,configure_bridge,FALSE,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+GeoscienceAustralia/Geodesy-Web-Services,4429e32abefc60dc099a793cc149b08a6312d353,"drop bridge table and recreate cors_site_network and cors_site_in_network
+
+
+Former-commit-id: e66a3e061b4843e050189af1907c8adbe431bd9b",FALSE,bridge table,,,18_jan_2021_bridge_3e922c0344679d08b44f908623cc7d956b0bf0d1
+ChromeDevTools/devtools-frontend,1938fac7fc0d2960291476974ecbdb9d23523b00,"Remove String.escapeInvalidUnicodeCharacters
+
+My upstream CL [1] teaches Chromium’s JSON parser that Unicode
+non-characters [2] are representable in JSON. As a result, we no
+longer have to escape non-characters in JSON payloads before sending
+them over the Chrome DevTools Protocol. This allows us to simplify
+`String.escapeInvalidUnicodeCharacters` as follows:
+
+    String.escapeInvalidUnicodeCharacters = function(text) {
+      const reInvalid = /\p{Surrogate}/gu;
+      const result = text.replace(reInvalid, (surrogate) => {
+        const codePoint = surrogate.charCodeAt(0);
+        return `\\u${codePoint.toString(16)}`;
+      });
+      return result;
+    };
+
+The only remaining functionality in
+`String.escapeInvalidUnicodeCharacters` is then to escape lone
+surrogates, which are invalid Unicode code points, invalid in UTF-8,
+and not accepted by Chromium’s JSON parser. Lone surrogates must still
+be escaped in CDP payloads. However, thanks to JavaScript’s
+“well-formed `JSON.stringify`” feature [3], we can now rely on
+`JSON.stringify` to perform this escaping for us.
+
+Since `SessionRouter.prototype.sendMessage` already serializes
+payloads using `JSON.stringify` [4], our JSON payloads are guaranteed
+to never contain unescaped lone surrogates.
+
+Thus, we can now Use The Platform and get rid of the custom escaping
+logic in `String.escapeInvalidUnicodeCharacters` altogether. 🎉
+
+Tests:
+https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/web_tests/http/tests/devtools/runtime/runtime-evaluate-bad-unicode.js;drc=cdfff6b2120e54d1c770ae16d94944ca983afaf3
+
+[1]: https://chromium-review.googlesource.com/c/chromium/src/+/2002813
+[2]: https://unicode.org/faq/private_use.html#nonchar4
+[3]: https://v8.dev/features/well-formed-json-stringify
+[4]: https://source.chromium.org/chromium/_/chromium/devtools/devtools-frontend/+/master:front_end/protocol/InspectorBackend.js;l=398;drc=4b6a267402341bd36948fc0adad68840df61b3ca
+
+Bug: chromium:848823, chromium:1042269, v8:7782
+Cq-Depend: chromium:2002813, chromium:2015635, chromium:2018232, chromium:2018175
+Change-Id: Ia3a6a0f45270fe2d1f49427a00204feef9a434c6
+Reviewed-on: https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2014921
+Commit-Queue: Mathias Bynens <17a2cbc4e33156874a9862b0f530521117e66a3d@chromium.org>
+Reviewed-by: Peter Marshall <6d0eecbeb7fb9d172f49b4b32481d2466fd89429@chromium.org>
+Reviewed-by: Tim van der Lippe <dba8716ee7f8d16236046f74d2167cb94410f6ed@chromium.org>
+",FALSE,prototype component,,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+coreboot/coreboot,27d4266a44a2a39a589145dd234526f94a206eec,"arm64: split cpu.h header
+
+Add a cpu-internal.h for internal prototypes to the
+architecture specific code.
+
+BUG=chrome-os-partner:31761
+BRANCH=None
+TEST=Built and booted.
+
+Change-Id: I12a379f86056a9a2007a7c036d65b5e08e558d0e
+Signed-off-by: Patrick Georgi <bc411205f21846a74924ee7b489c75617ec76078@chromium.org>
+Original-Commit-Id: 5dcd488326f6496d80eb1fe1ff4414ebba1280e9
+Original-Change-Id: I8ab520478954a3b43e8e0831d1883f9a791850aa
+Original-Signed-off-by: Aaron Durbin <af0622ab041e8b0f8e5819838dcc93898196e71f@chromium.org>
+Original-Reviewed-on: https://chromium-review.googlesource.com/216924
+Original-Reviewed-by: Furquan Shaikh <6be5c96c464778f89679b1062a2e0a6af93d2aa5@chromium.org>
+Reviewed-on: http://review.coreboot.org/9041
+Tested-by: build bot (Jenkins)
+Reviewed-by: Stefan Reinauer <b7a34d9d688de5c92c7948a5d8c55e0adeaff0bb@coreboot.org>
+",FALSE,internal prototypes,,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+stinsonga/emacs-mirror,f5588a407c60a6cdff1a6ba7262ba094a5e9ad49,"(foreach_window): Change prototype.
+",TRUE,change prototype,FALSE,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+google/CodeCity,77f6b7ac81ffac908baa2c9feddca44c97f179a4,"Move thread-for-funcall creation from setTimeout to Interpreter.prototype.createThreadForFuncall
+
+(Since we are going to need this in a few other places.)
+",FALSE,prototype componenet,,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+mattstock/binutils-bexkat1,515630c5e5a3b481867b81031930664f8d1d9b77,"	* inferior.h (read_pc_pid, write_pc_pid): Remove.
+	* regcache.h (regcache_read_pc, regcache_write_pc): Add prototypes.
+
+	* regcache.c (read_pc_pid): Remove, replace by ...
+	(regcache_read_pc): ... this function.
+	(write_pc_pid): Remove, replace by ...
+	(regcache_write_pc): ... this function.
+	(read_pc, write_pc): Update.
+
+	* infrun.c (displaced_step_prepare): Replace read_pc_pid and
+	write_pc_pid by regcache_read_pc and regcache_write_pc.
+	(displaced_step_fixup): Likewise.
+	(resume): Likewise.  Use regcache arch instead of current_gdbarch.
+	(prepare_to_proceed): Likewise.
+	(proceed): Likewise.
+	(adjust_pc_after_break): Likewise.
+	(handle_inferior_event): Likewise.
+
+	* linux-nat.c (cancel_breakpoint): Likewise.
+	* linux-thread-db.c (check_event): Likewise.
+	* aix-thread.c (aix_thread_wait): Likewise.
+	* tracepoint.c (trace_dump_command): Likewise.
+",FALSE,add prototypes,,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+paperwm/PaperWM,9be97a5f3639b6f5a58614c521e04c7d2d195e1d,"Minimap prototype
+
+NB: Only one workspace supported
+
+Ref: #33
+",FALSE,mimmap prototypes,FALSE,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+emacs-mirror/emacs,2251a6f2b7e145d7e143f79437c2d673b4f96c4b,"(FRINGE_ID_BITS): New definition for number of
+bits allocated to hold a fringe number.  Increase number of bits
+from 4 to 8 to allow user defined fringe bitmaps.
+(struct glyph_row, struct it): New members left_user_fringe_bitmap,
+left_user_fringe_face_id, right_user_fringe_bitmap,
+right_user_fringe_face_id.
+(enum fringe_bitmap_type, struct fringe_bitmap, fringe_bitmaps):
+Move to new file fringe.c.
+(MAX_FRINGE_BITMAPS): Define here.
+(struct draw_fringe_bitmap_params): New members bits, cursor_p,
+and overlay_p.  Change member which to int.
+(struct redisplay_interface): New members define_fringe_bitmap
+and destroy_fringe_bitmap.
+(valid_fringe_bitmap_id_p): Add prototype.
+(w32_init_fringe, w32_reset_fringes) [WINDOWS_NT]: Add prototypes.
+",FALSE,add prototype,,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+nwjs/chromium.src,1ce377eb27a3bf9c11eba54f22b35d7657cbe28a,"memory-infra: Service implementation
+
+This adds the memory instrumentation service. The service implements
+the Coordinator interface.
+
+Note about thread safety: all interface implementation's methods are
+called from the thread that bound it to the message pipe. So, there is
+no need to switch threads in the implementation. However, we should be
+careful to bind the service on the correct thread, if needed (e.g. if
+calls should be made from the UI thread).
+
+A prototype of the end product: https://codereview.chromium.org/2571823002
+
+BUG=679830
+
+Review-Url: https://codereview.chromium.org/2647773002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#447349}
+",FALSE,link to prototype,,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+metasfresh/metasfresh-webui-api,f6eadae36ffcb8a9103b3cd33a0b372e521dd056,"FRESH-826 #41 prototype dashboard
+",TRUE,prototype dashboard,FALSE,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+chromium/chromium,c4cee0dd06ef2c8edbcf855c9a88177d88699de5,"	* Makefile.am: Pass the -f flag to ln so it doesn't fail when
+	there's already a link there.
+
+	* configure.in: Use gcc3 and g++3 so we always get gcc 3.0, no
+	matter how the system is configured. Besides the fact that gcc
+	3.0 includes more in -Wall, turned on the following additional
+	warnings that were not on before:
+	    -W
+	    -Wbad-function-cast
+	    -Wformat-security
+	    -Wmissing-format-attribute
+	    -Wstrict-prototypes
+	    -Wwrite-strings
+	Also removed the -fno-coalesce-static-vtables flag for C++
+	and removed explicit mention of C++ warnings that are part of
+	-Wall in gcc 3.0 at least.
+
+	* Tests/harness.c: (main): Const string fix.
+	* Tests/kde/kurl-test.cpp: (testURL): Std namespace and const string fix.
+	* Tests/libiftest/IFTestDirectory.c: (IFSetUpTestDirectory): Const string fix.
+	* Tests/libiftest/IFTestDirectory.h: Const string fix.
+
+	* Tests/qt/qarray-test.cpp:
+	* Tests/qt/qbuffer-test.cpp:
+	* Tests/qt/qchar-test.cpp:
+	* Tests/qt/qcstring-test.cpp:
+	* Tests/qt/qdate-test.cpp:
+	* Tests/qt/qdatetime-test.cpp:
+	* Tests/qt/qdict-test.cpp:
+	* Tests/qt/qdir-test.cpp:
+	* Tests/qt/qfile-test.cpp:
+	* Tests/qt/qlist-test.cpp:
+	* Tests/qt/qmap-test.cpp:
+	* Tests/qt/qpoint-test.cpp:
+	* Tests/qt/qptrdict-test.cpp:
+	* Tests/qt/qrect-test.cpp:
+	* Tests/qt/qregexp-test.cpp:
+	* Tests/qt/qsize-test.cpp:
+	* Tests/qt/qsortedlist-test.cpp:
+	* Tests/qt/qstack-test.cpp:
+	* Tests/qt/qstring-test.cpp:
+	* Tests/qt/qstringlist-test.cpp:
+	* Tests/qt/qtime-test.cpp:
+	* Tests/qt/qvaluelist-test.cpp:
+	* Tests/qt/qvector-test.cpp:
+	Add ""using namespace std"" to each test as a simple std namespace fix.
+
+WebFoundation:
+
+	Reviewed by Maciej
+
+	Fixes for compiling with gcc3 and more warnings.
+
+	* WebFoundation.pbproj/project.pbxproj: Turn on gcc3 and the same set of warnings
+	as in the rest of Labyrinth (see top level ChangeLog for details).
+
+	* CacheLoader.subproj/IFURLHandle.m: (-[IFURLHandle percentComplete]):
+	Rearrange code to avoid a cast to (float) that gcc3 didn't like.
+
+	* Database.subproj/IFNDBMDatabase.m: (-[IFNDBMDatabase objectForKey:]):
+	Mark some variables volatile to make gcc3 happy about their values and the
+	use of longjmp. Good catch on the compiler's part.
+
+	* Database.subproj/IFURLFileDatabase.m: Work around bug 2905545 so we can
+	have -W on for all the rest of WebFoundation.
+	(URLFileReaderInit): Mark this as (void) so it's not a non-prototyped function.
+	(-[IFURLFileReader initWithPath:]): Don't assign to self so gcc3 is not unhappy
+	about the use of it with longjmp.
+	(-[IFURLFileDatabase objectForKey:]): Mark some variables volatile to make gcc3
+	happy about their values and the use of longjmp.
+
+	* Misc.subproj/IFNSObjectExtensions.m: (-[NSObject performBooleanSelector:]),
+	(-[NSObject performBooleanSelector:withObject:]): Do a new implementation that
+	does't make the compiler unhappy about type casts.
+
+	* Misc.subproj/IFNSThreadExtensions.m: Work around bug 2905545 so we can
+	have -W on for all the rest of WebFoundation.
+	(InitJoinableThreads): Mark this as (void) so it's not a non-prototyped function.
+
+JavaScriptCore:
+
+	Reviewed by Maciej
+
+	* JavaScriptCore.pbproj/project.pbxproj: Turn on gcc3 and the same set of warnings
+	as in the rest of Labyrinth (see top level ChangeLog for details).
+
+WebCore:
+
+	Fixes for compiling with gcc3 and more warnings.
+
+	* khtml/html/.cvsignore: Add kentities.c; I could have sworn I did this
+	already.
+	* khtml/html/Makefile.am: Remove erroneous duplicate definition of
+	CLEAN_FILES.
+
+	* libwebcore.exp:
+	* libwebcoretests.exp:
+	Rebuilt these lists from scratch. Almost everything in here is different
+	since the C++ name mangling rules changed.
+
+	* khtml/css/cssparser.cpp:
+	* khtml/misc/htmlhashes.cpp:
+	Disable inlining in part of this file as a workaround for Radar 2905890.
+
+	* kwq/KWQApplication.mm: (QDesktopWidget::screenGeometry):
+	Add casts to int needed to make gcc3 happy.
+	* kwq/KWQArrayImpl.mm: Add missing #include of <string.h>.
+
+	* kwq/KWQBitmap.mm:
+	* kwq/KWQFrame.mm:
+	* kwq/KWQLineEdit.mm:
+	Removed some unused copy constructors and assignment operators to avoid
+	warnings in them.
+
+	* kwq/KWQButton.mm: (QButton::setText):
+	* kwq/KWQListBox.mm: (QListBox::~QListBox), (QListBox::clear),
+	(QListBox::setSelectionMode), (QListBox::currentItem), (QListBox::insertItem),
+	(QListBox::setSelected), (QListBox::isSelected), (QListBoxItem::width),
+	(QListBoxItem::height):
+	* kwq/KWQScrollView.mm: (QScrollView::setContentsPos), (QScrollView::addChild),
+	(QScrollView::resizeContents), (QScrollView::viewportToContents),
+	Use local variables to work around Radar 2905835.
+
+	* kwq/KWQCString.mm: (operator<<):
+	* kwq/KWQPoint.mm: (operator<<):
+	* kwq/KWQRect.mm: (operator<<):
+	* kwq/KWQSize.mm: (operator<<):
+	* kwq/qt/qarray.h:
+	* kwq/qt/qcstring.h:
+	* kwq/qt/qdatetime.h:
+	* kwq/qt/qdict.h:
+	* kwq/qt/qlist.h:
+	* kwq/qt/qmap.h:
+	* kwq/qt/qpainter.h:
+	* kwq/qt/qpoint.h:
+	* kwq/qt/qptrdict.h:
+	* kwq/qt/qrect.h:
+	* kwq/qt/qsize.h:
+	* kwq/qt/qstack.h:
+	* kwq/qt/qvaluelist.h:
+	* kwq/qt/qvector.h:
+	Say std::ostream instead of just ostream.
+
+	* kwq/KWQCharsets.mm: Fix a const problem.
+
+	* kwq/KWQDateTime.mm: (QTime::elapsed), (QTime::restart): Use int instead
+	of uint, since these functions try to handle values that are less than 0.
+	(operator<<): Say std::ostream instead of just ostream.
+	* kwq/KWQTextArea.mm: (RangeOfParagraph): Fix an int/uint issue.
+
+	* kwq/KWQFile.mm: (QFile::KWQFilePrivate::KWQFilePrivate),
+	(QFile::KWQFilePrivate::~KWQFilePrivate): Use new/delete instead of
+	malloc/free so we don't get void * warnings.
+
+	* kwq/KWQFontMetrics.mm: (__IFFillStyleWithAttributes),
+	(-[KWQLayoutInfo drawString:atPoint:withFont:color:]),
+	(-[KWQLayoutInfo _initializeCaches]),
+	(_rectForString):
+	* kwq/KWQKURL.mm: (KURL::KWQKURLPrivate::KWQKURLPrivate),
+	(RelativeURLKeyRetainCallBack), (RelativeURLKeyReleaseCallBack),
+	(RelativeURLKeyEqualCallBack), (RelativeURLKeyHashCallBack),
+	(KURL::normalizeURLString), (KURL::normalizeRelativeURLString):
+	* kwq/KWQPainter.mm: (QPainter::save):
+	* kwq/KWQKloader.mm:
+	(-[URLLoadClient IFURLHandle:resourceDidFailLoadingWithResult:]),
+	(-[URLLoadClient IFURLHandle:didRedirectToURL:]):
+	Add type casts where necessary to make the stricter gcc3 happy.
+
+	* kwq/KWQPixmap.mm: (QPixmap::QPixmap): Explicitly initialize the underlying
+	QPaintDevice.
+	(QPixmap::size), (QPixmap::rect): Add type casts where necessary to make
+	the stricter gcc3 happy.
+
+	* kwq/KWQPtrDictImpl.mm: (KWQPtrDictImpl::KWQPtrDictPrivate::KWQPtrDictPrivate):
+	Say std::bad_alloc instead of just bad_alloc.
+	(invokeDeleteFuncOnValue), (KWQPtrDictImpl::clear): Pass a pointer to a function
+	pointer rather than a function pointer to avoid a warning about turning function
+	pointers into void *.
+
+	* kwq/KWQRegion.mm: (QRegion::_initialize), (QRegion::~QRegion): Use new/delete
+	rather than calloc/free so we don't get void * warnings.
+	(QRegion::boundingRect): Add type casts.
+
+	* kwq/KWQString.mm: (QString::fromStringWithEncoding): Add cast.
+	(QString::setNum): use %ld and %lu rather than %D and %U.
+	(QString::fill), (QString::convertToQCString): Add casts.
+
+	* kwq/KWQTextStorage.mm: (-[KWQTextStorage _buildFragmentForString:]):
+	Add a cast to make gcc3 happy.
+
+	* kwq/KWQVariant.mm: Say ""friend class"" instead of ""friend"".
+
+	* kwq/KWQVectorImpl.mm: (KWQVectorImpl::KWQVectorPrivate::KWQVectorPrivate):
+	Say std::bad_alloc instead of just bad_alloc.
+	(KWQVectorImpl::data): Replace the old autorelease trick with a new one that
+	doesn't require mixing malloc with NSData.
+
+	* kwq/KWQView.mm: (-[KWQHTMLView mouseUp:]), (-[KWQHTMLView mouseDown:]):
+	Add casts to make gcc3 happy.
+
+	* kwq/KWQWidget.mm: (QWidget::frameGeometry), (QWidget::mapToGlobal),
+	(QWidget::minimumSizeHint): Add casts to make gcc3 happy. Also another
+	workaround for Radar 2905835.
+
+	* kwq/WCPlugin.mm: (-[WCPlugin load]): Add tons of type casts so we don't have
+	to mix void * with function pointer types.
+
+	* kwq/WCPluginWidget.h:
+	* kwq/WCPluginWidget.mm: (WCIFPluginMakeFunction), (WCIFNullPluginMakeFunction):
+	Change types so we don't have to mix void * with function pointer types.
+	This caught a mistake where WCIFNullPluginMakeFunction was returning the wrong
+	function pointer.
+
+	* kwq/external.h: Add some missing interfaces that the pickier gcc3 needed to see.
+
+	* kwq/kwqdebug.mm: Don't compile the file if xNDEBUG is set. Otherwise we get
+	a warning in here.
+
+	* kwq/npapi.h: Use function pointer types for function pointers and transition
+	vectors so we don't have to mix void * with function pointer types.
+
+	* kwq/npapi.mm: (NPN_GetURLNotify), (NPN_GetURL),
+	(NPN_PostURLNotify), (NPN_PostURL), (NPN_NewStream), (NPN_Write),
+	(NPN_DestroyStream), (NPN_Status), (NPN_GetValue), (NPN_SetValue),
+	(NPN_InvalidateRect), (NPN_InvalidateRegion), (NPN_ForceRedraw):
+	Use local variables to work around Radar 2905835.
+	(functionPointerForTVector), (tVectorForFunctionPointer):
+	Change types around so we don't have to mix void * with function pointer types.
+
+WebKit:
+
+	Fixes for compiling with gcc3 and more warnings.
+
+	* WebKit.pbproj/project.pbxproj: Turn on gcc3 and the same set of warnings
+	as in the rest of Labyrinth (see top level ChangeLog for details).
+
+	* Plugins.subproj/IFPluginView.mm:
+	Avoid warnings about malloc by not using it.
+	(-[IFPluginView initWithFrame:plugin:url:mime:arguments:mode:]): Keep the arguments
+	dictionary around instead of keeping the C format version of it around. Also don't
+	bother keeping the C string form of the MIME type around, and simplify some other
+	stuff in here.
+	(-[IFPluginView dealloc]): Corresponding changes since we keep a different set of things.
+	(-[IFPluginView newStream:mimeType:notifyData:]): Use [mimeType cString].
+	(-[IFPluginView start]): Build the lists of attributes and values in here. Do it using
+	[NSString cString] for simplicity and don't keep the lists around after we're done with
+	them.
+	(-[IFPluginView IFURLHandleResourceDidFinishLoading:data:]): Use [filenameClassic cString].
+
+	* WebView.subproj/IFMainURLHandleClient.mm:
+	(-[IFMainURLHandleClient IFURLHandleResourceDidCancelLoading:]),
+	(-[IFMainURLHandleClient IFURLHandleResourceDidFinishLoading:data:]),
+	(-[IFMainURLHandleClient IFURLHandle:resourceDataDidBecomeAvailable:]),
+	(-[IFMainURLHandleClient IFURLHandle:resourceDidFailLoadingWithResult:]):
+	* WebView.subproj/IFWebDataSourcePrivate.mm: (-[IFWebDataSourcePrivate dealloc]),
+	(-[IFWebDataSource _setLoading:]), (-[IFWebDataSource _setController:]),
+	(-[IFWebDataSource _setLocationChangeHandler:]):
+	* WebView.subproj/IFWebView.mm: (-[IFWebView provisionalDataSourceChanged:]),
+	(-[IFWebView mouseUp:]), (-[IFWebView mouseDown:]):
+	Add type casts required by pickier gcc3.
+
+	* WebView.subproj/IFWebViewPrivate.mm: (-[IFWebViewPrivate dealloc]):
+	Add type cast required by pickier gcc3.
+	(-[IFWebView _stopPlugins]): Use local variable to work around Radar 2905835.
+
+WebBrowser:
+
+	Fixes for compiling with gcc3 and more warnings.
+
+	* WebBrowser.pbproj/project.pbxproj: Turn on gcc3 and the same set of warnings
+	as in the rest of Labyrinth (see top level ChangeLog for details).
+
+	* InternetConfigUtilities.m: (stringValueForICKey), (setStringValue):
+	Some const string fixes.
+	* Preferences.subproj/TextPreferences.m: (-[TextPreferences changeFont:]):
+	Remove a cast that makes gcc3 unhappy.
+	* ___CFA2UC.c: (NSGiantRaise): Const string fix.
+	(gcompg): Old-style function prototype fix.
+	(initialguess): Remove a cast that makes gcc3 unhappy.
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@1045 bbb929c8-8fbe-4397-9dbb-9b2b20218538",FALSE,pfunction prototype fix,,,18_jan_2021_prototype_3e922c0344679d08b44f908623cc7d956b0bf0d1
+perl6/doc,9d78199f0fbee17034ebd988089770ffb0276b74,"Bring Iterator docs up to date
+",FALSE,iterator component,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+brunosmmm/hdltools,8404c9ce17b45907789edbb99729b29129a888a8,"fixed wrong dict iterator
+",FALSE,wrong iterator,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+TileDB-Inc/TileDB,4d6ac794096512db7725a1e605023e19e9f830df,"Optimized cell iterators for the case of variable-lengthed cells.
+",FALSE,iterators,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,3e7b2ec4fe8ef4b05b33db3e84d1b1fbccde250e,"rhashtable: Check for count mismatch while iterating in selftest
+
+Verify whether both the lock and RCU protected iterators see all
+test entries before and after expanding and shrinking has been
+performed. Also verify whether the number of entries in the hashtable
+remains stable during expansion and shrinking.
+
+Signed-off-by: Thomas Graf <17c2d8920621522552b392f72d8fdb4d1e866b44@suug.ch>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",FALSE,iterating,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+rakudo/rakudo,49b2c1303da1812ebc192c57656cef8c3d34043e,"added .fmt method to Iterator.pm so that fmt can take Iterators of any form.
+
+Signed-off-by: Moritz Lenz <2b469823646c02e9f01a7ad5b893ceac76b06bbe@faui2k3.org>
+",FALSE,,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+chromium/chromium,475a0b50b3d12398feccfb330410bedf9d0b49aa,"Revert ""bind-gen: Switch to the new IDL interface implementation""
+
+This reverts commit e1dce34f9e52b908b6dfda35ffda5a2d5de3bfcf.
+
+Reason for revert: Most critically due to https://crbug.com/1112227 but not limited to.
+
+Original change's description:
+> bind-gen: Switch to the new IDL interface implementation
+> 
+> Blink-V8 bindings team has been developing the new improved
+> Web IDL bindings system, and this patch enables the new
+> bindings implementation of Web IDL interfaces at build time.
+> 
+> Note that other IDL definitions (buffer source types,
+> dictionaries, callback functions, etc.) are not affected and
+> the old bindings are still used for them.
+> 
+> The new IDL interface implementation is not 100% compatible
+> with the old one, and we see the following changes/improvement
+> that are visible from author script.
+> 
+> Behavioral changes:
+> - Cross origin attributes become accessor properties.
+> - Indexed/named properties' behaviors change.
+> - Legacy platform objects with indexed properties support
+>   @@iterator property.
+> - Maplike supports size() operation.
+> - [NoInterfaceObject] removes 'constructor' property.
+> - Some of error messages change.
+> For these changes, new behaviors are better conforming to
+> Web IDL specification.
+> 
+> Non-behavioral changes:
+> - Keep-alive-GC optimization is removed.
+> 
+> For performance, there is no major difference in speed perf
+> and -17KB improvement in APK binary size.
+> 
+> Pinpoint results
+> https://pinpoint-dot-chromeperf.appspot.com/job/1230bdd8920000
+> https://pinpoint-dot-chromeperf.appspot.com/job/14b5b5d0920000
+> https://pinpoint-dot-chromeperf.appspot.com/job/12ca6424920000
+> https://pinpoint-dot-chromeperf.appspot.com/job/14e3aa48920000
+> 
+> Bug: 839389
+> Change-Id: I9de8de3cc9e37b4ee46333c9270fe49bbdd69534
+> Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2081633
+> Commit-Queue: Yuki Shiino <e3bb199ef8a61005bf84cdc86ad9ebf7e094973a@chromium.org>
+> Reviewed-by: Kent Tamura <tkent@chromium.org>
+> Reviewed-by: Kentaro Hara <ef1728e9a9ee178abcf3af44b8924f4f0a6f4047@chromium.org>
+> Reviewed-by: Hitoshi Yoshida <fde1f16ff7d3172e2d2a873a48e9dccaaa611add@chromium.org>
+> Cr-Commit-Position: refs/heads/master@{#793165}
+
+TBR=fde1f16ff7d3172e2d2a873a48e9dccaaa611add@chromium.org,e3bb199ef8a61005bf84cdc86ad9ebf7e094973a@chromium.org,ef1728e9a9ee178abcf3af44b8924f4f0a6f4047@chromium.org,tkent@chromium.org
+
+# Not skipping CQ checks because original CL landed > 1 day ago.
+
+Bug: 839389
+Change-Id: I797f9cde05ccd0132ff0fbe1a970634f8d152d28
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2335214
+Reviewed-by: Yuki Shiino <e3bb199ef8a61005bf84cdc86ad9ebf7e094973a@chromium.org>
+Reviewed-by: Kentaro Hara <ef1728e9a9ee178abcf3af44b8924f4f0a6f4047@chromium.org>
+Reviewed-by: Hitoshi Yoshida <fde1f16ff7d3172e2d2a873a48e9dccaaa611add@chromium.org>
+Commit-Queue: Yuki Shiino <e3bb199ef8a61005bf84cdc86ad9ebf7e094973a@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#794147}
+",FALSE,iterator property,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+apereo/cas,2787168ac47b3b593caa8d00bdddd1ece4fd4146,"use stream instead of iterator to simplify logic a bit
+",TRUE,change implies abstraction?,FALSE,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+zerothi/sisl,5b5c89f8d8c20f875b5079231ce37de609dba116,"bug: fixed map in python3 (return iterator)
+
+Signed-off-by: Nick Papior <81a73bca3d342ffee33d7cf845fdbf77b6553831@gmail.com>
+",FALSE,iterator component,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+zulip/zulip,45d3be54495415440980d74d507b7106aaaf05c5,"dict, lazy_set: Return an iterator from keys method.
+
+Signed-off-by: Anders Kaseorg <dfdb7392591db597bc41cf266a9c3bc12a2706e5@zulipchat.com>
+",FALSE,iterator component,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+qgis/QGIS,72342557c3ebfaee17921659726a2a8e18d347fb,"use constant for raster iterator default (followup baa5d90, f924578)
+",FALSE,iterator component,,,18_jan_2021_iterator_3e922c0344679d08b44f908623cc7d956b0bf0d1
+openstack/watcher,05055b7064b1526ab35a8c156a40ef85bef8aecc,"Merge ""Fix audit creation with named goal and strategy""",,,FALSE,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+hazelcast/hazelcast,9e6f848fd161dbafc371fe48959a8ea9d9ed9100,"unittest for eviction policy and strategy
+",,,FALSE,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+wcmc-its/ReCiter,c2c2f7c1392c665ffbfe802f04e2f80afda70cd8,fix with strict strategy call,,,FALSE,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+locationtech/geomesa,78ad03b6f5f96b632d17c13e94687e3378cec825,"GEOMESA-1977 Support 'STRATEGY' for 'QUERY_INDEX' view params (#1653)
+
+Signed-off-by: Emilio Lahr-Vivaz <f5dc3247cbfe1e9516025b4ccf681397733b2160@ccri.com>",,,FALSE,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+dangdangdotcom/elastic-job,80641c6930a274f4694c24f248364afb9344cd38,"refactor sharding strategy for lite core
+",TRUE,sharding strategy,,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+bundler/bundler,242e5d55dd69185dde5797876eb318ed23728b7d,"Merge #7120
+
+7120: Fix spec calling incorrect helper r=deivid-rodriguez a=deivid-rodriguez
+
+
+
+Thanks so much for the contribution!
+To make reviewing this PR a bit easier, please fill out answers to the following questions.
+
+### What was the end-user problem that led to this PR?
+
+The problem was the subprocess spawed by one spec was crashing, but that was not making the spec fail.
+
+### What was your diagnosis of the problem?
+
+My diagnosis was that since the spec was checking for a failure status of the subprocess, that was not specific enough to detect the particular bug in this spec (it was calling `clean_system`, removed from bundler 3, instead of `unbundled_system`).
+
+### What is your fix for the problem, implemented in this PR?
+
+My fix is to restore the previous strategy for these specs, namely, check for a more specific status than 0
+or 1.
+
+Co-authored-by: David Rodríguez <96558bf9378c437d3852fad4fa4b4bd63aeb6eda@riseup.net>
+",FALSE,previous strategy,,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+neo4j/neo4j-java-driver,4357602b01d6104ac63db74d6de2f417deb30261,"Added least connected load balancing strategy
+
+This replaces the existing round-robin. It gives us better performance
+with clusters composed of different machine capacities.
+Lease connected load balancing strategy selects start index in
+round-robin fashion to avoid always selecting same machine when cluster
+does not have any running transactions or
+all machines have same number of active connections.
+",FALSE,load balancing stategy,,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+droolsjbpm/jbpm,0b24df471e32b354e643358b6e45e32c6d5a9c69,"JBPM-4553 - Variable persistence strategy is invoked too many times
+",TRUE,strategy is invoked,,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+ory-am/go-iam,7c4fd7d1c15a1c38720481be6a4f38fd5f4708e3,"oauth2: Forces UTC in consent strategy (#775)
+
+This resolves an issue when different timezones are used between systems
+by enforcing UTC everywhere.
+
+Closes #679",,,FALSE,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+cucumber/cucumber-rails,7aa9527b95e254800dd6d8e0e5c3ff69cc18ad9e,"DatabaseCleaner::Base#strategy no longer raises an exception
+",TRUE,database strategy,,,18_jan_2021_strategy_3e922c0344679d08b44f908623cc7d956b0bf0d1
+chromium/chromium,09e26aa4e6da8e98147e0c00b30c2ac3b36139e6,"content: Assume that there is a ContentMainDelegate.
+
+It looks like every client of this code is passing in a delegate,
+so we can simplify it a little by removing the if checks.
+
+Change-Id: Ie32edc629117d9c204482d518f13c7beb5bf1cf7
+Reviewed-on: https://chromium-review.googlesource.com/1106801
+Reviewed-by: John Abd-El-Malek <da3dd5c2657fecad769c041097dbd8ecd725687d@chromium.org>
+Commit-Queue: Peter Collingbourne <0a9c5350547d97e930a976072b24aa4bbddb3981@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#568698}",TRUE,delegate use,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+nwjs/chromium.src,c45944c33233a04614dca6eeed41f75e75a943be,"Generate Web Notification Ids in the //content layer
+
+Today, Web Notifications get a random Id assigned to them by the delegate
+used with the message_center::Notification object. This has a number of
+implications:
+
+  (1) We don't get super smooth ""update"" transitions for message center
+      notifications upon replacing a notification.
+  (2) We continue to rely on the delegates associated with Notification
+      objects, which in themselves are incompatible with notifications
+      that can outlive the process they were created by.
+  (3) It's not possible for the //content layer, that has knowledge of the
+      notifications that *should* be showing, to close them when certain
+      events occur (for instance, the Service Worker unregistering). That
+      leads to unresponsive notifications.
+
+This patch makes the NotificationIdGenerator responsible for creating the
+notification Ids, giving us a clear path towards solving these issues. In
+addition, it further isolates the concept of persistent notification Ids,
+reducing the number of Ids readers of this code have to keep in mind.
+
+The NotificationDatabase's keying scheme has been changed to refer to the
+generated Id as opposed to the ever-incrementing persistent notification
+ID. This avoids needing separate association keys and removes a DELETE
+operation prior to writing data for a potentially replaced notification.
+
+TBR=mkwst (type change in /web/)
+BUG=485985, 439950
+
+Review-Url: https://codereview.chromium.org/2300093002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#418241}
+",TRUE,assigned by the delegate,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+chromium/chromium,c527ac73268c6f603dfa6aa41ee9a0c3d79d5095,"If possible, use the PathService instead of the --user-data-dir flag directly
+
+Some classes still using it directly are:
+- cloud_print_proxy_process_browsertest.cc (it's not a browser test so it doesn't
+call ChromeMainDelegate::PreSandboxStartup(), which sets up the PathService
+to know about the user-data-dir
+
+- in_process_browser_test.cc, which needs to set up the user-data-dir directory
+before PreSandboxStartup() is called
+
+- diagnostics_model and diagnostics_controller, which are used in
+BasicStartupComplete(), which is called before PreSandboxStartup() where the
+PathService is set up
+
+- shell_integration_win.cc which has a function that's used in unit tests, which
+don't call PreSandboxStartup()
+
+- chrome/browser/shell_integration.cc is used differently on linux than on other
+platforms, and on the former a desktop app shortcut uses a different command line
+that that of Chrome's
+
+- cloud_print/service/*, since it seems to be its own thing, and have a separate
+user_data_dir
+
+BUG=464616
+
+Review URL: https://codereview.chromium.org/1010923002
+
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#322697}
+",FALSE,delegate componenet,FALSE,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+TomHarte/CLK,d668879ba6a3a5ac6b7c0baedb2393ce3463c42a,"Started trying to wade back to passing tests. Working on the new timing tests first, and focussing on getting the Objective-C test machine to compile bus operations into machine cycles, which means indicating phase to all-RAM delegates.
+",TRUE,delegates,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+dotnet/roslyn,6ee2749c804d6a24457fef7d508adf999625776b,"Fix UnmanagedCallingConventions test reliability
+
+The test needs the `CombineStrings` instane to be alive through the
+duration of the function pointer call. The `GC.KeepAlive` call though
+was on the returned `IntPtr`. That is essentially a no-op cause it just
+boxes to `object`. It doesn't actaully track the underlying `delegate`
+instance.
+
+Changed the code to track the `delegate` and push the `KeepAlive` after
+the function pointer invocation.
+
+closes #48641
+",TRUE,delegate instance,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+graalvm/fastr,afb451c3704ee5a01e0e98c35e16af2e8bcb964e,"Renamed new delegate connection classes.
+",TRUE,dalagate classes,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+apple/swift-corelibs-foundation,a0c62ac8cd5b03a8ff012302874474fff5164ce8,"Merge pull request #2686 from compnerd/delegating-muscle
+
+TimeZone: delegate to ICU on Windows",TRUE,delegate,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+mattstock/binutils-bexkat1,026a91747567565bf2956fae98fed6a958151aab,"Fix PR gdb/19828: gdb -p <process from a container>: internal error
+
+When GDB attaches to a process, it looks at the /proc/PID/task/ dir
+for all clone threads of that process, and attaches to each of them.
+
+Usually, if there is more than one clone thread, it means the program
+is multi threaded and linked with pthreads.  Thus when GDB soon after
+attaching finds and loads a libthread_db matching the process, it'll
+add a thread to the thread list for each of the initially found
+lower-level LWPs.
+
+If, however, GDB fails to find/load a matching libthread_db, nothing
+is adding the LWPs to the thread list.  And because of that, ""detach""
+hits an internal error:
+
+  (gdb) PASS: gdb.threads/clone-attach-detach.exp: fg attach 1: attach
+  info threads
+    Id   Target Id         Frame
+  * 1    LWP 6891 ""clone-attach-de"" 0x00007f87e5fd0790 in __nanosleep_nocancel () at ../sysdeps/unix/syscall-template.S:84
+  (gdb) FAIL: gdb.threads/clone-attach-detach.exp: fg attach 1: info threads shows two LWPs
+  detach
+  .../src/gdb/thread.c:1010: internal-error: is_executing: Assertion `tp' failed.
+  A problem internal to GDB has been detected,
+  further debugging may prove unreliable.
+  Quit this debugging session? (y or n)
+  FAIL: gdb.threads/clone-attach-detach.exp: fg attach 1: detach (GDB internal error)
+
+From here:
+
+  ...
+  #8  0x00000000007ba7cc in internal_error (file=0x98ea68 "".../src/gdb/thread.c"", line=1010, fmt=0x98ea30 ""%s: Assertion `%s' failed."")
+      at .../src/gdb/common/errors.c:55
+  #9  0x000000000064bb83 in is_executing (ptid=...) at .../src/gdb/thread.c:1010
+  #10 0x00000000004c23bb in get_pending_status (lp=0x12c5cc0, status=0x7fffffffdc0c) at .../src/gdb/linux-nat.c:1235
+  #11 0x00000000004c2738 in detach_callback (lp=0x12c5cc0, data=0x0) at .../src/gdb/linux-nat.c:1317
+  #12 0x00000000004c1a2a in iterate_over_lwps (filter=..., callback=0x4c2599 <detach_callback>, data=0x0) at .../src/gdb/linux-nat.c:899
+  #13 0x00000000004c295c in linux_nat_detach (ops=0xe7bd30, args=0x0, from_tty=1) at .../src/gdb/linux-nat.c:1358
+  #14 0x000000000068284d in delegate_detach (self=0xe7bd30, arg1=0x0, arg2=1) at .../src/gdb/target-delegates.c:34
+  #15 0x0000000000694141 in target_detach (args=0x0, from_tty=1) at .../src/gdb/target.c:2241
+  #16 0x0000000000630582 in detach_command (args=0x0, from_tty=1) at .../src/gdb/infcmd.c:2975
+  ...
+
+Tested on x86-64 Fedora 23.  Also confirmed the test passes against
+gdbserver with ""maint set target-non-stop"".
+
+gdb/ChangeLog:
+2016-05-24  Pedro Alves  <palves@redhat.com>
+
+	PR gdb/19828
+	* linux-nat.c (attach_proc_task_lwp_callback): Mark the lwp
+	resumed, and add the thread to GDB's thread list.
+
+testsuite/ChangeLog:
+2016-05-24  Pedro Alves  <palves@redhat.com>
+
+	PR gdb/19828
+	* gdb.threads/clone-attach-detach.c: New file.
+	* gdb.threads/clone-attach-detach.exp: New file.",FALSE,dalagete file,FALSE,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+triplea-game/triplea,730464db878c09f8a9de580cdbc1f1e4d9980574,"Add null check for delegate (#3353)
+
+",TRUE,delegate object,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+dimagi/commcare-android,fb7a7bcd8c6549fb78e4bb93be6e90190eedd897,"delegates item set changes to remoteQuerySessionManager.refreshItemSetChoices
+",TRUE,delegates,,,18_jan_2021_delegat_3e922c0344679d08b44f908623cc7d956b0bf0d1
+apache/spark,5f894d23a54ea99f75f8b722e111e5270f7f80cf,"[SPARK-18760][SQL] Consistent format specification for FileFormats
+
+## What changes were proposed in this pull request?
+This patch fixes the format specification in explain for file sources (Parquet and Text formats are the only two that are different from the rest):
+
+Before:
+```
+scala> spark.read.text(""test.text"").explain()
+== Physical Plan ==
+*FileScan text [value#15] Batched: false, Format: org.apache.spark.sql.execution.datasources.text.TextFileFormatxyz, Location: InMemoryFileIndex[file:/scratch/rxin/spark/test.text], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<value:string>
+```
+
+After:
+```
+scala> spark.read.text(""test.text"").explain()
+== Physical Plan ==
+*FileScan text [value#15] Batched: false, Format: Text, Location: InMemoryFileIndex[file:/scratch/rxin/spark/test.text], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<value:string>
+```
+
+Also closes #14680.
+
+## How was this patch tested?
+Verified in spark-shell.
+
+Author: Reynold Xin <rxin@databricks.com>
+
+Closes #16187 from rxin/SPARK-18760.
+",flase,specification for file format,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,c20f36534666e37858a14e591114d93cc1be0d34,"iommu/amd: Fix the configuration of GCR3 table root pointer
+
+The SPA of the GCR3 table root pointer[51:31] masks 20 bits. However,
+this requires 21 bits (Please see the AMD IOMMU specification).
+This leads to the potential failure when the bit 51 of SPA of
+the GCR3 table root pointer is 1'.
+
+Signed-off-by: Adrian Huang <55635c158addea7fe1368df21643b7a5485f906c@lenovo.com>
+Fixes: 52815b75682e2 (""iommu/amd: Add support for IOMMUv2 domain mode"")
+Signed-off-by: Joerg Roedel <61aff96566804ea1da8a65de5bcc892ce07caceb@suse.de>
+",FALSE,see specification,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+KhronosGroup/WebGL,41244a31aae55e06ce71be7b53c7207f82d389e7,"Improve and expand getExtension test
+
+Specification reads ""getExtension Returns an object if, and only if, name
+is an ASCII case-insensitive match [HTML] for one of the names returned
+from getSupportedExtensions; otherwise, returns null."" Chrome currently
+doesn't behave this way, but rather has opted to not to have both
+unprefixed and prefixed versions of the same extension in the list
+returned by getSupportedExtensions. Test the spec-compliant behavior.
+
+Also added minor formatting fixes and made the test deterministic.
+",FALSE,specification reads,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+google/data-transfer-project,fdf93a93febec97f4fb7e21d0244eb85ca9819c7,"Restore smugmug to functionality of v0.3.5 (#758)
+
+* Revert ""Remove NiceName specification, revert other encoding change (#753)""
+
+This reverts commit 1c1dfd05dd98cdb47c80632d19936be191e29d7c.
+
+* Revert ""Encode smugmug payload values (#752)""
+
+This reverts commit 760af62bc9e838f58923cc0e15918a6a47a66980.
+",FALSE,revert remove specification,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+dart-lang/sdk,8c4909aa8f001847ff1c21131bbfada1f9c0c2be,"[vm/nnbd] Mark static fields in opted-in libraries as late
+
+According to the NNBD feature specification, ""a toplevel or static
+variable with an initializer is evaluated as if it was marked late"".
+This change actually marks all static fields in opted-in libraries
+as late, in order to make sure that the rest of the VM handles
+such fields uniformly as late.
+
+Without this change implicit getters for such fields were generated
+as late, but type propagation didn't treat these fields as nullable,
+so field initialization checks were removed if field has a non-nullable
+type.
+
+Change-Id: I95bc096fb1d304b112369428dbb29d346964383f
+Reviewed-on: https://dart-review.googlesource.com/c/sdk/+/140767
+Commit-Queue: Alexander Markov <239e774fd29abc1267878f57afe1a8a03e0ca887@google.com>
+Reviewed-by: Régis Crelier <c2bf536a10d9f2530c38e4e8da517718be8c39ce@google.com>
+Reviewed-by: Liam Appelbe <78c2029e58e395825ba7228e218c841bb436a9e9@google.com>
+",FALSE,feature specification,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+apache/logging-log4j2,43903840c081e58ef58f611d94cd6aa623ac13e7,"Redundant specification of type arguments (Generics).
+",FALSE,redundant specification,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+tprrt/linux-stable,e979121b1b1556e184492e6fc149bbe188fc83e6,"perf/x86/intel: Implement cross-HT corruption bug workaround
+
+This patch implements a software workaround for a HW erratum
+on Intel SandyBridge, IvyBridge and Haswell processors
+with Hyperthreading enabled. The errata are documented for
+each processor in their respective specification update
+documents:
+
+  - SandyBridge: BJ122
+  - IvyBridge: BV98
+  - Haswell: HSD29
+
+The bug causes silent counter corruption across hyperthreads only
+when measuring certain memory events (0xd0, 0xd1, 0xd2, 0xd3).
+Counters measuring those events may leak counts to the sibling
+counter. For instance, counter 0, thread 0 measuring event 0xd0,
+may leak to counter 0, thread 1, regardless of the event measured
+there. The size of the leak is not predictible. It all depends on
+the workload and the state of each sibling hyper-thread. The
+corrupting events do undercount as a consequence of the leak. The
+leak is compensated automatically only when the sibling counter measures
+the exact same corrupting event AND the workload is on the two threads
+is the same. Given, there is no way to guarantee this, a work-around
+is necessary. Furthermore, there is a serious problem if the leaked count
+is added to a low-occurrence event. In that case the corruption on
+the low occurrence event can be very large, e.g., orders of magnitude.
+
+There is no HW or FW workaround for this problem.
+
+The bug is very easy to reproduce on a loaded system.
+Here is an example on a Haswell client, where CPU0, CPU4
+are siblings. We load the CPUs with a simple triad app
+streaming large floating-point vector. We use 0x81d0
+corrupting event (MEM_UOPS_RETIRED:ALL_LOADS) and
+0x20cc (ROB_MISC_EVENTS:LBR_INSERTS). Given we are not
+using the LBR, the 0x20cc event should be zero.
+
+  $ taskset -c 0 triad &
+  $ taskset -c 4 triad &
+  $ perf stat -a -C 0 -e r81d0 sleep 100 &
+  $ perf stat -a -C 4 -r20cc sleep 10
+  Performance counter stats for 'system wide':
+        139 277 291      r20cc
+       10,000969126 seconds time elapsed
+
+In this example, 0x81d0 and r20cc ar eusing sinling counters
+on CPU0 and CPU4. 0x81d0 leaks into 0x20cc and corrupts it
+from 0 to 139 millions occurrences.
+
+This patch provides a software workaround to this problem by modifying the
+way events are scheduled onto counters by the kernel. The patch forces
+cross-thread mutual exclusion between counters in case a corrupting event
+is measured by one of the hyper-threads. If thread 0, counter 0 is measuring
+event 0xd0, then nothing can be measured on counter 0, thread 1. If no corrupting
+event is measured on any hyper-thread, event scheduling proceeds as before.
+
+The same example run with the workaround enabled, yield the correct answer:
+
+  $ taskset -c 0 triad &
+  $ taskset -c 4 triad &
+  $ perf stat -a -C 0 -e r81d0 sleep 100 &
+  $ perf stat -a -C 4 -r20cc sleep 10
+  Performance counter stats for 'system wide':
+        0 r20cc
+       10,000969126 seconds time elapsed
+
+The patch does provide correctness for all non-corrupting events. It does not
+""repatriate"" the leaked counts back to the leaking counter. This is planned
+for a second patch series. This patch series makes this repatriation more
+easy by guaranteeing the sibling counter is not measuring any useful event.
+
+The patch introduces dynamic constraints for events. That means that events which
+did not have constraints, i.e., could be measured on any counters, may now be
+constrained to a subset of the counters depending on what is going on the sibling
+thread. The algorithm is similar to a cache coherency protocol. We call it XSU
+in reference to Exclusive, Shared, Unused, the 3 possible states of a PMU
+counter.
+
+As a consequence of the workaround, users may see an increased amount of event
+multiplexing, even in situtations where there are fewer events than counters
+measured on a CPU.
+
+Patch has been tested on all three impacted processors. Note that when
+HT is off, there is no corruption. However, the workaround is still enabled,
+yet not costing too much. Adding a dynamic detection of HT on turned out to
+be complex are requiring too much to code to be justified.
+
+This patch addresses the issue when PEBS is not used. A subsequent patch
+fixes the problem when PEBS is used.
+
+Signed-off-by: Maria Dimakopoulou <28f3c2dc96ec396307e1aa62407636f933914c5f@gmail.com>
+[spinlock_t -> raw_spinlock_t]
+Signed-off-by: Peter Zijlstra (Intel) <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>
+Reviewed-by: Stephane Eranian <f199ae9781930a5b94b284ca2f471140752002a7@google.com>
+Cc: 0691a664b24b6f15b20cd5aee64b72271db08be1@alien8.de
+Cc: 2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com
+Cc: 6e4ed0645dbf05e706dc43d69b381839dca8944b@intel.com
+Link: http://lkml.kernel.org/r/1416251225-17721-7-git-send-email-f199ae9781930a5b94b284ca2f471140752002a7@google.com
+Signed-off-by: Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@kernel.org>
+",FALSE,specification documents,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+STS-Rosario/carpoolear_backend,fed04563ab917add238d5680a16e2489717bfd48,"Migrations changes (#30)
+
+* Start coding on readme.md
+
+* Device Api
+
+* Missing files
+
+* activate user route bug fixed
+
+* Devices Api and  turn off notifications
+
+* Trip and User transformer
+
+* Send Message Notification
+
+* Renaming method removeUsertFromConversation
+
+* Apply fixes from StyleCI
+
+* Removing comments
+
+* Fixing problem in download static image
+
+* Missing use namespace
+
+* TripTrasformer on created and updated
+
+* Apply fixes from StyleCI
+
+* Trip Transformer for MyTrips
+
+* fixing Trip test
+
+* Fix and Seeder
+
+* Apply fixes from StyleCI
+
+* Missing file
+
+* page_size and page_number to comversations
+
+* User list friends
+
+* Apply fixes from StyleCI
+
+* fixing bugs
+
+* User fild description problems
+
+* UserTransforer apply
+
+* Test fixing
+
+* Cars fixid and timezone app
+
+* Changing responses methods
+
+* Apply fixes from StyleCI
+
+* Last connection user
+
+* Apply fixes from StyleCI
+
+* Search user for conversations
+
+* MessagesTransformer
+
+* Conversations changes
+
+* New unread messages api
+
+* who read the messages
+
+* Apply fixes from StyleCI
+
+* Addapting test to new specification
+
+* Apply fixes from StyleCI
+
+* Social change
+
+* Routing
+
+* Changes on passenger cancel
+
+* Apply fixes from StyleCI
+
+* fixing test
+
+* Notifications
+
+* fixing error
+
+* fixing error
+
+* Apply fixes from StyleCI
+
+* Ratings
+
+* Apply fixes from StyleCI
+
+* Rating methods
+
+* Can get rate from other users
+
+* Push notifications
+
+* Apply fixes from StyleCI
+
+* Update device
+
+* Rating things
+
+* Testing bugfix
+
+* Apply fixes from StyleCI
+
+* Prevent inecesary data send
+
+* turn off htmlentities
+
+* Fixing things
+
+* Apply fixes from StyleCI
+
+* Cambios varios
+
+* migrations
+
+* Migrations
+
+* Remove substring
+
+* Changes testing migrations DBs
+
+* Remove log create rates
+",TRUE,test to specification,FALSE,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+TestLinkOpenSourceTRMS/testlink-code,b52e002da869291fbc4f17588c2d1df395cf6c15,BUGID 4275 - Many Requirements are in the specification document twice,FALSE,specification document,,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+ElektraInitiative/libelektra,45613f4eb541cd741df527401bdd7cf81eb62622,"Merge branch 'master' into global_test
+
+Conflicts:
+	src/liberror/specification
+	src/plugins/list/list.c
+",FALSE,file,FALSE,,18_jan_2021_specification_3e922c0344679d08b44f908623cc7d956b0bf0d1
+streamsets/datacollector,0ea43d9a9921fe76f7164091acba2ab45dd4eb78,"SDC-7389: Service: Add capability to extract ServiceDef
+
+This patch adds structure needed to extract ServiceDef interface and
+convert it into ServiceDefinition in a similar manner as we're doing for
+stages, lineage publishers and credentials.
+
+Change-Id: I54fa093274c25682ff9859d46e953cc4d4e88551
+Reviewed-on: https://review.streamsets.net/10550
+Tested-by: StreamSets CI <809627f37325a679986bd660c7713476a56d59cd@streamsets.com>
+Reviewed-by: Santhosh Kumar <0806b0927a65802677e1bc58a740a42f957953d7@streamsets.com>
+",TRUE,extract interface,,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+poldracklab/niworkflows,7b365ade05a9302bd80d179d45e90f99b65c7198,"Merge pull request #442 from oesteban/hotfix/multimodalmerge
+
+FIX: ``IntraModalMerge`` - Undefined input name used in ``_run_interface``",FALSE,run_interface,FALSE,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+umple/umple,b0ac1fb1c72325f6979b8b3ef559fd594dfb390d,"-Fixed recursive inheritance problem for interfaces (issue 992).
+-Added tests to verify correct 992 fix
+",TRUE,interfaces,,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+FStarLang/FStar,cec326db3bfa0a23326541a36e05f54061716cae,"renaming, documenting interface etc.
+",TRUE,renaming inerface,,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+gemrb/gemrb,89801b2b93ee0aff1af25e2b36f18c47d492272d,"tablemgr interface
+
+svn-id: r133
+",,,FALSE,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+lfos/calcurse,65963f96e8fd1c43ec1b82dda8e6a7ed51b87794,"Document new options
+
+Document the query and grep modes, as well as the new filter interface,
+in the man page and in the user manual.
+
+Signed-off-by: Lukas Fleischer <af90e31281d8305af43dc616c5aaca3c7165f8a7@cryptocrack.de>
+",FALSE,filter interface,,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+XoopsModules25x/smallworld,09a69531319a8614bf35c2eb5aac3a3eff1338e7,"fix tpl reference from html to tpl
+
+* switch from global to $GLOBALS
+* use Constants interface constants
+* update phpDoc comments",TRUE,interface constants,FALSE,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+tprrt/linux-stable,0b932cccbdc09a72aa370456a59b40ecd6b10baf,"xfs: Convert remaining cmn_err() callers to new API
+
+Once converted, kill the remainder of the cmn_err() interface.
+
+Signed-off-by: Dave Chinner <4d9e23a041ac966f5316a7481300d4ae12e806fe@redhat.com>
+Reviewed-by: Alex Elder <f556392d917047d964350b9c68912016c96d5e94@sgi.com>
+Reviewed-by: Christoph Hellwig <923f7720577207a44b32e59bbfbea59d27f1ae8e@lst.de>
+",TRUE,kill interface,,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+JetBrains/intellij-community,7dd521f619fbdc355b3d0f500ab87e36c0bb41de,"[context formatting] extracted interface
+",TRUE,extracted interface,,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+richardbeare/ITK,a1763524fff0533f9bd8ca56732124486ad1df76,"ENH: ndim, shape, and dtype attributes for itk.Image
+
+This provide the same values when converted to a np.ndarray with
+itk.array_view_from_image. They are used to identify data types that
+provide a NumPy array-like interface.
+",TRUE,numpy like interface,,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+gphoto/libgphoto2,f8cf4f1049f719ecd8625408e013d9516b478e0b,"Increase libgphoto2_port age, because we have added these two functions:
+
+   gp_port_usb_msg_interface_read()
+   gp_port_usb_msg_interface_write()
+
+
+git-svn-id: 40dd595c6684d839db675001a64203a1457e7319@8061 67ed7778-7388-44ab-90cf-0a291f65f57c
+",,interface functions,FALSE,,18_jan_2021_interface_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+tudelft3d/3dfier,bea774ce1200139b850c30651bca42e03deef683,"exploiting spatial coherence = ~3 times faster for p-in-poly
+",,exploiting coherence,FALSE,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+chromium/chromium,643f77a80eff6a5dfd8ddee266f62e5d140fed78,"Fix heap overflow in safe_browsing::dmg::HFSBTreeIterator::Next().
+
+The code was not properly checking that the length of the key string
+contained within the buffer. The string uses UTF-16 (two-byte) units
+but was treating the length as single-byte units. This switches the
+code to use the size-checked GetLeafData<T> wrapper.
+
+Bug: 783914
+Change-Id: I4f9207532181656e4865eb4c397cae5745b5785a
+Reviewed-on: https://chromium-review.googlesource.com/767408
+Reviewed-by: Jialiu Lin <f411e6de9f0970a09760d237afc2de91cc6dd1c0@chromium.org>
+Commit-Queue: Robert Sesek <f55ad94e336f3a28322d0a25d280221ea9daf7a3@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#516109}",TRUE,use wrapper,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+DFEAGILEDEVOPS/MTC,14e3dfbe71eb374aba23d990be437056f7d4667a,"feature/36759-check-notifier (#1405)
+
+* skeleton function
+
+* function and spec
+
+* remove v1 attribute
+
+* add interface for sql service
+
+* implement notification shell
+
+* implement data service
+
+* lint fix
+
+* remove output binding
+
+* wire up the notification from the check marker
+
+* dev script
+
+* fix tests
+
+* singleton connection pool service
+
+* lint fix
+
+* extract services to relevant files
+
+* add pool closure functionality for integration tests
+
+* lint and import fixes
+
+* integration test for transactional sql
+
+* finish transaction integration tests
+
+* add pupil table to check complete update.  switch to integration test table for integration tests
+
+* remove async await, unnecessary
+
+* log issue
+",TRUE,add interface,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+google/llvm-propeller,a6391ae52bc9f3142f8c612506842fe1ee5c9feb,"[clang-tidy] misc-use-after-move: Fix failing assertion
+
+Summary:
+I've added a test case that (without the fix) triggers the assertion,
+which happens when a move happens in an implicitly called conversion
+operator.
+
+Reviewers: alexfh
+
+Reviewed By: alexfh
+
+Subscribers: JDevlieghere, cfe-commits
+
+Differential Revision: https://reviews.llvm.org/D30569
+
+llvm-svn: 297004
+",FALSE,subscribers,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+nabeelio/phpvms,709aec83e2c115b1506ca4102277ad925ea05165,"Add multiplier to factory #134
+",TRUE,factory,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+dart-lang/sdk,e2ce88dfcca32b7f59807df614e0afa41fe585c1,"Add startFileOffset on procedures et al, enable VMs GetSource
+
+Prior to this change we only had fileOffset which points to the name.
+This CL adds a field - startFileOffset - that points to the start
+(e.g. 'static', 'factory', the return type or any presiding annotation
+(including '@')), as well as fixing `Function::GetSource` in the VM to
+fix a crash when using mirrors to ask for the source of a function or
+constructor.
+
+The field is added to procedures, constructors and classes.
+The latter changes the location of classes with annotations to be
+the position of the annotation. This is on-par with --no-preview-dart-2.
+The change in regards to procedures and constructors mean, that both
+the location and the source (from .location and .source on a
+MethodMirror) will change to include any annotations. This is a
+different behavior than --no-preview-dart-2.
+
+Closes #33271.
+
+Change-Id: I90f1232c5ec2d01e60e0bab070d44c37232b2730
+Reviewed-on: https://dart-review.googlesource.com/60560
+Commit-Queue: Jens Johansen <05223a3c6bdf76af6f84755eae231abeebcf4530@google.com>
+Reviewed-by: Kevin Millikin <a6737c91ef81c790d8ad0ae8762bd5b2332a6e42@google.com>
+",FALSE,factory',,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+chromium/chromium,db0702d6bdda54529bef038201752b37a3eadf8e,"SVG property initial value mechanism and support for SVGAnimatedLength
+
+This CL introduces a mechanism for handling ""initial values"" for SVG
+properties. The initial value is stored in a new
+|initial_value_storage_| field in SVGAnimatedPropertyBase. Subclasses
+that need to store an initial value - for many cases a default
+initialized object is sufficient - define what is stored in the allotted
+number of bits (and thus indirectly how many bits that are required.)
+
+The SetInitial method needs to be overloaded on the SVGPropertyBase
+subclasses that the SVGAnimatedProperty holds, and is responsible for
+resetting the value of the property (after ""decoding"" the value.)
+
+This CL adds an implementation of the above for SVGAnimatedLength. For
+this type, the initial value is stored as an index into a table of
+values.
+
+The 'fx' and 'fy' properties on SVGRadialGradientElement are updated to
+have their initial values be 50% (matches Gecko.)
+
+Bug: 225807, 474523
+Cq-Include-Trybots: luci.chromium.try:linux_layout_tests_slimming_paint_v2;master.tryserver.blink:linux_trusty_blink_rel
+Change-Id: Ida144d6bed2d1946186e8fb3b3a0b9695ca81789
+Reviewed-on: https://chromium-review.googlesource.com/1193822
+Reviewed-by: Philip Rogers <a58f385838635509f9b282a11e4b3bef85543d5f@chromium.org>
+Reviewed-by: Stephen Chenney <34fbadb01a50baa18401267c889e29ea1f507e3c@chromium.org>
+Commit-Queue: Fredrik Söderquist <3f4bb586f04a0c1d93eadab9363a8a3183b4860c@opera.com>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#588797}",TRUE,subclasses the need,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+ant-design/ant-design,563e34994654fd66a188ad47b6a0153c21f829be,"add strict mode for submit object property names
+
+This feature adds a posibility to validate property names in TypeScript by inserting required object interface.",TRUE,required interface,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+facebook/infer,439839a9fa936ae392ad245b6ec8e75c2ba47406,"Add is_in_(interface/implementation) predicates
+
+Reviewed By: dulmarod
+
+Differential Revision: D7863886
+
+fbshipit-source-id: d8268d9
+",TRUE,interface/implentation,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+ngageoint/geopackage-android,3618d2e6bf50a321b9bc00a80d52a0cd05da6f60,"API improvements, cursor factory, feature dao, feature cursor,
+GeoPackage binary geometry header parsing, WKB Geometry header parsing,
+WKB Point parsing",TRUE,curser factory,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+nismod/smif,7113754755d134e51ba012c65d699b7f39f0483e,"Restructure interface
+",TRUE,"Restructure interface
+",,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+mantidproject/mantid,0b6ba9a22d268f27cecfad1de15ffc3949fabe04,"Refs #10282. Changed IScatterer interface, added factory
+
+IScatterer now inherits from PropertyManager. There's now also a factory for consistent creation of scatterers.
+",TRUE,changed interface,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+ltb-project/self-service-password,5f882938ce206c327ecaa6a6bce42c438f65bce3,"Add reuse flag in all show_policy functions (references #259)
+",FALSE,reuse flag,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+ngoduykhanh/PowerDNS-Admin,9794e221aa20034c85de771d4428b393f00ca215,"Replace direct 'click' event binding with delegated binding. Fixes #58.
+
+Direct binding only works for elements already in the DOM, delegated
+binding works for all elements that match a filter even if created after
+the DOM is fully loaded.
+
+",TRUE,delegated binding,FALSE,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+tprrt/linux-stable,ff3cd7b3c9225017b546785add039e1b1a22dff7,"netfilter: nf_tables: refactor chain statistic routines
+
+Add new routines to encapsulate chain statistics allocation and
+replacement.
+
+Signed-off-by: Pablo Neira Ayuso <707d14912bb250caf67dfe0ea4035681fbfc4f56@netfilter.org>
+",TRUE,encapsulate,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+greenriver/boston-cas,0dc72f04ba643328880200176a204a33397df3ab,"Update test to reflect subclasses of NonHmisClient
+",TRUE,subclasses,FALSE,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+plantinformatics/pretzel,11326fec44900baf1bcbae198e98af4e9fa01d1d,"connect mousewheel zoom : set axis domain, domain change triggers pathUpdate()
+
+Move VLinePosition from stacks.js to form vline-position.js,
+add axis-position mixin to axis-1d; move axis .positions, .currentStep to axis-1d as currentPosition and lastDrawn.
+move Stacked updateDomain() from stacks.js to axis-position, and setDomain() becomes a wrapper;
+associate with stack axis via .axis1d
+Use attribute blockAdj.pathsAliasesResult
+(added setZoomed() - for use in next commit.)
+ 42128c0   1969 May  2 16:49 backend/common/utilities/paths-stream.js
+frontend/app/ :
+ 65f42bd 212586 May  2 16:11  components/draw-map.js
+ 7099086  16019 May  2 12:33  components/draw/axis-1d.js
+ f47f8fa  13014 May  3 09:33  components/draw/block-adj.js
+ 72ac64a  19182 May  3 11:08  services/data/paths-progressive.js
+ 008195f    219 May  2 12:33  templates/components/draw/axis-1d.hbs
+ 27c4cda  62308 May  2 16:24  utils/stacks.js
+",TRUE,becomes a wrapper,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+TrinityCore/TrinityCore,21313bec5754e6dda9716be0e006a60abb5b720d,"Missing data from spell_threat for various Warrior abilities, closes issue 2258, thanks maeh.sheep for collecting data. Most of the values are blizzlike, but since some of them are variable depending on AP/damage, we're using general increase for those based on previous ranks
+
+--HG--
+branch : trunk
+",FALSE,we're using,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+SAP/openui5,e6a15b0c8b2fd187593e34a545de97a460b4838a,"Merge ""[INTERNAL] ManagedObjectModel: React on new marker interface IDScope""",TRUE,react on interface,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+FenixEdu/fenixedu-academic,fec614d65b96ce1123437cdad03a4f89b9655a38,"* directive council send main interface adjustment
+* researcher: edit research activity interface adjustment
+",TRUE,interface adjestments,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+google/closure-compiler,093189f1d3eb76ef90e7267cc98052e3e187566e,"Add linter warning for static member functions on interface classes
+
+PiperOrigin-RevId: 348697368
+",TRUE,interface classes,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+alphagov/digitalmarketplace-api,5729e152f72469c96fac9b9fbab5ff89d6d75035,"Delete duplicate code
+
+There's a few lines of code here that I think were just copy-pasted in a hurry. I've ditched them because less code is better
+",TRUE,duplicate code,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+ChromeDevTools/devtools-frontend,e18b561f005c47ba631c47d7918c0b9afe701bec,"[utilities] Use Map + Set instead of Object + Array in ExtensionServer
+
+This CL is part of the cleanup effort to get rid of Array#remove.
+The ExtensionServer manages subscribers by using an object where
+property names signify message types and the property itself is a list
+of subscribers for that type. This can be better achieved using a Map
+of Sets.
+
+R=17a2cbc4e33156874a9862b0f530521117e66a3d@chromium.org
+
+Bug: chromium:1050549
+Change-Id: I1d642fb02f1e3bd0837c5df7c04343498810d3c6
+Reviewed-on: https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2081827
+Reviewed-by: Mathias Bynens <17a2cbc4e33156874a9862b0f530521117e66a3d@chromium.org>
+Commit-Queue: Simon Zünd <38944668e9e2ca98ccd0275b53370f90fa55c113@chromium.org>
+",TRUE,manage subscribers,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+chromium/chromium,3ab73f7beeb29966594cae5e609892a30746fcd7,"[iOS][Thumb Strip] Fix crash when closing last incognito tab and app
+
+This fixes a few issues:
+1. Crash when deallocing the FullscreenDisabler when closing the last
+   incognito tab. This is probably because the underlying
+   FullscreenController has already been dealloced.
+2. Before, the entire thumb strip machinery wasn't alerted to the new
+   incognito BVC that is created when the incognito state is reset. Now,
+   it is.
+3. There was an intermittent crash when closing the app because of a
+   zombie ViewRevealingVerticalPanHandler. It is a web view observer,
+   but that is controlled by the ThumbStripMediator. However, when the
+   pan handler is dealloced, the observation isn't stopped.
+
+Fixed: 1155559, 1155607
+Change-Id: I1a2f6ea805cfc810bd36b5bab547fb179cacbaa5
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2593119
+Commit-Queue: Gauthier Ambard <9d4cf9c209f46d7011ec53b6e0d37d78e6e2845e@chromium.org>
+Reviewed-by: Gauthier Ambard <9d4cf9c209f46d7011ec53b6e0d37d78e6e2845e@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#837511}
+",TRUE,it is a view observer,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+NixOS/nixops,abab0181e39a342f84655844d79aa2e3d5411c2d,"nix_expr: Merge nested singleton lists.
+
+Use [ [ [ 1 ] ] ] instead of adding two extra newlines (one for the
+starting bracket, one for the ending bracket) for every list.
+
+Signed-off-by: aszlig <ee1aa092358634f9c53f01b5a783726c9e21b35a@redmoonstudios.org>
+",TRUE,singelton,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+lede-project/source,26c953db2072dcc03e36c43446d237df83770270,"mac80211: improve wifi interface cleanup
+
+SVN-Revision: 19285
+",FALSE,wifi interface,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+rails/rails,51b986619d88f7ba98be7d271188785cbbb541a0,"Implement submit_to_remote as a wrapper around a more generic button_to_remote
+
+Removed the ""return false"" from submit_to_remote onclick end as
+button input elements have no default behavior to cancel.
+
+Signed-off-by: Pratik Naik <8b69cfb584888a693f743cf62b7bb8c1f9b2aba0@gmail.com>
+",TRUE,wrapper,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+google/llvm-propeller,349746f044302eb4c793fbcb7e5fdbada6858cd9,"Fix Bug 30978 by emitting cv file checksums.
+
+Summary:
+The checksums had already been placed in the IR, this patch allows
+MCCodeView to actually write it out to an MCStreamer.
+
+Subscribers: llvm-commits, hiraditya
+
+Differential Revision: https://reviews.llvm.org/D37157
+
+llvm-svn: 313374
+",FALSE,Subscribers:,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+symfony/symfony,e4eead39ddc0de75188287345ee91a37ab6ff4ee,"merged branch stof/fix_interface (PR #4306)
+
+Commits
+-------
+
+11e0d23 [HttpKernel] Fixed the BundleInterface
+
+Discussion
+----------
+
+[HttpKernel] Fixed the BundleInterface
+
+The kernel expects bundles to implement ContainerAwareInterface (a fatal
+error occurs if the method is not implemented). This is done in the base
+class but not enforced in the interface.
+
+I spotted it when trying to mock the BundleInterface and pass the mock to the kernel. I created the branch based on master because it is changing the interface but I'm wondering if it should go in 2.0 instead as a bugfix. Someone implementing strictly the interface currently would not be able to use the kernel.
+
+---------------------------------------------------------------------------
+
+by travisbot at 2012-05-17T10:41:19Z
+
+This pull request [passes](http://travis-ci.org/symfony/symfony/builds/1354421) (merged 11e0d232 into 5314836d).
+",TRUE,interface,,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+chromium/chromium,8b5332ee6747f0d579ce1f03c9916f4cb6f38b19,"[ContentIndex] Add logic to choose appropriate icon to display.
+
+Move Icon fetching logic to its own file, and re-use the Manifest Icon
+selection logic to choose the best icon based on known parameters.
+
+Bug: 973844
+Change-Id: I041f8d66eda86f71be8f2201598c761cb0beb0d2
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1751793
+Commit-Queue: Rayan Kanso <8467f9d4d02d7700f9bd1ddda04a874d839c2a48@chromium.org>
+Reviewed-by: Richard Knoll <bc4036a3fe2a286ed45703c0261b5108092a55ef@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#688651}
+",TRUE,reuse icon,FALSE,,18_jan_2021_52e96f58016b2ece2bfa44f37cc0d052e0c130e8
+CTSRD-CHERI/u-boot,4c96c61216719155b3a1d51f6373e996335861de,"spi: ti_qspi: Convert to spi-mem ops
+
+Convert driver to use  spi-mem ops in order to support accelerated MMIO
+flash interface in generic way and for better performance.
+
+Signed-off-by: Vignesh Raghavendra <d9be9ca3f1b2d450305e034a370ae798faff7dfb@ti.com>
+Reviewed-by: Tom Rini <47764aff062bf9ebe98a2274b29052b74a9567e2@konsulko.com>
+Acked-by: Jagan Teki <66ee1c6d5923fee80757c8e2bd79556528e9aa19@amarulasolutions.com>
+",FALSE,flash interface,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+LMSCloud/Koha-LMSCloud,066848a8f06e7322bc285f42f1e603af863f5d16,"Bug 9174: Fix itemtype image display in OPAC lists
+
+Prior to this patch, C4::VirtualShelves::Page did not make sure that
+the itemtype images that it chose when displaying itemtype images for
+biblio-level itemtypes were for the correct interface, so
+even on the OPAC the Intranet icons were requested. On standard
+installations, intranet-tmpl is not available to the OPAC.
+
+To test:
+1) Set noItemTypeImages to ""Show"" and item-level_items to ""biblio record""
+2) Create a list and add an item with the default item type (942$c in
+   MARC21) set to something with an itemtype image associated with it.
+3) View the list in the OPAC.
+4) If you are an a standard install, the itemtype image will be a broken
+   link. If on a dev install, you can confirm with Firebug or the like
+   that the image is pulled from /intranet-tmpl.
+5) Apply patch.
+6) Run `prove t/db_dependent/Koha.t` to confirm that the behavior of the
+   routine used to retrieve the image URL is correct. (Note that you
+   must have an item type with the code 'BK')
+7) Refresh the list, noting that the display is now correct/the image is
+   pulled from opac-tmpl.
+
+Signed-off-by: Jonathan Druart <90effa772b5c8a7a3420e6b7ea56e265888c5743@biblibre.com>
+It works as expected. All tests in Koha.t passed.
+Signed-off-by: Mason James <5ece1282016eb8d217aa0dbf6466e8864b30224a@kohaaloha.com>
+Signed-off-by: Jared Camins-Esakov <9d46e7279315265164da8c55a0f85bf9cb5995a3@cpbibliography.com>
+",FALSE,correct interface,FALSE,which interface,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+yambo-code/yambo,3665dd60ab4536d2eccb881a539e25111997890a,"Version 3.2.1 
+
+*  configure include/version.inc config/configure.ac bz_ops/k_expand.F pol_function/X_os.F pol_function/Dipole_transverse.F interface/init_load.F interface/init.F sc/RT_Energy.F sc/RT_Collision.F sc/RT_driver.F sc/RT_Ext_Field.F sc/RT_eps_analyze.F sc/SC_driver.F sc/SC_precondition.F sc/RT_Integrator.F sc/.objects sc/.objects_gpl sc/Kinetic.F sc/RT_current.F modules/mod_real_time.F modules/mod_SC.F 
+
+Additions:
+- [SC] Thomas-Fermi preconditioning for localized systems.
+- [REAL_TIME] Evaluatio of P and P^2 from _Dipole routines.
+
+Changes:
+- [SC] Fixed mixing for non-local operators.
+
+Patch sent by: Andrea, Claudio, Daniele & Maurizia
+
+
+git-svn-id: bc4a112ea05b68985215781ac4797d0ea488d985@402 76a4dfbf-5f1f-0410-a543-a0282073b526
+",FALSE,interface file,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+twilio/twilio-node,29e92eb52bd9353751cc9f202774c69295a9622e,"Adding optional ca for specifying CA bundle. (#485)
+
+Adding optional ca to the request options interface for specifying a CA bundle.",TRUE,interface,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+freenet/fred,e4447a08ad41fb5f019d2f59c03542a1cbd1ea11,"Removed OOMHandler and OOMHook, together with all usages.
+
+The OOMHandler basically called System.gc() in response to an OOM. But the JVM
+obviously will already have tried a GC before throwing the OOM in first place,
+doing so again can not be expected to have much use.
+
+Also, from the Javadocs: ""An Error is a subclass of Throwable that indicates
+serious problems that a reasonable application should not try to catch.""
+",FALSE,citing documentation about interface,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+qtproject/qtqa-gerrit,068330e68c6e1b3a42c6e4cdd248499a22175d2a,"Merge changes Ice480cab,I429e3e10,I4379e493,I592312ed,I69e6d993, ...
+
+* changes:
+  CommentDetail: Rewrite switch statement in include method with if + else
+  CommentDetail/PatchScriptFactory: Remove unused AccountInfoCache
+  EventUtil: Inline AccountJson
+  Assignee endpoints: Use AccountLoader to populate AccountInfo
+  Anotate GetPastAssignees as singleton
+  Assignee endpoints: Use IdentifiedUser#getNameEmail() to format user
+",TRUE,singleton,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+FreeRDP/FreeRDP,482e836ad882f82f546dc3427ab3709da0f0c974,"libfreerdp-codec: refactor internal rfx_compose_message_tile
+",FALSE,compose,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+NLnetLabs/unbound,7b4606702986cc06d65887f65dc12664c58ef27d,"add test for tcp reuse
+",FALSE,tcp reuse,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+Psiphon-Labs/psiphon-tunnel-core,6aae4a1e21f29cf3acf5a9c9b81a41ff5dcec488,"Merge pull request #451 from amirkhan5/master
+
+Add parsed config callback for iOS delegate",TRUE,delegate,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+GerritCodeReview/gerrit,85643421de332e382fa6f0057a25324651e31229,"Merge ""project.py: Add support for bazel wrapper bazelisk"" into stable-2.14",TRUE,wrapper,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+google/llvm-propeller,33d903d1b0543e4a1ee49836555ca7532d450722,"Rename parallelFor -> parallelForEachN.
+
+So that it is clear that the function is a wrapper for for_each_n.
+
+llvm-svn: 302718
+",TRUE,wrapper,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+rsmarples/dhcpcd,67ed6c5fdc76fa237307750d84251de7857f7e99,"Use the nl80211 interface on Linux to get the wireless SSID.
+If this is not found in the system headers, fall back to assuming WEXT.
+This has been done because the WEXT module has been marked as deprecated
+for a while now and I'm getting bored of people asking me why their
+wireless wasn't working. Bloated dhcpcd by another 600 bytes as a result.",FALSE,nl80211 interface,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+guardicore/monkey,5fe468f3cc8da9d1b1ad3138aebc731d2ebc2a75,"Merge branch 'attack_comand_line_interface' into attack_powershell
+",FALSE,branch,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+wordpress-mobile/WordPress-iOS,629197ac943ad22d0cd2f7c63ca19c99069dffb1,"Merge pull request #6247 from wordpress-mobile/issue/5670-people-text
+
+PersonViewController: Updates Interface Messages",TRUE,interface messages,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+acgetchell/CDT-plusplus,82dd1884ad2760c8e682bcb5fdde2bc10099ad9d,"Refactor interfaces for data structures part 1
+
+The manifold data structure contains a geometry data structure and a foliated triangulation data structure. The foliated triangulation data structure is a wrapper around CGAL's Delaunay triangulation. These interfaces need to be encapsulated better so that refactoring into a unique resource can be done more easily.",TRUE,refactor interfaces,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+dart-lang/sdk,660cf26dbb8e7a7e4fb49f0947e64f9ed055d9c0,"Reland ""[vm] Decouple stub code from runtime""
+
+This is the next step towards preventing compiler from directly peeking
+into runtime and instead interact with runtime through a well defined
+surface.
+
+This CL decouples the hand-written stub codes from the runtime. The
+target architecture dependent stubs are moved to
+dart::compiler::StubCodeCompiler which use dart::compiler::target:*
+for accessing any runtime related code.
+
+The generation of type testing stubs is moved to separate files for the
+time being.
+
+Issue https://github.com/dart-lang/sdk/issues/31709
+
+Change-Id: Icd0995b18a7bac496b1e12231cf437943f5c94f1
+Reviewed-on: https://dart-review.googlesource.com/c/92720
+Reviewed-by: Martin Kustermann <a35dd5b79fac84b2bb3b026a16b8becc55af5961@google.com>
+Commit-Queue: Martin Kustermann <a35dd5b79fac84b2bb3b026a16b8becc55af5961@google.com>
+Auto-Submit: Martin Kustermann <a35dd5b79fac84b2bb3b026a16b8becc55af5961@google.com>
+",TRUE,decouple,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+TrinityCore/TrinityCore,973888ea2cc5dbea80a6a23cc80acd55e3061c09,"Core/Maps: Fixed incorrect difficulty markers shown on the interface inside Icecrown Citadel (always displaying normal mode)
+",FALSE,shown on interface,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+wongsyrone/lede-1,ed06d0bb2686a2b262b9b742b7e1b38d73336c50,"ath9k: disable hardware full sleep with active client mode interface until mac80211 IEEE80211_CONF_IDLE support has been fixed
+
+SVN-Revision: 32657
+",FALSE,client mode interface,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+braintree/braintree_android,5c3e9c39c7c064d848edb79e172b2bdf1d375083,"Rename PaymentMethod to PaymentMethodNonce
+
+* Includes the rename of subclass such as Card to CardNonce
+
+https://trello.com/c/VEVtPR0Y/154-rename-paymentmethod-to-paymentmethodnonce
+",TRUE,subclass,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+vygr/ChrysaLisp,4d34e10513221a901856e143b4926fcf289b0b58,"start creating the 'pii' platform isolation interface
+",TRUE,interface,,,18_jan_2021_dd20e06543a73f8cecd0bdaca1003dde3a8ef936
+apache/flink,13bce31507c431bcc20994bc8ce9dbeb7eba3b96,"[FLINK-1996] [tableApi] Add TableSink interface to emit tables to external storage.
+
+- Add a CsvTableSink
+
+This closes #1961
+",TRUE,add interface,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+chromium/chromium,a0aa4d3cc32823b55bed8023915d820bf745443c,"Roll src/third_party/skia 28bafb01c90c..1b85323f10e7 (8 commits)
+
+https://skia.googlesource.com/skia.git/+log/28bafb01c90c..1b85323f10e7
+
+
+git log 28bafb01c90c..1b85323f10e7 --date=short --no-merges --format='%ad %ae %s'
+2019-02-15 halcanary@google.com ICU: enable on wasm
+2019-02-15 robertphillips@google.com Remove GrContextPriv.h from GrRenderTargetContext.h
+2019-02-15 herb@google.com Reland ""Use bulk interface for paths""
+2019-02-15 halcanary@google.com SkPDF: simplify subsetting code
+2019-02-15 skia-autoroll@skia-public.iam.gserviceaccount.com Roll ../src b698b62f407e..5862f084f69f (425 commits)
+2019-02-15 herb@google.com Revert ""Use bulk interface for paths""
+2019-02-15 brianosman@google.com Add curve visualization back, guard eval
+2019-02-15 herb@google.com Revert ""Calculate strike in path case""
+
+
+Created with:
+  gclient setdep -r src/third_party/skia@1b85323f10e7
+
+The AutoRoll server is located here: https://autoroll.skia.org/r/skia-autoroll
+
+Documentation for the AutoRoller is here:
+https://skia.googlesource.com/buildbot/+/master/autoroll/README.md
+
+If the roll is causing failures, please contact the current sheriff, who should
+be CC'd on the roll, and stop the roller if necessary.
+
+CQ_INCLUDE_TRYBOTS=luci.chromium.try:android_optional_gpu_tests_rel;luci.chromium.try:linux-blink-rel;luci.chromium.try:linux-chromeos-compile-dbg;luci.chromium.try:linux_optional_gpu_tests_rel;luci.chromium.try:mac_optional_gpu_tests_rel;luci.chromium.try:win_optional_gpu_tests_rel
+TBR=stephana@chromium.org
+
+Change-Id: I2b3ce4c382b09bf1f3b266acf2a5338845d1d54c
+Reviewed-on: https://chromium-review.googlesource.com/c/1475700
+Reviewed-by: chromium-autoroll <a3680534fa21f849f725bea9c9fb3f7f637bcd8d@skia-public.iam.gserviceaccount.com>
+Commit-Queue: chromium-autoroll <a3680534fa21f849f725bea9c9fb3f7f637bcd8d@skia-public.iam.gserviceaccount.com>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#632734}",FALSE,use bulk interface,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+apache/incubator-asterixdb,d64c4bacd6c685c4b294ecac3171a32a0b1964b7,"updated lsm harness to implement its proper interface
+
+git-svn-id: 380da7c1207d3117f55b64aa1fd67529f17f3188@1746 123451ca-8445-de46-9d55-352943316053
+",TRUE,proper interface,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+hyperledger/fabric,368b92adbced07e02f52d17cf5fa47562fa33fa8,"Merge ""[FAB-5284] Revert `Configure` interface""",TRUE,revert interface,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+PHPSocialNetwork/phpfastcache,bd4c714d7bade35cc75aca235705ea5745449483,"Fixed Interface typos
+",TRUE,interface typo,FALSE,which interface?,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+nwjs/chromium.src,8fcfed1ddf6b1c500e23355fa396cf4ea4a44367,"Revert 249095 ""Refactor pref code out of ProfileImpl.""
+
+> Refactor pref code out of ProfileImpl.
+> 
+> Moved into the chrome_pref_service_factory.cc
+> 
+> ProfileImpl no longer has any notion of the Preferences file. This knowledge lives strictly in chrome_pref_service_factory.cc which now implements everything that needs to know about that file's path.
+> 
+> As per noms@'s request on https://codereview.chromium.org/145053004/
+> 
+> TBR=jochen (chrome/browser/chrome_browser_main.cc)
+> 
+> Review URL: https://codereview.chromium.org/154593002
+
+TBR=gab@chromium.org
+
+Review URL: https://codereview.chromium.org/156013003
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@249100 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,knowledge in factory,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+chromium/chromium,e2ac4cc7d3885aeac46b6b107827cfca4a2b21b7,"[iOS][web] Add a way to remove the WebUI factory
+
+The WebUIIOSControllerFactory only provided a way to register a factory.
+When the factory dies (for example in tests), there are no way to remove
+the factory, leading a crash the next time the factory is accessed.
+This CL adds a way to deregister the factories.
+
+Bug: 943597
+Change-Id: Ic7276d3a1597ce02d47229ea63cd3ffdbc36d5fb
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1533938
+Reviewed-by: Eugene But <bb025fd15c252eb28418847a17f9a409ee64be86@chromium.org>
+Commit-Queue: Gauthier Ambard <9d4cf9c209f46d7011ec53b6e0d37d78e6e2845e@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#642946}",TRUE,remove factory,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+piernik-dev/piernik,9f260da742be8eaff11bc2c859e6dc1d8b36a8eb,"[refinement_update] introduced sanitize_all_ref_flags routine
+",TRUE,refienment,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+gajim/gajim,331738391816e4e83656464024dad72039f39d8b,"put contact in observer group when we remove it but let him see our status. Fixes #1494
+",TRUE,observer,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+esrf-bliss/Lima,1f89e08f3cb47609b32fd5ae6fa22c25f23ef695,"Add a little inline doc in the code, fix the singleton pattern
+",TRUE,singelton,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+larshp/abapOpenChecks,a162e13788edb5094453f2e793d5353fe9cd7ffa,"New Check: Only Static Methods in one Class #758 (#780)
+
+* New Check: Only Static Methods in one Class #758
+
+* Adjust Pretty Printer
+
+* abaplint adjusts
+
+* abaplint
+
+* Create 93.md
+
+* Change of Super Class
+",TRUE,static methods,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+chromium/chromium,58b0e16aa06b1a90993d95b2730672174e3c818f,"Reduce usage of FOR_EACH_OBSERVER macro in chrome/browser
+
+Observer lists now support range-based for loops.
+
+BUG=655021
+CQ_INCLUDE_TRYBOTS=master.tryserver.chromium.win:win10_chromium_x64_rel_ng
+
+Review-Url: https://chromiumcodereview.appspot.com/2439493002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#426745}
+",TRUE,observer,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+chromium/chromium,b2d9b333497c4e4541708a77bf0a5fa0ebc10128,"Cleanup compositing requirement for the root layer
+
+We already have the following logic which renders the original special
+handling of compositing of the root layer redundant:
+- We'll composite a LayoutView with the same rules as normal scrollers
+  in PaintLayerScrollableArea::ComputeNeedsCompositedScrollingInternal();
+- Any compositing in a frame will trigger compositing of the LayoutView
+  and the PaintLayerCompositor.
+
+Change-Id: I15ad83095185defadb1c780a9444acfa1828bb5b
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2216858
+Reviewed-by: Stefan Zager <542cb5b73770f9741bae40d34cf7a192bc7ad2cc@chromium.org>
+Commit-Queue: Xianzhu Wang <56bf68553a6eeecbbaf7c80da87195a59c9681bb@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#772395}
+",TRUE,composoting,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+mzlogin/mzlogin.github.io,d545cf3c334d4840d019d7bf58ee25971c05e244,"fix composing
+",TRUE,composing,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+facebook/mysql-5.6,ac8847655ed03b912b9917cd844f7425e362baf8,"Bug#58226 Some InnoDB debug checks consume too much CPU time
+
+Do not disable InnoDB inlining when UNIV_DEBUG is defined. The
+inlining is now solely controlled by the preprocessor symbol
+UNIV_MUST_NOT_INLINE and by any compiler options.
+
+mtr_memo_contains(): Add an explicit type conversion from void*, so
+that the function can be compiled by a C++ compiler. Previously, this
+function was never seen by the C++ compiler, because it is only
+present in UNIV_DEBUG builds and InnoDB inlining used to be disabled.
+
+buf_flush_validate_skip(): A wrapper that skips most calls of
+buf_flush_validate_low(). Invoked by debug assertions in
+buf_flush_insert_into_flush_list() and buf_flush_remove().
+
+fil_validate_skip(): A wrapper that skips most calls of
+fil_validate(). Invoked by debug assertions in fil_io() and fil_io_wait().
+
+os_aio_validate_skip(): A wrapper that skips most calls of
+os_aio_validate(). Invoked by debug assertions in
+os_aio_func(), os_aio_windows_handle() and os_aio_simulated_handle.
+
+os_get_os_version(): Only include this function if __WIN__ is defined.
+
+sync_array_deadlock_step(): Slight optimizations. This function is a
+major CPU consumer in UNIV_SYNC_DEBUG builds.",TRUE,wrapper,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+espocrm/espocrm,168a1ea6e5f2f694cd68763fa08cdb3f9f70dc24,"email compose: restore last html value
+",FALSE,email compose,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+geotools/geotools,e3bb86bc55006eddc380e242014a0aa6e36bd4d9,"[GEOT-6589]  Support mbstyle filter expressions
+
+* Additional MBObjectParser methods to check json object and array structure
+
+  This prevents code breaking out their own instance of checks
+
+* MBExpression transformExpression incorrectly used to generate string
+* Document Function stop approach as deprecated
+* Experiment to show how MBFilter can support use of expressions
+
+  The deprecated syntax is preserved, and documented, for backwards compatibility.
+
+* Cleanup to confirm existing tests still pass
+* document support for filter expressions
+* Generate PropertyName when literal key supplied
+* confirm filter expressions work
+* improve notification if expression not supported
+* Test case now reporting the correct PropertyName reference
+* refactor into private methods
+* A better null pointer exception message when generating ECQL
+* Test that delegating to MBExpression is working as expected
+* Avoid deprecation warnings
+
+Signed-off-by: Jody Garnett <f45e3022cdf4d23458fdce0d6d08268c9dd0c879@gmail.com>
+",TRUE,delegating,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+smistad/FAST,6200b89ec9c6cf3f4feceef9784be4bc982ab1a4,"made the VTKImageImporter a bit more generic by using pointers to ImageData instead of Image2D
+",TRUE,more generic,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+danog/MadelineProto,894470a14789fa97a038f92674f4b9571027207e,"Refactor public API: full encapsulation and strict typing
+",TRUE,encapsulation,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+chromium/chromium,6b72d295cf91336aab71a79203fb8506bd31c713,"Migrate associated interface to use new mojo syntax for autofill & password_manager
+
+This is a followup of http://crrev/c/1685837. See more at
+https://docs.google.com/document/d/1Jwfbzbe8ozaoilhqj5mAPYbYGpgZCen_XAAAdwmyP1E/edit
+
+I have also changed BindAutofillDriver() in ContentPasswordManagerDriver
+to BindPasswordManagerDriver(), since it isn't binding auto fill driver but
+password manager driver.
+
+Bug: 955171
+Change-Id: I0817d7d54eb1fc46be4d16a2a611f98604ddef58
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1693890
+Commit-Queue: Shimi Zhang <43171e374d34f4b1bcd141a63ca5058597a57524@chromium.org>
+Reviewed-by: Maxim Kolosovskiy <4b340cf847290e6f8e0b1d26ff01f1f92814bd9f@chromium.org>
+Reviewed-by: Tao Bai <45a6e69ccce74093929612c02e144bbf70219ca5@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#677047}
+",TRUE,interface,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+dimagi/commcare,a1f3a1d0b8f17016e31dbf48d3d58acf96ca038b,"Fix an issue with the DAG topology. duplicated code was only updated in one
+place.
+",TRUE,duplicated code,FALSE,acutually lack of abstraction,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+kdudka/predator,10a49d5ecc512117930ced0756838411410aac27,"symheap: simplify interface of segment binding fields
+",TRUE,simplify interface,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+OpenTrons/opentrons_sdk,3fe4d6ea468e3f8842affd344595b343d32993ae,"added modal styles and event delegation for save calibration
+",FALSE,event delegation,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+kubernetes/apiserver,6c75819b84c720c9c767ae2b4734f85a4b206c29,"Split fieldmanager with interface
+
+Kubernetes-commit: 2c67bf47db8557b6481a5181bdae924e91665988
+",TRUE,interface,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+symfony/symfony,f7752f79a036f4a866b5674326095947696353cd,"renamed Task to Command (as in Command Line Interface)
+",TRUE,interface,FALSE,as in interface?,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+nwjs/chromium.src,f9eb7e5b1a26973a9d81230e5e3b484ca44d2a38,"garden-o-matic summary.html should have UI for examining failures
+https://bugs.webkit.org/show_bug.cgi?id=66625
+
+Reviewed by Dimitri Glazkov.
+
+This patch introduces the notion of UI actions and converts our
+existing manual <button> manipulation with this new abstraction.  The
+patch also adds an Examine button to failure notifications.  In a
+future patch, I'll add a controller that wires this button up to
+something useful.
+
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/garden-o-matic.html:
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/run-unittests.html:
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/scripts/ui/actions.js: Added.
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/scripts/ui/actions_unittests.js: Added.
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/scripts/ui/notifications.js:
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/scripts/ui/notifications_unittests.js:
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/scripts/ui/results.js:
+* BuildSlaveSupport/build.webkit.org-config/public_html/TestFailures/summary.html:
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@93483 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,new astraction,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+hazelcast/hazelcast,a0e0f28a04b13826f1840502baab8cb0219ef348,"Merge pull request #15174 from pveentjer/v4.0/cleanup/EndpointManager-privateapi
+
+Subclass fof EndpointManager @privateapi",TRUE,subsclass,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+chromium/chromium,06c2b0896081b589870f33c2b2eca7f11e51e533,"(Partially) remove threading from RendererGpuVideoAcceleratorFactories
+
+In most cases, the entry points to RendererGpuVideoAcceleratorFactories
+are called from its factory loop, so trampolining is unnecessary.
+
+This change should be a functional no-op according to the current
+architecture.
+
+BUG=306333
+TEST=local build, run on CrOS snow, build on desktop Linux
+
+Review URL: https://codereview.chromium.org/27223007
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@229693 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,factories,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+JetBrains/intellij-community,f79371537d7ef76788beb8dd330febd9b2f42159,"vcs-ignore: fix performance warning in ignore files with directory negotiation
+
+Ignore negotiation is a composite element and we should get the first leaf element from the given PsiElement to avoid warning (see LineMarkerProvider#getLineMarkerInfo(PsiElement) javadoc for details)
+
+GitOrigin-RevId: df4312b608930bf6f06647c7b1fd467f7e834a0c",TRUE,composite element,FALSE,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+spotbugs/spotbugs,d3d8e80793491a30b8151a4f7df75f6bb82a3f59,"Use generic types
+
+
+git-svn-id: e7d6bde23f017c9ff4efd468d79d66def666766b@4856 eae3c2d3-9b19-0410-a86e-396b6ccb6ab3
+",TRUE,generic types,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+AnalyticalGraphicsInc/cesium,aabd27a760efc0f447f947bcceb722743632d49d,"Migrate Cesium to ES6 Modules
+
+See https://github.com/AnalyticalGraphicsInc/cesium/pull/8224 for details.
+
+eslint
+There are a handful of new .eslintrc.json files, mostly to identify the files that are still AMD modules (Sandcastle/Workers). These are needed because you can't change the parser type with a comment directive (since the parser is the thing reading the file). We can finally detect unusued modules! So those have all been cleaned up as well.
+
+requirejs -> rollup & clean-css
+requirejs, almond, and karma-requirejs have all been removed. We now use rollup for building and minifying (via uglify) JS code and clean-css for css. These changes are fairly straight-forward and just involve calling rollup instead of requirejs in the build process.
+
+Overall build time is significantly faster. CI is ~11 minutes compared to ~17 in master. Running makeZipFile on my machine takes 69 seconds compared to 112 seconds in master. There's probably plenty of room for additional optimization here too.
+
+We wrote an published a small npm module, rollup-plugin-strip-pragma, for stripping the requirejs pragmas we use out of the release builds. This is maintained in the Tools/rollup-plugin-strip-pragma directory.
+
+As for what we produce. The built version of Cesium is now a UMD module. So it should work anywhere that hasn't made the jump to ES6 yet. For users that were already using the ""legacy"" combined/minified approach, nothing changes.
+
+One awesome thing about roll-up is that it compiles all of the workers at once and automatically detects shared codes and generates separate bundles under the hood. This means the size of our worker modules shrink dramatically and Cesium itself will load them much faster. The total minified/gzipped size of all workers in master is 2.6 MB compared to 225 KB in this branch! This should be most noticeable on demos like Geometry & Appearances which load lots of workers for the various geometry typs.
+
+roll-up is also used to build Cesium Viewer, which is now an ES6 app.
+
+We use clean-css via gulp and it is also a straightforward change from requirejs that requires no special mention.
+
+Workers
+While the spec allows for ES6 Web Workers, no browser actually supports them yet. That means we needed a way to get our workers into non-ES6 form. Thankfully, roll-up can generate AMD modules, which means we now have a build step to compile our Worker source code back into AMD and use the existing TaskProcessor to load and execute them. This build step is part of the standard build task and is called createWorkers. During development, these ""built"" workers are un-optimized so you can still debug them and read the code.
+
+Since there is a build step, that means if you are changing code that affects a worker, you need to re-run build, or you can use the build-watch task to do it automatically.
+
+The ES6 versions of Worker code has moved into Source/WorkersES6 and we build the workers into their ""old home"" of Source/Workers. cesiumWorkerBootstrapper and transferTypedArrayTest which were already non-AMD ES5 scripts remain living in the Workers directory.
+
+Surprisingly little was changed about TaskProcessor or the worker system in general, especially considering that I thought this would be one of the major hurdles.
+
+ThirdParty
+A lot of our ThirdParty either already had a hand-written wrapper for AMD (which I updated to ES6) or had UMD which created problems when importing the same code in both Node and the browser. I basically had to update the wrapper of every third-party library to fix these problems. In some cases I updated the library version itself (Autolinker, topojson). Nothing to be too concerned about, but future clean-up would be using npm versions of these libraries and auto-generating the wrappers as needed so we don't hand-edit things.
+
+Sandcastle
+Sandcastle is eternal and manages to live another day in it's ancient requirejs/dojo 1.x form. Sandcastle now automatically uses the ES6 version of Cesium if it is available and fallsback to the ES5 unminified version if it is now. The built version of Sandcastle always uses CesiumUnminified, just like master. This means Sandcastle still works in IE11 if you run the combine step first (or use the relase zip)
+
+Removed Cesium usage from Sandcastle proper, since it wasn't really needed
+Generate a VERSION propertyin the gallery index since Cesium is no longer being included.
+Remove requirejs from Sandcastle bucket
+Update bucket to use the built version of Cesium if it is available by fallbackto the ES6 version during development.
+Standalone.html was also updated
+There's a bit of room for further clean-up here, but I think this gets us into master. I did not rename bucket-requirejs.html because I'm pretty sure it would break previously shared demos. We can put in some backwards compatible code later on if we want. (But I'd rather just see a full Sandcastle rewrite).
+
+Specs
+Specs are now all ES6, except for TestWorkers, which remain standard JS worker modules. This means you can no longer run the unbuilt unit tests in IE11. No changes for Chrome and Firefox.
+
+Since the specs use ES6 modules and built Cesium is an ES5 UMD, I added a build-specs build step which generates a combined ES5 version of the specs which rely on Cesium as a global variable. We then inject these files into jasmine instead of the standard specs and everything works exactly as it did before. SpecRunner.html has been updated to inject the correct version of the script depending on the build/release query parameters.
+
+The Specs must always use Cesium by importing Source/Cesium.js, this is so we can replace it with the built Cesium as describe above.
+
+There's a bunch of room for clean-up here, such as unifying our two copies of jasmine into a single helper file, but I didn't want to start doing that clean-up as part of this already overly big PR. The important thing is that we can still test the built version and still test on IE/Edge as needed.
+
+I also found and fixed two bugs that were causing failing unit tests, one in BingMapsImageryProviderSpec.js (which was overwriting createImage andnot setting it back) and ShadowVolumeAppearance.js (which had a module level caching bug). I think these may have been the cause of random CI failures in master as well, but only time will tell.
+
+For coverage, we had to switch to karma-coverage-istanbul-instrumenter for native ES6 support, but that's it.
+
+Finally, I updated appveryor to build Cesium and run the built tests under IE. We still don't fail the build for IE, but we should probably fix that if we want to keep it going.
+
+NodeJS
+When NODE_ENV is production, we now require in the minified CesiumJS directly, which works great because it's now a UMD module. Otherwise, we use the excellant esmpackage to load individual modules, it was a fairly straightforward swap from our old requirejs usage. We could probably drop esm too if we don't care about debugging or if we provie source maps at some point.
+",TRUE,wrapper,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+killbill/killbill,c91d3f13188dd295b2aec5965fbaab180eb03929,"entitlement: change visibility of fields in SubscriptionData
+
+Make all fields private.
+
+Signed-off-by: Pierre-Alexandre Meyer <ff019a5748a52b5641624af88a54a2f0e46a9fb5@ning.com>
+",TRUE,"visibility, private",,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+opensim-org/opensim-core,49bb8abe17d41f35574451f9475affdaf88aab15,"Update Joints and use inherited constructors to eliminate code duplication.
+",TRUE,"eliminate code duplication, inherited constructors",,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
+osmocom/osmo-pcu,eb64d43922f48901ea4fc872b5c2d65b9e334221,"gprs_bssgp_pcu: make gprs_bssgp_ns_cb public
+
+rename the function sgsn_ns_cb -> gprs_bssgp_ns_cb.
+To allow writing and reading the same configuration, the pcu needs to register
+all vty commands before reading the configuration. This callback
+is required to register NS based vty commands
+
+Related: OS#4024
+Change-Id: I440c0df2e32fe22bf43288c00bb4aa3a0c6a3a51
+",TRUE,make public,,,19_jan_2021_16a4cdc8bee84218f8767188f17c1394728092d5
