@@ -1212,30 +1212,30 @@ frappe/frappe,bf57a1d79a85b01bd0de9b8adeba8af9ebef2967,"Patch(Tags): Check if co
 * fix: use ignore in insert query for bulk insert
 
 * fix: add option to ignore duplicates
-",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"fix, add","not clear if fix is not use here as ""modify""",FALSE,random_batch_18_nov_2020
 Alfresco/alfresco-repository,e0333cbb2f7d7f690fa1da117a22176436bef0b8,"Changed version number to 3.0.0 dev
 
 git-svn-id: 01653c09f76512ebba8fd589b05a699d8510a51f@8786 c4b6b30b-aa2e-2d43-bbcb-ca4b014f7261
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,version number,,,random_batch_18_nov_2020
 polyaxon/polyaxon,c1d625c6f7f352f075461c77925f2c6ee10cf4d2,"Merge pull request #7 from wbuchwalter/api-nodeport
 
-Map api.service.nodeport & streams.service.nodePort ",,,,,,,,random_batch_18_nov_2020
+Map api.service.nodeport & streams.service.nodePort ",FALSE,FALSE,TRUE,FALSE,map,,,random_batch_18_nov_2020
 hexojs/hexo,da14a167ae476d3ac0542d1782eaed433139e8a6,"feature: include ranged code lines (#3393)
 
-fix issue #3310",,,,,,,,random_batch_18_nov_2020
+fix issue #3310",FALSE,FALSE,TRUE,TRUE,,by code,,random_batch_18_nov_2020
 appleseedhq/appleseed,132fea4e5e39fff8a755c53b7fa464266a432c0e,"Switch to releases for travis deps, update linux dependencies
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"switch, update",,,random_batch_18_nov_2020
 lyusupov/SoftRF,c57a812f7b8df99402bc9689fd88598591123adc,"Fix for issue #1 (uart 'garbage').
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 JetBrains/intellij-community,b9b616eb908cba5a2f850a63d5cd22985fabb81f,"dom-tests moved to community
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,move,,,random_batch_18_nov_2020
 NLnetLabs/unbound,bb1bf0505e3820b4377acce91a5c2edb6da13a9d,"test fix for NSEC3 new algorithms.
 
 
 git-svn-id: e875384d7a5ebd9b2def38a8354dae1fda8e73bc@974 be551aaa-1e26-0410-a405-d3ace91eadb9
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,testing the fix,by code,,random_batch_18_nov_2020
 lino-framework/lino,0a5c8cadbc115a5aed906859b0029b2a5d2b82d8,"http://code.google.com/p/lino/source/browse/docs/blog/2012/0919.rst
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,error (in the linked url),"by code, no semantic evidence",,random_batch_18_nov_2020
 ampproject/amphtml,cd1e0c158d1d46e9a298f98f62ace60c6df135d0,"✅ [amp story player] Visual Tests for Back and Close Button (#29301)
 
 * add visual diff tests for button
@@ -1300,21 +1300,21 @@ ampproject/amphtml,cd1e0c158d1d46e9a298f98f62ace60c6df135d0,"✅ [amp story play
 
 * fix spacing
 
-* update to local story",,,,,,,,random_batch_18_nov_2020
+* update to local story",TRUE,TRUE,TRUE,TRUE,"add, fix linter errors, fix async condition",,,random_batch_18_nov_2020
 mit-plv/fiat-crypto,b9fe2a4024280b35b32cc4e532eaa0c820b3b14d,"Separate case for handling option matches in autosolve
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 Musare/MusareNode,e328e1d30040a47c3a6c30b2d9926105a1119634,"Fixed some things and ranted.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixed (and ranted),,,random_batch_18_nov_2020
 borisyankov/DefinitelyTyped,851b3f51e1fc53fdfb0f9564566eac37efb7038c,"Koa-static: add support for the extensions option (#16411)
 
 * Koa static supports an extensions option
 
 * Fix original package lint errors
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,TRUE,FALSE,"add, fix lint",,,random_batch_18_nov_2020
 iomad/iomad,85b030cc39933ed366eb75865392d247f6d603cc,"MDL-46509 enrol: fix usage of incorrect enrol plugin in capability check
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"fix, incorrect",,,random_batch_18_nov_2020
 spesmilo/electrum,ae730cc8e5be921b92fe45652c35f2031dccfb4a,"fix #2360
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020
 delmic/odemis,91cb09883bef924e9b24cfc193787637b5d2aaf1,"util img: Fix some numpy muliplication casting failures with numpy >= 1.10
 
 Numpy 1.10 changed the default casting from ""unsafe"" to ""same_kind"".
@@ -1322,45 +1322,45 @@ Some places were relying on the unsafe casting to scale in place the RGB uint8 v
 
 => explicitely indicate the casting is unsafe.
 Should still work fine down to numpy 1.6.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix failures,,,random_batch_18_nov_2020
 FarmBot/farmbot_os,a7e3b6ba30391ee64424f54ba9d6564762791ad3,"genstage stuff
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020
 gradle/gradle,a0b29ba4b16c72d7aea25fb30c7c081eeabac7c6,"Extend ProjectBuilder compatibility test to run agains multiple versions
 
 +review REVIEW-6246
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,extend,,,random_batch_18_nov_2020
 symfony/security-bundle,5f6b24c52d402eafc643154b17931fcc65374539,"[SecurityBundle] [HttpFoundation] Allow for multiple IP address in security access_control rules
 
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,allow,,,random_batch_18_nov_2020
 Connections-Business-Directory/Connections,f8b90149db152cee8998745cb77d445584840c32,"Move the meta API actions to their files.
-",,,,,,,,random_batch_18_nov_2020
-CCAFS/MARLO,8458c5017282557bb1cbcfa76b7b0bb199c6697f,Merge branch 'dev-Synthesis2018' of https://github.com/CCAFS/MARLO.git into dev-Synthesis2018,,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,move to their files,,,random_batch_18_nov_2020
+CCAFS/MARLO,8458c5017282557bb1cbcfa76b7b0bb199c6697f,Merge branch 'dev-Synthesis2018' of https://github.com/CCAFS/MARLO.git into dev-Synthesis2018,FALSE,FALSE,TRUE,FALSE,"merge, no syntactic evidence",,,random_batch_18_nov_2020
 bitpay/copay,4d72438e8e373ce06f1188b2d4efe2dbdd0343c2,"Merge pull request #2206 from cmgustavo/bug/paypro-url-invalid
 
-Fixes paypro if amount has comma as decimal separator",,,,,,,,random_batch_18_nov_2020
+Fixes paypro if amount has comma as decimal separator",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 pragma-/pbot,221a698ecb781fc9c12ef3aafc0e1e96d937ea6d,"factoids: if unknown keyword is triggered inadvertedly, .e.g. by referencing the bot by name, and the args dont look like a nick then do not spit out the levenshtein matches text
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 stdlib-js/stdlib,8d3d825b7bd4cf700921c65d8ff712aba7f54a6f,"Enable rule
-",,,,,,,,random_batch_18_nov_2020
-uBlockOrigin/uAssets,31ee61f7875dba564a788bab8bba7f7388825084,fix smoner .com anti adb,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,enable,,,random_batch_18_nov_2020
+uBlockOrigin/uAssets,31ee61f7875dba564a788bab8bba7f7388825084,fix smoner .com anti adb,FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 pixijs/pixi.js,9c0df5700d4a84ce23d6e5a6485300d1985ba7e2,"Merge pull request #315 from Jam3/totalFrames
 
-Added totalframes to MovieClip",,,,,,,,random_batch_18_nov_2020
-adaltas/node-nikita,494a6a043f1021f50e94ecb1da4f897a19e926d2,dockerized test: upgrade node version to use proxy,,,,,,,,random_batch_18_nov_2020
+Added totalframes to MovieClip",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020
+adaltas/node-nikita,494a6a043f1021f50e94ecb1da4f897a19e926d2,dockerized test: upgrade node version to use proxy,FALSE,FALSE,TRUE,FALSE,upgrade,,,random_batch_18_nov_2020
 halt-hammerzeit/react-responsive-ui,750995bf66355846c849386b0035a70eb5e36f49,"Fix <List/> onClick
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 eworm-de/claws-mail,9154f97ff8220093f007096efe17bdb5f03b33b1,"more sync with sylpheed 0.6.2cvs12
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"by comment in code, no syntactic evidence",,,random_batch_18_nov_2020
 xwiki/xwiki-platform,1629504ae0497889208c3e94875de89846b3fe52,"Merge branch 'master' of github.com:xwiki/xwiki-platform into feature-applicationWithinMinutes
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 MarkUsProject/Markus,be713debe727fcca5b138f6fedb14efcb9c7275e,"pr-edit-view: Fixed authorizations for annotations for reviewer
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020
 danmar/cppcheck,1fd9ba0cc48dcdfd7cd9f513dbed3d0dd54e420e,"Fixed #6988 (incorrect nullPointer error for string)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,incorrect,,,random_batch_18_nov_2020
 openstack/horizon,950dc2c328ae364dcbefd8d15d24f0d70da3ecbb,"Imported Translations from Transifex
 
 Change-Id: I4b1734e7ed957f26dce8acdfa70de63016add275
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,imported,code not clear,,random_batch_18_nov_2020
 ulfalizer/Kconfiglib,d18ca7216457e46cdc592b022aa534eec473b9c4,"Micro-optimize _tokenize()
 
  - A small modification to _initial_token_re_match makes it reject
@@ -1374,37 +1374,37 @@ ulfalizer/Kconfiglib,d18ca7216457e46cdc592b022aa534eec473b9c4,"Micro-optimize _t
    like overkilling it.
 
 Profiling done with cProfile and line_profiler.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,reorganize,,,random_batch_18_nov_2020
 audiokit/AudioKit,ea63dfc47fd0aaacea7184a7197046f4dc0f5674,"CI Houd Cleanups
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,cleanups,,,random_batch_18_nov_2020
 apache/jmeter,ffd64c4fa03b03b4c1314ff83c7e7c10e325db71,"Adherence to coding standards. Changing of logging to jorphan.
 
 
 git-svn-id: https://svn.apache.org/repos/asf/jakarta/jmeter/trunk@325236 13f79535-47bb-0310-9956-ffa450edef68
 
-Former-commit-id: e9a9590d552c826aaacdb731c18cc7ae39d93919",,,,,,,,random_batch_18_nov_2020
+Former-commit-id: e9a9590d552c826aaacdb731c18cc7ae39d93919",TRUE,TRUE,FALSE,FALSE,coding standards,,,random_batch_18_nov_2020
 worldforge/ember,b6944f6872f95e01d465c9548e7b92f57b944a67,"Make use of OO design for the QuickHelp lua code.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,by code,,,random_batch_18_nov_2020
 cakephp/cakephp,fb7717c0dad8101d853bea27b1a7f4211046d2b2,"Fix wonky tabs.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 mltframework/shotcut,5022c16735b48aaa2302a9e5dd72afe9818e874b,"add LissajousWidget
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 ctrlo/GADS,adb81209513da521d961a2f6edd89a1fe16eed64,"Merge branch 'lua' of github.com:ctrlo/GADS into lua
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 InnovateUKGitHub/innovation-funding-service,90500842761fe56b3f4f078caa6c260f5c8f6cad,"INFUND-1788 - removed RestResultBuilder in favour of convenience methods on ServiceResults to produce RestResults for different situations
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,in favour of convenience methods,,,random_batch_18_nov_2020
 MaibornWolff/codecharta,7878ca15ea7b299620f9bad40e28b1bf0839f113,"repositioned vew-cube and sidenav #525
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,repositioned,by code,,random_batch_18_nov_2020
 Koha-Community/Koha,7107930b908d00208ac11caf5b84862f9ea72dca,"updating translations for release
 
 Signed-off-by: Joshua Ferraro <d80943125a911844a3c3deaf419ab4e1af1e85aa@liblime.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,updated,by code,,random_batch_18_nov_2020
 rcn-ee/meta-processor-sdk,12f0fe03aa730e1b3bd9411818d750c1fde6e4c9,"udev: remove unused bbappend
 
 Signed-off-by: Jacob Stiffler <0ec61db87821c27ca8ee6f3e24c6f93fdbb785d4@ti.com>
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,remove unused,,,random_batch_18_nov_2020
 frappe/erpnext,c6da5fb38e72a4dc999642e7083c2e26414cb8b1,"fix:guess timezone using moment
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020
 Taeung/tip,1aed28f94ce6c1f6c24bcbbd5fcd749b55f65e9e,"arm64: vdso: add __init section marker to alloc_vectors_page
 
 It is not needed after booting, this patch moves the alloc_vectors_page
@@ -1413,21 +1413,21 @@ function to the __init section.
 Acked-by: Mark Rutland <1db9dd262beaa64f35756dd39531d9747b7778bb@arm.com>
 Signed-off-by: Jisheng Zhang <32a98b7880ab27b0cd7901af249e2ffd9126af80@marvell.com>
 Signed-off-by: Will Deacon <b913f13ef92ac157955c954ccaaff7be065faba4@arm.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 wordpress-mobile/WordPress-Android,8c427e49c37dfb494dbd88f572d119cb90348ad7,"Update FluxC version
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update library version,,,random_batch_18_nov_2020
 p2pu/learning-circles,7544874aebc5926828c81220b55420a21b4a0dfc,"Activate the learning circle language when sending learner messaging
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,activate,,,random_batch_18_nov_2020
 zaproxy/zaproxy,0d00c681620a6ac0edc315535688b78c88a8a69e,"Merge pull request #4075 from psiinon/develop
 
-Updated mac icons",,,,,,,,random_batch_18_nov_2020
+Updated mac icons",FALSE,FALSE,TRUE,FALSE,updated,,,random_batch_18_nov_2020
 lammps/lammps,ea6d8cbe23761f51490b068e0599642ba3526bc5,"Adding kspace_modify diff option to select the PPPM differentiation method.
 
 git-svn-id: 53f22b28e73aa627d2a2069eeb1f23c43fecd57f@8040 f3b2605a-c512-4ea7-a41b-209d697bcdaa
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020
 alphagov/publishing-api,979479f908a06fe592cd6818c42e2cd6ca064eef,"Merge pull request #1462 from alphagov/dependabot/bundler/govuk_app_config-1.12.0
 
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 binary-com/binary-bot,52fb5d649f6f0d4ee19d15eec729cec98036b306,"Merge pull request #126 from aminmarashi/fix-connection-recovery-on-start
 
 Fix connection recovery on start",,,,,,,,random_batch_18_nov_2020
