@@ -94,3 +94,6 @@ Eman Abdullah AlOmar, Mohamed Wiem Mkaouer, and Ali Ouni, "[Can refactoring be s
 [The Technical Debt Dataset](https://arxiv.org/pdf/1908.00827.pdf) [dataset](https://github.com/clowee/The-Technical-Debt-Dataset)
 
 [An Automatically Created Novel Bug Dataset and its Validation in Bug Prediction](http://www.inf.u-szeged.hu/~ferenc/pdf/FGG20-JSS-An%20automatically%20created%20novel%20bug%20dataset%20and%20its%20validation%20in%20bug%20prediction.pdf) [dataset](http://www.inf.u-szeged.hu/~ferenc/papers/BugHunterDataSet/)
+
+[Mining and Managing Big Data Refactoring for
+Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman_Alomar3/publication/349105868_Mining_and_Managing_Big_Data_Refactoring_for_Design_Improvement_Are_We_There_Yet/links/60207cc545851589398c1a5c/Mining-and-Managing-Big-Data-Refactoring-for-Design-Improvement-Are-We-There-Yet.pdf)
