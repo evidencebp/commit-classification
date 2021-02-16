@@ -25,6 +25,8 @@ Saha R, Lyu Y, Lam W, Yoshida H, Prasad M (2018) [Bugs.jar: A largescale, divers
 
 Herbold S, Trautsch A, Trautsch F, Ledel B (2019) [Issues with szz: An empirical assessment of the state of practice of defect prediction data collection](https://arxiv.org/abs/1911.08938). 1911.08938
 
+[https://github.com/rpau/git-commit-classifier](https://github.com/rpau/git-commit-classifier)
+
 [Enabling the Continuous Analysis of Security Vulnerabilities with VulData7](https://orbilu.uni.lu/bitstream/10993/36157/1/scam18.pdf) [repository](https://github.com/electricalwind/data7)
 
 Mills C, Parra E, Pantiuchina J, Bavota G, Haiduc S (2020) [On the relationship between bug reports and queries for text retrieval-based bug localization](https://link.springer.com/article/10.1007/s10664-020-09823-w). Empirical Software Engineering pp 1–42
@@ -92,3 +94,6 @@ Eman Abdullah AlOmar, Mohamed Wiem Mkaouer, and Ali Ouni, "[Can refactoring be s
 [The Technical Debt Dataset](https://arxiv.org/pdf/1908.00827.pdf) [dataset](https://github.com/clowee/The-Technical-Debt-Dataset)
 
 [An Automatically Created Novel Bug Dataset and its Validation in Bug Prediction](http://www.inf.u-szeged.hu/~ferenc/pdf/FGG20-JSS-An%20automatically%20created%20novel%20bug%20dataset%20and%20its%20validation%20in%20bug%20prediction.pdf) [dataset](http://www.inf.u-szeged.hu/~ferenc/papers/BugHunterDataSet/)
+
+[Mining and Managing Big Data Refactoring for
+Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman_Alomar3/publication/349105868_Mining_and_Managing_Big_Data_Refactoring_for_Design_Improvement_Are_We_There_Yet/links/60207cc545851589398c1a5c/Mining-and-Managing-Big-Data-Refactoring-for-Design-Improvement-Are-We-There-Yet.pdf)
