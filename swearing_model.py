@@ -113,6 +113,7 @@ positive_terms =[
  'stupid',
  'suck(s|ing|ed)?',
  'taking (a|the) piss',
+ 'tabarnak', # word in quebec used for unsatisfaction with the current situation
  'terrible',
  'tit(?:s)?',
  'trash',
