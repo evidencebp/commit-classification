@@ -50,6 +50,7 @@ positive_terms =[
  'clunge',
  'cock',
  'crap',
+ 'cuck(?:ed|s|ing|old)?',
  'cunt',
  'cow',
  'clusterfuck(?:s)?',
@@ -133,6 +134,7 @@ excluded_terms = ['awful\.[a-z]*', # Name of a common component
                   'my bad',
                   'not bad',
                   'shit happens',
+                  'cuckoo' # hash table
                   ]
 
 def build_positive_regex():
