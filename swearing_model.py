@@ -72,6 +72,7 @@ positive_terms =[
  'hideous',
  'horseshit',
  'horrible',
+ #'garbage', # Consider
  'gash',
  '(get|got) stuffed',
  #'git', # Aware of it, not suitable for git commit messages
@@ -121,7 +122,9 @@ positive_terms =[
  ]
 
 excluded_terms = ['awful\.[a-z]*', # Name of a common component
+                  'brainfuck', # Programming language
                   'clever as hell',
+                  'garbage collect(e|es|ed|ing|ion)',
                   'nasty (bug|error)',
                   'my bad',
                   'not bad',
