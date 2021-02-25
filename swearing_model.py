@@ -104,6 +104,7 @@ positive_terms =[
  'shameful',
  'shit',
  'shit(?:-|\s)?ass',
+ 'slap(?:s)? code',
  'slut(?:s)?',
  'snatch',
  'sod',
