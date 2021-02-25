@@ -9,6 +9,7 @@ Sources
 
 # https://twitter.com/gitlost # A twitter account that post developers swearing.
 https://github.com/travisnelson/sneezymud/blob/20590efc5e0fbd6b9d9236e0d0591af5da600d4f/code/constants.cc
+http://www.commitlogsfromlastnight.com/ # Suggested by thatguywiththatname2
 """
 
 
@@ -37,7 +38,7 @@ positive_terms =[
  # 'bad', # In most cases not used as a swear in programming context
  'bastard(?:s)?',
  'bint',
- 'bitch(?:s)?',
+ 'bitch(?:e)?(?:s)?',
  'bloody',
  'bloody hell',
  'bloody oath',
@@ -51,6 +52,7 @@ positive_terms =[
  'crap',
  'cunt',
  'cow',
+ 'clusterfuck(?:s)?',
  'dammit',
  'damn',
  'damnit',
