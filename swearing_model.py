@@ -111,6 +111,7 @@ positive_terms =[
  'ugl(y|ies|iest)',
  'wanker(?:s)?',
  'whore(?:s)?',
+ 'wtf',
 
  ]
 
