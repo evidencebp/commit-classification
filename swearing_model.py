@@ -60,6 +60,7 @@ positive_terms =[
  'fanny',
  'fool(ish)?',
  '(fuck|f\*ck|f\*\*k)(er|en|ing|s|ed)?',
+ 'fucktard',
  '(father|mother|brother|sister|child)(?:-|\s)?(fuck|f\*ck|f\*\*k)er',
  'freak',
  'jesus',
