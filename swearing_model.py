@@ -6,6 +6,9 @@ Sources
 # https://www.joe.co.uk/life/a-definitive-ranking-of-every-swear-word-from-worst-to-best-122544
 # https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
 # https://core.ac.uk/download/pdf/162166124.pdf
+
+# https://twitter.com/gitlost # A twitter account that post developers swearing.
+https://github.com/travisnelson/sneezymud/blob/20590efc5e0fbd6b9d9236e0d0591af5da600d4f/code/constants.cc
 """
 
 
@@ -63,6 +66,7 @@ positive_terms =[
  'fucktard',
  '(father|mother|brother|sister|child)(?:-|\s)?(fuck|f\*ck|f\*\*k)er',
  'freak',
+ 'jfdi', # Just F do it
  'jesus',
  'hell',
  'hideous',
@@ -90,6 +94,7 @@ positive_terms =[
  'repulsive',
  'revolting',
  'rotten',
+ 'rtfm', # Read The F Manual
  'rubbish',
  'shag',
  'shame',
