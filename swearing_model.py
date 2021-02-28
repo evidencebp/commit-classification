@@ -88,6 +88,7 @@ positive_terms =[
  'moron',
  'mortifying',
  'nasty',
+ 'pita',  # initials...
  'piss(ing|s|ed)',
  'piss(ing|s|ed)?(?:-|\s)?off',
  'poor',
@@ -108,6 +109,7 @@ positive_terms =[
  'slap(?:s)? code',
  'slut(?:s)?',
  'snatch',
+ # 'sob', # initial for two phrases. The more common is Synchronized OBject
  'sod',
  'son of a bitch',
  'stink(s|ing|ed)?',
