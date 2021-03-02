@@ -1430,60 +1430,60 @@ alphagov/publishing-api,979479f908a06fe592cd6818c42e2cd6ca064eef,"Merge pull req
 ",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 binary-com/binary-bot,52fb5d649f6f0d4ee19d15eec729cec98036b306,"Merge pull request #126 from aminmarashi/fix-connection-recovery-on-start
 
-Fix connection recovery on start",,,,,,,,random_batch_18_nov_2020
+Fix connection recovery on start",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 exteso/alf.io,88a5c2c9f6aeb50493ffa523bee1baa591ab4cfd,"#85 - fix syntax error
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,syntax error,,,random_batch_18_nov_2020
 SpongePowered/SpongeForge,230cc247c757673509a1c55a2a3abb037416a96f,"Bump common for unpooling of block snapshot builders.
 
 Signed-off-by: Gabriel Harris-Rouquette <f9869a2c93dad38a06e8fb39147155331a1102ab@me.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,"by code, updated a submodule",,random_batch_18_nov_2020
 aws/aws-sdk-php,4babc642c0113d0891fc650a3946fdaeac466b5d,"Added the ""quick start""  page to the docs
-",,,,,,,,random_batch_18_nov_2020
-sdss/marvin,767292fe5194021f26aba8d9e33b7d79217e174f,better handling of scalar inputs/ouputs in getSpaxels,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020
+sdss/marvin,767292fe5194021f26aba8d9e33b7d79217e174f,better handling of scalar inputs/ouputs in getSpaxels,TRUE,TRUE,FALSE,FALSE,better handling,,,random_batch_18_nov_2020
 jupyter/nbgrader,bff436c70dca31d5a8b921414863bbd57405d348,"Document using JupyterHub with SSL
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,document,by code,,random_batch_18_nov_2020
 lowmess/lowmess,03f2ec243a50522caa260b915b6aebd9021e80fa,":recycle: use rebass for heading variants
 
 instead of full-on custom components
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,use instead,,,random_batch_18_nov_2020
 kahing/goofys,45b29d8627a8364b9a9bd06b9dbebfb905b4ed45,"handle errors other than ENOENT when we do lookups
 
 in this particular case we are getting an error because keys are
 supposed to be valid utf-8
 
 fixes #156
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"fix, error",by code,,random_batch_18_nov_2020
 Esri/arcgis-runtime-samples-qt,d7d5e9d60e6152d100aeb48e043cebd20b25801f,"review feedback code and readme changes complete. Need to address comments
-",,,,,,,,random_batch_18_nov_2020
-ojrosten/sequoia,d6f035326d9974603669c22c7f8a1342aaa5db5f,Update index.md,,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,review changes complete,,,random_batch_18_nov_2020
+ojrosten/sequoia,d6f035326d9974603669c22c7f8a1342aaa5db5f,Update index.md,FALSE,TRUE,FALSE,FALSE,index.md,,,random_batch_18_nov_2020
 mozilla/pdf.js,f46fd9e306c7a2717a477d9a47846a3cfa04f463,"Fix (some) vulnerabilities reported by `npm audit`
 
 This was done automatically, using the `npm audit fix` command.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"fix, vulnerabilities",,,random_batch_18_nov_2020
 SonarSource/sonarqube,81a28a44dde692fd30f2f2196ace32bff229f892,"SONAR-2218 add whitelines between blocks of lines
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"add whitelines (of display, not in code)",by code,,random_batch_18_nov_2020
 yunity/karrot-frontend,77a8689a2fac9695e2988286717b2ed2060eeb0f,"update dependencies
-",,,,,,,,random_batch_18_nov_2020
-openstack/keystone,47e508350835a553c01a6d5b8a01267813641de4,"Merge ""Manager support for project cascade update""",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,by code,,random_batch_18_nov_2020
+openstack/keystone,47e508350835a553c01a6d5b8a01267813641de4,"Merge ""Manager support for project cascade update""",FALSE,FALSE,TRUE,FALSE,support,,,random_batch_18_nov_2020
 vroyer/elassandra,274044e7dd7c8964a5551e8f6b0aa44286f4b6ba,"push settings change before refresh, when shard becomes inactive
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,push,,,random_batch_18_nov_2020
 widelands/widelands,42308d81c5b1052ca27b160fc8121134748e79a1,"fix typo
 
 git-svn-id: 88d40fef3c8568824a603fa0846ce1d6fe5582e9@3482 37b2a8de-5219-0410-9f54-a31bc463ab9c
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020
 kubernetes/test-infra,5829c72d8a5aa080947a0f8f52e4dd5c6550796c,"Lazily fetch labels in trustedPullRequest()
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,lazy fetch,,,random_batch_18_nov_2020
 llvm-mirror/llvm,e07415d4006b923ed1d2057ffa5a493353e28f9e,"implement expand for ISD::DECLARE by just deleting it.
 
 
 git-svn-id: 0ff597fd157e6f4fc38580e8d64ab130330d2411@47708 91177308-0d34-0410-b5e6-96231b3b80d8
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,implement,"code add 3 lines, not delete them",,random_batch_18_nov_2020
 supercollider/supercollider,c7048c84291a023b7e225545bacb423d5db01958,"fix scsynth exit code for NRT
 
 git-svn-id: 862dfb0a87bde8384fe22bc4dc6968ec7c7ecd70@5849 a380766d-ff14-0410-b294-a243070f3f08
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 abilian/abilian-core,f5513bbeda9f83ec3c9bd3a1875c69c0fc1cdba1,"add tox debug info
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 druid-io/druid,6b232d8195b150ff642b883808712e3d20b7961a,"Improve compaction tutorial to demonstrate compaction with keepSegmentGranularity = true (#7079)
 
 * Improve compaction tutorial to demonstrate compaction with keepSegmentGranularity = true
@@ -1491,9 +1491,9 @@ druid-io/druid,6b232d8195b150ff642b883808712e3d20b7961a,"Improve compaction tuto
 * typo
 
 * add a warning
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,tutorial,by code,,random_batch_18_nov_2020
 pbek/QOwnNotes,b17d97803f89cfa596718874cdf69916616bbe16,"Merge remote-tracking branch 'upstream/develop' into develop
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 Taeung/tip,3daa020f9bf803c03c6b6c895921e2b09fcd494a,"Revert ""svcrdma: Do not send XDR roundup bytes for a write chunk""
 
 This reverts commit 6f18dc893981e4daab29221d6a9771f3ce2dd8c5.
@@ -1508,32 +1508,32 @@ second byte nor the XDR pad would be written to the client.""
 
 Cc: Chuck Lever <e7d8216bf9b1956703857d0050bd04192118f43d@oracle.com>
 Signed-off-by: J. Bruce Fields <51738506c1b2ccb0761f23bdc612c93babf738ea@redhat.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,"revert, wrong",,,random_batch_18_nov_2020
 xeroc/python-graphenelib,1c7cb84838b79364cb820f18c3d95a0bd488d31c,"more unit tests
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,more tests,,,random_batch_18_nov_2020
 datawire/ambassador,ee2699771692e972356c88c1a40e8688158ceceb,"Set GIT_BRANCH in the Makefile, instead of in .travis.yml
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,set.. instead of,by code,,random_batch_18_nov_2020
 lamsfoundation/lams,abec6d99c5b712413426cb5cbc7701c6d2b10158,"replaced by m_EditActivity.jsp
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,replaced by,by code,,random_batch_18_nov_2020
 apache/zookeeper,3249687c7c5b91e0d4c7cd8b38da6283b1bb65c4,"ZOOKEEPER-1046: Creating a new sequential node results in a ZNODEEXISTS error
 
 git-svn-id: d7c778eb01848c8314be709a01eafe85ba01f120@1138958 13f79535-47bb-0310-9956-ffa450edef68
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,creating,,,random_batch_18_nov_2020
 borisyankov/DefinitelyTyped,49b1ac6a384fab428e0bad052b47f47ff8306193,"Rename all entry points to index.d.ts and explicitify all file lists
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,rename,,,random_batch_18_nov_2020
 govCMS/govCMS,4a79fe9de8c65a5dec4558c8a7fb0fc43602bb43,"Merge pull request #79 from typhonius/robots.txt-fix
 
-Implements a fix for https://bugs.php.net/bug.php?id=61286",,,,,,,,random_batch_18_nov_2020
-postmanlabs/newman,31fab428c3dc516fc3088b63f839a3f5c88f6d8d,fix(package): update postman-request to version 2.88.1-postman.12,,,,,,,,random_batch_18_nov_2020
+Implements a fix for https://bugs.php.net/bug.php?id=61286",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
+postmanlabs/newman,31fab428c3dc516fc3088b63f839a3f5c88f6d8d,fix(package): update postman-request to version 2.88.1-postman.12,FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 pytest-dev/pytest,48ac1a0986e105dc95dbed194019ae9a1eb3b5ab,"Merge branch 'remove-old-entry-points' into features
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,remove old entry points,,,random_batch_18_nov_2020
 quintel/etmodel,8cc53621857c05209314073560d8fef997e866bb,"Merge branch 'master' into issues/2283_integrate_co2_charts
 
 Conflicts:
 	db/schema.rb
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,integrate,,,random_batch_18_nov_2020
 linbox-team/linbox,50b0610f47335fe670bc142865f0f71f84726933,"pass poly ring into invariant factors domain
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,pass,"by code, added a parameter",,random_batch_18_nov_2020
 Taeung/tip,31d4c528cea4023cf36f6148c03bb960cedefeef,"cpufreq: scpi: Fix use after free
 
 Free the priv structure only after we are done using it.
@@ -1542,23 +1542,23 @@ Fixes: 1690d8bb91e370ab (""cpufreq: scpi/scmi: Fix freeing of dynamic OPPs"")
 Signed-off-by: Vincent Stehlé <54d054b96e74e554ed4c5f2244963ef0a98f708f@laposte.net>
 Cc: 4.20+ <4fbacc2fa0ffdbb11bf1ad6925b886ebd08dd15f@vger.kernel.org> # 4.20+
 Signed-off-by: Rafael J. Wysocki <27ffc44a8ec6a212fba98cfc3246c6ce8ab131e0@intel.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,,use after free,,random_batch_18_nov_2020
 RPi-Distro/python-gpiozero,ef554d896d55e3a2a86b3a9dd5cc78141441f2d5,"Fix tests for pinout
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 brandur/sorg,369b2c5a06f793a9eb29ddcb612e4bf4764d64db,"Give URLs 50 characters
 
 Hopefully this will get most URLs to the point where they're not being
 truncated.
 
 
-Former-commit-id: 8338127eb93d37611e5d9d094d9e9b6b245ceb5c",,,,,,,,random_batch_18_nov_2020
+Former-commit-id: 8338127eb93d37611e5d9d094d9e9b6b245ceb5c",FALSE,FALSE,TRUE,FALSE,,The truncation might be a bug,,random_batch_18_nov_2020
 vroyer/elassandra,872412f6451b965dc57ecff2a95a3d02bd558634,"[Tests] Cleans up DocWriteResponse parsing tests (#23233)
 
 This commit cleans up some parsing tests added from the High Level Rest Client: IndexResponseTests, DeleteResponseTests, UpdateResponseTests, BulkItemResponseTests.
 
-These tests are now more uniform with the others test-from-to-XContent tests we have, they now shuffle the XContent fields before parsing, the asserting method for parsed objects does not used a Map<String, Object> anymore, and buggy equals/hasCode methods in ShardInfo and ShardInfo.Failure have been removed.",,,,,,,,random_batch_18_nov_2020
+These tests are now more uniform with the others test-from-to-XContent tests we have, they now shuffle the XContent fields before parsing, the asserting method for parsed objects does not used a Map<String, Object> anymore, and buggy equals/hasCode methods in ShardInfo and ShardInfo.Failure have been removed.",TRUE,TRUE,FALSE,FALSE,clean up,,,random_batch_18_nov_2020
 Tinkerforge/brickv,d20348cac78017910957af055bcd53f7d2edf8ab,"Update service provider info for mobile internet
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 ZeroK-RTS/Zero-K,1c3e48bc7fb6f4a3873468cf1d68516eb877c624,"Zero-K Russification
 - Crasher
 - Licho
@@ -1570,34 +1570,34 @@ Typo:
 - Impaler
 
 svn path=/trunk/mods/zk/; revision=11601
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,russification,by code,,random_batch_18_nov_2020
 consulo/consulo,7033856042e1bf613ba64d1152e32146ea9e59d9,"Usages of deprecated API removed
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,deprecated removed,,,random_batch_18_nov_2020
 GNOME/glib,9574dbd2282e1fcf7bb5836c85cfff536bf4a7cf,"Be more careful about overwriting errors
 
 When trying to parse again, we don't want to overwrite the exiting
 error.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,The message sounds more like a lesson for life than a description.,by code,,random_batch_18_nov_2020
 bgd-point/point-app-test,5f90057a6acb22096f8db426b73192224185e9ae,"changed regex to accept more date format, less and cleaner code
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,TRUE,FALSE,"changed, cleaner code",,,random_batch_18_nov_2020
 stinsonga/emacs-mirror,68f13422042d086b6210a66282169a2dd0974ea3,"Move the cert files to the data directory
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,move files,,,random_batch_18_nov_2020
 vuejs/jp.vuejs.org,d729ae82bc87e02913b8265b80924d4d66ac2bd1,"fix mixin (#1374)
 
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 centminmod/centminmod,b77896d2a75446edb95ceb327c00ea6a9736c739,"fix php-fpm compile errors missing uw-imap-devel and libtidy-devel packages for CentOS 7
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 bronzehedwick/chrisdeluca,50bfa05e3e64232d731f2ef3e46f7652f3f66e64,"Add a title for table of contents.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 apache/incubator-shardingsphere,1602e69d21798722e7d4577b6064e3da56024c05,"Merge branch 'dev' of ssh://github.com/shardingjdbc/sharding-jdbc into dev
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge sharding,,,random_batch_18_nov_2020
 googleapis/google-cloud-dotnet,1b40cc5e1a1bdb32e3bc1c1565a240e0663e7a84,"Allow .repo-metadata.json release level to be overridden
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,allow,,,random_batch_18_nov_2020
 stratisproject/StratisBitcoinFullNode,1cdff95e9eed1922266a67385b68e042b91b494d,"Cleanup network usage in NBitcoin #5 (#1623)
 
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020
 randombit/botan,90c91d724b44a4aff6ffddddee38376593d5769d,"More CLI tests
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,more tests,,,random_batch_18_nov_2020
 khartec/waltz,58b201f5b8e543a066867e0e6313d59f219fb99b,"Ensure enums loaded before view rendering
 
 #2583
