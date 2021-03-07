@@ -97,3 +97,6 @@ Eman Abdullah AlOmar, Mohamed Wiem Mkaouer, and Ali Ouni, "[Can refactoring be s
 
 [Mining and Managing Big Data Refactoring for
 Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman_Alomar3/publication/349105868_Mining_and_Managing_Big_Data_Refactoring_for_Design_Improvement_Are_We_There_Yet/links/60207cc545851589398c1a5c/Mining-and-Managing-Big-Data-Refactoring-for-Design-Improvement-Are-We-There-Yet.pdf)
+
+
+[Mining Software Repositories with a Collaborative Heuristic Repository](https://arxiv.org/pdf/2103.01722.pdf) [dataset](https://github.com/giganticode/bohr)
