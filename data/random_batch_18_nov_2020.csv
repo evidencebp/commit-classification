@@ -9,18 +9,18 @@ root-mirror/root,e41c550e9371bc246a66df25edd02fec109d67b0,"win32gdk source files
 git-svn-id: acec3fd5b7ea1eb9e79d6329d318e8118ee2e14f@3309 27541ba8-7e3a-0410-8455-c3a389f83636
 ",FALSE,FALSE,TRUE,FALSE,,,FALSE,random_batch_18_nov_2020
 yuanming-hu/taichi,1bd17f6f1507a07b1a8896511642f72eac19843b,"removed all return values of runtime initialization functions
-",,,TRUE,,removed,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020
 otwcode/otwarchive,f96a19672775cc67940c99e5a0a3043b97a1ee29,"Merge pull request #988 from tuff-ghost/issue_3380
 
-3380 & 2928: rewrite ibox (modal dialogs) plugin",TRUE,TRUE,,,rewrite,,,random_batch_18_nov_2020
+3380 & 2928: rewrite ibox (modal dialogs) plugin",TRUE,TRUE,FALSE,FALSE,rewrite,,,random_batch_18_nov_2020
 onfido/onfido-sdk-ui,faf36e397d15a7ebe69f430b2187e315cbbf373d,"Merge pull request #818 from onfido/feature/fix-readme-indentation-cx-4204
 
-Fix readme indentation for callbacks",,TRUE,,,fix readme,,,random_batch_18_nov_2020
+Fix readme indentation for callbacks",FALSE,TRUE,FALSE,FALSE,fix readme,,,random_batch_18_nov_2020
 Microsoft/msbuild,202f2203d5c50ba9f54a3980bc37d939f073e680,"Merge pull request #493 from cdmihai/cdmihai-table-build-status
 
-Show build status in a table",,,TRUE,,show,,,random_batch_18_nov_2020
+Show build status in a table",FALSE,FALSE,TRUE,FALSE,show,,,random_batch_18_nov_2020
 spinnaker/clouddriver,38b0d8dfe31be0ee0c29ff8b1ad8f565e8534cd4,"[Gradle Release Plugin] - new version commit:  '0.9-SNAPSHOT'.
-",,TRUE,,,new version,,FALSE,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,new version,,FALSE,random_batch_18_nov_2020
 maxcom/lorsource,31a010ba3969eb6781873d222fce3ba4683c8dc9,"Merge branch 'master' of github.com:/maxcom/lorsource
 ",FALSE,FALSE,TRUE,FALSE,,,FALSE,random_batch_18_nov_2020
 wordpress-mobile/WordPress-iOS,1e356eb744214a72c1b1422f7f4ddd825aa04d09,"Post Settings: Style featured image cell.
@@ -1601,14 +1601,14 @@ randombit/botan,90c91d724b44a4aff6ffddddee38376593d5769d,"More CLI tests
 khartec/waltz,58b201f5b8e543a066867e0e6313d59f219fb99b,"Ensure enums loaded before view rendering
 
 #2583
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,ensure,by code,FALSE,random_batch_18_nov_2020
 matrix-org/matrix-react-sdk,717780ce60a65685fa1d70fa861aedd567c588d9,"Translated using Weblate (French)
 
 Currently translated at 92.9% (1431 of 1539 strings)
 
 Translation: Riot Web/matrix-react-sdk
 Translate-URL: https://translate.riot.im/projects/riot-web/matrix-react-sdk/fr/
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,translated to French,by code,,random_batch_18_nov_2020
 SAP/openui5,52ec2901203fa8b4e82a387c60fad24ef2b40cd6,"[INTERNAL][FIX] sap.m.Toolbar: Info-CTX visual corrected
 
 - Info Toolbar`s 
@@ -1618,64 +1618,64 @@ SAP/openui5,52ec2901203fa8b4e82a387c60fad24ef2b40cd6,"[INTERNAL][FIX] sap.m.Tool
 
 Change-Id: Icc5721fcdee2e7aab3be9919dedf227c239cdabe
 BCP: 1770015657
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,corrected,,,random_batch_18_nov_2020
 arangodb/arangodb,fd9499e68fba101dd3cf161b3f1e7af29239375f,"Merge branch 'aql2' of github.com:triAGENS/ArangoDB into aql2
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 CaliOpen/CaliOpen,c5403dac2ed2c38f5f05e1948b437aa14bcc02b5,"An error is not an info message
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,increased logging priority for errors,by code,,random_batch_18_nov_2020
 zeit/next.js,7774101ad155dea1d45ff42225ba564e921bc359,"Skip paths that are routed to a .d.ts file (#11322)
 
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,skip,by code,,random_batch_18_nov_2020
 apollographql/apollo-client,b88da6da1dd70f120f4731f822f42c501811b894,"Decompose getResultsFromLink method from fetchQueryObservable.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,decompose,by code,,random_batch_18_nov_2020
 openstack-infra/project-config,9fefa3e8238109aa3e0e37e6a6679e6071672c25,"New repos for Akanda
 
 Added 5 new repos for the akanda project.
 
 Change-Id: I558c7898151c5c659e737666ad79066d374e4a00
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"added, new",,,random_batch_18_nov_2020
 Microsoft/vscode,1cdbbc5ad4ef15c26c9d041c14d0aa7cd875f5aa,"debug-start polish
 
 fixes #16657
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,Polish,by code,FALSE,random_batch_18_nov_2020
 CuteOne/BadRotations,6c9ec72f5a96199e2ab9bb24d14044986eb21b28,"Update to README
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,readme,,,random_batch_18_nov_2020
 ceolter/angular-grid,10352d1d3ebab1d8e3580f986613d2a494339090,"AG-2185 - added a guide for the SSRM + node.js + MySQL.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,guide,by code,,random_batch_18_nov_2020
 maxcom/lorsource,e611e3a38cc13364afcf7565f18c0afb13c6bda4,"Merge pull request #884 from maxcom/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.9.10.1
 
-Bump jackson-databind from 2.9.10 to 2.9.10.1",,,,,,,,random_batch_18_nov_2020
+Bump jackson-databind from 2.9.10 to 2.9.10.1",FALSE,FALSE,TRUE,FALSE,bump jackson-databind,,,random_batch_18_nov_2020
 PrinceOfAmber/CyclicMagic,2ddf6ab679ef12e3f67858757d636a0f9e68f417,"adding custom potion instead of relying on extending ItemPotion class
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,adding. Sounds as a possible refactor too but the code is different,by code,,random_batch_18_nov_2020
 demisto/content,12727be1a5a7955929b6be713068f8398e5d8325,"Merge branch 'master' into ArtifactsSeparation
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 project-ncl/pnc,7337cfa7a39e110ff9abac373fe2c8f0a8139eaf,"[NCL-4898] implement RSQLProducer DTO getComparator
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,implement,,,random_batch_18_nov_2020
 Mashape/kong,151b95721006cd81ac95c071ffd8f5199c9741ec,"feat(tests) res_status() helper prints err logs on HTTP 500
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,feat (conventional commit mark),by code,,random_batch_18_nov_2020
 icescrum/iceScrum-core,395d91ba16d3ae0d060d27275e3e96b8291c757b,"Export stakeholders
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,export,by code,,random_batch_18_nov_2020
 Fluorohydride/ygopro-scripts,a3c1ec85a406952cc94b68a74eb8f02dce486c45,"Merge pull request #121 from Lsty/patch-11
 
-Update c67723438.lua",,,,,,,,random_batch_18_nov_2020
+Update c67723438.lua",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020
 neinteractiveliterature/intercode,6ed44a2db78ca5f4a7424b2aeb461f8a368d943a,"Merge pull request #1091 from neinteractiveliterature/dependabot/bundler/memory_profiler-0.9.11
 
-Bump memory_profiler from 0.9.10 to 0.9.11",,,,,,,,random_batch_18_nov_2020
+Bump memory_profiler from 0.9.10 to 0.9.11",FALSE,FALSE,TRUE,FALSE,bump memory_profile,by code,,random_batch_18_nov_2020
 JetBrains/intellij-community,63c7b543b88617812ad68e9a54d487708aeaca57,"Initialize UI lazily in createComponent() to ensure that tree builder will be disposed, if it was created
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,initilize,,,random_batch_18_nov_2020
 MaharaProject/mahara,3ffb8160cd805ca4768ba6db99d83153d9451c9b,"Removed collabsabletree.js, we don't need it anymore
-",,,,,,,,random_batch_18_nov_2020
-giloutho/Logfly,0b9b46194920b1c31871b02c9737d19be6f383bf,"New option ""Glider flight time"" in context menus",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,removed - we don't need it,"dead code removal, by code",,random_batch_18_nov_2020
+giloutho/Logfly,0b9b46194920b1c31871b02c9737d19be6f383bf,"New option ""Glider flight time"" in context menus",FALSE,FALSE,TRUE,FALSE,new,,,random_batch_18_nov_2020
 drawpile/Drawpile,60f5b0c5a519128ba5e75b369c86a38356462185,"Zero init the null raster.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,init,,,random_batch_18_nov_2020
 psathyrella/partis,7dfdb5435ea63de70f0f6b7c3b4db8ab8fb92e9d,"change logprob thresholds
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,change,,,random_batch_18_nov_2020
 tananaev/traccar,ebd193d4d5a98f7b53cc229f1c7287d05465b13e,"Handle eSky negative coords
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,handle,,,random_batch_18_nov_2020
 kiegroup/kie-wb-common,6a21cf3b7caba4f89dce07fab007e5b5cfe69db3,"GUVNOR-2365: Repository remains in repositories list after it is deleted
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,no syntactic evidence,by code,FALSE,random_batch_18_nov_2020
 fogbeam/zeppelin_mirror,7b225fa64c59dc1a58d50d280a6f62541a045d85,"Bumping up version from 0.2.0-SNAPSHOT -> 0.3.0-SNAPSHOT
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,bump,by code,,random_batch_18_nov_2020
 qtproject/qtwebengine,cd307cdb7d4dfbdaf7c9e7a81f9c39e477909621,"Improve quicknanobrowser example with new public API features
 
 Promote WebEngineDownloadItem and WebEngine singleton to
@@ -1685,11 +1685,11 @@ to quicknanobrowser.
 
 Change-Id: Ie81fb330e640fad7feec667a8af3afe67050693f
 Reviewed-by: Michael Brüning <6ed2188a469847f04326c35751af3c3b73548103@theqtcompany.com>
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,TRUE,FALSE,"improve, adds",by code,,random_batch_18_nov_2020
 opencog/atomspace,d708909f85aa3f3548fa914e9640b52771fcd52b,"Complete conditional instantiation meta rule
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,by code,,,random_batch_18_nov_2020
 alpha-asp/Alpha,597b905df78f91ea282388fb35110024b93c3dbf,"Check for internal atoms using flag not pred name
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"logic change, by code, no syntactic evidence",,,random_batch_18_nov_2020
 rabbitmq/rabbitmq-website,b4e91e9d2289d51341b1466d02885da22d670aa3,"Merge branch 'stable'
 ",,,,,,,,random_batch_18_nov_2020
 realfastvla/rfpipe,1033416042392d513f13cfc99319e73f5fdd4c49,Merge branch 'cand-redesign' into master,,,,,,,,random_batch_18_nov_2020
