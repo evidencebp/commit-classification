@@ -49,3 +49,7 @@ See here the [corrective commit probability code](https://github.com/evidencebp/
 ## [Labeling Protocols](https://github.com/evidencebp/commit-classification/tree/master/labeling_protocols)
 There are many nuances in the definition of concepts.Should a typo be considered a bug fix?What about bugs in test files?
 We defined protocols that prosent the guidelines with respect to them we label.That makes the decision taken transparent and helps researchers considering a dataset to decide if it fits their needs.
+
+## [Data sets](https://github.com/evidencebp/commit-classification/tree/master/data)
+
+This directory contains manually labeled data sets for the classifiers.The samples are labeled by the protocol.The sampling column, when exists, references the query used to sample them.This is important since random sampling, a sample of hits and active learning sampling have different properties and usage.
