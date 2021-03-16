@@ -60,6 +60,10 @@ Python code that builds each of the models.
 Our models are aimed to run on Bigquery and therefore should be implemented using regular expression.
 The Python code is used for decomposition and reuse and makes the code more concise.
 
+
+## [Resources](https://github.com/evidencebp/commit-classification/blob/master/resources.md)
+There is plenty of great work in the field.Data sets are being created, language constructs are published.We collect here links that can be useful for linguistic analysis in software engineering.If you are familiar with such resources, please inform us.
+
 ## Related repositories
 
 See here the [research infrostructure](https://github.com/evidencebp/general) constructing our software engineering scheme
