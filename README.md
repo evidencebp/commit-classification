@@ -40,10 +40,6 @@ Please cite as
 } 
 ```
 
-See here the [analysis utilities](https://github.com/evidencebp/analysis_utils)
-
-See here the [corrective commit probability code](https://github.com/evidencebp/corrective-commit-probability)
-
 # Project structure
 
 ## [Labeling Protocols](https://github.com/evidencebp/commit-classification/tree/master/labeling_protocols)
@@ -57,3 +53,18 @@ This directory contains manually labeled data sets for the classifiers.The sampl
 ## [Queries](https://github.com/evidencebp/commit-classification/tree/master/queries)
 
 Our main data source is [BigQuery GitHub scheme](https://console.cloud.google.com/bigquery?d=github_repos&p=bigquery-public-data&page=dataset) and the [research infrostructure](https://github.com/evidencebp/general) we built upon it. The queries directory contains queries for sampling the data set and big query functions (generated from the Python models and used on BigQuery).
+
+## Main directory
+
+Python code that builds each of the models.
+Our models are aimed to run on Bigquery and therefore should be implemented using regular expression.
+The Python code is used for decomposition and reuse and makes the code more concise.
+
+## Related repositories
+
+See here the [research infrostructure](https://github.com/evidencebp/general) constructing our software engineering scheme
+
+See here the [analysis utilities](https://github.com/evidencebp/analysis_utils)
+
+
+See here the [corrective commit probability code](https://github.com/evidencebp/corrective-commit-probability), using all the above
