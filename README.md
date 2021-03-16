@@ -43,3 +43,9 @@ Please cite as
 See here the [analysis utilities](https://github.com/evidencebp/analysis_utils)
 
 See here the [corrective commit probability code](https://github.com/evidencebp/corrective-commit-probability)
+
+# Project structure
+
+## [Labeling Protocols](https://github.com/evidencebp/commit-classification/tree/master/labeling_protocols)
+There are many nuances in the definition of concepts.Should a typo be considered a bug fix?What about bugs in test files?
+We defined protocols that prosent the guidelines with respect to them we label.That makes the decision taken transparent and helps researchers considering a dataset to decide if it fits their needs.
