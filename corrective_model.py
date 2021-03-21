@@ -131,6 +131,7 @@ valid_fix_object = prefective_entities + ['#',
                     'white(?: |-)?space(s)?']
 
 valid_terms = [
+    'break\sout',
     'error(?: |-)?check(ing)?',
     'error(?: |-)?handling',
     'error message(s)?',
@@ -331,8 +332,15 @@ if __name__ == '__main__':
     print_corrective_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
-    text = """fixed, now what?""".lower()
-    print(is_fix(text))
+    text = """"arch/tile: break out the ""csum a long"" function to <asm/checksum.h>
+
+This makes it available to the tilegx network driver.
+
+Signed-off-by: Chris Metcalf <074881f6f5da4d3b5278870ff234d1077ee622c0@tilera.com>
+"
+""".lower()
+    print("is fix", is_fix(text))
+    print("big in text", re.findall(build_bug_fix_regex(), text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
     #print(re.findall(r'(merge (branch|pull request).{0,250}(\r\n|\r|\n|$)|merge (branch|pull request).{0,250}(from|into).{0,250}(\r\n|\r|\n|$))'fix', text))
 
