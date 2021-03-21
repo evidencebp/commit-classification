@@ -34,7 +34,9 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 
 """
 To consider
-I forgot
+I forgot, forever, infinite loop
+
+Should conventional commits overide all - fix(postcss): filter conflicting order warnings
 """
 core_bug_terms = [
              'bug(s|z)?',
@@ -124,6 +126,7 @@ valid_fix_object = prefective_entities + ['#',
                     'cosmetic(?:s)?',
                     'cr(s)?(?:-)?',
                     'documentation(?:s)?',
+                    #'exception(?: |-)?handling',
                     #'format(s|ing)? fix(ed|es|ing)?',
                     'format(?:ing)?',
                     'help',
@@ -141,7 +144,6 @@ valid_terms = [
     'error(?: |-)?handling',
     'error message(s)?',
     'error report(s|ing)?',
-    'exception(?: |-)?handling',
     'fixed(?: |-)?point',
     'fix(?:ed) ticket(?:s)?',
     #'format(ing)?',
@@ -340,13 +342,7 @@ if __name__ == '__main__':
     print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
     text = """
-Copy [something] As Text"" -> ""Copy [something]""
-
-Since it's not plain text, so could be misleading, and there's no need
-to specify format as there aren't any other options.
-
-Also corrected some first-time tips dialog text.
-"
+Fix C exception handling 
 """.lower()
     print("is fix", is_fix(text))
     print("big in text", re.findall(build_bug_fix_regex(), text))
