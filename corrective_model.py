@@ -139,7 +139,7 @@ valid_terms = [
     'fixed(?: |-)?point',
     'fix(?:ed) ticket(?:s)?',
     'format(ing)?',
-    '(?:fix(?:ed)?|bug)(?: )?(?: |-|:)(?: )?\d+' + term_seperator,
+    '(?:fix(?:ed)?|bug)(?: )?(?: |-|=|:)(?: )?\d+' + term_seperator,
     '(if|would)[\s\S]{0,40}go wrong',
     'typo(s)?\sfix(es)?',
     'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
