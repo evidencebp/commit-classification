@@ -140,7 +140,7 @@ valid_terms = [
     'fixed(?: |-)?point',
     'fix(?:ed) ticket(?:s)?',
     'format(ing)?',
-    '(?:fix(?:ed)?|bug)(?: )?(?: |-|=|:)(?: )?\d+' + term_seperator,
+    '(?:fix(?:ed|es)?|bug)(?: )?(?: |-|=|:)(?: )?[a-z]{0,3}(?:-)?\d+' + term_seperator,
     '(if|would)[\s\S]{0,40}go wrong',
     'line(?:s)? break(?:s)?',
     'typo(s)?\sfix(es)?',
@@ -334,14 +334,35 @@ if __name__ == '__main__':
     print_corrective_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
-    text = """Make line breaks occupy same height as lines
+    text = """""Reduce execution times of longest tests
 
-Previous our space between paragraphs was set to be the same as the font
-size. DVLA set this space to be the same as the height of one line of
-text. This results in a difference of about 1.2mm, which is:
-- enough to notice, side by side
-- cumulatively enough to mess up page breaks
+Summary:
+=== mitkLabelSetTest ===
+- Reduce number of labels in general
+- Also removes testing of adding 65535 labels as it is extremely time consuming with the current std::map-based mitk::LabelSet type.
+- Reduces our test run durations by 10 minutes!
 
+=== mitkImageGeneratorTest ===
+- Reduce image dimensions of generated images
+- Reduces our test run durations by 5:30 minutes!
+
+Fixes T27952
+
+Test Plan:
+- `MitkMultilabelTestDriver mitkLabelSetTest`
+- `MitkCoreTestDriver mitkImageGeneratorTest`
+
+Reviewers: O1 MITK Reviewer Group I, floca
+
+Reviewed By: O1 MITK Reviewer Group I, floca
+
+Subscribers: floca
+
+Maniphest Tasks: T27952
+
+Differential Revision: https://phabricator.mitk.org/D438
+"
+"
 """.lower()
     print("is fix", is_fix(text))
     print("big in text", re.findall(build_bug_fix_regex(), text))
