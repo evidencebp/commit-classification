@@ -32,6 +32,10 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 
 # NPE, prevent, incompatible, roll back, nullptr, NullPointerException, assignment in  condition
 
+"""
+To consider
+I forgot
+"""
 core_bug_terms = [
              'bug(s|z)?',
              'bug(?:-|\s)?fix(es)?',
@@ -121,6 +125,7 @@ valid_fix_object = prefective_entities + ['#',
                     'cr(s)?(?:-)?',
                     'documentation(?:s)?',
                     #'format(s|ing)? fix(ed|es|ing)?',
+                    'format(?:ing)?',
                     'help',
                     'remark(s)?',
                     'space(s)?',
@@ -139,7 +144,7 @@ valid_terms = [
     'exception(?: |-)?handling',
     'fixed(?: |-)?point',
     'fix(?:ed) ticket(?:s)?',
-    'format(ing)?',
+    #'format(ing)?',
     '(?:fix(?:ed|es)?|bug)(?: )?(?: |-|=|:)(?: )?[a-z]{0,3}(?:-)?\d+' + term_seperator,
     '(if|would)[\s\S]{0,40}go wrong',
     'line(?:s)? break(?:s)?',
@@ -334,34 +339,13 @@ if __name__ == '__main__':
     print_corrective_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
-    text = """""Reduce execution times of longest tests
+    text = """
+Copy [something] As Text"" -> ""Copy [something]""
 
-Summary:
-=== mitkLabelSetTest ===
-- Reduce number of labels in general
-- Also removes testing of adding 65535 labels as it is extremely time consuming with the current std::map-based mitk::LabelSet type.
-- Reduces our test run durations by 10 minutes!
+Since it's not plain text, so could be misleading, and there's no need
+to specify format as there aren't any other options.
 
-=== mitkImageGeneratorTest ===
-- Reduce image dimensions of generated images
-- Reduces our test run durations by 5:30 minutes!
-
-Fixes T27952
-
-Test Plan:
-- `MitkMultilabelTestDriver mitkLabelSetTest`
-- `MitkCoreTestDriver mitkImageGeneratorTest`
-
-Reviewers: O1 MITK Reviewer Group I, floca
-
-Reviewed By: O1 MITK Reviewer Group I, floca
-
-Subscribers: floca
-
-Maniphest Tasks: T27952
-
-Differential Revision: https://phabricator.mitk.org/D438
-"
+Also corrected some first-time tips dialog text.
 "
 """.lower()
     print("is fix", is_fix(text))
