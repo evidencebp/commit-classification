@@ -142,12 +142,14 @@ valid_terms = [
     'format(ing)?',
     '(?:fix(?:ed)?|bug)(?: )?(?: |-|=|:)(?: )?\d+' + term_seperator,
     '(if|would)[\s\S]{0,40}go wrong',
+    'line(?:s)? break(?:s)?',
     'typo(s)?\sfix(es)?',
     'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
     build_sepereted_term(static_analyzers) + 'fix(es|ed)?',
     'fix(es|ed)?' + build_sepereted_term(static_analyzers) ,
     '^### Bug Fix', # tends to be a title, later stating if the commit is a bug fix
     'edit the jira link to the correct issue', # Another occurring title
+    'page(?:s)? break(?:s)?',
 
 
 ] + code_review_fixes
@@ -332,12 +334,14 @@ if __name__ == '__main__':
     print_corrective_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
-    text = """"arch/tile: break out the ""csum a long"" function to <asm/checksum.h>
+    text = """Make line breaks occupy same height as lines
 
-This makes it available to the tilegx network driver.
+Previous our space between paragraphs was set to be the same as the font
+size. DVLA set this space to be the same as the height of one line of
+text. This results in a difference of about 1.2mm, which is:
+- enough to notice, side by side
+- cumulatively enough to mess up page breaks
 
-Signed-off-by: Chris Metcalf <074881f6f5da4d3b5278870ff234d1077ee622c0@tilera.com>
-"
 """.lower()
     print("is fix", is_fix(text))
     print("big in text", re.findall(build_bug_fix_regex(), text))
