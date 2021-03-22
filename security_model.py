@@ -51,7 +51,7 @@ positive_terms = [
  #'expos(e|ing)',
  # 'hack', # A bit general, consider
  'hijack',
- 'harden(?:s|ed|ing)?',
+ #'harden(?:s|ed|ing)?',
  #'infinite loop', # consider
  'injection',
  '(in)?secur(e|ity)',
@@ -84,6 +84,7 @@ positive_terms = [
  #'token(?:s)?',
  #'traversal',
  'unauthori[z|s]ed',
+ 'vulnerable',
  'vulnerabilit(?:y|ies)',
  'x(?: |-)frame(?: |-)option(?:s)?',
  'xss',
@@ -172,10 +173,52 @@ def evaluate_security_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df')
+    print_concepts_functions_for_bq(commit='4f0da267bc6cb9783426d9f38bf1d1a075d9541b')
     #evaluate_security_classifier()
 
-    text = """ 
+    text = """"[POC] Multi-Model Puller (#989)
+
+* [WIP] Beginning logic for multi-model puller
+
+* change version to memory
+
+* moving puller to cmd
+
+* add downloader and requester logic
+
+* add retry logic to donwload
+
+* resolve intial comments
+
+* resolve comments and rebase
+
+* resolve comments
+
+* resolve comments and add s3 logic
+
+* have downloaded models be under a modelname
+
+* resolve comments
+
+* add unload logic
+
+* added retry logic and further hardening for failures
+
+* resolve comments and handle on-start
+
+* resolve comments and reorganize
+
+* fmt
+
+* resolve comments
+
+* inline puller
+
+* update go mod
+
+* move comment
+
+* remove unnnecessary comment" 
 """.lower()
     print("is fix", is_security(text))
     print("security in text", re.findall(build_positive_regex(), text))
