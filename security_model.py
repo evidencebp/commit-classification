@@ -73,13 +73,13 @@ positive_terms = [
  'remote code execution',
  'return oriented programming',
  #'(?:safe|safety|unsafe|safer)',
- '(?:safety|unsafe|safer)', # safe alone seems too general
+ #'(?:safety|unsafe|safer)', # safe alone seems too general
  'secret(?:s)?',
  'security',
  'session fixation',
  'spoof(?:s|es|ed|ing)?',
  'threat(?:s|ed|ing)?',
- 'tls', # transport layer security
+ #'tls', # transport layer security, sometime too general
  #'timing', # consider
  #'token(?:s)?',
  #'traversal',
@@ -92,7 +92,7 @@ positive_terms = [
     ]
 
 
-excluded_terms = ['_____PLACEHOLDER_____'
+excluded_terms = ['https://secure', # A too common link in commits
                   ]
 
 def build_positive_regex():
@@ -171,20 +171,31 @@ def evaluate_security_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='35bd1b2957f148d164de224fbe609dffafe4ea3c')
+    print_concepts_functions_for_bq(commit='179c9923bf1863606518744aaa7de11b66b5bcb7')
     #evaluate_security_classifier()
 
-    text = """Fix a ""wrong side of point"" error in CC Mode.  Fixes bug #28850.
+    text = """"Return $this from didApplyPatch() shortcut
 
-The cause was a scanning over a bracket pair taking us beyond the supplied
-LIMIT parameter in c-forward-declarator.
+Test Plan: "Return $this from didApplyPatch() shortcut
 
-* lisp/progmodes/cc-engine.el (c-forward-declarator): Add three checks (<
-(point) limit) whilst dealing with tokens after the declared identifier.
+Test Plan: https://secure.phabricator.com/diffusion/ARC/browse/master/src/lint/patcher/ArcanistLintPatcher.php;bd7dc8abaa7bb4c0$75?view=blame
 
-* lisp/progmodes/cc-fonts.el (c-font-lock-declarators): Don't supply a LIMIT
-argument to `c-forward-declarator' (twice), since we want to fontify up till
-the end of a declarator, not an arbitrary jit-lock chunk end.
+Reviewers: epriestley, jungejason
+
+Reviewed By: jungejason
+
+CC: aran
+
+Differential Revision: https://secure.phabricator.com/D2101
+"phabricator.com/diffusion/ARC/browse/master/src/lint/patcher/ArcanistLintPatcher.php;bd7dc8abaa7bb4c0$75?view=blame
+
+Reviewers: epriestley, jungejason
+
+Reviewed By: jungejason
+
+CC: aran
+
+Differential Revision: https://secure.phabricator.com/D2101
 "
 """.lower()
     print("is fix", is_security(text))
