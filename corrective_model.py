@@ -64,7 +64,8 @@ bug_terms = ['actual.*expected',
              'bad initialization(?:s)?',
              'buffer overflow(?:s)?',
              'fixme(?:s)?',
-             '(break|broke|breaking|broken)[\s\S]{0,20}(code|system|function|method)',
+             '(break|breaks|broke|broked|breaking|broken)[\s\S]{0,20}(code|system|function|method)',
+             '(this|that|it)\s(break|breaks|broke|broked|breaking|broken)',
              'break strict(?:-|\s)aliasing rule(s)?',
              'crash(?:ing|s|ed)?',
              'correct(?:ing|s|ed)?\\s*(a|the|some|few|this)', # make sure that correct serves as a verb
@@ -184,7 +185,7 @@ def build_valid_find_regex():
     fix_re = "(" + "|".join(fixing_verbs + [MERGE_PREFIX]) + ")"
     prefix = term_seperator + fix_re + '[\s\S]{1,40}' + "(" + "|".join(valid_fix_object) + ")" + term_seperator
 
-    suffix = "(" + "|".join \
+    suffix = term_seperator + "(" + "|".join \
         (valid_fix_object) + ")" + term_seperator + '[\s\S]{0,40}' + term_seperator + fix_re + term_seperator
 
     # TODO - check seperation
@@ -341,8 +342,11 @@ if __name__ == '__main__':
     print_corrective_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     print_core_bug_function(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_fix_classifier()
-    text = """
-Fix C exception handling 
+    #this fixed the bug 123
+
+    text = """ [acm-123] change
+    This breaks gpg-agent from GnuPG 2.0.
+Fixes-commit: bbf19124bbec9eb6298cef2914baae7ac74382fe
 """.lower()
     print("is fix", is_fix(text))
     print("big in text", re.findall(build_bug_fix_regex(), text))
