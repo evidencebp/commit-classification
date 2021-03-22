@@ -26,5 +26,10 @@ id,message,Is_Corrective,disable,comment
 25, [utils] Fix unified_timestamp  parsed by parsedate_tz(),1,0
 26, Merge pull request fix-documentation, 0,0
 28, fixed! now what?, 1,0, seperation should handle ! and comma
+29, This may not work, 0, 0,
+30, Do not wait for container on stop if the process doesn't exist.This fixes an issue that caused the client to hang forever if the
+process died before the code arrived to exit the `Kill` function., 1,0,
+31, fixes bug 483843, 1, 0, Fails since looks for two seperetors between fixes and bug
+32, fix uptime plugins for seconds_to_human change, 1, 0, identifies man in human
 
 
