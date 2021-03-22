@@ -12,7 +12,7 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq\
-    , build_sepereted_term, build_non_positive_linguistic
+    , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
 # Not sure list
@@ -21,6 +21,7 @@ from model_evaluation import classifiy_commits_df, evaluate_performance, evaluat
 
 positive_terms = [
  'advisory',
+ 'anti(?: |-)virus(?:es)?',
  'attack(?:s)?',
  'auth',
  'authenticat(e|ion)',
@@ -33,14 +34,20 @@ positive_terms = [
  'credential(s)?',
  'cross(?: |-)origin',
  'cross(?: |-)site',
+ '(?:cryptographic|cryptography)',
  'cve(-d+)?(-d+)?',
  'clickjack',
  'cyber',
+ 'decript' + REGULAR_SUFFIX,
+ 'decription',
  'denial of service',
  '(de)?serializ', # consider
  'directory traversal',
  'dos', # consider
+ 'encript' + REGULAR_SUFFIX,
+ 'encription',
  'exploit(?:s)?',
+ 'fire(?: |-)wall(?:s)?',
  #'expos(e|ing)',
  # 'hack', # A bit general, consider
  'hijack',
@@ -65,11 +72,14 @@ positive_terms = [
  'redos' # ReDoS
  'remote code execution',
  'return oriented programming',
- '(?:safe|safety|unsafe|safer)',
+ #'(?:safe|safety|unsafe|safer)',
+ '(?:safety|unsafe|safer)', # safe alone seems too general
+ 'secret(?:s)?',
  'security',
  'session fixation',
  'spoof(?:s|es|ed|ing)?',
  'threat(?:s|ed|ing)?',
+ 'tls', # transport layer security
  #'timing', # consider
  #'token(?:s)?',
  #'traversal',
@@ -161,7 +171,7 @@ def evaluate_security_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757')
+    print_concepts_functions_for_bq(commit='35bd1b2957f148d164de224fbe609dffafe4ea3c')
     #evaluate_security_classifier()
 
     text = """Fix a ""wrong side of point"" error in CC Mode.  Fixes bug #28850.
