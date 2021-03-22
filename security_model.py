@@ -24,12 +24,12 @@ positive_terms = [
  'attack(?:s)?',
  'auth',
  'authenticat(e|ion)',
- 'brute force', # consider
+ #'brute force', # consider
  'bug bount(y|ies)',
  'bypass(?:es|ed|ing)?', # consider
  'certificate(?:s)?',
  #'constant time', # too general
- 'crack',
+ 'crack(?:s)?',
  'credential(s)?',
  'cross(?: |-)origin',
  'cross(?: |-)site',
@@ -40,11 +40,11 @@ positive_terms = [
  '(de)?serializ', # consider
  'directory traversal',
  'dos', # consider
- 'exploit',
+ 'exploit(?:s)?',
  #'expos(e|ing)',
  # 'hack', # A bit general, consider
  'hijack',
- 'harden',
+ 'harden(?:s|ed|ing)?',
  #'infinite loop', # consider
  'injection',
  '(in)?secur(e|ity)',
@@ -58,7 +58,7 @@ positive_terms = [
  'password(?:s)?',
  'permission(?:s)?',
  'poison(?:s|es|ed|ing)?',
- 'port scan',
+ 'port scan(?:s|ed|ing)?',
  'privilege(?:s)?',
  # 'proof of concept', # consider
  'rce', # remote code execution
@@ -70,8 +70,8 @@ positive_terms = [
  'session fixation',
  'spoof(?:s|es|ed|ing)?',
  'threat(?:s|ed|ing)?',
- 'timing', # consider
- 'token(?:s)?',
+ #'timing', # consider
+ #'token(?:s)?',
  #'traversal',
  'unauthori[z|s]ed',
  'vulnerabilit(?:y|ies)',
@@ -161,29 +161,21 @@ def evaluate_security_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='079703f7a83e56a98d009570b52ca1f439f28081')
+    print_concepts_functions_for_bq(commit='a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757')
     #evaluate_security_classifier()
 
-    text = """When triggering audits, count ""Accepted"" revisions as successfully reviewed
+    text = """Fix a ""wrong side of point"" error in CC Mode.  Fixes bug #28850.
 
-Summary:
-See PHI1118. That issue may describe more than one bug, but the recent ordering changes to the import pipeline likely make this at least part of the problem.
+The cause was a scanning over a bracket pair taking us beyond the supplied
+LIMIT parameter in c-forward-declarator.
 
-Previously, commits would always close associated revisions before we made it to the ""publish"" step. This is no longer true, so we might be triggering audits on a commit before the associated revision actually closes.
+* lisp/progmodes/cc-engine.el (c-forward-declarator): Add three checks (<
+(point) limit) whilst dealing with tokens after the declared identifier.
 
-Accommodate this by counting a revision in either ""Accepted"" or ""Published (Was Previously Accepted)"" as ""reviewed"".
-
-Test Plan:
-  - With commit C affecting paths in package P with ""Audit Unreviewed Commits and Commits With No Owner Involvement"", associated with revision R, with both R and C authored by the same user, and ""R"" in the state ""Accepted"", used `bin/repository reparse --publish <hash>` to republish the commit.
-  - Before change: audit by package P triggered.
-  - After change: audit by package P no longer triggered.
-
-Reviewers: amckinley
-
-Reviewed By: amckinley
-
-Differential Revision: https://secure.phabricator.com/D20564
-
+* lisp/progmodes/cc-fonts.el (c-font-lock-declarators): Don't supply a LIMIT
+argument to `c-forward-declarator' (twice), since we want to fontify up till
+the end of a declarator, not an arbitrary jit-lock chunk end.
+"
 """.lower()
     print("is fix", is_security(text))
     print("security in text", re.findall(build_positive_regex(), text))
