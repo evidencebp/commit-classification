@@ -1,0 +1,1896 @@
+repo_name,commit,message,Is_Security,Justification,Certain,Comment,Sampling
+activescaffold/active_scaffold,ccf10dcee06beae80147d0bc4cc1971239c67343,"I dug a bit, and found a much cleaner way to address the issue with undefined security methods.
+",TRUE,security,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+Sage-Bionetworks/SynapseWebClient,a0f9faef5f07fc885a3f5dcd43140a1e98dc24c7,"in progress (expose last updated on)
+",FALSE,expose,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+spring-projects/spring-framework,d6635802c4fb9048aacece1e09734ac6626f475f,"TypeDescriptor's nested type traversal leniently returns null in case of unresolvable nested type
+
+Issue: SPR-11898
+",FALSE,trversal,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+rpm-software-management/dnf,311004df75e9ff64a1f9857f7606ca06938c5f52,"api: expose RepoDict.get_matching() and RepoDict.all() (RhBug:1071323)
+
+Renames get_multiple() to get_matching() and changes the KeyError handling to
+be more similar to what the builtin dict.get().
+
+Drops property on all(), dict.values() isn't a property either.
+",FALSE,expose,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+tprrt/linux-stable,9815d3288ed0540efc5f261ea1736f4327c4c9b5,"PCI: mobiveil: Update the resource list traversal function
+
+Code that executes the resource list traversal does not need to
+delete any node therefore using the *_safe() API version is
+useless.
+
+Replace function resource_list_for_each_entry_safe() with the
+resource_list_for_each_entry() counterpart.
+
+Signed-off-by: Hou Zhiqiang <6c0c8902386def638715cb5c29c831cf16ec8aa4@nxp.com>
+Signed-off-by: Lorenzo Pieralisi <b07d7e22a002c36e256b78f51f1f0db608e62a13@arm.com>
+Reviewed-by: Minghuan Lian <edc9fd01d7be6da9c99ad8f260a21609cbf862d0@nxp.com>
+Reviewed-by: Subrahmanya Lingappa <90ca29fbd03e49c341b889ad4bc03d9dfa4c159e@mobiveil.co.in>
+",FALSE,traversal,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+kevmaitland/PoshAnt,b482e61f56f34c4c6bfbfffe6bfa39110239f2ed,"Password Expiry for 365
+",TRUE,passwords,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+squid-cache/squid,bdda8114c3075fe6e58fd9fe57a404bfe69d8dd2,"Bug #2072: digest_pw_auth fails when using plaintext passwords
+
+digest_pw_auth may crash or otherwise fail when using plaintext passwords.
+
+Workaround (and more secure): Store Digest H(A1) hashed passwords instead.
+",TRUE,passwords,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+nwjs/chromium.src,9694a4c5ea2289ac47eff8bf9c6d85ac409d674c,"Get rid of has_major_certificate_errors
+
+This field is used to downgrade the browser security UI when a page loads a
+subresource over a connection with certificate errors. It was needed because we
+used to only populate cert_status conditionally when devtools is open. Now we
+populate cert_status unconditionally, so this field is redundant.
+
+Bug: 791047
+Cq-Include-Trybots: master.tryserver.chromium.linux:linux_mojo
+Change-Id: Ib49bd1642801c401cd16a152009f87dccb905c3e
+Reviewed-on: https://chromium-review.googlesource.com/817854
+Reviewed-by: John Abd-El-Malek <da3dd5c2657fecad769c041097dbd8ecd725687d@chromium.org>
+Commit-Queue: Emily Stark <351cd4dcb8ca60b28d6406fe7f489a1eda3af330@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#522957}",FALSE,certificate,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+GNOME/epiphany,6fb6efa2850bda26532bd1318648fdf61436a804,"Make the statusbar's GtkTooltips publicly accessibly.
+
+2004-05-01  Christian Persch  <chpe@cvs.gnome.org>
+
+	* src/ephy-statusbar.c: (ephy_statusbar_init),
+	(ephy_statusbar_finalize), (ephy_statusbar_set_security_state):
+	* src/ephy-statusbar.h:
+
+	Make the statusbar's GtkTooltips publicly accessibly.
+",TRUE,security,FALSE,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+tprrt/linux-stable,ab362fffa0feb0da23191111e60b641d39130053,"iommu/arm-smmu: Restore naming of driver parameter prefix
+
+Extending the Arm SMMU driver to allow for modular builds changed
+KBUILD_MODNAME to be ""arm_smmu_mod"" so that a single module could be
+built from the multiple existing object files without the need to rename
+any source files.
+
+This inadvertently changed the name of the driver parameters, which may
+lead to runtime issues if bootloaders are relying on the old names for
+correctness (e.g. ""arm-smmu.disable_bypass=0"").
+
+Although MODULE_PARAM_PREFIX can be overridden to restore the old naming
+for builtin parameters, only the new name is matched by modprobe and so
+loading the driver as a module would cause parameters specified on the
+kernel command line to be ignored. Instead, rename ""arm_smmu_mod"" to
+""arm_smmu"". Whilst it's a bit of a bodge, this allows us to create a
+single module without renaming any files and makes use of the fact that
+underscores and hyphens can be used interchangeably in parameter names.
+
+Cc: Robin Murphy <4f9c5a5cfa819e47d69719a414c02aa6016a9f54@arm.com>
+Cc: Russell King <ba324ca7b1c77fc20bb970d5aff6eea9377918a5@armlinux.org.uk>
+Reported-by: Li Yang <34dfad48c677943636bcfca4c66019ccf94adacd@nxp.com>
+Fixes: cd221bd24ff5 (""iommu/arm-smmu: Allow building as a module"")
+Signed-off-by: Will Deacon <37d41699bdee4fcb969ca499eb0f8b82c60d59cc@kernel.org>
+Reviewed-by: Robin Murphy <4f9c5a5cfa819e47d69719a414c02aa6016a9f54@arm.com>
+Signed-off-by: Joerg Roedel <61aff96566804ea1da8a65de5bcc892ce07caceb@suse.de>
+",FALSE,,FALSE,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+jan-molak/serenity-js,bb0db65e844b3d63ac0c955d5b4c1cd92685c3d6,"chore(deps): [security] bump lodash from 4.17.11 to 4.17.14
+
+Bumps [lodash](https://github.com/lodash/lodash) from 4.17.11 to 4.17.14. **This update includes security fixes.**
+- [Release notes](https://github.com/lodash/lodash/releases)
+- [Commits](https://github.com/lodash/lodash/compare/4.17.11...4.17.14)
+
+Signed-off-by: dependabot-preview[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@dependabot.com>",TRUE,security,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+mozilla/relman-auto-nag,07b5f13162ef2e35026e7c60c5f83744e781e96e,"+x permissions on the file
+",TRUE,premissions,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+benmwebb/dopewars,cc778bf8f88790111dea11d6900d055e6ebdfbe4,"HTTP proxy authentication should now also work
+
+",TRUE,authetication,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+bywatersolutions/bws-package,72b135d0252bb51c929147b27d2cc138b78eae4d,"Bug 12403: Add a batch record deletion
+
+This patch offers a new tool for deleting records.
+Biblios and authorities will can to be deleted with a simple list of
+biblionumber or authid.
+
+This feature adds:
+- a new pl/tt files tools/batch_delete_records
+- a new permission: tools > records_batchdel
+
+Test plan for biblios:
+1/ There are two ways to generate a list of biblionumbers:
+- using the basket: do a search, add some biblio to your basket, open
+  the basket and click on the ""Action"" button > ""Delete""
+- generating a list from a report
+2/ On the ""Batch record deletion"" tool verify:
+- biblios with issues cannot be deleted (checkbox disabled and line in
+  red).
+- information is correct.
+- sort functions work on each columns.
+- the items, reserves and issues values are correct.
+3/ After clicking on the ""Delete selected recors"" button, verify:
+- reserves, items and biblio have successful been deleted.
+- if an error occurs, the tool display an error message.
+
+Test plan for authority:
+1/ Generate a list of authid using a report:
+2/ On the ""Batch record deletion"" tool verify:
+- authorities are display with the summary.
+- the count usage (used in X biblios) is correct.
+3/ After clicking on the ""Delete selected recors"" button, verify:
+- The authorities have successful been deleted.
+- if an error occurs, the tool display an error message.
+
+Signed-off-by: Brendan Gallagher <d88b10c6bc7c38a4ffb541994aef7d8a7f8e3819@bywatersolutions.com>
+Signed-off-by: Katrin Fischer <9b69ec3a4d06e697f94de4e5bc733b1bd1394784@web.de>
+Signed-off-by: Tomas Cohen Arazi <63ac9f6777fb741d62c33cd73a438a8ce82c7d4a@gmail.com>
+",FALSE,authoroties,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+sufficientlysecure/ad-away,c3a47c9cc84f5a1443aa7c56c50d35ba763ee8f3,"chore: Remove APN check
+
+Unused and requires a new permission with SDK 30
+Manifest.permission.WRITE_APN_SETTINGS
+",TRUE,permission,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+OPM/opm-common,5269f52291ef7ccd84d183e250502f8633bcbcb8,"Merge pull request #1075 from joakim-hove/python-install
+
+Add Python copy/install hack",FALSE,hack,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+phacility/phabricator,67f062b0049dcc55558acfa85c6333947d6fcaab,"When triggering audits, count ""Accepted"" revisions as successfully reviewed
+
+Summary:
+See PHI1118. That issue may describe more than one bug, but the recent ordering changes to the import pipeline likely make this at least part of the problem.
+
+Previously, commits would always close associated revisions before we made it to the ""publish"" step. This is no longer true, so we might be triggering audits on a commit before the associated revision actually closes.
+
+Accommodate this by counting a revision in either ""Accepted"" or ""Published (Was Previously Accepted)"" as ""reviewed"".
+
+Test Plan:
+  - With commit C affecting paths in package P with ""Audit Unreviewed Commits and Commits With No Owner Involvement"", associated with revision R, with both R and C authored by the same user, and ""R"" in the state ""Accepted"", used `bin/repository reparse --publish <hash>` to republish the commit.
+  - Before change: audit by package P triggered.
+  - After change: audit by package P no longer triggered.
+
+Reviewers: amckinley
+
+Reviewed By: amckinley
+
+Differential Revision: https://secure.phabricator.com/D20564
+",FALSE,secure in link,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+docker/docker.github.io,e55ed741c24fe9e974d08f4893c79752fb279dc4,"Update hack/make/ubuntu to use the new markdown-based manpages
+
+This also removes all the old man pages, .gitignores their directory, and updates the md2man-all.sh script to be easier to read and more friendly to being called within hack/make/ubuntu.
+
+Docker-DCO-1.1-Signed-off-by: Andrew Page <admwiggin@gmail.com> (github: tianon)
+",FALSE,hack,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+opensalt/opensalt,14d0a042a8e1e4b6b073efe28ecb086857821f1a,"Merge pull request #5 from pcgroup/lsitem-security
+
+Adding security validations to the LsItemController",TRUE,security,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+Homebrew/homebrew-core,d76a7cc20c4c31cb20eb4b9ec931e5f3f5cb6ace,"cxxtest: secure url(s)
+",TRUE,secure,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+openweave/openweave-core,cfb68447801d9d6abf1223cf2317354eb44a5296,"Various changes to Weave Binding, big and small
+
+-- Added support for initiating PASE sessions.  By default the device pairing code is used
+as the password.  However this can be overridden by the application via a Binding API event.
+Due to limitations in the security manager this feature can only be used over connection-
+oriented transports.
+
+-- Added support for initiating TAKE sessions.  Because TAKE initiation requires a client-
+side delegate object (WeaveTAKEChallengerAuthDelegate), along with other protocol-specific
+configuration parameters, a new API event was added to the Binding API to request these
+parameters from the application at the moment of initiation.  This pattern eliminates the
+space required to store these values within the Binding object itself.  Like PASE, TAKE can
+only be used over connection-oriented transports.
+
+-- Modified the Binding PrepareFailed API event such that it passes StatusReport information
+to the application when preparation fails due to the peer returning a non-successful status
+report.  This enables better error reporting in the application.  Currently the only
+situation in which a StatusReport information is returned is when a security session fails
+with an error from the peer.  (This closes a long-standing TODO).
+
+-- Improved logging when binding preparation fails due to receipt of a status report.  Now
+the log message includes the status profile and code from the StatusReport and a
+corresponding string translation if available.
+
+-- Modified WeaveExchangeManager to notify each Binding object when a connection is closed.
+This was the intended design when Bindings were enhanced to support connections.  However
+somehow the behavior was never fully implemented.
+
+-- Modified Binding::PrepareTransport() to clear the default connection closed handler (as
+installed by the message layer) when instantiating a new connection. This is needed to avoid
+a double release of the connection on a network close.
+
+-- Fixed a WeaveConnection leak.  When an ExchangeContext is vended from a Binding that has
+been configured to use a WeaveConnection, a reference to the connection it taken to ensure it
+remains live for the duration of the exchange.  The ExchangeContext is expected to release this
+reference when it is no longer needed.  However, in the event the connection experiences a
+network close, code in WeaveExchangeManager::HandleConnectionClosed() was not releasing this
+reference before discarding the pointer to the connection, resulting in a leak.
+
+-- Added GetPeerIPAddress() method to allow applications to retrieve the IP addressing
+information (address, port and interface) for the peer.
+
+-- Added GetExchangeManager() method.
+
+-- Added #if statements to reduce code size in cases where CASE/PASE/TAKE initiation is
+disabled at compile time.
+",FALSE,,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+slimphp/Slim,dd6aa9ab3fad0c09c665095642bda6f2a453e3ce,"Fix issue #568: Parse string 'expires' before encoding secure cookie.
+
+The `\Slim\Http\Util::encodeSecureCookie` function requires the
+expires parameter to be a int. A string typed 'expires' or
+'cookie.lifetime' would pass a string in this case, which causes the
+response cookie to be broken when parsed by `decodeSecureCookie`.
+",TRUE,secure,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+aleDsz/ragnaMOBA,ee5ee4fcd0cd5fbc111ea55bc79441b9d34f2d8f,"* Fix homunc & code cleanup [Toms] 
+  - Timer problems on delete_timer
+  - Intimacy problem (overflow & new values)
+  - Homunc deleted if intimacy < 0
+  - base exp is now given to master
+  - Homunc sometimes not saved
+
+git-svn-id: 7d70fff0c83e6c1b79d3d732061cbed0706e890a@7913 54d463be-8e91-2dee-dedb-b68131a5f0ec
+",FALSE,timer,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+googleapis/google-cloud-cpp-common,f3bddd1b151b75b370151a5194b99ae7bab5fc7f,"fix: use a safer token to workaround libstdc++ bug (#272)
+
+The workaround put in place in #208 does not work with g++-9.3.1 on
+Fedora:31. Despite this being a ""newer"" version of libstdc++, it does
+not support `rdrand` as a token for `std::random_device` maybe because
+the CPU specific tokens are not enabled.
+
+For now, use `/dev/urandom` which seems to be supported on all Linux
+distros. On other platforms we continue to use the default constructor
+for `std::random_device`.
+
+It might be possible to refine this and detect, at run-time, if `rdrand`
+is supported, but that seems like an improvement that can wait a little
+bit.",TRUE,safer,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+roots/trellis,0efcf58b9a9436bee1b848233ac3efc64321f5c1,"Change self-signed certificate expiry time
+from 3650 days to 825, the new maximum time allowed under macOS Catalina
+",TRUE,certificate,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+HippieStation/HippieStation,cfd5cff35282f3d87b58c9ef758aa9ee843cfda0,"The 'Check AI Laws' verb now shows which AI (if any) the cyborgs are synced to.
+
+Fix for a runtime due to an attack_verb being a string instead of a list. (You can once again robust people with toolboxes!)
+
+git-svn-id: af9c09e5e5bfa333f52f6fefeba857070ad34abf@4210 316c924e-a436-60f5-8080-3fe189b3f50e
+",FALSE,runtime,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+tprrt/linux-stable,374855c5e4a76f7cc7f9aeb613c54929510eff18,"tools lib traceevent: Add API to read time information from kbuffer
+
+Add the functions kbuffer_subbuf_timestamp() and kbuffer_ptr_delta() to
+get the timing data stored in the ring buffer that is used to produced
+the time stamps of the records.
+
+This is useful for tools like trace-cmd to be able to display the
+content of the read data to understand why the records show the time
+stamps that they do.
+
+Link: http://lore.kernel.org/linux-trace-devel/20200625100516.365338-2-efe1c68dba7c08861a91540a65113270d7e097af@gmail.com
+
+Signed-off-by: Steven Rostedt (VMware) <43232e92d70cc7aa53504ad0397085ee47bad87f@goodmis.org>
+[ Ported from trace-cmd.git ]
+Cc: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>
+Cc: Jiri Olsa <2c6594f608aa3d41e98d48846a6328831f7084ad@redhat.com>
+Cc: Namhyung Kim <5c915a589b3ddf58cebf14bec41bcc143b37ac3c@kernel.org>
+Cc: 6a0b4203f8d5a7273b882a60c2d3be20e1cb78d2@vger.kernel.org
+Link: bbacaf1d528e2bf733a75a1bc88b136919d720fb@goodmis.org
+Signed-off-by: Tzvetomir Stoyanov (VMware) <efe1c68dba7c08861a91540a65113270d7e097af@gmail.com>
+Signed-off-by: Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>
+",FALSE,timestamp,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+BitcoinUnlimited/BitcoinUnlimited,926836ad36778371a98c9f35d0b84d3cc25c08fd,"Make secp256k1_fe_sqrt constant time
+",FALSE,constant time,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+nwjs/chromium.src,d262a0ed6bd977cfec18514171790fcaee02a0a1,"Reland of Post tasks for sensitive input visibility notifications (patchset #1 id:1 of https://codereview.chromium.org/2531683002/ )
+
+Reason for revert:
+Fixing SecuritySTateTabHelperTests
+
+Original issue's description:
+> Revert of Post tasks for sensitive input visibility notifications (patchset #5 id:80001 of https://codereview.chromium.org/2515373003/ )
+>
+> Reason for revert:
+> Suspected for flaky failures on browser_tests for Mac 10.9 asan, Mac 10.10
+>
+> E.g.
+> SecurityStateTabHelperTestWithPasswordCcSwitch/SecurityStateTabHelperTestWithPasswordCcSwitch.PasswordSecurityLevelDowngradedFromIframe/0
+> SecurityStateTabHelperTest.PasswordSecurityLevelNotDowngradedWithoutSwitch
+>
+> https://uberchromegw.corp.google.com/i/chromium.memory/builders/Mac%20ASan%2064%20Tests%20%281%29/builds/24682
+> https://uberchromegw.corp.google.com/i/chromium.mac/builders/Mac10.10%20Tests/builds/9716
+>
+> Errors like
+>
+> ../../chrome/browser/ssl/security_state_tab_helper_browser_tests.cc:966: Failure
+> Value of: security_info.security_level
+>   Actual: 0
+> Expected: security_state::HTTP_SHOW_WARNING
+> Which is: 1
+> ../../chrome/browser/ssl/security_state_tab_helper_browser_tests.cc:971: Failure
+> Value of: entry->GetSSL().content_status & content::SSLStatus::DISPLAYED_PASSWORD_FIELD_ON_HTTP
+>   Actual: false
+> Expected: true
+>
+> Original issue's description:
+> > Post tasks for sensitive input visibility notifications
+> >
+> > If password inputs are hidden and shown multiple times in the same task
+> > (as apparently happens when processing a stylesheet), we don't want to
+> > the omnibox warning to flicker in and out. Thus, this CL posts sensitive
+> > input visibility notifications to the end of the task queue, so that the
+> > omnibox warning updates get coalesced.
+> >
+> > BUG=664194
+> > TEST=Visit http://http-password.badssl.com and observe that the omnibox
+> > warning does not flicker in and out twice.
+> >
+> > Committed: https://crrev.com/7bdbe352cdbd7cc1dec2b71653e60b47688bd9e1
+> > Cr-Commit-Position: refs/heads/master@{#434340}
+>
+> TBR=dcheng@chromium.org,haraken@chromium.org,estark@chromium.org
+> # Skipping CQ checks because original CL landed less than 1 days ago.
+> NOPRESUBMIT=true
+> NOTREECHECKS=true
+> NOTRY=true
+> BUG=664194
+>
+> Committed: https://crrev.com/e0c7eb5a36b45db9a17c75715a99b3a547c45974
+> Cr-Commit-Position: refs/heads/master@{#434400}
+
+TBR=dcheng@chromium.org,haraken@chromium.org,tapted@chromium.org
+# Not skipping CQ checks because original CL landed more than 1 days ago.
+BUG=664194
+
+Review-Url: https://codereview.chromium.org/2538473002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#434820}
+",TRUE,security,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+coopdevs/timeoverflow,e572437f110a977eddd801d4aebfa9bf599ce88d,"Remove next environment
+
+It was used while migration the production server and since this one and
+production configs are almost exact copies (just rails_env differs) it's
+no longer needed.
+
+And this brings simplicity back to this repo.
+
+The most noticeable change is the removal of `url` from production's
+database config as DATABASE_URL got removed in
+https://github.com/coopdevs/timeoverflow-provisioning/pull/21 two years
+ago and it's true in production:
+
+```
+timeoverflow@timeoverflow-production:~$ env | grep DATABASE
+DATABASE_NAME=xxx
+DATABASE_USER=xxx
+DATABASE_PASSWORD=xxx
+```
+",FALSE,timeoverflow,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+IdentityModel/IdentityModelv2,acd67726d9ffa9622031413b0690fb0b512aa382,"more tests around sending client credentials in TokenClient
+",TRUE,credentials,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+alchemy-fr/Phraseanet,6609ec8d034088f6abe18b44488a679230b6d2c5,"Add change_password feature
+",TRUE,password,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+progmaticltd/homebox,78923bd49465860093c3043c4b56d5c78d52b58f,"Added https security headers for mta-sts
+",TRUE,security,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+AndroidX/androidx,bbd3fa1cb3aa7552ccf67c6b5fbef39b51994a7f,"Adding first androidx security library
+
+Updated SecureURL to make isValid(String, SSLSocket) package scope.
+Added Constructor for non-client cert usage.
+
+SecureCipher, added sign/verify, added version to file encoding.
+
+hide ValidatableSSLSocket/Factory from external use. Also made them
+package scope.
+
+Project is building and passing lint.
+
+Added tests, they require a device to run.
+-Encrypt/Decrypt data
+-Sign/verify data
+-Check valid certs
+-Save/Read encrypted files.
+-Check existence of keys, create, delete keys
+
+Test: ./gradlew buildOnServer
+Change-Id: I4bc7c4ab03f7fb7b73319086f2779a71b32d8296
+",TRUE,security,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+52North/series-rest-api,f24704b7fbaf5a7fbb1eddc9d8a1697015ebca54,"update github token
+",TRUE,token,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+chromium/chromium,972453885009579d30608ca22b9c11ec4ef1bbc9,"kiosk: Fix regressions on network config flow
+
+- Reset solidBackground flag when hiding kiosk launch splash screen
+  so that the account picker screen for owner auth is shown properly;
+- Fix network config screen not center aligned problem;
+
+Bug: 763515
+Cq-Include-Trybots: master.tryserver.chromium.linux:closure_compilation
+Change-Id: I642890dd4d9ece0096127435764d63adffe227d0
+Reviewed-on: https://chromium-review.googlesource.com/685368
+Reviewed-by: Wenzhao (Colin) Zang <3bfe43dc09754df5a1fe9feb46624ad5cbab1aea@chromium.org>
+Commit-Queue: Xiyuan Xia <db97f61d07c31fd69698b8602ab9b0e934f96b23@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#504551}",TRUE,auth,FALSE,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+stackforge/kolla,50f75729eb9465622e90d85153983116e5fd4fd1,"Use https links for documentation
+
+Use https instead of http to ensure the safety.
+
+Change-Id: Iaf09b5b878e117d2333c30b8a769304a4a20f7ee
+",TRUE,safety,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+oat-sa/tao-core,6bf3e5e7e998cf255b90b014ea6da79d2dbbb552,"Bugfix #1300. Impossible to change TAO Backend User Password.
+
+git-svn-id: 771dd8fe648f808a391b5ec3f0cc16d783d4492e@10993 62dfeb86-a93f-4914-9d13-15c0a160985d
+",TRUE,password,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+openstack/openstack-manuals,99b1ab81aa46a485eb7d814522f4ffb7a05d16f7,"[common] add warning about saving password
+
+Change-Id: I708d117d89c52b9758a15f837ddf9f401e4642c9
+Closes-Bug: #1639290
+",TRUE,password,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+Katello/katello,c3d3ebb1c748772bfd586c30b8d5b15e2463afe2,"Fixes a unknown resources error.
+
+This occured when calling ping with bad credentials. Not very common,
+but it did look wierd in the command line.
+",TRUE,credentials,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+tprrt/linux-stable,b7a0365ec7a0fb1d39113846fd34038af68ebd01,"Btrfs: ctree: reduce args where only fs_info used
+
+This patch is part of a larger project to cleanup btrfs's internal usage
+of struct btrfs_root. Many functions take btrfs_root only to grab a
+pointer to fs_info.
+
+This causes programmers to ponder which root can be passed. Since only
+the fs_info is read affected functions can accept any root, except this
+is only obvious upon inspection.
+
+This patch reduces the specificty of such functions to accept the
+fs_info directly.
+
+This patch does not address the two functions in ctree.c (insert_ptr,
+and split_item) which only use root for BUG_ONs in ctree.c
+
+This patch affects the following functions:
+  1) fixup_low_keys
+  2) btrfs_set_item_key_safe
+
+Signed-off-by: Daniel Dressler <cb5b37bc23e1350708c40827673bf0bd9465c46f@gmail.com>
+Signed-off-by: David Sterba <a2ce9d316ca04d17b520237d2846a218b8284e52@suse.cz>
+",FALSE,safe,FALSE,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+MaibornWolff/codecharta,d20d1b83bbfb07c6d3e4b99e40d5bbb51ef24c06,"[Security] Bump handlebars from 4.0.11 to 4.1.0 in /visualization
+
+Bumps [handlebars](https://github.com/wycats/handlebars.js) from 4.0.11 to 4.1.0. **This update includes security fixes.**
+- [Release notes](https://github.com/wycats/handlebars.js/releases)
+- [Changelog](https://github.com/wycats/handlebars.js/blob/master/release-notes.md)
+- [Commits](https://github.com/wycats/handlebars.js/compare/v4.0.11...v4.1.0)
+
+Signed-off-by: dependabot[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@dependabot.com>",TRUE,security,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+dslutz/qemu,f157ed202e51dc2492b201dc34ed28e89c973fb7,"tap: safe sndbuf default
+
+With current sndbuf default value, a blocked
+target guest can prevent another guest from
+transmitting any packets. While current
+sndbuf value (1M) is reported to help some
+UDP based workloads, the default should
+be safe (0).
+
+Signed-off-by: Michael S. Tsirkin <255103e50249e3d658441816e0597170ebfc16ef@redhat.com>
+Signed-off-by: Anthony Liguori <0212dd00c21e75e861d960b0cf505645317aaa0b@us.ibm.com>
+",FALSE,safe,FALSE,not sure if networking or cyber safety is the reason,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+chromium/chromium,796349fc459bbc824ec369167a49536f43309203,"Improvements to permissions and permission warning docs;
+
+* This is a redo of https://codereview.chromium.org/10964056/.
+  I've actioned Mihai and Aaron's review comments.
+
+* Created new file for permission content that was previously
+nested in manifest file. Filtered apps and extensions content.
+
+* Added topSites (extensions-only) permission to permissions
+and permission warnings docs.
+
+* Also added fileSystem permission (apps-only).
+
+* Fixed link on optional permissions page to go
+to new declare permissions documentation.
+
+
+Review URL: https://chromiumcodereview.appspot.com/11017040
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@161498 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,permissions,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+juju/juju,36863d2e3ae668827d168b932168b8678410b812,"Adds rbacid to credential schema for K8s
+
+The rbac label field was wrongly place on the credential schema in k8s.
+This change adds it to the OAuth2 credential type
+",TRUE,credential,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+lede-project/source,cb911a05b0c937c490176d7f20a9ddbb96f72a50,"layerscape: fix VFIO driver build issue since linux-4.14.99
+
+The linux-4.14.99 had introduced below upstream patch.
+6636dc5e01c6 arm64: io: Ensure value passed to __iormb() is held in a 64-bit register
+
+It was causing VFIO driver build issue. This patch is to fix it.
+
+ CC      drivers/vfio/fsl-mc/vfio_fsl_mc.o
+In file included from ./include/linux/scatterlist.h:9:0,
+                 from ./include/linux/iommu.h:22,
+                 from drivers/vfio/fsl-mc/vfio_fsl_mc.c:14:
+drivers/vfio/fsl-mc/vfio_fsl_mc.c: In function 'vfio_fsl_mc_dprc_wait_for_response':
+./arch/arm64/include/asm/io.h:122:45: error: expected expression before ')' token
+        : ""=r"" (tmp) : ""r"" ((unsigned long)(v))  \
+                                             ^
+drivers/vfio/fsl-mc/vfio_fsl_mc.c:334:3: note: in expansion of macro '__iormb'
+   __iormb();
+   ^~~~~~~
+./arch/arm64/include/asm/io.h:122:45: error: expected expression before ')' token
+        : ""=r"" (tmp) : ""r"" ((unsigned long)(v))  \
+                                             ^
+drivers/vfio/fsl-mc/vfio_fsl_mc.c:336:3: note: in expansion of macro '__iormb'
+   __iormb();
+   ^~~~~~~
+
+Reported-by: Mathew McBride <1fa2ef4755a9226cb9a0a4840bd89b158ac71391@traverse.com.au>
+Signed-off-by: Yangbo Lu <8e8a9cf964d9a1c714752d84c97dd816751bdd12@nxp.com>
+",FALSE,token,FALSE,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+sizebay/Sizebay-Catalog-API-Client,5361b6e9f5de70147e004b078fd80eae8c1f66fb,"Return an empty user with SID and password
+",TRUE,password,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+NOtherDev/whatwebcando,c48ccf7739be0752ef41bb60cd48da817991f90e,"Origin Trial tokens update
+",FALSE,token,FALSE,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+stinsonga/emacs-mirror,46540a1c7adb1b89b6c2f6c9150fe8680c3a5fba,"Fix a ""wrong side of point"" error in CC Mode.  Fixes bug #28850.
+
+The cause was a scanning over a bracket pair taking us beyond the supplied
+LIMIT parameter in c-forward-declarator.
+
+* lisp/progmodes/cc-engine.el (c-forward-declarator): Add three checks (<
+(point) limit) whilst dealing with tokens after the declared identifier.
+
+* lisp/progmodes/cc-fonts.el (c-font-lock-declarators): Don't supply a LIMIT
+argument to `c-forward-declarator' (twice), since we want to fontify up till
+the end of a declarator, not an arbitrary jit-lock chunk end.
+",FALSE,token,FALSE,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+sunnydas/grokkingalgos,75f7f7559326e5b8a546f0dcdb22db762d1127c6,"Brute force implementation of count div.
+",FALSE,brute force,,,22_mar_2021_pos_hits_a1a30f3674bed7adbaa1e8ce4d39ecdf9437c757
+limelime/cust-live-deb,a5897c3ab112c1d34bc8d18f0875ab2b291259d7,Fix mariadb password issue.,TRUE,password,,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+specify/specify6,414a46cc9ae3bb2ce8866ab2b78d1daa05909589,"Removing password debug
+
+git-svn-id: d1ff070abd068000867ecc03f5c1f42eee9b9769@7765 ce9bf4bf-376f-1848-a496-a1c9fe3b1a39
+",TRUE,password,,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+mooltipass/moolticute,1a2c57de0c5fe700a4f3f43677da9f7a3c814aff,"[BLE] Only fetch fido credentials in fido MMM, ensure fido credentials saved during export
+",TRUE,credentials,,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+jenkinsci/jenkins,ef9421f7fd5c93d1d77e504b868c903f56ac38bb,"Merge branch 'security' into security-stable-1.580
+
+Conflicts:
+	core/pom.xml
+",TRUE,security,,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+freedomofpress/securedrop,0a4230d676a119b7b51bfd866642824b6c2ebe1e,"Extra reminder to exit Unsafe Browser when finished configuring firewall
+
+Per @conorsch's review.
+",TRUE,"unsafe, firewall",,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+NLnetLabs/unbound,2106692a891048e1d4a7de5232ca44c8561bcb66,"dnstap io, test TLS with peername and TLS authentication.
+",TRUE,authentication,,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+spring-projects/spring-boot,8d491f278bc321c4ec9473f368c0135a65bf1bf1,"Create FilePermission lazily in JarURLConnection
+
+JarURLConnection is very performance sensitive. The change in 3772d9f
+meant that every JarURLConnection would create a FilePermission,
+irrespective of whether it was actually used.
+
+This commit updates JarURLConnection to create its FilePermission
+lazily. When there is no security manager a permission will no longer
+be created at all.
+
+Closes gh-5411
+See gh-6215
+",TRUE,"permission, security",,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+kubernetes-incubator/cri-o,8c830144768a9d5bbad9bc42efbf27515bdba590,"Merge pull request #994 from edsantiago/safe_netcat
+
+nc (netcat): don't block when run interactively",FALSE,safe,FALSE,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+AshamaneProject/AshamaneCore,dea718e4ed89cf6006c5456c4fec82e0ceac6536,"Core/PacketIO: Updated and enabled CMSG_PET_STOP_ATTACK
+",TRUE,attack,FALSE,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+linbox-team/linbox,18fb8b94f40930b7399da5a825336e316c5b0b4d,safe to start a new bug cycle now,FALSE,safe,seems bug context,,22_mar_2021_pos_hits_35bd1b2957f148d164de224fbe609dffafe4ea3c
+widdix/aws-cf-templates,469930335630567a81a8af95394ea6929e5b13f0,"[Security] jenkins/* - Update Jenkins to 2.190.1 https://jenkins.io/changelog-stable//#v2.190.1 (#352)
+
+",TRUE,security,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+kimwalisch/primesieve,cf5c5c68ce098208d3d9dfc20618995d7721f8cf,"Add safety check
+",FALSE,safety,,by code,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+CasparCG/Server,0655fea6abb1e6b9d195c9fb1889cae81deb51be,"2.0.2: amcp: Added support for .ct in CLS and TLS.
+git-svn-id: 5b3403a4af87b3de1bc297ce46e3b922868e37da@1728 362d55ac-95cf-4e76-9f9a-cbaa9c17b72d
+",TRUE,tls,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+khartec/waltz,7cbf1fc16497ffbb75c7d583c34169f77f58caa6,"Merge pull request #1820 from davidwatkins73/waltz-1811
+
+Removing data_type_association and dta_auth_rating tables",TRUE,auth,FALSE,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+randombit/botan,01d7c3d72a71a31c137ddfd994e259d678fde838,"Change TLS::Ciphersuite constructor to be non-inline and to take
+arguments by const char*. Reduces size of tls_suite_info.o by 80%
+on Linux with GCC 4.8
+",TRUE,tls,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+BaseXdb/basex,72a2a2facaf19e8af89d39d0055b159ebf84057a,"Merge pull request #226 from LukasK/cryptosquashed
+
+EXPath Cryptographic Module",TRUE,criptographic,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+phacility/arcanist,a5f0323d5cf605ac6f09f2b843669e1abf4e1567,"Return $this from didApplyPatch() shortcut
+
+Test Plan: https://secure.phabricator.com/diffusion/ARC/browse/master/src/lint/patcher/ArcanistLintPatcher.php;bd7dc8abaa7bb4c0$75?view=blame
+
+Reviewers: epriestley, jungejason
+
+Reviewed By: jungejason
+
+CC: aran
+
+Differential Revision: https://secure.phabricator.com/D2101
+",FALSE,secure in link,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+00-Evan/shattered-pixel-dungeon,ea16ddf02a68d2c02530e8b1d2825f3ee5727644,"v0.8.0: various fixes/improvements:
+- potion of purity now clears tengu fire wave and smoke bombs
+- fixed blacksmith upgrading incorrectly telling you your inventory is full
+- fixed various bee AI errors
+- fixed elemental ranged attacks not going on cooldown if they miss
+- spinners now interrupt the hero is they shoot web around them
+- fixed rare freeze bugs involving enemy ranged attacks
+- fixed scroll of teleportation rarely placing the hero on an enemy
+- fixed missing title case in stone of intuition window
+- added bottom padding to WndInfoItem
+- fixed some minor spelling/grammar errors in new text
+",FALSE,attacks,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+bywatersolutions/ByWater-KOHA,48bf229cc804b0624555137687527e1e23fa22f8,"Bug 19514: Implement password restrictions into onboarding tool
+
+Test plan:
+1. Drop and recreate your database
+2. Restart memcached
+3. Go through the web installer
+4. In the onboarding tool create a patron with a password of only 2 characters in length
+5. Notice the patron is successfully created and no warning message is
+displayed
+6. Repeat step 1,2,3 and create a patron with a password of 3 characters
+none of which are a uppercase letter or number and notice the patron is
+successfully created and no warning message is displayed
+7. Apply patch
+8. Repeat steps 1,2,3 and create a patron with a password consisting of
+2 characters, notice that after submitting the form the same form is
+loaded again and there is a warning message at the top of the page
+informing you the patron wasn't created
+9. Repeat steps 1,2,3 and create a patron with a password consisting of
+3 characters (all lower case) and submit the form, notice the same form
+is reloaded and a warning message at the top of the page informs you
+that the patron wasn't created because the password was weak
+10. Repeat steps 1,2,3 and create a patron with a password consisting of
+3 characters (one lower case letter, one upper case letter and one
+number) and submit the form and notice this time the next form in the onboarding is displayed with the message at the top of the screen informing you that the patron was successfully created
+
+Sponsored-By: Catalyst IT
+
+Signed-off-by: Marcel de Rooy <m.de.rooy@rijksmuseum.nl>
+
+Signed-off-by: David Bourgault <david.bourgault@inlibro.com>
+
+Signed-off-by: Josef Moravec <josef.moravec@gmail.com>
+
+Signed-off-by: Jonathan Druart <90effa772b5c8a7a3420e6b7ea56e265888c5743@bugs.koha-community.org>
+",TRUE,password,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+nwjs/chromium.src,a5f25ade2930458735c5041e7f391bed2d401e49,"The password bubble should fade out on click on the web page.
+
+The timeout is now obsolete. The bubble stays infinitely if there is no user input.
+
+BUG=394287
+
+Review URL: https://codereview.chromium.org/520743002
+
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#292887}
+",TRUE,password,,,22_mar_2021_pos_hits_179c9923bf1863606518744aaa7de11b66b5bcb7
+PowerDNS/pdns,529e27a82fe82ec306fa7e8e494eb6b1db6e48e7,"Build debian package for the auth server
+
+* Import the debian/ dir from debian sid as
+  build-scripts/debian-authoritative.
+* Remove all db-config stuff
+* Remove the changelog
+* Create a pdns-tools package
+* Fix the script further so it uses this dir
+",TRUE,auth,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+chromium/chromium,71cd5ef79d5561fbc1c258c216151ef0cbe201cc,"Add button to page info to revoke user certificate decisions.
+
+(Re-commit of https://codereview.chromium.org/418133012/)
+
+Currently, if a user clicks 'proceed' through an SSL interstitial, their only
+way to revoke this decision is to restart their browser session. This commit
+provides an explicit button in the page info to revoke this decision if the
+user is using the remember certificate error decisions experiment. Since
+decisions are remembered across browser restarts for these users, it's
+important to provide them with a mechanism to revoke their decision later.
+
+BUG=262615
+NOTRY=true
+TBR=tedchoc@chromium.org,rsesek@chromium.org,jam@chromium.org,pkasting@chromium.org
+
+Review URL: https://codereview.chromium.org/473643002
+
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#289382}
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@289382 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,certificate,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+bestpractical/rt,88689bec08c3e93aa03aec4d9c3caf6246819a68,"Merge branch 'security/restrict-charting' into 4.0.0-releng
+
+git merge security/restrict-charting # CVE-2011-1686 CVE-2011-1687
+",TRUE,security,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+google/hypebot,c79f958a1f80ba14576b20ff04ffd2a8c5beac09,"Add a cached version of RedisStore, and support reids AUTH.
+
+Also move cached_type to be a property of storage directly vs. defined within each type.
+
+PiperOrigin-RevId: 212628189
+",TRUE,auth,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+dnnsoftware/Dnn.Platform,5c44b8bfc587dfead9b692b9e42e0961b44d67ae,"DNN-4611 Cannot disable password banned list
+updated passwordreset to validate banned passwords
+",TRUE,password,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+edx/edx-platform,0d7f34b5d3dafe8ca37113503699b9c24e16f402,"Update the software secure result call back by correcting the typo
+LMS-2516
+",FALSE,by code,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+chromium/chromium,97a365a7a2fef83461694833288a0f8d18769404,"Fix bogus warning message for touch drag gesture used cross origin.
+
+The chromestatus URI prefix was added twice. willBeRemoved does
+a sprintf with the URI on the front.
+
+BUG=582140
+
+Review-Url: https://codereview.chromium.org/1933833002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#390718}
+",TRUE,cross origin,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+chromium/chromium,f1be3c264853e564c69053f580d14fabfbfea62b,"[Password manager tests automation] Fixed buzzfeed.
+
+Fixes buzzfeed by introducing password_not_auto parameter.
+
+BUG=369521
+R=vabr@chromium.org
+
+Review URL: https://codereview.chromium.org/1138353003
+
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#330502}
+",TRUE,password,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+linuxfoundation/cii-best-practices-badge,2d96b93a397295868be11237e5c4f40c7d7ddfc9,"Document local password checking in security docs.
+
+Signed-off-by: David A. Wheeler <9ae72d22d8b894b865a7a496af4fab6320e6abb2@dwheeler.com>
+",TRUE,"password, security",,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+apache/airflow,3fe80741df51e4166955ecbc0a14abbde34a526b,"Fix GCP Secret Manager system test (#13848)
+
+",TRUE,secret,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+ceph/ceph-ansible,da4215e9c055682f1f91552cc40e4fa77a75fc7a,"validate: fix credentials validation
+
+This task is failing when `ceph_docker_registry_auth` is enabled and
+`ceph_docker_registry_username` is undefined with an ansible error
+instead of the expected message.
+
+Closes: https://bugzilla.redhat.com/show_bug.cgi?id=1763139
+
+Signed-off-by: Guillaume Abrioux <30a9df5a0293a6108675377fa1673f7aa713f915@redhat.com>
+",TRUE,credentials,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+FH-Complete/FHC-Core,abcdd37e9020ae39419bc35dacb5faed2a502118,"- Now the FilterWidget always store the required permissions into the session to let the Filters controller to provide data even if the dataset is empty
+- Now the _renderDropDown method of the FilterWidget.js checks the parameter to avoid errors
+",TRUE,permissions,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+indexdata/yaz,480c3cf04004acef3a792d1914382b38b0f79bfa,"Make sample SSL certificate part of dist
+",TRUE,certificate,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+linuxfoundation/cii-best-practices-badge,464f7eba074cc567af140cefebbc3024fdbcecd0,"Fix security issue identified by brakeman - fixes #105.
+",TRUE,security,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+UCSD/now-mobile,86dc612ce60b469f11c15385ad5e1bf8153f2eff,"Fix username and password values persisting after log out
+",TRUE,password,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+StackStorm/st2,000471128a1b63187c329c6ed4b50c3d85694724,"Merge pull request #5095 from StackStorm/update-cryptography-3.2
+
+Update cryptography version to 3.2",TRUE,cryptography,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+googleapis/elixir-google-api,3713d243c6f4a56e8ba3648341f57f884021cd25,"Regenerate AnalyticsData client (#6761)
+
+This PR was generated using Autosynth. :rainbow:
+
+
+<details><summary>Log from Synthtool</summary>
+
+```
+2020-11-18 05:10:43,230 synthtool [DEBUG] > Executing /home/kbuilder/.cache/synthtool/elixir-google-api/synth.py.
+On branch autosynth-analyticsdata
+nothing to commit, working tree clean
+2020-11-18 05:10:44,906 synthtool [DEBUG] > Running: docker run --rm -v/tmpfs/tmp/tmpjjiec57b/repo:/workspace -v/var/run/docker.sock:/var/run/docker.sock -e USER_GROUP=1000:1000 -w /workspace gcr.io/cloud-devrel-public-resources/elixir19 scripts/generate_client.sh AnalyticsData
+DEBUG:synthtool:Running: docker run --rm -v/tmpfs/tmp/tmpjjiec57b/repo:/workspace -v/var/run/docker.sock:/var/run/docker.sock -e USER_GROUP=1000:1000 -w /workspace gcr.io/cloud-devrel-public-resources/elixir19 scripts/generate_client.sh AnalyticsData
+/workspace /workspace
+[33mThe mix.lock file was generated with a newer version of Hex. Update your client by running `mix local.hex` to avoid losing data.[0m
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  certifi 2.5.1
+  google_api_discovery 0.7.0
+  google_gax 0.3.2
+  hackney 1.15.2
+  idna 6.0.0
+  jason 1.2.1
+  metrics 1.0.1
+  mime 1.3.1
+  mimerl 1.2.0
+  oauth2 0.9.4
+  parse_trans 3.3.0
+  poison 3.1.0
+  ssl_verify_fun 1.1.5
+  temp 0.4.7
+  tesla 1.3.3
+  unicode_util_compat 0.4.1
+* Getting google_api_discovery (Hex package)
+* Getting tesla (Hex package)
+* Getting oauth2 (Hex package)
+* Getting temp (Hex package)
+* Getting jason (Hex package)
+* Getting poison (Hex package)
+* Getting hackney (Hex package)
+* Getting certifi (Hex package)
+* Getting idna (Hex package)
+* Getting metrics (Hex package)
+* Getting mimerl (Hex package)
+* Getting ssl_verify_fun (Hex package)
+* Getting unicode_util_compat (Hex package)
+* Getting parse_trans (Hex package)
+* Getting mime (Hex package)
+* Getting google_gax (Hex package)
+[33mThe mix.lock file was generated with a newer version of Hex. Update your client by running `mix local.hex` to avoid losing data.[0m
+==> temp
+Compiling 3 files (.ex)
+Generated temp app
+===> Compiling parse_trans
+===> Compiling mimerl
+===> Compiling metrics
+===> Compiling unicode_util_compat
+===> Compiling idna
+==> jason
+Compiling 8 files (.ex)
+Generated jason app
+warning: String.strip/1 is deprecated. Use String.trim/1 instead
+  /workspace/deps/poison/mix.exs:4
+
+==> poison
+Compiling 4 files (.ex)
+warning: Integer.to_char_list/2 is deprecated. Use Integer.to_charlist/2 instead
+  lib/poison/encoder.ex:173
+
+Generated poison app
+==> ssl_verify_fun
+Compiling 7 files (.erl)
+Generated ssl_verify_fun app
+===> Compiling certifi
+===> Compiling hackney
+==> oauth2
+Compiling 13 files (.ex)
+Generated oauth2 app
+==> mime
+Compiling 2 files (.ex)
+Generated mime app
+==> tesla
+Compiling 26 files (.ex)
+Generated tesla app
+==> google_gax
+Compiling 5 files (.ex)
+Generated google_gax app
+==> google_api_discovery
+Compiling 21 files (.ex)
+Generated google_api_discovery app
+==> google_apis
+Compiling 28 files (.ex)
+Generated google_apis app
+
+13:11:15.373 [info]  FETCHING: https://analyticsdata.googleapis.com/$discovery/GOOGLE_REST_SIMPLE_URI?version=v1alpha
+
+13:11:15.698 [info]  FETCHING: https://analyticsdata.googleapis.com/$discovery/rest?version=v1alpha
+
+13:11:15.936 [info]  FOUND: https://analyticsdata.googleapis.com/$discovery/rest?version=v1alpha
+Revision check: old=20201112, new=20201116, generating=true
+Creating leading directories
+Writing BatchRunPivotReportsRequest to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/batch_run_pivot_reports_request.ex.
+Writing BatchRunPivotReportsResponse to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/batch_run_pivot_reports_response.ex.
+Writing BatchRunReportsRequest to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/batch_run_reports_request.ex.
+Writing BatchRunReportsResponse to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/batch_run_reports_response.ex.
+Writing BetweenFilter to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/between_filter.ex.
+Writing CaseExpression to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/case_expression.ex.
+Writing Cohort to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/cohort.ex.
+Writing CohortReportSettings to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/cohort_report_settings.ex.
+Writing CohortSpec to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/cohort_spec.ex.
+Writing CohortsRange to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/cohorts_range.ex.
+Writing ConcatenateExpression to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/concatenate_expression.ex.
+Writing DateRange to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/date_range.ex.
+Writing Dimension to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/dimension.ex.
+Writing DimensionExpression to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/dimension_expression.ex.
+Writing DimensionHeader to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/dimension_header.ex.
+Writing DimensionMetadata to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/dimension_metadata.ex.
+Writing DimensionOrderBy to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/dimension_order_by.ex.
+Writing DimensionValue to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/dimension_value.ex.
+Writing Entity to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/entity.ex.
+Writing Filter to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/filter.ex.
+Writing FilterExpression to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/filter_expression.ex.
+Writing FilterExpressionList to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/filter_expression_list.ex.
+Writing InListFilter to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/in_list_filter.ex.
+Writing Metadata to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/metadata.ex.
+Writing Metric to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/metric.ex.
+Writing MetricHeader to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/metric_header.ex.
+Writing MetricMetadata to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/metric_metadata.ex.
+Writing MetricOrderBy to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/metric_order_by.ex.
+Writing MetricValue to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/metric_value.ex.
+Writing NumericFilter to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/numeric_filter.ex.
+Writing NumericValue to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/numeric_value.ex.
+Writing OrderBy to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/order_by.ex.
+Writing Pivot to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/pivot.ex.
+Writing PivotDimensionHeader to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/pivot_dimension_header.ex.
+Writing PivotHeader to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/pivot_header.ex.
+Writing PivotOrderBy to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/pivot_order_by.ex.
+Writing PivotSelection to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/pivot_selection.ex.
+Writing PropertyQuota to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/property_quota.ex.
+Writing QuotaStatus to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/quota_status.ex.
+Writing ResponseMetaData to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/response_meta_data.ex.
+Writing Row to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/row.ex.
+Writing RunPivotReportRequest to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/run_pivot_report_request.ex.
+Writing RunPivotReportResponse to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/run_pivot_report_response.ex.
+Writing RunRealtimeReportRequest to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/run_realtime_report_request.ex.
+Writing RunRealtimeReportResponse to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/run_realtime_report_response.ex.
+Writing RunReportRequest to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/run_report_request.ex.
+Writing RunReportResponse to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/run_report_response.ex.
+Writing StringFilter to clients/analytics_data/lib/google_api/analytics_data/v1alpha/model/string_filter.ex.
+Writing Properties to clients/analytics_data/lib/google_api/analytics_data/v1alpha/api/properties.ex.
+Writing V1alpha to clients/analytics_data/lib/google_api/analytics_data/v1alpha/api/v1alpha.ex.
+Writing connection.ex.
+Writing metadata.ex.
+Writing mix.exs
+Writing README.md
+Writing LICENSE
+Writing .gitignore
+Writing config/config.exs
+Writing test/test_helper.exs
+[33mThe mix.lock file was generated with a newer version of Hex. Update your client by running `mix local.hex` to avoid losing data.[0m
+
+13:11:17.515 [info]  Bumping patch
+fixing file permissions
+2020-11-18 05:11:20,187 synthtool [DEBUG] > Wrote metadata to clients/analytics_data/synth.metadata.
+DEBUG:synthtool:Wrote metadata to clients/analytics_data/synth.metadata.
+
+```
+</details>
+
+Full log will be available here:
+https://source.cloud.google.com/results/invocations/725a4817-73e8-42f2-8ba6-a36810184277/targets
+
+- [ ] To automatically regenerate this PR, check this box.",FALSE,poision,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+Azure/azure-quickstart-templates,a93610c607e97645fc958d19d6ff7d66a4267378,"Merge pull request #7233 from JohnathonMohr/101-vm-sshkey
+
+Adding Network Security Group to 101-vm-sshkey",TRUE,security,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+vespa-engine/vespa,e3559d31ebde25eecf233a76429594940e367048,"Add fastos::UNIX_File_RW_Ops class to simplify error injection in
+unit tests.
+",FALSE,error injection,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+couchbase/sync_gateway,d625dca58d12b8d884a143d92f5a9917292975f2,"MB-27720 Add check for SGW 1.x install and bypass option via command line
+",FALSE,bypass,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+scylladb/scylla,37f2f6112e3e302f09ad1cc3129309b5e48f0a02,"cql3::util::maybe_quote: avoid stack overflow and fix quote doubling
+
+Merged patch series from Benny Halevy:
+
+The function was reimplemented to solve the following issues.
+The cutom implementation also improved its performance in
+close to 19%
+
+Using regex_match(""[a-z][a-z0-9_]*"") may cause stack overflow on long input strings
+as found with the limits_test.py:TestLimits.max_key_length_test dtest.
+
+std::regex_replace does not replace in-place so no doubling of
+quotes was actually done.
+
+Add unit test that reproduces the crash without this fix
+and tests various string patterns for correctness.
+
+Note that defining the regex with std::regex::optimize
+still ended up with stack overflow.
+
+Fixes #5671
+
+* cql3::util::maybe_quote: avoid stack overflow and fix quote doubling
+* cql3::util::maybe_quote: further optimize quote doubling
+",FALSE,stack overflow,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+EvictionLab/eviction-maps,1fc2da8e95cd94c5138ecb7d7c1ce075004f85e9,"fix rankings overflow
+",FALSE,ranking overflow,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+ProteinsWebTeam/interpro7-client,7477f4e62ed325d3a120814529b85a539519caff,"Remove overflow hidden defined on the root eleemnt as it avoid us from using sticky on tables and used it (if needed) only on the menu element
+",FALSE,overflow,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+programmfabrik/coffeescript-ui,fff0319756d79149c36651f1d7c7fa63e5afde6f,"Theme.ng
+
+- remove tab overflow shadow when tabs are scrolled to the end
+- strengthen overflow shadow
+- add left-padding to overflowing tabs
+- left align overflowing tabs
+",FALSE,overflow shadow,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+facebook/watchman,be58ee274a480e5bc08a4d59134d95c4cdaa5b1e,"move IN_Q_OVERFLOW error message inside schedule_recrawl
+
+This avoids spamming the logs when we get a run of these events
+",FALSE,error message,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+gambit/gambit,354298e01c646b100f7ce530c4dcd75a784d9db2,"Improve handling of fixnum overflow
+",FALSE,improve handling,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+tprrt/linux-stable,a2a678ed4d0d6cb5f36dbabc411d60d9a4f9c435,"dm snapshot persistent: fix missing cleanup in persistent_ctr error path
+
+If an unsupported option is given then the early return from
+persistent_ctr() leaked memory allocated for the 'pstore' and never
+destroyed the 'metadata_wq'.
+
+Fixes: b0d3cc011e53 (""dm snapshot: add new persistent store option to support overflow"")
+Signed-off-by: Sudip Mukherjee <8ebcb270388efeefbc3b674e2d51f150dd6e6b25@vectorindia.org>
+Signed-off-by: Mike Snitzer <85e533f2e78486213c4d69f71462342ec0c62734@redhat.com>
+",FALSE,fixes overflow,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+chromium/chromium,8e761bfdb9bdd10962e1db7ef195047e966c56fd,"Unreviewed, GTK rebaseline after r113756.
+
+* platform/gtk/fast/multicol/table-vertical-align-expected.txt:
+* platform/gtk/fast/overflow/hidden-scrollbar-resize-expected.txt:
+* platform/gtk/fast/repaint/overflow-outline-repaint-expected.txt:
+* platform/gtk/scrollbars/scrollbars-on-positioned-content-expected.txt:
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@113832 bbb929c8-8fbe-4397-9dbb-9b2b20218538",FALSE,overflow directory,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+joseluisquiroga/bj-actor-model,3153fb67bfafcaa5bd7b54f1c6762fc7771b4188,"bjdbg 3 plla stack overflow
+",FALSE,stack overflow,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+tprrt/linux-stable,6f2aed6ad7242ead0db1278b4b48fabb81bbc6a7,"net: dsa: replace count*size kzalloc by kcalloc
+
+kcalloc manages count*sizeof overflow.
+
+Signed-off-by: Fabian Frederick <3efd2a027b14fd890cd23a9ef6d1134b4e5ad850@skynet.be>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",FALSE,manages overflow,,,22_mar_2021_pos_overflow_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+cherrypy/cheroot,52cf08bb511b290e2eea7f1240f6531401640543,"Bypass pytest-related env vars into tox env
+",FALSE,pytest,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+nwjs/chromium.src,622624a7e2fa0edd4cc7de34f9361736e7b3d402,"Changes to how WebMediaPlayerProxyAndroid handles EME responses
+
+WebMediaPlayerProxyAndroid currently bypasses ProxyMediaKeys and
+ProxyDecryptor when handling EME responses. Change it to have the
+responses go to ProxyMediaKeys so that the callback chain is called.
+
+BUG=
+TEST=EME L3 video plays.
+
+Review URL: https://codereview.chromium.org/46383002
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@231523 0039d316-1c4b-4281-b951-d872f2087c98
+",FALSE,handle,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+chromium/chromium,45755197dbfa666607fcb522792d3a39140e7c94,"Bypass a flaky step in TabUiTestHelper#enterTabSwitcher
+
+Some of the test flakiness in tab_ui are caused by tab switcher button
+being invisible in NTP when we try to click it. This is likely due to
+unexpected scrolling in NTP which hides the top tool bar. Before
+landing the actual fix which could introduce some other flakiness,
+this CL lands a workaround first to see how many flakiness could be
+fixed by resolving this issue.
+
+Bug: 1145271
+Change-Id: Iae74425cdc66f41dbfc8eca0d91129c67e9bca05
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2536385
+Reviewed-by: Wei-Yin Chen (陳威尹) <53b4baf7beed764e759decbbaacbec9351f2869e@chromium.org>
+Commit-Queue: Yue Zhang <b57b043fe1b7bca580292d7ed9db445fc3da19de@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#830233}
+",FALSE,flaky test,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+esl/MongooseIM,b673599ab4096258039fc2d65586a61e19d21b61,"Merge pull request #2857 from balgillo/pubsub-nodeid-required-2779
+
+Reject publish to non-existent pubsub node with nodeid-required
+
+As described in the PR:
+Change the response to a publish stanza that lacks a node attribute. Currently, a node with a random name will be auto-created. But XEP-0060 states:
+
+    The element MUST possess a 'node' attribute, specifying the NodeID of the node.
+
+XEP-0060 is not clear on what error should be returned if the node attribute is missing, so I've implemented the same response that it specifies for retract and configure stanzas that lack NodeIDs:
+
+  <error type='modify'>
+    <bad-request xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/>
+    <nodeid-required xmlns='http://jabber.org/protocol/pubsub#errors'/>
+  </error>
+
+The unit tests in pubsub_s2s_SUITE need corresponding changes. Currently in the public test results for publish_test and the publish_without_node_test, the server is responding with a remote-server-not-found response:
+
+	<error code='404' type='cancel'>
+		<remote-server-not-found xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/>
+	</error>
+
+In my local testing, I was getting that result intermittently. The cause seems to be DNS resolution of the host pubsub.localhost. I've configured the big_test fed1 instance to bypass DNS for pubsub.localhost (it was already configured to bypass DNS for localhost, but that configuration did not affect subdomains). While making this change, I also configured it to bypass DNS for subdomain muc.localhost as well, because I saw intermittent failures of muc_SUITE:register_over_s2s for DNS-related reasons; while this doesn't seem to be a problem in the public test results, it seems like a good change anyway.
+
+Once the DNS was bypassed, I get the following responses in the big tests:
+
+pubsub_s2s_SUITE:publish_test
+
+	<error code='403' type='auth'>
+		<forbidden xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/>
+	</error>
+
+pubsub_s2s_SUITE:publish_without_node_attr_test
+
+	<error code='400' type='modify'>
+		<bad-request xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/>
+		<nodeid-required xmlns='http://jabber.org/protocol/pubsub#errors'/>
+	</error>
+
+These responses seem correct (certainly more correct than remote-server-not-found) so I have updated the big test expectations to match.",FALSE,test,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+tprrt/linux-stable,5fcaf6982d1167f1cd9b264704f6d1ef4c505d54,"sunrpc: fix crash when cache_head become valid before update
+
+I was investigating a crash in our Virtuozzo7 kernel which happened in
+in svcauth_unix_set_client. I found out that we access m_client field
+in ip_map structure, which was received from sunrpc_cache_lookup (we
+have a bit older kernel, now the code is in sunrpc_cache_add_entry), and
+these field looks uninitialized (m_client == 0x74 don't look like a
+pointer) but in the cache_head in flags we see 0x1 which is CACHE_VALID.
+
+It looks like the problem appeared from our previous fix to sunrpc (1):
+commit 4ecd55ea0742 (""sunrpc: fix cache_head leak due to queued
+request"")
+
+And we've also found a patch already fixing our patch (2):
+commit d58431eacb22 (""sunrpc: don't mark uninitialised items as VALID."")
+
+Though the crash is eliminated, I think the core of the problem is not
+completely fixed:
+
+Neil in the patch (2) makes cache_head CACHE_NEGATIVE, before
+cache_fresh_locked which was added in (1) to fix crash. These way
+cache_is_valid won't say the cache is valid anymore and in
+svcauth_unix_set_client the function cache_check will return error
+instead of 0, and we don't count entry as initialized.
+
+But it looks like we need to remove cache_fresh_locked completely in
+sunrpc_cache_lookup:
+
+In (1) we've only wanted to make cache_fresh_unlocked->cache_dequeue so
+that cache_requests with no readers also release corresponding
+cache_head, to fix their leak.  We with Vasily were not sure if
+cache_fresh_locked and cache_fresh_unlocked should be used in pair or
+not, so we've guessed to use them in pair.
+
+Now we see that we don't want the CACHE_VALID bit set here by
+cache_fresh_locked, as ""valid"" means ""initialized"" and there is no
+initialization in sunrpc_cache_add_entry. Both expiry_time and
+last_refresh are not used in cache_fresh_unlocked code-path and also not
+required for the initial fix.
+
+So to conclude cache_fresh_locked was called by mistake, and we can just
+safely remove it instead of crutching it with CACHE_NEGATIVE. It looks
+ideologically better for me. Hope I don't miss something here.
+
+Here is our crash backtrace:
+[13108726.326291] BUG: unable to handle kernel NULL pointer dereference at 0000000000000074
+[13108726.326365] IP: [<ffffffffc01f79eb>] svcauth_unix_set_client+0x2ab/0x520 [sunrpc]
+[13108726.326448] PGD 0
+[13108726.326468] Oops: 0002 [#1] SMP
+[13108726.326497] Modules linked in: nbd isofs xfs loop kpatch_cumulative_81_0_r1(O) xt_physdev nfnetlink_queue bluetooth rfkill ip6table_nat nf_nat_ipv6 ip_vs_wrr ip_vs_wlc ip_vs_sh nf_conntrack_netlink ip_vs_sed ip_vs_pe_sip nf_conntrack_sip ip_vs_nq ip_vs_lc ip_vs_lblcr ip_vs_lblc ip_vs_ftp ip_vs_dh nf_nat_ftp nf_conntrack_ftp iptable_raw xt_recent nf_log_ipv6 xt_hl ip6t_rt nf_log_ipv4 nf_log_common xt_LOG xt_limit xt_TCPMSS xt_tcpmss vxlan ip6_udp_tunnel udp_tunnel xt_statistic xt_NFLOG nfnetlink_log dummy xt_mark xt_REDIRECT nf_nat_redirect raw_diag udp_diag tcp_diag inet_diag netlink_diag af_packet_diag unix_diag rpcsec_gss_krb5 xt_addrtype ip6t_rpfilter ipt_REJECT nf_reject_ipv4 ip6t_REJECT nf_reject_ipv6 ebtable_nat ebtable_broute nf_conntrack_ipv6 nf_defrag_ipv6 ip6table_mangle ip6table_raw nfsv4
+[13108726.327173]  dns_resolver cls_u32 binfmt_misc arptable_filter arp_tables ip6table_filter ip6_tables devlink fuse_kio_pcs ipt_MASQUERADE nf_nat_masquerade_ipv4 xt_nat iptable_nat nf_nat_ipv4 xt_comment nf_conntrack_ipv4 nf_defrag_ipv4 xt_wdog_tmo xt_multiport bonding xt_set xt_conntrack iptable_filter iptable_mangle kpatch(O) ebtable_filter ebt_among ebtables ip_set_hash_ip ip_set nfnetlink vfat fat skx_edac intel_powerclamp coretemp intel_rapl iosf_mbi kvm_intel kvm irqbypass fuse pcspkr ses enclosure joydev sg mei_me hpwdt hpilo lpc_ich mei ipmi_si shpchp ipmi_devintf ipmi_msghandler xt_ipvs acpi_power_meter ip_vs_rr nfsv3 nfsd auth_rpcgss nfs_acl nfs lockd grace fscache nf_nat cls_fw sch_htb sch_cbq sch_sfq ip_vs em_u32 nf_conntrack tun br_netfilter veth overlay ip6_vzprivnet ip6_vznetstat ip_vznetstat
+[13108726.327817]  ip_vzprivnet vziolimit vzevent vzlist vzstat vznetstat vznetdev vzmon vzdev bridge pio_kaio pio_nfs pio_direct pfmt_raw pfmt_ploop1 ploop ip_tables ext4 mbcache jbd2 sd_mod crc_t10dif crct10dif_generic mgag200 i2c_algo_bit drm_kms_helper scsi_transport_iscsi 8021q syscopyarea sysfillrect garp sysimgblt fb_sys_fops mrp stp ttm llc bnx2x crct10dif_pclmul crct10dif_common crc32_pclmul crc32c_intel drm dm_multipath ghash_clmulni_intel uas aesni_intel lrw gf128mul glue_helper ablk_helper cryptd tg3 smartpqi scsi_transport_sas mdio libcrc32c i2c_core usb_storage ptp pps_core wmi sunrpc dm_mirror dm_region_hash dm_log dm_mod [last unloaded: kpatch_cumulative_82_0_r1]
+[13108726.328403] CPU: 35 PID: 63742 Comm: nfsd ve: 51332 Kdump: loaded Tainted: G        W  O   ------------   3.10.0-862.20.2.vz7.73.29 #1 73.29
+[13108726.328491] Hardware name: HPE ProLiant DL360 Gen10/ProLiant DL360 Gen10, BIOS U32 10/02/2018
+[13108726.328554] task: ffffa0a6a41b1160 ti: ffffa0c2a74bc000 task.ti: ffffa0c2a74bc000
+[13108726.328610] RIP: 0010:[<ffffffffc01f79eb>]  [<ffffffffc01f79eb>] svcauth_unix_set_client+0x2ab/0x520 [sunrpc]
+[13108726.328706] RSP: 0018:ffffa0c2a74bfd80  EFLAGS: 00010246
+[13108726.328750] RAX: 0000000000000001 RBX: ffffa0a6183ae000 RCX: 0000000000000000
+[13108726.328811] RDX: 0000000000000074 RSI: 0000000000000286 RDI: ffffa0c2a74bfcf0
+[13108726.328864] RBP: ffffa0c2a74bfe00 R08: ffffa0bab8c22960 R09: 0000000000000001
+[13108726.328916] R10: 0000000000000001 R11: 0000000000000001 R12: ffffa0a32aa7f000
+[13108726.328969] R13: ffffa0a6183afac0 R14: ffffa0c233d88d00 R15: ffffa0c2a74bfdb4
+[13108726.329022] FS:  0000000000000000(0000) GS:ffffa0e17f9c0000(0000) knlGS:0000000000000000
+[13108726.329081] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[13108726.332311] CR2: 0000000000000074 CR3: 00000026a1b28000 CR4: 00000000007607e0
+[13108726.334606] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[13108726.336754] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[13108726.338908] PKRU: 00000000
+[13108726.341047] Call Trace:
+[13108726.343074]  [<ffffffff8a2c78b4>] ? groups_alloc+0x34/0x110
+[13108726.344837]  [<ffffffffc01f5eb4>] svc_set_client+0x24/0x30 [sunrpc]
+[13108726.346631]  [<ffffffffc01f2ac1>] svc_process_common+0x241/0x710 [sunrpc]
+[13108726.348332]  [<ffffffffc01f3093>] svc_process+0x103/0x190 [sunrpc]
+[13108726.350016]  [<ffffffffc07d605f>] nfsd+0xdf/0x150 [nfsd]
+[13108726.351735]  [<ffffffffc07d5f80>] ? nfsd_destroy+0x80/0x80 [nfsd]
+[13108726.353459]  [<ffffffff8a2bf741>] kthread+0xd1/0xe0
+[13108726.355195]  [<ffffffff8a2bf670>] ? create_kthread+0x60/0x60
+[13108726.356896]  [<ffffffff8a9556dd>] ret_from_fork_nospec_begin+0x7/0x21
+[13108726.358577]  [<ffffffff8a2bf670>] ? create_kthread+0x60/0x60
+[13108726.360240] Code: 4c 8b 45 98 0f 8e 2e 01 00 00 83 f8 fe 0f 84 76 fe ff ff 85 c0 0f 85 2b 01 00 00 49 8b 50 40 b8 01 00 00 00 48 89 93 d0 1a 00 00 <f0> 0f c1 02 83 c0 01 83 f8 01 0f 8e 53 02 00 00 49 8b 44 24 38
+[13108726.363769] RIP  [<ffffffffc01f79eb>] svcauth_unix_set_client+0x2ab/0x520 [sunrpc]
+[13108726.365530]  RSP <ffffa0c2a74bfd80>
+[13108726.367179] CR2: 0000000000000074
+
+Fixes: d58431eacb22 (""sunrpc: don't mark uninitialised items as VALID."")
+Signed-off-by: Pavel Tikhomirov <3e8c75167f9f00ca74287a4609f1507a2696e07e@virtuozzo.com>
+Acked-by: NeilBrown <1c00aa603bb92d594c03cff60ecf8e63b2a5bcb1@suse.de>
+Signed-off-by: J. Bruce Fields <51738506c1b2ccb0761f23bdc612c93babf738ea@redhat.com>
+",FALSE,,FALSE,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+joncampbell123/dosbox-x,027d457d212a93b41f07bfd8c792d93d90de0dd6,"sound blaster pro filter bypass should be on by default (that makes
+sense). The question is... does the real hardware default to that state?
+",FALSE,sound blaster,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+tprrt/linux-stable,b8b275efc28e34f9b1d1e382d0b02dfa381b2a79,"ata_piix: fix suspend/resume for some TOSHIBA laptops
+
+ACPI implementations in several TOSHIBA laptops are weird and burn cpu
+cycles for tens of seconds while trying to suspend if the PCI device
+for the ATA controller is disabled when the ACPI suspend is called.
+
+This patch uses DMI to match those machines and bypass device disable
+on those machines during suspend.  As the device needs to be put into
+enabled state on resume without affecting PCI enable count, matching
+resume callback uses __pci_reenable_device().
+
+This bug is reported in bugzilla bug 7780.
+
+  http://bugzilla.kernel.org/show_bug.cgi?id=7780
+
+Signed-off-by: Tejun Heo <ccfba69985e72fbcd9ba8bbb6db43d42971ad06d@gmail.com>
+Signed-off-by: Jeff Garzik <f3e731dfa293c7a83119d8aacfa41b5d2d780be9@garzik.org>
+",FALSE,bypass device disable,FALSE,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+tprrt/linux-stable,58f5bbe331c566f49c9559568f982202a278aa78,"ethtool: fix a privilege escalation bug
+
+In dev_ethtool(), the eth command 'ethcmd' is firstly copied from the
+use-space buffer 'useraddr' and checked to see whether it is
+ETHTOOL_PERQUEUE. If yes, the sub-command 'sub_cmd' is further copied from
+the user space. Otherwise, 'sub_cmd' is the same as 'ethcmd'. Next,
+according to 'sub_cmd', a permission check is enforced through the function
+ns_capable(). For example, the permission check is required if 'sub_cmd' is
+ETHTOOL_SCOALESCE, but it is not necessary if 'sub_cmd' is
+ETHTOOL_GCOALESCE, as suggested in the comment ""Allow some commands to be
+done by anyone"". The following execution invokes different handlers
+according to 'ethcmd'. Specifically, if 'ethcmd' is ETHTOOL_PERQUEUE,
+ethtool_set_per_queue() is called. In ethtool_set_per_queue(), the kernel
+object 'per_queue_opt' is copied again from the user-space buffer
+'useraddr' and 'per_queue_opt.sub_command' is used to determine which
+operation should be performed. Given that the buffer 'useraddr' is in the
+user space, a malicious user can race to change the sub-command between the
+two copies. In particular, the attacker can supply ETHTOOL_PERQUEUE and
+ETHTOOL_GCOALESCE to bypass the permission check in dev_ethtool(). Then
+before ethtool_set_per_queue() is called, the attacker changes
+ETHTOOL_GCOALESCE to ETHTOOL_SCOALESCE. In this way, the attacker can
+bypass the permission check and execute ETHTOOL_SCOALESCE.
+
+This patch enforces a check in ethtool_set_per_queue() after the second
+copy from 'useraddr'. If the sub-command is different from the one obtained
+in the first copy in dev_ethtool(), an error code EINVAL will be returned.
+
+Fixes: f38d138a7da6 (""net/ethtool: support set coalesce per queue"")
+Signed-off-by: Wenwen Wang <bafc5a1ee344249d3957e4d34f33647904b567dc@umn.edu>
+Reviewed-by: Michal Kubecek <48ad0bdf47651f7a71905c605c8960f443623cd5@suse.cz>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,privilige escalation,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+bio-miga/miga,6acc903d1d3ad082a16bfdbdbdcbff9279af23f8,"Bypass maintenance in one-run projects (shutdown when done)
+",FALSE,maintenance,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+grpc/grpc,b46d873db91ee7afa48ce3c35f14c153484776e2,"Merge pull request #17790 from apolcyn/fix_sorting_bypass
+
+Fix windows localhost address sorting bug",FALSE,sorting,,,22_mar_2021_pos_bypass_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+ComPlat/chemotion_ELN,6e821cd8eb8987680b9d67dbd39bafa31eeaf211,"Add import elements permission level.
+",TRUE,permission,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+erxes/erxes,01968d4eca8126d76e73c3d62aa551334eecd5b4,"Enhancement/copy permissions and user group
+
+close #1622",TRUE,permissions,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+oVirt/ovirt-web-ui,a5a90a3ccaec023a241385657db96346503455d6,"Merge pull request #784 from sjd78/cluster-permissions
+
+Add permission checks/filtering for Create VM, Edit VM and Cluster Lists",TRUE,permissions,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+aquametalabs/aquameta,92b07f85170aee11b5971c2a315f594fc75137b8,"Docker install setups up permissions correctly
+",TRUE,permissions,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+chromium/chromium,6e318e0e2b5fd1f3596f96d3cd87475b2db106a2,"Grant the GL bindings permission to do file I/O during their initialization.
+This one-time initialization takes very little time and is impractical
+to move to another thread when the bindings are needed.
+
+Re-enable NoStartupWindowTest.NoStartupWindowBasicTest on Mac.
+
+BUG=100298
+TEST=NoStartupWindowTest.NoStartupWindowBasicTest
+TBR=atwilson
+Review URL: http://codereview.chromium.org/8301014
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@105605 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,permission,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+Azure/azure-sdk-for-java,ff3276e9311267feeb719bc6a2eb9cf2bec48959,"changing x5t to x509Thumbprint, adding key ID to secret and updating documentations for the WebKey types to reflect the accepted types
+",TRUE,secret,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+it-novum/openITCOCKPIT,cb01c9ee57b7b2d96a367db444c741bc1e1c1522,"Create randome /opt/openitc/etc/grafana/admin_password
+",TRUE,password,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+googleapis/elixir-google-api,5e3a7387975b1603eb7da4038d2460e0dcb2c193,"Regenerate CloudAsset client (#6860)
+
+This PR was generated using Autosynth. :rainbow:
+
+
+<details><summary>Log from Synthtool</summary>
+
+```
+2020-12-11 05:26:20,185 synthtool [DEBUG] > Executing /home/kbuilder/.cache/synthtool/elixir-google-api/synth.py.
+On branch autosynth-cloudasset
+nothing to commit, working tree clean
+2020-12-11 05:26:21,908 synthtool [DEBUG] > Running: docker run --rm -v/tmpfs/tmp/tmpv26ss0fd/repo:/workspace -v/var/run/docker.sock:/var/run/docker.sock -e USER_GROUP=1000:1000 -w /workspace gcr.io/cloud-devrel-public-resources/elixir19 scripts/generate_client.sh CloudAsset
+DEBUG:synthtool:Running: docker run --rm -v/tmpfs/tmp/tmpv26ss0fd/repo:/workspace -v/var/run/docker.sock:/var/run/docker.sock -e USER_GROUP=1000:1000 -w /workspace gcr.io/cloud-devrel-public-resources/elixir19 scripts/generate_client.sh CloudAsset
+/workspace /workspace
+[33mThe mix.lock file was generated with a newer version of Hex. Update your client by running `mix local.hex` to avoid losing data.[0m
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  certifi 2.5.1
+  google_api_discovery 0.7.0
+  google_gax 0.3.2
+  hackney 1.15.2
+  idna 6.0.0
+  jason 1.2.1
+  metrics 1.0.1
+  mime 1.3.1
+  mimerl 1.2.0
+  oauth2 0.9.4
+  parse_trans 3.3.0
+  poison 3.1.0
+  ssl_verify_fun 1.1.5
+  temp 0.4.7
+  tesla 1.3.3
+  unicode_util_compat 0.4.1
+* Getting google_api_discovery (Hex package)
+* Getting tesla (Hex package)
+* Getting oauth2 (Hex package)
+* Getting temp (Hex package)
+* Getting jason (Hex package)
+* Getting poison (Hex package)
+* Getting hackney (Hex package)
+* Getting certifi (Hex package)
+* Getting idna (Hex package)
+* Getting metrics (Hex package)
+* Getting mimerl (Hex package)
+* Getting ssl_verify_fun (Hex package)
+* Getting unicode_util_compat (Hex package)
+* Getting parse_trans (Hex package)
+* Getting mime (Hex package)
+* Getting google_gax (Hex package)
+[33mThe mix.lock file was generated with a newer version of Hex. Update your client by running `mix local.hex` to avoid losing data.[0m
+==> temp
+Compiling 3 files (.ex)
+Generated temp app
+===> Compiling parse_trans
+===> Compiling mimerl
+===> Compiling metrics
+===> Compiling unicode_util_compat
+===> Compiling idna
+==> jason
+Compiling 8 files (.ex)
+Generated jason app
+warning: String.strip/1 is deprecated. Use String.trim/1 instead
+  /workspace/deps/poison/mix.exs:4
+
+==> poison
+Compiling 4 files (.ex)
+warning: Integer.to_char_list/2 is deprecated. Use Integer.to_charlist/2 instead
+  lib/poison/encoder.ex:173
+
+Generated poison app
+==> ssl_verify_fun
+Compiling 7 files (.erl)
+Generated ssl_verify_fun app
+===> Compiling certifi
+===> Compiling hackney
+==> oauth2
+Compiling 13 files (.ex)
+Generated oauth2 app
+==> mime
+Compiling 2 files (.ex)
+Generated mime app
+==> tesla
+Compiling 26 files (.ex)
+Generated tesla app
+==> google_gax
+Compiling 5 files (.ex)
+Generated google_gax app
+==> google_api_discovery
+Compiling 21 files (.ex)
+Generated google_api_discovery app
+==> google_apis
+Compiling 28 files (.ex)
+Generated google_apis app
+
+13:26:51.724 [info]  FETCHING: https://cloudasset.googleapis.com/$discovery/GOOGLE_REST_SIMPLE_URI?version=v1
+
+13:26:51.855 [info]  FOUND: https://cloudasset.googleapis.com/$discovery/GOOGLE_REST_SIMPLE_URI?version=v1
+Revision check: old=20201115, new=20201204, generating=true
+Creating leading directories
+Writing AccessSelector to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/access_selector.ex.
+Writing AnalyzeIamPolicyLongrunningRequest to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/analyze_iam_policy_longrunning_request.ex.
+Writing AnalyzeIamPolicyResponse to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/analyze_iam_policy_response.ex.
+Writing Asset to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/asset.ex.
+Writing AuditConfig to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/audit_config.ex.
+Writing AuditLogConfig to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/audit_log_config.ex.
+Writing BatchGetAssetsHistoryResponse to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/batch_get_assets_history_response.ex.
+Writing BigQueryDestination to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/big_query_destination.ex.
+Writing Binding to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/binding.ex.
+Writing CreateFeedRequest to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/create_feed_request.ex.
+Writing Empty to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/empty.ex.
+Writing Explanation to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/explanation.ex.
+Writing ExportAssetsRequest to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/export_assets_request.ex.
+Writing Expr to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/expr.ex.
+Writing Feed to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/feed.ex.
+Writing FeedOutputConfig to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/feed_output_config.ex.
+Writing GcsDestination to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/gcs_destination.ex.
+Writing GoogleCloudAssetV1Access to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_access.ex.
+Writing GoogleCloudAssetV1AccessControlList to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_access_control_list.ex.
+Writing GoogleCloudAssetV1BigQueryDestination to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_big_query_destination.ex.
+Writing GoogleCloudAssetV1Edge to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_edge.ex.
+Writing GoogleCloudAssetV1GcsDestination to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_gcs_destination.ex.
+Writing GoogleCloudAssetV1Identity to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_identity.ex.
+Writing GoogleCloudAssetV1IdentityList to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_identity_list.ex.
+Writing GoogleCloudAssetV1Resource to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_asset_v1_resource.ex.
+Writing GoogleCloudOrgpolicyV1BooleanPolicy to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_orgpolicy_v1_boolean_policy.ex.
+Writing GoogleCloudOrgpolicyV1ListPolicy to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_orgpolicy_v1_list_policy.ex.
+Writing GoogleCloudOrgpolicyV1Policy to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_orgpolicy_v1_policy.ex.
+Writing GoogleCloudOrgpolicyV1RestoreDefault to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_cloud_orgpolicy_v1_restore_default.ex.
+Writing GoogleIdentityAccesscontextmanagerV1AccessLevel to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_access_level.ex.
+Writing GoogleIdentityAccesscontextmanagerV1AccessPolicy to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_access_policy.ex.
+Writing GoogleIdentityAccesscontextmanagerV1BasicLevel to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_basic_level.ex.
+Writing GoogleIdentityAccesscontextmanagerV1Condition to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_condition.ex.
+Writing GoogleIdentityAccesscontextmanagerV1CustomLevel to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_custom_level.ex.
+Writing GoogleIdentityAccesscontextmanagerV1DevicePolicy to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_device_policy.ex.
+Writing GoogleIdentityAccesscontextmanagerV1OsConstraint to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_os_constraint.ex.
+Writing GoogleIdentityAccesscontextmanagerV1ServicePerimeter to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_service_perimeter.ex.
+Writing GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_service_perimeter_config.ex.
+Writing GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/google_identity_accesscontextmanager_v1_vpc_accessible_services.ex.
+Writing IamPolicyAnalysis to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/iam_policy_analysis.ex.
+Writing IamPolicyAnalysisOutputConfig to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/iam_policy_analysis_output_config.ex.
+Writing IamPolicyAnalysisQuery to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/iam_policy_analysis_query.ex.
+Writing IamPolicyAnalysisResult to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/iam_policy_analysis_result.ex.
+Writing IamPolicyAnalysisState to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/iam_policy_analysis_state.ex.
+Writing IamPolicySearchResult to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/iam_policy_search_result.ex.
+Writing IdentitySelector to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/identity_selector.ex.
+Writing Inventory to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/inventory.ex.
+Writing Item to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/item.ex.
+Writing ListFeedsResponse to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/list_feeds_response.ex.
+Writing Operation to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/operation.ex.
+Writing Options to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/options.ex.
+Writing OsInfo to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/os_info.ex.
+Writing OutputConfig to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/output_config.ex.
+Writing PartitionSpec to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/partition_spec.ex.
+Writing Permissions to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/permissions.ex.
+Writing Policy to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/policy.ex.
+Writing PubsubDestination to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/pubsub_destination.ex.
+Writing Resource to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/resource.ex.
+Writing ResourceSearchResult to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/resource_search_result.ex.
+Writing ResourceSelector to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/resource_selector.ex.
+Writing SearchAllIamPoliciesResponse to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/search_all_iam_policies_response.ex.
+Writing SearchAllResourcesResponse to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/search_all_resources_response.ex.
+Writing SoftwarePackage to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/software_package.ex.
+Writing Status to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/status.ex.
+Writing TemporalAsset to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/temporal_asset.ex.
+Writing TimeWindow to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/time_window.ex.
+Writing UpdateFeedRequest to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/update_feed_request.ex.
+Writing VersionedPackage to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/versioned_package.ex.
+Writing WindowsQuickFixEngineeringPackage to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/windows_quick_fix_engineering_package.ex.
+Writing WindowsUpdateCategory to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/windows_update_category.ex.
+Writing WindowsUpdatePackage to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/windows_update_package.ex.
+Writing ZypperPatch to clients/cloud_asset/lib/google_api/cloud_asset/v1/model/zypper_patch.ex.
+Writing Feeds to clients/cloud_asset/lib/google_api/cloud_asset/v1/api/feeds.ex.
+Writing Operations to clients/cloud_asset/lib/google_api/cloud_asset/v1/api/operations.ex.
+Writing V1 to clients/cloud_asset/lib/google_api/cloud_asset/v1/api/v1.ex.
+Writing connection.ex.
+Writing metadata.ex.
+Writing mix.exs
+Writing README.md
+Writing LICENSE
+Writing .gitignore
+Writing config/config.exs
+Writing test/test_helper.exs
+[33mThe mix.lock file was generated with a newer version of Hex. Update your client by running `mix local.hex` to avoid losing data.[0m
+
+13:26:53.608 [info]  Bumping patch
+fixing file permissions
+2020-12-11 05:26:56,433 synthtool [DEBUG] > Wrote metadata to clients/cloud_asset/synth.metadata.
+DEBUG:synthtool:Wrote metadata to clients/cloud_asset/synth.metadata.
+
+```
+</details>
+
+Full log will be available here:
+https://source.cloud.google.com/results/invocations/e4e12955-5619-4f07-9b11-80ba84a2a12d/targets
+
+- [ ] To automatically regenerate this PR, check this box.",FALSE,poision,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+openstack/tripleo-heat-templates,b61156785517f767a9ad0ee1613588f6b049fc8c,"Only generate Octavia certs on stack create
+
+We are regenerating octavia certs whenever an overcloud is updated,
+breaking any deployments using the auto-generated certs. Certificate
+updates after the initial deployment require special handling and
+shouldn't be performed by stack updates/upgrades at this time.
+
+Depends-On: I90bb377c76f51db906de64c134271ec866d11bb5
+Closes-Bug: #1838039
+Change-Id: I05f69df627e5637fdb254285cb3ad6d3d8328f90
+",TRUE,certificate,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+umbraco/Umbraco-CMS,9469b0b844d47328a557cf66e517c3059f646ebd,"Fixes: U4-6402 Grid config file should be merged with package.manifests & U4-6427 Grid config file has caching problems because it's downloaded as a static file
+
+This also fixes up the OutputCaching params on the BackOfficeController since OutputCache is bypassed when an action requires authentication, so now we manually do some caching when not in debug mode for authorized actions (of course auth happens before any cached response can occur). This also fixes up the static caching that was happening with the ManifestBuilder so now when that is not in use it gives back it's memory. This also fixes up any client side caching that was happening on BackOfficeController - before we were allowing client cache to happen for a few actions on that controller which is incorrect, we need to disable all client cache for all actions on that controller.
+",FALSE,bypassed,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+tprrt/linux-stable,040cda8a15210f19da7e29232c897ca6ca6cc950,"Merge tag 'wireless-drivers-2019-12-17' of git://git.kernel.org/pub/scm/linux/kernel/git/kvalo/wireless-drivers
+
+Kalle Valo says:
+
+====================
+wireless-drivers fixes for v5.5
+
+First set of fixes for v5.5. Fixing security issues, some regressions
+and few major bugs.
+
+mwifiex
+
+* security fix for handling country Information Elements (CVE-2019-14895)
+
+* security fix for handling TDLS Information Elements
+
+ath9k
+
+* fix endian issue with ath9k_pci_owl_loader
+
+mt76
+
+* fix default mac address handling
+
+iwlwifi
+
+* fix merge damage which lead to firmware crashing during boot on some devices
+
+* fix device initialisation regression on some devices
+====================
+
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,security,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+hal/hal.next,77a7338f739c758063e77d881b21873d573b2e48,"EAP7-1011/HAL-1471 Support for authentication in Keycloak SSO
+https://issues.jboss.org/browse/HAL-1471
+",TRUE,authentication,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+jackycute/HackMD,5467e6da8debc35befd5891bbe393a22f269117d,"Fixed socket session secure might not apply properly
+",TRUE,secure,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+GluuFederation/oxAuth,c36f7362ce15a87887e9232937266e869bc71f19,"Decrypt bindPassword in basic multi auth script
+
+https://github.com/GluuFederation/oxAuth/issues/1409
+",TRUE,"decrypt, password",,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+kubeflow/kfserving,17b6c04bac13e99ee1830a320bc93e388d3a0237,"[POC] Multi-Model Puller (#989)
+
+* [WIP] Beginning logic for multi-model puller
+
+* change version to memory
+
+* moving puller to cmd
+
+* add downloader and requester logic
+
+* add retry logic to donwload
+
+* resolve intial comments
+
+* resolve comments and rebase
+
+* resolve comments
+
+* resolve comments and add s3 logic
+
+* have downloaded models be under a modelname
+
+* resolve comments
+
+* add unload logic
+
+* added retry logic and further hardening for failures
+
+* resolve comments and handle on-start
+
+* resolve comments and reorganize
+
+* fmt
+
+* resolve comments
+
+* inline puller
+
+* update go mod
+
+* move comment
+
+* remove unnnecessary comment",FALSE,hardening,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+btcsuite/btcd,1d0c09a8523ccdb52a876a68ffa4a80d95b61c84,"Require TLS 1.2 minimum.
+
+This prevents a downgrade attack to the vulnerable SSLv3.  While here,
+go ahead and require at least TLS 1.2 since TLS 1.0 and 1.1 have their
+own set of issues and it's only a matter of time before those would
+need to be completely avoided as well.
+
+ok @davecgh
+",TRUE,attack,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+Notalib/nativescript-audioplayer,e367b9dc88f72cd7522bd1744395ccfcffddda21,"fix: android.security.NetworkSecurityPolicy was first added in SDK 23
+
+android.security.NetworkSecurityPolicy.isCleartextTrafficPermitted(string) was added in SDK 24
+",TRUE,security,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+androguard/androguard,dc704a3d27d57fe7b80ec4e8915f54520e9460db,"improve permissions
+",TRUE,permissions,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+advancedtelematic/aktualizr,216cb84db98e9b0f8c6c1c407f480c5dd0b3cf62,"Merge pull request #33 from advancedtelematic/bugfix/include_path
+
+Fix include paths for auth_test.",TRUE,auth,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+Asqatasun/Asqatasun,d3eec7730f048d000047db6873a5c52a2254e640,"site-scope test : injection of processRemarkService to retrieve Remarks of ProcessResult when consolidating (patch2 in beta7 tag) -> rules side
+",FALSE,injection.. to retrive,,,22_mar_2021_pos_4f0da267bc6cb9783426d9f38bf1d1a075d9541b
+TID-Lab/aggie,44f597f2552a8f520ea918981ccdb0ba1ce44034,"Merge branch 'dstroot-reset'
+
+* dstroot-reset: (27 commits)
+  Added comments to User model on instance methods and mongoose middleware.
+  Updated login template
+  Add success flash notification on successful password reset
+  Forgot password token changed to hex instead of base64 to avoid having slashes in the url
+  Merged first and second waterfall steps into one, added var secrets = require('../config/secrets');, and mongoose query now returns a user object instead of an array
+  Converted reset controller from eventemitter to async.waterfall.
+  Added callback to async.waterfall for error handling via express middleware
+  Renamed forgot password link
+  Updated reset password template
+  Cleaned up and refactored reset password template
+  Updated schema's default values for password token and expires fields
+  Update flash message on successful forgot password request
+  Update contributing section
+  Update POST /forgot description.
+  Refactor Forgot controller
+  Converted workflow/eventemitter code to async.waterfall
+  Update error flash message, redirect to /forgot if no reset token is found or if it has expired
+  Updated expiration of password token to 1hr, updated flash message when email is sent with password recovery instructions.
+  Removed user _id from reset route. Use only token value. It's random enough that you don't need to include user id as well.
+  Updated email template text, removed token salting, changed token to base64 (24bit)
+  ...
+",TRUE,passwod,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+phac-nml/irida,15f655085d2c9bbbc5760d4e25d284cb06d31c9e,"applied permissions to service
+",TRUE,premissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+resamsel/translatr,3b479d5201ab4b42fef926e06c39910f393b7767,"Fix: Remove default username and password from translatr.conf
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+edgedb/edgedb,aa5f661c42487d8e7e943cdd78b8c02a0d6dc8a6,"Add support for protocol negotiation
+
+The initial message sent by the client is now a regular framed
+`ProtocolVersion` message.  It contains the major and the minor versions
+of the protocol, as well as an arbitrary set of protocol extensions that
+consist of the extension name and an optional set of extension options.
+
+If the server fully supports the requested protocol version and the
+requested extensions, it proceeds directly to the authentication phase.
+Otherwise a `NegotiateProtocolVersion` message is sent back to the
+client with the same format as the initial `ProtocolVersion` message
+containing the version and the extensions that the server can support.
+",TRUE,authentication,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+joncampbell123/dosbox-x,e9bb62879cfe01876feb3d020c380c3a7a1b981f,"Disable dos_network2 in MinGW builds.
+
+GCC 5 is currently failing at:
+
+	dos/libdos.a(dos_files.o):dos_files.cpp:(.rdata$.refptr._nhandle[.refptr._nhandle]+0x0): undefined reference to `_nhandle'
+",FALSE,dos,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+symfony/Translation,cb7cd7d1d32f6f58e80ef8a6570bf0a7e9cb6d1b,"Merge branch '4.4'
+
+* 4.4:
+  cs fix
+  Fix inconsistent return points.
+  [Config] Add handling for ignored keys in ArrayNode::mergeValues.
+  Fix inconsistent return points.
+  [Security/Core] UserInterface::getPassword() can return null
+  cs fix
+  cs fix
+  Fix missing exporter in PHPUnit constraint poylfill
+  added `Process::getLastOutputTime()` method
+  [Router] Fix TraceableUrlMatcher behaviour with trailing slash
+  [HttpKernel] Remove outdated docblock comment
+  Fix handling for session parameters
+  Revert ""bug #33092 [DependencyInjection] Improve an exception message (fabpot)""
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+CancerCollaboratory/dockstore,f4b90294c2a8f07fb6016feb8d1f3a56a24d6217,"update secret archive
+",TRUE,secret,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+openfoodfoundation/openfoodnetwork,89056e13edc8e65abbe038d0246a6a203f68a44c,"Extract order permissions to a separate class
+",TRUE,premissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+backdrop-ops/backdrop-pantheon,85ea341384cda57c6a7a3f7ac001a4e6667c1848,"Merge pull request #475 from tarekdj/7.29-relase
+
+Issue #343: SA-CORE-2014-003 - Drupal core - Multiple vulnerabilities.",TRUE,vulnerabilities,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+ilscipio/scipio-erp,c8421a1bca26a9671d63ffede5ded3f8c09d721c,"upstream merge: all: permission services: localize permission check label
+
+1 minor commit:
+""Improves: replaces hardcoded strings ""this operation"" by
+CommonPermissionThisOperation (OFBIZ-8324)""
+
+Upstream-Commit: f63b8335680369fade75554eda5132c539a66dc1
+Upstream-Repo: https://github.com/apache/ofbiz-framework.git
+Upstream-Branch: trunk
+
+Refs https://gitlab.ilscipio.com/scipio-dev/dev/scipioce-dev/issues/556
+",TRUE,permissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+mcMMO-Dev/mcMMO,ad4ee6f4024e1f8ce1be15c14d4dfceeddb1d17b,"Cleanup exploit prevention method.
+",TRUE,exploit,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+dutoitc/copper,42f633616baf802528ee82d6728693690db2f816,"Trust self-signed https certificates
+",TRUE,certificates,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+vanilla/vanilla,323f16a7ffe5e290539060e89c984f82c3aaf530,"Ensure password editing fields toggle appropriately
+
+* Executes on contentLoad to ensure the javascript executes in a modal.
+* Listens for a `change` on the radio field instead of `click`, which fixes the interference with iCheck.
+* Explicitly checks for visibility of the password input element, so we can toggle the text on the button.
+* Reorders the HTML to work with hiding/showing the `NewPassword` element and adds data attributes to aid translation.
+
+Closes https://github.com/vanilla/vanilla/issues/4694
+
+
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+samba-team/samba,f85b822bd4feaab179ffbf00496fcb7d1905fc8c,"libcli/security Use talloc_realloc() not TALLOC_REALLOC_ARRAY()
+
+Signed-off-by: Andrew Tridgell <1c8e404123ec1e943a5bdbd4bdedfb594c32c512@samba.org>
+",TRUE,security,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+Madek/madek-webapp,b97c3492c2ffb7003e92b9e02698609403d1110d,"controller: module: FileStorage: set filesystem permissions
+",TRUE,permissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+ligo-cbc/pycbc,3e8ad9581d6c101cd0ba751fc63b3d23d289daac,"Sensitivity plots fix (#2860)
+
+* fix immediately obvious bug in plotting loop
+
+* add in allinj plots, create front summary page
+
+* move allinj to after injection plots loop
+
+* Fix to make bank_plot work. Include found table in injection pages
+
+* Use censored veto, clarify fixme comments
+
+* add snrifar summary to main page
+
+* remove confusing and unneccessary bit
+
+* found table doesnt work
+
+* fix up one thing which turned into a list although it's only a list with 1 entry
+
+* add Gareth
+",FALSE,injection plots,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+nwjs/chromium.src,f513928537f1582d1d983d6eee7d6183c236922b,"2009-04-02  Pamela Greene  <pam@chromium.org>
+
+        Reviewed by Darin Adler.
+
+        Split no-port test case into separate file, since its result may
+        depend on the behavior of a DNS proxy on some systems.
+        https://bugs.webkit.org/show_bug.cgi?id=21530
+
+        * platform/mac-tiger/security/block-test-expected.txt: updated
+        * platform/mac-tiger/security/block-test-no-port-expected.txt: Added.
+        * platform/mac/security/block-test-expected.txt: updated
+        * platform/mac/security/block-test-no-port-expected.txt: Added.
+        * security/block-test-no-port.html: Added.
+        * security/block-test.html: removed no-port test case
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@42188 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,security,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+eduNEXT/edunext-platform,d1aa0a254eba1c56544537401ab36c64d9a8ae24,"Use one of our test courses when testing course permissions for the discussion client, because we now have course policy level overrides.
+",TRUE,permissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+thorsten/phpMyFAQ,93767588dc0ff9b87f3d2531a166a7a2862a3512,"fix: added missing fetch of user/group permissions from FAQ, closes #1697
+",TRUE,permissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+chromium/chromium,55b48d9dd8b210943b0565e5a802a58166c658a4,"Add use_credentials to MediaUrlParams
+
+This CL changes the MediaPlayerRenderer to take into consideration the
+crossorign attribute, before sending off information to MediaPlayer.
+
+See bug for more details.
+
+Bug: 936566
+Change-Id: I7a3a8b86b521741bc1166038a12a029e5c32fcd4
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1504710
+Commit-Queue: Thomas Guilbert <75c0f3b567459bb70e3e3f976e74c2eb16c241d1@chromium.org>
+Reviewed-by: Dan Sanders <20f9a73d1f97801b54f0f696ccf29663988105ce@chromium.org>
+Reviewed-by: Emily Stark <351cd4dcb8ca60b28d6406fe7f489a1eda3af330@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#644063}",TRUE,credentials,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+wongsyrone/lede-1,740af59b9c7ee879b6936dd03bf37d37a54dda47,"procd: update to git HEAD
+
+ 0aee1c3 hotplug.c: set nl_pid to zero
+ d6dda31 procd: fix compiler warning
+ 92c8e8f jail: remove duplicate check for hook file permissions
+ 0a74c06 jail: only output BPF instr. table header if debugging
+ fd18379 jail: cgroups: fix uninitialized variabl
+
+Signed-off-by: Daniel Golle <3d0f3b9ddcacec30c4008c5e030e6c13a478cb4f@makrotopia.org>
+",TRUE,permissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+ampproject/amp-toolbox-php,137a5dba35eb1fc02acdcda8f2c05c673d8941fa,"Merge pull request #3954 from ampproject/fix/3950-sanitize-iframe-attrs
+
+Handle sanitization of security, marginwidth & marginheight iframe attributes",TRUE,security,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+GetStream/stream-js,8e7820ce0a45c986381ff55353c4e66a0fc4761d,"renaming auth related variables and docs for exposing signatures
+",TRUE,auth,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+symfony/security-bundle,f042584ac8fd279aea29167c62b1217ce2aac56b,"Merge branch '2.7' into 2.8
+
+* 2.7:
+  [SecurityBundle] Fail if security.http_utils cannot be configured
+",TRUE,security,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+spinnaker/clouddriver,8a6ec682e64bfe0ca4f308250b3c42fca220f2e9,"provider/google: serialized server groups, load balancers, security groups (#723)
+
+",TRUE,security,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+naev/naev,8b3483988f1d3b2bdfea533767779f536dee5228,"* Added binding to get system security.
+",TRUE,security,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+postersw/AndersonIsland,37afe8fb17fb3eb430ce8d894172e1648ba8a9f7,"Add location permission info for IOS.
+",TRUE,permission,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+artsy/metaphysics,ed52546a991757d3972c1067b8e1c482d033c79e,"auth artworkLoader -> authenticatedArtworkLoader
+",TRUE,authenticated,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+telefonicaid/iotagent-ul,8d508e388333d73e267f20faa929e4870e10c9cb,"Permission changed to 644
+",TRUE,permission,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+brave-intl/bat-ledger,febf6c49ad39a912238c9dbb439cb54d38418251,"added auth layer for ads endpoints (#431)
+
+",TRUE,auth,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+JetBrains/intellij-community,bb54c696a4a562b7c6afa0a10fddae58a3bcabf4,"IDEA-193752 Evaluate reported Apache Xalan vulnerabilities in IntelliJ IDEA Community
+
+licences fixed
+",TRUE,vulnerabilities,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+dradis/dradisframework-ce,accd0ce4569e56a2cb681c571c9ecf592b91f703,"Update config name in password reset
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+GNOME/epiphany,eea4e5155ed3102ee21c57958a29603ed0f5166f,"Import passwords from the ephy/gecko profile on first run.
+
+This feature requires NSS, so NSS is added as an optional dependency,
+enabled by default. Can be disabled with --disable-nss, but then
+passwords won't be imported.
+",TRUE,passwords,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+jnidzwetzki/bboxdb,40a6063bad5c751f333deffd1103d648d698e808,"Changed permissions
+",TRUE,permissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+hortonworks/cloudbreak,90af290b4f00849dfd3b100059fd5704fe76e060,"CDPCP-1549. Reconcile usersyncstatus permissions with operation permissions
+",TRUE,permissions,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+ZFGCCP/ZFGC3,0505b3703b616745d88398a5da13d9e7816b65d0,"Merge pull request #140 from ZFGCCP/feature/users/auth-updates
+
+Feature/users/auth updates",TRUE,auth,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+openstack/kolla,f9ccb1c8829cef551b875c7c387530e7980414a7,"Drop root for Horizon service
+
+Drop root privileges for Horizon service.  It is necesssary to set
+a capability on the filesystem to allow binding to port 80 as a
+non-root user.  I have tested this works correctly from a registry
+on both CentOS and Ubuntu.
+
+Change-Id: I4c26f28bb28b6633784e6842f3423a2425332c27
+Partially-Implements: blueprint drop-root
+",TRUE,priviliges,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+timble/kodekit,978f7483a79ac1b83c18cc21eba4e0c7b85918f9,"re #286 - User Refactoring
+
+- Add UserInterface::verifyPassword() to wrap around PHP's password_verify() function.
+- Rename 'data' to 'properties'
+- Rename 'attributes' to 'parameters'
+- Add UserInterface::getParameters() method
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+kubernetes/kubernetes,230a1c789d120012c1fe40f83b80f097d58290fa,"Mount GCP credentials to federation deployment container for GKE clusters.
+
+GKE clusters use GCP credentials and hence require them for
+deploying federation components on to those clusters.
+",TRUE,credentials,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+bkimminich/juice-shop,b7a179a0a7fb488087c32d8dc34acd6e5a86591e,"password change shows confirmation
+
+no more redirect to main page
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+debops/debops,8bb785872afe2bda0cc4a444853c789b51f12595,"Update default nameConstraints to allow subdomains
+
+'permitted;DNS:${config_domain}' only allows names which exactly match
+${config_domain}. 'permitted;DNS:.${config_domain}' (notice the extra ""."") only
+allows expanded labels, but not ${config_domain} itself. Let's have the best of
+both worlds by combining the two name constraints together, which allows both
+${config_domain} and expanded labels.
+
+OpenSSL throws `error 47 at 0 depth lookup: permitted subtree violation; error
+hcert.pem: verification failed` when using this role with critical
+nameConstraints. That's why I removed the 'critical' property. This might be
+better for backwards compatibility as well. Modern software will still refuse
+to accept the certificate when the name is outside the nameConstraints space.
+For example, Mozilla Firefox 60.6.1esr-1~deb9u1 will fail to connect with
+'SEC_ERROR_CERT_NOT_IN_NAME_SPACE', and curl 7.52.1-5+deb9u9 fails with '(60)
+SSL certificate problem: permitted subtree violation'.
+",TRUE,certificate,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+Azure/azure-quickstart-templates,eb04c2c8f05ba776199ea60606a541194d9ccec2,"Merge pull request #6146 from yane3628/ubuntu-desktop-xfce-rdp
+
+Add SSH Auth to ubuntu-desktop-xfce-rdp",TRUE,"ssh, auth",,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+feross/webtorrent-app,5c67a561c1924b1d27dc1c12d2cd58f3e977475a,"update easy deps
+
+Update deps
+
+from ~70 down to 34 vulnerabilities (33 low, 1 moderate)
+",TRUE,vulnerabilities,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+chromium/chromium,93c633d60a49b3d9ead04e4a0236c72d66010f54,"Implement fetching password requirements on iOS.
+
+Implemented IOSPasswordRequirementsServiceFactory iOS version of
+PasswordRequirementsServiceFactory. In order to avoid duplicating
+creating of PasswordRequirementsService was extracted in a separate
+function.
+
+Bug: 886583
+Change-Id: I99d6815cb35b5741609224d5483fc732b977f42b
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1556803
+Reviewed-by: Dominic Battré <11522016dc637b67b78946baf6f3c18d584fd07c@chromium.org>
+Commit-Queue: Vadym Doroshenko <47b8208ee029eb9765f31b8bdc81aadf41b02e18@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#650333}",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+chromium/chromium,f402914bd5c442810e6509fa1e1b04f45454a9fe,"Add NetworkIsolationKey argument to NetworkContext::AddAuthCacheEntry.
+
+Also add NetworkService API to enable partitioning auth cache entries
+by NetworkIsolationKey, and a field trial to set it to true. All done
+in one CL to allow integration testing.
+
+Bug: 993806
+Change-Id: I323826847cda68e0e1acd776dc6ba260743d3952
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1865411
+Commit-Queue: Matt Menke <db2b536c538f3dbd8e890e06e08bcb9ec34adf6d@chromium.org>
+Reviewed-by: Kinuko Yasuda <2d56fe9c63fe1af9c8ce2e42b52fd958eb89bac3@chromium.org>
+Reviewed-by: David Benjamin <348b1b6801801c3d890b2e1589a8e36441d09fdc@chromium.org>
+Reviewed-by: Asanka Herath <06503cd712d62538eecda072a299b88d58e9811c@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#707383}
+",TRUE,auth,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+pfsense/pfsense,5c0a1269165388945cbd6e36a8392ca6cab78283,"* Sync master password correctly
+* Do not down carp interfaces on bootup
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+juanluisbaptiste/docker-otrs,fe00584b529da2d94790e9489e2a88d71d16a730,"Move random string generation to its own function and use random password if OTRS_DB_PASSWORD isn't defined.
+",TRUE,password,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+xwiki/xwiki-platform,727b494f973894aa6b698be1e6b39011ef69bba4,"XWIKI-8931: Support global user in local group in the new security authorization module
+
+ - update UserBridge to support search in another wiki than the user wiki
+ - update UserSecurityReference to distinct global and local users/group
+",TRUE,security,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+cernbox/wopiserver,24176a1a71de5a3030d04dc5afba9b6fb21bf03f,"Added minimal docker configuration to containerize the WOPI server.
+
+Note that a proper deployment with https requires a certificate/key to
+be generated and copied into the container, as detailed in the
+buildimage.sh script.
+",TRUE,certificate,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+geocoder-php/Geocoder,6b5bbd81320dbdd26375462af1a0a5def566ab98,"Refactor GeoIP2Provider: Use injection of Maxmind provider.
+
+Instead of using only the database reader of Maxmind, inject the Maxmind provider. Thus both is available: database reader and webservice client.
+",FALSE,use injection,,,22_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188

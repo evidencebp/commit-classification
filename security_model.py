@@ -25,6 +25,7 @@ positive_terms = [
  'attack(?:s)?',
  'auth',
  'authenticat(e|ion)',
+ #'authorization', # consider
  #'brute force', # consider
  'bug bount(y|ies)',
  #'bypass(?:es|ed|ing)?', # mostly tests related
@@ -53,7 +54,7 @@ positive_terms = [
  'hijack',
  #'harden(?:s|ed|ing)?',
  #'infinite loop', # consider
- 'injection',
+ 'injection', # consider
  '(in)?secur(e|ity)',
  'lockout',
  'malicious',
@@ -72,6 +73,7 @@ positive_terms = [
  'redos' # ReDoS
  'remote code execution',
  'return oriented programming',
+ #'root', # consider
  #'(?:safe|safety|unsafe|safer)',
  #'(?:safety|unsafe|safer)', # safe alone seems too general
  'secret(?:s)?',
@@ -84,6 +86,7 @@ positive_terms = [
  #'token(?:s)?',
  #'traversal',
  'unauthori[z|s]ed',
+ # 'username', # consider
  'vulnerable',
  'vulnerabilit(?:y|ies)',
  'x(?: |-)frame(?: |-)option(?:s)?',
@@ -173,52 +176,26 @@ def evaluate_security_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='4f0da267bc6cb9783426d9f38bf1d1a075d9541b')
+    print_concepts_functions_for_bq(commit='2be15899b72484a3927b01a57b476cf6e8b76188')
     #evaluate_security_classifier()
 
-    text = """"[POC] Multi-Model Puller (#989)
+    text = """""Update default nameConstraints to allow subdomains
 
-* [WIP] Beginning logic for multi-model puller
+'permitted;DNS:${config_domain}' only allows names which exactly match
+${config_domain}. 'permitted;DNS:.${config_domain}' (notice the extra ""."") only
+allows expanded labels, but not ${config_domain} itself. Let's have the best of
+both worlds by combining the two name constraints together, which allows both
+${config_domain} and expanded labels.
 
-* change version to memory
-
-* moving puller to cmd
-
-* add downloader and requester logic
-
-* add retry logic to donwload
-
-* resolve intial comments
-
-* resolve comments and rebase
-
-* resolve comments
-
-* resolve comments and add s3 logic
-
-* have downloaded models be under a modelname
-
-* resolve comments
-
-* add unload logic
-
-* added retry logic and further hardening for failures
-
-* resolve comments and handle on-start
-
-* resolve comments and reorganize
-
-* fmt
-
-* resolve comments
-
-* inline puller
-
-* update go mod
-
-* move comment
-
-* remove unnnecessary comment" 
+OpenSSL throws `error 47 at 0 depth lookup: permitted subtree violation; error
+hcert.pem: verification failed` when using this role with critical
+nameConstraints. That's why I removed the 'critical' property. This might be
+better for backwards compatibility as well. Modern software will still refuse
+to accept the certificate when the name is outside the nameConstraints space.
+For example, Mozilla Firefox 60.6.1esr-1~deb9u1 will fail to connect with
+'SEC_ERROR_CERT_NOT_IN_NAME_SPACE', and curl 7.52.1-5+deb9u9 fails with '(60)
+SSL certificate problem: permitted subtree violation'.
+"
 """.lower()
     print("is fix", is_security(text))
     print("security in text", re.findall(build_positive_regex(), text))
