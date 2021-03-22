@@ -64,6 +64,7 @@ bug_terms = ['actual.*expected',
              'bad initialization(?:s)?',
              'buffer overflow(?:s)?',
              'fixme(?:s)?',
+             'fixes(?:-| )?commit(?::| )?',
              '(break|breaks|broke|broked|breaking|broken)[\s\S]{0,20}(code|system|function|method)',
              '(this|that|it)\s(break|breaks|broke|broked|breaking|broken)',
              'break strict(?:-|\s)aliasing rule(s)?',
@@ -344,9 +345,10 @@ if __name__ == '__main__':
     evaluate_fix_classifier()
     #this fixed the bug 123
 
-    text = """ [acm-123] change
-    This breaks gpg-agent from GnuPG 2.0.
-Fixes-commit: bbf19124bbec9eb6298cef2914baae7ac74382fe
+    text = """Merge branch 'rickard/suspend-resume-BIF-fix/OTP-17080' into maint
+
+* rickard/suspend-resume-BIF-fix/OTP-17080:
+  Check suspendee argument for suspend_process()/resume_process()
 """.lower()
     print("is fix", is_fix(text))
     print("big in text", re.findall(build_bug_fix_regex(), text))
