@@ -169,15 +169,15 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 def evaluate_security_classifier():
 
-    evaluate_concept_classifier(concept='Swearing'
+    evaluate_concept_classifier(concept='Security'
                                 , text_name='message'
                                 , classification_function=is_security
                                 , samples_file=join(DATA_PATH, 'commit_security_samples.csv'))
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='2be15899b72484a3927b01a57b476cf6e8b76188')
-    #evaluate_security_classifier()
+    #print_concepts_functions_for_bq(commit='2be15899b72484a3927b01a57b476cf6e8b76188')
+    evaluate_security_classifier()
 
     text = """""Update default nameConstraints to allow subdomains
 
