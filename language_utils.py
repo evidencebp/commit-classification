@@ -62,67 +62,6 @@ modals = [#'if', 'maybe',
 
 
 
-# TODO - check https://arxiv.org/pdf/2001.09148.pdf for more
-
-security_terms = [
- 'advisory',
- 'attack',
- 'authenticat(e|ion)',
- 'brute force', # consider
- 'bug bount(y|ies)',
- 'bypass', # consider
- 'constant time',
- 'crack',
- 'credential(s)?',
- 'cross-origin',
- 'cross site',
- 'cve(-d+)?(-d+)?',
- 'clickjack',
- 'cyber',
- 'denial of service',
- '(de)?serializ', # consider
- 'directory traversal',
- 'dos', # consider
- 'exploit',
- 'expos(e|ing)',
- 'hack',
- 'hijack',
- 'harden',
- #'infinite loop', # consider
- 'injection',
- '(in)?secur(e|ity)',
- 'lockout',
- 'malicious',
- 'malware',
- 'nvd' # NVD
- 'open redirect',
- 'osvdb', # OSVDB
- 'overflow', # consider
- 'password(s)?',
- 'permission(s)?',
- 'poison',
- 'port scan',
- 'privilege',
- # 'proof of concept', # consider
- 'rce', # remote code execution
- 'redos' # ReDoS
- 'remote code execution',
- 'return oriented programming',
- 'security',
- 'session fixation',
- 'spoof',
- 'threat',
- 'timing', # consider
- 'traversal',
- 'unauthori[z|s]ed',
- 'vulnerabilit(?:y|ies)',
- 'x(?: |-)frame(?: |-)options',
- 'xss',
- 'xsrf', # XSRF
- 'xxe' # XXE
-    ]
-
-
 documentation_entities = [
     'change(?:s)?(?: |-)?(list|log|set|file)',
     'comment(s)?',
