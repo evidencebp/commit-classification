@@ -47,12 +47,14 @@ positive_terms = [
  'dos', # consider
  'encript' + REGULAR_SUFFIX,
  'encription',
+ 'ensur(?:e|es|ed|ing)(\sthe)?\ssafety',
  'exploit(?:s)?',
  'fire(?: |-)wall(?:s)?',
  #'expos(e|ing)',
  # 'hack', # A bit general, consider
  'hijack',
  #'harden(?:s|ed|ing)?',
+ 'https instead of http',
  #'infinite loop', # consider
  'injection', # consider
  '(in)?secur(e|ity)',
@@ -76,6 +78,7 @@ positive_terms = [
  #'root', # consider
  #'(?:safe|safety|unsafe|safer)',
  #'(?:safety|unsafe|safer)', # safe alone seems too general
+'(?:safe|safety|unsafe|safer|github)\s(token|browser|protocol)(?:s)?',
  'secret(?:s)?',
  'security',
  'session fixation',
@@ -94,7 +97,6 @@ positive_terms = [
  'xsrf', # XSRF
  'xxe' # XXE
     ]
-
 
 excluded_terms = ['https://secure', # A too common link in commits
                   'error(?:s)? injection', # in tests
@@ -180,6 +182,27 @@ if __name__ == '__main__':
     evaluate_security_classifier()
 
     text = """
+"Sensitivity plots fix (#2860)
+
+* fix immediately obvious bug in plotting loop
+
+* add in allinj plots, create front summary page
+
+* move allinj to after injection plots loop
+
+* Fix to make bank_plot work. Include found table in injection pages
+
+* Use censored veto, clarify fixme comments
+
+* add snrifar summary to main page
+
+* remove confusing and unneccessary bit
+
+* found table doesnt work
+
+* fix up one thing which turned into a list although it's only a list with 1 entry
+
+* add Gareth"
 """.lower()
     print("is fix", is_security(text))
     print("security in text", re.findall(build_positive_regex(), text))
