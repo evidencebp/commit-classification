@@ -10,6 +10,7 @@ commit
 , repo_name
 , message
 , general.bq_security(message) as is_security_pred
+, is_corrective
 from
 general.enhanced_commits
 where
@@ -17,22 +18,26 @@ general.bq_security(message) > 0
 ;
 
 
-# Secusity hits
+# Security fixes hits
 select
 repo_name
 , commit
 , message
 , '' as Is_Security
+, '' as Is_Fix
+, '' as Is_Security_Fix
 , '' as Justification
 , '' as Certain
 , '' as Comment
-, '22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9' as Sampling
+, '24_mar_2021_pos_fix_2be15899b72484a3927b01a57b476cf6e8b76188' as Sampling
 from
 general.commit_security
 where
 is_security_pred > 0
+and
+is_corrective
 #and
-#regexp_contains(lower(message), 'best')
+#regexp_contains(lower(message), 'time')
 order by
 rand()
 limit 500
