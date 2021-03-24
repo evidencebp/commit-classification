@@ -178,7 +178,7 @@ def evaluate_security_classifier():
 
 
 if __name__ == '__main__':
-    #print_concepts_functions_for_bq(commit='2be15899b72484a3927b01a57b476cf6e8b76188')
+    print_concepts_functions_for_bq(commit='9795cc67ad63133d19686a96d965ae784fddaee7')
     evaluate_security_classifier()
 
     text = """
