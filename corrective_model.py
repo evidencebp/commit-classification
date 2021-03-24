@@ -150,6 +150,7 @@ valid_terms = [
     'fix(?:ed) ticket(?:s)?',
     #'format(ing)?',
     '(?:fix(?:ed|es)?|bug)(?: )?(?: |-|=|:)(?: )?[a-z]{0,3}(?:-)?\d+' + term_seperator,
+    '(?:fix(?:ed|es)?|bug)(?:-|=|:)\d+',
     '(if|would)[\s\S]{0,40}go wrong',
     'line(?:s)? break(?:s)?',
     'typo(s)?\sfix(es)?',
@@ -345,13 +346,20 @@ if __name__ == '__main__':
     evaluate_fix_classifier()
     #this fixed the bug 123
 
-    text = """Merge branch 'rickard/suspend-resume-BIF-fix/OTP-17080' into maint
+    text = """
+sync: second factor auth support
 
-* rickard/suspend-resume-BIF-fix/OTP-17080:
-  Check suspendee argument for suspend_process()/resume_process()
+BUG=58712
+TEST=Sign in to sync with two-step verification account. SigninManagerTest.
+
+Review URL: http://codereview.chromium.org/3702002
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@62191 0039d316-1c4b-4281-b951-d872f2087c98
+
 """.lower()
     print("is fix", is_fix(text))
-    print("big in text", re.findall(build_bug_fix_regex(), text))
+    print("fix in text", re.findall(build_bug_fix_regex(), text))
+    print("v1", re.findall('(?:fix(?:ed|es)?|bug)(?: )?(?: |-|=|:)(?: )?[a-z]{0,3}(?:-)?\d+', text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
     #print(re.findall(r'(merge (branch|pull request).{0,250}(\r\n|\r|\n|$)|merge (branch|pull request).{0,250}(from|into).{0,250}(\r\n|\r|\n|$))'fix', text))
 
