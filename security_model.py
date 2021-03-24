@@ -39,8 +39,8 @@ positive_terms = [
  'cve(-d+)?(-d+)?',
  'clickjack',
  'cyber',
- 'decript' + REGULAR_SUFFIX,
- 'decription',
+ 'decrypt' + REGULAR_SUFFIX,
+ 'decryption',
  'denial of service',
  '(de)?serializ', # consider
  'directory traversal',
@@ -179,23 +179,7 @@ if __name__ == '__main__':
     #print_concepts_functions_for_bq(commit='2be15899b72484a3927b01a57b476cf6e8b76188')
     evaluate_security_classifier()
 
-    text = """""Update default nameConstraints to allow subdomains
-
-'permitted;DNS:${config_domain}' only allows names which exactly match
-${config_domain}. 'permitted;DNS:.${config_domain}' (notice the extra ""."") only
-allows expanded labels, but not ${config_domain} itself. Let's have the best of
-both worlds by combining the two name constraints together, which allows both
-${config_domain} and expanded labels.
-
-OpenSSL throws `error 47 at 0 depth lookup: permitted subtree violation; error
-hcert.pem: verification failed` when using this role with critical
-nameConstraints. That's why I removed the 'critical' property. This might be
-better for backwards compatibility as well. Modern software will still refuse
-to accept the certificate when the name is outside the nameConstraints space.
-For example, Mozilla Firefox 60.6.1esr-1~deb9u1 will fail to connect with
-'SEC_ERROR_CERT_NOT_IN_NAME_SPACE', and curl 7.52.1-5+deb9u9 fails with '(60)
-SSL certificate problem: permitted subtree violation'.
-"
+    text = """
 """.lower()
     print("is fix", is_security(text))
     print("security in text", re.findall(build_positive_regex(), text))
