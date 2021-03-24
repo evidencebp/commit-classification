@@ -49,7 +49,7 @@ Change-Id: Ib49bd1642801c401cd16a152009f87dccb905c3e
 Reviewed-on: https://chromium-review.googlesource.com/817854
 Reviewed-by: John Abd-El-Malek <da3dd5c2657fecad769c041097dbd8ecd725687d@chromium.org>
 Commit-Queue: Emily Stark <351cd4dcb8ca60b28d6406fe7f489a1eda3af330@chromium.org>
-Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#522957}",FALSE,certificate,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#522957}",TRUE,certificate,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
 GNOME/epiphany,6fb6efa2850bda26532bd1318648fdf61436a804,"Make the statusbar's GtkTooltips publicly accessibly.
 
 2004-05-01  Christian Persch  <chpe@cvs.gnome.org>
@@ -136,7 +136,7 @@ Test plan for authority:
 Signed-off-by: Brendan Gallagher <d88b10c6bc7c38a4ffb541994aef7d8a7f8e3819@bywatersolutions.com>
 Signed-off-by: Katrin Fischer <9b69ec3a4d06e697f94de4e5bc733b1bd1394784@web.de>
 Signed-off-by: Tomas Cohen Arazi <63ac9f6777fb741d62c33cd73a438a8ce82c7d4a@gmail.com>
-",FALSE,authoroties,,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
+",TRUE,"authoroties, premissions",,,22_jan_2021_pos_hits_36fdf4aea9d8dc83bdea98239b601ac51d07e5d9
 sufficientlysecure/ad-away,c3a47c9cc84f5a1443aa7c56c50d35ba763ee8f3,"chore: Remove APN check
 
 Unused and requires a new permission with SDK 30
@@ -222,7 +222,7 @@ information (address, port and interface) for the peer.
 
 -- Added #if statements to reduce code size in cases where CASE/PASE/TAKE initiation is
 disabled at compile time.
-",FALSE,,,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
+",TRUE,"security, password",,,22_mar_2021_time_pos_hits_079703f7a83e56a98d009570b52ca1f439f28081
 slimphp/Slim,dd6aa9ab3fad0c09c665095642bda6f2a453e3ce,"Fix issue #568: Parse string 'expires' before encoding secure cookie.
 
 The `\Slim\Http\Util::encodeSecureCookie` function requires the
@@ -939,7 +939,7 @@ DEBUG:synthtool:Wrote metadata to clients/analytics_data/synth.metadata.
 Full log will be available here:
 https://source.cloud.google.com/results/invocations/725a4817-73e8-42f2-8ba6-a36810184277/targets
 
-- [ ] To automatically regenerate this PR, check this box.",FALSE,poision,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
+- [ ] To automatically regenerate this PR, check this box.",TRUE,fixing file premission (among much more),,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
 Azure/azure-quickstart-templates,a93610c607e97645fc958d19d6ff7d66a4267378,"Merge pull request #7233 from JohnathonMohr/101-vm-sshkey
 
 Adding Network Security Group to 101-vm-sshkey",TRUE,security,,,22_mar_2021_pos_df6d53facd9475ed54ecbb3f1d2cb8076b227f77
@@ -1473,7 +1473,7 @@ Change-Id: I05f69df627e5637fdb254285cb3ad6d3d8328f90
 umbraco/Umbraco-CMS,9469b0b844d47328a557cf66e517c3059f646ebd,"Fixes: U4-6402 Grid config file should be merged with package.manifests & U4-6427 Grid config file has caching problems because it's downloaded as a static file
 
 This also fixes up the OutputCaching params on the BackOfficeController since OutputCache is bypassed when an action requires authentication, so now we manually do some caching when not in debug mode for authorized actions (of course auth happens before any cached response can occur). This also fixes up the static caching that was happening with the ManifestBuilder so now when that is not in use it gives back it's memory. This also fixes up any client side caching that was happening on BackOfficeController - before we were allowing client cache to happen for a few actions on that controller which is incorrect, we need to disable all client cache for all actions on that controller.
-",FALSE,bypassed,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
+",TRUE,authentication,,,22_mar_2021_pos_5b4cdc2fafbd6f8947d21a7e3c7c1d217c85e3df
 tprrt/linux-stable,040cda8a15210f19da7e29232c897ca6ca6cc950,"Merge tag 'wireless-drivers-2019-12-17' of git://git.kernel.org/pub/scm/linux/kernel/git/kvalo/wireless-drivers
 
 Kalle Valo says:
