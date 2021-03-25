@@ -37,7 +37,8 @@ positive_terms = [
     '(slow|slower|slowest)',
     ]
 
-excluded_terms = ['performance suite(?:s)?',
+excluded_terms = ['fast/',
+                  'performance suite(?:s)?',
                   'performance (testing|test|tests)',
                   'sometime(?:s)?',
                   '(unnoticed|found)' + NEAR_ENOUGH + 'long time',
@@ -119,35 +120,24 @@ def evaluate_performance_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='52a7c8257bcf835e778750bd5c5f172a5cba281f')
+    print_concepts_functions_for_bq(commit='b933d243b0cb403f21d467e72a6362d143cd18ef')
     #evaluate_performance_classifier()
 
     text = """
-"drm/i915: Kill intel_crtc->cursor_bo
+"Calculate client positions from offsets.
+https://bugs.webkit.org/show_bug.cgi?id=73640
 
-The vma may have been rebound between the last time the cursor was
-enabled and now, so skipping the cursor gtt offset deduction is not
-safe unless we would also reset cursor_bo to NULL when disabling the
-cursor. Just thow cursor_bo to the bin instead since it's lost all
-other uses thanks to universal plane support.
+Reviewed by Tony Chang.
 
-Chris pointed out that cursor updates are currently too slow
-via universal planes that micro optimizations like these wouldn't
-even help.
+This change calculates client positions from offset positions at run time to
+remove platform-dependent constants from this test.
 
-v2: Add a note about futility of micro optimizations (Chris)
+* fast/events/offsetX-offsetY-expected.txt:
+* fast/events/offsetX-offsetY.html:
+* platform/chromium-win/fast/events/offsetX-offsetY-expected.txt: Removed.
 
-Cc: 2dacef862dfeb083b5f3bcc5c29009f436dd5241@lists.freedesktop.org
-References: http://lists.freedesktop.org/archives/intel-gfx/2015-December/082976.html
-Cc: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
-Cc: Takashi Iwai <4596b3305151c7ee743192a95d394341e3d3b644@suse.de>
-Cc: Jani Nikula <ba783f3beccaedfda693f41a15407d612a629408@linux.intel.com>
-Signed-off-by: Ville Syrjälä <cd6e8d405ca90be3a03d5427c5b24fbd2d68dcc4@linux.intel.com>
-Link: http://patchwork.freedesktop.org/patch/msgid/1450107302-17171-1-git-send-email-cd6e8d405ca90be3a03d5427c5b24fbd2d68dcc4@linux.intel.com
-Reviewed-by: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
-(cherry picked from commit 1264859d648c4bdc9f0a098efbff90cbf462a075)
-Signed-off-by: Jani Nikula <ba783f3beccaedfda693f41a15407d612a629408@intel.com>
-"
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@121735 bbb929c8-8fbe-4397-9dbb-9b2b20218538"
 """.lower()
     print("is performance", is_performance(text))
     print("performance in text", re.findall(build_positive_regex(), text))
