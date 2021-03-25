@@ -37,7 +37,7 @@ positive_terms = [
     '(slow|slower|slowest)',
     ]
 
-excluded_terms = ['fast/',
+excluded_terms = ['[a-z0-9/\.]*fast/[a-z0-9/\.]*',
                   'performance suite(?:s)?',
                   'performance (testing|test|tests)',
                   'sometime(?:s)?',
