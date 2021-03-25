@@ -21,6 +21,7 @@ positive_terms = [
     'better' + NEAR_ENOUGH + 'time(?:s)?',
     #'(cpu|gpu|tpu)',
     #'day(?:s)?',
+    '(fast|faster|fastest)',
     #'hour(?:s)?',
     'improv' + VERB_E_SUFFIX + NEAR_ENOUGH + 'time(?:s)?',
     '(long|longer|short|shorter|above|least)' + NEAR_ENOUGH + 'time(?:s)?',
@@ -38,6 +39,8 @@ positive_terms = [
 
 excluded_terms = ['performance suite(?:s)?',
                   'performance (testing|test|tests)',
+                  'sometime(?:s)?',
+                  '(unnoticed|found)' + NEAR_ENOUGH + 'long time',
                   ]
 
 def build_positive_regex():
@@ -116,21 +119,34 @@ def evaluate_performance_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='e524cdc5442d82628ce945d5a08befab9a52117b')
+    print_concepts_functions_for_bq(commit='52a7c8257bcf835e778750bd5c5f172a5cba281f')
     #evaluate_performance_classifier()
 
     text = """
-"ARM: EXYNOS4: Support early wakeup entering sleep mode
+"drm/i915: Kill intel_crtc->cursor_bo
 
-Since early wakeup can be handled in pm so we don't need masking
-interrupts of external GIC. When the early wakeup interrupt happens,
-PMU(Power Management Unit) ignores WFI instruction. This means that
-PC(Program Counter) passed without any changes. This patch can handle
-that case by early wakeup interrupt.
+The vma may have been rebound between the last time the cursor was
+enabled and now, so skipping the cursor gtt offset deduction is not
+safe unless we would also reset cursor_bo to NULL when disabling the
+cursor. Just thow cursor_bo to the bin instead since it's lost all
+other uses thanks to universal plane support.
 
-Signed-off-by: Jaecheol Lee <6ec43deacef8beeed37dec16d72a9fb9c16a0752@samsung.com>
-[3fc711f4e08bc570a586748633ff7c76d0e1e253@samsung.com: fixed return of exynos4_cpu_suspend()]
-Signed-off-by: Kukjin Kim <3fc711f4e08bc570a586748633ff7c76d0e1e253@samsung.com>
+Chris pointed out that cursor updates are currently too slow
+via universal planes that micro optimizations like these wouldn't
+even help.
+
+v2: Add a note about futility of micro optimizations (Chris)
+
+Cc: 2dacef862dfeb083b5f3bcc5c29009f436dd5241@lists.freedesktop.org
+References: http://lists.freedesktop.org/archives/intel-gfx/2015-December/082976.html
+Cc: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
+Cc: Takashi Iwai <4596b3305151c7ee743192a95d394341e3d3b644@suse.de>
+Cc: Jani Nikula <ba783f3beccaedfda693f41a15407d612a629408@linux.intel.com>
+Signed-off-by: Ville Syrjälä <cd6e8d405ca90be3a03d5427c5b24fbd2d68dcc4@linux.intel.com>
+Link: http://patchwork.freedesktop.org/patch/msgid/1450107302-17171-1-git-send-email-cd6e8d405ca90be3a03d5427c5b24fbd2d68dcc4@linux.intel.com
+Reviewed-by: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
+(cherry picked from commit 1264859d648c4bdc9f0a098efbff90cbf462a075)
+Signed-off-by: Jani Nikula <ba783f3beccaedfda693f41a15407d612a629408@intel.com>
 "
 """.lower()
     print("is performance", is_performance(text))
