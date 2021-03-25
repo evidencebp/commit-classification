@@ -124,7 +124,7 @@ def evaluate_performance_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='a5655cab58c1e717c8dcf06bc754812fbba79a72')
+    print_concepts_functions_for_bq(commit='90a58fe07119d5c7ac094913e72305bf314dd65b')
     #evaluate_performance_classifier()
 
     text = """
