@@ -26,6 +26,8 @@ positive_terms = [
     'improv' + VERB_E_SUFFIX + NEAR_ENOUGH + 'time(?:s)?',
     '(long|longer|short|shorter|above|least)' + NEAR_ENOUGH + 'time(?:s)?',
     #'minute(?:s)?',
+    'optimis' + VERB_E_SUFFIX,
+    'optimisation',
     'optimiz' + VERB_E_SUFFIX,
     'optimization',
     'performance',
@@ -37,9 +39,11 @@ positive_terms = [
     '(slow|slower|slowest)',
     ]
 
-excluded_terms = ['[a-z0-9/\.]*fast/[a-z0-9/\.]*',
+excluded_terms = ['[a-z0-9/\.-]*fast/[a-z0-9/\.-]*',
+                  'optimize imports', # Common as a command in IDEs like JetBrains
                   'performance suite(?:s)?',
                   'performance (testing|test|tests)',
+                  'renam' + VERB_E_SUFFIX + NEAR_ENOUGH + 'fast',
                   'sometime(?:s)?',
                   '(unnoticed|found)' + NEAR_ENOUGH + 'long time',
                   ]
@@ -120,24 +124,85 @@ def evaluate_performance_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='b933d243b0cb403f21d467e72a6362d143cd18ef')
+    print_concepts_functions_for_bq(commit='a5655cab58c1e717c8dcf06bc754812fbba79a72')
     #evaluate_performance_classifier()
 
     text = """
-"Calculate client positions from offsets.
-https://bugs.webkit.org/show_bug.cgi?id=73640
+"2009-02-23  Geoffrey Garen  <ggaren@apple.com>
 
-Reviewed by Tony Chang.
+        Reviewed by Sam Weinig.
 
-This change calculates client positions from offset positions at run time to
-remove platform-dependent constants from this test.
+        Next step in splitting JIT functionality out of the Interpreter class:
+        Moved vptr storage from Interpreter to JSGlobalData, so it could be shared
+        between Interpreter and JITStubs, and moved the *Trampoline JIT stubs
+        into the JITStubs class. Also added a VPtrSet class to encapsulate vptr
+        hacks during JSGlobalData initialization.
+        
+        SunSpider says 0.4% faster. Meh.
 
-* fast/events/offsetX-offsetY-expected.txt:
-* fast/events/offsetX-offsetY.html:
-* platform/chromium-win/fast/events/offsetX-offsetY-expected.txt: Removed.
+        * JavaScriptCore.exp:
+        * JavaScriptCore.xcodeproj/project.pbxproj:
+        * interpreter/Interpreter.cpp:
+        (JSC::Interpreter::Interpreter):
+        (JSC::Interpreter::tryCacheGetByID):
+        (JSC::Interpreter::privateExecute):
+        * interpreter/Interpreter.h:
+        * jit/JIT.cpp:
+        (JSC::JIT::privateCompileMainPass):
+        (JSC::JIT::privateCompile):
+        (JSC::JIT::privateCompileCTIMachineTrampolines):
+        * jit/JIT.h:
+        (JSC::JIT::compileCTIMachineTrampolines):
+        * jit/JITCall.cpp:
+        (JSC::JIT::compileOpCall):
+        (JSC::JIT::compileOpCallSlowCase):
+        * jit/JITPropertyAccess.cpp:
+        (JSC::JIT::privateCompilePatchGetArrayLength):
+        * jit/JITStubs.cpp:
+        (JSC::JITStubs::JITStubs):
+        (JSC::JITStubs::tryCacheGetByID):
+        (JSC::JITStubs::cti_vm_dontLazyLinkCall):
+        (JSC::JITStubs::cti_op_get_by_val):
+        (JSC::JITStubs::cti_op_get_by_val_byte_array):
+        (JSC::JITStubs::cti_op_put_by_val):
+        (JSC::JITStubs::cti_op_put_by_val_array):
+        (JSC::JITStubs::cti_op_put_by_val_byte_array):
+        (JSC::JITStubs::cti_op_is_string):
+        * jit/JITStubs.h:
+        (JSC::JITStubs::ctiArrayLengthTrampoline):
+        (JSC::JITStubs::ctiStringLengthTrampoline):
+        (JSC::JITStubs::ctiVirtualCallPreLink):
+        (JSC::JITStubs::ctiVirtualCallLink):
+        (JSC::JITStubs::ctiVirtualCall):
+        * runtime/ArrayPrototype.cpp:
+        (JSC::arrayProtoFuncPop):
+        (JSC::arrayProtoFuncPush):
+        * runtime/FunctionPrototype.cpp:
+        (JSC::functionProtoFuncApply):
+        * runtime/JSArray.h:
+        (JSC::isJSArray):
+        * runtime/JSByteArray.h:
+        (JSC::asByteArray):
+        (JSC::isJSByteArray):
+        * runtime/JSCell.h:
+        * runtime/JSFunction.h:
+        * runtime/JSGlobalData.cpp:
+        (JSC::VPtrSet::VPtrSet):
+        (JSC::JSGlobalData::JSGlobalData):
+        (JSC::JSGlobalData::create):
+        (JSC::JSGlobalData::sharedInstance):
+        * runtime/JSGlobalData.h:
+        * runtime/JSString.h:
+        (JSC::isJSString):
+        * runtime/Operations.h:
+        (JSC::jsLess):
+        (JSC::jsLessEq):
+        * wrec/WREC.cpp:
+        (JSC::WREC::Generator::compileRegExp):
 
 
-git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@121735 bbb929c8-8fbe-4397-9dbb-9b2b20218538"
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@41168 bbb929c8-8fbe-4397-9dbb-9b2b20218538"
 """.lower()
     print("is performance", is_performance(text))
     print("performance in text", re.findall(build_positive_regex(), text))
