@@ -1,0 +1,1591 @@
+repo_name,commit,message,Is_performance,Is_Fix,Is_performance_Fix,Justification,Certain,Comment,Sampling
+NyxStudios/TShock,ec33752131674b209f14d1bf08e6bb7d25e42508,"Update submodule for hardmode tilefix & packet performance
+",TRUE,,,performance,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+nwjs/chromium.src,31029cc67439f0e23a4a43f450fa21e6818f0c20,"Add new pyauto performance suite to be run by lab machines.
+
+BUG=None
+TEST=None
+
+Review URL: https://chromiumcodereview.appspot.com/9838020
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@128309 0039d316-1c4b-4281-b951-d872f2087c98
+",FALSE,,,performance suite,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+tprrt/linux-stable,158ca1d75dd0d6223f3b1dd741d30777da62ab80,"eeepc-laptop: support for super hybrid engine (SHE)
+
+The older eeepc-acpi driver allowed to control the SHE performance
+preset through a ACPI function for just this purpose. SHE underclocks
+and undervolts the FSB and undervolts the CPU (at preset 2,
+""powersave""), or slightly overclocks the CPU (at preset 0,
+""performance""). Preset 1 is the default setting with default clocks and
+voltage.
+
+The new eeepc-laptop driver doesn't support it anymore.
+The attached patch adds support for it to eeepc-laptop. It's very
+straight-forward and almost trivial.
+
+Signed-off-by: Grigori Goronzy <79e2475f81a6317276bf7cbb3958b20d289b78df@chown.ath.cx>
+Signed-off-by: Corentin Chary <298d22bb5b8e08c296f77ec9e7162462cf47b8a1@iksaif.net>
+Signed-off-by: Len Brown <b060cfa1096cc6e8be83699ddb4ed8a77dd63af5@intel.com>
+",TRUE,,,performance,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+kubernetes/kubernetes,874fca652d1a6ad3ff2807f331338042769f900a,"Merge pull request #38086 from tianshapjq/reduce-decode-times
+
+Automatic merge from submit-queue
+
+Reduce decode times by changing the kubectl.Filter(runtime.Object, *PrintOptions)'s return values
+
+**What this PR does / why we need it**:
+In kubectl/cmd/get.go, we use the function filterFuncs.Filter() to decode data and filter the object. But in the following function printer.PrintObj() decodes the data again.
+I made these modifications to reduce the decoding times by changing the filterFuncs.Filter()'s returned values. We can get the decoded object from this function and pass it to the following printer.PrintObj(), so not to waste time to decode again.",TRUE,,,reduce time,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+openstack/tripleo-heat-templates,db35747962ff8d00ac903cd1e153f5b25a78e33a,"Add support to configure token caching
+
+Add a new parameter named KeystoneEnableTokenCaching to enable
+caching for keystone token to improve performance related to
+token management.
+
+Depends-on: https://review.opendev.org/#/c/683010
+Change-Id: Id8b33837eebbe18417d4c349e73817aa8f660091
+",TRUE,,,improve performance,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+apple/swift,7de97064036d18a8259b489b37f78c0d608f76f2,"IRGen/Runtime: Expose extra inhabitants of class protocol types.
+
+This gives 'id?' and other optional class protocol types optimal representation consistent with class types.
+
+Swift SVN r10346
+",FALSE,,,runtime,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+marcopennekamp/lore,259966b4207cca8a27c298ce69c7fc806bf55c48,"Add runtime shape type equality.
+",FALSE,,,runtime,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+OpenRA/OpenRA,bc7aa9a491deeedbea027e76680aab786eab9af4,"make Health.MaxHP not readonly; some people want to frob it at runtime
+",FALSE,,,runtime,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+b2ihealthcare/snow-owl,002099955e532c7b8939ab1d81c17eb1f82eb748,"[snomed] Don't check status in InactivationExpander
+
+Unboxing Booleans is unexpectedly slow when running in a loop.",TRUE,,,slow,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+Pathoschild/SMAPI,860b30443ec47ceb271a008c26f3b358cf7bb409,"simplify performance details output
+",FALSE,,,simplify,,,25_mar_2021_pos_2be15899b72484a3927b01a57b476cf6e8b76188
+tprrt/linux-stable,ba817a8cfc2e128b59af7fe8b6af72ed38763b87,"thermal: ti-soc-thermal: Fix ti_thermal_unregister_cpu_cooling NULL pointer on unload
+
+While debugging some PM issues and trying to remove all the loaded modules, I ran
+across the following when unloading ti-soc-thermal:
+
+Unable to handle kernel NULL pointer dereference at virtual address 000000b4
+...
+[<c08db340>] (kobject_put) from [<bf28954c>] (ti_thermal_unregister_cpu_cooling+0x20/0x28 [ti_soc_thermal])
+[<bf28954c>] (ti_thermal_unregister_cpu_cooling [ti_soc_thermal]) from [<bf287c88>] (ti_bandgap_remove+0x3c/0x104 [ti_soc_thermal])
+[<bf287c88>] (ti_bandgap_remove [ti_soc_thermal]) from [<c0610d48>] (platform_drv_remove+0x24/0x3c)
+[<c0610d48>] (platform_drv_remove) from [<c060f114>] (device_release_driver_internal+0x160/0x208)
+[<c060f114>] (device_release_driver_internal) from [<c060f200>] (driver_detach+0x38/0x6c)
+[<c060f200>] (driver_detach) from [<c060e2d4>] (bus_remove_driver+0x4c/0xa0)
+[<c060e2d4>] (bus_remove_driver) from [<c01f2370>] (SyS_delete_module+0x168/0x238)
+[<c01f2370>] (SyS_delete_module) from [<c0108240>] (ret_fast_syscall+0x0/0x28)
+
+Cc: Keerthy <bd0da4b944f4f5c71572cb1afabf3c293f45b4c8@ti.com>
+Signed-off-by: Tony Lindgren <1001e8702733cced254345e193c88aaa47a4f5de@atomide.com>
+Signed-off-by: Eduardo Valentin <19583d7f5a73f900a77b3924aabdcb631a4c7608@gmail.com>
+",FALSE,,,cpu,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+envoyproxy/envoy-wasm,b7e47bd2bdc30e1d6fdd2c4263c53b2a9439ad52,"Code Optimization (#12512)
+
+1. Reduce code repetition:
+    * In 'admin.cc': There are many times of  ```get()``` from ```absl::optional``` for the same value. Similar for ```host->address()->asString()```. So I merged them together to avoid multiple calls for the same value.
+
+    *  Similar problem inside ""connection_handler_impl.cc""
+2. Adopt pair binding feature in C++ 17. 
+
+Risk Level: Low
+
+Signed-off-by: pingsun <3da978bb0b31aa38c9d773cee28bb0e9208ba73b@google.com>",FALSE,,,code optimization,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+tobiipro/support-firecloud,20e3173c88a4c154058b222b889178f8b14946b9,"try to optimize chown /home/linuxbrew
+",FALSE,,,optimize,,by code,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+couchbase/ns_server,7598a413364daaf5281ded6ec58af2ea7712c58f,"increase small graphs plotting speed by delaying html updates
+
+Chrome Dev Tools indicate that code that updates last values triggers
+layout recomputations when we start to plot next graph. So we batch
+text updates separately.
+
+Change-Id: If92233e8193122176ce587d5127472eff8116ede
+Reviewed-on: http://review.membase.org/4425
+Tested-by: Aliaksey Kandratsenka <340b8e09ca65cd3fc686427fcfed17e87eaf61e2@gmail.com>
+Reviewed-by: Benjamin Young <399aded95f850edb83f13cae14dbe3e10ed19071@bigbluehat.com>
+",TRUE,,,increase speed,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+threatgrid/ctia,75fa716fb30579a382b9da71b37b76e120b1c40a,"Warm .m2 cache in prebuild and build master pushes to share Actions caches (#1087)
+
+<!-- Specify linked issues and REMOVE THE UNUSED LINES -->
+
+Close https://github.com/threatgrid/iroh/issues/4904
+Close https://github.com/threatgrid/iroh/issues/4520
+
+This PR fixes a couple of vaguely related problems.
+
+1. First builds for PR's never retrieved caches. This is because PR's can only share caches from upstream branches (which were never built!), and meant auto-balanced tests were disabled until the PR's second build.
+2. Because there was no cache, another issue was exposed: maven deps were being downloaded *after* fanning out the build 10 ways, and were hitting some sort of rate limiting (or flakiness) from maven repositories.
+
+To fix the first issue, we now build the master branch to make caches available to PR's (master is always upstream from PR's).
+
+For the second issue, I added smarter cache logic to detect whether dependencies need downloading, and, if so, to download them *before* fanning out the build. I also added retry logic wherever we need to download something.
+
+To more easily test this PR, I used some conventions to clear caches when needed.
+
+Review notes:
+- see `workaround cache eviction` commit for evidence that cacheless commits build (16m build, no auto-balancing)
+- subsequent commit uses cache (12m build w/ auto-balancing)
+- we won't be able to see if building master pushes really fixes things until this is merged
+
+<!--
+
+Describe your PR for reviewers.
+Don't forget to set correct labels (User Facing / Beta / Feature Flag)
+If there is UI change please add a screen capture.
+-->
+
+<!-- UNCOMMENT THIS SECTION IF NEEDED
+<a name=""iroh-services-clients"">[§](#iroh-services-clients)</a> IROH Services Clients
+=====================================================================================
+
+Put all informations that need to be communicated to IROH Services Clients.
+Typically IROH-UI, ATS Integration, Orbital, etc...
+ -->
+
+<a name=""qa"">[§](#qa)</a> QA
+============================
+
+<!--
+Describe the steps to test your PR.
+
+1.
+2.
+3.
+
+Or if no QA is needed keep it as is.
+ -->
+No QA is needed.
+
+<!-- UNCOMMENT THIS SECTION IF NEEDED
+<a name=""ops"">[§](#ops)</a> Ops
+===============================
+
+  Specify Ops related issues and documentation
+- Config change needed: threatgrid/tenzin#
+- Migration needed: threatgrid/tenzin#
+- How to enable/disable that feature: (ex remove service from `bootstrap.cfg`, add scope to org)
+-->
+
+<!-- UNCOMMENT THIS SECTION IF NEEDED
+<a name=""documentation"">[§](#documentation)</a> Documentation
+=============================================================
+
+  Public Facing documentation section;
+- Public documentation updated needed: threatgrid/iroh-ui#
+  See internal [doc file](./services/iroh-auth/doc/public-doc.org)
+ -->
+
+<a name=""release-notes"">[§](#release-notes)</a> Release Notes
+=============================================================
+
+<!-- REMOVE UNUSED LINES -->
+
+```
+intern: warm .m2 cache in prebuild
+```
+
+<a name=""squashed-commits"">[§](#squashed-commits)</a> Squashed Commits
+======================================================================
+
+",FALSE,,,second build,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+docker/docker.github.io,13483451dace164e4c35d2f0ce27e64b2c9f2480,"engine: More robust refresh loop.
+
+- Random heartbeat (between 30 and 60 seconds).
+- Requires 3 failures before marking a node as dead.
+
+Signed-off-by: Andrea Luzzardi <442ffe3ffbfd024afcf0b7f8b108d05bca3aae43@gmail.com>
+",FALSE,,,seconds,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+scalableminds/webknossos,a4f9e75b38e3593f0858aab8aabe465f8b410cde,"improved speed logging
+",FALSE,,,speed logging,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+emacs-mirror/emacs,279066b2b3a56e94c4a5dc994e0349db03a52c09,"Attempt to fix time_t related problems with MinGW 4.0 runtime.
+
+ nt/inc/mingw_time.h: New file.
+ nt/inc/ms-w32.h: Include mingw_time.h instead of doing its job.
+
+ src/w32proc.c: Include mingw_time.h.
+ src/w32.c: Include mingw_time.h.
+",FALSE,,,time_t problems,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+chromium/chromium,ee92e3890448e5d0fa00634d18308f0adb079211,"Make components/ownership transit SECKEYPrivateKey handles.
+
+We'll later want to make this code use CHAPS directly, possibly with some
+interface abstracting NSS and CHAPS. But RSAPrivateKey won't work as that
+interface as it can't abstract between multiple private key implementations at
+runtime. So switch it to SECKEYPrivateKey and NSS functions directly.
+
+With this, the chimera build should be functional on Linux and CrOS apart from
+client certificates.
+
+This tightens the build so that components/ownership is only build on CrOS.
+It's currently unused on other platforms, but still built as a test, with
+NSS pieces #ifdef'd out.
+
+BUG=478777
+
+Review URL: https://codereview.chromium.org/1145613002
+
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#331421}
+",FALSE,,,runtime,,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+tgstation/-tg-station,1c01c44465ec7eeadcda4de9689560825287e166,"Fixes tray runtime (#46189)
+
+",FALSE,,,runtime,by code,,25_mar_2021_pos_5c9e6072979831be46899b104d77c7125873da1c
+apache/skywalking,479ee332440ae30e7dfa788232352d973f7c2b74,"Correct trace id in slow db statement (#2254)
+
+* Correct trace id.
+
+* Fix match.
+
+* Add cover token to retry.
+
+* Retry new test plugin.
+
+* Reset to jacoco.
+
+* Update jacoco version.
+",TRUE,,,slow,FALSE,slow query tracing,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+andyholmes/gnome-shell-extension-gsconnect,e67cdb7e47e822fe41ad72b573c471e33da50502,"add telephony signals, optimize dbus exporting
+",TRUE,,,optimize,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+CTSRD-CHERI/u-boot,b2e01ff5434d6f96f128075d534ebf4d39a10de3,"board: laird: add WB50N CPU module
+
+This board is based on the Atmel sama5d3 eval boards.
+Supporting the following features:
+ - Boot from NAND Flash
+ - Ethernet
+ - FIT
+ - SPL
+
+Signed-off-by: Ben Whitten <b19318fa2bcc545c84e430f1b3b19e276bd92233@lairdtech.com>
+Signed-off-by: Dan Kephart <f56123e41efe14acd04589bf5049d5336c86f387@lairdtech.com>
+",FALSE,,,cpu,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+HicServices/RDMP,168df3ddb4d148933d319a220fe3ba2834a88db5,"Support for MySql cohort databases. Rewrote BasicCohortDestination to do guid allocation at runtime rather than via database defaults and push cohort in dispose (allows for multiple toProcess batches)
+",FALSE,,,runtime,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+kubernetes/apimachinery,7a271817091226402b75fcfcda83bf2088ae0da3,"Fixed percentage behavior in instr
+
+fixed syntax, wrote a test
+
+fixed a test
+
+.
+
+1
+
+Update staging/src/k8s.io/apimachinery/pkg/util/intstr/intstr_test.go
+
+Co-Authored-By: Joel Speed <Joel.speed@hotmail.co.uk>
+
+added test
+
+.
+
+fix
+
+fix test
+
+fixed a test
+
+gofmt
+
+lint
+
+fix
+
+function name
+
+validation fix
+
+.
+
+godocs added
+
+.
+
+Kubernetes-commit: 316eff8dee1bb7a5929a28bc07bace910bb0e126
+",FALSE,,,Joel Speed,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+ojrosten/sequoia,d35e03361f41c6ac3a74c16bcaefea667e928882,"Improvements to performance testing
+",FALSE,,,performance testing,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+tprrt/linux-stable,e240ab1cfbf8e341c38847fe9aee8579a01ed303,"ARM: EXYNOS4: Support early wakeup entering sleep mode
+
+Since early wakeup can be handled in pm so we don't need masking
+interrupts of external GIC. When the early wakeup interrupt happens,
+PMU(Power Management Unit) ignores WFI instruction. This means that
+PC(Program Counter) passed without any changes. This patch can handle
+that case by early wakeup interrupt.
+
+Signed-off-by: Jaecheol Lee <6ec43deacef8beeed37dec16d72a9fb9c16a0752@samsung.com>
+[3fc711f4e08bc570a586748633ff7c76d0e1e253@samsung.com: fixed return of exynos4_cpu_suspend()]
+Signed-off-by: Kukjin Kim <3fc711f4e08bc570a586748633ff7c76d0e1e253@samsung.com>
+",FALSE,,,,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+lucko/LuckPerms,d3e60487bb07cf14ede45b19eb4a96178e3e9370,"Download dependencies at runtime instead of shading them in the jar
+",FALSE,,,runtime,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+libvirt/libvirt,b4ad955d9eef49acf3e51f38b001358222e37195,"test: Implement BlockStats and InterfaceStats
+
+We fake stats values based on the current time, similar to how it's done
+for cpu time.
+",FALSE,,,cpu time,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+catapult-project/catapult,1f0f96d71ddbfcc6a995ba220858e42545f40016,"[vinn] Change read() to readbuffer() in d8_bootstrap's file exist polyfill
+
+This improve the runtime of vinn in general since readbuffer is faster than read.
+
+TBR=nduca@chromium.org
+
+Review URL: https://codereview.chromium.org/1751993002
+",TRUE,,,improve runtime,,,25_mar_2021_pos_e524cdc5442d82628ce945d5a08befab9a52117b
+Origen-SDK/origen,0f98a5ecdcb99813342a0c3cffbe55bdf21b279b,"Changed PowerDomain.voltage_range to nominal_voltage_range because it really refers to the range a unit could be fused to a specific value based on power/performance.  The PowerDomain class still needs to integrate spec limits that would handle the full range
+",TRUE,,,performance,FALSE,power performance,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+gem/oq-engine,c33bf87ad850080acd38373e244b6675e19d4481,"Merge pull request #5020 from gem/refact
+
+Solved the slow task issue for ebrisk
+
+Former-commit-id: f60acd07f247c404d68d244aeaff75b7cab45f83 [formerly f8fc3c05d70363b4bb648c00f509c506e6d0ba27]
+Former-commit-id: cd7a1936be8c2287cf55f63e777f6fa0939b8a38",TRUE,,,slow task,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+pixijs/pixi.js,7e4c53638c5b43e8c3c3fe4275c4874d0e595255,"Improve the accuracy of RETINA_PREFIX (#3759)
+
+* Improve the accuracy of RETINA_PREFIX
+
+Sometimes ，this PR could fix https://github.com/pixijs/pixi.js/issues/3755 .
+Maybe this PR is better than https://github.com/pixijs/pixi.js/pull/3756.
+
+* Update settings.js
+",FALSE,,,improve..someTIMES,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+h2oai/h2o-3,cee9d60eda61e5e3e1e76f876bfeb930fe086c32,"PUBDEV-7796: Model explainability interface for H2O models and AutoML objects in R/Python (#4932)
+
+* Add MLI - initial python version
+
+* Add MLI - initial R version
+
+* Fix python's ice plot title
+
+* Fix some bugs and add markers to python's partial dependences
+
+* Update explanation description; add vertical line to ice plot in R indicating the value of the instance
+
+* Add basic tests
+
+* Fix shap_explain_row contribution_type selection
+
+* Add histogram to PDP/ICE plots in R and improve description.
+
+* Add register-s3.R containing a function from vctrs to register s3 method in suggested package
+
+This function is from [1] and on line 9 is clearly specified it is
+allowed to be copy & pasted so we don't have to depend on it.
+
+[1] https://github.com/r-lib/vctrs/blob/9e5c732f5d34ce4b19b1982c8cb38f4cb5fe2b0e/R/register-s3.R
+
+* Incorporate Erin's suggestions for R part
+
+* Incorporate Erin's suggestions for Python part
+
+* Add more R tests, rename tests to not include the word 'MLI'
+
+* Change mli to explain in h2o.__init__.py
+
+* Remove best_of_family from R's h2o.explain to behave the same way as Python's explain function
+
+In Python h2o.explain checks if it is invoked on H2OAutoML if so it will
+set best_of_family to True; when it is invoked on a list of models it
+assumes that the user wants to see explanations for every single model
+
+* Fix leaderboard for model list in R
+
+* Fix missing tkinter error for python 2.7 smoke test
+
+* Python: Make sure h2o is importable even without matplotlib and close figure objects in tests
+
+* Formatting in python
+
+* Change __repr__ to __str__ in Header and Description classes
+
+* Change python's test_frame to frame
+
+* Python: change columns_of_interest and top_n_features to features
+
+* R: change test_frame to newdata
+
+* R: change columns_of_interest to features with same semantics as python
+
+* Change 'features' to 'columns'
+
+* Add --info to build-h2o-3 to find out more info about failing the build R packages when building the jenkins image
+
+* Remove --info from build-h2o-3
+
+* Don't do ICE for classification problems
+
+* R: when doing explanation in interactive() session ask for return after the plot is shown to continue
+
+* R: don't use warning about SE not having varimp
+
+* R: Center the plot titles
+
+* R: change explanation classs to H2OExplanation
+
+* R: optimize creating leaderboard for row with predictions
+
+* R: change explanation inner structure
+
+* Python: change internal structure of H2OExplanation and fix rendering for jupyter
+
+* R: remove 'Error' from interactive interrupt message
+
+* Fixing h2o.shap_explain_row & update all explain.R function descriptions
+
+* Change the docstrings in python and API changes for shap_explain_row's contribution type both R and python
+
+* Rename 'shap_explanation' to 'shap_explain_row' to match the function number
+
+* Change top_n_features to columns
+
+* Ignore top_n parameter when provided with list of models
+
+* Ignore top_n parameter when provided with list of models when displaying a list of interpretable models
+
+* Add top_n_features argument and enable columns to accept column indices
+
+* Refactoring algorithm/family related code
+
+* R: Memoize model/get models on demand
+
+* Fix test
+
+* Change list() and character() to NULL and fix python shap plots
+
+* Shorten model ids
+
+* R: Rename utility functions
+
+* Python: Rename utility functions
+
+* Change variable_importance to varimp
+
+* Python: Fix labels, add vertical space between plots in jupyter + R remove superfluous brace
+
+* R: Check if object, newdata, row_index are specified.
+
+* R: Fix model fetching in ICE for already fetched model
+
+* R: change margin for varimp heatmap when using short model ids
+
+* Add whole prediction to leaderboard for row
+
+* Change cluster to cluster_models
+
+* Add newline to ggplot titles
+
+* Fix partial dependencES to IES
+
+* Fix doc string in R for .create_leaderboard
+
+* PUBDEV-7796: Updates to R docstrings in explain.R
+
+* PUDDEV-7796: Updating docstrings in explain.R
+
+Co-authored-by: ledell <2a4b17b11682b229726079a631360cf016a43450@h2o.ai>",TRUE,,,optimize,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+facebook/mysql-5.6,633d118d01eedea0d15969cd4b049525ea680f53,"Fix for BUG#12882 - min/max inconsistent on empty table.
+
+The problem was in that the MIN/MAX optimization in opt_sum_query was
+replacing MIN/MAX functions with their constant argument without
+taking into account that a query has no result rows.
+",,,,,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+KDE/kwin,b8e9f83e811c314a543dbd72cf6ba8c62b624e3c,"Use a different iconify/restore style to the default, because the
+default is too slow and flickery.
+
+svn path=/trunk/kdebase/kwin/; revision=67690
+",TRUE,,,slow,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+skirpichev/omg,d00c8b214520604fb65bde426cbaf4f4b30dbba0,"Use new parse_expr() in sympify() (#871, #976)
+
+This makes sympify() independent of parsing tools in Python's
+standard library and makes it much simpler. parse_expr() uses
+modified tokenize module to split an input string into tokens,
+then it applies SymPy-specific transformations, untokenizes
+transformed token sequence and passes resulting string directly
+to eval(). All transformations from old sympify() are supported,
+but lambda -> Lambda conversion. It is possible to implement
+this in the new parse_expr(), but it would make it a little more
+complex, so for now I skipped it, as this kind of transformation
+isn't used very often anyway (lambda tests were XFAILed).
+
+This also fixes issue #976 and allows sympify() to handle very
+large expressions, e.g.:
+
+In [1]: e = expand((x + y + z)**50)
+
+In [2]: s = str(e)
+
+In [3]: %time sympify(s) == e
+CPU times: user 27.13 s, sys: 0.09 s, total: 27.22 s
+Wall time: 27.22 s
+Out[4]: True
+
+Previously it raised RuntimeError. Speed could be improved, by
+improving tokenize module.
+
+Old parsers (ast and ast2.4) are still available and we could
+use them in future to make a more advanced version of sympify()
+that doesn't care about speed and platform compatibility, but
+about generality of transformations, thus we could restore
+lambda support this way (e.g. sympify(""..."", parser=""ast"")).
+",TRUE,,,Speed could be improved,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+DataSketches/sketches-core,2e5b6cfd6b1976cffb005357c97c3539774cbf7e,"Merge pull request #2 from DataSketches/UnionOptimization
+
+Union optimization",TRUE,,,optimization,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+tprrt/linux-stable,835bb1298311f372a3387fb40b952b18d90aa9f8,"e1000: add dynamic itr modes
+
+Add a new dynamic itr algorithm, with 2 modes, and make it the default
+operation mode. This greatly reduces latency and increases small packet
+performance, at the ""cost"" of some CPU utilization. Bulk traffic
+throughput is unaffected.
+
+The driver can limit the amount of interrupts per second that the
+adapter will generate for incoming packets. It does this by writing a
+value to the adapter that is based on the maximum amount of interrupts
+that the adapter will generate per second.
+
+Setting InterruptThrottleRate to a value greater or equal to 100 will
+program the adapter to send out a maximum of that many interrupts per
+second, even if more packets have come in. This reduces interrupt
+load on the system and can lower CPU utilization under heavy load,
+but will increase latency as packets are not processed as quickly.
+
+The default behaviour of the driver previously assumed a static
+InterruptThrottleRate value of 8000, providing a good fallback value
+for all traffic types,but lacking in small packet performance and
+latency. The hardware can handle many more small packets per second
+however, and for this reason an adaptive interrupt moderation algorithm
+was implemented.
+
+Since 7.3.x, the driver has two adaptive modes (setting 1 or 3) in
+which it dynamically adjusts the InterruptThrottleRate value based on
+the traffic that it receives. After determining the type of incoming
+traffic in the last timeframe, it will adjust the InterruptThrottleRate
+to an appropriate value for that traffic.
+
+The algorithm classifies the incoming traffic every interval into
+classes.  Once the class is determined, the InterruptThrottleRate
+value is adjusted to suit that traffic type the best. There are
+three classes defined: ""Bulk traffic"", for large amounts of packets
+of normal size; ""Low latency"", for small amounts of traffic and/or
+a significant percentage of small packets; and ""Lowest latency"",
+for almost completely small packets or minimal traffic.
+
+In dynamic conservative mode, the InterruptThrottleRate value is
+set to 4000 for traffic that falls in class ""Bulk traffic"". If
+traffic falls in the ""Low latency"" or ""Lowest latency"" class, the
+InterruptThrottleRate is increased stepwise to 20000. This default
+mode is suitable for most applications.
+
+For situations where low latency is vital such as cluster or
+grid computing, the algorithm can reduce latency even more when
+InterruptThrottleRate is set to mode 1. In this mode, which operates
+the same as mode 3, the InterruptThrottleRate will be increased
+stepwise to 70000 for traffic in class ""Lowest latency"".
+
+Setting InterruptThrottleRate to 0 turns off any interrupt moderation
+and may improve small packet latency, but is generally not suitable
+for bulk throughput traffic.
+
+Signed-off-by: Jesse Brandeburg <e6047e445db6578741afb14ef640164ef6b65e4f@intel.com>
+Cc: Rick Jones <fa592e45dbbefecd81487d38d3b31972a5de8c36@hp.com>
+Signed-off-by: Auke Kok <d323640d323a5ddb238d016fbc7c423173856f0d@intel.com>
+",TRUE,,,packet performance,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+cleanflight/cleanflight,c3b490b40f0e86ca6c20b38fdbb58f54eea636da,"Optimize ledstrip DMA buffer update and bug fix (#8830)
+
+Optimize ledstrip DMA buffer update and bug fix",TRUE,,,optimize,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+ElementsProject/elements,e5b2cd8e7564b9fc2ed4f63fe49efb0af60b4460,"Use python instead of slow shell script on verify-commits
+",TRUE,,,slow,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+tprrt/linux-stable,57a2af6bbc7a4f1b145cc216c34476402836f0b8,"drm/i915: Kill intel_crtc->cursor_bo
+
+The vma may have been rebound between the last time the cursor was
+enabled and now, so skipping the cursor gtt offset deduction is not
+safe unless we would also reset cursor_bo to NULL when disabling the
+cursor. Just thow cursor_bo to the bin instead since it's lost all
+other uses thanks to universal plane support.
+
+Chris pointed out that cursor updates are currently too slow
+via universal planes that micro optimizations like these wouldn't
+even help.
+
+v2: Add a note about futility of micro optimizations (Chris)
+
+Cc: 2dacef862dfeb083b5f3bcc5c29009f436dd5241@lists.freedesktop.org
+References: http://lists.freedesktop.org/archives/intel-gfx/2015-December/082976.html
+Cc: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
+Cc: Takashi Iwai <4596b3305151c7ee743192a95d394341e3d3b644@suse.de>
+Cc: Jani Nikula <ba783f3beccaedfda693f41a15407d612a629408@linux.intel.com>
+Signed-off-by: Ville Syrjälä <cd6e8d405ca90be3a03d5427c5b24fbd2d68dcc4@linux.intel.com>
+Link: http://patchwork.freedesktop.org/patch/msgid/1450107302-17171-1-git-send-email-cd6e8d405ca90be3a03d5427c5b24fbd2d68dcc4@linux.intel.com
+Reviewed-by: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
+(cherry picked from commit 1264859d648c4bdc9f0a098efbff90cbf462a075)
+Signed-off-by: Jani Nikula <ba783f3beccaedfda693f41a15407d612a629408@intel.com>
+",TRUE,,,too slow,,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+PaddlePaddle/Paddle,b681537e1a873a08e1b2f5a4bb78772ee0353279,"Add multiprocess reader (#13311)
+
+* add multiprocess_reader
+
+* add multiprocess_reader to reader decorator
+
+* support piped multi process reader
+
+* revert v2 decorator
+
+* add comment to multiprocess_reader
+
+* optimize code
+
+* use ujson to speed up json serialize/deserialize
+
+* add assert to multiprocess_reader
+
+* update comment of multiprocess_reader
+
+* optimize ujson import, handle error case
+
+* optimize import ujson
+
+* remove ujson from requirements.txt
+
+* add import sys to decorator.py
+",TRUE,,,,optimize code,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+consulo/consulo,725e2b511b8fde3281c9f48ac2c7adf8c5c27d34,"IDEA-69317 Editor: Improve performance
+
+Avoiding unnecessary duplicate 'highlight braces' activity
+",TRUE,,,,improve performance,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+ShiftMediaProject/gmp,01e4f9f93652dc219609f1b578dfb9df914da3f6,"Regenerate for:
+  For sparc under solaris2.[7-9], pass -fast instead of	other
+  optimization options.
+",TRUE,,,,"fast, optimization",,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+pywinauto/pywinauto,ab54003b2cf688bcdd3f75d770b46337a3c0b021,"menuwrapper for win32: optimize _read_item() to delay item's text extraction only when it's actually required
+",TRUE,,,,optimize,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+bazelbuild/bazel,8a3cc9bb48026184b0c937f0ce7e37ab04621036,"Add a test verifying that --action_env triggers a rerun of tests
+
+Issue #3265 went unnoticed for a long time, till it was fixed as
+a sideeffect of d1c5329ba622b29afd3ab9f670fa17064d493bc0. To avoid
+that happing in the future,  add a test. Closes #3265.
+
+Change-Id: Ie22a1d4a2f09fd3dcadcbd900795b3e12b7dc461
+PiperOrigin-RevId: 160502516
+",FALSE,,,,unnoticited for long time,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+openstack/ironic,afa611c4e5c7b73159f5488a83b095e8e86386d2,"Move to unsafe caching
+
+Currently we use writeback caching for disks
+on our test vms, however that honors syncs and
+IO could become blocked/locked if the sync has
+not completed with the double virtualization that
+occurs in CI.
+
+In theory, we don't need to worry about the
+buffer cache behavior for our test VMs.
+
+Overall, it appears that there is a performance
+gain of about 10-15% with making this change because
+we're not honoring syncs to not lock-up IO.
+
+Change-Id: Ib09dd7fd41c6b1cbc0e2b707bfc9e4ff8dfa6fad
+",TRUE,,,,performance gain,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+letsencrypt/boulder,17918010dc84e502c1228067243472f8b0e6f8b9,"Allow override of all build flags in Makefile.
+
+I think even the ldflags that did not change between subsequent invocations of
+./start.py, e.g. BUILD_HOST_VAR, were different between ./start.py and
+`go test ./...`, which would cause test runs to be unnecessarily slow.
+
+Open question: To keep local developer builds fast, maybe we should enable race
+detection only in Travis? Otherwise, `go test ./...` runs with one set of
+ldflags, and then `ampq-integration-test.py` runs with a different set, which I
+think makes both of them slower.
+",TRUE,,,,slower,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+e-gun/HipparchiaServer,40d3950e2c5be478de9459a8e4ad9b625671dbd0,"initial refactor of withinxlines() for speed
+",TRUE,,,,refactor for speed,,25_mar_2021_pos_52a7c8257bcf835e778750bd5c5f172a5cba281f
+SheffieldML/GPy,3cd808ccccd32166779abe52837a741dbbb49c24,"Added optimize and plot for classification, non_gaussian and stochastic examples
+",FALSE,,,added optimize,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+gradle/gradle,2eed9059262006998d4cbb6fb5874dd8b427efb5,"Remove slower versions of Gradle from JavaUpToDateFullBuildPerformanceTest
+
++review REVIEW-5876
+",TRUE,,,slower,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+SiLab-Bonn/basil,a89e0334db50bd9a945edaa90b63458659dbee3f,Rename fast_spi_rx,FALSE,,,rename fast,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+yrccondor/mdx,ebd4b13a8b67762da53b8d3b5c61ef939576fca6,"Improve performance
+",TRUE,,,improve performance,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+bazelbuild/bazel,b77b86642ae219aaa45b1b15206b227c06c1b043,"Optimize serialization for more than one common root
+
+This allows RootCodecDependencies to take multiple likely Roots -- up to 255, although only one or two is expected. This is intended to allow efficient serialization of the bundled builtins root.
+
+Work toward #11437.
+
+PiperOrigin-RevId: 363274403
+",TRUE,,,optimize serilization,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+Alluxio/alluxio,56f3277a3b638f990f83da39ce4c63f956925136,"[TACHYON-665] optimize the implementation, add document and clean codebase:
+
+- add a full version of unit and integration tests
+- add configuration documentation.
+- refactor/optimize service bind and connect related invocations
+- improve javadoc
+- clean codebase
+- bug fixes
+",TRUE,,,optimize the implementation,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+dnnsoftware/Dnn.Platform,da449567a176220db1c32f9a55f1cde8b981a821,"DNN-5107 Improve Startup Performance  - Cache Settings
+",TRUE,,,improve performance,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+hfp/libxsmm,b2024052f7291e290fd7ac4b68650d2de3647d33,"Implemented libxsmm_sexp2 and libxsmm_sexp2_fast incl. test.
+",FALSE,,,libxsmm_sexp2_fast,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+opesci/devito,e129afb48e264b15f7c39ed202efcdf6cec998ac,"All done, better faster
+",TRUE,,,faster,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+chromium/chromium,50b48d604247e3fe5a50dd330ca55c69b2545606,"android: Don't use the App Zygote on low-end devices.
+
+Using the app zygote is a tradeoff with:
+- Pros:
+  - Decreased incremental renderer cost
+  - Faster incremental renderer startup
+- Cons:
+  - 2 copies of relocations (renderers, and everything else) vs 1
+  - Increased fixed cost (memory from the zygote)
+  - Increased cold startup latency
+
+From the attached bug, the added memory cost for a single renderer is
+~4MB (excluding page tables, which are expected to be .5-1MB). As a
+consequence, disable the app zygote on low-end devices.
+
+Bug: 1044579
+Change-Id: I453ce87060f84d616fef7d0796a3f6b794989693
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2016645
+Reviewed-by: Bo <bc579652988c4c89a85c01792240e330d2e727f7@chromium.org>
+Commit-Queue: Benoit L <579f0e0f9312a7b9de804677f2181e06637f45d6@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#734501}
+",TRUE,,,faster,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+chromium/chromium,847575176fe1313101ecff69d2f1867ef63f4c73,"CSS Tokenizer: Emit replacement characters as appropriate for escapes
+
+The css-syntax specification says to emit replacement characters for
+escapes of surrogate characters, null characters, and characters above
+the maximum input code point. This patch updates our tokenizer to match
+this behaviour.
+
+http://dev.w3.org/csswg/css-syntax/#consume-escaped-code-point
+
+Fixes fast/css/parsing-css-surrogate-pairs.html and makes our result
+correct for fast/css/string-quote-binary.html (existing expectation is
+wrong).
+
+BUG=424988
+
+Review URL: https://codereview.chromium.org/879313003
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@189614 bbb929c8-8fbe-4397-9dbb-9b2b20218538
+",FALSE,,,fast/css/parsing-css-surrogate-pairs.html,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+uutils/coreutils,dc6060a85b578368abdcad2caaf149af8904b620,"base64: slightly improve decoding performance speed
+",TRUE,,,improve speed,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+M2000Interpreter/Version8,1a49174c349a16029c2d1b9132902cb915a46df8,"rev 195
+
+Some changes for more speed. Some additions to GuiEditBox and
+GuiTextBox. A correction in Glis4 for slower horizontal scrolling when
+we drop text.
+",TRUE,,,more speed,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+rk700/PyMuPDF,87dd15e87ff9dcec5140da30116a3008b871bbdc,"Performance improcement in Page.showPDFpage()
+
+Build 2018-01-14, 15:20:51
+",TRUE,,,performance,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+chromium/chromium,2153328998af9d61ff8d7743a2f5bc74f889e7f3,"Query compositing state only from UpdateAnimationState
+
+https://codereview.chromium.org/2029323003 attempted to add an optimization
+that would run an animation on the MT by querying m_scrollableArea->
+shouldScrollOnMainThread. This was wrong because we were querying compositing
+state outside of the CompositingClean state.
+
+This reverts that CL.
+
+The original bug was not fixed in the CL that this reverts and that CL was
+just wrong.
+
+This CL doesn't have a behavioral change.
+
+BUG=639100
+
+Review-Url: https://codereview.chromium.org/2338913002
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#418596}
+",TRUE,,,attempted to add an optimization,FALSE,reverts an optimization,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+chromium/chromium,b482e9e71eef97a7c04c7a04ef247e118d9590d6,"Calculate client positions from offsets.
+https://bugs.webkit.org/show_bug.cgi?id=73640
+
+Reviewed by Tony Chang.
+
+This change calculates client positions from offset positions at run time to
+remove platform-dependent constants from this test.
+
+* fast/events/offsetX-offsetY-expected.txt:
+* fast/events/offsetX-offsetY.html:
+* platform/chromium-win/fast/events/offsetX-offsetY-expected.txt: Removed.
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@121735 bbb929c8-8fbe-4397-9dbb-9b2b20218538",FALSE,,,fast/events/offsetX-offsetY.html,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+flarum/tags,53340e67fb2489266a3f8fca9f878a39577b31c5,"Extend Page component to take advantage of performance boost in flarum/core@d1c436c
+",TRUE,,,performance boost,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+thommcgrath/Beacon,81cb3b0ff929f79108425cd6d687686cbe6d3826,"Settings Windows to debug in 32-bit because it's faster
+",TRUE,,,faster,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+nwjs/chromium.src,98d1c5f1e8c7b37db04da5c9cec4ec639dfc8d06,"When we do setAttribute(""border"", null) on a table we should create a border like every other browser
+https://bugs.webkit.org/show_bug.cgi?id=102112
+
+Reviewed by Ryosuke Niwa.
+
+Source/WebCore:
+
+http://www.whatwg.org/specs/web-apps/current-work/multipage/rendering.html#tables says:
+""If the [table's border] attribute is present but parsing the attribute's value using the rules for parsing
+non-negative integers generates an error, a default value of 1px is expected to be used for that property instead.""
+
+Match the spec and bring us into line with other browsers by observing the 'parsing non-negative integers' algorithm.
+
+Tests: fast/dom/HTMLTableElement/table-with-invalid-border.html
+       fast/table/table-with-borderattr-null.html
+       fast/table/table-with-borderattr-set-to-null.html
+
+* html/HTMLElement.cpp:
+(WebCore::HTMLElement::parseBorderWidthAttribute):
+(WebCore::HTMLElement::applyBorderAttributeToStyle):
+* html/HTMLElement.h:
+(HTMLElement):
+* html/HTMLTableElement.cpp:
+(WebCore::HTMLTableElement::collectStyleForPresentationAttribute):
+(WebCore::HTMLTableElement::parseAttribute):
+
+LayoutTests:
+
+* fast/dom/HTMLTableElement/table-with-invalid-border-expected.txt: Added.
+* fast/dom/HTMLTableElement/table-with-invalid-border.html: Added.
+* fast/table/table-with-borderattr-null-expected.txt: Added.
+* fast/table/table-with-borderattr-null.html: Added.
+* fast/table/table-with-borderattr-set-to-null-expected.txt: Added.
+* fast/table/table-with-borderattr-set-to-null.html: Added.
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@140436 bbb929c8-8fbe-4397-9dbb-9b2b20218538",FALSE,,,fast/,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+neos/neos-development-collection,d41f0c392b7b67a85aaffbb08676ac003681ff1b,"Merge ""[TASK] Speed improvements for Page""
+Original-Commit-Hash: a8e46520acca4d2820afe601218a1db72c50cfbc
+",TRUE,,,spped improvements,,,25_mar_2021_pos_b933d243b0cb403f21d467e72a6362d143cd18ef
+adamhathcock/sharpcompress,2a630e04b279b3491fda9276b09a86b8fedbcb3d,"Merge pull request #107 from benshoof/fix-nonzip-perf-regression
+
+Fixed serious performance regression (revert 0f12a073af4486509dfd777da1854efb5dc571ee)",TRUE,,,performance regression,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+apache/camel,f6f636296993daec5b4eaa70d77440836567d707,"Optimize package scan to only create jar cache on-demand when needed
+",TRUE,,,optimize package scan,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+spritejs/spritejs,508402db962835f1f624e3b0007fe4e86b2e8ab7,":art:optimized stylesheet & :memo: update docs
+",TRUE,,,optimized stylesheet,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+vuejs/vue-router,b6f96e9817675cd08bf09159bc79672d0bd27f6c,"optimize scroll position saving (fix #1145)
+",TRUE,,,optimize,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+nwjs/chromium.src,36515ac063606db50e12061341c9f95f02597f35,"2008-09-26  Gavin Barraclough  <barraclough@apple.com>
+
+        Reviewed by Maciej Stachowiak & Oliver Hunt.
+
+        Add support for reusing temporary JSNumberCells.  This change is based on the observation
+        that if the result of certain operations is a JSNumberCell and is consumed by a subsequent
+        operation that would produce a JSNumberCell, we can reuse the object rather than allocating
+        a fresh one.  E.g. given the expression ((a * b) * c), we can statically determine that
+        (a * b) will have a numeric result (or else it will have thrown an exception), so the result
+        will either be a JSNumberCell or a JSImmediate.
+
+        This patch changes three areas of JSC:
+            * The AST now tracks type information about the result of each node.
+            * This information is consumed in bytecode compilation, and certain bytecode operations
+              now carry the statically determined type information about their operands.
+            * CTI uses the information in a number of fashions:
+                * Where an operand to certain arithmetic operations is reusable, it will plant code
+                  to try to perform the operation in JIT code & reuse the cell, where appropriate.
+                * Where it can be statically determined that an operand can only be numeric (typically
+                  the result of another arithmetic operation) the code will not redundantly check that
+                  the JSCell is a JSNumberCell.
+                * Where either of the operands to an add are non-numeric do not plant an optimized
+                  arithmetic code path, just call straight out to the C function.
+
+        +6% Sunspider (10% progression on 3D, 16% progression on math, 60% progression on access-nbody),
+        +1% v8-tests (improvements in raytrace & crypto)
+
+        * VM/CTI.cpp: Add optimized code generation with reuse of temporary JSNumberCells.
+        * VM/CTI.h:
+        * kjs/JSNumberCell.h:
+        * masm/X86Assembler.h:
+
+        * VM/CodeBlock.cpp: Add type information to specific bytecodes.
+        * VM/CodeGenerator.cpp:
+        * VM/CodeGenerator.h:
+        * VM/Machine.cpp:
+
+        * kjs/nodes.cpp: Track static type information for nodes.
+        * kjs/nodes.h:
+        * kjs/ResultDescriptor.h: (Added)
+        * JavaScriptCore.xcodeproj/project.pbxproj:
+
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@36976 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,,,Add optimized code generation,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+hail-is/hail,b0df4b2d153ecce9ab79eec1fed4db9c0d074281,"Read/Write LD Matrix (#2073)
+
+* works?
+
+* address PR comments
+
+* optimize imports
+
+* use existing interfaces
+
+* fix imports
+
+* fix syntax error
+
+* remove bad import
+
+* add LDMatrix import
+
+* fix tests for ldmatrix
+
+* fix tests
+
+* clean paths before writing
+",TRUE,,,optimize imports,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+slapperwan/gh4a,8d2a042518b724ed110a51bd57bd6361850c1760,"Add fast scroller
+
+",TRUE,,,fast,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+kubernetes-incubator/kubespray,4c8b93e5b9f5e4938eda2f944e81e169c4953963,"containerd support (#4664)
+
+* Add limited containerd support
+
+Containerd support for Ubuntu + Calico
+
+* Added CRI-O support for ubuntu
+
+* containerd support.
+
+* Reset  containerd support.
+
+* fix lint.
+
+* implemented feedback
+
+* Change task name cri xx instead of cri-o in reset task and timeout condition.
+
+* set crictl to fixed version
+
+* Use docker-ce's container.io package for containerd.
+
+* Add check containerd is installable or not.
+
+* Avoid stop docker when use containerd and optimize retry for reset.
+
+* Add config.toml.
+
+* Fixed containerd for kubelet.env.
+
+* Merge PR #4629
+
+* Remove unused ubuntu variable for containerd
+
+* Polish code for containerd and cri-o
+
+* Refactoring cri socket configuration.
+
+* Configurable conmon.
+
+* Remove unused crictl/runc download
+
+* Now crictl and runc is downloaded by common crictl.yml.
+
+* fixed yamllint error
+
+* Fixed brokenfiles by conflict.
+
+* Remove commented line in config.toml
+
+* Remove readded v1.12.x version
+
+* Fixed broken set_docker_image_facts
+
+* Fix yamllint errors.
+
+* Remove unused apt source
+
+* Fix crictl could not be installed
+
+* Add containerd config from skolekonov's PR #4601
+",TRUE,,,optimize retry for reset.,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+OISF/suricata,4318c1de45911eb9e81297d1b9c87e48cc312e6d,"github ci: pin cbindgen to 0.14.1
+
+0.14.2 breaks builds with Rust 1.34.0, which we still support.
+
+Also build cbdingen in debug mode. It builds much faster
+with minimal runtime performance.
+",TRUE,,,faster,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+redisson/redisson,f5542bd6b9f8a892a989d3bd58e9eb47feb61d6e,"RList.remove optimization
+",TRUE,,,optimization,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+nwjs/chromium.src,1e13bd23dd2aac48f6bbcce65a1c56b14d5254ef,"[Reland] Optimize blink scheduler with an intrusive heap.
+
+This shows a ~10% improvement on the TaskQueueManagerPerfTest
+micro benchmark.
+
+Alternatives considered: A flat map/set
+https://codereview.chromium.org/2396533004/
+
+BUG=
+
+Committed: https://crrev.com/36d98e3b544f310943986dcaa98beabacdbccc96
+Review-Url: https://codereview.chromium.org/2419793002
+Cr-Original-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#425647}
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#425930}
+",TRUE,,,optimize,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+openfoodfoundation/openfoodnetwork,0da7c93bc60b89f9b66d115060b97a2f98fb61dd,"Collect affected exchanges more efficiently
+
+When an incoming exchange of an order cycle changes, the ProductsCache
+queries all affected outgoing exchanges to update them. It was creating
+a big collection of exchanges with duplicates and then calling `uniq`.
+That call was hitting a custom implementation of `eql?` which is very
+inefficient. And since `Exchange.eql?` is ignoring the order cycle id,
+it was probably filtering too many exchanges from the collection.
+
+Fixed bug: If two order cycles sell exactly the same variants to the
+same shop, the two outgoing exchanges are seen as equal. When the
+variants change, ProductsCache would only update one of those two
+exchanges, leaving one order cycle out of sync. This case is very rare.
+It only happens if there is a shop with two active order cycles selling
+exactly the same.
+
+The new uniqueness test looks only at the attributes that are later used
+to refresh the cache. I measured a page speed improvement from 90
+seconds to 3 seconds (30 times faster).
+",TRUE,,,I measured a page speed improvement from 90,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+Dawn-of-Light/DOLSharp,287ce254bf2adb0d48483d1a14e9eba0af611f75,"Bugfix: Enabled diving in Hibernian Temple of Twilight.
+Changed: Modified LootGeneratorScroll to allow lower scroll drops, mainly for Aerus regions.
+Changed: Modified artifact xprate to be more in line with live. Artifacts were leveling too fast.
+
+git-svn-id: a92f73d1ee1eeac4f92564463fe023a4b5d54c5f@1468 c9877f0d-d2ea-46ae-93cb-121acdf3e971
+",TRUE,,,too fast???,,intentional performance reduction,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+chromium/chromium,9aa4146da55802fe5ececfa528d3bb97d51a59c2,"Revert 148127 ""Simplify ContainerNode::removeChildren and make i...""
+
+> Simplify ContainerNode::removeChildren and make it faster
+> 
+> Simplify ContainerNode::removeChildren by merging the loops and removing
+> willRemoveChildren. This removes 3+ traversals of the children, avoids
+> refing and derefing all the children once, avoids allocating a second
+> NodeVector of children, and means we detach() in the same order as
+> normal removal.
+> 
+> This does mean you can get into an infinite loop with DOMNodeRemoved
+> listeners by continously adding nodes but this is true in all other browsers
+> and the current behavior is bad because it means you don't get notified
+> of nodes added during removal (which other browsers do notify of). This
+> patch removes the containerNode.html test that originally tested for this
+> infinite loop and adds a new one that tests that all nodes get notified.
+> 
+> This makes PerformanceTests/Parser/innerHTML-setter.html 2-6% faster.
+> 
+> There's also a new test verifying ranges remain consistent if modified
+> inside an mutation event handler. Without the patch it's possible to create
+> a range with boundaries outside of the DOM tree. This test was imported from
+> https://bugs.webkit.org/show_bug.cgi?id=113517 and written by Andrei
+> Bucur who landed a modified version of my patch in WebKit.
+> 
+> Review URL: https://codereview.chromium.org/13901002
+
+This causes use after frees inside the Widget tree, and also inside
+node lists and other things because we allow script to run before
+updating the widget tre or calling childrenChanged or calling the
+ChildNodeRemovalNotifier. We need to reconsider how this works.
+
+TBR=esprehn@chromium.org
+Review URL: https://codereview.chromium.org/13874006
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@148250 bbb929c8-8fbe-4397-9dbb-9b2b20218538
+",TRUE,,,revert performance improvment,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+KDE/kcontacts,a2dae0281e1982e591d9866fe93604a6e716d4a2,"Call lower() only once, for speed.
+
+svn path=/trunk/kdelibs/kabc/; revision=312521
+",TRUE,,,for speed,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+diofant/diofant,f00c6dd2554fa4f10f46f729ef68be72a1df0d5f,"faster ``is_quad_residue``;
+in ``sqrt_mod`` changed default value of ``limit`` to 1;
+changed a test and added another one
+",TRUE,,,faster,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+tprrt/linux-stable,b7765086b7c5a5be029a739c2caa161da51c2076,"x86/entry/64: Fix an IRQ state error on ptregs-using syscalls
+
+I messed up the IRQ state when jumping off the fast path due to
+invocation of a ptregs-using syscall.  This bug shouldn't have
+had any impact yet, but it would have caused problems with
+subsequent context tracking cleanups.
+
+Reported-and-tested-by: Borislav Petkov <0691a664b24b6f15b20cd5aee64b72271db08be1@suse.de>
+Signed-off-by: Andy Lutomirski <2cc0d0d76de2e6f37b92deeb83c85cb306fc5dc1@kernel.org>
+Cc: Andy Lutomirski <2cc0d0d76de2e6f37b92deeb83c85cb306fc5dc1@amacapital.net>
+Cc: Borislav Petkov <0691a664b24b6f15b20cd5aee64b72271db08be1@alien8.de>
+Cc: Brian Gerst <e60badcb99f652a0bcc15460d39f7ea12d6655ee@gmail.com>
+Cc: Denys Vlasenko <50fbbd36fe0f9c8261d4a3c762c8c29ffb35e48f@redhat.com>
+Cc: H. Peter Anvin <8a453bad9912ffe59bc0f0b8abe03df9be19379e@zytor.com>
+Cc: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
+Cc: Peter Zijlstra <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>
+Cc: Thomas Gleixner <00e4cf8f46a57000a44449bf9dd8cbbcc209fd2a@linutronix.de>
+Fixes: 1e423bff959e x86/entry/64: (""Migrate the 64-bit syscall slow path to C"")
+Link: http://lkml.kernel.org/r/ab92cd365fb7b0a56869e920017790d96610fdca.1454261517.git.2cc0d0d76de2e6f37b92deeb83c85cb306fc5dc1@kernel.org
+Signed-off-by: Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@kernel.org>
+",FALSE,,,fast path,FALSE,?,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+Flexberry/ember-flexberry-data,3d3e724f777f550716194bdce0679a4269321282,"Merge pull request #67 from Flexberry/feature-select-by-id-performance
+
+Feature select by id performance",FALSE,,,id performance,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+mantidproject/mantid,46af03f7f4417fe9a484aec267d765d9a7566726,"Reduce time that unused workspaces from Fit are in the ADS
+
+Refs #15413
+",TRUE,,,reduce time,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+tprrt/linux-stable,5c3320d7fece4612d4a413aa3c8e82cdb5b49fcb,"libbpf: Fix memory leak and optimize BTF sanitization
+
+Coverity's static analysis helpfully reported a memory leak introduced by
+0f0e55d8247c (""libbpf: Improve BTF sanitization handling""). While fixing it,
+I realized that btf__new() already creates a memory copy, so there is no need
+to do this. So this patch also fixes misleading btf__new() signature to make
+data into a `const void *` input parameter. And it avoids unnecessary memory
+allocation and copy in BTF sanitization code altogether.
+
+Fixes: 0f0e55d8247c (""libbpf: Improve BTF sanitization handling"")
+Signed-off-by: Andrii Nakryiko <1ab6096f60c2d8d3f6ff85bf25d0ee81fb25b434@fb.com>
+Signed-off-by: Daniel Borkmann <3d0f3b9ddcacec30c4008c5e030e6c13a478cb4f@iogearbox.net>
+Link: https://lore.kernel.org/bpf/20200710011023.1655008-1-1ab6096f60c2d8d3f6ff85bf25d0ee81fb25b434@fb.com
+",TRUE,,,optimize,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+indico/indico,194fe88ac38086f8f63ac73f8af74e3a2a2f95e6,"Optimize fetching of event timetable (meetings)
+",TRUE,,,optimize,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+avocado-framework/avocado-vt,aee29d2e41842533a7d37fc039a1d645b1968445,"virt: Allows multihost test using of fd migration and adds new tests
+
+New tests:
+  1) change downtime of migration after start of migration
+  2) change migration speed after start of migration.
+  3) cancel migration after start.
+
+Signed-off-by: Jiří Župka <1903e8a8be862c2c3ba874b0140ea49835e49141@redhat.com>
+",FALSE,,,test - change migration speed,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+quantxt/NLPAnalytics,9bab1192382b6b5f5c327d24a436fd0bca2f3336,"Enhance phrase extraction speed
+",TRUE,,,speed,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+doxygen/doxygen,756d8b203b67f3ab38f7d148794bb94175a064a7,"JAVA_ONCE -> FAST
+",FALSE,,,FAST,FALSE,"change a constant called fast, by code",25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+syncthing/syncthing-android,6ea906d0561e630a6741b58521503e4bee8dbce6,"Optimized imports.
+",TRUE,,,optimized,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+eduNEXT/edunext-platform,0071c9d322bff3fecf503c50bfc03fe9961905d7,"OwnLearnerProfile tests multiprocessing support.
+
+Fix a flaky test condition that only occurs in
+multiprocessing mode. Make the page definition more
+specific; the previous implementation would not fully
+render all objects in time.
+
+Avoid race condition related to events order (in faster,
+multiprocess testing, the order is not exactly the same since
+some events arrive at once).
+",FALSE,,,in faster,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+SMRUCC/GCModeller,747b0ff67641f2ee6882dd81665a4f98d62e655f,"improvements on the runtime code style
+",TRUE,,,improvment ..runtime,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+google/wuffs,510c230cf4439752ebdc3dc171bbb7d697363592,"Rename USE_FAST_DOUBLE_PARSER macro
+",FALSE,,,rename fast,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+nwjs/chromium.src,b2839931272343ba5858b85f78411ec9af9b6180,"XSSAuditor tests shouldn't depend on IFrames's load order.
+https://bugs.webkit.org/show_bug.cgi?id=110737
+
+Reviewed by Jochen Eisinger.
+
+Various tests under http/tests/security/xssAuditor actually wrap up
+multiple test cases under a single HTML file by loading a variety of
+IFrames. Currently, the error messages that these tests expect aren't
+detailed enough to distinguish between the order in which the IFrames
+load: they all generate the same error, so the ordering is irrelevant.
+
+Before we increase the error message detail in webkit.org/b/110733, we
+need to ensure that these tests don't rely on load order. One option
+is to serialize the IFrame loading by chaining onload events, but that
+seems like a slow way of doing things. This patch takes a different
+approach, breaking the multiple-IFrame tests into many single-IFrame
+tests (which should be more shardable, and actually execute more quickly
+in the long run).
+
+* http/tests/security/xssAuditor/open-iframe-src-expected.txt: Removed.
+* http/tests/security/xssAuditor/open-iframe-src.html: Removed.
+* http/tests/security/xssAuditor/open-script-src-expected.txt: Removed.
+* http/tests/security/xssAuditor/open-script-src.html: Removed.
+* http/tests/security/xssAuditor/property-escape-comment-expected.txt: Removed.
+* http/tests/security/xssAuditor/property-escape-comment.html: Removed.
+* http/tests/security/xssAuditor/property-escape-entity-expected.txt: Removed.
+* http/tests/security/xssAuditor/property-escape-entity.html: Removed.
+* http/tests/security/xssAuditor/property-escape-quote-expected.txt: Removed.
+* http/tests/security/xssAuditor/property-escape-quote.html: Removed.
+* http/tests/security/xssAuditor/script-tag-with-comma-expected.txt: Removed.
+* http/tests/security/xssAuditor/script-tag-with-comma.html: Removed.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated-expected.txt: Removed.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated.html: Removed.
+    Removed these tests, breaking them into multiple single-IFrame HTML files.
+* http/tests/security/xssAuditor/open-iframe-src-01.html: Added.
+* http/tests/security/xssAuditor/open-iframe-src-02.html: Added.
+* http/tests/security/xssAuditor/open-script-src-01-expected.txt: Added.
+* http/tests/security/xssAuditor/open-script-src-01.html: Added.
+* http/tests/security/xssAuditor/open-script-src-02-expected.txt: Added.
+* http/tests/security/xssAuditor/open-script-src-02.html: Added.
+* http/tests/security/xssAuditor/open-script-src-03-expected.txt: Added.
+* http/tests/security/xssAuditor/open-script-src-03.html: Added.
+* http/tests/security/xssAuditor/open-script-src-04-expected.txt: Added.
+* http/tests/security/xssAuditor/open-script-src-04.html: Added.
+* http/tests/security/xssAuditor/property-escape-comment-01-expected.txt: Added.
+* http/tests/security/xssAuditor/property-escape-comment-01.html: Added.
+* http/tests/security/xssAuditor/property-escape-comment-02-expected.txt: Added.
+* http/tests/security/xssAuditor/property-escape-comment-02.html: Added.
+* http/tests/security/xssAuditor/property-escape-comment-03-expected.txt: Added.
+* http/tests/security/xssAuditor/property-escape-comment-03.html: Added.
+* http/tests/security/xssAuditor/property-escape-entity-01-expected.txt: Added.
+* http/tests/security/xssAuditor/property-escape-entity-01.html: Added.
+* http/tests/security/xssAuditor/property-escape-entity-02-expected.txt: Added.
+* http/tests/security/xssAuditor/property-escape-entity-02.html: Added.
+* http/tests/security/xssAuditor/property-escape-entity-03-expected.txt: Added.
+* http/tests/security/xssAuditor/property-escape-entity-03.html: Added.
+* http/tests/security/xssAuditor/property-escape-quote-01.html: Added.
+* http/tests/security/xssAuditor/property-escape-quote-02.html: Added.
+* http/tests/security/xssAuditor/property-escape-quote-03.html: Added.
+* http/tests/security/xssAuditor/script-tag-with-comma-01-expected.txt: Added.
+* http/tests/security/xssAuditor/script-tag-with-comma-01.html: Added.
+* http/tests/security/xssAuditor/script-tag-with-comma-02-expected.txt: Added.
+* http/tests/security/xssAuditor/script-tag-with-comma-02.html: Added.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated-01-expected.txt: Added.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated-01.html: Added.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated-02-expected.txt: Added.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated-02.html: Added.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated-03-expected.txt: Added.
+* http/tests/security/xssAuditor/script-tag-with-source-unterminated-03.html: Added.
+* http/tests/security/xssAuditor/script-tag-with-trailing-comment5.html: Added.
+    These tests perform the same validation as the combined tests, they
+    simply do it without introducing load-order dependencies.
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@143920 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,,,a slow way,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+jenetics/jenetics,e420d57dd72bd1f0fc1ff34bad89e2dbca67b10d,"Try to optimize 'Seq' implemetations.
+",TRUE,,,optimize,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+serprex/openEtG,aeb87ea0fc8d9bb1d0b015bbff3805eb6e0a47af,"Refactor server code to use const & faster fast path caching
+
+Also fix /speed & cache-control
+",TRUE,,,faster,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+JetBrains/intellij-community,53ae42e6e6711b26e2fc2dd5d62e7727e35bd82b,"Properly update origin stamp in skeletons copied from the cache
+
+It's necessary to detect their import group for Optimize Imports and
+delete them on package removal afterwards.
+
+GitOrigin-RevId: e0d7d6a25978e4fb195a5607c55ea6aeb5b0e082
+",FALSE,,,Optimize Imports' command,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+hugsy/gef,9abe546b4b91cab6f785c6bd34307be7a60d578c,"Cache get_info_files for big speedup!
+
+The context command calls `get_info_files` 50+ times (Unless you're
+showing regs raw, and who wants that?).
+
+This appears to speed up the context command for me 25% on my linux
+(x86_64) machine and 40% on my raspberry pi!
+",TRUE,,,speedup,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+phusion/passenger,9cfa1608c8f357730a76434bd7441065fa3ed99b,"Add RequestHandler unit tests regarding handling of slow clients.
+",FALSE,,,test for slow clients,FALSE,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+eirannejad/pyRevit,e39010121dea8c14d899058638e1d4ef62ec3459,"moved project to vscode for higher performance
+",TRUE,,,higher performance (for coder?),,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+nwjs/chromium.src,8b9f12fde56f198257babd0cb5733f8d28081a4a,"Unreviewed gardening, marking fast/sub-pixel/file-upload-control-at-fractional-offset.html as failing on LION for now.
+
+* platform/chromium/TestExpectations:
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@132106 bbb929c8-8fbe-4397-9dbb-9b2b20218538",FALSE,,,fast/sub-pixel/file-upload-control-at-fractional-offset.html,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+tprrt/linux-stable,6c325f4eca9ee9eb32cf58768e6e4ebcabaa8d6e,"Merge branch 'net_sched-fix-races-with-RCU-callbacks'
+
+Cong Wang says:
+
+====================
+net_sched: fix races with RCU callbacks
+
+Recently, the RCU callbacks used in TC filters and TC actions keep
+drawing my attention, they introduce at least 4 race condition bugs:
+
+1. A simple one fixed by Daniel:
+
+commit c78e1746d3ad7d548bdf3fe491898cc453911a49
+Author: Daniel Borkmann <3d0f3b9ddcacec30c4008c5e030e6c13a478cb4f@iogearbox.net>
+Date:   Wed May 20 17:13:33 2015 +0200
+
+    net: sched: fix call_rcu() race on classifier module unloads
+
+2. A very nasty one fixed by me:
+
+commit 1697c4bb5245649a23f06a144cc38c06715e1b65
+Author: Cong Wang <0f114804888b88d50037b04b42e57b858d851b87@gmail.com>
+Date:   Mon Sep 11 16:33:32 2017 -0700
+
+    net_sched: carefully handle tcf_block_put()
+
+3. Two more bugs found by Chris:
+https://patchwork.ozlabs.org/patch/826696/
+https://patchwork.ozlabs.org/patch/826695/
+
+Usually RCU callbacks are simple, however for TC filters and actions,
+they are complex because at least TC actions could be destroyed
+together with the TC filter in one callback. And RCU callbacks are
+invoked in BH context, without locking they are parallel too. All of
+these contribute to the cause of these nasty bugs.
+
+Alternatively, we could also:
+
+a) Introduce a spinlock to serialize these RCU callbacks. But as I
+said in commit 1697c4bb5245 (""net_sched: carefully handle
+tcf_block_put()""), it is very hard to do because of tcf_chain_dump().
+Potentially we need to do a lot of work to make it possible (if not
+impossible).
+
+b) Just get rid of these RCU callbacks, because they are not
+necessary at all, callers of these call_rcu() are all on slow paths
+and holding RTNL lock, so blocking is allowed in their contexts.
+However, David and Eric dislike adding synchronize_rcu() here.
+
+As suggested by Paul, we could defer the work to a workqueue and
+gain the permission of holding RTNL again without any performance
+impact, however, in tcf_block_put() we could have a deadlock when
+flushing workqueue while hodling RTNL lock, the trick here is to
+defer the work itself in workqueue and make it queued after all
+other works so that we keep the same ordering to avoid any
+use-after-free. Please see the first patch for details.
+
+Patch 1 introduces the infrastructure, patch 2~12 move each
+tc filter to the new tc filter workqueue, patch 13 adds
+an assertion to catch potential bugs like this, patch 14
+closes another rcu callback race, patch 15 and patch 16 add
+new test cases.
+====================
+
+Reported-by: Chris Mi <1559339698d4b91062141e6c67af7c94ca1d6f09@mellanox.com>
+Cc: Daniel Borkmann <3d0f3b9ddcacec30c4008c5e030e6c13a478cb4f@iogearbox.net>
+Cc: Jiri Pirko <1b548d10035ae428195c41f5d55eedb1437ccd8a@resnulli.us>
+Cc: John Fastabend <ee461b60978bea1c76b3018c0b89685175b248e2@gmail.com>
+Cc: Jamal Hadi Salim <15cac6df0dbdaecca5b04ed6c5cc9ad59098d331@mojatatu.com>
+Cc: ""Paul E. McKenney"" <1e0ce936bb9b355d257bf5790d2513c3f28be22b@linux.vnet.ibm.com>
+Signed-off-by: Cong Wang <0f114804888b88d50037b04b42e57b858d851b87@gmail.com>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,,,slow paths,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+domob1812/namecore,e9d76a161d30ee3081acf93d70a9ae668a9d6ed1,"Merge #8068: Compact Blocks
+
+48efec8 Fix some minor compact block issues that came up in review (Matt Corallo)
+ccd06b9 Elaborate bucket size math (Pieter Wuille)
+0d4cb48 Use vTxHashes to optimize InitData significantly (Matt Corallo)
+8119026 Provide a flat list of txid/terators to txn in CTxMemPool (Matt Corallo)
+678ee97 Add BIP 152 to implemented BIPs list (Matt Corallo)
+56ba516 Add reconstruction debug logging (Matt Corallo)
+2f34a2e Get our ""best three"" peers to announce blocks using cmpctblocks (Matt Corallo)
+927f8ee Add ability to fetch CNode by NodeId (Matt Corallo)
+d25cd3e Add receiver-side protocol implementation for CMPCTBLOCK stuff (Matt Corallo)
+9c837d5 Add sender-side protocol implementation for CMPCTBLOCK stuff (Matt Corallo)
+00c4078 Add protocol messages for short-ids blocks (Matt Corallo)
+e3b2222 Add some blockencodings tests (Matt Corallo)
+f4f8f14 Add TestMemPoolEntryHelper::FromTx version for CTransaction (Matt Corallo)
+85ad31e Add partial-block block encodings API (Matt Corallo)
+5249dac Add COMPACTSIZE wrapper similar to VARINT for serialization (Matt Corallo)
+cbda71c Move context-required checks from CheckBlockHeader to Contextual... (Matt Corallo)
+7c29ec9 If AcceptBlockHeader returns true, pindex will be set. (Matt Corallo)
+96806c3 Stop trimming when mapTx is empty (Pieter Wuille)
+",TRUE,,,Use vTxHashes to optimize InitData significantly,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+aleDsz/ragnaMOBA,48fcc92a9c25852d087dfd19fb1b569a357b2411,"Follow up to 828f78322b12b42a11bb7974777010076e5b8753
+
+* Only checks item names of items with new ids.
+* Fixes warnings on import itemdb overwrites.
+* Note: The duplicate name check should be refactored after the Cpp
+  migration. It'd be much faster with a C++ map with the
+  name string as the key.
+* Thanks to @Daegaladh!
+",TRUE,,,faster,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+tprrt/linux-stable,84d84cb7e20d3d2c6413c5f75634e88eb68a3f97,"drm/i915: Stop second guessing the caller for intel_uncore_wait_for_register()
+
+Allow the caller to use the fast_timeout_us to specify how long to wait
+within the atomic section, rather than transparently switching to a
+sleeping loop for larger values. This is required as some callsites may
+need a long wait and are in an atomic section.
+
+v2: Reinforce kerneldoc fast_timeout_us limit with a GEM_BUG_ON
+
+Signed-off-by: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
+Cc: Michal Wajdeczko <6f0901af122a28d4399bd812790ffda46fb5d002@intel.com>
+Cc: Joonas Lahtinen <a11ca63949063c01fa551bf27c25e0fe898387c4@linux.intel.com>
+Cc: Tvrtko Ursulin <82325a91373a06cdf12f953d4611ffb7756aa8d4@intel.com>
+Link: http://patchwork.freedesktop.org/patch/msgid/20170411112705.12656-1-711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk
+Reviewed-by: Tvrtko Ursulin <82325a91373a06cdf12f953d4611ffb7756aa8d4@intel.com>
+",FALSE,,,fast_timeout_us,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+rakudo/rakudo,fae30cbf894b8ad5333cc7770b79f766c5a43448,"Re-enable inlining of immediate blocks optimization.
+",TRUE,,,optimization,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+fluks/mupdf-x11-bookmarks,65b8ae915465849babc1fa712971c701136f4ed5,"Add linearization to pdf_write function.
+
+Extend mupdfclean to have a new -l file that writes the file
+linearized. This should still be considered experimental
+
+When writing a pdf file, analyse object use, flatten resource use,
+reorder the objects, generate a hintstream and output with linearisaton
+parameters.
+
+This is enough for Acrobat to accept the file as being optimised
+for Fast Web View. We ought to add more tables to the hintstream
+in some cases, but I doubt anyone actually uses it, the spec is so
+badly written. Certainly acrobat accepts the file as being optimised
+for 'Fast Web View'.
+
+Update fz_dict_put to allow for us adding a reference to the dictionary
+that is the sole owner of that reference already (i.e. don't drop then
+keep something that has a reference count of just 1).
+
+Update pdf_load_image_stream to use the stm_buf from the xref if there
+is one.
+
+Update pdf_close_document to discard any stm_bufs it may be holding.
+
+Update fz_dict_put to be pdf_dict_put - this was missed in a renaming
+ages ago and has been inconsistent since.
+",TRUE,,,optimised,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+keybase/client,be6c1349e9051ea35ecf78ac2bf45a379303e2b2,"Use console.log on android. It's 3x faster (#18227)
+
+",TRUE,,,faster,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+tprrt/linux-stable,8f5d41f3a0f495435c88ebba8fc150c931c10fef,"perf/x86/intel/uncore: Update Ice Lake uncore units
+
+There are some updates for the Icelake model specific uncore performance
+monitors. (The update can be found at 10th generation intel core
+processors families specification update Revision 004, ICL068)
+
+1) Counter 0 of ARB uncore unit is not available for software use
+2) The global 'enable bit' (bit 29) and 'freeze bit' (bit 31) of
+   MSR_UNC_PERF_GLOBAL_CTRL cannot be used to control counter behavior.
+   Needs to use local enable in event select MSR.
+
+Accessing the modified bit/registers will be ignored by HW. Users may
+observe inaccurate results with the current code.
+
+The changes of the MSR_UNC_PERF_GLOBAL_CTRL imply that groups cannot be
+read atomically anymore. Although the error of the result for a group
+becomes a bit bigger, it still far lower than not using a group. The
+group support is still kept. Only Remove the *_box() related
+implementation.
+
+Since the counter 0 of ARB uncore unit is not available, update the MSR
+address for the ARB uncore unit.
+
+There is no change for IMC uncore unit, which only include free-running
+counters.
+
+Fixes: 6e394376ee89 (""perf/x86/intel/uncore: Add Intel Icelake uncore support"")
+Signed-off-by: Kan Liang <6e4ed0645dbf05e706dc43d69b381839dca8944b@linux.intel.com>
+Signed-off-by: Peter Zijlstra (Intel) <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>
+Link: https://lkml.kernel.org/r/20200925134905.8839-2-6e4ed0645dbf05e706dc43d69b381839dca8944b@linux.intel.com
+",FALSE,,,There are some updates for the Icelake model specific uncore performance monitors,FALSE,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+TimothyGu/libilbc,ac0ef48631bc1d432f36b8f95185e2f54cfdc127,"Revert 4067 ""libyuv roll to r698 for Core Media fourccs for OSX ...""
+
+> libyuv roll to r698 for Core Media fourccs for OSX camtwist support and performance improvements in ARGB scaler.
+> BUG=none
+> TEST=libyuv unittests add CM32 and CM24 types and ARGBScaleClip tests added.
+> Review URL: https://webrtc-codereview.appspot.com/1508004
+
+TBR=fbarchard@google.com
+
+Review URL: https://webrtc-codereview.appspot.com/1517004
+
+git-svn-id: 917f5d3ca488f358c4d40eaec14422cf392ccec9@4072 4adac7df-926f-26a2-2b94-8c16560cd09d
+",TRUE,,,revert performance,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+missionpinball/mpf,67259f487ca574461679395875b27c271da7a460,"move light out of fast
+",FALSE,,,fast,FALSE,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+nsnam/ns-3-dev-git,ae5d2c71316db74f61c0b2148ee649d87cbef4dc,"Bug 1276 - optimize NistErrorRateModel
+",TRUE,,,optimize,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+chromium/chromium,58c154378ba13820a72b1b38de15d39275ee364b,"2009-02-23  Geoffrey Garen  <ggaren@apple.com>
+
+        Reviewed by Sam Weinig.
+
+        Next step in splitting JIT functionality out of the Interpreter class:
+        Moved vptr storage from Interpreter to JSGlobalData, so it could be shared
+        between Interpreter and JITStubs, and moved the *Trampoline JIT stubs
+        into the JITStubs class. Also added a VPtrSet class to encapsulate vptr
+        hacks during JSGlobalData initialization.
+        
+        SunSpider says 0.4% faster. Meh.
+
+        * JavaScriptCore.exp:
+        * JavaScriptCore.xcodeproj/project.pbxproj:
+        * interpreter/Interpreter.cpp:
+        (JSC::Interpreter::Interpreter):
+        (JSC::Interpreter::tryCacheGetByID):
+        (JSC::Interpreter::privateExecute):
+        * interpreter/Interpreter.h:
+        * jit/JIT.cpp:
+        (JSC::JIT::privateCompileMainPass):
+        (JSC::JIT::privateCompile):
+        (JSC::JIT::privateCompileCTIMachineTrampolines):
+        * jit/JIT.h:
+        (JSC::JIT::compileCTIMachineTrampolines):
+        * jit/JITCall.cpp:
+        (JSC::JIT::compileOpCall):
+        (JSC::JIT::compileOpCallSlowCase):
+        * jit/JITPropertyAccess.cpp:
+        (JSC::JIT::privateCompilePatchGetArrayLength):
+        * jit/JITStubs.cpp:
+        (JSC::JITStubs::JITStubs):
+        (JSC::JITStubs::tryCacheGetByID):
+        (JSC::JITStubs::cti_vm_dontLazyLinkCall):
+        (JSC::JITStubs::cti_op_get_by_val):
+        (JSC::JITStubs::cti_op_get_by_val_byte_array):
+        (JSC::JITStubs::cti_op_put_by_val):
+        (JSC::JITStubs::cti_op_put_by_val_array):
+        (JSC::JITStubs::cti_op_put_by_val_byte_array):
+        (JSC::JITStubs::cti_op_is_string):
+        * jit/JITStubs.h:
+        (JSC::JITStubs::ctiArrayLengthTrampoline):
+        (JSC::JITStubs::ctiStringLengthTrampoline):
+        (JSC::JITStubs::ctiVirtualCallPreLink):
+        (JSC::JITStubs::ctiVirtualCallLink):
+        (JSC::JITStubs::ctiVirtualCall):
+        * runtime/ArrayPrototype.cpp:
+        (JSC::arrayProtoFuncPop):
+        (JSC::arrayProtoFuncPush):
+        * runtime/FunctionPrototype.cpp:
+        (JSC::functionProtoFuncApply):
+        * runtime/JSArray.h:
+        (JSC::isJSArray):
+        * runtime/JSByteArray.h:
+        (JSC::asByteArray):
+        (JSC::isJSByteArray):
+        * runtime/JSCell.h:
+        * runtime/JSFunction.h:
+        * runtime/JSGlobalData.cpp:
+        (JSC::VPtrSet::VPtrSet):
+        (JSC::JSGlobalData::JSGlobalData):
+        (JSC::JSGlobalData::create):
+        (JSC::JSGlobalData::sharedInstance):
+        * runtime/JSGlobalData.h:
+        * runtime/JSString.h:
+        (JSC::isJSString):
+        * runtime/Operations.h:
+        (JSC::jsLess):
+        (JSC::jsLessEq):
+        * wrec/WREC.cpp:
+        (JSC::WREC::Generator::compileRegExp):
+
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@41168 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,,,faster,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+chromium/chromium,675e72aecb4e1f033e866ed95dc0cd9be6b9f7c7,"Creates the OptimizationGuidePredictionModel interface.
+
+This change creates the interface for the PredictionModels to be
+used in the OptimizationGuide Prediction System. The interface
+provides a factory method for creating the ModelTypes supported
+by the current client. The interface implements functions common
+to all PredictionModels, including the version and providing the
+set of features required for the model to be executed.
+
+The Prediction API function is pure virtual so that all concrete
+implementations can implement the evaluation methods specific to
+their ModelType.
+
+The Slow Page Prediction model will be of DecisionTree ModelType.
+The next change will implement the decision tree evaluation.
+
+Once the PredictionManager and ModelFetcher is in place, a browsertest
+will be implemented to test the IsValid proto checks for ModelType
+and ClientModelFeatures which cannot be easily unittested.
+
+Bug: 1001194
+Change-Id: Ifae7af2712568405909632e1ae2e6beca2e001da
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1817582
+Reviewed-by: Tarun Bansal <84e77af7cdb6c576a39643f2fe817e9f91a687e9@chromium.org>
+Reviewed-by: Sophie Chang <61eb89ef08aecd84456224595cdd810b4a8cbe36@chromium.org>
+Commit-Queue: Michael Crouse <f3e70367ef144b8e389cbf325a8213c87e426fc7@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#699483}
+",TRUE,,,optimization,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
+balloob/home-assistant,53a91ece4ecb24624e9913f0a3cba292e7303825,"Improve isoformat timestamp performance (#36991)
+
+* adj
+
+* time_fired_isoformat
+
+* remove unused code
+
+* tests for processing timestamps
+
+* restore missing import lost in merge conflict
+
+* test for None case",TRUE,,,improve performance,,,25_mar_2021_pos_a5655cab58c1e717c8dcf06bc754812fbba79a72
