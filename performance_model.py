@@ -37,6 +37,7 @@ positive_terms = [
     ]
 
 excluded_terms = ['performance suite(?:s)?',
+                  'performance (testing|test|tests)',
                   ]
 
 def build_positive_regex():
@@ -115,29 +116,21 @@ def evaluate_performance_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='5c9e6072979831be46899b104d77c7125873da1c')
+    print_concepts_functions_for_bq(commit='e524cdc5442d82628ce945d5a08befab9a52117b')
     #evaluate_performance_classifier()
 
     text = """
-"Make components/ownership transit SECKEYPrivateKey handles.
+"ARM: EXYNOS4: Support early wakeup entering sleep mode
 
-We'll later want to make this code use CHAPS directly, possibly with some
-interface abstracting NSS and CHAPS. But RSAPrivateKey won't work as that
-interface as it can't abstract between multiple private key implementations at
-runtime. So switch it to SECKEYPrivateKey and NSS functions directly.
+Since early wakeup can be handled in pm so we don't need masking
+interrupts of external GIC. When the early wakeup interrupt happens,
+PMU(Power Management Unit) ignores WFI instruction. This means that
+PC(Program Counter) passed without any changes. This patch can handle
+that case by early wakeup interrupt.
 
-With this, the chimera build should be functional on Linux and CrOS apart from
-client certificates.
-
-This tightens the build so that components/ownership is only build on CrOS.
-It's currently unused on other platforms, but still built as a test, with
-NSS pieces #ifdef'd out.
-
-BUG=478777
-
-Review URL: https://codereview.chromium.org/1145613002
-
-Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#331421}
+Signed-off-by: Jaecheol Lee <6ec43deacef8beeed37dec16d72a9fb9c16a0752@samsung.com>
+[3fc711f4e08bc570a586748633ff7c76d0e1e253@samsung.com: fixed return of exynos4_cpu_suspend()]
+Signed-off-by: Kukjin Kim <3fc711f4e08bc570a586748633ff7c76d0e1e253@samsung.com>
 "
 """.lower()
     print("is performance", is_performance(text))
