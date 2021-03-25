@@ -19,20 +19,20 @@ from model_evaluation import classifiy_commits_df, evaluate_performance, evaluat
 
 positive_terms = [
     'better' + NEAR_ENOUGH + 'time(?:s)?',
-    '(cpu|gpu|tpu)',
-    'day(?:s)?',
-    'hour(?:s)?',
+    #'(cpu|gpu|tpu)',
+    #'day(?:s)?',
+    #'hour(?:s)?',
     'improv' + VERB_E_SUFFIX + NEAR_ENOUGH + 'time(?:s)?',
     '(long|longer|short|shorter|above|least)' + NEAR_ENOUGH + 'time(?:s)?',
-    'minute(?:s)?',
+    #'minute(?:s)?',
     'optimiz' + VERB_E_SUFFIX,
     'optimization',
     'performance',
     'reduc' + VERB_E_SUFFIX + NEAR_ENOUGH + 'time(?:s)?',
-    'second(?:s)?',
+    #'second(?:s)?',
     '(speed|speeding)',
     'tak' + VERB_E_SUFFIX + NEAR_ENOUGH + 'time(?:s)?',
-    'run(?: |-)?time(?:s)?',
+    #'run(?: |-)?time(?:s)?',
     '(slow|slower|slowest)',
     ]
 
@@ -115,31 +115,30 @@ def evaluate_performance_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='9795cc67ad63133d19686a96d965ae784fddaee7')
+    print_concepts_functions_for_bq(commit='5c9e6072979831be46899b104d77c7125873da1c')
     #evaluate_performance_classifier()
 
     text = """
-"Sensitivity plots fix (#2860)
+"Make components/ownership transit SECKEYPrivateKey handles.
 
-* fix immediately obvious bug in plotting loop
+We'll later want to make this code use CHAPS directly, possibly with some
+interface abstracting NSS and CHAPS. But RSAPrivateKey won't work as that
+interface as it can't abstract between multiple private key implementations at
+runtime. So switch it to SECKEYPrivateKey and NSS functions directly.
 
-* add in allinj plots, create front summary page
+With this, the chimera build should be functional on Linux and CrOS apart from
+client certificates.
 
-* move allinj to after injection plots loop
+This tightens the build so that components/ownership is only build on CrOS.
+It's currently unused on other platforms, but still built as a test, with
+NSS pieces #ifdef'd out.
 
-* Fix to make bank_plot work. Include found table in injection pages
+BUG=478777
 
-* Use censored veto, clarify fixme comments
+Review URL: https://codereview.chromium.org/1145613002
 
-* add snrifar summary to main page
-
-* remove confusing and unneccessary bit
-
-* found table doesnt work
-
-* fix up one thing which turned into a list although it's only a list with 1 entry
-
-* add Gareth"
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#331421}
+"
 """.lower()
     print("is performance", is_performance(text))
     print("performance in text", re.findall(build_positive_regex(), text))
