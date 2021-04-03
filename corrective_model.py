@@ -31,7 +31,8 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
 # NPE, prevent, incompatible, roll back, nullptr, NullPointerException, assignment in  condition
-
+# Table 1 in "A Comparative Study of Industrial Static
+# Analysis Tools"
 """
 To consider
 I forgot, forever, infinite loop
