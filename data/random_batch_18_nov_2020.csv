@@ -1691,23 +1691,23 @@ opencog/atomspace,d708909f85aa3f3548fa914e9640b52771fcd52b,"Complete conditional
 alpha-asp/Alpha,597b905df78f91ea282388fb35110024b93c3dbf,"Check for internal atoms using flag not pred name
 ",FALSE,FALSE,TRUE,FALSE,"logic change, by code, no syntactic evidence",,,random_batch_18_nov_2020
 rabbitmq/rabbitmq-website,b4e91e9d2289d51341b1466d02885da22d670aa3,"Merge branch 'stable'
-",,,,,,,,random_batch_18_nov_2020
-realfastvla/rfpipe,1033416042392d513f13cfc99319e73f5fdd4c49,Merge branch 'cand-redesign' into master,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
+realfastvla/rfpipe,1033416042392d513f13cfc99319e73f5fdd4c49,Merge branch 'cand-redesign' into master,FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 ceolter/angular-grid,b7af79b14df50b5b5eeb340c84de19d28d3acf3f,"Merge remote-tracking branch 'origin/latest' into latest
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 Citadel-Station-13/Citadel-Station-13,01c9923050e44c6b97607cff67f365deb01a8280,"Merge pull request #1514 from Citadel-Station-13/upstream-merge-28233
 
-[MIRROR] Adds /image/proc/copy_overlays",,,,,,,,random_batch_18_nov_2020
+[MIRROR] Adds /image/proc/copy_overlays",FALSE,FALSE,TRUE,FALSE,adds,,,random_batch_18_nov_2020
 BisonLab/CrewCallBundle,284b487f89a8850f39548d7b54e08bd8ee6d5478,"Playing around with styling.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,playing around,,,random_batch_18_nov_2020
 Alluxio/alluxio,c98e79def62a54d2eb2722830428be56c7a7e846,"Merge branch 'master' of https://github.com/Alluxio/alluxio
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 metabrainz/picard,5815f43914c77af6da0123dbfca66c70321ef784,"Ignore recordings for which AcoustID has no metadata
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,ignore,,,random_batch_18_nov_2020
 autoserver-org/autoserver,0dcb9c03da4aa3c2518ddc647e2057711b530730,"Get IDL validation recursion right
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,get X right,,,random_batch_18_nov_2020
 maurov/xraysloth,befea28fc33f4e69f2745098470e7d5809faf42c,"start refactoring datagroups
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020
 ganeti/ganeti,f9f6480e1e32dfe97056846824a5251a72aadb51,"Enable evacuation/relocation for shared storage
 
 This patch toggles the final bit and enables nodeEvacInstance to work
@@ -1716,25 +1716,25 @@ on shared storage instances. Diskless instances are handled the same
 
 Signed-off-by: Iustin Pop <acf83a5274f31a43af6b914614365999469c1a31@google.com>
 Reviewed-by: Guido Trotter <f62ca4d5358bdaeef0e50e57f9f7e231de63727e@google.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,enable,,,random_batch_18_nov_2020
 consulo/consulo,e5bfcb7e7d2aa48f7baceebfbec2be3feadd05ca,"recent changes stuffs
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,stuff? by code,,,random_batch_18_nov_2020
 hughsie/fwupd,b1af7496b1a37bdf10e4e940206ab1845bfd08cb,"unifying: Show the hardware version when the hardware provides this
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,show,,,random_batch_18_nov_2020
 Col-E/Recaf,dc28d64513d26480d5edf2ea0591d4586366d455,"refactor: Replace tinylog with logback
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactor,,,random_batch_18_nov_2020
 kean/Nuke,d3a41fa35f6a496b61e0e273bf0000760e56e0bc,"Add ImageTask description
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"Add (description is a member), by code",,,random_batch_18_nov_2020
 opencog/opencog,548491421ba8a42dbd3f63fe3f60bcd24318a2f3,"Need to use extension that defines the extension...
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,by code,no syntactic evidence,,random_batch_18_nov_2020
 appleseedhq/appleseed,01a6cb37b3eeeea848c4bd584960328a360c9f18,"appleseed.package 1.5: on windows, copy the Visual C++ runtime DLLs to appleseed/bin/ instead of appleseed/bin/Microsoft.VC100.CRT/.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 jenkinsci/jenkins,0813aaf9eb64e0a05d0c0c9f51ed18bd77f5db4e,"[maven-release-plugin] prepare for next development iteration
 
 
 git-svn-id: 28f34f9aa52bc55a5ddd5be9e183c5cccadc6ee4@4919 71c3de6d-444a-0410-be80-ed276b4c234a
-",,,,,,,,random_batch_18_nov_2020
-JetBrains/intellij-community,f8690911d3004165b3fa69951a394b344ec444e8,fix parser,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,changed componenets versions,by code,FALSE,random_batch_18_nov_2020
+JetBrains/intellij-community,f8690911d3004165b3fa69951a394b344ec444e8,fix parser,FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 PoESkillTree/PoESkillTree,62f3796e7ed38330fedef4e1c2e3a03de20f1b5e,"Merge branch 'master' into gem-sockets
 
 # Conflicts:
@@ -1743,19 +1743,19 @@ PoESkillTree/PoESkillTree,62f3796e7ed38330fedef4e1c2e3a03de20f1b5e,"Merge branch
 #	WPFSKillTree/Controls/ItemTooltip.xaml
 #	WPFSKillTree/Model/Items/Item.cs
 #	WPFSKillTree/WPFSKillTree.csproj
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,merge,,,random_batch_18_nov_2020
 google/site-kit-wp,eff95e87b0aacc038f60d6f721fe510671052550,"Pass instance User_Options to Profile.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,no syntactic evidence,by code,,random_batch_18_nov_2020
 alphagov/static,6aa636ac41898fe35e489c20ed9f525a11ad5f26,"Stylesheet switcher for settings
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 cityofasheville/simplicity2,627182a6d76ccdab17c25010d840fe35ea17735e,"Create release branch 2.2.8
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,create,,,random_batch_18_nov_2020
 FreeUKGen/MyopicVicar,5b5fa7467132330b98cad17f3796951248d724e3,"mongoid version of karimari
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020
 4Catalyzer/found,96e29d13bcefe60cab4cb68089cf028646d577cd,"Added tests for BaseLink
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020
 AliceO2Group/AliceO2,f01f349a8fcfb381978bb5905c04a7eae9ed757e,"bugfix for enabling debug code when compiling with GPU support
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,bugfix,,,random_batch_18_nov_2020
 ganeti/ganeti,01144827a495b56653259a7cb825a48e364b3d42,"Merge branch 'devel-2.1'
 
 * devel-2.1: (22 commits)
@@ -1793,16 +1793,16 @@ Conflicts:
 
 Signed-off-by: Guido Trotter <f62ca4d5358bdaeef0e50e57f9f7e231de63727e@google.com>
 Reviewed-by: Iustin Pop <acf83a5274f31a43af6b914614365999469c1a31@google.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"fix, add",,,random_batch_18_nov_2020
 hashicorp/terraform,f290a3a955803787daa509879900dbf40ea7587e,"ALB: Enabled s3.enabled and changed default value of s3.enabled
 
 - Disabled access logs by default
 - Enabled case to set value of s3.enabled
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,"enable, disable",,,random_batch_18_nov_2020
 citra-emu/citra-canary,6b779b7482969c75996222179d7fcbe2e59b821e,"ISSUE_TEMPLATE: also ask for a log file
 
 Exactly like we do for yuzu too, we should also mention for Citra that we need a log.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,edited md file,by code,,random_batch_18_nov_2020
 Taeung/tip,cb399da401c64f527ced132179f66ac022e63d7b,"mmc: sdhci-esdhc-imx: fix lockdep splat upon tuning
 
 =================================
@@ -1896,95 +1896,95 @@ Tested-by: Markus Pargmann <b9e0f7aed71fa470d5913fb2df2da788a8fb0eb2@pengutronix
 Tested-by: Stephen Warren <5ef2a23ba3aff51d1cfc8c113c1ec34b608b3b13@nvidia.com>
 Signed-off-by: Ulf Hansson <fe47b31f388f85ce6ddf64bf3a0cf6b46077d0e6@linaro.org>
 Signed-off-by: Chris Ball <711c73f64afdce07b7e38039a96d2224209e9a6c@printf.net>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 meedan/check-web,6c8ff2af8caa88a442ecbb1a81b5edc9e0f500d6,"Attempt to fix tests #5285
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 fastlane/fastlane,2e8ffc737b6a787665928276f03a99e20702a302,"Added :noclean flag for snapshot integration
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,Added,,,random_batch_18_nov_2020
 qtproject/qt-creator,9bb67101c5daa42f879f2fcf884277c5fd23bed4,"Trk[TCF]: Proper exit handling
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,proper,by code,,random_batch_18_nov_2020
 pypingou/pagure,c767e918e07c8ff3516a7ee54cb7d143de18282e,"add a content-type header
 
 Merges https://pagure.io/pagure/pull-request/3161
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 wordpress-mobile/WordPress-iOS,f554be2e7c7aac5209f78c03e65ad38c3752bb0d,"Merge branch 'feature/3807-notifications-control-center' into feature/3807-notifications-service
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 ethereum/solidity,e728cd76b6cfb5f2a19206dd24808799203c68f5,"Introduce typed named functions to dialect.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,introduce,,,random_batch_18_nov_2020
 tpolecat/doobie,0972540fa255c4e416f32e9bc12ea5ce0e2833af,"Create Meta class for java.sql._ types
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,create,,,random_batch_18_nov_2020
 photonstorm/phaser,fabaa493efa0cefeeaf1f8f593be669130215814,"jsdoc work
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,jsdoc,by code,,random_batch_18_nov_2020
 ONLYOFFICE/web-apps,faecea9e11ae156815626b34addd4c5c5462fef6,"[DE] Refactoring DataViewSimple. Optimize equation loading.
-",,,,,,,,random_batch_18_nov_2020
-19Inocybe63/Fungiquebec,f64407f6383c63096f6c8dcc43e4efe3733c8557,Ajout Leratiomyces riparius,,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020
+19Inocybe63/Fungiquebec,f64407f6383c63096f6c8dcc43e4efe3733c8557,Ajout Leratiomyces riparius,FALSE,TRUE,FALSE,FALSE,"edited md file, Ajout is adding in French",by code,,random_batch_18_nov_2020
 iiet/iiet-git,6a57e93f41d194d24f58f8158cf7a813669377f9,"Merge branch 'master' into ui_pipelines_mini_graph
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 Taeung/tip,7078202e55b565582fcbd831a8dd3069bdc72610,"UBIFS: document dark_wm and dead_wm better
 
 Just add more commentaries. Also some commentary fixes for
 lprops flags.
 
 Signed-off-by: Artem Bityutskiy <19b5733dcea388885746d36043d3568bba5b4df7@nokia.com>
-",,,,,,,,random_batch_18_nov_2020
-jnidzwetzki/bboxdb,aa1f7944b9b5eb59acf8d51474033729e8491e58,Don't include null memtable in getAllTupleStorages to prevent NPEs,,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,document,Also fix documentation. Not a bug but a fix.,,random_batch_18_nov_2020
+jnidzwetzki/bboxdb,aa1f7944b9b5eb59acf8d51474033729e8491e58,Don't include null memtable in getAllTupleStorages to prevent NPEs,FALSE,FALSE,FALSE,TRUE,"don't include, prevent NPEs",by code,,random_batch_18_nov_2020
 gajim/gajim,cd0e35ead56313118e3c0c999bf96b7d62d05ca1,"libxss-dev is enough in debian unstable
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,FALSE,random_batch_18_nov_2020
 yiisoft/yii2-framework,44090380ba83d221d01a34f49542457e001f6c1c,"Fixes #7867: Fixes findUniqueIndexes not to perform any processing on unique index on function for pgsql, Implemented findUniqueIndexes for oci and mssql
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020
 factor/factor,27586218e82c904b7edb782f73ab936e76c17a08,"Replacing s-exp tuple with cons cells in parser, updating tests
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,replace in parser target,by code,FALSE,random_batch_18_nov_2020
 kbase/kbase-ui,dcdd960bae4dc0629d5b60adcc08455e58faf626,"add dom hooks for testing
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 biosistemika/scinote-web,8ba055592249e4de4a3ee6779b21a24fe6605832,"Add check for tasks complete in project notifications (#1657)
 
-",,,,,,,,random_batch_18_nov_2020
-ElvisResearchGroup/L42,05733fb7ad78e0ba9d64b24e90ddc8cf5d440334,.,,,,,,,,random_batch_18_nov_2020
-CCAFS/MARLO,1854b61003f552cd91e8f4107d0f6f7bb3b29352,Added Managing Responsible(s) as a Subreport to fix MySQL Problem,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
+ElvisResearchGroup/L42,05733fb7ad78e0ba9d64b24e90ddc8cf5d440334,.,FALSE,FALSE,TRUE,FALSE,Thank you for the informative message,by code,,random_batch_18_nov_2020
+CCAFS/MARLO,1854b61003f552cd91e8f4107d0f6f7bb3b29352,Added Managing Responsible(s) as a Subreport to fix MySQL Problem,FALSE,FALSE,FALSE,TRUE,fix problem,,,random_batch_18_nov_2020
 codarchlab/idai-field-client,b981f4bd6288bd576ed6936e499554bcbfa6e55c,"add mac dmg packaging via travis
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 moosend/mooskin-ui,b747b3fd36a844b09f5a107e5eaaebc1170fdcd6,"Merge pull request #194 from donibehrami/feature/tags-updates
 
-Remove related UI elements when there are missing callbacks to the Ta…",,,,,,,,random_batch_18_nov_2020
+Remove related UI elements when there are missing callbacks to the Ta…",FALSE,FALSE,TRUE,FALSE,"remove, missing",by code,FALSE,random_batch_18_nov_2020
 LLK/scratch-gui,b29670bc52f55968902f4ad0b2569d24af990c9c,"Split stage selection from sprites
 
 Add a new stage selection component that displays the stage separately from the sprite list.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,by code,,random_batch_18_nov_2020
 OptiKey/OptiKey,23cf77a0bf754a53e1d5d25cd67548dcdade008f,"Merge remote-tracking branch 'origin/mouse-control-feature' into mouse-control-feature
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,feature,,,random_batch_18_nov_2020
 iiet/iiet-git,6ae4747673aacce567ad17b16a6f957e038452c1,"Replace ci_status_path with pipeline_path
 
 Signed-off-by: Rémy Coutable <4ea0184b9df19e0786dd00b28e6daa4d26baeb3e@rymai.me>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,replace,by code,,random_batch_18_nov_2020
 adammansfield/my-autohotkey-scripts,d1fd042c85d13700978b9d8f532f6818f53e98dc,"Refactored Speak to use variable_name_with_underscores.
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refactored,,,random_batch_18_nov_2020
 openebs/maya,ebca07d43bf526ab8953d36869a88c854c2fcf91,"fix(provisioner,localpv,cmd): add klog flags to flag set
 
 klog flags for levelled verbose logging is added to the flagset.
 
 Signed-off-by: Akhil Mohan <01c7dbd4d8b172ac138309ffb6ac1c568244084c@mayadata.io>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"fix (conventional), addition",by code,FALSE,random_batch_18_nov_2020
 Taeung/tip,badf8082c33d18b118d3a6f1b32d5ea6b97d3839,"[PATCH] switch ide_disk_ops ->ioctl() to sane prototype
 
 Signed-off-by: Al Viro <de609eb4d5d70b1d38ec6642adbfc33a2781f63c@zeniv.linux.org.uk>
-",,,,,,,,random_batch_18_nov_2020
-alibaba/nacos,873177547a72ad2a9e0fe2579cef8fce1c9ca240,fixed designed,,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,switch,by code,FALSE,random_batch_18_nov_2020
+alibaba/nacos,873177547a72ad2a9e0fe2579cef8fce1c9ca240,fixed designed,FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020
 tgstation/tgstation,caa8190d6144819fe2fbfa0db57bf09a1a60f15c,"Merge pull request #1994 from cem/chem
 
-Increase Chem Dispenser window height",,,,,,,,random_batch_18_nov_2020
+Increase Chem Dispenser window height",FALSE,FALSE,TRUE,FALSE,increase,,,random_batch_18_nov_2020
 ankidroid/Anki-Android,fe0a7b436986d7c0dbe75ee617078efd510738c9,"Unified the way of tagging log messages on Deck.java and Stats.java
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,unified,,,random_batch_18_nov_2020
 kubernetes/test-infra,3ef0e038254032e4b4b6c8b5668b8556e8564f70,"Merge pull request #1307 from spxtr/spliceerror
 
-If the submit queue is down, it's a warning not an error.",,,,,,,,random_batch_18_nov_2020
+If the submit queue is down, it's a warning not an error.",FALSE,FALSE,TRUE,FALSE,changed ogging level,by code,,random_batch_18_nov_2020
 Automattic/wp-calypso,b84f3a19cff5507460372d728f4937b5727325a9,"Merge branch 'master' into fix/metric_explosion_grafana
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 binary-com/binary-static,ce5a141fb16689faaae4096d1863f5e801bf9b94,"update exclude explanation
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,explanation,,,random_batch_18_nov_2020
 Alexey-T/CudaText,bfd36aae7f697dc7a8f50da163b572a3b9d3666b,"opt ui_fullscr_no_bottom
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,by code,FALSE,random_batch_18_nov_2020
 VirtQE-S1/ESX-LISA,595858c6e2e82ae745c12f7d7f40bbf6d445dc60,"stateEngine.ps1, utilFunctions.ps1 - add running time support in forceshutdown state, and enhance SetRunningTime function.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 nossas/bonde-client,c9315f310e557ef6a1ae49948406d893ca63f289,"- Change FormRedux submit button position strategy from absolute to fixed;
 - Fix FormWidget fields page move up, move down and delete buttons focus layout;
 - Fix FormWidget Menu component alignment layout;
@@ -1993,11 +1993,11 @@ nossas/bonde-client,c9315f310e557ef6a1ae49948406d893ca63f289,"- Change FormRedux
 - Fix AutoFireFormPage overflow auto layout;
 - Fix FormWidget Report page alignment layout;
 - Add button no-focus layout into main.scss file.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,TRUE,"add, change, fix",,,random_batch_18_nov_2020
 WikiEducationFoundation/WikiEduDashboard,4e407fa3db8911e7ce0da6632e35c3091051eaff,"Removed Console Logs
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020
 edx/configuration,72aa3ec77b9792d89c09d8a0442fc4822a40b526,"updating venv dir
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,updating,,,random_batch_18_nov_2020
 Taeung/tip,127f9d9497aa90b9006323b97f539dcca88df95b,"staging: wilc1000: remove typedef from the struct tstrHostIfSetDrvHandler
 
 This patch removes typedef from the struct tstrHostIfSetDrvHandler and
@@ -2006,10 +2006,10 @@ style.
 
 Signed-off-by: Tony Cho <545cb41ca22b217ad08520fed1285c6bec9a869f@atmel.com>
 Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@linuxfoundation.org>
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,TRUE,FALSE,"remove, rename",,,random_batch_18_nov_2020
 PowerDNS/pdns,016a165ef72b88c9b23374b701063ac6deb2d25e,"Merge pull request #8153 from rgacogne/ddist-doh-http-more
 
-dnsdist: Add Lua bindings, rules and action for DoH",,,,,,,,random_batch_18_nov_2020
+dnsdist: Add Lua bindings, rules and action for DoH",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 artsy/force,d433c950f35fc136a375cadb3ee3eeed47b42f61,"make sure to pass aggred_to_receive_emails gdpr property
 ",,,,,,,,random_batch_18_nov_2020
 bozimmerman/CoffeeMud,a1188d1cf7ee08029a0d2bef0b543915f1eed896,"svnimporter generated comment: Renamed $templates to $examples. Changed path: [/Version 4.7/resources/examples/]
