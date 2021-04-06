@@ -102,3 +102,5 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 [Mining Software Repositories with a Collaborative Heuristic Repository](https://arxiv.org/pdf/2103.01722.pdf) [dataset](https://github.com/giganticode/bohr)
 
 [Augmenting commit classification by using fine-grained source code changes and a pre-trained deep neural language model](https://www.sciencedirect.com/science/article/abs/pii/S0950584921000495)
+
+[Exploring the communication functions of comments during bug fixing in Open Source Software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584921000665)
