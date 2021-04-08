@@ -866,7 +866,7 @@ lino-framework/lino,64fb94222ae1bbe3758af5cf167f682b0d4cc354,"http://www.lino-fr
 ",FALSE,FALSE,FALSE,TRUE,,by code,,random_batch_18_nov_2020
 lamsfoundation/lams,423d88c3f279da62c8802e3f9df86654a659fcb3,LDEV-4429 Open JLatexmath dialog when clicking on its image,FALSE,FALSE,TRUE,FALSE,,by code,FALSE,random_batch_18_nov_2020
 xenodium/dotsies,5602bdb31e0e4158cf7a9c0370381442f3538b86,"Merge branch 'master' of https://github.com/xenodium/env
-",,,,,,"Nod found in git, no info in message",FALSE,random_batch_18_nov_2020
+",,,TRUE,,,"Nod found in git, no info in message",FALSE,random_batch_18_nov_2020
 MrMC/mrmc,57f00efbcd46f9cbda03a61de3b0260a97826111,"changed: removed recently added script by author request. will be replaced by a fork shortly
 
 
@@ -2011,61 +2011,61 @@ PowerDNS/pdns,016a165ef72b88c9b23374b701063ac6deb2d25e,"Merge pull request #8153
 
 dnsdist: Add Lua bindings, rules and action for DoH",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 artsy/force,d433c950f35fc136a375cadb3ee3eeed47b42f61,"make sure to pass aggred_to_receive_emails gdpr property
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,pass,make sure makes the context unclear,FALSE,random_batch_18_nov_2020
 bozimmerman/CoffeeMud,a1188d1cf7ee08029a0d2bef0b543915f1eed896,"svnimporter generated comment: Renamed $templates to $examples. Changed path: [/Version 4.7/resources/examples/]
 
 git-svn-id: 0cdf8356e41b2d8ccbb41bb76c82068fe80b2514@5366 0d6f1817-ed0e-0410-87c9-987e46238f29
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,renamed,,,random_batch_18_nov_2020
 3drepo/3drepobouncer,d018ca94ce14abdd8ec250fb2de13b4ca6f2dfa2,"Merge remote-tracking branch 'refs/remotes/origin/ISSUE_131' into v1.3
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 wordpress-mobile/WordPress-iOS,42fc4a1080a954d11cbea21a6b914d3b833e3438,"Merge pull request #6835 from wordpress-mobile/issue/6808-analytics-parity
 
-Media: analytics parity with Android",,,,,,,,random_batch_18_nov_2020
-RocketChat/Rocket.Chat.Android,8b64b05b02462598a8168b84dfb3bb81178c337f,Merge branch 'develop' into feature/image-keyboard,,,,,,,,random_batch_18_nov_2020
+Media: analytics parity with Android",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
+RocketChat/Rocket.Chat.Android,8b64b05b02462598a8168b84dfb3bb81178c337f,Merge branch 'develop' into feature/image-keyboard,FALSE,FALSE,TRUE,FALSE,feature,,,random_batch_18_nov_2020
 MyEtherWallet/MyEtherWallet,fe789cd59e5ec4d1d663d801f5b3fe3693c15164,"make requested changes
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,make changes,,,random_batch_18_nov_2020
 MrMC/mrmc,f767cdc7b444e1389f16c49b56ed2f3fc864eb0e,"[epg] fix use of new epg database column iYear
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 Wilfred/remacs,6013ce4724488c9ec585a4464ced7d1081c5b735,"Tramp 2.0.36 released.
 
 (Remote shell setup): Explain about problems with
 non-Bourne commands in ~/.profile and ~/.shrc.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,explain,by code,,random_batch_18_nov_2020
 rook/rook,221dc3ec8beb1acf3201e43eef866bd22db1acb5,"docs: User docs/guides updates for multiple storage type support
 
 Signed-off-by: travisn <a8b474fdb3f77f44446f0ab9ddca8147b09b3a9e@redhat.com>
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,docs,,,random_batch_18_nov_2020
 ppy/osu-web,c8637c55884b7164f84b1f2a7f27eab73030deaa,"leave order and limit to index each
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,by code,,,random_batch_18_nov_2020
 OGRECave/ogre,99bc97dfaec68574ffb90b077379e736c558bdf2,"[vtest] Fix AlphaToCoverage test
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020
 dotnet/roslyn,f0267f5296ea52228094754e29b996f971466e5b,"Merge pull request #31887 from dotnet/merges/master-to-features/editorconfig-in-compiler
 
-Merge master to features/editorconfig-in-compiler",,,,,,,,random_batch_18_nov_2020
+Merge master to features/editorconfig-in-compiler",FALSE,FALSE,TRUE,FALSE,features,,,random_batch_18_nov_2020
 ntop/ntopng,9cb566ed415a40df69a0c9f389f955b5d2590879,"Computes lua scripts deadlines in C to prevent missing scheduled activities
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,FALSE,TRUE,prevent missing,,FALSE,random_batch_18_nov_2020
 juju/juju,e2a83cb1fe1fe5231b4960700b00dcfdf7358305,"Merge branch 'master' into subnet-picknewaddress
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020
 ValeevGroup/tiledarray,e667a85c85587591f40580a16d6a4462c497cf03,"More updates to INSTALL.
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,updates,,,random_batch_18_nov_2020
 f-droid/fdroiddata,f8e644438e1de4527c197c068cf454fc0b9daa62,"Update CV of LeafPic to v0.3.1 (5)
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,TRUE,FALSE,FALSE,,by code,,random_batch_18_nov_2020
 moodle/moodle,5ff867362a40521efc16d30990859e758625aa2c,"MDL-47922 tool_monitor: Add a config to disable the tool
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020
 quarkusio/quarkus,1baf1790a2080029c201c3b7210e28eb7b3d2592,"Merge pull request #6048 from quarkusio/dependabot/maven/org.assertj-assertj-core-3.14.0
 
-Bump assertj-core from 3.12.2 to 3.14.0",,,,,,,,random_batch_18_nov_2020
+Bump assertj-core from 3.12.2 to 3.14.0",FALSE,FALSE,TRUE,FALSE,bump ,by code,,random_batch_18_nov_2020
 ShareX/ShareX,9315a054ca47167718c615d90b32ccb09f83c747,"Added support for text upload to pastie.org
-",,,,,,,,random_batch_18_nov_2020
+",FALSE,FALSE,TRUE,FALSE,Added,,,random_batch_18_nov_2020
 Wilfred/remacs,89b2bf617fa0619d57e8875d6d15aa765d765482,"Have commit-msg report commit failure
 
 * build-aux/git-hooks/commit-msg: If the commit is aborted,
 say so.  Simplify by doing this at the end.  Problem reported
 by Eli Zaretskii in:
 http://lists.gnu.org/archive/html/emacs-devel/2015-04/msg00566.html
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,TRUE,"problem, simplify",,,random_batch_18_nov_2020
 TeamHypersomnia/Hypersomnia,71d5d70760bc0c4bf692803f48bbecba68c2ab3b,"some attempts at refactor
-",,,,,,,,random_batch_18_nov_2020
+",TRUE,TRUE,FALSE,FALSE,refctor,attempts?,,random_batch_18_nov_2020
 datastax/cpp-driver,a87829225db44025e4e6f315fbb9a2bf6e9be4ef,"Removed unused method Pool::defunct()
 ",,,,,,,,random_batch_18_nov_2020
 stan-dev/math,03aecb09725f06f88a328154c07211f59cf7cc7f,"Fix cpplint
