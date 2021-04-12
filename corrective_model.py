@@ -33,6 +33,7 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 # NPE, prevent, incompatible, roll back, nullptr, NullPointerException, assignment in  condition
 # Table 1 in "A Comparative Study of Industrial Static
 # Analysis Tools"
+# https://www.sans.org/top25-software-errors/
 """
 To consider
 I forgot, forever, infinite loop
