@@ -105,4 +105,4 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 
 [Exploring the communication functions of comments during bug fixing in Open Source Software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584921000665)
 
-[What Causes Wrong Sentiment Classifications of Game Reviews?](https://www.researchgate.net/profile/Cor-Paul-Bezemer/publication/350638067_What_Causes_Wrong_Sentiment_Classifications_of_Game_Reviews/links/606b3aca299bf1252e2fc0d9/What-Causes-Wrong-Sentiment-Classifications-of-Game-Reviews.pdf) [repo](https://github.com/asgaardlab/sentiment-analysis-Steam_reviews/blob/main/url_sentiment_classifications.xlsx)
+[What Causes Wrong Sentiment Classifications of Game Reviews?](https://www.researchgate.net/profile/Cor-Paul-Bezemer/publication/350638067_What_Causes_Wrong_Sentiment_Classifications_of_Game_Reviews/links/606b3aca299bf1252e2fc0d9/What-Causes-Wrong-Sentiment-Classifications-of-Game-Reviews.pdf) [repo](https://github.com/asgaardlab/sentiment-analysis-Steam_reviews/)
