@@ -52,6 +52,7 @@ Instructions
   1. Changing an interface is adaptive.
   1. Updating a library is adaptive
   1. Porting code is adaptive
+  1. Builds, and devops operations are considered adaptive
 
   1. Tests are considered to be a part of the system and its requirements. Therefore, an adaptive change in the tests is adaptive and should be labeled as True.
   1. Merge is a technical instrument. It is adaptive since it modifies the system. A merge commit might have more functions judged by its content.
