@@ -2123,40 +2123,42 @@ les erreurs de jet de dés
 guillaume-sainthillier/ByNight,0921b4e2a8b44d98ac05b8deef92160e21666edc,"Fixed docker image for GD
 ",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 biosistemika/scinote-web,53f4db9352b58a6d59968fd98951d761a644f4a6,"Code refactoring [SCI-1869]
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stinsonga/emacs-mirror,80a677d9852bb4eb26c2c0bb2c119fdae0770c43,"Initial revision
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"Initial revision
+",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jniemann66/ReSampler,18366b0bc9d74a604dddf14b5706b1b445e5c327,"rebuild
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"rebuild
+",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jhipster/generator-jhipster,11124c8f4f9b0b345383442e1bae6d86c66015ad,"Merge pull request #4288 from pascalgrimaud/travis-kafka-consul
 
-new travis builds: mariadb+kafka, gateway+consul",,,,,,,,random_batch_18_nov_2020,,,,,,,
+new travis builds: mariadb+kafka, gateway+consul",FALSE,FALSE,TRUE,FALSE,new builds,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JMRI/EngineDriver,b65eae9cf224d091ae16107a0607369ff19e4914,"Fix - Directon Change not moving - unticking the preference had no effect.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix ,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 getnikola/nikola,e46d01b882e09b9784486fb4d0a55026b9174be4,"showoff a little using Dr. Nikola's Vendetta
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added a template and data,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 concord-consortium/codap,3214397065d20832703e72b9b9f1cf7885ccaee4,"[#172727619] Bug fix: Changing bin size does not stick when legend is added
 
 * Directly inform plots of a change to x or y attribute so that proper action can be taken.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,bug fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alphagov/finder-frontend,703ae1ff70bba20293eaa9306020129ecc0f3db7,"Bump webmock from 3.1.1 to 3.2.1
 
 Bumps [webmock](https://github.com/bblimke/webmock) from 3.1.1 to 3.2.1.
 - [Changelog](https://github.com/bblimke/webmock/blob/master/CHANGELOG.md)
-- [Commits](https://github.com/bblimke/webmock/compare/v3.1.1...v3.2.1)",,,,,,,,random_batch_18_nov_2020,,,,,,,
+- [Commits](https://github.com/bblimke/webmock/compare/v3.1.1...v3.2.1)",FALSE,FALSE,TRUE,FALSE,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 conda-forge/staged-recipes,bdf5a5ff516572986629caadf33927d64ecfbb7d,"Merge remote-tracking branch 'upstream/master' into prismatic_subpackages
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hydroshare/hydroshare,f0f53d00f2b84c518f444684d97ff57ebcd60e0e,"[#1940] added irods user account in federated unit test
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"added, user account",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 erlang/otp,cbc7ef1f665423aabba3836b79017682ca1b0816,"erts: Improve NIF load incompatibility errors
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,errors,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 dart-lang/sdk,e9cdb5d4a8dbfd9a311c44a84e5cab70c8227aa5,"Convert more analyzer tests to pass under preview-dart-2
 
 Change-Id: Id2c7069da725db2d2572507fb73b51f5ab574d8a
 Reviewed-on: https://dart-review.googlesource.com/46571
 Reviewed-by: Konstantin Shcheglov <09e4d7516628963212bf4aace2f97603d2b706e4@google.com>
 Commit-Queue: Brian Wilkerson <1f7641b6b14c52b9163524ab8d9aabff80176f21@google.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,convert,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OSEHRA/VistA,f86781914dd1d5125ece8a8a0a5769f23f27d006,"Add instuctions for Gerrit submission
 
 Add reStructuredText documents which copy the OSEHRA.org pages that
@@ -2165,39 +2167,39 @@ on the instance as well.
 
 OSEHRA-Id: http://issues.osehra.org/browse/OAT-199
 Change-Id: I07edebddc3837ef2ad7939c3f8071f3a14ff532e
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,documents,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 yaocloud/yao,e0add1f06a5e6496a623435fcd8e8fbf98a4ffcf,"Add syntax check loop
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mongodb/node-mongodb-native,eb8b866aa7352464dacdb05e04659fea15d23b0e,"Merge pull request #1585 from mongodb/port-pr-1560
 
-[Port] Update server domain for GSSAPI auth ",,,,,,,,random_batch_18_nov_2020,,,,,,,
+[Port] Update server domain for GSSAPI auth ",FALSE,FALSE,TRUE,FALSE,"update, auth",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 livepeer/go-livepeer,8c01207b59cbf145967c445e263d68a04998fc77,"Merge pull request #1251 from livepeer/nv/faucet-check
 
-eth, server: faucet rate limit error message",,,,,,,,random_batch_18_nov_2020,,,,,,,
+eth, server: faucet rate limit error message",FALSE,FALSE,TRUE,FALSE,error message,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Sylius/Sylius,e6a29491c10ce157eb80e03e82e08a3883148ae1,"Merge pull request #4168 from nakashu/fix/cart-item-translation
 
-[cart] - added missing translation for quantity on cart item form type",,,,,,,,random_batch_18_nov_2020,,,,,,,
+[cart] - added missing translation for quantity on cart item form type",FALSE,TRUE,FALSE,FALSE,translation,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 domob1812/namecore,8906a9a0d299c9d10c1d40fbec9756625f32f048,"Fix bumpfee test after #10449
 
 Failure reported by Jorge Timón <jtimon@jtimon.cc>
 https://github.com/bitcoin/bitcoin/pull/10449#issuecomment-305556569
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,failure,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 metasfresh/metasfresh,0f0123f14b575a2f182005f549d65b50c923ba0d,"Refactoring: move test classes to own package
 
 https://github.com/metasfresh/metasfresh/issues/5611
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jaamsim/jaamsim,dcd5ca1bb305f473e6d82ae79cb1263c9a3cfb54,"JS: inline an InputAgent method only called from test code
 
 Signed-off-by: Harvey Harrison <eadbd6b462bf3c97df0300a934c12bc2e5d1fe51@ausenco.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,inline,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 teamcapybara/capybara,77bb1b0d0d93920dd1865db67122411562e8da27,"force chrome install
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,force install,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 salesagility/SuiteCRM,9b54dd459fc4481da39d12ab524dbf1d68d77e41,"fix strict error in ACLAction
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,error,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 laravel/framework,5e3044219cad6825f2daac9464a165f4b53a2529,"Moving constructor to app.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,moving constructor,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pocl/pocl,2329d04e9fdd6e3138c8af119b9099753c3e171b,"Add initial support for AddressSanitizer (only with GCC for now)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 facebook/watchman,c91fabea702b6d133b748194c519770b76d6fb97,"fbcode_builder: implement automatic project detection from the current repo
 
 Summary:
@@ -2222,57 +2224,57 @@ Reviewed By: wez
 Differential Revision: D17088938
 
 fbshipit-source-id: f14d28fdcfaa330ff837ea52b8bdd4e358b81c61
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,implement,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 laurentb/weboob,87ef8011e21d1bed37e42020e8ae1fc8e740f879,"type and history of ESPE INTEG
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,no syntactic evidence,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stinsonga/emacs-mirror,169bac43653a350c4a59d49cbcb62e5ae2fd44f8,"Luc Teirlinck  <teirllm at dms.auburn.edu>:
 
 (locate-in-alternate-database): Doc fix.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,doc,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Laidout/laidout,dd2d5879fa1fa5758cfb909289bd4c5e1331b749,"trying to make Evaluate name calling a little more consistent
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,make more consistent,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 BoldGrid/boldgrid-theme-framework,5a33f1e823e51eec0fae376606353055fbe59627,"Fixing issues with image sharpness
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixing,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ironjan/metal-only,a6bafd5b3ff2860cf27e3dbfce500b28155ad251,"Code clean up
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,clean up,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jamesagnew/hapi-fhir,14d861992cec48206fdba23f38ce016f87d68dc1,"Merge branch 'master' of github.com:jamesagnew/hapi-fhir
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,no syntactic evidence,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wildfly/wildfly,d0e258f42b6517420a1a10454c9751315d916c57,"[WFLY-8559] Added DWM test with multiple cases
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tensorflow/tensorflow,94f1c4f8fdbdda4becca6417fcaf286abdc82daf,"RowPartition: add static nrows/nvals/uniform_row_length accessors.
 
 (RowPartition.static_nrows replaces RowPartition.nrows_as_dimension -- note that the tf.Dimension object is deprecated for public-facing APIs in TF 2.x.)
 
 PiperOrigin-RevId: 300218572
 Change-Id: I386631d8ac22ea6b57049c90e8d2f8fe12117a26
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 root-mirror/root,10a1111740b4455a054dad543f313f5f4ee912f6,"add ifdef for R__QT to set lightsource (same as for Inventor).
 
 
 git-svn-id: acec3fd5b7ea1eb9e79d6329d318e8118ee2e14f@7557 27541ba8-7e3a-0410-8455-c3a389f83636
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 STJr/SRB2,4029167a574bb5e9fc385a268cb3919f7432168f,"Merge branch 'fix-divby0-spindash-crash' into 'next'
 
 Fix a divide by zero crash when mindash and maxdash were the same.
 
-See merge request STJr/SRB2!539",,,,,,,,random_batch_18_nov_2020,,,,,,,
+See merge request STJr/SRB2!539",FALSE,FALSE,FALSE,TRUE,fix dvide by zero,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 henrikstengaard/hstwb-installer,2323e576487355001fbe498e783cd9777034c637,"Updated run self install steps
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,update readme,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/drill,42c1a699742cf198b6c39a5285ecc9a94fa250e5,"DRILL-6970 Fix issue with logregex format plugin where drillbuf was
 overflowing
 
 closes #1673
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-pepstock-org/Charba,215f90111a38a4239bfdc37dfc00331d182d36cc,formatting of defaults,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+pepstock-org/Charba,215f90111a38a4239bfdc37dfc00331d182d36cc,formatting of defaults,FALSE,TRUE,FALSE,FALSE,formating,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zulip/zulip,bdd1d8e4a416b844da31be58f54ad5ee4b109b23,"zmirror: Configure zmirror server to not use neskaya.
 
 Per request from Camilla Fox.
 
 (imported from commit e9754236cf886ec09ce57dc0f125d6a70f24e3f3)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,configure,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 projectcalico/felix,ede05ecbe0ec83176f5757040e998c75c9b4f3ab,"Merge pull request #59 from Metaswitch/issue36
 
-Remove unneeded dropping of DHCP packets.",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Remove unneeded dropping of DHCP packets.",TRUE,TRUE,FALSE,FALSE,remove unneeded,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 lessthanoptimal/BoofCV,a22fbec8d8126fdbc96903154a83cecb8c2ed2be,"- Made it easier to render the fiducial's number
 - Updated square fiducial examples for new images
 - Applications
