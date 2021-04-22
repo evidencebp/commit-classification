@@ -1,4 +1,4 @@
-repo_name,commit,message,Is_Refactor,Is_Perfective,Is_Adaptive,Is_Corrective,Justification,Comment,Certain,Sampling,Is_English,Is_Abstraction,Is_Performance,Is_Positve_Sentiment,Is_Negative_Sentiment,Is_Security,Is_Swearing
+repo_name,commit,message,Is_Refactor,Is_Perfective,Is_Adaptive,Is_Corrective,Justification,Comment,Certain,Sampling,Is_English,Is_Abstraction,Is_Performance,Is_Positive_Sentiment,Is_Negative_Sentiment,Is_Security,Is_Swearing
 pymor/dune-gdt,b0c1b7037681ded5b3409fdbb9f18902684e92d9,"[pylicense] add .tpl to config bump copyright year
 ",FALSE,TRUE,TRUE,FALSE,"add, bump copyright",,,random_batch_18_nov_2020,,,,,,,
 wso2/carbon-analytics,ddcea4897ac24c0f71469cc5ed4846dcfe23585f,"Added missing iterator
@@ -2280,56 +2280,56 @@ lessthanoptimal/BoofCV,a22fbec8d8126fdbc96903154a83cecb8c2ed2be,"- Made it easie
 - Applications
   * Fully featured command-line application for making square image fiducials
   * gradle task for creating a jar
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"""made it easier"" might have some meanings",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 raoulvdberge/refinedstorage,7e3781a5235efac778a893167ff629b3206614ad,"Better NBT compare check
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,better check,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 MarlinFirmware/Marlin,eb08aeab7d7b46686ab8d1a92e1d5f13c6a6c915,"Update Italian language (#14782)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,TRUE,FALSE,updated italian in code,,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bh107/bohrium,7f2196a19cc85b9c566a6e552ef436e851bbaa10,"cpu: Added compile source from disk in addition to source from stdin.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/gthumb,d9a97b9cd0980430e4cf1f89cad1ae03008e03c7,"removed useless and potentially dangerous strncpy
 
 [bug #672866]
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,removed useless,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 llvm-mirror/compiler-rt,d6567c5166412f6acdde851e767c26f332d51d3d,"[asan] flatten the asan-rt build slightly
 
 git-svn-id: c199f293c43da69278bea8e88f92242bf3aa95f7@145631 91177308-0d34-0410-b5e6-96231b3b80d8
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,not sure if refactor or adaptive,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ENCODE-DCC/encoded,f3c24216ad6bffbcf85cc94ec9b1f70e4e750048,"Fixed tets data.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,"given that the data is needed for the fix, it should be a fix",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hail-is/hail,d42b0f372eb97a488f44477fc9c6471049a91224,"Added local matrix method to LD Matrix (#1875)
 
 * Added local matrix method to LD Matrix
 
 * Addressed comments
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kaliber5/ember-bootstrap,62600fc7473ccc5917a2e08a53d37c2bb1ddd6fb,"fix(FormElement): input elements also trigger on change event as well as on input event
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moodle/moodle,8449364cfa1fe4c9f4a59ee6f169fc3e5092a2e4,"redirect MDL-20546 Set page type to embedded to avoid ever printing header/blocks/footer on redirects
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,to avoid,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pantsbuild/pants,4445df1df44cbf6857896fc2b5deac290fc71804,"serverset: Add ability to retry a function (#6953)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jollaman999/openwrt,31881357af992c59255faa1fef184f4b05a39fa4,"ar71xx: create profile and build image for the OpenMesh MR600 board
 
 Signed-off-by: Marek Lindner <lindner_marek@yahoo.de>
 Signed-off-by: Gabor Juhos <juhosg@openwrt.org>
 
 SVN-Revision: 34237
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,create,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tensorflow/tensorflow,66f5d8da8b68ab358599581a1adca6b71cf7fc7c,"String_print_f build
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,,"file rename, by code",no syntactic evidence,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mozilla/normandy,1e85d4ce6e681b5aa99da6b86458e2a10ed7ba8d,"Fix #544: Correctly send parameters passed to NormandyApi.
 
 Updates NormandyApi.jsm to send request parameters correctly as query
 string arguments for GET requests and as JSON-encoded data in the
 request body for POST requests.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-dcos/dcos-ui,9ec7a5afd18d0a292936143ab643b73a1db07bcf,Use methos to bind automatism,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+dcos/dcos-ui,9ec7a5afd18d0a292936143ab643b73a1db07bcf,Use methos to bind automatism,FALSE,FALSE,TRUE,FALSE,"use, bind",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ionic-team/ionic-site,04385e3cac75b1d264989723fed4f22f9e5efa5b,"Merge pull request #298 from wbowlin/patch-1
 
-Update index.md",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Update index.md",FALSE,TRUE,FALSE,FALSE,index.md,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 aspnet/AspNetCore,821ad85e41d2dfd18a87e9dc4e66016c5e93c1b4,"Fixup MSBuild conversion (#721)
 
 * Replace makefile.shade with repo.targets
@@ -2337,15 +2337,15 @@ aspnet/AspNetCore,821ad85e41d2dfd18a87e9dc4e66016c5e93c1b4,"Fixup MSBuild conver
 * Remove web site projects as these are not yet supported by MSBuild for .NET Core
 
 cref https://github.com/Microsoft/msbuild/issues/1767
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MuMech/MechJeb2,f8a9182e78389f32ff7cadae6eebd39859d98e2c,"Log the version
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,log,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 qtproject/qt-creator,06abd3b59dd0076916c4adb4b237fdf96ce433dc,"Renaming Qml wizards
 
 Unify names to QmlProjectApplicationWizard & QmlProjectImportWizard
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"rename, unify",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pojome/elementor,ff3980a7d099b27f7cce5a11bcd8187ad3d4f773,"Compiled files
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,compiled,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OCA/stock-logistics-workflow,c2d314808e420288504c585575dc4cf5faf58c05,"OCA Transbot updated translations from Transifex
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 onedata/onepanel,d122e0b8bd8fb8a7bd1cd0ca1e121bb2840ddd11,"VFS-496: add 'abort' event
