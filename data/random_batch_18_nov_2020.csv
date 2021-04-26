@@ -2347,39 +2347,39 @@ Unify names to QmlProjectApplicationWizard & QmlProjectImportWizard
 pojome/elementor,ff3980a7d099b27f7cce5a11bcd8187ad3d4f773,"Compiled files
 ",FALSE,FALSE,TRUE,FALSE,compiled,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OCA/stock-logistics-workflow,c2d314808e420288504c585575dc4cf5faf58c05,"OCA Transbot updated translations from Transifex
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translations,"commit not found in github now, project is alive",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 onedata/onepanel,d122e0b8bd8fb8a7bd1cd0ca1e121bb2840ddd11,"VFS-496: add 'abort' event
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-mozilla/pdf.js,5f599946860967970affa078ac310ca85765c00d,Updated MD5,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+mozilla/pdf.js,5f599946860967970affa078ac310ca85765c00d,Updated MD5,FALSE,FALSE,TRUE,FALSE,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CruGlobal/android-gto-support,8d7731cd515b228f329c060e159341e1464350b6,"added an Override annotation
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 KDE/tellico,28c6fd345b973349e28543e14c2ca5b42978baa3,"Make sure to save edits to modified filters.
 
 BUG:268829
 
 svn path=/trunk/extragear/office/tellico/; revision=1225330
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,make sure,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/librsvg,695e30d44e7456f0542d4489e87a2c01664fb283,"Remove unneeded type parameter E on AttributeResultExt
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,remove unneeded,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moby/moby,76aefc18f988d1c21382e3be88edcb6c99a91ea7,"Merge pull request #21691 from tonistiigi/fix-gccgo-make
 
-Fix building gccgo from makefile",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Fix building gccgo from makefile",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 WoltLab/WCF,491c8d2ae6c6a2f4a906b280deb7ee437cc7f0da,"Fix issues with `ShowOrderFormField`
 
 See #2509
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/llvm-propeller,43e17ad1d0bf1018d0f0e40e7472ff8e3f390637,"Remove unneeded typedef and volatile
 
 llvm-svn: 169743
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,remove unneeded,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 programmfabrik/easydb-documentation,d827b8ef6e7029c9f0421ec98ec666bf731929c8,"fix typo, see #49590
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,,FALSE,typo,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 SixTrack/SixTrackLib,1e3899fbe40ad64f0ea6fd35e2042897370c4e2b,"Merge remote-tracking branch 'origin/v01_release' into v01_release
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 adblockplus/adblockpluschrome,06f35b1a7b5ab80a0b03dbcaa652d7a833a9fa19,"[i18n:it] Add 'Block Element"" i18n
 
 committer: Tom Joseph <a9c0f5359180f675a19eaf18c5679c5d73ed7250@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Autodesk/hig,f0f2a23c98a6db12d4fdac49223de7ebee25f2da,"chore: remove legacy packages
 
 The following packages have been removed.
@@ -2387,20 +2387,20 @@ The following packages have been removed.
 * `hig-interface`
 * `hig-react`
 * `hig-vanilla`
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,remove legacy,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OpenRA/OpenRA,c366b7c7fca0a49c6b0620d89d2d8316a21a9057,"Fixes & Resources support
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixes. not sure what the support means,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alphagov/collections-publisher,0792506244296ba88eced3b71290910a3507b1ab,"377 Create pattern maker to allow human readable construction of regex
 
 And use it to start building a sub section JSON presenter
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,create,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ctripcorp/x-pipe,feea8f871b54d24d0b06e22d9eb6374ba0173038,"RestTemplateFactoryTest use inner test class
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,code removal,,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 dnnsoftware/Dnn.Platform,a4733fd430274da47bc2698343d97e7eede86bc6,"AP-36 - updated bungle
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-atom/atom,450b101ab6195c0b47c022daba6e0b5737cc9536,Update readme,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+atom/atom,450b101ab6195c0b47c022daba6e0b5737cc9536,Update readme,FALSE,TRUE,FALSE,FALSE,readme,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 nasa/Common-Metadata-Repository,7d35b93f40e84ab94f2a39bf7d02d7d5e35c020d,"CMR-375: Put in placeholder MENDS ISO granule in UMM.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,put,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jollaman999/openwrt,4ee78988899a3f545602cb49b17d81e14de55954,"base-files: fix unkillable processes after restart
 
 When restart is run on an init script, the script traps SIGTERM. This is
@@ -2415,36 +2415,36 @@ be unkillable unless you use SIGKILL. This fixes that by removing the
 trap before running start.
 
 Signed-off-by: Linus Kardell <40840f60975de4010e490a8c0f97c3082d32e60c@telliq.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-FStarLang/FStar,6deaca05c0c64947e33c95d5982e134ab01c947a,minor fix,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+FStarLang/FStar,6deaca05c0c64947e33c95d5982e134ab01c947a,minor fix,FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 diofant/diofant,f98254be83a5545a3e6ca8b763307ae75fba1aa9,"Merge pull request #571 from gilbertgede/large_printing
 
-Added option to printers for large expressions",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Added option to printers for large expressions",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wordpress-mobile/WordPress-FluxC-Android,2c16ed1385d04c250779dbe06bdd56a8d1486241,"Fix tests
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 plotly/plotly.py,25c8d85a40e03575ea053de555d407934561cae3,"update 'specs' docstring
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,docstring,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 iiet/iiet-git,431506bfd0c4b514d3b0aacc28e7a70d69679d50,"Changeling
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,updated the change log,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vector-im/riot-android,cf531444e26422cde200bb1d3ef5794b3fcd4193,"Translated using Weblate (Russian)
 
 Currently translated at 100.0% (574 of 574 strings)
 
 Translation: Riot Android/Riot Android
 Translate-URL: https://translate.riot.im/projects/riot-android/riot-android/ru/
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 libMesh/libmesh,155fe5f1579c02d2d496d060d2489eda765ea677,"Removed debugging error() call
 
 
 git-svn-id: e88a1e38e13faf406e05cc89eca8dd613216f6c4@1827 434f946d-2f3d-0410-ba4c-cb9f52fb0dbf
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 colin-combe/CLMS-UI,38a1e2bdd6033c118560e6452a6f9ece7d56a6f6,"Faster brushing in matrix view.
 Bug fix in scatterplot view.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,TRUE,"faster, bug",,,random_batch_18_nov_2020,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
 conda-forge/staged-recipes,eb2251f050230bddf5a62fe4db122fb23b9484df,"Update metadata. Reset build number.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"updated, meta data",by code. Note sure is should be considered perfictive. meta data seems operational and not documentation,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 yinxin630/fiora,c00679d6b316d00b2953b3b7de0926e98aadb485,"feat: Support for modifying the username
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,feat:,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 dan-cristian/haiot,795d811edc36219d9d7b59d9590108ebe7f6652e,"sonoff
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 embree/embree,7c5c12b5d1151c1a6ab4970bae4442fce545a0dd,"Merge branch 'devel' of https://gitlab.com/embree/embree into devel
