@@ -2446,11 +2446,11 @@ conda-forge/staged-recipes,eb2251f050230bddf5a62fe4db122fb23b9484df,"Update meta
 yinxin630/fiora,c00679d6b316d00b2953b3b7de0926e98aadb485,"feat: Support for modifying the username
 ",FALSE,FALSE,TRUE,FALSE,feat:,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 dan-cristian/haiot,795d811edc36219d9d7b59d9590108ebe7f6652e,"sonoff
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,commit not found,no syntactic evidence,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 embree/embree,7c5c12b5d1151c1a6ab4970bae4442fce545a0dd,"Merge branch 'devel' of https://gitlab.com/embree/embree into devel
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tidyverse/ggplot2,0c7e66419a9de9cef030de89a52c9529e9b07375,"Improve position_stack
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,improve should be refactor yet the code shows that only comments were modified,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 facebook/relay,980de6de8a5bb282905e11e4c93feca87eb2e148,"Call onComplete from mutations inside next() handler.
 
 Reviewed By: dwwoelfel
@@ -2458,7 +2458,7 @@ Reviewed By: dwwoelfel
 Differential Revision: D5748574
 
 fbshipit-source-id: 4e05552411d76aab5ba9791d6b78e952c75e4be4
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,a great example to a message saying what but not why,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/oss-fuzz,0584ab45df8918df22c878dd9e9ebb98bda57316,"qubes-os: add fuzzers, update contact emails (#3554)
 
 Qrexec [1] is a secure communication channel between virtual
@@ -2466,13 +2466,13 @@ machines in Qubes OS. We have fuzzers for some parts of its message
 parsing code [2].
 
 [1] https://www.qubes-os.org/doc/qrexec/
-[2] https://github.com/QubesOS/qubes-core-qrexec/tree/master/fuzz",,,,,,,,random_batch_18_nov_2020,,,,,,,
+[2] https://github.com/QubesOS/qubes-core-qrexec/tree/master/fuzz",FALSE,FALSE,TRUE,FALSE,add. update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Symplify/Symplify,0edadcad22e695e29ec194eb519cd7f0eee3f077,"fix cs
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Kronuz/Xapiand,4e59b83b70963d8f145bf5a0a0d73db7ddfc077e,"Added DISCOVERY_DB_UPDATED so databases can notify other nodes about changes
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Azure/azure-resource-manager-schemas,0f3562a398d9a6fa792debf7f29c21892d1fdcf3,"Added schema for eventhub 2018-01-01-preview
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,105f2b7096075eacb6d2c83a6e00b652c2951063,"eventfd: fold eventfd_ctx_get() into eventfd_ctx_fileget()
 
 eventfd_ctx_get() is not used outside of eventfd.c, so unexport it and
@@ -2483,22 +2483,22 @@ was never used.)
 
 Signed-off-by: Eric Biggers <6f6115196800bbe9712b3f04c7e40093bb382fc5@google.com>
 Signed-off-by: Al Viro <de609eb4d5d70b1d38ec6642adbfc33a2781f63c@zeniv.linux.org.uk>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"fold, unexport",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 qgis/QGIS,ffa87a2d88779f625a69ada6b237b2aad9ca511a,"[sextante] reintroduced Model->Python conversion
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,reintroduce,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ember-cli/ember-cli,2784e4bac5292de785a97a97a90151b134c9bf4c,"ESLint: Enable ""brace-style"" rule
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,enable,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cBioPortal/cbioportal,a1e012d66640aa225167ed5e926048336569bdb0,"Merge pull request #5463 from alisman/noindex
 
-Disable bot indexing when sitemaps are not configured on",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Disable bot indexing when sitemaps are not configured on",FALSE,FALSE,TRUE,FALSE,disable,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 steinbaugh/basejump,6eebf3d73240d785374fa5c79f685c8d5441ccd7,"Update config
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 unioslo/cerebrum,741d59b772ea53497a065b2eeccb608ccd1fb227,"Where did this typo come from?
 
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,typo,"not a positive sentiment yet amuzed. This is amplified since the code changes the called function, not exactly a typo",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 firebirdberlin/nightdream,fed4f1c5712868e309a67cb066b2265f39c8db24,"Add an analog clock layout.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 IETS3/iets3.opensource,610bde25dfe52e3ee363f57b184d58a39522a56e,"expr.temporal: make use of temporal context
 
 IHaveOptionalPartsInTemporalContext can be used to maked children of a
@@ -2506,7 +2506,7 @@ concept as required if there is no temporal context proviced by an
 ancestor. A node factory will take care of creating these chlilden in
 contexts where they are required so the user guided to enter them and
 is not confronted with a typesystem error instantly.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,user not conforted with a error,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 coq/coq,f5188e6e5b1152b3084db37f6ab1c5cba694242c,"Remove pcoq from check prerequisites
 
 It is already built by world, and this way, ""make -j3 check"" from
@@ -2514,28 +2514,28 @@ clean sources work.
 
 
 git-svn-id: 44dc50bdcc0f5d1a212c497508dc9452e0b35e2b@11283 85f007b7-540e-0410-9357-904b9bb8a0f7
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,this way x work,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zeit/now-cli,7bd40f0aae063491c64b059a93c7c0c0c669e9d9,"[now-init] Check for dir existence prior to download (#2379)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,check,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 FarGroup/FarManager,d2d8e974d95aeda97cbeed942b6d548e9805b8e5,"bug in 161
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,bug,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 radare/radare2,869525c221122e7635dd3c582101981880b331f2,"Consolidated RAnalMetaItem serialization into meta_serialize() (#8726)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,consalidated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ccxt/ccxt,97b0fe7264a81ea5cd48f9ebc68de832f80d3115,"binance jersey added close #4838
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wikimedia/mediawiki-extensions-FlaggedRevs,5b1a633b1271916849b5358e4e8e51a650a3161f,"Add quick version info
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 coq/coq,f2a4ad8b7ca2407d3dd2b6f38b70f635bd6ad0ed,"Putting implicit arguments of Clenv.res_pf right.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,right,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Fedict/eid-mw,6232ea64cf88cbbea9490340c00ba683fab82bd9,"[minidriver] Custom strings for PIN dialog boxes 
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,custome strings,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 aspnet/AspNetCore,eb182fdafdd7b1e63a07cd67b4872f30abacdae8,"Fixed dependencies
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 metasfresh/metasfresh-webui-frontend,0a33beda4f83afb3f6fea25bea9a719eccdb241f,"fix: override viewEditorRenderMode on row level #1360
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,9eab46b7cb8d0b0dcf014bf7b25e0e72b9e4d929,"e1000: fix data race between tx_ring->next_to_clean
 
 e1000_clean_tx_irq cleans buffers and sets tx_ring->next_to_clean,
@@ -2552,14 +2552,14 @@ The data race was found with KernelThreadSanitizer (KTSAN).
 Signed-off-by: Dmitry Vyukov <05e8181be3150e47da8fe2e1f18d381c75496ff4@google.com>
 Tested-by: Aaron Brown <4723df1d9a4136f7b76e1bf6434e33afc91d2139@intel.com>
 Signed-off-by: Jeff Kirsher <87e35f5be20bb3e67f4ba6b86f5f6be3085b1b3a@intel.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zig-lang/zig,ceec2393cfbe20b0993bd7cccb43e930438281fe,"Merge pull request #2965 from Sahnvour/zig-stack-traces
 
-Stage1 stack traces on windows",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Stage1 stack traces on windows",FALSE,FALSE,TRUE,FALSE,trace,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 orientechnologies/orientdb,f98c905cea88fce3e59695ef39d76868d66f1652,"Iterate entries major npe tracking
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,not sure. code prints counter of nulls,,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rhinstaller/anaconda,80bce5875c73a0bea2c53e2145876888adc84d4a,"Update Persian translation based on Sharif Linux translation of anaconda
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translation,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,ed92d8c137b7794c2c2aa14479298b9885967607,"NFSv4: fix getacl ERANGE for some ACL buffer sizes
 
 We're not taking into account that the space needed for the (variable
@@ -2572,45 +2572,45 @@ Signed-off-by: Weston Andros Adamson <2782014720c8dba08f7eb23e9f1d190c445c0c94@p
 Cc: 4fbacc2fa0ffdbb11bf1ad6925b886ebd08dd15f@vger.kernel.org
 Signed-off-by: J. Bruce Fields <51738506c1b2ccb0761f23bdc612c93babf738ea@redhat.com>
 Signed-off-by: Anna Schumaker <5381043123508d4eed62c465c7c46f2f193a2767@Netapp.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/kylin,7cdd98fe23f1782c5cdf8dc73be0620dae410325,"KYLIN-608 support HLL at ii storage
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,support,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mobxjs/mobx,71f702f631645dce3acfbf470abe974fbea271e4,"Fixed unnecessary warning when reading map entries
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,fix warning,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 yiisoft/yii2,a0ad7b4db2a78bfa4a79c89b2646b623c2e728cb,"Fixed language in changelog
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,changelog,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 llvm-mirror/llvm,86c817e9d446aa7bf6e91170be22249884fefd0d,"test: Check the feature 'loadable_module' with load modules in %llvmshlibdir.
 
 %llvmshlibdir should be 'bin' on Cygming.
 
 git-svn-id: 0ff597fd157e6f4fc38580e8d64ab130330d2411@120282 91177308-0d34-0410-b5e6-96231b3b80d8
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,check,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 3dct/open_iA,de911751c2b5f4fc8318035a62d69cb2f4409872,"FiberOptimizationExplorer: Extract selection handler to separate file
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,extract to file,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 servo/servo,bec1c396dee38ccdb8454769d1fdd8918061384c,"Update mime to 0.3.13
 
 https://github.com/hyperium/mime/pull/103
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-community,86eaaf22bfa1d6e4f46de11445b6682ba9ea7c41,"IDEA-160988 Add inspection to merge adjacent Stream API calls
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GitSquared/edex-ui,d0515095bacfb6e668fe775b2decdf6906f8f306,"Semi-transparent sections background
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 LiskHQ/lisk,97351252e15f896420ff5734295dcc2afa99eefe,":white_check_mark: Tidy cypress tests
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,tidy,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 TGAC/miso-lims,1e0a95543f5456eb0ced666e26618880cf57d53f,"GLT-2603: Attach multiple files at once
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,attach,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 orchestral/lumen,ff9219d7fe70a059813fb8f8d50eadb1aed2a91b,"Fixes contract.
 
 Signed-off-by: Mior Muhammad Zaki <e1a543840a942eb68427510a8a483282a7bfeddf@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 icuseven/MMRDS,a1c2927316bb8dab1a8572609689a10c8f2fea87,"MMRDS-584 MMRDS-585 tweaks to export-queue.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,tweaks,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 borisyankov/DefinitelyTyped,6eea5834fa91716914c604464c4fd4d2ba032ac8,"add tests
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mozilla/normandy,0d91f0ed30c9cec680802cdd92b9d656190c7705,"Code review
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,might fixed a bug too,by code no syntactic evidence,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 LitusProject/Litus,4fbaadc3212eeeb1c9e0e181a7509568d03f6c4a,"Merge branch 'master' into studentit-master
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,bd3769bfedb2b65af61744e9b40b1863e0870e2b,"netfilter: Fix slab corruption.
 
 Use the correct pattern for singly linked list insertion and
@@ -2624,35 +2624,35 @@ Signed-off-by: David S. Miller <davem@davemloft.net>
 
 net/netfilter/core.c | 108 ++++++++++++++++-----------------------------------
  1 file changed, 33 insertions(+), 75 deletions(-)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 HubSpot/Singularity,22906eb900c9731dd57d2524852408298b652f5b,"Bind the UserManager class
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,bind,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 realityforge/replicant,053e73860870070196215d09770b9ef9f56633b1,"Initial DataLoaderInvalidDisconnectEvent spy event
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,initial,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 scoophealth/oscar,7549bcc318c3142593c9113439e74e49f3aae223,"Reverted to 1.4
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,reverted,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gem/oq-engine,2d5da4afd22b760f78307b44792e35d2c90dc59a,"Merged in changes from a parent branch, resolved conflicts.
 
 
 Former-commit-id: 5baf239692f7bc0e1abbfa222af9c3b16ae68086 [formerly 6a5148e30ed8871a7e3a61a55026f24e0eb56062]
-Former-commit-id: 53187d91cdb5bdff70873b0924e6915e3e533e5d",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Former-commit-id: 53187d91cdb5bdff70873b0924e6915e3e533e5d",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/vala,b715fca08b42a02337ee1f4e5eae4f9f0789eb30,"glib-2.0: add HashTable.take and length
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stinsonga/emacs-mirror,577bf5d26e8835144005a0505e2ecc611369f92f,"(compilation-start): Move let-binding of
 `process-environment' into `with-current-buffer' body.
 Reported by Matt Hodges <MPHodges@member.fsf.org>.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,move x into y,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 symfony/symfony,63e26fcba6b9bf25e8ecf4561e02173d112bb5a5,"[DI] Remove deprecated case insensitive service ids
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,remove deprecated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ampproject/amphtml,5de828c43ead56ff3881769c1bdbb761f46af9f4,"Revert ""🏗 Wait an extra minute for sauce connect (#20560)"" (#20715)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,revert,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moodle/moodle,2e6b9f5c9bdaceea578511a645a0d12f5b3a72b4,"MDL-48631 mod_lesson: tables 'grade' item have incorrect precision
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,incorrect,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 nedbat/coveragepy,2c60d618ccc611e0a901fd5825a4b5f8f8cc9042,"Better branch-missed messages for lambdas.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,improve the messages presented to the user,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 qtproject/qt-creator,92c3939088f3002e4a92c0215bb5b0453256a9e4,"debugger: remove ambiguous shortcut
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,eedcfef85b15ae02c488625556702594a618c616,"virtchnl: convert to new macros
 
 As part of the conversion, change the arguments
@@ -2661,32 +2661,32 @@ to VF_IS_V1[01] macros and move them to virtchnl.h
 Signed-off-by: Jesse Brandeburg <e6047e445db6578741afb14ef640164ef6b65e4f@intel.com>
 Tested-by: Andrew Bowers <bda1442b63f5d3779efd9a7804382f1971792f1d@intel.com>
 Signed-off-by: Jeff Kirsher <87e35f5be20bb3e67f4ba6b86f5f6be3085b1b3a@intel.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,convert to new macros,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 nhsconnect/gpconnect,2b6290c48a6f28ec290ea0b16ad07467983817a1,"Straw man for search for free slots restful version. #266
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,modified md file,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openSUSE/libstorage-ng,a2e42f26e5a4e7c96b15df51aa425554d1813f9a,"- handle multiple devices for btrfs subvolumes
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,handle,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stewid/siminf,effef7f736a9f99c6f43f37a52cf36ae6806dd39,"Add the global data vector 'gdata' to the siminf solver C code
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MarimerLLC/csla,265691a555e96697b03a94ad315859cdbb5ef50d,"Sync
 bugid: 300
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,change variable type,"by code, no syntactic evidence",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 phac-nml/irida,e98e83559c12765035a653f077e33c1e33ad31f3,"removing library description
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"LibraryDescription is a componenet, so it is not perfective",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gajim/gajim,7339a1a67c149f8aa818e6b084b18280f108ea8b,"fix set_geometry() usage
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wikimedia/mediawiki-extensions-CentralNotice,26f0ec7e6ff146924631e64d59a90538b011cefa,"Localisation updates from https://translatewiki.net.
 
 Change-Id: Iab5fb4a166fb100464b5c10ce176fc4adf34b9c3
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,"localization, translate",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 homeworkprod/byceps,3fa4202a563273033c73afeb65d5fec2dbb38826,"Raise an exception (and catch it) on authentication failure instead of returning nothing.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 DTMilodowski/LiDAR_canopy,17c762ab68ded9b307e645e9d666a7bf851f9559,"tidying up plotting script
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,tidying up,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gem/oq-engine,0253a9bcd16c762ca632552dd3fc86718351920a,"Added an assert_valid function to nrmllib
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-haikuports/haikuports,11e884bf1cca14a85dcc6886f2aee76adfbc877c,binutils: Update to fix #1780.,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+haikuports/haikuports,11e884bf1cca14a85dcc6886f2aee76adfbc877c,binutils: Update to fix #1780.,FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 camptocamp/ngeo,6eed458fba884ad3d2954b2cdbcededb11071119,"Hide hover line on no data
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 GNOME/gtksourceview,9cb4046279a5f091ab3fdfdfaa83cc438eed42a9,"Translation updated by Ivar Smolin.
