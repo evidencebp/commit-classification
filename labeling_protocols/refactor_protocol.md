@@ -14,6 +14,7 @@ Specific cases
     <ol>
         1. Clean up is perfective and refactor.
         1. Moving code to a different file is perfective and refactor.
+        1. Moving a file is perfective and refactor.
         1. Optimization/Performance improvement is perfective. If the same algorithm is kept, it is also a refactor.
         1. Unification  is perfective and refactor.
         1. Re implementation is perfective and refactor
