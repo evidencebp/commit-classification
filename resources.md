@@ -110,3 +110,5 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 [Bug or not bug? That is the question](https://arxiv.org/pdf/2103.12218.pdf)
 
 [Exploring the communication functions of comments during bug fixing in Open Source Software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584921000665)
+
+[Classifying Code Commits with Convolutional Neural Networks](https://people.cs.vt.edu/nm8247/publications/ijcnn-cr-2021.pdf) [repo](https://figshare.com/s/2c04d6bde90e761b11a3)
