@@ -39,6 +39,13 @@ To consider
 I forgot, forever, infinite loop
 
 Should conventional commits overide all - fix(postcss): filter conflicting order warnings
+
+Fix changes merge for 3450
+Fix spelling
+Fix concurrency issues with CQL keyspace creation
+Make sure DeletedColumn.isMFD always return true
+Always use RANGE_SLICE verb for 3.x messages
+NullPointerException during compaction on table with static columns
 """
 core_bug_terms = [
              'bug(s|z)?',
@@ -94,6 +101,7 @@ bug_terms = ['actual.*expected',
              #'must not',
              'npe(?:s)?'
              'null pointer(?:s)?',
+             'nullpointerexception',
              'off(?:-| )by(?:-| )(one|1)',
              'out of bound(?:s)?',
              'over(?:-| )?run(?:s)?',
@@ -136,6 +144,7 @@ valid_fix_object = prefective_entities + ['#',
                     'help',
                     'remark(s)?',
                     'space(s)?',
+                    'spelling',
                     'style|styling',
                     'typo(s)?',
                     'typing(?: |-)?(error|mistake)(s)?',
@@ -162,6 +171,7 @@ valid_terms = [
     '^### Bug Fix', # tends to be a title, later stating if the commit is a bug fix
     'edit the jira link to the correct issue', # Another occurring title
     'page(?:s)? break(?:s)?',
+    'fix changes merge',
 
 
 ] + code_review_fixes
