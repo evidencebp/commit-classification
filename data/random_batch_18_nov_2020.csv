@@ -2688,20 +2688,20 @@ gem/oq-engine,0253a9bcd16c762ca632552dd3fc86718351920a,"Added an assert_valid fu
 ",FALSE,FALSE,TRUE,FALSE,Added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 haikuports/haikuports,11e884bf1cca14a85dcc6886f2aee76adfbc877c,binutils: Update to fix #1780.,FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 camptocamp/ngeo,6eed458fba884ad3d2954b2cdbcededb11071119,"Hide hover line on no data
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,hide,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/gtksourceview,9cb4046279a5f091ab3fdfdfaa83cc438eed42a9,"Translation updated by Ivar Smolin.
 
 2005-08-11  Priit Laes  <plaes@cvs.gnome.org>
 
 	* et.po: Translation updated by Ivar Smolin.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translation,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mongodb/mongo-ruby-driver,5608378532517e14965794a2bcb1117b473b07c2,"Remove batachable module
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hashrocket/tilex,4d0350f5080ca8ce56ac4aab0a0f76dcb84a9de9,"🚚  Move prismjs to vendor folder
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,move to folder,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 PaddlePaddle/Paddle,7b28d938bfadd2879a65c2a3eff16741a4094a5c,"show shape diff in wrong trt input shape errmsg, test=develop (#21451)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,show (worng is the context and the errormsg is showed),by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,b16be51b5e5d75cec71b18ebc75f15a4734c62ad,"[DCCP]: Fix for follows48
 
 The follows48 relation identifies whether 48-bit sequence number
@@ -2718,31 +2718,31 @@ Signed-off-by: Gerrit Renker <3b97070d46ccd66422a8e7b83e6967ed84780538@erg.abdn.
 Acked-by: Ian McDonald <2a05ad6b77741e349ccfbdf734f819b9b1d576cb@jandi.co.nz>
 Signed-off-by: Arnaldo Carvalho de Melo <293abb6b76d7791c0732cc517d38c4b5c734b87f@redhat.com>
 Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"fix, reuse",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ligo-cbc/pycbc,84a2f9c851b7b8b723d5c7682f5b6c8dcfaa3986,"changed name of high pass filter class
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,changed name,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 samba-team/samba,1787efaa006b73cd682f6c27f2b5d367495e7e02,"use ETYPE_DES3_CBC_SHA1 for the verify step in verify_mic_des3
 
 This allows a strict link between checksum types and key types to be
 enforced.
 
 Andrew Bartlett
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,use,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 molpopgen/fwdpy11,800c436ed2630ae606304f197c5b384841947fba,"Add C++ tests of fwdpy11 functions to expose non-owning numpy arrays
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 koala-framework/koala-framework,1c8306bc386c5ee25ba70c4605db6a98ad0922f6,"go-online mit subSections.
 Ungetestet.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 FreeCodeCamp/FreeCodeCamp,dc363963690f220f813444e570d2aa119cc82687,"Add view logic for all projects
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gem/oq-engine,408c5d9e79ae9abac360581b4fb205bf575cd54b,"Storing again the number of samples
 
 
-Former-commit-id: e2806bb1e57163424af12c64b4051a3411ff3c8f",,,,,,,,random_batch_18_nov_2020,,,,,,,
-axelor/axelor-business-suite,4e6b73949622ede71a1ff3b71e817c965bdd760d,"Refactoring (noLabel=""true"" -> showTitle=""false"")",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Former-commit-id: e2806bb1e57163424af12c64b4051a3411ff3c8f",FALSE,FALSE,FALSE,TRUE,again,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+axelor/axelor-business-suite,4e6b73949622ede71a1ff3b71e817c965bdd760d,"Refactoring (noLabel=""true"" -> showTitle=""false"")",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 capitalone/cloud-custodian,beaec2d814a07cec67b500a04a441bf17327b025,"cli --vars flag for variable substitution (#1040)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code. no syntactic evidence,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/closure-library,08dfd3679877d8915a5b69743844d317019ccb79,"Automated g4 rollback of changelist 58349390.
 
 *** Reason for rollback ***
@@ -2757,27 +2757,27 @@ Makes the close button reachable via tab in the ""manage revisions"" overlay
 -------------
 Created by MOE: http://code.google.com/p/moe-java
 MOE_MIGRATED_REVID=58351699
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,automated rollback,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 chainer/chainercv,2b13be8e0b13e0183307b1445cccbd1d22ded59d,"fix docs
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,docs,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vroyer/elassandra,7ba5bceebe40779961c1c56700bac01b1b0538fb,"Add a MultiTermAwareComponent marker interface to analysis factories. #19028
 
 This is the same as what Lucene does for its analysis factories, and we hawe
 tests that make sure that the elasticsearch factories are in sync with
 Lucene's. This is a first step to move forward on #9978 and #18064.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"add, interface, factories",,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 Marri/glowfic,05dfdeedb4e037eb76fec8f1535599e3d9326504,"Standardize hex codes to long form
 hex-length
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,standartize hex code form,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 magit/magit,d48fd13d2703a4a6e0a7156cede6bc64c0daddf6,"Handle revs that don't have a name.
 
 * magit.el (magit-name-rev): Return original rev if name-rev returns
 ""undefined"".  Shouldn't happen, but does.  Bug in git?
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"""Shouldn't happen, but does"" - great definition ;-)",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wildfly/wildfly,bd41a99fc8042047bd6156317ba364ac4596029b,"Scan for expression formatted strings where ModelNode.getType()==STRING in the test framework
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,scan,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cytomine/Cytomine-core,00cae809af81d89985915036cc8046006b35808c,"Get annotation class name from the fetched annotation object
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,get,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 servo/servo,36f70f5ab183cacde6d68079d927dbaf63444f2a,"Auto merge of #24360 - servo:build-box-tree, r=SimonSapin
 
 Call BoxTreeRoot::construct from layout_thread_2020
@@ -2785,13 +2785,13 @@ Call BoxTreeRoot::construct from layout_thread_2020
 <!-- Reviewable:start -->
 This change is [<img src=""https://reviewable.io/review_button.svg"" height=""34"" align=""absmiddle"" alt=""Reviewable""/>](https://reviewable.io/reviews/servo/servo/24360)
 <!-- Reviewable:end -->
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MtnFranke/rpi-photo-frame,352d370010e7066b44bda081a11368a1c1288d23,"Revert to requirements.txt
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,revert,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OCA/l10n-spain,086bc4dd552b8e2285921fd928d6d4aa9a3cfd57,"[REF] Cambio de licencia de GPL3 a AGPL en los módulos donde sólo aparecía Pexego en la licencia, quedan los compartidos.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,"licence change, in Spanish",,,random_batch_18_nov_2020,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vuejs/jp.vuejs.org,19adc9e4837c134ed6b7b6f6322a0442d5c5ba4b,"fix perf in IE9
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 InnovateUKGitHub/innovation-funding-service,67df68908decfb35a22f7d39cf10115ee1436e02,"IFS-1563 Updates for review comments
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 stan-dev/math,ba793054af23a971a127e54be3beb8625977e435,"Merge branch 'develop' into cl_kernel_genertator_block
