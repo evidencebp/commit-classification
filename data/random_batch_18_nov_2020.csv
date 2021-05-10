@@ -2793,18 +2793,18 @@ OCA/l10n-spain,086bc4dd552b8e2285921fd928d6d4aa9a3cfd57,"[REF] Cambio de licenci
 vuejs/jp.vuejs.org,19adc9e4837c134ed6b7b6f6322a0442d5c5ba4b,"fix perf in IE9
 ",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 InnovateUKGitHub/innovation-funding-service,67df68908decfb35a22f7d39cf10115ee1436e02,"IFS-1563 Updates for review comments
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,updates,most of these comments are stylistic. Maybe should be treated differently. by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stan-dev/math,ba793054af23a971a127e54be3beb8625977e435,"Merge branch 'develop' into cl_kernel_genertator_block
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 uber/ludwig,d11c5b56a61784dade3d1ded11f8dd420d0e295d,"Removed deprecation warning from h5py
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,remove warning,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 igniterealtime/Openfire,801890333476e02cddb15bf8c1247573df619e21,"Modified login URL when not running in standalone mode.
 
 
 git-svn-id: 036f06d8526d2d198eab1b7c5596fd12295db076@1644 b35dd754-fafc-0310-a699-88a17e54d16e
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,modified,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 widelands/widelands,9c3fdfcd42345acc63b00b88f92e0f920ba1c747,"Reset game tooltip when opening an option window
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"adaptive description (rest is done in the game, not to the code)",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 QEF/q-e,605be0555dff998df3e1c791265daeb1000ecafc,"- default values for nr1b nr2b nr3b set equal to 3,
   this is required by the routine phfacs .
   now the code should not complain when this values
@@ -2814,9 +2814,9 @@ QEF/q-e,605be0555dff998df3e1c791265daeb1000ecafc,"- default values for nr1b nr2b
 
 
 git-svn-id: 5d23e60e07e2295b11e715623d9852ba2611792f@2429 c92efa57-630b-4861-b058-cf58834340f0
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,resaon not clear,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hmrc/fset-faststream,97ebce8de70febaf0347f5699eba37be82ac8fd6,"Merge remote-tracking branch 'origin/master' into fset-1696
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 XCSoar/XCSoar,9328e8453760f51724ea1f718f1fe168c55cc5be,"Driver/FLARM: remove bogus SetProgressPosition() calls
 
 The SetProgressRange(10) call was using a random value, and
@@ -2825,23 +2825,23 @@ is bogus information, because the ""progress"" bar will indicate that
 the operation is finished, only to start from the beginning.  It's an
 abuse of the progress bar to generate an animation that doesn't say
 anything useful.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"bogus, abuse",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 oliexdev/openScale,97e421072542f6d598561ac4a7abb7e596b0869a,"Merge pull request #298 from funkwit/master
 
-Ignore 17th byte of the message in the Excelvan scales; some variants…",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Ignore 17th byte of the message in the Excelvan scales; some variants…",FALSE,FALSE,TRUE,FALSE,reason to ignore not clear,,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bh107/bohrium,4d8d030d949f8877b86fa8b35e72815130371b8a,"cmake: Perhaps the order is wrong?
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,perhaps wrong,perhaps...,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moby/moby,ec885d91806595add47c793e1e6bb8a4b9e8d100,"hack: only run certain tests with TESTFLAGS='-run TestName' make.sh
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,run,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 blagodarin/yttrium,e20e1c1d02d38467ed62c3064c365ed3c731ae87,"Clean up build output
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,clean up,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 projectchrono/chrono,32631f90887dab96157d39d7121351c8df56d11a,"Complete initialize function, fix some indexing issues
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,TRUE,"complete, fix",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gnustep/base,b47a01ec21a2b67541ae272d62def84735dafdab,"Misc bugfixes
 
 
 git-svn-id: 44db261f917212c93f4ad79cd10271304a04d572@3184 72102866-910b-0410-8b05-ffd578937521
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,bugfixes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 robinrodricks/FluentFTP,9f5f93e635ff45582663f0cd13498931bf770331,"Changed FtpFileSystemObjectList to implement IEenumerable and changed
 all places were list was enumerated to use .ToArray() method of the
 object list. FtpDirectory File and Directory lists no longer return
@@ -2858,11 +2858,11 @@ All custom exception types inherit from FtpException.
 
 --HG--
 extra : convert_revision : svn%3A7523448a-a8a0-4aac-83b0-0615d70583c7%408589
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,flase,"checnged, added, please",,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
 libretro/RetroArch,adb2942e5c01cbb8631303012f6f527863425aa7,"Fix CXX_BUILD
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 sklintyg/webcert,a07362cb0e5b0b9d7c29d3ef239428b6a50705b6,"Korrigerat användning av @Transactional- annotering.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,corrected use (in Swedish),,,random_batch_18_nov_2020,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 facebook/infer,1b20f02052d347f44198b0b2e3aec94cf5720f59,"[sledge] Strengthen normalization of division, avoiding non-reals
 
 Summary:
@@ -2882,21 +2882,21 @@ Reviewed By: jvillard
 Differential Revision: D20663964
 
 fbshipit-source-id: 210962fe0
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,,,,,,,
 metamath/set.mm,47f789abff376f6a268ce4620815401eca5aca33,"remove blank lines
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,remove blank lines,,,random_batch_18_nov_2020,,,,,,,
 gormanm/mmtests,b2593f3e2ada7c4ee4b636d3f3a49f7078980837,"paralleldd: Do not output redundant time information
 
 Signed-off-by: Mel Gorman <39ea6a09710987173e32e37c86918024a0f441c1@techsingularity.net>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,do not...redundant,by code,,random_batch_18_nov_2020,,,,,,,
 pojome/elementor,385f50c840065e3c689bd62f08403ad3af5de41c,"Bump to 2.7.0
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-openstack-infra/project-config,54b45f20fa5acc21ea254544bc95ff80925b84a6,"Merge ""Make python3 jobs voting for murano-dashboard""",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,bump to x,by code,,random_batch_18_nov_2020,,,,,,,
+openstack-infra/project-config,54b45f20fa5acc21ea254544bc95ff80925b84a6,"Merge ""Make python3 jobs voting for murano-dashboard""",FALSE,FALSE,TRUE,FALSE,make,,,random_batch_18_nov_2020,,,,,,,
 terraform-providers/terraform-provider-aws,81bc63f8a82b652f377761f3ad32d105633621aa,"use %q instead of ""%s""
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,use instead,by code,,random_batch_18_nov_2020,,,,,,,
 androguard/androguard,708887ef5e3b3eb6ad3b499395eab47c547330b9,"fix mac os
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-wazuh/wazuh-kibana-app,b7c79f48f06cb49b12883ec9e9337da23b49976b,Update index.js,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,,,,,,,
+wazuh/wazuh-kibana-app,b7c79f48f06cb49b12883ec9e9337da23b49976b,Update index.js,FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,,,,,,,
 nortikin/sverchok,3ea4385e8a6da12c8d004c1c11bab42f30b3619f,"updated text nodes
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 naver/ngrinder,53e76790eb8e2263abf567ba716d3043f67f0367,[NGRINDER-42]UI element cleanup.,,,,,,,,random_batch_18_nov_2020,,,,,,,
