@@ -67,7 +67,7 @@ adaptive_header_action = "|".join([
     # 'check(?:s|ed|ing)?',
     'add(?:s|ed|ing)?',
     # 'buil(?:d|t|ds|ing)',
-    'Initial revision',
+    'initial revision',
     '(?:im)?port(?:s|ed|ing)?',
     '(?:un)?hid(?:e|es|den)',
     'updat(?:e|es|ed|ing)',
@@ -280,8 +280,25 @@ if __name__ == '__main__':
     print_adaptive_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
     evaluate_adaptive_classifier()
 
-    text = """Update values-prod-tags.yaml""".lower()
-    print(is_adaptive(text))
+    text = """
+"Leverage pip to access installed packages
+
+- Use `get_installed_distributions` from pip
+- This cascades to `pkg_resources.working_set` which relies on
+  `sys.path` to uncover packages
+- Consequently I implemented `temp_path()` as a contextmanager in the
+  style of `temp_environ()`
+- This requires us to know the environment's `sys.path`, so
+  `load_path(python)` will do a `json.dumps` of `sys.path` to stdout
+  which then gets loaded and returned
+- Allows us to avoid trying to hack around `pip freeze` output to parse
+  out names from comments etc
+- Provides other potential uses
+
+Signed-off-by: Dan Ryan <2591e5f46f28d303f9dc027d475a5c60d8dea17a@danryan.co>
+"    
+""".lower()
+    print("is adaptive", is_adaptive(text))
     valid_num = len(re.findall(build_adaptive_action_regex(), text))
     valid_num = len(re.findall('updat(?:e|es|ed|ing)', text))
     valid_num = len(re.findall(build_non_adaptive_context(), text))
