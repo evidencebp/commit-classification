@@ -112,3 +112,5 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 [Exploring the communication functions of comments during bug fixing in Open Source Software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584921000665)
 
 [Classifying Code Commits with Convolutional Neural Networks](https://people.cs.vt.edu/nm8247/publications/ijcnn-cr-2021.pdf) [repo](https://figshare.com/s/2c04d6bde90e761b11a3)
+
+[Improve Classification of Commits Maintenance Activities with Quantitative Changes in Source Code](https://www.scitepress.org/Papers/2021/104017/104017.pdf)
