@@ -3048,15 +3048,15 @@ GNOME/chronojump,f9e4b8ee64b6bad63cbf8dc97cb4344d8d79c62f,"Added German translat
 orange-alliance/the-orange-alliance,e58e2218b4b1b095f368270caf5d76305af273b7,"Merge branch 'ssr' of https://github.com/orange-alliance/the-orange-alliance into ssr
 ",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 librenms/librenms,08da4a4d74ee1eac3fce7cb5c4b08760dd240da0,"fix unit tests
-",FALSE,FALSE,,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 llvm-mirror/lldb,05bf10d0ff39eef1a7ac7d295286a29e521a7c42,"Fix compilation errors introduced by host Pipe abstraction
 on Windows.
 
 git-svn-id: 4c4cc70b1ef44ba2b7963015e681894188cea27e@212255 91177308-0d34-0410-b5e6-96231b3b80d8
 ",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 filipw/dotnet-script,6ec895bbb7699db91615cca7914bcdab2757d669,"Removed LoadLibrary hack on windows
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-dials/dials,dde67cff52c98529be78871344a6a250ea81017c,Chanegd method names,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,removed. not sure regarding the hack,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+dials/dials,dde67cff52c98529be78871344a6a250ea81017c,Chanegd method names,TRUE,TRUE,FALSE,FALSE,rename,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/llvm-propeller,da7e4017c6403dedf25f9e3740b22977bd3b6ad1,"[SelectionDAG] Rename and clarify visitFMULForFMADCombine (NFC)
 
 Summary: Suggested by @spatel in D26602.
@@ -3068,17 +3068,17 @@ Subscribers: spatel, llvm-commits
 Differential Revision: https://reviews.llvm.org/D27260
 
 llvm-svn: 288336
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,rename and clarify,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alisw/AliPhysics,57b8fd4661ff024f1274d14807bb1cb869e7ae1f,"fixed memory allocation bug
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix bug,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 FreeCol/freecol,0e1ca351252c2d8502706985d411d853f4446bba,"Add missing 0.10.x compatibility in schema data.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,add missing,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cgeo/cgeo,edf83994636f4a3359546c82a0db4366d5144dbd,"Fix checkstyle warning: Remove unused import
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,fix warning,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 BeWelcome/rox,a5cd6a618d83b0ccd0de07c3590ea53746892e44,"adding some directories and record for check ports
 
 git-svn-id: dcab1f60f8875908b03f8631d73cf2044708dbe2@9202 4f49b16c-3c57-40ef-8e22-7452baa6c33a
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,e3ca5e762c2aca373f1762cbc622ebe20fd20869,"[PATCH] drivers/isdn/sc/: possible cleanups
 
 This patch contains the following possible cleanips:
@@ -3095,20 +3095,20 @@ This patch contains the following possible cleanips:
 Signed-off-by: Adrian Bunk <0b86548ef377da0031a3ff3f0c4e06f016e20105@stusta.de>
 Signed-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@osdl.org>
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@osdl.org>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleanups,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CognizantOneDevOps/Insights,6668be99da798c60fc8463dbb5491044287b02d2,"Merge remote-tracking branch 'origin/master' into GrafanaV5.0Upgrade
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-nawawi/openstack,63651db44ddef10bc629312707ba6d2a349fbc10,"Merge ""Ensure valid service names are passed to stack_install_service""",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,upgrade,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+nawawi/openstack,63651db44ddef10bc629312707ba6d2a349fbc10,"Merge ""Ensure valid service names are passed to stack_install_service""",FALSE,FALSE,FALSE,TRUE,ensure valid,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moravianlibrary/CPK,9bf3d397d3c88aee25ae99aae9b7cad602b5220c,"Fixed login in comments.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fixed. Not sure regarding ""in comments""",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cds-snc/digital-canada-ca,46ca0ef2c3e0bd6b208c1ea7398956fb0cab1fed,"Add aria label
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/llvm-propeller,828883b86cb64d26f2251da2345110d814c5340b,"[CodeView] Fix dumping the is_stmt bit from the line table
 
 Bug pointed out by George Rimar.
 
 llvm-svn: 259205
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 facebook/litho,26200b483e5791bb078b5ef2e0470e4a106206cf,"Open-source VerySimpleGroupSectionSpecTest
 
 Summary: This relies on several testing utils so it's vital to have this one out too.
@@ -3118,108 +3118,108 @@ Reviewed By: mihaelao
 Differential Revision: D5901226
 
 fbshipit-source-id: 12e12cdb98d8f5f4113470046eeb6c581f13c37d
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"adds, actually expose, new code",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 UH-StudentServices/student_guide,1622f98ff5b0dba9f26cc360fb4cb3752205c7b0,"Merge pull request #321 from UH-StudentServices/feature/HUB-413-alphabetical-ordering-sql
 
-Feature/hub 413 alphabetical ordering sql",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Feature/hub 413 alphabetical ordering sql",FALSE,FALSE,TRUE,FALSE,feature,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 biow0lf/evemonk,81d7ac39a83de0b21649c020c66f226b6adf306d,"Bump kaminari from 1.0.1 to 1.1.0
 
 Bumps [kaminari](https://github.com/kaminari/kaminari) from 1.0.1 to 1.1.0.
 - [Changelog](https://github.com/kaminari/kaminari/blob/master/CHANGELOG.md)
-- [Commits](https://github.com/kaminari/kaminari/compare/v1.0.1...v1.1.0)",,,,,,,,random_batch_18_nov_2020,,,,,,,
+- [Commits](https://github.com/kaminari/kaminari/compare/v1.0.1...v1.1.0)",FALSE,FALSE,TRUE,FALSE,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 miranda-ng/miranda-ng,44a768a10eb378ffe51dff7f28f80649e0b8dc93,"langpacks: update according to commit [7038]
 
 git-svn-id: 4115c852ce6edf181d3c694a7293ab46e349b79a@7136 1316c22d-e87f-b044-9b9b-93d7a3e3ba9c
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Fedict/eid-mw,1652aca8d757ac4dc9d1316c066757ad2b350a25,"windows: updated minidriver to version 4.1.5
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kerryjiang/SuperSocket,20248f4a575b26869fbd9e04e0d2fa5bc431cdf2,"improved new protocol resolving framework
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"improve the resolving itself, not a refactor of the current one",,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Zarel/Pokemon-Showdown,17dcc94c0d7f330a53772a440668ada28db9502b,"Add permissions for announce/declare
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"add, premissions",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 gem/oq-engine,3491d2e10d9a86f508b83189b0220720052c3cdd,"Updated the changelog [skip CI]
 
 
 Former-commit-id: 0559f26f44c434aa520abdc3d95e7fc4a2daf03b [formerly e8de0115a75d2995c0b20a3c1a68437449ba4713]
-Former-commit-id: 401d8f4b74a2b06163e636152d1a6c86c9c8cbeb",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Former-commit-id: 401d8f4b74a2b06163e636152d1a6c86c9c8cbeb",FALSE,TRUE,FALSE,FALSE,changelog,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mxcube/mxcube,06e618c46426911e4050ded2984bfee8ca8005ef,"added abstract method: 'generate_image_jpeg' (optional)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"add, abstract method",,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 serge-sans-paille/pythran,f02b62120f74da9ed004293b85d0d2b3b9b6f218,"Add of many functions in module math
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 spring-projects/spring-framework,064343d056ecdb86ec024bd2c5e91311f1d1a0f6,"Make JUnit a compile-time dependency, since static mock functionality depends on its annotations.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,make compile time dependency,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/jackrabbit-oak,fdea4d918b795116639e918ab4e0adea5156220f,"OAK-9022: use SystemPropertySupplier in ClusterNodeInfo
 
 git-svn-id: 67138be12999c61558c3dd34328380c8e4523e73@1876753 13f79535-47bb-0310-9956-ffa450edef68
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-community,9a230dbe318f52397dfe71484801eed7e945bfb2,"Renaming of predefined JS functions (IDEADEV-10922)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,renaming,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 strapi/strapi,ac9906a2a2d26e06db17c5191503271caa6ea331,"Add plugins permissions
 
 Signed-off-by: HichamELBSI <89c0764379da71f693bb6b7c10b76731e7cadd4f@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"add, permissions",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 flutter/flutter,56197d435351a035cf92583426aaf092e43d7e0d,"Merge commit '1e3a85fe73c032ac656d363a60ff5fc6800e9869' into HEAD
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OpenSCAP/openscap,39c1261e049b971d8aedd9922ea1d95898fe4de5,"Refactor: Extract function oval_probe_query_criterion
 
 This commit only moves a block of code to a new separate static function.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,refactor,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 peachpiecompiler/peachpie,99a27ecbe3a01c0495a33071e2ef9885decc884a,"comments
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,comments,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 matecat/MateCat,2864bb0db0726c8d914c95300c1cd286281e8209,"test reference folder is excluded
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,folder excluded,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zig-lang/zig,c393969a2013fc64f1e1c65157164dfdfbafb08a,"std: fix bug in fifo.unget if rewinding doesn't wrap around
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix bug,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 angular/angular-devkit-build-ng-packagr-builds,85f740060e11841d6eeedfd0af4cb105d4ac3a7e,"6c8b0f131 ci: disable ngcc async
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,disable,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 astropy/astropy,84e8b99bdc06dc60bc6d02ecdbabbfe139cca0d4,"Work on inheritance of attributes during initialization
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"work on, inheritance",,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 greenriver/hmis-warehouse,f54dbc9422517ce17d8e8588595bbfbbe305d1af,"Fix casing of require 'csv'
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pfsense/pfsense,0fd819189920c3227a73450c91d9deaf46640ca2,"Use unionfs for /
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,,use,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NuGetPackageExplorer/NuGetPackageExplorer,14001dab0af2c6015804e485db565f8b579195ba,"Merge pull request #1060 from NuGetPackageExplorer/dependabot/nuget/NuGetDependencyVersion-5.7.0-rtm.6686bd482514a87a0085f8eb8603842ee1cb3ca5f277
 
-Bump NuGetDependencyVersion from 5.7.0-rtm.6683 to 5.7.0-rtm.6686+bd482514a87a0085f8eb8603842ee1cb3ca5f277",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Bump NuGetDependencyVersion from 5.7.0-rtm.6683 to 5.7.0-rtm.6686+bd482514a87a0085f8eb8603842ee1cb3ca5f277",FALSE,FALSE,TRUE,,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bcgov/gwells,ea42182b7a9dc5394488cab4cc4ee751f9923d11,"updated test
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 frappe/erpnext,ed40542658ecafb270eb581d931cd772bc46fa42,"[fix] minor auto-select party type and add has_permission in whitelisted methods
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,[fix],,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 uber/ludwig,504e408fa28f05929f2a3a799ef558d39b177c31,"refactor: pass targets through to decoders
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zeit/now-cli,1de3b40fc438011ccfd4e92e56e6bdc51c9b4c7a,"Ignore special files on deploy (#115)
 
-Fixes #112",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Fixes #112",FALSE,FALSE,FALSE,TRUE,fixes #122,Same commit appears in a different detailed message saying it is a revert,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 edx/edx-platform,35f6822f92ade23e83d2da1a0b589de260abdb3e,"PII annotations can be longer than 120 characters now
 
 PLAT-2424
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/j2objc,9b3b2ddeefbb196bfe376a984ccd5bde0e60b2ad,"Fix a bug in Import Collection which ignored parameter types in certain cases for the ClassInstanceCreation nodes.
 	Change on 2013/01/02 by shanbhag <shanbhag@google.com>
 -------------
 Created by MOE: http://code.google.com/p/moe-java
 MOE_MIGRATED_REVID=40652694
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,bug,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 docker/docker.github.io,882f98dcc0304e228a6c0e9c2a82de92186ee3bd,"started on integration tests
 
 Signed-off-by: Evan Hazlett <7e61ed261aef9abaa71fd4c2127eb6cb9f01ce10@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,"started on?, integeration tests",,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 travis-ci/travis-api,373b1823a6c9fe66a020e57a46ca94003d7a519f,"Fix spec
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,fix,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CanalTP/navitia,55ddc69255fd692484ad19d6001a90947404c883,"jormungandr: add properties in disruption fields
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,add,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mozilla/addons-server,0b831a06888abdbb224543af2d85cc53809cb5b8,"Pontoon: Update Thai (th) localization of AMO
 
 Localization authors:
 - aefgh39622 <aefgh39622@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,,Thai,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 TEAMMATES/teammates,35bb95f6f437a62448926afdcb5ce5721de026a7,"[Fixes #74275806] Instructor can copy previous questions when editing session
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,[fixes #ddd],,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 neos/flow-development-collection,641d01314739c2130b930ad2cf741595ede6bec4,"TASK: Remove all mentions of host patterns
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,TASK:,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/airflow,a311a2cf69c34ab1e6808fa781cbbfb7be1c59a8,"Merge pull request #810 from aminghadersohi/master
 
-Don't force run pool tasks. ",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Don't force run pool tasks. ",FALSE,FALSE,FALSE,TRUE,not clear what the goal is,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openSUSE/kernel-source,81fdf679d5a7f8a0ba049359370a5e4da0d94154,"- Update Xen patches to 2.6.39-rc5.
 - Delete patches.xen/xen3-seccomp-disable-tsc-option.
 - Delete patches.xen/xen3-x86-mark_rodata_rw.patch.
