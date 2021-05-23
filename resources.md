@@ -114,3 +114,5 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 [Classifying Code Commits with Convolutional Neural Networks](https://people.cs.vt.edu/nm8247/publications/ijcnn-cr-2021.pdf) [repo](https://figshare.com/s/2c04d6bde90e761b11a3)
 
 [Improve Classification of Commits Maintenance Activities with Quantitative Changes in Source Code](https://www.scitepress.org/Papers/2021/104017/104017.pdf)
+
+[An empirical study on the use of SZZ for identifying inducing changes of non-functional bugs](https://link.springer.com/article/10.1007/s10664-021-09970-8) [repo](https://github.com/senseconcordia/NFBugsExtended)
