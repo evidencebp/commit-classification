@@ -116,3 +116,5 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 [Improve Classification of Commits Maintenance Activities with Quantitative Changes in Source Code](https://www.scitepress.org/Papers/2021/104017/104017.pdf)
 
 [An empirical study on the use of SZZ for identifying inducing changes of non-functional bugs](https://link.springer.com/article/10.1007/s10664-021-09970-8) [repo](https://github.com/senseconcordia/NFBugsExtended)
+
+[PySStuBs: Characterizing Single-Statement Bugs in Popular Open-Source Python Projects](https://www.researchgate.net/profile/Cor-Paul-Bezemer/publication/349899864_PySStuBs_Characterizing_Single-Statement_Bugs_in_Popular_Open-Source_Python_Projects/links/604aa73045851543166f2305/PySStuBs-Characterizing-Single-Statement-Bugs-in-Popular-Open-Source-Python-Projects.pdf) [repo](https://zenodo.org/record/4589607#.YK8nz7Qza3c)
