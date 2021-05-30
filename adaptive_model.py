@@ -187,6 +187,10 @@ def build_core_adaptive_regex():
 
     return '(%s)' % build_sepereted_term(core_adaptive_terms)
 
+def is_core_adaptive(text):
+
+    return match(text, build_core_adaptive_regex())
+
 
 def core_adaptive_to_bq():
     print("# Core Adaptive Term")
