@@ -183,6 +183,10 @@ def build_core_refactor_regex():
 
     return '(%s)' % build_sepereted_term(core_refactor_terms)
 
+def is_core_refactor(text):
+    return match(text, build_core_refactor_regex())
+
+
 def build_refactor_regex(use_conventional_commits=True):
     header_regex =  '(?:^|^[\s\S]{0,25}%s)(?:%s)%s' % (term_seperator
                                                        , "|".join(perfective_header_action)
