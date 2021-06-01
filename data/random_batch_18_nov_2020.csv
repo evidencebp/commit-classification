@@ -3177,23 +3177,23 @@ astropy/astropy,84e8b99bdc06dc60bc6d02ecdbabbfe139cca0d4,"Work on inheritance of
 greenriver/hmis-warehouse,f54dbc9422517ce17d8e8588595bbfbbe305d1af,"Fix casing of require 'csv'
 ",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pfsense/pfsense,0fd819189920c3227a73450c91d9deaf46640ca2,"Use unionfs for /
-",FALSE,FALSE,TRUE,,use,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,FALSE,TRUE,FALSE,use,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NuGetPackageExplorer/NuGetPackageExplorer,14001dab0af2c6015804e485db565f8b579195ba,"Merge pull request #1060 from NuGetPackageExplorer/dependabot/nuget/NuGetDependencyVersion-5.7.0-rtm.6686bd482514a87a0085f8eb8603842ee1cb3ca5f277
 
-Bump NuGetDependencyVersion from 5.7.0-rtm.6683 to 5.7.0-rtm.6686+bd482514a87a0085f8eb8603842ee1cb3ca5f277",FALSE,FALSE,TRUE,,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Bump NuGetDependencyVersion from 5.7.0-rtm.6683 to 5.7.0-rtm.6686+bd482514a87a0085f8eb8603842ee1cb3ca5f277",FALSE,FALSE,TRUE,FALSE,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bcgov/gwells,ea42182b7a9dc5394488cab4cc4ee751f9923d11,"updated test
-",FALSE,FALSE,TRUE,,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,FALSE,TRUE,FALSE,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 frappe/erpnext,ed40542658ecafb270eb581d931cd772bc46fa42,"[fix] minor auto-select party type and add has_permission in whitelisted methods
 ",FALSE,FALSE,FALSE,TRUE,[fix],,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 uber/ludwig,504e408fa28f05929f2a3a799ef558d39b177c31,"refactor: pass targets through to decoders
-",TRUE,TRUE,FALSE,,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",TRUE,TRUE,FALSE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zeit/now-cli,1de3b40fc438011ccfd4e92e56e6bdc51c9b4c7a,"Ignore special files on deploy (#115)
 
 Fixes #112",FALSE,FALSE,FALSE,TRUE,fixes #122,Same commit appears in a different detailed message saying it is a revert,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 edx/edx-platform,35f6822f92ade23e83d2da1a0b589de260abdb3e,"PII annotations can be longer than 120 characters now
 
 PLAT-2424
-",FALSE,FALSE,TRUE,,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/j2objc,9b3b2ddeefbb196bfe376a984ccd5bde0e60b2ad,"Fix a bug in Import Collection which ignored parameter types in certain cases for the ClassInstanceCreation nodes.
 	Change on 2013/01/02 by shanbhag <shanbhag@google.com>
 -------------
@@ -3203,16 +3203,16 @@ MOE_MIGRATED_REVID=40652694
 docker/docker.github.io,882f98dcc0304e228a6c0e9c2a82de92186ee3bd,"started on integration tests
 
 Signed-off-by: Evan Hazlett <7e61ed261aef9abaa71fd4c2127eb6cb9f01ce10@gmail.com>
-",FALSE,FALSE,TRUE,"started on?, integeration tests",,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,FALSE,TRUE,FALSE,"started on?, integeration tests",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 travis-ci/travis-api,373b1823a6c9fe66a020e57a46ca94003d7a519f,"Fix spec
-",FALSE,FALSE,TRUE,fix,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CanalTP/navitia,55ddc69255fd692484ad19d6001a90947404c883,"jormungandr: add properties in disruption fields
-",FALSE,TRUE,FALSE,add,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,FALSE,FALSE,TRUE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mozilla/addons-server,0b831a06888abdbb224543af2d85cc53809cb5b8,"Pontoon: Update Thai (th) localization of AMO
 
 Localization authors:
 - aefgh39622 <aefgh39622@gmail.com>
-",FALSE,TRUE,FALSE,,Thai,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+",FALSE,TRUE,FALSE,FALSE,Thai,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 TEAMMATES/teammates,35bb95f6f437a62448926afdcb5ce5721de026a7,"[Fixes #74275806] Instructor can copy previous questions when editing session
 ",FALSE,FALSE,FALSE,TRUE,[fixes #ddd],,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 neos/flow-development-collection,641d01314739c2130b930ad2cf741595ede6bec4,"TASK: Remove all mentions of host patterns
@@ -3223,12 +3223,12 @@ Don't force run pool tasks. ",FALSE,FALSE,FALSE,TRUE,not clear what the goal is,
 openSUSE/kernel-source,81fdf679d5a7f8a0ba049359370a5e4da0d94154,"- Update Xen patches to 2.6.39-rc5.
 - Delete patches.xen/xen3-seccomp-disable-tsc-option.
 - Delete patches.xen/xen3-x86-mark_rodata_rw.patch.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"update, delete",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 copasi/COPASI,cc6eefd3bd2f3ca95b8b08ec79cb17262eb3ca65,"Changes to compile on 64bit linux and 64bit lion.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,changes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tgstation/tgstation,82c56a44e660d74546808240335da7a2ae250c4b,"Created new icons for geneticists and roboticists
 https://dl.dropboxusercontent.com/u/831776/icon_full3.png
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,created,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stinsonga/emacs-mirror,2ff0458dd09c436468f68e8dbf02b29560704d59,"(gdb-insert-field, gdb-array-format1)
 (gdb-info-breakpoints-custom, gdb-info-frames-custom)
 (gdb-info-threads-custom): Add help-echo text.
@@ -3236,11 +3236,11 @@ stinsonga/emacs-mirror,2ff0458dd09c436468f68e8dbf02b29560704d59,"(gdb-insert-fie
 (gdb-info-breakpoints-custom, gdb-reset)
 (gdb-assembler-custom): Use display-images-p to test if breakpoint
 icons can be displayed.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,TRUE,"add, don't use",by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 osmocom/libosmocore,84ea2e037490a9ad6c0a192cf237f88fd83cdd88,"logging vty: describe 'logging set-log-mask' command, add OSMO_STRINGIFY_VAL()
 
 Change-Id: I73ac5873ede858da44e1486d8a5c81da1ed5b19f
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,"by code. the description added is presented to the user, not documentation",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 timgrossmann/InstaPy,dc72caadf83af5a589fbfd21b90b8e67baf089ea,"Major upgrades and refactor on the unfollow_user definition
 
 The same generic structure as its follow pair- follow_user definition.
@@ -3249,7 +3249,7 @@ Checking page availablity is being held at get_following_status function;
 So does the check of possible username change block is being held at get_following_status;
 Lots of stability in action verification steps which are held at verify_action function;
 Some refactored lines into shorter expressions;
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"updgrades, refactor",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,9958f1d9a04efb3db19134482b3f4c6897e0e7b8,"dm cache: remove all obsolete writethrough-specific code
 
 Now that the writethrough code is much simpler there is no need to track
@@ -3259,22 +3259,22 @@ writethrough_endio(), to issue origin then cache IO in series).
 As such the obsolete writethrough list and workqueue is also removed.
 
 Signed-off-by: Mike Snitzer <85e533f2e78486213c4d69f71462342ec0c62734@redhat.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,remove obsolete,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 htcondor/htcondor,c32eabba40bdceac5967884f7a1370c70125dd68,"Added timed flushing of nondurable commits to schedd's job queue log.
 Without this, JobRouter and Quill do not see some updates to job ads
 for an unbound amount of time.  The upper bound is now controlled
 with SCHEDD_JOB_QUEUE_LOG_FLUSH_DELAY (default 5s). #768
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OxfamFairTrade/oft,084158de3b0a057083cee30781b01b95ac516900,"Top bar niet verschuiven
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,do not shift in Dutch language,by code,,random_batch_18_nov_2020,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 microsoft/TypeScript,475125bbb9cafca0d14ed76d55ea2075ae377419,"Merge branch 'master' into map4
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 FenixEdu/fenixedu-academic,08fe8cadbfa987d61562bc89b72402212528a288,"- Different message when minimum and maximum values are the same
 - Corrected error when editing rule: minimum is greater that maximum
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,corrected,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ppy/osu,e650b10b5e1adfb00123064e043d5768eb0e409f,"Add test case for maximal break
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openstack/tempest,1fd81ceca8c70cdb8297123d01dbcda157318c9e,"Configure scenario clients with region
 
 When configuring the clients make sure that the correct region is
@@ -3282,115 +3282,115 @@ used.
 
 Change-Id: I2066180aaa85532e81dc37b3bd593e596234e0e1
 Closes-Bug: 1248829
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"make sure,closes-bug: d+",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/llvm-propeller,0e523cba82e93c1d842e885f175ff4cd9018f719,"Rename a test in preparation for fixing PR8169.
 
 llvm-svn: 115410
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,rename,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 greenriver/hmis-warehouse,3edd03c8ff883cbedd6d3560492749b591216a8a,"Allow adjustable range for clients with no service in outflow report
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,allow,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GoogleCloudPlatform/esp-v2,d6b25c3f6af2efa614afb92b4fe4c7028173802c,"Add router http filter, and update .gitignore
 
 Change-Id: Ifd6fca348c14027efbc24d0952ccb4cb46610c4d
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,not sure regarding gitignore,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 uholeschak/ediabaslib,5befc53b12c0b0beb2bbe712531b81711e4dc21e,"Added more MTC debug output
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 centreon/centreon,7ad31ff7919d0e37d96827758e067819d154b880,"* Add pager field when import a user
 
 git-svn-id: 25a0ac75d3222d69293b2750b310215dcabd6451@12733 6bcd3966-0018-0410-8128-fd23d134de7e
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 react-materialize/react-materialize,2177c7ef95c968c193bb6b12f4102a54bc432a59,"Add UserView.spec
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 dorkster/flare-engine-next,79c67d73f717a3258aac2ad3b6de6f2df14cae42,"Fix MessageEngine always being initialized as English
 
 Closes #314
 
 loadSettings() needs to be run after the ModManager is created, but *before*
 MessageEngine is created.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 esl/MongooseIM,fb6cf4ea4858e3e502e722b12b6c96062bbac360,"modify paths to vars.cofnig and ejabberd.cfg template
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,modify,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 samuelclay/NewsBlur,b1328c801c199c346573dfc50f41ab7fba7763f8,"adding in cached avatars
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bedatadriven/renjin,3ad5a4553a92e32151f25338d759174507269653,"Implements Rf_asChar()
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,implements,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/qpid-dispatch,6a08b9b3e90df30837cef5b6ece3a4341faa4d77,"DISPATCH-1200: system_tests_edge_router needs an import
 
 To satisfy python_checker self test
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,needs xxx to satisfy,commit not found,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 coteditor/CotEditor,9342c9a9b88eef5ae1477cabbd83cfb0d3fee9aa,"Merge branch 'feature/findPanel' into develop
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 chafey/cornerstoneTools,cf0bf0d5eccdbd00f449e132395bacb8f164381b,"Refactored and renamed 'base/baseAnnotationToolHelpers.js' to 'util/findAndMoveHelpers.js' and 'store/getToolsWithMoveableHandles.js', as the functionality is used by more than just the baseAnnotationTool.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,refactored,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MIPT-ILab/mipt-mips,ce47164837fd2b06819861e493add62353e3d7b6,"Update traces
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-community,87233032bd98097205477fb0997ae6011ca06b5c,"Cleanup (unwarranted use of ApplicationEx)
 
 GitOrigin-RevId: 502e79a13135bcd6c39dbcf487fef6f455022508
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 triplea-game/triplea,60a40aaa31db8c1ac07f5e16c2ab03335cec2932,"moved aa gun from W.USA to Hawaii islands
 
 
 git-svn-id: c1ba500aeec1d6140676cb07156a1e31a23423bf@860 a4c711aa-641f-0410-879d-9b464e52b682
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,moved,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mantidproject/mantid,6bae5498de5de98646f48270a253798055daee4c,"Re #6098. Clear compiler warning.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,clear warning,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tensorflow/probability,33e7c9fa44a75ebf4b9404ced59b6da127a849fe,"Improve the error message when no parameters are passed to `make_state_space_model`.
 
 Previously, the default `param_vals=None` would raise a downstream error on line 130 (`zip(self.parameters, param_vals)`).
 
 PiperOrigin-RevId: 323819651
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,would raise error,a killer message for classifiers,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 numba/numba,6fdd9c8c791ca2af1a033eec52701083413f81e2,"Fix: _intern for DictIteratorType
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,Fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 RIOT-OS/RIOT,28b73859208316a19cab18161b89aab19cf8396c,"examples/default: fix schedstatistics example usage
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 seagull-js/seagull,5780ea6b7ef5f51806890d127ce42b3bea9b8332,"add test for async customization
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 f-droid/fdroiddata,ff40197525ddb4e908bbd64ec6fb9540fbbeb14d,"Update WallETH to 0.43.1 (431)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Ultimaker/CuraEngine,33e39c5bc26c91a622bcfa76be8101e7f059612d,"Merge branch 'smartavionics-mb-fix-non-move-at-end-of-layer-that-breaks-spiralize' into 2.5
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cozy-labs/cozy-desktop,6e26986dcef81c90b6bedcda7538d2e8b50907f8,"gui/help : ask for all the logs (#1042)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cake-build/cake,36c71637b829b035f6443503499b58feeb471929,"(GH-2275) Correctly reference runtime libraries from addins
 
 - Fixes #2275
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,correctly,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 emjotde/Marian,9cccbeed2709bfabb9e6ef4f3dfde8aad2653598,"fix typo in comment
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 blockchain/My-Wallet-V3-iOS,ba3700c5d0d3962b75e6bd1a5f4805c3d517424b,"fix(Crash-4e4c786bfb332e333efcea2da03de727): Crash on `[[NSString alloc] initWithFormat]` (#649)
 
 * use `[NSString stringWithFormat:]` instead of [[NSString alloc] initWithFormat:] as a better practice. initWithFormat was crashing for some reason
 
 * replace explicit nsstring initialization with a convenience
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fix, crash",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 datamade/la-metro-councilmatic,d86674dbf6284f079875b9fc815d46abf94e1eef,"Merge branch 'master' of github.com:datamade/la-metro-councilmatic
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 psi4/DatenQM,db0ee8daf6dc0c8ccab8086237255e8b9d40be53,"adding dependencies required for building the html doc to README.txt
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 qtile/qtile,747e760b132af464bb46b3c574096d47f0908bcc,"Only module-level globals should be uppercase
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,doing rename,by code. no syntacic evidence,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jenkinsci/ec2-plugin,20f0c2406d62ddbd0d005a2fb15f3f9bb95b3f20,"Merge pull request #352 from res0nance/remoting-workdir
 
-Add remoting workdir",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Add remoting workdir",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 datawire/ambassador,6af4c651a8187106e399a8b8e9f29f3c34db8a8c,"Protect against clusters that have no endpoints at all in the feature walk.
 
 Fixes #1532.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"protect, fix",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 radgrad/radgrad,8186ea0b3e86b394bb14fcf8837a373e2a94b242,"Merge branch 'issue-63'
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 simpeg/simpeg,0016fefcb6359d1db001ff1d6fade5bf2c485084,"Force update of approxHinv in Preconditioner Directive. Add missing dmisfit.W in getJtJdiag call
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"add missing, force",commit not found,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OxfamFairTrade/oft,2d7590fd19019af08a4a4992369f06056af4523e,"Kolom 'product_type' bestaat niet meer in WC3.4+
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,Dutch - column no longer exists,,,random_batch_18_nov_2020,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 timgrossmann/InstaPy,ae14ef3eb45bae3e273b145feb06a81fab557bc2,"fixed conflict
 
 like_by_feed
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CityOfPhiladelphia/phila.gov,ef32edcaf2be0c281212f321df86bd56f2757be6,"Add service title, clean up program page tile
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"add, cleanup",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MarimerLLC/csla,21f044fca1f7a88f2175952965f6fce61052e341,"ProjectTracker changes: make it use common NuGet repository, connection string corrections, all projects build. ProjectTracker.Library.Sl code must be ported to Csla 4.5
 bugid: 1018
 
