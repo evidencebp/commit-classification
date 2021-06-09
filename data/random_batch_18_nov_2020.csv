@@ -3394,43 +3394,43 @@ CityOfPhiladelphia/phila.gov,ef32edcaf2be0c281212f321df86bd56f2757be6,"Add servi
 MarimerLLC/csla,21f044fca1f7a88f2175952965f6fce61052e341,"ProjectTracker changes: make it use common NuGet repository, connection string corrections, all projects build. ProjectTracker.Library.Sl code must be ported to Csla 4.5
 bugid: 1018
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,changes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 actiontech/dble,d5b69d20701f98ddbec51557a69e16bdf0113e4e,"baseitem bool with subquery will not change position #417
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,will not'???,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alisw/AliPhysics,c22fce159319da38fc62e95a3c1e55e770b2c168,"Create the AliMCAnalysisUtils only once for all sub-tasks
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-seeds-of-diversity/seeds,bd44a85d4db537028f977584be50a6b2df914266,raFlds moved to MbrContacts,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,reason not stated,,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+seeds-of-diversity/seeds,bd44a85d4db537028f977584be50a6b2df914266,raFlds moved to MbrContacts,TRUE,TRUE,,FALSE,moved to,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 loot/skyrim,70ede9d9808eb123192133201883b7aa750e999e,"Hearthfire Extended - Update cleaning info
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rryqszq4/php7-nginx-module,b6a54712afb0539e4e8bbaec46a1b1547d80d203,"[src] update keepalive.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wellcometrust/platform-api,cc39fe8f9df4086eeb8e7e797edcb0b8e1a3f00b,"Apply auto-formatting rules
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,auto-formatting,commit not found,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CZ-NIC/turris-os,e7cdf7db479819878d0f6bef475511f9f1204688,"sync mksquashfs4 with the CVS code to generate LZMA images
 
 git-svn-id: c673a1a018ba15e3442847f58d2337db82164816@18268 3c298f89-4303-0410-b956-a3cf2f4a3e73
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,sync,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Seddryck/NBi,6d3624a878e6f738954027aecbca3108a05e8a67,"Add SQLOLEDB to the preconfigured list of providers
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rear/rear,e582b9e5f9a112fb06691d1a0794630ce4357240,"Clean up backup/YUM/default/500_make_backup.sh and add detection of SELinux-related tar options
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"clean up, add",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/flink,b4ed23e3ccb037a5bcf12abc8de3b2b4b220b0e4,"some minor cleanups
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleanups,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/jdk8u_jdk,4fb081914f5c59eacd3e306180fc5fbb6b4992ed,"Merge
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kervinck/gigatron-rom,089334db150cdc6eabef2e76d10eef0ceaff5f95,"Prepare for built-in Snake game
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,prepare,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 libretro/RetroArch,7ea749cfdf4f18c8dd39af27323874b9650f3f52,"Mark some settings as advanced
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,mark,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/incubator-shardingsphere,c1137fa5f99374d58778aa2d9cb6c3f364782674,"Merge pull request #1138 from cherrylzhao/dev-new
 
-remove set local transaction type for jdbc, for having default value.",,,,,,,,random_batch_18_nov_2020,,,,,,,
+remove set local transaction type for jdbc, for having default value.",FALSE,FALSE,TRUE,FALSE,remove,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 samba-team/samba,1b99d8fbb591bedb375c1251d5d29a5674e1b74a,"Use common util_file code.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,use,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 APIs-guru/openapi-directory,50d75fc95ef56defea7244aba21f8bdf1b8bf4b6,"Update API specs
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,specs,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 debops/debops,db817dc3e4b308a8898e674f04f418f43efa19d3,"Add 'using the custom scripts' doc
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,doc,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,9f0db8b9c466e0e5f3bc86a1389c790ca16643a8,"ARM: bcm: clean-up unneeded kconfig selects
 
 Multi-platform support implies all these options are already selected and
@@ -3440,36 +3440,36 @@ Signed-off-by: Rob Herring <fbb37eacae100e13076d5c4b46f06cfa4d6fa9f8@kernel.org>
 Cc: Christian Daudt <2a0249a4f1af45d39ef18fe8d51f2574f8636df4@fixthebug.org>
 Cc: Matt Porter <c1d287ff3802a4aab0e3770389ea24a33314618b@linaro.org>
 Cc: 6666c341d8c988aba87090ea539f3c04be03651c@broadcom.com
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,clean-up,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 FreezingMoon/AncientBeast,6c65c52af3725470238e330cfe9b010aee20a68b,"Fixes #416
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fixes, by code",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 googlefonts/fontbakery,04ea2e116ae712658ce8db63d5e621287f80bafb,"build-metadata: UnicodeDecodeError: 'utf8' codec can't decode byte 0xbf (#539)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"error, can't decode",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ekg/vg,2a216e8fdc98ff39ccfe9ceaf5a0137c0bdd3116,"improve integration of xdrop algorithm in the mapper
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,improve integration,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 puma/puma,00055cd8521235c98cd0c23d8f67a14e8768dd53,"Merge pull request #759 from BenV/fix-centos6-build
 
-Check for OPENSSL_NO_ECDH before using ECDH",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Check for OPENSSL_NO_ECDH before using ECDH",FALSE,FALSE,FALSE,TRUE,"fix, check before",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/kotlin-native,badecf821073d2ba42ba2592b0a0bce26e3f35b6,"Interop, backend: remove code avoiding zero-length C arrays
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,by code. resaon to the change is not clear,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gem/oq-engine,0066383728807a8b1d8a0ce7305d7cf088529a66,"Updated get_fragility_functions
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wch/r-source,4bb8f5ea10510f36b49fdcc4f1ab5e2fc19268cf,"non-IEEE fixes
 
 
 git-svn-id: f298e5bd0fb7dd56202a0647512068a43d54496a@1404 00db46b3-68df-0310-9c12-caf00c1e9a41
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,code is formmating change,no syntactic evidence,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 uzh-bf/klicker-react,79321b9028ec1dd16131a02907cb45e8b5e3096c,"Update dependency react-autosuggest to v9.4.1 (#738)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 opencog/atomspace,fffaeb868aca392a71e053d20c8cff2794ebc1aa,"Loop in atomese
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jupyter/nbgrader,88fc0bf28d591c17227c862ca2858a6a2bccfd2e,"Merge pull request #698 from lgpage/fix-tests
 
-Force phantomjs service to terminate in Linux",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Force phantomjs service to terminate in Linux",FALSE,FALSE,FALSE,TRUE,fix,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 strapi/strapi,9a6de2a5620e043f8497ab2377c4da3ff6b4400d,"Update migration-guide-beta.20-to-3.0.0.md (#6750)
 
-I did everything but noticed that the documentation isn't clear about hooks. I literally moved contents of the hook.json file to a new file hook.js without the settings key and nothing worked until I moved into settings key as specified in the hooks section.",,,,,,,,random_batch_18_nov_2020,,,,,,,
+I did everything but noticed that the documentation isn't clear about hooks. I literally moved contents of the hook.json file to a new file hook.js without the settings key and nothing worked until I moved into settings key as specified in the hooks section.",FALSE,TRUE,FALSE,FALSE,"guide, documentation",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 edx/edx-platform,06a0d3ff71325ec268add21f1c378c0a8cd0ed3a,"Merge pull request #22453 from edx/robrap/ARCH-1253-remove-UPDATE_LOGIN_USER_ERROR_STATUS_CODE
 
 remove UPDATE_LOGIN_USER_ERROR_STATUS_CODE toggle",,,,,,,,random_batch_18_nov_2020,,,,,,,
