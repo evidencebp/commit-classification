@@ -172,6 +172,7 @@ valid_terms = [
     'edit the jira link to the correct issue', # Another occurring title
     'page(?:s)? break(?:s)?',
     'fix changes merge',
+    '(understand|understood)\scorrectly',
 
 
 ] + code_review_fixes
@@ -359,14 +360,10 @@ if __name__ == '__main__':
     #this fixed the bug 123
 
     text = """
-sync: second factor auth support
+Merge pull request #899 from acumenlabs/ACM-1726_task_status_filter_d…
+…one_out_by_default
 
-BUG=58712
-TEST=Sign in to sync with two-step verification account. SigninManagerTest.
-
-Review URL: http://codereview.chromium.org/3702002
-
-git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@62191 0039d316-1c4b-4281-b951-d872f2087c98
+ACM-1726: Exclude done filter by default
 
 """.lower()
     print("is fix", is_fix(text))
