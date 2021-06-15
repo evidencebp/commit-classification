@@ -124,3 +124,6 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 [Recommending Bug-fixing Comments from Issue Tracking Discussions in Support of Bug Repair](https://arxiv.org/pdf/2105.11525.pdf)
 
 [Enhancing Source Code Refactoring Detection with Explanations from Commit Messages](https://www.researchgate.net/profile/Rrezarta_Krasniqi/publication/340402742_Enhancing_Source_Code_Refactoring_Detection_with_Explanations_from_Commit_Messages/links/5f6e809e92851c14bc972692/Enhancing-Source-Code-Refactoring-Detection-with-Explanations-from-Commit-Messages.pdf) [repo](https://zenodo.org/record/3596397#.YLjWhTYzZhE)
+
+[Bug Severity Prediction using Keywords in
+Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/IJITCS-V13-N3-4.pdf)
