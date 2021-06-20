@@ -129,3 +129,5 @@ Design Improvement: Are We There Yet?](https://www.researchgate.net/profile/Eman
 Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/IJITCS-V13-N3-4.pdf)
 
 [Where should the bugs be fixed?](https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=2530&context=sis_research) [repo](https://code.google.com/archive/p/bugcenter/downloads)
+
+[Denchmark: A Bug Benchmark of Deep Learning-related Software](https://www.computer.org/csdl/pds/api/csdl/proceedings/download-article/1tB7k9SCa9q/pdf) [repo](https://github.com/RosePasta/Denchmark_BRs)
