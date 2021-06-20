@@ -3472,20 +3472,20 @@ strapi/strapi,9a6de2a5620e043f8497ab2377c4da3ff6b4400d,"Update migration-guide-b
 I did everything but noticed that the documentation isn't clear about hooks. I literally moved contents of the hook.json file to a new file hook.js without the settings key and nothing worked until I moved into settings key as specified in the hooks section.",FALSE,TRUE,FALSE,FALSE,"guide, documentation",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 edx/edx-platform,06a0d3ff71325ec268add21f1c378c0a8cd0ed3a,"Merge pull request #22453 from edx/robrap/ARCH-1253-remove-UPDATE_LOGIN_USER_ERROR_STATUS_CODE
 
-remove UPDATE_LOGIN_USER_ERROR_STATUS_CODE toggle",,,,,,,,random_batch_18_nov_2020,,,,,,,
+remove UPDATE_LOGIN_USER_ERROR_STATUS_CODE toggle",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 RIOT-OS/RIOT,815426b0a138bd02c0a84aa127d50c41234511d1,"Merge pull request #6051 from OlegHahm/fix_test_mutex_order_readme
 
-tests: mutex_order: updated test and fixed README",,,,,,,,random_batch_18_nov_2020,,,,,,,
+tests: mutex_order: updated test and fixed README",FALSE,TRUE,FALSE,TRUE,"fix, readme",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NodeBB/NodeBB,7211dde7b973adcd9d4c033d0328c2b4e378d4b6,"feat: #7358
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,feat:,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-community,8126fcc724a3890cd93bbde44b106c7afb879346,"Shift-click selection; clicking on a single component in multiselection sets the selection to that component only
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-GerritCodeReview/gerrit,89dc9833cc9fc3053967903cf801ad627f0433c5,"Merge ""Append approval info to every comment-added stream event and hook""",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,shift,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+GerritCodeReview/gerrit,89dc9833cc9fc3053967903cf801ad627f0433c5,"Merge ""Append approval info to every comment-added stream event and hook""",FALSE,FALSE,TRUE,FALSE,append,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/resharper-unity,352c3a3f03e313412fa21308f64bd8a8dd09e359,"1) bump rdgen version
 2) Wire should not have several protocols, 1 to 1 mapping
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,TRUE,"bump, should not",commit not found,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 clinwiki-org/clinwiki,7f1ae30f29e98b768e2b257c9827f9d41e0a8b80,"make search disjunctive within agg, conjunctive across aggs
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,make,reason not specified,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/eog,9f655c1ea553f69ed1f37db4ee4a861918066186,"New function to see whether an image has a well-known screen size. Sizes
 
 2000-07-24  Federico Mena Quintero  <federico@helixcode.com>
@@ -3513,58 +3513,58 @@ GNOME/eog,9f655c1ea553f69ed1f37db4ee4a861918066186,"New function to see whether 
 	(window_set_auto_size): Removed.
 	(window_get_auto_size): Removed.
 	(window_open_image): Get the auto_size preference directly here.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,new function,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 supercollider/supercollider,cfaf14ea982f812fb448983a99418b0060738e02,"help: a few minor corrections.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,help:,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cylc/cylc,4a1aa75974d5e8927a23d4732bfa2685c273fb21,"Added doc on installing graphviz without QT.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,Added doc,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Wilfred/remacs,94e9c286caafb61fc8edf1e086b8a90eee7ca18b,"New file.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,new,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mackerelio/mkr,097cc0286875af2045d474d8885f855b86fefdb1,"Merge pull request #265 from mackerelio/bump-version-0.39.6
 
-Release version 0.39.6",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Release version 0.39.6",FALSE,TRUE,TRUE,FALSE,"bump, release",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 lairdubois/lairdubois,d433d45b45c6d6c2beb38f5003454da6fa09fca3,"+ User @ url path
 ~ Wood help improvements
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,TRUE,FALSE,"help improvments,  +user",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Flexget/Flexget,02da432eaa686803999ff82d6ac152fa21ab662f,"Improve schema for legacy choice validators with ignore_case
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,improve schema,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 TryGhost/Ghost,71ddd73a000bba0daaa53e6ed9d7f38b7db3f354,"Merge pull request #1559 from sebgie/failing-tests
 
-Fix failing casper tests",,,,,,,,random_batch_18_nov_2020,,,,,,,
-Stellarium/stellarium,ec5ffc66039280e154b03da8bcfbfc1da0bb126b,Merge with trunk,,,,,,,,random_batch_18_nov_2020,,,,,,,
+Fix failing casper tests",FALSE,FALSE,FALSE,TRUE,fix failing tests,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Stellarium/stellarium,ec5ffc66039280e154b03da8bcfbfc1da0bb126b,Merge with trunk,FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/llvm-propeller,c2576d5464eeb574f565cef028cad9375ef97979,"Remove extra semicolon.
 
 llvm-svn: 223411
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,Remove extra semicolon,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ant-design/ant-design,232f179f2475f282b9c524b16e0bdc74e182b698,"update
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OptiKey/OptiKey,a6cabf4c0215f752cac026c31b91a6d27fe0af15,"Remove C# 6.0 syntax
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,remove syntax,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Debian/devscripts,e82c49153eb13fb6db821d396e309cb0cb28bee2,"Add bug fixed
 
 Closes: #913008
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,added bug fix DOCUMENTATION to change log,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 validator/validator,f8dbb73b6b47195c21f1e96f5df8fee781556ee0,"poster, width, height
 
 --HG--
 extra : convert_revision : svn%3Ae7398766-c432-0410-9565-638d39ca0058/trunk%40220
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 algorithm-ninja/task-wizard,c56f366948f4822b91fcd54cf128cf0faaa2942b,"Work in progress (taskrun)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-easybuilders/easybuild-easyconfigs,1f8a41ead32230038930972e23448f3146216570,add easyconfig eudev-3.2-GCCcore-4.9.3.eb,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+easybuilders/easybuild-easyconfigs,1f8a41ead32230038930972e23448f3146216570,add easyconfig eudev-3.2-GCCcore-4.9.3.eb,FALSE,FALSE,TRUE,FALSE,,add,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 astropy/astropy,7ae4f811e809fc90ea05b5f35684d02a9c8b036f,"import matplotlib for fitting model example
 
 [docs only]
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,"example, docs",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 loomio/loomio,54a5cc8a26281758aa7a23f4ce8fdd747373f7aa,"Merge pull request #1601 from loomio/group-metrics
 
-first iteration of group metrics for admins",,,,,,,,random_batch_18_nov_2020,,,,,,,
+first iteration of group metrics for admins",FALSE,FALSE,TRUE,FALSE,first iteration,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 BelledonneCommunications/linphone,d6f82e984d6868693b9c443646cb5f66d0f54d0e,"update ms2 for X11 video rendering optimisation
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 grafana/grafana,0446fb9171d535063b77d9db8ca87fa09b658153,"more options in storybook
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,more options,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 odileeds/hexmaps,91dbea5411043b4d1a43602528ba36e0227783ed,"Update candidates from Democracy Club
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kiwitcms/Kiwi,249be93a1507226f0e94a4b7827d208b308fbf26,"Remove Meta.db_name effectively renaming all tables
 
 the new names will use Django's default naming scheme
@@ -3621,64 +3621,64 @@ Migrations for 'testruns':
     - Rename table for testrun to (default)
     - Rename table for testruncc to (default)
     - Rename table for testruntag to (default)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,FALSE,FALSE,FALSE,rename,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 elixir-lang/elixir,5c6bf0856c68a42935daba4f9a6f82b9e46843a3,"Clean up a couple more assertions
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,clean up,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 knsv/mermaid,c5c995c9160929c3e8d9772e74b2592d6b63e3b0,"Added the option to disable auto rendering via the mermaid namespace as described in issue #91
 Added optional ; as statement separator equal to newline for sequence diagrams (help for tidy users)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alxm/a2x,807f5a621637550642075cd0d030664d1ddc8f2e,"Merge branch 'dev_font'
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/airflow,ec2e02acc4489cb88071b510a4e35351e9cc6aa1,"Merge pull request #1261 from ty707/fix_once_scheduling
 
-Fixed scheduling for @once interval",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Fixed scheduling for @once interval",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/llvm-propeller,74cb9c88314a02d186f203e87aac6ca1da1f7501,"[AMDGPU] Fix incorrect register usage tracking in GCNUpwardTracker
 
 Differential revision: https://reviews.llvm.org/D33289
 
 llvm-svn: 303548
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fix, incorrect",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pksprojects/ElasticSwift,2f53c4d146076adadeb17ccc3782dbec067e8813,"[refactor] FullTextQuery and FullTextQueryBuilders
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,[refactor],,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 unknownbrackets/maxcso,a7dfee3b02c70ca872c750fc60860d238623be69,"win: add disk read/write count to uv_getrusage
 
 Refs: https://github.com/libuv/libuv/issues/342
 PR-URL: https://github.com/libuv/libuv/pull/1023
 Reviewed-By: Saúl Ibarra Corretgé <8a7991f6950ea189abf159d6ec98d2fcc13dc5f6@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 VSCodeVim/Vim,d252b63403b00eef4e3cb5b68996b2d49ea2318e,"Merge pull request #361 from VSCodeVim/nonblinking-cursor
 
-Add config option for nonblinking block cursor.",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Add config option for nonblinking block cursor.",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 darktable-org/rawspeed,b0437f6ae33d2f10f06ab06e4638560dea845529,"- RW2 reader optimized (40->55 MP/s)
 - Print help information when camera with mode cannot be found.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"optimized, print",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 conversationai/conversationai-moderator,6cb0b33962e1f4d596727598c950d91c3ff61abd,"documentation tweaks to reflect deployment improvements.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,documentation,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 DigitalCampus/oppia-mobile-android,ac3e06f0b6a5ac54cb60910e7e3d95a2b94522ab,"Removed ""Created by"" tag
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 polyaxon/polyaxon,0a0fe10436fd088f073016b84df68bea834ae027,"Add event's actor_id check
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/incubator-asterixdb,54ba057244e65dc33c4346d2c672d8d684dc3972,"fixed typo in interval printers
 
 Change-Id: I3d02e697624865b955e5f1991e7ea509d1dc0d21
 Reviewed-on: https://asterix-gerrit.ics.uci.edu/762
 Tested-by: Jenkins <d95b56ce41a2e1ac4cecdd398defd7414407cc08@fulliautomatix.ics.uci.edu>
 Reviewed-by: Yingyi Bu <9f9b34f9fbbf2f961c2363e64b04fcfd445c4695@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 colah/ImplicitCAD,7701a52b63799027a546fd1f0cdc6e5c589fae45,"Support silly ""function foo(x)=..."" syntax.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"support, silly",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 grahamegrieve/fhirserver,b01b04fca9b238e2a619d497214cd3a1a4d469e6,"update code
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Microsoft/PTVS,0ab9c42118d2a1066a605e76671e0396d71ed4ac,"Undo
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,undo - a revert?,commit not found,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 unitystation/unitystation,7d1a6bf42391432cd55814594ee8f7528a11a33d,"Upgrade build server to unity 2018.3.3f1
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,upgrade,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 BabylonJS/Babylon.js,cc1d8d90cc35a93a377dd4aeeb2063861cf42e31,"New Fresnel parameters for StandardMaterial
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,new parameters,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cloudify-cosmo/cloudify-manager,27ff1de581ec986655b83b2be1b47ad6d7116c9b,"Add cfyuser user on status reporter install
 
 It's now used by the manager install.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,97a62eaefdc196969e9d3857f65fc8a90ee1fe3c,"hfsplus: emit proper file type from readdir
 
 hfsplus_readdir() incorrectly returned DT_REG for symbolic links and
@@ -3694,9 +3694,9 @@ Cc: Vyacheslav Dubeyko <ab6b0d3a9a5b93cc5a527a2be8b0aca4398fecb5@dubeyko.com>
 Cc: Hin-Tak Leung <ec51f4bc3298ae58770617c0319da1091a2df7dd@users.sourceforge.net>
 Signed-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,emit,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ReactiveX/rxjs,949fa31ef695d99fc9f3ac977668acf8f6208979,"fix(bufferToggle): fix bugs in order to pass tests
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix:,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vortex-exoplanet/VIP,211f09db8384173047ebe616772037f5d9086003,"removed cosmetics_sdi.py
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 habitat-sh/habitat,31ff5b2da5020831956aed89d84d34405aacfdbf,"Bump VERSION to 0.16.0-dev
