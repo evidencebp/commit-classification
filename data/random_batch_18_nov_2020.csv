@@ -3698,34 +3698,34 @@ Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-fo
 ReactiveX/rxjs,949fa31ef695d99fc9f3ac977668acf8f6208979,"fix(bufferToggle): fix bugs in order to pass tests
 ",FALSE,FALSE,FALSE,TRUE,fix:,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vortex-exoplanet/VIP,211f09db8384173047ebe616772037f5d9086003,"removed cosmetics_sdi.py
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 habitat-sh/habitat,31ff5b2da5020831956aed89d84d34405aacfdbf,"Bump VERSION to 0.16.0-dev
 
 Signed-off-by: Fletcher Nichol <77a0fd9e8048bbacd11af4e957bc6ff03b549f49@nichol.ca>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,bump VERSION,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gan74/Yave,fa4a96e29a6a0d59830b20c4de70ab045756d9a6,"Optimized VAO
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,optimized,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 spacecowboy/Feeder,a66c905ee5d4431c632de57b8b7200265a121341,"Fix OPML parsing
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rstudio/sparklyr,b8fbcf1817b9775a479a149f6d8a5f374c837fa9,"need sudo to install arrow
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hashicorp/terraform,f70f778a5acfad703b5cdb23dabad4b8f659d029,"provider/aws: Randomize DB Option Group Name to avoid name conflicts in Travis CI
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,to avoid conflicts,breaking CI is a problem,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 scalameta/scalameta,9d9bea76c3cd84dd1ccdb6c34105be3080fceca2,"Merge pull request #53 from densh/topic/tok-offset
 
-Embed offset in new-style tokens",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Embed offset in new-style tokens",FALSE,FALSE,TRUE,FALSE,embed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 revig/revigniter,9df06376b9f23af998e329efbd7ed8826551ca53,"Adjust copyright in NOTICE
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,"copyright, NOTICE",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 eranif/codelite,db20e063d6e59739a0706eb81e1beab821dc9c20,"Fixed text hint for the 'Find/Replace' bar
 Added new option: Toggle Minimal View
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 guix-mirror/guix,a1639ae9de39d5ce47e6ddfd87e792db52b44bd6,"self: 'package-for-guile' really honors GUILE-VERSION.
 
 * guix/self.scm (package-for-guile): Pass GUILE-VERSION to
 'false-if-wrong-guile'.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,really honors,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zstackio/zstack,9638d67fb061dfd6195c8dffe9284dbab5f02ee8,"ping
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,6d5574ed5c8b1a1f31fcbdab5d26e15533c442ca,"ASoC: topology: Fix a potential NULL pointer dereference in 'soc_tplg_dapm_widget_denum_create()'
 
 if 'se = kzalloc()' fails in the 'for' loop, we will branch to 'err'.
@@ -3738,14 +3738,14 @@ and free the other ones.
 Fixes: 1a7dd6e2f192 (""ASoC: topology: Allow a widget to have multiple enum controls"")
 Signed-off-by: Christophe JAILLET <aa5b4d6ac057e7b0849afbbced06a03fc6c87d45@wanadoo.fr>
 Signed-off-by: Mark Brown <b51b9a92386687a9ac927cebfa0f978adeb8cea5@kernel.org>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openSUSE/open-build-service,b3138145058ca4689d81a96e1efdf9671293e325,"[api] delayed job has no user set, so fix crash there
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix crash,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 homeworkprod/byceps,975c336e5027013ac1ab57fac8a5594e40f4592f,"Export order XML with charset ISO-8859-1 to match what is specified in the document itself.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"to match documentation, bug by definition...",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 codenameone/CodenameOne,1766a20ce7eadedb4695285b84e45dbdcb98d7da,"added ""concatenated"" option to translator.
 compiled code with new SP now kinda works
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added option,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wongsyrone/lede-1,e219c3ac3aea7cb16a25babaef2214378ca33f4b,"enable OHCI/EHCI glue on Rt305x, so it is available for Rt3352F.
 
 Hope that this works, didn't have a chance to actually test it...
@@ -3753,15 +3753,15 @@ Hope that this works, didn't have a chance to actually test it...
 Signed-off-by: Daniel Golle <dgolle@allnet.de>
 
 SVN-Revision: 32815
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"enable, hope",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 stinsonga/emacs-mirror,25f01375540129388139e25163c2cdd6f4b20f48,"*** empty log message ***
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,,seems common message in updating the change log. by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rtfd/readthedocs.org,60f49f9fa10f47b0a896527660beb1fb7f16c5ed,"Merge branch 'master' of http://github.com/rtfd/readthedocs.org
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CompassionCH/compassion-switzerland,880d05caf1ff25bc3dbc327219a654633fea072b,"Add boolean is_tag on values to hide them in translate table
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 caffix/amass,a6a91d3325f2ded4c548109312da992d0dd177a3,"fixed a small problem with the maltegolocal package
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fix, problem",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 leo-yuriev/libfpta,1c1ca8e5e12f6c27c513f635cc0cbc8a65558e2e,"t1ha: set CI-status links to master branch.
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 danmar/cppcheck,a65fabebce00b6fafca73a347858c337b87efc7d,"GUI: refactoring librarydialog
