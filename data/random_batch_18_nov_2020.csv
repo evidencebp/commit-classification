@@ -3763,21 +3763,21 @@ CompassionCH/compassion-switzerland,880d05caf1ff25bc3dbc327219a654633fea072b,"Ad
 caffix/amass,a6a91d3325f2ded4c548109312da992d0dd177a3,"fixed a small problem with the maltegolocal package
 ",FALSE,FALSE,FALSE,TRUE,"fix, problem",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 leo-yuriev/libfpta,1c1ca8e5e12f6c27c513f635cc0cbc8a65558e2e,"t1ha: set CI-status links to master branch.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,set,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 danmar/cppcheck,a65fabebce00b6fafca73a347858c337b87efc7d,"GUI: refactoring librarydialog
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 4dn-dcic/fourfront,f2a42120f540ee6f4a6c4d50bb3c266829b49aa4,"placeholder
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hashicorp/nomad,a6bf5b6098822958cda7516386bf23d85b032a56,"Document check header and method
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,document,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 uqlibrary/fez,7ce1de18ce2e8b82ade4a75b2e1e50d8c6fb4c22,"Fix typo the got into code.
 Relates to story https://www.pivotaltracker.com/story/show/25747983
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 LPCIC/elpi,e68cdd689df40964fb87dca1e8f039ec22e1a6fd,"errors: better message for wrong arity
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,better message,"error is the subject, messeg is presented to the users. by code",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 fogbeam/cas_mirror,3fe4e22131948430dfb7a22eb2e44ad91948ee4f,"cleaned up metadata gen components
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-mzmine/mzmine3,618d08eb751e5c7c97324f546b451fa837629bdb,changed formatting of result comments and added plh functions,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleaned up,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+mzmine/mzmine3,618d08eb751e5c7c97324f546b451fa837629bdb,changed formatting of result comments and added plh functions,FALSE,FALSE,TRUE,FALSE,"changed, added",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zephyrproject-rtos/zephyr,9249f876a9823e4aaf8c2d1f0c6c971f250de366,"xtensa: cleanup fatal error handling
 
 1) Fatal errors now all go through _SysFatalErrorHandler. When the
@@ -3789,18 +3789,18 @@ actually expect a thread to terminate abnormally.
 
 Change-Id: I77f57ea0eae15b0c55237681b959cd21e3fe8c1c
 Signed-off-by: Andrew Boie <aab045b28152628be6af0e556050d0381fd0a34d@intel.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 AshamaneProject/AshamaneCore,de16ff14ded3472b4d8f8c3a2afb50709cbe8950,"Update options.cmake
 (cherry picked from commit e3de0ef531bf89a2f4193cf1beecf4bce05971af)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ppy/osu-framework,de018fb38fbfc8a978a46cdad0363a48234eb74c,"Update TestCaseInputManager
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 dpgaspar/Flask-AppBuilder,49755efa41f2567c9e38a8734e55a43485959db7,"Changes docs to readthedocs theme
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bikeindex/bike_index,87d31fcd899a9dc9c16f6c43c52e1da8883ed6eb,"minor email fixes
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 towhee/Winnow64,7c993316d526f60d684036c326a3d13c1905d0d7,"Redo progress bar 1
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,redo,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openstack/tempest,f640f665dfa155e70c43a24e3b3b13d3171f7e1f,"Add section to the config guide on lock_path
 
 This commit adds a section to the tempest configuration guide on
@@ -3808,46 +3808,46 @@ configuring the lock_path for running tempest and explains why it
 is needed.
 
 Change-Id: I73913797d96f9f833e02e5b37be9c0c85b3ae959
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,guide,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 toralf/tinderbox,5b7c7d63263aa021dad2881af9887b222924539f,"bin/job.sh: kick off an outdated warnign about gcc-7 on astbale
 
 Signed-off-by: Toralf Förster <24e9a7e86225fc01f236a81fc86e902a74542aa1@gmx.de>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,kick off outdated,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 freedomofpress/securedrop,403764efef0b9da27618d6245c13aa3b4ffecb70,"adds check for tor service to common
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adds,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wso2/devstudio-tooling-esb,6d1fbe92734c29bfd8ebdc778978a9dc30097d21,"Extending CappArtifactsListProvider for Mediator Project
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,extends,"by code, added a new class",,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 codenvy/che,4a95ba5e35428c41b73b2cdf79842448ed300938,"Merge
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mozilla/addons-server,806162e6b11657e1ae8f2888dcd3534cc29b4629,"Merge pull request #1103 from kumar303/upload-timing
 
-Track time from upload to version creation",,,,,,,,random_batch_18_nov_2020,,,,,,,
-OWASP/django-DefectDojo,a670dd9e29d2979004611b3a449fa51f95474b8d,Update README.md,,,,,,,,random_batch_18_nov_2020,,,,,,,
+Track time from upload to version creation",FALSE,FALSE,TRUE,FALSE,track time,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+OWASP/django-DefectDojo,a670dd9e29d2979004611b3a449fa51f95474b8d,Update README.md,FALSE,TRUE,FALSE,FALSE,readme.md,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ElunaLuaEngine/ElunaTrinityWotlk,8af6e6ca79643a2b0d576883a8015a0a9540612a,"Merge branch 'master' of github.com:TrinityCore/TrinityCore
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gryffon/ringteki,ed0baa81420fbd06ccd09ddeba70cb106f2561f1,"Fix Maester Caleotte (#286)
 
 The match property should have been targeting a specific card.
 Because it was a matching function, it was searching only cards in the
 targetController - your own cards by default - and not matching on
-opponent cards.",,,,,,,,random_batch_18_nov_2020,,,,,,,
+opponent cards.",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 samba-team/samba,0037b31b2f312586230c6631f647e5ad5fcbb994,"packaging(RHEL-CTDB): extend makespec.sh to extract VENDOR_PATCH from version.h
 
 Michael
 (cherry picked from commit fc122aa276bce379b492e5bdf52ab3e03bc3737f)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,extend,"by code, adds a feature, no abstraction related extension",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 folio-org/ui-users,8337857bda745358020c311f01b43f5bf3b0887d,"WIP: AddSP Modal
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pentaho/pentaho-kettle,1423ddf04a709ae3a0fecf2119bd6e06ed078a5e,"PDI-2228 : Repository improvements, unit test fix, code hardening.
 
 git-svn-id: 51b39fcfd0d3a6ea7caa15377cad4af13b9d2664@10836 5fb7f6ec-07c1-534a-b4ca-9155e429e800
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,TRUE,"improvments, fix",code seems unlrelated,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 payday-restoration/restoration-mod,23a859bcf2ed4d4cfe5a7797a85ef9a3291a9b7f,"btm ponr
 
 should be when all radars are destroyed
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,both code and text not clear. commits adds code,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jpush/jpush-docs,92d2ad5d5201f41ad32c9b2f188a85e7e3f65c6f,"Merge branch 'master' into dev
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 facebook/fresco,3808d2770f079cf821caac9e34aa423372700d08,"Added Vito controller 2 interface
 
 Reviewed By: defHLT
@@ -3855,10 +3855,10 @@ Reviewed By: defHLT
 Differential Revision: D20119276
 
 fbshipit-source-id: 1375fadea3f92b18ee78b0df0223c2dac5c3bb51
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"added, interface",by code,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 ManageIQ/manageiq,2e26c9427d78a5addc5e0ff7da26adbc1fba7ea5,"Merge pull request #9414 from imtayadeway/refactor/api-user-token-service
 
-Use the token service that we initialize with",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Use the token service that we initialize with",TRUE,TRUE,FALSE,FALSE,,,,random_batch_18_nov_2020,,,,,,,
 4dn-dcic/fourfront,8b0e37f35fe59fd8d16dd756c0eb74af7c819eb0,"Update Cypress test(s)
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 webanno/webanno,0f0cd063f1c166ef33c66b244e56e70e9739d70e,"#132  - Tooltips are shown as ""alternative text"" and not as ""pretty windows""
