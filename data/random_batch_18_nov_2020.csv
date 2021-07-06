@@ -3920,60 +3920,61 @@ prestodb/presto,b6a64697a5d0f9297ea98338b5b6f1a9dc686c75,"Add missing override a
 EasyRPG/Player,854f1b299137612382d245826bdd04f9cc4995a5,"Android : fix player restarting after flipping screen
 ",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 aio-libs/aiohttp,806ef8fcc2f4fc408cf71ee14a0678edf243b60e,"Add test for wait_closing() before start()
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CZagrobelny/new_sanctuary_asylum,0645c42c113284383fc19d084fcf055b97e4df1f,"Merge pull request #178 from CZagrobelny/latazzajones-search-cleanup
 
-Latazzajones search cleanup",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Latazzajones search cleanup",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 sklintyg/webcert,e23f093e728f4fde7fb69a1fa92e05cd5b2d1a07,"Korrigerade ID för fitnesse.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"in Swedish : """"Corrected fitness ID.""
+""",,,random_batch_18_nov_2020,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moodle/moodle,455fc30367eb7d3f1bfe43eb94f1993a350abadf,"Merge pull request #1 from nebgor/MDL-27440_chunkyfix
 
-MDL-27440 Backup - added database module 1.9 backup converter",,,,,,,,random_batch_18_nov_2020,,,,,,,
+MDL-27440 Backup - added database module 1.9 backup converter",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 yonaskolb/XcodeGen,6cdd9843a2d9a1567c83e268b80637548a1629e5,"Update SwiftCLI
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 microsoft/TypeScript,5f2da4afc8219091b3e191cfe5334aebb25a8437,"Don't use bitwise operations on this nmber.  It may be more than 32 bits.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"don't use, it may",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/wicket,3a3ef36c044005103bfdd5580d1c2d9e05f7c945,"exclude velocity logs from VCS
 
 git-svn-id: 5a74b5304d8e7e474561603514f78b697e5d94c4@1051721 13f79535-47bb-0310-9956-ffa450edef68
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,exclude,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mercadopago/px-android,0af3e8d60314becfe8673035b4347591d7c709e2,"fixed examples activity
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,fixed examples,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 iomad/iomad,8f71c6b20bccf31fba044d458b5b9a0da808288f,"
 Fixing PHP 5 warning.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,fixing warning,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ForestClaw/forestclaw,5f8471e18bcf5288f917ea2ff4f26e3f16eae526,"Updated to reflected latest version of the code
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,updated,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cynicaloptimist/improved-initiative,800ecdc3c6cd9d8625c1135ed14e369b77011d43,"Widen modifier name fields
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,widen fields,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 libretro/RetroArch,3bfd6ababdad7f460cc29dbbefb15e7dfe26a31e,"Merge pull request #10261 from valadaa48/odroidgo2_conf_extra
 
-Change some defaults for odroidgo2",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Change some defaults for odroidgo2",FALSE,FALSE,TRUE,FALSE,change defaults,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jodogne/OrthancMirror,a04c127bbd6f9c9df5b3d1e565cdd6b332b0b957,"Content-Type for JSON documents is now ""application/json; charset=utf-8""
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,is now,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zeux/meshoptimizer,4f76103740fd8895839175b6ad4d3a3f7216ffe0,"gltfpack: Use ktx2 extension for KTX2 files
 
 This is more correct than ktx that usually refers to KTX1.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"use, ""more correct"" yet before it wasn't wrong",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 teamleadercrm/teamleader-ui,c656f61b8374319fbc37505139544248b5c420d1,"Merge pull request #54 from teamleadercrm/crossbrowser/sections
 
-Sections: converted to crossbrowser supported css",,,,,,,,random_batch_18_nov_2020,,,,,,,
-openstack/heat,3f7661b07fea60f87cb79886f6bb60206863de1b,"Merge ""wrong argument order for assertEqual in test""",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Sections: converted to crossbrowser supported css",FALSE,FALSE,TRUE,FALSE,converted,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+openstack/heat,3f7661b07fea60f87cb79886f6bb60206863de1b,"Merge ""wrong argument order for assertEqual in test""",FALSE,FALSE,FALSE,TRUE,wrong,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OCA/purchase-workflow,7bf14c9d8fb8d02eb564af8730c0a3cffc50fce7,"purchase_landed_cost: Allow to import partial imported pickings
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,allow,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 informatics-isi-edu/chaise,696f1bc59294195f29cde0a1f266f200fc4f8fe0,"changes to support configurations per hostname
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"changes, to support",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 criticalmaps/criticalmaps-ios,3fdf4661c8573dd93cd2453e1461ecada9fca912,"reverted format
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,reverted (though format),,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 QuantConnect/Lean,c42c4ce35e7d5be8b8d64e6fb848f61d69d808e6,"DesktopClient added that accepts messages from engine
 
 The DesktopClient recieves messages from the LEAN engine and uses an instance of the IMessageHandler to pass messages to the view.  The DesktopClient uses a NetMQ Pull socket to accept the messages over TCP.
 
 The desktop client should be run in another thread.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alisw/AliRoot,b2fc212573e442988ea08fe6f8ce5b96f9a8ada6,"K0s code coverity fix
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"coverity, static analyzer warning fix",commit contet is empty,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vega/vega,cecee7240e688c2b0e7276cdf372201fbefd24ab,"Bump rollup from 1.29.0 to 1.30.0
 
 Bumps [rollup](https://github.com/rollup/rollup) from 1.29.0 to 1.30.0.
@@ -3981,48 +3982,48 @@ Bumps [rollup](https://github.com/rollup/rollup) from 1.29.0 to 1.30.0.
 - [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
 - [Commits](https://github.com/rollup/rollup/compare/v1.29.0...v1.30.0)
 
-Signed-off-by: dependabot-preview[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@dependabot.com>",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Signed-off-by: dependabot-preview[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@dependabot.com>",FALSE,FALSE,TRUE,FALSE,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 SleepyTrousers/EnderIO,f62bb9acc09d40ccca5539777737b6999ac8dcb7,"Added block breaking particles for painted blocks
 
-and fixed particle speed for conduits",,,,,,,,random_batch_18_nov_2020,,,,,,,
+and fixed particle speed for conduits",FALSE,FALSE,TRUE,TRUE,"added, fixed",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 guildai/guild,4e074b1bfdeffa7b36d74f5b4c2bd67778d45e8c,"run_output function for gapi
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NaturalHistoryMuseum/scratchpads2,dbb4d8ce962224c9e7a3323733f402e6515ddba9,"Merge branch 'master' into 1174-flexible-front-page
 
 
-Former-commit-id: 8804c70d5fa6951962583b2dcaf4cb7f75e7bb78",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Former-commit-id: 8804c70d5fa6951962583b2dcaf4cb7f75e7bb78",FALSE,FALSE,TRUE,FALSE,flexible front page,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google-research/google-research,0090728722a50ca15f2f10cf9423aeb8054620d0,"Internal change
 
 PiperOrigin-RevId: 263206179
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,change,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wildfly/wildfly,143527f595206c5f2bf037b47c797f052cbe5d2e,"WFLY-9497 Allow Externalizer implementations for abstract classes, where we don't care about the specific implementation class.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"allow, abstract",,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 knq/chromedp,7615cdd4e59c8df96be198919ee0d87225f4cf50,"Updating to latest protocol.json
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,updating,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Kenshin/simpread,6d3cad648737af00f88298d82d5e6c4dc657a7a7,"Add instapaper logic.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pingcap/docs-cn,6a19deb7f9f79f7e099f6b73343d98e6dabe892c,"Update v2.1/reference/sql/statements/split-region.md
 
-Co-Authored-By: bb7133 <19b8d4b5d148789c6e8e5bcf13a90d72d8af5f6c@gmail.com>",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Co-Authored-By: bb7133 <19b8d4b5d148789c6e8e5bcf13a90d72d8af5f6c@gmail.com>",FALSE,TRUE,FALSE,FALSE,"reference, *.md",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 n3rdopolis/rebeccablackos,c2f34a360750f66883d2551eb53459ce4e042c50,"Make freetype use cmake
 
 git-svn-id: 33c7faf6a34aa01402e7b90ccf725d9810c2fb8b@5531 b52b6941-3400-464c-9f42-43200397181c
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,make use,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 prometheus/prometheus,61d793cb1f1569d954d52b593561a871c6ec040d,"handle web_test webhandler errors.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,handle errors,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 agdsn/pycroft,cda92121c3f7c00ea46959a6c74f1226667927e7,"Revert further typing information
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,,TRUE,revert,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 fpco/stackage,14eb23a189894e2a42a874e27d81cfb461b15855,"hspec-expectations < 0.8.0 (#1971)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-nextgis/buildbot,39aae699650e300f694b4bec3b85b4edb56aa0ea,Update master.cfg,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+nextgis/buildbot,39aae699650e300f694b4bec3b85b4edb56aa0ea,Update master.cfg,FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 miranda-ng/miranda-ng,82686e46bc9e8810a6ce2efa9bfb6e0472246f49,"MessageState: fixed icon changing 
 
 git-svn-id: 4115c852ce6edf181d3c694a7293ab46e349b79a@15280 1316c22d-e87f-b044-9b9b-93d7a3e3ba9c
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,,fixed,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alphagov/whitehall,400a4ed31846327934b793a55c0e5eb5c8fc6511,"Merge commit '0c62d78cf8379a4bc81759e262fc80f7ace3c652' into HEAD
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ezSQL/ezSQL,47ef16d6bba005c38ebe79af378c013f1b793a7b,"rework to detect for primary key
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,rework,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,74859364633963cb660c4fa518adca9ab1ca4229,"[PATCH] dm: tidy core formatting
 
 Remove unnecessary spaces in dm.c.
@@ -4033,37 +4034,37 @@ Signed-off-by: Alasdair G Kergon <620085386a2c64ec2f1d43bef997c15003f13da2@redha
 Cc: 26563b39349efc27b4b90f2b2f71f197a82fca67@redhat.com
 Signed-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@osdl.org>
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@osdl.org>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,"tidy formatting, remov spaces",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kubernetes/legacy-cloud-providers,b5fb732b3c125e493a8943d59b944d922625c1ae,"Fix ListZonesInRegion() after client BasePath change
 
 This path fixes region Regex for listing zones.
 Compute client BasePath changed to compute.googleapis.com, but resource URI were left as www.googleapis.com
 
 Kubernetes-commit: a7c3c9f0d504ad2f2a74fdd380ef3ac63fd7d8fe
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Ensembl/ensembl-webcode,64282edff53381efb90c1537af5ce3306e44eac2,"Server-side cacheing in memcached.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,cacheing,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 frappe/frappe,60a752b9f791c45ba8c2170cd8d33ac991123e4e,"Merge branch 'develop' of https://github.com/frappe/frappe into feat-value-change-detection
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ciscospark/spark-js-sdk,527e64eadd9b47e8e5e56331ef7f402429edc262,"chore(tooling): force string comparisons
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,chore,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 facebook/react,5ec387aa829d0f9bef9b1e2871491c4c30fcf188,"Mark reload-and-profile attach as configurable
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,mark,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Roll20/roll20-character-sheets,9678ec6ac9b45a10f6baf07f0a33d8676dcff11b,"change attack type in roll template
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,change,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/wuffs,66047db6d8d28d73942d224b46dabf6c464e23d4,"Be more paranoid about calling strncmp.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-CM4all/beng-proxy,6f05bdf4de564a8dccda3abbc1f0eb6af211d907,release v10.0.5,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,more paranoid,"semntic hint, no syntactic evidence, by code",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+CM4all/beng-proxy,6f05bdf4de564a8dccda3abbc1f0eb6af211d907,release v10.0.5,FALSE,TRUE,FALSE,FALSE,release ,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 CCI-MIT/XCoLab,8e624a9b4be9ce5ed16e0a7a1087732884410e79,"Implemented proposal impact edit
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,implemented,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/activemq-artemis,e7f2dd39ac83a51fec1d651d39236366c67753e8,"This closes #2040
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 igniterealtime/Openfire,99cb147800a17ba2cf642f006e7282a116de9927,"Update plugin min Openfire version requirement to 4.0.0
 
 Previously, we had a quasi-hack of `3.11.0-alpha` as the min requirement
 on these, but this release never happened.  This update moves all these
 plugins to 4.0.0, which hopefully provokes less confusion.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 danmar/cppcheck,911e1f9559ef88ecf926ba15ab54d60569b3fda8,"Revert ""htdocs: move inline JS to a separate file.""
 
 This reverts commit 3a9740b11098cc14584c9d47757333d3b9cb3073.
