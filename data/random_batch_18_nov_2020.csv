@@ -3858,23 +3858,23 @@ fbshipit-source-id: 1375fadea3f92b18ee78b0df0223c2dac5c3bb51
 ",FALSE,FALSE,TRUE,FALSE,"added, interface",by code,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 ManageIQ/manageiq,2e26c9427d78a5addc5e0ff7da26adbc1fba7ea5,"Merge pull request #9414 from imtayadeway/refactor/api-user-token-service
 
-Use the token service that we initialize with",TRUE,TRUE,FALSE,FALSE,,,,random_batch_18_nov_2020,,,,,,,
+Use the token service that we initialize with",TRUE,TRUE,FALSE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 4dn-dcic/fourfront,8b0e37f35fe59fd8d16dd756c0eb74af7c819eb0,"Update Cypress test(s)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 webanno/webanno,0f0cd063f1c166ef33c66b244e56e70e9739d70e,"#132  - Tooltips are shown as ""alternative text"" and not as ""pretty windows""
 - Downgrading Wicket / Wicket JQuery UI dependencies again...
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"shown as and not as, downgrading again...",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 cloudfoundry/python-buildpack,7c54ad67eb8f28aa74de6ba40600acb8755f5fd6,"PyOpenSSL capitalization
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,capitalization,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Ardour/ardour,9283bee867ce788465f3e48ed889cd324e098e64,"new header file for audio-based time types
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,new,code dosn't match message,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 etomica/etomica,c450cfeb264524083caa475936dd94fd321f6c3a,"add a deltaU plot
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Ensembl/ensembl-compara,c1f50760ac77dd5a569504746c05a3d1c95a1378,"
 added the perc_id and score  to the align_blocks
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mne-tools/mne-python,55351af76f7a20e7e45d730f8d011e2def751092,"ENH prevent break backwards compat
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code - changed parameters order in signature,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 plumed/plumed2,ec7ed1707820ac237b5de8a4d29f522e46e39b25,"Fixed parse of cmd string
 
 Before this fix, using cmd() with an erroneous string was triggering
@@ -3882,26 +3882,26 @@ no error. Now this is fixed.
 
 Notice that this is an old bug (introduced in 0a46f15d).
 It should be harmless when using MD codes with proper interfaces.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-community,34c1c15f217c365a659cd02a5b7bfcc6c0f86495,"ring: show used
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,show,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 opencog/link-grammar,e9def78cda82935cb3a9caf07bd20ad9facade62,"misc cleanup
 
 
 git-svn-id: fc35eccb03ccef1c432fd0fcf5295fcceaca86a6@28191 bcba8976-2d24-0410-9c9c-aab3bd5fdfd6
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mozilla/socorro,44c3cb53a7c05a8b5cf5dc6c3e9395b9ccfb56e6,"Merge pull request #4872 from willkg/1540680-mpc
 
-bug 1540680: nix MissingProcessedCrashes",,,,,,,,random_batch_18_nov_2020,,,,,,,
+bug 1540680: nix MissingProcessedCrashes",FALSE,FALSE,FALSE,TRUE,"bug, nix?, crashes",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rhinstaller/anaconda,eeaa36e1c79373546c3b48cbfc3c9f1133b53a94,"Fix a stupid typo in the disk shopping cart (#864842).
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-ElvisResearchGroup/L42,1fec2d4abbc4666ab67b3192e168df0f5890cfc4,.,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,"stupid, typo",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
+ElvisResearchGroup/L42,1fec2d4abbc4666ab67b3192e168df0f5890cfc4,.,FALSE,TRUE,FALSE,FALSE,modifies a text file,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MyCoRe-Org/mycore,b7dddc02eae27fb35d9a1f71e987cc246cd80980,"MCR-1150 #comment added RequestDebugFilter to mycore-base
 
 git-svn-id: 5c3a6088a260de08063aa573fa0e2db6520eb9b6@34285 7089d063-bc14-496d-ac90-53de1872eb6c
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 StepicOrg/stepik-android,a4bc17a9d0f797b962c44277ecc931fe1f1f2f8f,"auto hide for controls
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,auto hide,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vivaxy/course,11877498b62fba4622fc420f384af0818630e5b7,"chore(deps): bump handlebars in /algorithms/linked-list/implements
 
 Bumps [handlebars](https://github.com/wycats/handlebars.js) from 4.1.2 to 4.5.3.
@@ -3909,16 +3909,16 @@ Bumps [handlebars](https://github.com/wycats/handlebars.js) from 4.1.2 to 4.5.3.
 - [Changelog](https://github.com/wycats/handlebars.js/blob/master/release-notes.md)
 - [Commits](https://github.com/wycats/handlebars.js/compare/v4.1.2...v4.5.3)
 
-Signed-off-by: dependabot[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@github.com>",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Signed-off-by: dependabot[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@github.com>",FALSE,FALSE,TRUE,FALSE,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 opencobra/cobratoolbox,dec258e56f55a4b70691325b629d75078d7a8060,"[documentation] increase png density
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,documentation,change density in the script generating the tutorials,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 metasfresh/metasfresh-webui-frontend,65e1b6e631f0d4c418920db380fc8cae4c028d60,"- cleanup test #2020
 - rewrite fetching actions to async/await #2020
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"cleanup, rewrite",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 prestodb/presto,b6a64697a5d0f9297ea98338b5b6f1a9dc686c75,"Add missing override annotation
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,add missing,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 EasyRPG/Player,854f1b299137612382d245826bdd04f9cc4995a5,"Android : fix player restarting after flipping screen
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 aio-libs/aiohttp,806ef8fcc2f4fc408cf71ee14a0678edf243b60e,"Add test for wait_closing() before start()
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 CZagrobelny/new_sanctuary_asylum,0645c42c113284383fc19d084fcf055b97e4df1f,"Merge pull request #178 from CZagrobelny/latazzajones-search-cleanup
