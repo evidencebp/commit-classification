@@ -30,7 +30,7 @@ from model_evaluation import classifiy_commits_df, evaluate_performance
 # TODO - use split to find related tokens
 #  https://stackoverflow.com/questions/27060396/bigquery-split-returns-only-one-value/27158310
 
-# NPE, prevent, incompatible, roll back, nullptr, NullPointerException, assignment in  condition
+# NPE, prevent, incompatible, roll back, nullptr, NullPointerException
 # Table 1 in "A Comparative Study of Industrial Static
 # Analysis Tools"
 # https://www.sans.org/top25-software-errors/
@@ -62,7 +62,7 @@ core_bug_terms = [
              ]
 # Positive
 bug_terms = ['actual.*expected',
-             '((assignment|assign|=) in if|== instead of =)',
+             '((assignment|assign|=) in if|== instead of =)', # condition/conditional is usually a static analyzer warning
              'expected.*actual'
              '(choose|take|set|use)\\s*(the|a)?\\s*correct', # correct as adjective
              "(not|isn't|doesn't)\\s+work(s|ing)?", # TODO - check with negation
@@ -102,6 +102,7 @@ bug_terms = ['actual.*expected',
              'npe(?:s)?'
              'null pointer(?:s)?',
              'nullpointerexception',
+             #'[a-z]+exception', # finds new cases but filtering is needed
              'off(?:-| )by(?:-| )(one|1)',
              'out of bound(?:s)?',
              'over(?:-| )?run(?:s)?',
