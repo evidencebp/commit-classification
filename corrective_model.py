@@ -144,13 +144,13 @@ valid_fix_object = prefective_entities + ['#',
                     'format(?:ing)?',
                     'help',
                     'remark(s)?',
-                    'space(s)?',
+                    'spac(e|es|ing)',
                     'spelling',
                     'style|styling',
                     'typo(s)?',
                     'typing(?: |-)?(error|mistake)(s)?',
                     'warning(s)?',
-                    'white(?: |-)?space(s)?']
+                    'white(?: |-)?spac(e|es|ed|ing)']
 
 valid_terms = [
     'break\sout',
@@ -361,11 +361,7 @@ if __name__ == '__main__':
     #this fixed the bug 123
 
     text = """
-Merge pull request #899 from acumenlabs/ACM-1726_task_status_filter_d…
-…one_out_by_default
-
-ACM-1726: Exclude done filter by default
-
+spacing issues fix
 """.lower()
     print("is fix", is_fix(text))
     print("fix in text", re.findall(build_bug_fix_regex(), text))
