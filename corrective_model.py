@@ -150,7 +150,8 @@ valid_fix_object = prefective_entities + ['#',
                     'typo(s)?',
                     'typing(?: |-)?(error|mistake)(s)?',
                     'warning(s)?',
-                    'white(?: |-)?spac(e|es|ed|ing)']
+                    'white(?: |-)?spac(?:e|es|ed|ing)',
+                                          ]
 
 valid_terms = [
     'break\sout',
@@ -202,7 +203,7 @@ def build_valid_find_regex():
     prefix = term_seperator + fix_re + '[\s\S]{1,40}' + "(" + "|".join(valid_fix_object) + ")" + term_seperator
 
     suffix = term_seperator + "(" + "|".join \
-        (valid_fix_object) + ")" + term_seperator + '[\s\S]{0,40}' + term_seperator + fix_re + term_seperator
+        (valid_fix_object) + ")" + term_seperator + '[\s\S]{0,40}'  + fix_re + term_seperator
 
     # TODO - check seperation
     #sepertion = '(?:%s|%s[\s\S]{0,40}%s)' % (term_seperator, term_seperator, term_seperator)
@@ -360,12 +361,19 @@ if __name__ == '__main__':
     evaluate_fix_classifier()
     #this fixed the bug 123
 
-    text = """
-spacing issues fix
-""".lower()
+    text = """added whitespace fix""".lower()
     print("is fix", is_fix(text))
     print("fix in text", re.findall(build_bug_fix_regex(), text))
-    print("v1", re.findall('(?:fix(?:ed|es)?|bug)(?: )?(?: |-|=|:)(?: )?[a-z]{0,3}(?:-)?\d+', text))
+    print("v1", re.findall('white(?: |-)?spac(?:e|es|ed|ing)', text))
+
+    fix_re = "(" + "|".join(fixing_verbs + [MERGE_PREFIX]) + ")"
+
+    suffix = term_seperator + "(" + "|".join \
+        (valid_fix_object) + ")" + term_seperator + '[\s\S]{0,40}' + term_seperator + fix_re #+ term_seperator
+
+    print("v2", re.findall(suffix, text))
+    print("v3", re.findall(term_seperator + "(" + "|".join(valid_fix_object) + ")" + term_seperator + '[\s\S]{0,40}' + term_seperator + fix_re, text))
+    print("v4", re.findall(  "(" + "|".join(valid_fix_object) + ")" + '[\s\S]{0,40}' + term_seperator + fix_re, text))
     valid_num = len(re.findall(build_bug_fix_regex(), text))
     #print(re.findall(r'(merge (branch|pull request).{0,250}(\r\n|\r|\n|$)|merge (branch|pull request).{0,250}(from|into).{0,250}(\r\n|\r|\n|$))'fix', text))
 
