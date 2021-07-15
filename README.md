@@ -72,3 +72,6 @@ See here the [analysis utilities](https://github.com/evidencebp/analysis_utils)
 
 
 See here the [corrective commit probability code](https://github.com/evidencebp/corrective-commit-probability), using all the above
+
+# Versions
+Live version is updating at https://github.com/evidencebp/commit-classification
