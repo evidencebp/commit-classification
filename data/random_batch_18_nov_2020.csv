@@ -4076,10 +4076,10 @@ Conflicts:
 	htdocs/run-tests.js
 	htdocs/site/js/cppcheck.js
 	htdocs/site/js/pack.js
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,revert,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 scalameta/scalafmt,25390bdf88f859e8cfed0c931cdb26ebac92d4a4,"Merge pull request #1197 from olafurpg/1182
 
-Unskip trailing commas tests, fixes #1174",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Unskip trailing commas tests, fixes #1174",FALSE,FALSE,FALSE,TRUE,"unskip, fixes",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,95651cd926bfa37036d7011a65421ab0db1b4959,"drm/msm/mdp5: Use the newly introduced enum mdp_component_type
 
 When calculating phase steps, let's use the same enum
@@ -4089,9 +4089,9 @@ this type of arrays.
 
 Signed-off-by: Stephane Viau <d4fda244ee25abe7d0b7d782a99f7543e6ef436b@codeaurora.org>
 Signed-off-by: Rob Clark <915c10c999604870200b6defbe633d857c856ca0@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"use enum, confusing",by code,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
 xwiki/xwiki-platform,9df51348dc53881cc7d558628c82d35a61201054,"XWIKI-11077: Livetable sorting and filtering not working for columns from other classes
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,not working,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,865a381223cff0d6d976d9bbe1d57a9288ba147b,"ARM: at91: cleanup initilisation code by removing dead code
 
 The AT91-specific SoC strucutre ""struct at91_init_soc"" was filled with specific
@@ -4101,7 +4101,7 @@ description, remove unneeded functions.
 Signed-off-by: Arnd Bergmann <f2c659f01951776204a6c5b902787d9019fbeebd@arndb.de>
 [45b517be0e5ec6dc3a39715767c1d18e090d39b4@atmel.com: split patch]
 Signed-off-by: Nicolas Ferre <45b517be0e5ec6dc3a39715767c1d18e090d39b4@atmel.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"cleanup, removing deaad code, got rid",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,78df445e7807b1ed741d2571280a674f3e4a57bf,"i2c: sh_mobile: Add support for r8a73a4 and sh73a0
 
 Add support for r8a73a4 (R-Mobile APE6) and sh73a0 (SH-Mobile AG5).
@@ -4114,18 +4114,18 @@ Interface (IIC)"", subsection ""Transfer Rate"" of the datasheets.
 
 Signed-off-by: Geert Uytterhoeven <a1ff81395f7e6bf5b509fe9aab06bf3419493e1d@glider.be>
 Signed-off-by: Wolfram Sang <fd4ce474653598159cad06f3c83387a05cd53a44@the-dreams.de>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add support,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 scala/scala,d8fd11da13cb66367afd67b9ff18eec306e9fb15,"Add Regex.matches (#10827)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 smeighan/xLights,8b10df32a49da995fbde8920a201cead517dd806,"Fix model face centred not working.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fix, not working",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OpenSCAP/openscap,5bf1556bc867401e664de67a0b2ccaa8e7c86ce4,"Add SCAP 1.3 source datastream schema
 
 Downloaded from
 https://csrc.nist.gov/schema/scap/1.3/scap-source-data-stream_1.3.xsd
 Converted the EOLs to Unix using `dos2unix` tool.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-miraheze/puppet,26dd752ee492e3906fcb7ff9d89040347fea1c6e,Make  check_interval and retry_interval a string,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+miraheze/puppet,26dd752ee492e3906fcb7ff9d89040347fea1c6e,Make  check_interval and retry_interval a string,TRUE,TRUE,FALSE,FALSE,make a string,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openstack/tempest,8af17d65e4f5aa9ea4ff737346c11a18c156773c,"Make identity v3 domains_client use **kwargs
 
 As we discussed on
@@ -4139,11 +4139,11 @@ Also add and correct doc string link.
 Partially implements blueprint consistent-service-method-names
 
 Change-Id: Ibe27a399e5b2774aae2c3585e2299616583c25f9
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"make use, doc string",by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Mocha2007/mocha2007.github.io,2175a1ed74bd5a228c46c29588536b28931f63f6,"niner, fixed halve
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 robolectric/robolectric,80f80a74b1db2cb3d94ebc74a529506bc814f459,"Switch mockito integration test back to java.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,switched back to,FALSE,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 SeleniumHQ/selenium,c0b01df77826286ea356d2c7752e4f2125ae3e60,"FileUtilities.GetCurrentDirectory reflection fix
 
 Fix for ""The path is not of a legal form"" exception when calling FileUtilities.GetCurrentDirectory using reflection
@@ -4153,13 +4153,13 @@ This was caused by an empty string being passed to System.IO.Path.GetDirectoryNa
 Fixes #3447
 
 Signed-off-by: Jim Evans <6d79d03c0573f3cb082d0037a63e1832cd69a278@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fix, not legal",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mercadopago/px-ios,eb8e00c990f197cadedb24c04cabdff1db1751c3,"Unused code deleted
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,unused code,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 KDE/kdenlive,861bd2cef4f91dab5e7f835a185136120376d7ac,"new clang-tidy config
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,new,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 berkmancenter/mediacloud,486dbb8d51501dc11500b17d826a35aa7a01920e,"Add some debugging prints to CoreNLP worker to find out why it's so slow
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
 stb-tester/stb-tester,f90ee6c0186b6a7849aba1a30ca175a25688ebad,"Add tests for stbt.match debug html
 
 These are simple characterization tests. Hopefully they won't cause too
@@ -4171,17 +4171,17 @@ byte-for-byte identical on Travis vs. my laptop -- due to different
 GStreamer versions? OpenCV? At least we can test that the expected
 filenames are created, and we do validate the contents of the index.html
 files.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"add,hopefully",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 sagemathinc/cocalc,399839557ab4784554dcd18f8b01212b235eab69,"Test site_name
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,test,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stinsonga/emacs-mirror,089e089d4bcc791add54b160c1a36fd91bd95ba4,"Describe the version-specific site-list directory.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,describe,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/camel,24a2d04fa51cc4e941daa4e264027bdde6fe607c,"Default tail tracking strategy must always exist. The endpoint getter always must ensure that it is never null.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"must exist, must ensure, never null",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-scala,540e9c3089fa928480485801866dcd8423462c10,"success BNF class killing
 
 git-svn-id: ba81b6bd3dd9830eeafada3de57364a31f808d18@21385 59f64563-22e8-0310-8d2c-98a15e1539f2
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,deleting a class - unneeded code removal?,"by code, removed a class",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/jackrabbit-oak,55a95371d9d0c35834e5cfe919acf9b35ad06031,"OAK-6535 - Synchronous Lucene Property Indexes
 
 PropertyIndexUpdateCallback implements PropertyUpdateCallback and
@@ -4195,19 +4195,20 @@ HybridPropertyIndexLookup performs the query part taking into account
 for bucket storage
 
 git-svn-id: 67138be12999c61558c3dd34328380c8e4523e73@1810629 13f79535-47bb-0310-9956-ffa450edef68
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NodeBB/NodeBB,4ee3543ea43db0fce63bbaa8baca8953362dcb5f,"feat: tweak intersection code, add tests
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"tweak, add",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 KE-works/pykechain,59ce00ecdcc8602641fb2289c9e23a30d5296ff1,"added upload function to attachmentproperty
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 libMesh/libmesh,a203f0e7f3096de5c5ca06d00e7aa797b5734797,"remove overzealous assert
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 thorsten/phpMyFAQ,7aafaf8e8646f8892861a693c2cbcd8ca3c71aa0,"Update of slovak language
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-openthinclient/openthinclient-manager,9ba323b48d5b84169e8f254259de826d8dd65c1b,,,,,,,,,random_batch_18_nov_2020,,,,,,,
-it-projects-llc/pos-addons,56fd8786045d93c8cb47be127ebe649f6ae20c5c,Update README.rst,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,Slovak language,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+openthinclient/openthinclient-manager,9ba323b48d5b84169e8f254259de826d8dd65c1b,,FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evedence (no message)",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+it-projects-llc/pos-addons,56fd8786045d93c8cb47be127ebe649f6ae20c5c,Update README.rst,FALSE,TRUE,FALSE,FALSE,readme,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Maximus905/voiceDbApp,cecc1c0d3cecc188a3be3758488546c4bc2977ad,"в миграции таблицы создаются через createTabe
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"Russian: ""in migration tables are created via createTabe
+""",,,random_batch_18_nov_2020,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Bitcoin-ABC/bitcoin-abc,e4e77ee55d8a041ab9922879522856f5f7903c58,"Merge pull request #7194
 
 135d6ec Add RPC tests for getblockheader. (James O'Beirne)
