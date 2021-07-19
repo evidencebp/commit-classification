@@ -125,7 +125,7 @@ def evaluate_performance_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='90a58fe07119d5c7ac094913e72305bf314dd65b')
+    print_concepts_functions_for_bq(commit='37802ac3c316a3c7a3befcf774838f282cdf162a')
     #evaluate_performance_classifier()
 
     text = """Update to optimize align/arrange buttons
