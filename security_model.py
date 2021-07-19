@@ -48,6 +48,7 @@ positive_terms = [
  '(de)?serializ', # consider
  'directory traversal',
  'dos', # consider
+ 'duo', # MFA provider
  'encript' + REGULAR_SUFFIX,
  'encription',
  'ensur(?:e|es|ed|ing)(\sthe)?\ssafety',
@@ -64,7 +65,10 @@ positive_terms = [
  'lockout',
  'malicious',
  'malware(?:s)?', #plural of malware is malware yet not all are aware
+ 'mfa', # Multi factor authentication
+ 'multi factor authentication',
  'nvd' # NVD
+ 'okta', # MFA provider
  'open redirect',
  'osvdb', # OSVDB
  #'overflow', # usually general
@@ -103,6 +107,7 @@ positive_terms = [
 
 excluded_terms = ['https://secure', # A too common link in commits
                   'error(?:s)? injection', # in tests
+                  'mfa frame' # seems unrelated
                   ]
 
 def build_positive_regex():
