@@ -85,6 +85,11 @@ See here the [analysis utilities](https://github.com/evidencebp/analysis_utils)
 See here the [corrective commit probability code](https://github.com/evidencebp/corrective-commit-probability), using all the above
 
 # Versions
+
+Version used for "ComSum: Commit Messages Summarization and Meaning Preservation" by Leshem Choshen and Idan Amit.
+
+[![DOI](https://zenodo.org/badge/253520268.svg)](https://zenodo.org/badge/latestdoi/253520268)
+
 Live version is updating at https://github.com/evidencebp/commit-classification
 
 Repository will keep advancing.
