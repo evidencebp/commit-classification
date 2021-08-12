@@ -51,6 +51,18 @@ Please cite as
 } 
 ```
 
+The repository itself should be cited as
+```
+@article{Amit2021CommitClassification
+, title={natural language processing for software engineering}, 
+DOI={10.5281/zenodo.5179812},
+publisher={Zenodo}
+, author={Idan Amit}
+, year={2021}
+, month={Aug}}
+
+```
+
 # Project structure
 
 ## [Labeling Protocols](https://github.com/evidencebp/commit-classification/tree/master/labeling_protocols)
