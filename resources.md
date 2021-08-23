@@ -137,3 +137,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [What makes a good Node.js package? Investigating Users, Contributors, and Runnability](https://arxiv.org/pdf/2106.12239.pdf) [repo](https://zenodo.org/record/5010160#.YN1ygBMzZhE)
 
 [CVEfixes: Automated Collection of Vulnerabilities and Their Fixes from Open-Source Software] (https://arxiv.org/pdf/2107.08760.pdf) [repo](https://zenodo.org/record/4476564#.YP0eyhMzZb8)
+
+[MSR Mining Challenge: The SmartSHARK Repository Mining Data] (https://arxiv.org/pdf/2102.11540.pdf) [repo](https://smartshark.github.io/dbreleases/)
