@@ -141,3 +141,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [MSR Mining Challenge: The SmartSHARK Repository Mining Data](https://arxiv.org/pdf/2102.11540.pdf) [repo](https://smartshark.github.io/dbreleases/)
 
 [CrossVul: A Cross-Language Vulnerability Dataset with Commit Data](https://dl.acm.org/doi/pdf/10.1145/3468264.3473122) [repo](https://zenodo.org/record/4734050#.YSTP5RMzZb8)
+
+[PYREF: Refactoring Detection in Python Projects](https://users.encs.concordia.ca/home/n/nikolaos/publications/SCAM_2021.pdf) [repo](https://github.com/PyRef/PyRef)
