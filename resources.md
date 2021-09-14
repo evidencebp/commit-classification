@@ -143,3 +143,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [CrossVul: A Cross-Language Vulnerability Dataset with Commit Data](https://dl.acm.org/doi/pdf/10.1145/3468264.3473122) [repo](https://zenodo.org/record/4734050#.YSTP5RMzZb8)
 
 [PYREF: Refactoring Detection in Python Projects](https://users.encs.concordia.ca/home/n/nikolaos/publications/SCAM_2021.pdf) [repo](https://github.com/PyRef/PyRef)
+
+[On the differences between quality increasing and other changes in open source Java projects](https://arxiv.org/pdf/2109.03544.pdf) [repo](https://github.com/atrautsch/emse2021_replication)
