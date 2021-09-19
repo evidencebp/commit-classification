@@ -213,7 +213,7 @@ positive_terms = [
 ,'prufe' # mistake of proof
 ,'publically' # mistake of publicly
 ,'quarentine' # mistake of quarantine
-,'que' # mistake of queue
+#,'que' # mistake of queue # more common as a non-English word
 ,'questionaire' # mistake of questionnaire
 ,'questionnair' # mistake of questionnaire
 ,'readible' # mistake of readable
@@ -355,24 +355,13 @@ def evaluate_typo_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='4014893c710d5a0eb42eff1b8c4aeac3884a6f79')
+    print_concepts_functions_for_bq(commit='08d6b8e395fb22d144309de17162e414fa13f4da')
     #evaluate_typo_classifier()
 
     text = """
-"Fix typo in histogram name.
-
-The CL https://codereview.chromium.org/943823002/ introduced a new
-histogram for whether web pages are assumed to be mobile friendly.
-
-However, there was a typo in recording the histogram name.
-
-This fixes the recording part to match the histogram.
-
-BUG=462721
-
-Review URL: https://codereview.chromium.org/965883002
-
-Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#318532}
+"- Cambiados algunos '@return array' por '@return self[]' o '@return ClaseConcreta[]', así evitamos usar instanceof y se autosugiere bien el código.
+- Añadido allFromArticulo a Stock, ya que se llama desde otra clase.
+- Revertidos un par de cambios menores de anteriores commits.
 "
 """.lower()
     print("is typo", is_typo(text))
