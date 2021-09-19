@@ -264,7 +264,7 @@ positive_terms = [
 ,'vehical' # mistake of vehicle
 ,'visious' # mistake of vicious
 ,'wether' # mistake of weather
-,'whether' # mistake of weather
+#,'whether' # mistake of weather # removed - valid word
 ,'wierd' # mistake of weird
 ,'wellfare' # mistake of welfare
 ,'welfair' # mistake of welfare
@@ -348,20 +348,34 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 def evaluate_typo_classifier():
 
-    evaluate_concept_classifier(concept='Security'
+    evaluate_concept_classifier(concept='Typos'
                                 , text_name='message'
                                 , classification_function=is_typo
                                 , samples_file=join(DATA_PATH, 'commit_typos_samples.csv'))
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='2bc040240146c9ed510eb7b065b461a0c0e15199')
-    evaluate_typo_classifier()
+    print_concepts_functions_for_bq(commit='4014893c710d5a0eb42eff1b8c4aeac3884a6f79')
+    #evaluate_typo_classifier()
 
     text = """
+"Fix typo in histogram name.
 
+The CL https://codereview.chromium.org/943823002/ introduced a new
+histogram for whether web pages are assumed to be mobile friendly.
+
+However, there was a typo in recording the histogram name.
+
+This fixes the recording part to match the histogram.
+
+BUG=462721
+
+Review URL: https://codereview.chromium.org/965883002
+
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#318532}
+"
 """.lower()
-    print("is fix", is_typo(text))
+    print("is typo", is_typo(text))
     print("typo in text", re.findall(build_positive_regex(), text))
 
 
