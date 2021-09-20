@@ -392,7 +392,7 @@ umbraco/Umbraco-CMS,96d570e7604c76af14e6c4f90e54aff85c9c9b1f,"Gets most of the c
 aelassas/Wexflow,bb4f7e8690e4ce638f38cf9a20e57114584926a0,"Removed .tfignore
 ",FALSE,FALSE,FALSE,FALSE,remove,,,random_batch_18_nov_2020,,,,,,,
 datajoint/datajoint-python,7ce0a6ebdb69d1ddfdedb15091a323a8af8b07fd,"Update logger to increase precision and prevent timestamp collissions.
-",FALSE,FALSE,FALSE,TRUE,"update, prevent collisions",,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"update, prevent collisions","contains typo ""collissions""",,random_batch_18_nov_2020,,,,,,,
 Return-To-The-Roots/s25client,92f7e2f3278e86408c970960363e802c5dec9c2f,"Missing include for Linux and pass cstring to (...)
 ",FALSE,FALSE,FALSE,TRUE,missing include,,,random_batch_18_nov_2020,,,,,,,
 factor/factor,07881295c535c17429c714dea54de565d648c413,"ui.gadgets.slots: rewrite <slot-editor>
@@ -413,7 +413,7 @@ We use tv.Value() here to mimick how HCL 1 itself would have interpreted
 these, and then format them back out in the canonical form, which
 implicitly converts any non-decimal constants to decimal on the way
 through.
-",FALSE,FALSE,FALSE,FALSE,normalize,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,normalize,"contains typo ""mimick""",,random_batch_18_nov_2020,,,,,,,
 amazeeio/lagoon,74b399f75fc76ebcd13b9db74b02f239ba917e99,"Merge pull request #1891 from amazeeio/hotfix/upgrade_mysql
 
 Run mysql_upgrade on existing databases after upgrade",FALSE,FALSE,FALSE,FALSE,upgrade,,,random_batch_18_nov_2020,,,,,,,
@@ -824,7 +824,7 @@ needed by PyQt5 5.9
 this version works with both Qt 5.9.0 and 5.9.1
 ",FALSE,FALSE,FALSE,FALSE,update,,,random_batch_18_nov_2020,,,,,,,
 kartta-labs/mapwarper,b0e3fbac99afc5297c4c2f7e461dcb1ee1ef295e,"remove task thats never been used, sorry
-",FALSE,FALSE,FALSE,FALSE,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,,"""thats"" should be ""that's"". typo?",,random_batch_18_nov_2020,,,,,,,
 Taeung/tip,c5898636c440da91d58f10beac00f073e68378df,"tipc: reduce usage of context info in socket and link
 
 The most common usage of namespace information is when we fetch the
@@ -857,9 +857,9 @@ later in this series.
 Reviewed-by: Ying Xue <c1cbb87de349443b90fa63f6d2cc5403843bc133@windriver.com>
 Signed-off-by: Jon Maloy <0e60c7c02f6d30eccc82572d2a89766b1b2a3d45@ericsson.com>
 Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
-",FALSE,FALSE,FALSE,FALSE,reduce,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,reduce,"typo ""addess""",,random_batch_18_nov_2020,,,,,,,
 stdlib-js/stdlib,42902eed6675cc8b4e7926163679727703363d03,"Wrap conditional in parentheses
-",TRUE,TRUE,FALSE,FALSE,wrap,by code,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,wrap,"by code, typo ""handing"" -> ""handling""",,random_batch_18_nov_2020,,,,,,,
 uholeschak/ediabaslib,3cf7c4bc98884a4c70ff978163295e8ba25129a2,"Fixed error handing
 ",FALSE,FALSE,FALSE,TRUE,"Fixed , not error handling",by code,,random_batch_18_nov_2020,,,,,,,
 lino-framework/lino,64fb94222ae1bbe3758af5cf167f682b0d4cc354,"http://www.lino-framework.org/blog/2014/1016.html
@@ -884,7 +884,7 @@ Fixes #8225
 Fixes #8082
 
 Closes #8256
-",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,"typo ""uneeded"" -> ""unneeded""",,random_batch_18_nov_2020,,,,,,,
 randombit/botan,fe8b93c289b203e2d7ba2285221cc251bcb8cbd6,"Fix -Wshadow warning
 ",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,,,,,,,
 rhinstaller/anaconda,ad3bfe5aae9cc65294fe354cd80f576efb13130f,"update by amanpreetalam@yahoo.com
@@ -1143,10 +1143,10 @@ torn down. Do that in the tx callback.
 CC: Hans Petter Selasky <7b242d943fcf32e060e9005c389f6e64f0d376fc@c2i.net>
 Signed-off-by: Jarod Wilson <14059c7158912dcae849c377925c87d46da48cdf@redhat.com>
 Signed-off-by: Mauro Carvalho Chehab <ad86ba2154032c9f55743a190faa2459a9d61d42@redhat.com>
-",FALSE,FALSE,FALSE,TRUE,memory leak,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,memory leak,"""its"" -> ""it's"". typo?",,random_batch_18_nov_2020,,,,,,,
 cakephp/cakephp,d9a4bfaaa2891c03e638d5d17dd33b545f199137,"Merge pull request #7256 from cakephp/master-tests-mcrypt
 
-Skip test if ext missing.",FALSE,FALSE,FALSE,FALSE,skip test,,,random_batch_18_nov_2020,,,,,,,
+Skip test if ext missing.",FALSE,FALSE,FALSE,FALSE,skip test,"typo. ""ext""",,random_batch_18_nov_2020,,,,,,,
 puavo-org/puavo-os,2a5be64355c768a182dffb1e5ed83866d04bdddf,"bootserver_munin: display load summary values as percentiles
 ",FALSE,FALSE,FALSE,FALSE,display,,,random_batch_18_nov_2020,,,,,,,
 guix-mirror/guix,c135577dbf916bcde7e90683bff82dd505b571f7,"gnu: khal: Move propagated inputs to inputs.
@@ -1322,13 +1322,13 @@ Some places were relying on the unsafe casting to scale in place the RGB uint8 v
 
 => explicitely indicate the casting is unsafe.
 Should still work fine down to numpy 1.6.
-",FALSE,FALSE,FALSE,TRUE,fix failures,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix failures,"typo ""muliplication"", ""explicitely""",,random_batch_18_nov_2020,,,,,,,
 FarmBot/farmbot_os,a7e3b6ba30391ee64424f54ba9d6564762791ad3,"genstage stuff
 ",FALSE,FALSE,FALSE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,,,,,,,
 gradle/gradle,a0b29ba4b16c72d7aea25fb30c7c081eeabac7c6,"Extend ProjectBuilder compatibility test to run agains multiple versions
 
 +review REVIEW-6246
-",FALSE,FALSE,FALSE,FALSE,extend,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,extend,"typo ""agains"" -> ""against""",,random_batch_18_nov_2020,,,,,,,
 symfony/security-bundle,5f6b24c52d402eafc643154b17931fcc65374539,"[SecurityBundle] [HttpFoundation] Allow for multiple IP address in security access_control rules
 
 ",FALSE,FALSE,FALSE,FALSE,allow,,,random_batch_18_nov_2020,,,,,,,
@@ -1339,7 +1339,7 @@ bitpay/copay,4d72438e8e373ce06f1188b2d4efe2dbdd0343c2,"Merge pull request #2206 
 
 Fixes paypro if amount has comma as decimal separator",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,,,,,,,
 pragma-/pbot,221a698ecb781fc9c12ef3aafc0e1e96d937ea6d,"factoids: if unknown keyword is triggered inadvertedly, .e.g. by referencing the bot by name, and the args dont look like a nick then do not spit out the levenshtein matches text
-",FALSE,FALSE,FALSE,FALSE,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,,"typo ""inadvertedly"" -> ""inadvertently""",,random_batch_18_nov_2020,,,,,,,
 stdlib-js/stdlib,8d3d825b7bd4cf700921c65d8ff712aba7f54a6f,"Enable rule
 ",FALSE,FALSE,FALSE,FALSE,enable,,,random_batch_18_nov_2020,,,,,,,
 uBlockOrigin/uAssets,31ee61f7875dba564a788bab8bba7f7388825084,fix smoner .com anti adb,FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,,,,,,,
@@ -1439,7 +1439,7 @@ Signed-off-by: Gabriel Harris-Rouquette <f9869a2c93dad38a06e8fb39147155331a1102a
 ",FALSE,FALSE,FALSE,FALSE,,"by code, updated a submodule",,random_batch_18_nov_2020,,,,,,,
 aws/aws-sdk-php,4babc642c0113d0891fc650a3946fdaeac466b5d,"Added the ""quick start""  page to the docs
 ",FALSE,FALSE,FALSE,FALSE,added,,,random_batch_18_nov_2020,,,,,,,
-sdss/marvin,767292fe5194021f26aba8d9e33b7d79217e174f,better handling of scalar inputs/ouputs in getSpaxels,TRUE,TRUE,FALSE,FALSE,better handling,,,random_batch_18_nov_2020,,,,,,,
+sdss/marvin,767292fe5194021f26aba8d9e33b7d79217e174f,better handling of scalar inputs/ouputs in getSpaxels,TRUE,TRUE,FALSE,FALSE,better handling,"typo ""ouputs"" -> ""outputs""",,random_batch_18_nov_2020,,,,,,,
 jupyter/nbgrader,bff436c70dca31d5a8b921414863bbd57405d348,"Document using JupyterHub with SSL
 ",FALSE,TRUE,FALSE,FALSE,document,by code,,random_batch_18_nov_2020,,,,,,,
 lowmess/lowmess,03f2ec243a50522caa260b915b6aebd9021e80fa,":recycle: use rebass for heading variants
@@ -1577,7 +1577,7 @@ GNOME/glib,9574dbd2282e1fcf7bb5836c85cfff536bf4a7cf,"Be more careful about overw
 
 When trying to parse again, we don't want to overwrite the exiting
 error.
-",FALSE,FALSE,FALSE,TRUE,The message sounds more like a lesson for life than a description.,by code,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,The message sounds more like a lesson for life than a description.,"""exiting"" -""existing"" typo",,random_batch_18_nov_2020,,,,,,,
 bgd-point/point-app-test,5f90057a6acb22096f8db426b73192224185e9ae,"changed regex to accept more date format, less and cleaner code
 ",TRUE,TRUE,FALSE,FALSE,"changed, cleaner code",,,random_batch_18_nov_2020,,,,,,,
 stinsonga/emacs-mirror,68f13422042d086b6210a66282169a2dd0974ea3,"Move the cert files to the data directory
@@ -4303,30 +4303,30 @@ LayoutFarm/PixelFarm,324a77d295024e744a686d4ceca4aabc75a1b108,243.1,,,,,"deleted
 Jackett/Jackett,c802008015e320d014146a31f43a8a7cd1693a00,"remove AlphaReign
 ",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stinsonga/emacs-mirror,c15c5d408d696928862ca2848a359231e373556c,"(Ffset, Ffmakunbound): Signal an error if SYM is nil or t.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,signal an error,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cloudera/hue,be034c8d8d870f5e969b4b2d74c866dc163f7a01,"HUE-3702 [editor] Suppress conf error if Impala is not enabled
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,suppress error,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 callemall/material-ui,9837027e10ef80e3d76d9fd9cf504d6439039a7d,"Revert removal of className from StyledComponentProps (#8295)
 
-Fixes #8269",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Fixes #8269",FALSE,FALSE,FALSE,TRUE,revert,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GoldenCheetah/GoldenCheetah,e136a606462bda33fcd884d2ce49cf93aab4948a,"UserData Dialog SizeHint
 
 .. coding through a letterbox is never fun, so made it a bit bigger
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,never fun,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 JetBrains/intellij-community,874224039f938e8a8f91c2113c1a3ae9822d1d2a,"IDEADEV-1112
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 batfish/batfish,e9d86a874df47eb9a2a18b581e147df9121ecbc8,"switched to antlr 4.4, made lexer and parser output for debug information for errors
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-beast-dev/beast-mcmc,3e4f8b8a862934d6f142fbca65fd9f4901211504,DiffusionRateStatistic modification now with appropriate comment...,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"switched, debug information for errors",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+beast-dev/beast-mcmc,3e4f8b8a862934d6f142fbca65fd9f4901211504,DiffusionRateStatistic modification now with appropriate comment...,FALSE,TRUE,FALSE,FALSE,"appropiate, comment",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 ultrabug/py3status,578b4c73d2b74c4f6cb0bfa7f2e63ab4e89343ae,"getjson module: support basic auth via username/password fix #1875 (#1876)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",,,TRUE,TRUE,"support, fix, password","by code, not sure if addaptive, corrective or both",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 wordpress-mobile/WordPress-FluxC-Android,0447d76798717ec8dae33bc364429bef1358bfac,"Abort uploads that exceed a site's upload limit
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",,,TRUE,,,,,random_batch_18_nov_2020,,,,,,,
 wch/r-source,d1022a3d24ebdcff3cf7cd106f3f8d08e338673b,"lower.tri() and upper.tri() with .col() and .row() for all matrix-like obj.
 
 git-svn-id: f298e5bd0fb7dd56202a0647512068a43d54496a@73030 00db46b3-68df-0310-9c12-caf00c1e9a41
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",,,TRUE,,,by code,,random_batch_18_nov_2020,,,,,,,
 cloudera/hue,92bde8e24817764304afebfd41cbc41a9422430e,"[HUE-6486] Move Hue Krb ticket cache out of /tmp
 
 We are frequently having customers self inflict issues because they
@@ -4343,10 +4343,10 @@ Testing Done:
 
 [[kerberos]]
 ccache_path=/var/run/hue/hue_krb5_ccache
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-DigitalCampus/oppia-mobile-android,26ff2938e51957b95433b29a8c80c78eb4dae62e,rename colors,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",,,TRUE,,move,,,random_batch_18_nov_2020,,,,,,,
+DigitalCampus/oppia-mobile-android,26ff2938e51957b95433b29a8c80c78eb4dae62e,rename colors,TRUE,TRUE,,,rename,,,random_batch_18_nov_2020,,,,,,,
 didclab/onedatashare,aaf928f768b41baae58678fdf61a32ea2019f592,"front end changes to accomplice with google drive module
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",,,TRUE,,changes,,,random_batch_18_nov_2020,,,,,,,
 DonJayamanne/pythonVSCode,6500b2aa6926d4503b70b51e903b5cf0a84a2011,"Bump acorn from 6.0.0 to 6.4.1 (#10570)
 
 Bumps [acorn](https://github.com/acornjs/acorn) from 6.0.0 to 6.4.1.
@@ -4355,8 +4355,8 @@ Bumps [acorn](https://github.com/acornjs/acorn) from 6.0.0 to 6.4.1.
 
 Signed-off-by: dependabot[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@github.com>
 
-Co-authored-by: dependabot[bot] <1c358da00a777d4e9898c1280ab801e2df165188@users.noreply.github.com>",,,,,,,,random_batch_18_nov_2020,,,,,,,
-openstack/vmware-nsx,fd20853e51215c16161850a050b3e390baf127de,"Merge ""LBaaS: add status field to PoolMonitorAssociation table""",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Co-authored-by: dependabot[bot] <1c358da00a777d4e9898c1280ab801e2df165188@users.noreply.github.com>",,,TRUE,,bump,,,random_batch_18_nov_2020,,,,,,,
+openstack/vmware-nsx,fd20853e51215c16161850a050b3e390baf127de,"Merge ""LBaaS: add status field to PoolMonitorAssociation table""",,,TRUE,,add,,,random_batch_18_nov_2020,,,,,,,
 terlar/emacs.d,2165d6439f6b96bccd178720e9f275a9d7fbf48d,"theme: style vertical-border/window-divider
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 googledatastudio/ds-data-registry,525b3a81b08c58fd244acae007af8755159a979d,Create uberall.json,,,,,,,,random_batch_18_nov_2020,,,,,,,
