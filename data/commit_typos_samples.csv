@@ -1,0 +1,640 @@
+repo_name,commit,message,Is_Typo,Justification,Certain,Comment,Sampling
+stcorp/harp,f3499cc56df373c5512e8e66cd4c2ebce124b3ce,"Improve ECMWF GRIB ingestion
+
+Add support for parameters t (temperature) and q (specific humidity)
+
+Add ingestion option to ignore the time of the geopotential
+(since it is 'static' dataset it may have been included for a different date)
+
+Add ingestion option to ignore duplicate message (which means multiple occurence of the same quantity at the same level)
+This is useful for reading datasets that are a concatenation of different grib files where each grib file had the same lnsp parameter.
+",TRUE,occurence,,,19_sep_2021_hit_4014893c710d5a0eb42eff1b8c4aeac3884a6f79
+tprrt/linux-stable,aa343c695aa59f03f31a2f989b8c977a727e46e3,"scsi: ibmvscsi: fix tripping of blk_mq_run_hw_queue WARN_ON
+
+After a successful SRP login response we call scsi_unblock_requests() to
+kick any pending IOs. The callback to process this SRP response happens in
+a tasklet and therefore is in softirq context. The result of such is that
+when blk-mq is enabled, it is no longer safe to call scsi_unblock_requests()
+from this context. The result of duing so triggers the following WARN_ON
+splat in dmesg after a host reset or CRQ reenablement.
+
+WARNING: CPU: 0 PID: 0 at block/blk-mq.c:1375 __blk_mq_run_hw_queue+0x120/0x180
+Modules linked in:
+CPU: 0 PID: 0 Comm: swapper/0 Not tainted 5.0.0-rc8 #4
+NIP [c0000000009771e0] __blk_mq_run_hw_queue+0x120/0x180
+LR [c000000000977484] __blk_mq_delay_run_hw_queue+0x244/0x250
+Call Trace:
+
+__blk_mq_delay_run_hw_queue+0x244/0x250
+blk_mq_run_hw_queue+0x8c/0x1c0
+blk_mq_run_hw_queues+0x60/0x90
+scsi_run_queue+0x1e4/0x3b0
+scsi_run_host_queues+0x48/0x80
+login_rsp+0xb0/0x100
+ibmvscsi_handle_crq+0x30c/0x3e0
+ibmvscsi_task+0x54/0xe0
+tasklet_action_common.isra.3+0xc4/0x1a0
+__do_softirq+0x174/0x3f4
+irq_exit+0xf0/0x120
+__do_irq+0xb0/0x210
+call_do_irq+0x14/0x24
+do_IRQ+0x9c/0x130
+hardware_interrupt_common+0x14c/0x150
+
+This patch fixes the issue by introducing a new host action for unblocking
+the scsi requests in our seperate work thread.
+
+Signed-off-by: Tyrel Datwyler <f4a317f2a73d762775eb462a22d913f1ae21c433@linux.ibm.com>
+Signed-off-by: Martin K. Petersen <0384aaef27f06874adbdb09a807bb339f4aff9fd@oracle.com>
+",TRUE,seperate,,,19_sep_2021_hit_4014893c710d5a0eb42eff1b8c4aeac3884a6f79
+savoirfairelinux/ring-daemon,d2746ead2972b7bad69772aeb11e8d9ea8c28609,"build: fix error in configure.ac
+
+without-dbus condition was broken due to
+mingw test
+
+Regression caused by change 1852, commited in
+78a32ceed062851cf56a93f1d50cbb2b8c0eb2be
+
+Refs #70869
+
+Change-Id: I8522c9a47f39a07f1830f0542566f1057cf967cc
+",TRUE,commited,,,19_sep_2021_hit_4014893c710d5a0eb42eff1b8c4aeac3884a6f79
+tprrt/linux-stable,ece9c4ee5e590f96d7221c746126eaafac15a60c,"iwlagn: detect PAN capability
+
+Detect whether or not the ucode is PAN
+capable and adjust the valid contexts
+accordingly. To be able to do this, add
+the PAN context to the array as well.
+
+Signed-off-by: Johannes Berg <bff32994ff0f8d048f262a8388145a71b6071bfe@intel.com>
+Signed-off-by: Wey-Yi Guy <15ba08e2ad0b84ec2e6b8e47b27706f8a8e5edd0@intel.com>
+",FALSE,whether,,,19_sep_2021_hit_4014893c710d5a0eb42eff1b8c4aeac3884a6f79
+zephyrproject-rtos/zephyr,35fc0bea4603b599f01e14a5b49e05f56715f4bc,"samples: drivers: soc_flash_nrf: add test harness
+
+Added harness config to sample in order for the sanitycheck tool
+to run and understand whether the samples output is as expected.
+
+Signed-off-by: Łukasz Hejnak <75bb00e656752f002de3dcbceef5a58ac8a18964@nordicsemi.no>
+",FALSE,whether,,,19_sep_2021_hit_4014893c710d5a0eb42eff1b8c4aeac3884a6f79
+SAP/openui5,7ae68781ae006604d1a00ceefa7c08dd037473dd,"[INTERNAL] sap.ui.documentation: Apply same excludes in .library and pom.xml
+
+While the Maven based tooling applies excludes defined in either pom.xml
+or .library files, UI5 Tooling only uses those defined in .library files.
+
+In an effort to replace the Maven based tooling with UI5 Tooling, the
+same excludes must be used.
+
+For the Maven based tooling however, it might make sense to define
+excludes in the pom.xml. Compared to .libary excludes, they are applied
+earlier and prevent the Maven based tooling from analyzing the excluded
+files. This can be necessary for cases where new JavaScript syntax is
+used or other problems with the (legacy) Maven build tooling occur.
+
+In order to keep the current setup working but to also apply the same
+excludes for UI5 Tooling, they shall be defined in both places, pom.xml
+and .library.
+
+A separate change in sapui5.runtime has been crated to add a comment
+to the pom.xml, indicating that the excludes need to be kept in sync:
+I1e131e898a9c32ebdf618664770b17d564830153
+
+JIRA: CPOUI5FOUNDATION-232
+Change-Id: Ic8b1720841860ec7618fbe371d2116243c138702
+",TRUE,libary,,,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+nexAkari/DarkPlacesRM,d6b1ea1bb2a2a1641bf5bf492420ea714021bf58,"made coronas small and intense, much more noticable now
+
+
+git-svn-id: 95f5f7c9af795abc11aca911b844697b26de5baa@1475 d7cf8633-e32d-0410-b094-e92efae38249
+",TRUE,noticable,,,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+mapnik/mapnik,31ae5e632b5243357ac5a3a46aa8aabaa205c8f4,"rollback accidentally commited change in 126d1b73d6c533 - not quite yet
+",TRUE,commited,,,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+salesagility/SuiteCRM,4d87755404cedfeb6fb3ce210a2dcd3afc132421,"Moving button logic into seperate extendable jquery plugins
+",TRUE,seperate,,,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+geobretagne/mviewer,0f9a0f0add02aa440a19230fda0b8aef5a63a762,"Update README with new enhancements - elasticsearch, search parameters and adress geocode service
+",TRUE,adress,,,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+specify/specify7,487156882ee8099bb063dcce29ff300bc87470b8,"Show a progress bar untill WB is mostly loaded
+",TRUE,untill,,,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+wordpress-mobile/WordPress-iOS,7126232ae9bad080319d61470c86a4f8957aba33,"Extract embed error handler to seperate function
+",TRUE,seperate,,,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+NeoRazorX/facturascripts,39532df106bd21a3ff8e166cc2b364ae4b84ba23,"- Cambiados algunos '@return array' por '@return self[]' o '@return ClaseConcreta[]', así evitamos usar instanceof y se autosugiere bien el código.
+- Añadido allFromArticulo a Stock, ya que se llama desde otra clase.
+- Revertidos un par de cambios menores de anteriores commits.
+",FALSE,que,,not English,19_sep_2021_hit_08d6b8e395fb22d144309de17162e414fa13f4da
+chromebrew/chromebrew-test,0a8af5958305d4b4fea1702fbe0c4006e88f284b,"Update graphene.rb
+
+remove meson install. Instead, we use a seperate meson package as dependency.",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+tprrt/linux-stable,4253b0e0627ee3461e64c2495c616f1c8f6b127b,"s390: move spectre sysfs attribute code
+
+The nospec-branch.c file is compiled without the gcc options to
+generate expoline thunks. The return branch of the sysfs show
+functions cpu_show_spectre_v1 and cpu_show_spectre_v2 is an indirect
+branch as well. These need to be compiled with expolines.
+
+Move the sysfs functions for spectre reporting to a separate file
+and loose an '.' for one of the messages.
+
+Cc: 4fbacc2fa0ffdbb11bf1ad6925b886ebd08dd15f@vger.kernel.org # 4.16
+Fixes: d424986f1d (""s390: add sysfs attributes for spectre"")
+Signed-off-by: Martin Schwidefsky <52616596d8f5df0d597e85ab515377f92f939c68@de.ibm.com>
+",TRUE,loose,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+Microsoft/vsts-tasks,c42f48acd56b9ed472dc31ccad8eb37565f5d1b4,"Merge pull request #9559 from Microsoft/users/damccorm/issue-8848
+
+Seperate command output from task info",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+rime/librime,2b3d71b588621cb87de32621cfa29b931936c202,"docs: add info about build with bottled icu4c (#475)
+
+Fix `make xcode/release-with-icu` error
+
+```
+ld: library not found for -licudata
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+        Ld /Users/alswl/dev/myproject/squirrel/librime/build/lib/Release/librime.1.7.3.dylib normal
+```
+
+same issue:
+
+[按照 ""INSTALL.md"" 尝试编译 squirrel，执行到 make deps 这一步时提示以下内容 不会编程，所以看不懂，希望有大佬帮我看看怎么回事 · Issue #544 · rime/squirrel](https://github.com/rime/squirrel/issues/544)
+[After upgrade to Boost 1.75, compilation fails with ld: library not found for -licudata · Issue #67427 · Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core/issues/67427)
+
+Solution via https://github.com/Homebrew/homebrew-core/issues/67427#issuecomment-754187345:
+
+```
+export LIBRARY_PATH=${LIBRARY_PATH}:/usr/local/opt/icu4c/lib
+```",FALSE,rime,,component name,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+SubtitleEdit/subtitleedit,a50691a69e2934cc55fbb302d96f7e1d59022563,"Added SCC drop frame as seperate format
+
+
+git-svn-id: 01321610d9aae5c1fd4dece01629cad7bef9d733@2170 99eadd0c-20b8-1223-b5c4-2a2b2df33de2
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+GovReady/govready-q,77382e4a37804edfcfbfc22ae487dbf5c42bc4b2,"Ge/data grid question (#1667)
+
+* Improve appearance of data grid question
+
+Display datagrid question wider and with smaller fonts.
+Support datgrid specifying select type cell.
+
+* Display legacy smt in system selected controls; fix component counts
+
+Fix count on project system's components associated with a control (avoid double counting).
+
+Display existance of legacy statement in project system's selected controls.
+
+* Fix typo
+
+Co-authored-by: Greg Elin <4e709fbb2eb13a2ea2a62f3352f952fdcde6cf02@govready.com>",TRUE,existance,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+f-droid/fdroidclient,930c906460930cb7c3742f0a4f84d72a85a2dcb2,"Allow bluetooth:// URLs to be parsed by java.net.URL.
+
+Sets a stream handler in FDroidApp which understands bluetooth://
+URLs and returns a non-functioning URL handler for such URLs.
+The reason it is  non-funcitoning is because the openConnection()
+function is not being used by the BluetoothDownloader at this point.
+
+In the absense of this, a MalformedURLException is thrown.
+
+The bluetooth stuff is still broken, but it is not broken in
+this way any more.
+",TRUE,absense,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+BeWelcome/rox,6cec31692f7b31bb41cb99e3212d975ad76d36bf,"add rss to the community news on the personel startpage
+",TRUE,personel,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+colinsc/koha,fd56cf5e9686ac383de80891efe41e1dad2e1165,"Bug 8108 [Follow-up, revised] Remove unused OPAC images
+
+This patch cleans up some loose ends:
+
+- Star ratings images are now in one sprite. Removing
+  separate star ratings images.
+- Amazon ratings have been removed. Related image files
+  are removed by this patch.
+- The tag images associated with tag links on the search
+  results page were not incorporated into the main sprite.
+  Now they are.
+
+Added: The Photoshop file from which the main sprite was
+generated, in case that is helpful to others. Each layer
+is named, and comments have been added to the CSS
+referencing the layer names. The file is GIMP-compatible.
+
+Revisions:
+- Rebased on current master
+- Ported some changes to CCSR theme
+- Removed unused CSS which referred to deleted images
+
+Signed-off-by: Jonathan Druart <90effa772b5c8a7a3420e6b7ea56e265888c5743@biblibre.com>
+Signed-off-by: Mason James <5ece1282016eb8d217aa0dbf6466e8864b30224a@kohaaloha.com>
+Signed-off-by: Jared Camins-Esakov <9d46e7279315265164da8c55a0f85bf9cb5995a3@cpbibliography.com>
+",TRUE,loose,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+NLnetLabs/NSD,3497aefeb3c0e2b4da9bd8584fdbc9e11a82e016,"- Fix task and zonestat files to be stored in a subdirectory in tmp
+  to stop priviledge elevation.
+
+
+git-svn-id: b7def5e201329fdc6881ed493a1f7b725c4b51fb@4432 a26ef69c-88ff-0310-839f-98b793d9c207
+",TRUE,priviledge,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+tprrt/linux-stable,9d5612ca165a58aacc160465532e7998b9aab270,"drm/i915/gt: Defer enabling the breadcrumb interrupt to after submission
+
+Move the register slow register write and readback from out of the
+critical path for execlists submission and delay it until the following
+worker, shaving off around 200us. Note that the same signal_irq_work() is
+allowed to run concurrently on each CPU (but it will only be queued once,
+once running though it can be requeued and reexecuted) so we have to
+remember to lock the global interactions as we cannot rely on the
+signal_irq_work() itself providing the serialisation (in constrast to a
+tasklet).
+
+By pushing the arm/disarm into the central signaling worker we can close
+the race for disarming the interrupt (and dropping its associated
+GT wakeref) on parking the engine. If we loose the race, that GT wakeref
+may be held indefinitely, preventing the machine from sleeping while
+the GPU is ostensibly idle.
+
+v2: Move the self-arming parking of the signal_irq_work to a flush of
+the irq-work from intel_breadcrumbs_park().
+
+Closes: https://gitlab.freedesktop.org/drm/intel/-/issues/2271
+Fixes: e23005604b2f (""drm/i915/gt: Hold context/request reference while breadcrumbs are active"")
+Signed-off-by: Chris Wilson <711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk>
+Reviewed-by: Tvrtko Ursulin <82325a91373a06cdf12f953d4611ffb7756aa8d4@intel.com>
+Link: https://patchwork.freedesktop.org/patch/msgid/20201123113717.20500-1-711c73f64afdce07b7e38039a96d2224209e9a6c@chris-wilson.co.uk
+",TRUE,loose,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+hexlet-codebattle/battle_asserts,0b58f419517cc009c36577092ea1cfde6e70beb8,"Merge pull request #208 from MrPhantomT/feature/converted_group_multiple_by_occurence
+
+fix solution",TRUE,occurence,,typo in componenet name,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+marijnh/acorn,4879af22d1e88f6b1b0ffd17bbff23a17038ff92,"Loose: Added support for assignment patterns to expression and variables.
+",FALSE,loose,,seems like a componenet name,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+CenterForOpenScience/osf.io,3df69714284915df6fdc811df937e268ec894afc,"Merge branch 'develop' of https://github.com/CenterForOpenScience/osf.io into feature/instructions-for-file-upload
+
+* 'develop' of https://github.com/CenterForOpenScience/osf.io: (74 commits)
+  Release day
+  fix display error in sales-admin stat graphs
+  Fix checking for wikis with no ids
+  Add script to fix invalid prereg metadata
+  apply changes lost in rebase
+  change import
+  clean up
+  clean up
+  change settings
+  fix format
+  update dashbaord view
+  Add util functions, remove unused imports. [#OSF-5923]
+  Analytics dashboard
+  Move Keen Results away from dash board into seperate tabs and add a flag to turn keen on/off.
+  Finish dashboard page
+  fix dashboard visual bugs
+  add analytics dashboard
+  Improve architectural extensiblity for sales-analytics:     - add sub template,     - add dashboard for general info,     - add tabs for detailed info.
+  Refactor sales-analytics into an independent admin app.
+  add user count visualization
+  ...
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+NCI-Agency/anet,a7bfdf19a00897376ac83ee4760004b6a1b0d5da,"Add support for Sorting Daily Rollup email by both Principal and Advisor Organizations. And better support for cancelled engagements.
+",TRUE,principal,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+intel-hpdd/intel-manager-for-lustre,6ae57a31f91c39b92202814b1bbab920515677fd,"HYD-3462 Add support for running on EL 6.6
+
+Create an /etc/cluster/cluster.conf file when collecting pcs config
+output as it's now required. The file is just a placater for the pcs
+command. pcs doesn't actually read it but wants it to be there with
+some loose form of valid content.
+
+Also adds 6.6 to the supported versions in the install script.
+
+Signed-off-by: Brian J. Murrell <2a8f564cbb80211e19c0a14fed38a451599c042f@intel.com>
+Change-Id: I41bca5c2aeee8b2e1b03542a4b9d152113e809e0
+Reviewed-on: http://review.whamcloud.com/11635
+Tested-by: Chroma Test User <a0b98b2ff5154776fa24760ef410655af7a8b56c@intel.com>
+Reviewed-by: Gene Campbell <2371123b661d3b976710d67b1449d46c3a48dbe8@intel.com>
+Reviewed-by: Chris Gearing <149a3c4298d99c315fc555357d57d2940923ba5f@intel.com>
+",TRUE,loose,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+wikimedia/restbase,9902a5b31739cdf5b91057db764c1165e3386854,"Merge pull request #1142 from d00rman/remove-extend
+
+Hygene: Remove unused `extend` package",TRUE,hygene,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+Icinga/icingaweb2,5f8fcf400564ee440d6bce5cd4eff03865ca3881,"Fix Ldap server discovery
+
+Add a new connection member that stores whether settings were guessed or product of a discovery, move discovery methods into seperate class.
+
+fixes #7691
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+influxdb/influxdb,0aefa3e708814db5b21586f42d8fd57bb919feb2,"Wait longer for write data to be commited
+",TRUE,commited,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+tprrt/linux-stable,3b13758f51de30618d9c7f3fc174d8d1a3cb13cd,"cgroups: Allow dynamically changing net_classid
+
+The classid of a process is changed either when a process is moved to
+or from a cgroup or when the net_cls.classid file is updated.
+Previously net_cls only supported propogating these changes to the
+cgroup's related sockets when a process was added or removed from the
+cgroup. This means it was neccessary to remove and re-add all processes
+to a cgroup in order to update its classid. This change introduces
+support for doing this dynamically - i.e. when the value is changed in
+the net_cls_classid file, this will also trigger an update to the
+classid associated with all sockets controlled by the cgroup.
+This mimics the behaviour of other cgroup subsystems.
+net_prio circumvents this issue by storing an index into a table with
+each socket (and so any updates to the table, don't require updating
+the value associated with the socket). net_cls, however, passes the
+socket the classid directly, and so this additional step is needed.
+
+Signed-off-by: Nina Schiff <bf71a50ee6a116fc2cf39481a0cf060437bef5fd@fb.com>
+Acked-by: Tejun Heo <546b05909706652891a87f7bfe385ae147f61f91@kernel.org>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,neccessary,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+CubeEngine/modules-extra,5942060c38b0006d1d773be25472510b9a92203f,"logging alot again
+logging is now async and logging is done instantly when a new log is provided
+",TRUE,alot,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+Azure/azure-linux-extensions,06698b23d37a6a314efe33ea07d79fbc652b65a8,"Creating 3 seperate manifests
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+mesosphere/universe,a381c71e20d2f63a85e7a5b6b4af22f53ef79e96,,,,FALSE,"empty, why is it here?",19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+vuetifyjs/vuetify,e6978ef3564dfc7f5219adca3b8baa5f08393c73,"fix(kitchen): seperate alert v-models
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+zalando/patroni,b38d98a6a37a58b6cb80e61a5f068278cf31b56a,"Fix the WAL-E restore (#359)
+
+* Fix broken WAL directory symlinks after WAL-E restore.
+
+* Add unit-tests for wale_restore.
+
+* Reduce the amount of MagicMock to the one (for psycopg2.connect)
+
+* Make WAL-E restore process more robuts.
+
+Allow retries only on WAL-E failures.
+Sleep after each attempt
+
+* Update the tests.
+
+* Change WAL-E behavior when master is absent, tests.
+
+- Challenge the use of WAL-E even when 'no_master' flag is set. This flag in
+  fact does not indicate that the master is absent. In order to check the master
+  absense the script looks whether the connection string is not empty.
+
+- Retry on a failure to fetch current xlog position from the master. The reason
+  it has to be separate from retries in the main loop is that we don't just
+  retry the connection attempt, but also make a decision when either it was
+  successfull or all attempts are exhausted.
+
+- Remove wrong usages of ProperyMocks from the tests.
+
+* Avoid redundant output of the exception message in logger.exception
+
+* Address issues uncovered by flake8
+",TRUE,"absense, successfull",,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+tprrt/linux-stable,93ea02bb84354370e51de803a9405f171f3edf88,"arch: Clean up asm/barrier.h implementations using asm-generic/barrier.h
+
+We're going to be adding a few new barrier primitives, and in order to
+avoid endless duplication make more agressive use of
+asm-generic/barrier.h.
+
+Change the asm-generic/barrier.h such that it allows partial barrier
+definitions and fills out the rest with defaults.
+
+There are a few architectures (m32r, m68k) that could probably
+do away with their barrier.h file entirely but are kept for now due to
+their unconventional nop() implementation.
+
+Suggested-by: Geert Uytterhoeven <0da414d9d963da4039c2a0525b1844228075aa58@linux-m68k.org>
+Reviewed-by: ""Paul E. McKenney"" <1e0ce936bb9b355d257bf5790d2513c3f28be22b@linux.vnet.ibm.com>
+Reviewed-by: Mathieu Desnoyers <007bef6a47fb57dff675bfa1b0b798b4bdfbfc25@polymtl.ca>
+Signed-off-by: Peter Zijlstra <3fddac958924aef220f202ca567388ddab3f14a8@infradead.org>
+Cc: Michael Ellerman <17b9e1c64588c7fa6419b4d29dc1f4426279ba01@ellerman.id.au>
+Cc: Michael Neuling <7b0ab45a730e48a69239010b5b8fe5fa4e8eaac6@neuling.org>
+Cc: Russell King <ba324ca7b1c77fc20bb970d5aff6eea9377918a5@arm.linux.org.uk>
+Cc: Heiko Carstens <8dcf0f69152f32f23184f83357a3731522e56b9c@de.ibm.com>
+Cc: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
+Cc: Martin Schwidefsky <52616596d8f5df0d597e85ab515377f92f939c68@de.ibm.com>
+Cc: Victor Kaplansky <77cb86ae78af3b2476eafe313dc379e62accba07@il.ibm.com>
+Cc: Tony Luck <e7984595ec0368ff920a7b3521dc7093683f6f26@intel.com>
+Cc: Oleg Nesterov <20b70f0af00562e63758b9ee42012ecc96c58590@redhat.com>
+Cc: Benjamin Herrenschmidt <a7089bb6e7e92505d88aaff006cbdd60cc9120b6@kernel.crashing.org>
+Cc: Frederic Weisbecker <e8a1bf9163cb25e93cfd6540f223b3872ea7ee55@gmail.com>
+Link: e9577812794c9a44f5ff3c7a351fe533493477d0@infradead.org
+Signed-off-by: Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@kernel.org>
+",TRUE,agressive,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+babel/babel,d09acb7d3b0ea9f1ccb6ad113ea4094621fad7df,"disable loose test runner
+",TRUE,loose,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+Shadorc/Shadbot,b4376b758c1761badc27437035d72ec3e4239584,"Send a message to Shadorc when an error occured
+",TRUE,occured,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+dwightjack/vue-types,50a4b415aeb11f31cf7efc8c21bee93437375b36,"fix loose shape typings
+",TRUE,loose,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+projectestac/agora_moodle2,08a7ead5d1bb755df95a13b93641985ffc6f4a20,"MDL-14203 ""split report into two seperate reports - Quiz Statistics report and Individual Item Analysis report"" added CIC, ER and SE calculations. Calculation needs debugging.
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+samba-team/samba,097ffed015826ff31b5f89742deed8f4d21b88f3,"r12687: Push the real list of supported GENSEC mechanisms out on
+supportedSASLMechanism in the rootdse.  (Second half of a patch
+commited earlier today).
+
+Andrew Bartlett
+(This used to be commit 4b67b5d688493c385e12734fd2c0c9dbc1b238e4)
+",TRUE,commited,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+AnalogJ/lexicon,8ef0e9012960b21015120e71b5c8b2cecbdfcae9,"update the circleci version to work seperate from circleci.
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+Freetz/freetz,d408673f1839af15845d000a4002d186bd9e5265," * freetz_functions: fix indention of modsed-output
+ * patch-scripts: replace another occurence of sed with modsed
+
+
+git-svn-id: df43320aa0a1a24c9a9e16bc38e368682294d27e@3685 f5190166-0702-4917-9039-51ec32eddaf5
+",TRUE,occurence,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+appsignal/appsignal-ruby,88fb97b638c8c60e0289972975d2e02344af563d,"Keep track of wether agent is active
+
+Shuts down all operations if it's not.
+",TRUE,wether,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+biojava/biojava,72aad05650f42e19c4a88e864abe6fd0b08ea101,"Tests for MultipleAlignment scores and AFP conversion
+
+Two tests to check the correctness of the MultipleAlignment DS have been
+implemented. Some bugs have been detected and fixed in the code while
+writting the tests.",TRUE,writting,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+ARTbio/GalaxyKickStart,f45dcce0ae65577b803a887674c54ca564302535,"Use environmental variables to specify runtime parameters
+
+We need to update certain parameters when starting new instances. This includes
+the IP adress for galaxy's ftp_upload_site config setting, the MASQUERADE IP
+address setting and the number of cores available in job_conf.xml. We can
+detect them before starting supervisord by adding these in
+/etc/defaults/supervisor, which gets sourced by the supervisor init-script
+before starting supervisor.  For docker we just source this file before
+starting supervisor.
+",TRUE,adress,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+cucumber/cucumber-ruby,4011a04171bce1440a1fd84de84ddd40d9f7a41d,"Various platform issues. Less lame IronRuby support. Trying to adress disappearing a's on Windows MRI.
+",TRUE,adress,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+laurentb/weboob,1282e58b4c4a1d5429b62bdfba7c8579aecd5f53,"[carrefourbanque] remove cookie based on the begining of their name to fix login
+
+the two cookies we have to remove don't have same name on different ip address
+example:
+    1st cookie        2nd cookie
+___utmvafIuFLPmB, ___utmvbfIuFLPmB
+___utmvaYauFLPmB, ___utmvbYauFLPmB
+",TRUE,begining,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+devcode-it/openstamanager,3ca91567419bbe8b25461be9c380c62ed9254708,"Miglioramento gestione select dinamici
+
+Miglioramento della gestione dei select dinamici, in risposta a #66.
+Per il momento la gestione è ancora completamente delegata a file fisici, con possibilità di aggiungere un file ajax/select.php nei moduli.
+",TRUE,momento,FALSE,"not English, still typo",19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+reviewboard/reviewboard,c1fb82d3b99a0b682e33f8eb3cb376760f2d9d6b,"Correctly refer commit_message in DiffCommit.summary
+
+During one of the refactors that occurred, `DiffCommit.description` was
+changed to `DiffCommit.commit_message` and this occurrance was missed.
+
+Testing Done:
+- Ran unit tests.
+- With this patch applied, commit summaries can be calculated.
+
+Reviewed at https://reviews.reviewboard.org/r/10079/
+",TRUE,occurrance,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+abrt/faf,967808931acf9a07c901fe61946d2194727d76f6,"fedora: Filter query for releases with short name
+
+We can just add the short name to the query and recieve less data from PDC.
+(We don't need information about Fedora Docker/Atomic/Cloud/EPEL)
+
+See:
+https://pdc.fedoraproject.org/rest_api/v1/releases/?page_size=-1&short=fedora
+
+Signed-off-by: Martin Kutlak <cc6517dcb0df716c0823c08842c8a5c71772e466@redhat.com>
+",TRUE,recieve,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+naev/naev,440b0b47c20a12694b98ba1964d6c28d4524a27a,"AI attack functions try to recieve attack as a parameter instead of
+ai.taskdata()
+",TRUE,recieve,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+babel/babel,d08144c1d7732ffc28210196638e59694ca41032,"[loose parser] Support tabSize option
+",TRUE,loose,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+odamex/odamex,c390927ab8d2c2701fcc405922b4d9bceea7f843,"Additions/Changes:
+* Custom Servers dialog (currently inaccessible and does not work)
+* Button ID's should be static to the current source file they're in
+* Fix up include guards to the names of the header file and keep a consistent naming convention between all files.
+* Enlarge the Main window a little more to accomodate the size of the vertical scroll bar
+* Use Destroy() rather than delete on closing the config dialog
+
+
+SVN r178 (trunk)
+",TRUE,accomodate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+nwjs/chromium.src,0061e62f6151d252b0d8167d25fed3e7c29a6768,"Bad interaction between document destruction and unload events
+https://bugs.webkit.org/show_bug.cgi?id=64741
+
+Patch by Scott Graham <scottmg@chromium.org> on 2011-08-04
+Reviewed by Adam Barth.
+
+Source/WebCore:
+
+Three different errors triggered by this test case. The case to
+consider is a subdocument with an onunload on an element, that
+destroys the parent document during the onunload. One fix was a
+lifetime issue fixed by a protecting RefPtr, and another was an
+additional cancel of event triggers. The main fix was that during the
+transition to commited state, the documentLoader is being replaced by
+the provisionalDocumentLoader. But, because during firing events in
+the subdocument the parent is destroyed, that subevent caused the
+provisionalDocumentLoader to be detached from its frame. By marking
+the page as being in committed state before the parent documentLoader
+is set, this is avoided.
+
+Test: loader/document-destruction-within-unload.html
+
+* dom/Document.cpp:
+(WebCore::Document::implicitOpen):
+* loader/FrameLoader.cpp:
+(WebCore::FrameLoader::transitionToCommitted):
+(WebCore::FrameLoader::detachChildren):
+
+LayoutTests:
+
+* loader/document-destruction-within-unload-expected.txt: Added.
+* loader/document-destruction-within-unload.html: Added.
+* loader/resources/document-destruction-within-unload-iframe.html: Added.
+* loader/resources/document-destruction-within-unload.svg: Added.
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@92439 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,commited,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+andrewrk/zig,f5167f73e8765eaba6bd342cd81b0dbe2205519d,"deps/SoftFloat-3e/: commit with LF line endings
+
+`git add --renormalize .`
+
+For text files, git expects that all files are commited with LF line endings,
+it then (optionally) swaps to CRLF on checkout depending on .gitattributes and
+git config.
+",TRUE,commited,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+mongodb/mongo-php-driver,61c44329217eb028ab4c60ba535418f15f5ab671,"PHPC-309: Move the BSON namespace under MongoDB\ namespace
+
+Having seperate MongoDB\Driver\ and BSON\ namespace was overruled :(
+
+However, when you install pecl/bson seperately, it can be in the BSON
+namespace, as it is a standalone package just wrapping libbson.
+
+Since pecl/bson will be maintained in the same source as phongo, and I'd
+like to share the testcases etc, we introduce a compile flag to detect
+if we are compiling phongo or just bson, and set the namespace
+appropriately
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+KDE/solid,2c1c0eb4abe6e38da866c4d8e8d93fb511fbc78a,"Add solid-power, a small tool to query power stuff
+
+Small tool that will be able to report anything related (and supported)
+to power using Solid::Power.
+
+At the moment it only implements Show which reports wether the ac is
+plugged or not.
+
+TODO for the tool is:
+-Listen to events
+-Implement all other commands.
+",TRUE,wether,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+NicolasDorier/NBitcoin,db88f77eb1d00f175e269054b75d94a199c3aea0,"fix rare occurence of Node.GetChain stalling
+",TRUE,occurence,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+scalatest/scalatest-website,90121fbb6f60248261824c23c97bdd9c4552041a,"Accomodate newer Scaladoc style URLs starting with version 3.0.5.
+",TRUE,accomodate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+MariaDB/server,aec287fd670e7ee51c4ab7dfcd1b18da96ff3dea,"Bug #30825: Problems when putting a non-spatial index on a GIS column
+ Fixed the usage of spatial data (and Point in specific) with 
+ non-spatial indexes.
+ Several problems :
+   - The length of the Point class was not updated to include the 
+     spatial reference system identifier. Fixed by increasing with 4 
+     bytes.
+   - The storage length of the spatial columns was not accounting for
+     the length that is prepended to it. Fixed by treating the 
+     spatial data columns as blobs (and thus increasing the storage
+     length)
+   - When creating the key image for comparison in index read wrong
+     key image was created (the one needed for and r-tree search,
+     not the one for b-tree/other search). Fixed by treating the
+     spatial data columns as blobs (and creating the correct kind of
+     image based on the index type). 
+
+
+mysql-test/r/bdb_gis.result:
+  Bug #30825: bdb tests
+mysql-test/r/gis-rtree.result:
+  Bug #30825: key length changed
+mysql-test/r/gis.result:
+  Bug #30825: MyISAM tests
+mysql-test/r/innodb_gis.result:
+  Bug #30825: InnoDB tests
+mysql-test/t/bdb_gis.test:
+  Bug #30825: bdb tests
+mysql-test/t/gis.test:
+  Bug #30825: MyISAM tests
+mysql-test/t/innodb_gis.test:
+  Bug #30825: InnoDB tests
+sql/field.cc:
+  Bug #30825: Removed Field_geom::get_key_image as Field_blog::get_key_image 
+    takes type parameter into consideration and is a superset of 
+    Field_geom::get_key_image()
+sql/field.h:
+  Bug #30825: Removed Field_geom::get_key_image as Field_blog::get_key_image 
+    takes type parameter into consideration and is a superset of 
+    Field_geom::get_key_image()
+sql/sql_select.h:
+  Bug #30825: Geometry data are a blob derivate
+sql/sql_table.cc:
+  Bug #30825: Increased key length to accomodate for
+    spatial reference system identifier (srid)
+sql/sql_yacc.yy:
+  Bug #30825: Increased key length to accomodate for
+    spatial reference system identifier (srid)
+sql/table.cc:
+  Bug #30825: It stores a length for spatial data
+   as well, so increase the storage length (as it's
+   done for blobs).
+mysql-test/include/gis_keys.inc:
+  Bug #30825: Test file for spatial data and non-spatial indexes
+",TRUE,accomodate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+tprrt/linux-stable,e6aa9abd7381557c67be6a9e7240eb132ca00d66,"KVM: SVM: move nested svm state into seperate struct
+
+This makes it more clear for which purpose these members in the vcpu_svm
+exist.
+
+Signed-off-by: Joerg Roedel <ebd221a096cbc71dd9e1991db28795933c85f380@amd.com>
+Acked-by: Alexander Graf <3ad82b0c937b9aa51276120cedd545efc822be04@suse.de>
+Signed-off-by: Avi Kivity <8f920f22884d6fea9df883843c4a8095a2e5ac6f@redhat.com>
+",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
