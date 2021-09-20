@@ -348,21 +348,28 @@ def print_concepts_functions_for_bq(commit: str = 'XXX'):
     print()
 def evaluate_typo_classifier():
 
-    evaluate_concept_classifier(concept='Typos'
+    evaluate_concept_classifier(concept='Typo'
                                 , text_name='message'
                                 , classification_function=is_typo
                                 , samples_file=join(DATA_PATH, 'commit_typos_samples.csv'))
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='08d6b8e395fb22d144309de17162e414fa13f4da')
-    #evaluate_typo_classifier()
+    print_concepts_functions_for_bq(commit='81e7b2f240ba39adde3d6ece4030d144fce19d50')
+    evaluate_typo_classifier()
 
     text = """
-"- Cambiados algunos '@return array' por '@return self[]' o '@return ClaseConcreta[]', así evitamos usar instanceof y se autosugiere bien el código.
-- Añadido allFromArticulo a Stock, ya que se llama desde otra clase.
-- Revertidos un par de cambios menores de anteriores commits.
+
+"KVM: SVM: move nested svm state into seperate struct
+
+This makes it more clear for which purpose these members in the vcpu_svm
+exist.
+
+Signed-off-by: Joerg Roedel <ebd221a096cbc71dd9e1991db28795933c85f380@amd.com>
+Acked-by: Alexander Graf <3ad82b0c937b9aa51276120cedd545efc822be04@suse.de>
+Signed-off-by: Avi Kivity <8f920f22884d6fea9df883843c4a8095a2e5ac6f@redhat.com>
 "
+
 """.lower()
     print("is typo", is_typo(text))
     print("typo in text", re.findall(build_positive_regex(), text))
