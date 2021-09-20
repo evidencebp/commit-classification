@@ -186,31 +186,11 @@ def evaluate_security_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='9795cc67ad63133d19686a96d965ae784fddaee7')
+    print_concepts_functions_for_bq(commit='2bc040240146c9ed510eb7b065b461a0c0e15199')
     evaluate_security_classifier()
 
     text = """
-"Sensitivity plots fix (#2860)
 
-* fix immediately obvious bug in plotting loop
-
-* add in allinj plots, create front summary page
-
-* move allinj to after injection plots loop
-
-* Fix to make bank_plot work. Include found table in injection pages
-
-* Use censored veto, clarify fixme comments
-
-* add snrifar summary to main page
-
-* remove confusing and unneccessary bit
-
-* found table doesnt work
-
-* fix up one thing which turned into a list although it's only a list with 1 entry
-
-* add Gareth"
 """.lower()
     print("is fix", is_security(text))
     print("security in text", re.findall(build_positive_regex(), text))
