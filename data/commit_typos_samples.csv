@@ -638,3 +638,465 @@ Signed-off-by: Joerg Roedel <ebd221a096cbc71dd9e1991db28795933c85f380@amd.com>
 Acked-by: Alexander Graf <3ad82b0c937b9aa51276120cedd545efc822be04@suse.de>
 Signed-off-by: Avi Kivity <8f920f22884d6fea9df883843c4a8095a2e5ac6f@redhat.com>
 ",TRUE,seperate,,,19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50
+fusioninventory/fusioninventory-agent,2d421e568aaa18815f360e8a9a0833f6d0214eb2,"override constructor to initialise http client
+",TRUE,initialise,,,3_oct_2021_hit_e69416227e785165419d9daf1b0e13f274a3c1aa
+magit/magit,82c0aa2d8850f30fbe79e6568d43cfb32f7b199c,"use overlays to propertize various parts of logs
+
+Ever wondered why faces used for refs such as branch names have a
+border?  It is because of this limitation mentioned in info node
+`(elisp)Overlay Properties':
+
+  Currently, all overlays take priority over text properties.
+  Please avoid using negative priority values, as we have not
+  yet decided just what they should mean.
+
+So when a section is highlighted by changing the background (the
+default), then all background colors things like reflabels that are
+located inside the section loose their background color.  It seems
+someone decided that just the foreground color being different from
+surrounding text is not enough and also added a border to the faces
+used for such things.  This has been reverted in some color themes
+in others it has not.  After this change it is solely a matter of
+taste, not visibility whether someone wants to keep the borders.
+
+The borders will probably be removed from the defaults of these
+faces eventually.  But this isn't urgent.
+",TRUE,loose,,,3_oct_2021_hit_e69416227e785165419d9daf1b0e13f274a3c1aa
+facebook/mysql-5.6,b028dad9ce805042401c484c24c65516c0972588,"Bug #31974: additional commit (test case updates)
+ loose index scan enabled for subqueries
+",TRUE,loose,,,3_oct_2021_hit_e69416227e785165419d9daf1b0e13f274a3c1aa
+toralf/tinderbox,cdd49770750914b7620a2c991154210c8230bc6f,"udpate patterns
+
+Signed-off-by: Toralf Förster <24e9a7e86225fc01f236a81fc86e902a74542aa1@gmx.de>
+",TRUE,udpate,,,3_oct_2021_hit_e69416227e785165419d9daf1b0e13f274a3c1aa
+tprrt/linux-stable,327b8c89d4aec9871626415868c8312b9722f2b8,"MIPS: SEAD3: Stop using GIC REG macros
+
+Stop using the REG macros from gic.h and instead use proper iomem
+accessors.
+
+Signed-off-by: Andrew Bresticker <6f9d97df82107736b1c4f0e11d74242c25499ec8@chromium.org>
+Cc: Daniel Lezcano <e9fa45941f2ebe89c1b9d6c5f339ab42eadb8567@linaro.org>
+Cc: Thomas Gleixner <00e4cf8f46a57000a44449bf9dd8cbbcc209fd2a@linutronix.de>
+Cc: Jason Cooper <68c46a606457643eab92053c1c05574abb26f861@lakedaemon.net>
+Cc: Paul Burton <85f1bffadddedccfafc0ae065a06aa636075387f@imgtec.com>
+Cc: Qais Yousef <4160b002aa2c00153d66a4cc29a35bf1c83cee97@imgtec.com>
+Cc: John Crispin <be6487f9df4dce44a640672d6c07330104d43593@openwrt.org>
+Cc: 562397917b9a8bf316569a848858b12fb417723f@linux-mips.org
+Cc: 2578944098299abf708b08eff6fcf60565553586@vger.kernel.org
+Patchwork: https://patchwork.linux-mips.org/patch/8125/
+Patchwork: https://patchwork.linux-mips.org/patch/8228/
+Signed-off-by: Ralf Baechle <92f48d309cda194c8eda36aa8f9ae28c488fa208@linux-mips.org>
+",FALSE,"Jason is name, not JSON typo",,,3_oct_2021_hit_e69416227e785165419d9daf1b0e13f274a3c1aa
+jeyserver/webuilder,547aa14321540c59e5970a6f1d8aa885b6c36e33,"Fix gregorian calender in current moment
+",TRUE,calender,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+rear/rear,30a2d85ef1a2b63a91ddd338664f867f5c168c9b,"! OUTPUT=USB now independant of BACKUP=NETFS
+",TRUE,independant,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+ustbhuangyi/better-scroll,c71d35ad7a6ab8987549fa8c439dbd76eade481b,"divide enums into seperate files to prevent duplicated building from webpack
+",TRUE,seperate,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+psf/requests,98dc08236c51483130dfa59e1f74a01b31106a46,loose yourself,TRUE,loose,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+MariaDB/server,4fcea0fc5c600ec4082007f1f375df9a4658c205,"Remove unecessary use of ""Socket""
+",TRUE,unecessary,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+nwjs/chromium.src,11cc8e30da176781772d5a37e7effa333964115a,"GenericURLRequestJob::GetRequestId to return URLRequest::identifier
+
+Having a seperate ID is a source of bugs.
+
+Bug: 
+Change-Id: I64957483d0c8217ce7cf1b562c0cb66b5cfd730c
+Reviewed-on: https://chromium-review.googlesource.com/657644
+Reviewed-by: Sami Kyöstilä <aa8b77df5d887ec30b6fa9e5e60a727a5eeba345@chromium.org>
+Commit-Queue: Alex Clarke <9f4f272ef9b13bebfae45ae3fefff7bc1f90856a@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#500645}",TRUE,seperate,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+tgstation/-tg-station,9516507370743607fd474c373c5b8a050b3a94ec,"People monkeyized by admins/jungle fewer won't loose genetic mutations and diseases.
+People bitten my monkey get infected by jungle fewer.
+Some other improvements for monkey mode.
+
+
+git-svn-id: af9c09e5e5bfa333f52f6fefeba857070ad34abf@1398 316c924e-a436-60f5-8080-3fe189b3f50e
+",TRUE,loose,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+openwrt/luci,9733a182e8dc1713e27e784fa7aded553caad695,"luci-base: ui.js: use placeholder as select placeholder in DynLists
+
+Signed-off-by: Jo-Philipp Wich <bd73d35759d75cc215150d1bbc94f1b1078bee01@mein.io>
+",FALSE,Wich as name,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+coq/coq,e8f9bfa68c7657105c1ca3e32f13abadb7636c25,"Univ: an attempt to lazily compact chains of Equiv in a functionnal way
+
+ We'll see experimentally if this helps... A few more functions could
+ be adapted (e.g. between), and an occurence of compare just discard
+ the compacted graph (in compare_greater)
+
+git-svn-id: 44dc50bdcc0f5d1a212c497508dc9452e0b35e2b@13723 85f007b7-540e-0410-9357-904b9bb8a0f7
+",TRUE,occurence,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+mbedmicro/mbed,dea82686895ea4902947c0cd38211218967ae1b2,"Merge pull request #10928 from kjbracey-arm/us_ticker_optimise
+
+STM: Correct macro test in us_ticker_defines.h",TRUE,optimise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+pfsense/pfsense,d23ef852b368b3a1ee8615eac0c15c63e42b2b8d,"Set the retry value to 60 seconds, this is not attempts, this is seconds before it needs a reply. So if the DHCP server was any sort of slow it would fail to aquire a lease. This was true for my wireless network at home. Plus, on various other lossy links, even cable modems this could be true.
+Redmine ticket #2440
+
+retry time;
+	     The retry statement determines the time that must pass after the
+	     client has determined that there is no DHCP server present before
+	     it tries again to contact a DHCP server.  By default, this is
+	     five minutes.
+",TRUE,aquire,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+apache/incubator-zeppelin,a424f5c655623c8128824f95a673ad7cb06d09a7,"[MINOR][Code Refactoring] Configuration name change for keytab and principal used for FileSystemNotebookRepo
+
+### What is this PR for?
+
+Trivial change for configuration name change.
+
+### What type of PR is it?
+[Refactoring]
+
+### Todos
+* [ ] - Task
+
+### What is the Jira issue?
+* No jira created
+
+### How should this be tested?
+* First time? Setup Travis CI as described on https://zeppelin.apache.org/contribution/contributions.html#continuous-integration
+* Strongly recommended: add automated unit tests for any new or changed behavior
+* Outline any manual steps to test the PR here.
+
+### Screenshots (if appropriate)
+
+### Questions:
+* Does the licenses files need update? No
+* Is there breaking changes for older versions? No
+* Does this needs documentation? No
+
+Author: Jeff Zhang <zjffdu@apache.org>
+
+Closes #2620 from zjffdu/minor_refactoring and squashes the following commits:
+
+c68ce76 [Jeff Zhang] [MINOR][Code Refactoring] Configuration name change for keytab and principal used for FileSystemNotebookRepo
+",TRUE,principal,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+jim-easterbrook/Photini,e658889d8160e1cf29d929eeb7983f22e6be8d64,"Bug fix: date/time was sometimes being marked as changed.
+The mistake was to initialise the widgets with today's date & time. When
+switching to the date tab with a selected image, changing the date &
+time to that of the image was being interpreted as a change in the
+image's metadata.
+",TRUE,initialise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+nwjs/chromium.src,c5d8702b4b8fae83256026e903e59692737ff968,"[GStreamer] Audio device not closed after playing sound
+https://bugs.webkit.org/show_bug.cgi?id=89122
+
+Reviewed by Martin Robinson.
+
+Set the GStreamer pipeline to NULL instead of PAUSED on EOS. This
+allows the audio-sink to release its connection to the audio
+device. This is done only if the Media element is not
+looping. To make the MediaPlayerPrivate layer aware of that
+information the MediaPlayerClient interface was updated with a new
+method mediaPlayerIsLooping, implemented by the HTMLMediaElement.
+
+* html/HTMLMediaElement.cpp:
+(WebCore::HTMLMediaElement::mediaPlayerIsLooping): Implementation of
+MediaPlayerClient::mediaPlayerLoop, proxies to ::loop();
+* html/HTMLMediaElement.h:
+(HTMLMediaElement):
+* platform/graphics/MediaPlayer.h:
+(WebCore::MediaPlayerClient::mediaPlayerIsLooping): New method allowing
+the MediaPlayer and its backend to know if a playback loop is
+requested by the client.
+* platform/graphics/gstreamer/MediaPlayerPrivateGStreamer.cpp:
+(WebCore::MediaPlayerPrivateGStreamer::MediaPlayerPrivateGStreamer):
+(WebCore::MediaPlayerPrivateGStreamer::playbackPosition): Report
+seek time or media duration if EOS was reached. These early
+returns are needed because the position query doesn't work on a
+NULL pipeline.
+(WebCore::MediaPlayerPrivateGStreamer::changePipelineState):
+Refactored to use an early return.
+(WebCore::MediaPlayerPrivateGStreamer::prepareToPlay): Reset the
+seeking flag.
+(WebCore::MediaPlayerPrivateGStreamer::play): reset m_isEndReached.
+(WebCore::MediaPlayerPrivateGStreamer::pause): Don't pause on EOS.
+(WebCore::MediaPlayerPrivateGStreamer::seek): Refactor, call
+currentTime() after we're sure playbin is valid and no error occured.
+(WebCore::MediaPlayerPrivateGStreamer::paused): Fake paused state
+on EOS.
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@128298 bbb929c8-8fbe-4397-9dbb-9b2b20218538",TRUE,occured,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+opendaylight/controller,a261052a953b780a6819b7f77b22b3d0244055f4,"Merge ""Bug 1002 - REST POST transaction is not commited""",TRUE,commited,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+cbsd/cbsd,8d3a855a496876f977ed2899bacd790a688f1797,"check fstab file existance
+",TRUE,existance,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+tprrt/linux-stable,4b50dc26a0a25a9d1998d206e1f7d849aa78063f,"shmem: remove redundant code
+
+prep_new_page() will call set_page_private(page, 0) to initialise the
+page, so the code is redundant.
+
+Signed-off-by: Huang Shijie <8f4ee92b8040314c85d57ef7f2c7fb57fbf091a5@gmail.com>
+Reviewed-by: Minchan Kim <12330474acf818c36105a159b1ab0efedce0665c@gmail.com>
+Acked-by: Hugh Dickins <a96f0e3e09e76642c8a5dcf04c8f12accf315063@tiscali.co.uk>
+Signed-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>
+Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
+",TRUE,initialise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+2sic/eav-server,cc6dec069148de7aae2f374247f1602a94cb3212,"upgraded unity - build successfull
+",TRUE,successfull,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+DIRACGrid/DIRAC,1ad3e5058321348f60e4ff1c256f680cf5443bcb,"Removed eclipse files commited by mistake
+",TRUE,commited,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+UWB-Biocomputing/BrainGrid,66bbfd79ca66f92d30fb83a3da6c7bdd695857ab,"Updated Makefile and Seed parameter should now work
+
+I initially have the TinyXML just parse the attribute for a seed and
+hopefully it'll convert over to a long fine. If there are bugs with this
+it should jsut be changed over to an int32 seed and casted to long as
+neccessary.
+",TRUE,neccessary,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+dmo60/CoverflowAltTab,699d7c41fec2e47863ef701cd9efe147348f29d6,"Ensure global ""_"" doesn't get overriden during alt+tabing
+
+",TRUE,overriden,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+fberst/xcsoar,a9c87474901db8a989d822fea0ad4521ea5aebe4,Math/Angle: optimise fixed multiplication,TRUE,optimise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+nwjs/chromium.src,d632a9a0f94b46b5831a7f53478c5a43d9208771,"Optimise MaskWebSocketFramePayload().
+
+Add benchmarks for MaskWebSocketFramePayload(). Add a test to ensure
+that it gives the correct result regardless of how the input is aligned or
+chunked.
+
+Optimise MaskWebSocketFramePayload() to apply the mask one word at a time
+instead of one byte at a time. This reduces the time to mask 64k from 0.073ms
+to 0.008ms on 32bit, and 0.079ms to 0.005ms on 64bit.
+
+Input shorter than two words in length is still masked one byte at a time,
+so there is no significant change in performance for small payloads.
+
+TEST=net_unittests --gtest_filter='WebSocketFrameTestMaskBenchmark.*' --websocket-mask-iterations=10000
+
+BUG=
+
+
+Review URL: https://chromiumcodereview.appspot.com/11572010
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@173448 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,optimise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+ssadedin/groovy-ngs-utils,a96b85930c2c286f460412a883eb0df913a96ee7,"Add various required libraries, comment out proguard, add doc task (maybe unnecesary)
+",TRUE,unnecesary,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+alisw/AliRoot,f8e81f5646d7e248d13e39f6516f6b7969fefc10,"ALIROOT-6001 AliSimulation fails to recognize libHLTsim.so.
+The problem occured when we moved AliHLTSimulation to libSTEER in order to
+avoid circular dependency. I am commenting this check since it is anyway
+useless.
+",TRUE,occured,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+wilkerlucio/pathom,0951af7693af29142853d05e6bfeedcec72fc545,"event entry loose spec
+",TRUE,loose,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+bendalab/thunderfish,5e859c3eb5753da193bc43f20690c56d1edca154,"added method to seperate puls and wave fish.
+
+line 1054 to line 1079
+",TRUE,seperate,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+chromium/chromium,0ab0a8b813401780165ff215417209ec7cacc753,"Revert ""Partial Fix to Android Omnibox scrolling revealing other content""
+
+This reverts commit 935a93c49632893f361b71ae14359097da262578.
+
+Reason for revert: Test revert to bisect regression
+
+Original change's description:
+> Partial Fix to Android Omnibox scrolling revealing other content
+> 
+> ChromeFullscreenManager::updateViewportSize calculates the changes in control
+> offsets, and determines when to toggle the resizing of the renderer's view.
+> 
+> Currently all viewport updates are blocked while a gesture or scrolling is
+> occurring.
+> 
+> This change updates the method to also perform the update if we've changed the
+> resize state. Allowing the renderer to resize to account for the larger region
+> when scrolling the controls away.
+> 
+> While this prevents showing older content, it only does so for normal speed
+> scrolls. A quick flick can lead to such a rapid change in viewport, that we
+> still have some frames of old content.
+> 
+> Bug: 916144
+> Change-Id: Ibbf8d6daa89691945e011022f9509fea4783cfe2
+> Reviewed-on: https://chromium-review.googlesource.com/c/1387945
+> Reviewed-by: agrieve <agrieve@chromium.org>
+> Reviewed-by: Matthew Jones <mdjones@chromium.org>
+> Commit-Queue: Jonathan Ross <e9c70bc7206746b5bf0d76d2d89b2fc9653940f2@chromium.org>
+> Cr-Commit-Position: refs/heads/master@{#623741}
+
+TBR=e9c70bc7206746b5bf0d76d2d89b2fc9653940f2@chromium.org,agrieve@chromium.org,mdjones@chromium.org
+
+# Not skipping CQ checks because original CL landed > 1 day ago.
+
+Bug: 916144
+Change-Id: I9c7df1d8e7d298db3bda532806a85cedbb22890f
+Reviewed-on: https://chromium-review.googlesource.com/c/1491139
+Reviewed-by: Eric Karl <34121bafdd3848ba3a67ad2aae69c078fae28e52@chromium.org>
+Reviewed-by: Jonathan Ross <e9c70bc7206746b5bf0d76d2d89b2fc9653940f2@chromium.org>
+Commit-Queue: Jonathan Ross <e9c70bc7206746b5bf0d76d2d89b2fc9653940f2@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#636017}",FALSE,Name,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+openstack/python-ironicclient,4d966622ef9adb4b088915d9294248ba85aa204b,"Sync with oslo-incubator
+
+According to the latest agreement in Oslo team, apiclient and
+clituils will be removed from Oslo incubator. We should keep
+the local copy by ourselfs:
+1. rename openstack/common/apiclient to common/apiclient
+2. Because Ironic only use base.py and exception.py, so delete others.
+3. rename openstack/common/cliutils.py to common/clituils.py
+4. Delete openstack/common/_i18n becuase we have common/i18n.py
+5. Delete openstack folder because it is empty
+6. Add related unit tests and add oslotest to test-requirements.
+
+Change-Id: I9eecd0457e86e82e65db1d0bc9a4c5c0ed4bbf74
+",TRUE,becuase,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+thought-machine/please,808c0e1c7c9facc58d9f599e7312cee07926f07e,"Remote execution API calls (#700)
+
+* move a function
+
+* initialise remote execution client
+
+* Finish off actual rex call
+
+* FIx test
+
+* Adding a test
+
+* Test + coverage
+
+* Tie up remote build / test running more properly
+
+* lint
+",TRUE,initialise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+tprrt/linux-stable,5e10d4a7fc80e4ef310c07a6a547406fef50534a,"bcm63xx_enet: do not overwrite ENET_CTL_REG value
+
+bcm_enet_hw_preinit will correctly set values in ENET_CTL_REG for internal
+or external MII operations, however, bcm_enet_open will blindly overwrite the
+ENET_CTL_REG register value and thus we will loose any changes to it that
+were made in bcm_enet_hw_preinit, rendering external MII operations non-working.
+
+This would lead to the driver not being able to check for link availability on
+external PHY setups, and thus we would never get to sending packets because
+link was down from the driver side.
+
+This was completely un-noticed because all boards out there but BCM6338-based
+ones use internal phy on their enet0 interface.
+
+Signed-off-by: Florian Fainelli <38e15eb16946e3ee29d10b339260d9b7fa2fa48b@freebox.fr>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",TRUE,loose,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+veyon/veyon,59d78cc839675dd6a574490452828ef78eb79ad6,"Win32: integrate authSSP module into ItalcCore library and drop authSSP.dll
+
+In order to simplify the authentication mechanisms do not use the original
+vncntlm and authSSP modules but integrate the required functionalities
+directly into the ItalcCore library. This also improves security as no
+external module (which theoretically even can be overriden by
+configuration) is loaded dynamically anymore.
+",TRUE,overriden,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+jsstyles/css-vendor,5c87a19d9c9924af490944cf158cd77ada216440,"Remove unecessary test
+",TRUE,unecessary,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+acassen/keepalived,40b3746eca7f74f7c3eb05666c5b303afabb8580,"Tidy up the recieve message processing code loops in genhash
+
+Signed-off-by: Quentin Armitage <d6b8e48afb2534b213e391cab43016505747a234@armitage.org.uk>
+",TRUE,recieve,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+samba-team/samba,94c23ee046ca9cfa36ab5aedfeb56faf8eee459c,"python/compat: use cStringIO instead of StringIO in compat.py
+
+Using cStringIO for py2 seems to incur alot less problems and less changes
+to the py2/py3 code then using StringIO.StringIO
+
+Signed-off-by: Noel Power <5d8953a81ee7faf03fd3845d9c88b1bd8aadcf4c@suse.com>
+Reviewed-by: Andrew Bartlett <9503ccf2b9baea7c4d590fbd562f8b0a297738eb@samba.org>
+",TRUE,alot,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+docker/docker,9abf304c255cb3194b932e92f2b87bfabaab88c9,"optimise docs
+
+Signed-off-by: 搏通 <9c372522d73072494f813d52efedf19c00e1b24a@alibaba-inc.com>
+",TRUE,optimise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+bozimmerman/CoffeeMud,b010f8dddc09019ad0fecc65dbd71c54436e7822,"added hygeine to sysmsgs loo
+
+git-svn-id: 0cdf8356e41b2d8ccbb41bb76c82068fe80b2514@19499 0d6f1817-ed0e-0410-87c9-987e46238f29
+",TRUE,hygeine,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+openwrt/openwrt,282894a407220231b9350f240aea66bef6f38fe7,"malta: fix imagebuilder
+
+Signed-off-by: Jo-Philipp Wich <jow@openwrt.org>
+
+SVN-Revision: 45804
+",FALSE,Which as a name,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+airsonic/airsonic,99198ae06ce9159960cc0243d3dec96faab5c847,"Remove warning about haproxy version
+
+I used debian version wich is the 1.5.8 and its working just fine !",TRUE,wich,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+eclipse/hawkbit,0cc1cfcc8c9bd29f601f52f6084c4246a50901f4,"Merge pull request #294 from bsinno/fix_memory_optimization
+
+Performance and memory optimisation",TRUE,optimisation,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+fabioz/Pydev,61f595bddebd4c21c5f5074aa4412c666cf91b15,"Changed approach to format blank lines in 2 steps to accomodate selected lines.
+",TRUE,accomodate,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+vygr/Asm-Kernel,62ea6994369d4f8327a8d311b7b8b5f09651c900,"optimise init methods
+",TRUE,optimise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+AshamaneProject/AshamaneCore,d83d1ffe0e065e45628a81b0d637f143dd72a9e0,"DB/Disables: Disable Achievement: Not In My House untill a proper script is in place
+",TRUE,untill,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+grafana/grafana,5eab5dc47b621e79d08c5a5e7c5bc5b8f19a7b67,"feat(plugins): removed external plugins and bundle code, not ready for master yet, will revert this commit in seperate branch
+",TRUE,seperate,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+OPM/ResInsight,200d5c65a39ba92d196ffb3ada42bebb0928c534,"AutoVcpkg: Include Vcpkg toolchain
+
+Include the Vcpkg toolchain file after the installation of the first
+package.
+
+When building for the first time from a clean source tree, the Vcpkg
+toolchain file does not exist. At the same time CMake is only reading
+the toolchain file the very first time it is configuring, but since the
+toolchain file is only created when vcpkg is configured on the first
+call to vcpkg_install it will never read it. So it is not enough to just
+reconfigure.
+
+Note: It is not ideal to include it here since one might at some point
+install and search for a package at an erlier point in the script and
+fail to find it.
+
+Alternative approaces that I considered:
+- Include this file right after including AutoVcpkg. This would require
+  1 recompilation for the file to be found and read which is
+  unfortunate.
+- Include this file in the config function in AutoVcpkg. This seemed
+  difficult without including the file for every call to vcpkg_install,
+  which seems unecessary.
+",TRUE,unecessary,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+mantidproject/mantid,2a7fcd4a80c44a4bc82091d53b0a3c38fc0c3f1f,"Refs #9239 Initialise variables in constructor.
+
+The converity scan should be satisfied with the way I'm initialising these variables now.
+",TRUE,Initialise,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+msg7086/x265-Yuuki-Asuna,afd3a1565b20c51ba83ebcd44bd2cf7039897533,"32bit build issue fix for partialButterfly4 intrinsic function.
+Further optimisation.
+",TRUE,optimisation,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+gama-platform/gama,507579a01378bcd6f33c55fd31d4968c3fd21f7f,"Predicate loose  the value and changed the parameter map by a values map.  Addition of the probabilistic choice for the use of different plans or different intentions.  The addition of a believe update the intention and the desires bases.
+
+git-svn-id: c32a53fb0e9bbdeae00233745ac33e351137f13d@12219 b91ef52e-2b48-11df-9ab6-b1cdc0d4a89a
+",TRUE,loose,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+ponylang/ponyc,321b7c6bfcc1501dd4536cc98d03cb99ab2b0edf,"Fix valgrind build (#2071)
+
+This was accidentaly broken in 6e9f310.",TRUE,accidentaly,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
+KDE/kconfig,98c32e29f50465d4d4e16bafdf0491edbfb422b0,"WIP: Refactor KConfigXT
+
+Summary:
+The current KConfigXT compiler is in a sad state:
+It's a massive file with loads of global variables that handle state, the generator is done within the main() function and it seems to have grown organically. There are no classes to separate logic / state / generation, what exists is code that generates code from a xml / ini pair, but it's hard to even discover what a bit of code is doing. The code istyle is C++ / Java from the nineties, which is not bad per see but it also uses quite a few things that are going to be deprecated in Qt 6 so I'm also taking the time make the code more streamlined with newer code style (no iterators, lambdas, auto usage, etc).
+
+The code that generates the files simplly pushes strings to a text stream, and it's hard to figure out when something starts or something ends: for instance, the code that generates the Constructor has more than sixty lines of code englobing some nested if - for - if - for constructs.
+
+Currently the code is ""done"" - there's one bug that I still need to find & fix regarding Translations, but the rest seems sane.
+The current testcode generates incorrect *whitespaces* regarding the old code (there's some parts that I feel that it's important to fix before merging, but overall, the whitespace changes are not bad and easier to handle, old code had a hand-counted amount of spaces before each line, new code has a function whitespace() that adds the current-and-correct amount of whitespaces based on indentation level that you start by startScope() and ends with endScope(). rest of the code still needs to be ported to it.
+
+I plan to fix the testcases whitespace by manually adding them, I'v fougth with the code for a while and added a few hacks there but I don't want to make the code hackish again.
+
+New code is not perfect by any means, but is a good step in the right direction.
+
+This code tries to Separate the compiler code into many different files / classes to be more obvious what's happening, and each class also has many helper methods to minimize copypaste.
+
+  -     CodeGenerator: Has base code for the header and source files that can be shared
+  -     HeaderGenerator: Logic for generating the header file
+  -     SourceGenerator: Logic for generating the source file
+  -     KcfgParser: Logic for parsing the kcfg file and extracting the information from the Xml file
+  -     CommonStructs: a header that contains the structs that are currently used everywhere.
+  -     KConfigParameters: (was CfgConfig - ConfigConfig, wat) - Has information passed via the kcfgc file
+  -     kcfg_compiler - will be renamed to main - start the other classes and generates the files.
+
+This code here currently has the begining of this separation, with the CodeGenerator and the HeaderGenerator in a ~good~ state, but unfinished.
+
+Test Plan:
+- Run the test cases,
+- Compare the diffs generated by the testcases and fix in the code the errors / differences
+- Run and compare real kde source with the new and old generators to look for errors
+
+Reviewers: #frameworks, ervin, bport, dfaure
+
+Reviewed By: dfaure
+
+Subscribers: bport, ngraham, kde-frameworks-devel
+
+Tags: #frameworks
+
+Differential Revision: https://phabricator.kde.org/D26202
+",TRUE,begining,,,3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e
