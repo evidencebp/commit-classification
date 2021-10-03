@@ -370,7 +370,7 @@ def evaluate_typo_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='e69416227e785165419d9daf1b0e13f274a3c1aa')
+    print_concepts_functions_for_bq(commit='00e2683072911effb4d82daff17f961bb2e9c94e')
     evaluate_typo_classifier()
 
     text = """
