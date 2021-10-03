@@ -26,7 +26,7 @@ repo_name
 , '' as Justification
 , '' as Certain
 , '' as Comment
-, '19_sep_2021_hit_81e7b2f240ba39adde3d6ece4030d144fce19d50' as Sampling
+, '3_oct_2021_hit_00e2683072911effb4d82daff17f961bb2e9c94e' as Sampling
 from
 general.commit_typo
 where
