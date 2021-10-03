@@ -179,6 +179,7 @@ positive_terms = [
 ,'misspel' # mistake of misspell
 ,'neccessary' # mistake of necessary
 ,'necessery' # mistake of necessary
+,'necesary' # mistake of necessary
 ,'neice' # mistake of niece
 ,'nieghbor' # mistake of neighbour
 ,'noticable' # mistake of noticeable
@@ -373,17 +374,11 @@ if __name__ == '__main__':
     evaluate_typo_classifier()
 
     text = """
+"Handle dummy_toolbar_diffmap the same way as dummy_toolbar_linkmap
 
-"KVM: SVM: move nested svm state into seperate struct
-
-This makes it more clear for which purpose these members in the vcpu_svm
-exist.
-
-Signed-off-by: Joerg Roedel <ebd221a096cbc71dd9e1991db28795933c85f380@amd.com>
-Acked-by: Alexander Graf <3ad82b0c937b9aa51276120cedd545efc822be04@suse.de>
-Signed-off-by: Avi Kivity <8f920f22884d6fea9df883843c4a8095a2e5ac6f@redhat.com>
+I'm not sure if this is neccessary, useful or even correct. At least it
+does not show any regressions.
 "
-
 """.lower()
     print("is typo", is_typo(text))
     print("typo in text", re.findall(build_positive_regex(), text))
