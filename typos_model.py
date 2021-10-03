@@ -150,7 +150,7 @@ positive_terms = [
 ,'innoculate' # mistake of inoculate
 ,'inteligence' # mistake of intelligence
 ,'intelligance' # mistake of intelligence
-,'jason' # mistake of json (JSON format)
+#,'jason' # mistake of json (JSON format), yet also the name Jason
 ,'jewelery' # mistake of jewelry (UK: jewellery)
 ,'judgement' # mistake of judgment
 ,'kernal' # mistake of kernel
@@ -374,10 +374,23 @@ if __name__ == '__main__':
     evaluate_typo_classifier()
 
     text = """
-"Handle dummy_toolbar_diffmap the same way as dummy_toolbar_linkmap
+"MIPS: SEAD3: Stop using GIC REG macros
 
-I'm not sure if this is neccessary, useful or even correct. At least it
-does not show any regressions.
+Stop using the REG macros from gic.h and instead use proper iomem
+accessors.
+
+Signed-off-by: Andrew Bresticker <6f9d97df82107736b1c4f0e11d74242c25499ec8@chromium.org>
+Cc: Daniel Lezcano <e9fa45941f2ebe89c1b9d6c5f339ab42eadb8567@linaro.org>
+Cc: Thomas Gleixner <00e4cf8f46a57000a44449bf9dd8cbbcc209fd2a@linutronix.de>
+Cc: Jason Cooper <68c46a606457643eab92053c1c05574abb26f861@lakedaemon.net>
+Cc: Paul Burton <85f1bffadddedccfafc0ae065a06aa636075387f@imgtec.com>
+Cc: Qais Yousef <4160b002aa2c00153d66a4cc29a35bf1c83cee97@imgtec.com>
+Cc: John Crispin <be6487f9df4dce44a640672d6c07330104d43593@openwrt.org>
+Cc: 562397917b9a8bf316569a848858b12fb417723f@linux-mips.org
+Cc: 2578944098299abf708b08eff6fcf60565553586@vger.kernel.org
+Patchwork: https://patchwork.linux-mips.org/patch/8125/
+Patchwork: https://patchwork.linux-mips.org/patch/8228/
+Signed-off-by: Ralf Baechle <92f48d309cda194c8eda36aa8f9ae28c488fa208@linux-mips.org>
 "
 """.lower()
     print("is typo", is_typo(text))
