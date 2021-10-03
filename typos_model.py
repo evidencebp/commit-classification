@@ -12,6 +12,7 @@ from language_utils import  regex_to_big_query, generate_bq_function, match, SCH
     , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
+
 positive_terms = [
 'absense' # mistake of absence
 ,'absentse' # mistake of absence
@@ -22,6 +23,7 @@ positive_terms = [
 ,'accomodate' # mistake of accommodate
 ,'acommodate' # mistake of accommodate
 ,'acheive' # mistake of achieve
+,'agrieve' # mistake of aggrieved
 ,'acknowlege' # mistake of acknowledge
 ,'aknowledge' # mistake of acknowledge
 ,'acquaintence' # mistake of acquaintance
@@ -144,9 +146,11 @@ positive_terms = [
 ,'indite' # mistake of indict
 ,'independant' # mistake of independent
 ,'indispensible' # mistake of indispensable
+,'initialise' # mistake of initialize
 ,'innoculate' # mistake of inoculate
 ,'inteligence' # mistake of intelligence
 ,'intelligance' # mistake of intelligence
+,'jason' # mistake of json (JSON format)
 ,'jewelery' # mistake of jewelry (UK: jewellery)
 ,'judgement' # mistake of judgment
 ,'kernal' # mistake of kernel
@@ -186,8 +190,11 @@ positive_terms = [
 ,'occured' # mistake of occurred
 ,'ommision' # mistake of omission
 ,'omision' # mistake of omission
+,'optimisation' # mistake of optimization
+,'optimise' # mistake of optimize
 ,'orignal' # mistake of original
 ,'outragous' # mistake of outrageous
+,'overriden' # mistake of overridden
 ,'parliment' # mistake of parliament
 ,'passtime' # mistake of pastime
 ,'pasttime' # mistake of pastime
@@ -254,7 +261,11 @@ positive_terms = [
 ,'tommorrow' # mistake of tomorrow
 ,'twelth' # mistake of twelfth
 ,'tyrany' # mistake of tyranny
+,'udpate' # mistake of update
 ,'underate' # mistake of underrate
+,'unecessary' # mistake of unnecessary
+,'unneccessary' # mistake of unnecessary
+,'unnecesary' # mistake of unnecessary
 ,'untill' # mistake of until
 ,'upholstry' # mistake of upholstery
 ,'usible' # mistake of usable/useable
@@ -265,6 +276,7 @@ positive_terms = [
 ,'visious' # mistake of vicious
 ,'wether' # mistake of weather
 #,'whether' # mistake of weather # removed - valid word
+,'wich' # mistake of which
 ,'wierd' # mistake of weird
 ,'wellfare' # mistake of welfare
 ,'welfair' # mistake of welfare
