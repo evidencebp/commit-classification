@@ -321,16 +321,18 @@ def typo_to_bq():
     #print( ",")
     print("{schema}.bq_core_{concept}(message)".format(schema=SCHEMA_NAME
                                                        , concept=concept))
-    print(" - ")
-    print("# " + concept +  ": Excluded")
-    print("{schema}.bq_excluded_{concept}(message)".format(schema=SCHEMA_NAME
-                                                           , concept=concept))
-
-    print(" - ")
-    print("# " + concept +  ": not positive")
-    print("{schema}.bq_not_positive_{concept}(message)".format(schema=SCHEMA_NAME
-                                                               , concept=concept))
+    # Spelling mistakes are local, no need to exclude by context
     print("# end - " + concept)
+
+    #print(" - ")
+    #print("# " + concept +  ": Excluded")
+    #print("{schema}.bq_excluded_{concept}(message)".format(schema=SCHEMA_NAME
+    #                                                       , concept=concept))
+
+    #print(" - ")
+    #print("# " + concept +  ": not positive")
+    #print("{schema}.bq_not_positive_{concept}(message)".format(schema=SCHEMA_NAME
+    #                                                               , concept=concept))
 
 def print_concepts_functions_for_bq(commit: str = 'XXX'):
 
