@@ -4320,13 +4320,13 @@ batfish/batfish,e9d86a874df47eb9a2a18b581e147df9121ecbc8,"switched to antlr 4.4,
 beast-dev/beast-mcmc,3e4f8b8a862934d6f142fbca65fd9f4901211504,DiffusionRateStatistic modification now with appropriate comment...,FALSE,TRUE,FALSE,FALSE,"appropiate, comment",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 ultrabug/py3status,578b4c73d2b74c4f6cb0bfa7f2e63ab4e89343ae,"getjson module: support basic auth via username/password fix #1875 (#1876)
 
-",,,TRUE,TRUE,"support, fix, password","by code, not sure if addaptive, corrective or both",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+",FALSE,FALSE,TRUE,TRUE,"support, fix, password","by code, not sure if addaptive, corrective or both",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 wordpress-mobile/WordPress-FluxC-Android,0447d76798717ec8dae33bc364429bef1358bfac,"Abort uploads that exceed a site's upload limit
-",,,TRUE,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wch/r-source,d1022a3d24ebdcff3cf7cd106f3f8d08e338673b,"lower.tri() and upper.tri() with .col() and .row() for all matrix-like obj.
 
 git-svn-id: f298e5bd0fb7dd56202a0647512068a43d54496a@73030 00db46b3-68df-0310-9c12-caf00c1e9a41
-",,,TRUE,,,by code,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cloudera/hue,92bde8e24817764304afebfd41cbc41a9422430e,"[HUE-6486] Move Hue Krb ticket cache out of /tmp
 
 We are frequently having customers self inflict issues because they
@@ -4343,10 +4343,10 @@ Testing Done:
 
 [[kerberos]]
 ccache_path=/var/run/hue/hue_krb5_ccache
-",,,TRUE,,move,,,random_batch_18_nov_2020,,,,,,,
-DigitalCampus/oppia-mobile-android,26ff2938e51957b95433b29a8c80c78eb4dae62e,rename colors,TRUE,TRUE,,,rename,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,move,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DigitalCampus/oppia-mobile-android,26ff2938e51957b95433b29a8c80c78eb4dae62e,rename colors,TRUE,TRUE,FALSE,FALSE,rename,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 didclab/onedatashare,aaf928f768b41baae58678fdf61a32ea2019f592,"front end changes to accomplice with google drive module
-",,,TRUE,,changes,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,changes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 DonJayamanne/pythonVSCode,6500b2aa6926d4503b70b51e903b5cf0a84a2011,"Bump acorn from 6.0.0 to 6.4.1 (#10570)
 
 Bumps [acorn](https://github.com/acornjs/acorn) from 6.0.0 to 6.4.1.
@@ -4355,44 +4355,44 @@ Bumps [acorn](https://github.com/acornjs/acorn) from 6.0.0 to 6.4.1.
 
 Signed-off-by: dependabot[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@github.com>
 
-Co-authored-by: dependabot[bot] <1c358da00a777d4e9898c1280ab801e2df165188@users.noreply.github.com>",,,TRUE,,bump,,,random_batch_18_nov_2020,,,,,,,
-openstack/vmware-nsx,fd20853e51215c16161850a050b3e390baf127de,"Merge ""LBaaS: add status field to PoolMonitorAssociation table""",,,TRUE,,add,,,random_batch_18_nov_2020,,,,,,,
+Co-authored-by: dependabot[bot] <1c358da00a777d4e9898c1280ab801e2df165188@users.noreply.github.com>",FALSE,FALSE,TRUE,FALSE,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+openstack/vmware-nsx,fd20853e51215c16161850a050b3e390baf127de,"Merge ""LBaaS: add status field to PoolMonitorAssociation table""",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 terlar/emacs.d,2165d6439f6b96bccd178720e9f275a9d7fbf48d,"theme: style vertical-border/window-divider
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-googledatastudio/ds-data-registry,525b3a81b08c58fd244acae007af8755159a979d,Create uberall.json,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,style as verb,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+googledatastudio/ds-data-registry,525b3a81b08c58fd244acae007af8755159a979d,Create uberall.json,FALSE,FALSE,TRUE,FALSE,create,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hasgeek/funnel,0563c562b7f25a0cde13cdbc25a10fc57d316119,"Uncommitted file in label main/options commit
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix in content and in addition of uncommited file,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 chrislusf/seaweedfs,ae1994cbc1692133cc5f4ac30e8060a2b0d9dda8,"erasure coding: fix cases where there are no .ecj files
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 stan-dev/math,106b340e166a727ffecafe370c1e917e03d2a705,"Merge pull request #1479 from stan-dev/feature/flatten-prim-meta-tests-cleanup
 
-Cleanup redundant tests in meta after test flatten",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Cleanup redundant tests in meta after test flatten",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mothur/mothur,859e3a473a3e63e0060c49be70b80f9289253da2,"working on dereplicate=t issue in chimera.slayer and chimera.perseus, added appendFilesWithoutHeaders to mothurOut. fixed bug in make.contigs with headers. fixed name file overwrite in unique.seqs. fixed seq name mismatch in get.seqs if dups=f. added count file to seq. error command.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,TRUE,"added, fixed",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kaltura/server,a66520759c26662d76e83b02cc72bf2426c56df5,"Merge pull request #20 from kaltura/IX-9.0.0-http-notifications-doc
 
-Ix 9.0.0 http notifications doc",,,,,,,,random_batch_18_nov_2020,,,,,,,
-OpenHFT/OpenHFT,f77896a988e7cb65ef80dc969747ad76aedc5d07,Rolling back unreleased libraries to snapshot versions,,,,,,,,random_batch_18_nov_2020,,,,,,,
+Ix 9.0.0 http notifications doc",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+OpenHFT/OpenHFT,f77896a988e7cb65ef80dc969747ad76aedc5d07,Rolling back unreleased libraries to snapshot versions,FALSE,FALSE,FALSE,TRUE,rolling back,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 szellmann/visionaray,c6bce4e840ad27ff06ebe082939a5c9e51a4a64f,"swizzle() for RGB8 <-> BGR8
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"by code, no syntactic evidence",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 the-it/WS_THEbotIT,e8d1b0a627288c9b4f04095fec869f5cce420fc4,"Merge pull request #363 from the-it/190706_021215_updating_registers
 
-Updating the register at 190706_021215",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Updating the register at 190706_021215",FALSE,FALSE,TRUE,FALSE,updating,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 oat-sa/extension-tao-itemqti,ffaf76c395de2c219acaa7eb659fb4a24b73648f,"added printed Variable model, widget & renderers
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 docker/docker.github.io,45a8f5e7a660135baa63f8b89e6edcd5570b8be6,"Returns exit code 3 on pre-create check
 
 Signed-off-by: Jean-Laurent de Morlhon <b39fc94b663d6be34c4c0f177d2094ce0e8da3b3@morlhon.net>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 factor/factor,444247d890d841ed2c91c69d2b0ff87c00f7b7e7,"mason: print callstack trace for build loop errors
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,print stack for errors,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 sklintyg/webcert,12c329c2d85bc427055c5837dbf1d59d555d12bb,"INTYG-7943: Rättat avstängda tester
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"""Properly turned off"" in Swedish",commit not found,,random_batch_18_nov_2020,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gaearon/react-dnd,a9f340bfb1d72824c5b277c7b546934dc91e9119,"build: remove nohoist settings (#1296)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MinnPost/object-sync-for-salesforce,6a98231dbae9e6b0d76bd7bf4c1d330b52e7b730,"update npm libraries
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 badges/shields,17d5f5550644e7fa25dbc348d9d118be3963e0df,"Build(deps-dev): bump react-error-overlay from 6.0.3 to 6.0.4 (#4399)
 
 Bumps [react-error-overlay](https://github.com/facebook/create-react-app/tree/HEAD/packages/react-error-overlay) from 6.0.3 to 6.0.4.
@@ -4400,7 +4400,7 @@ Bumps [react-error-overlay](https://github.com/facebook/create-react-app/tree/HE
 - [Changelog](https://github.com/facebook/create-react-app/blob/master/CHANGELOG-1.x.md)
 - [Commits](https://github.com/facebook/create-react-app/commits/react-error-overlay@6.0.4/packages/react-error-overlay)
 
-Signed-off-by: dependabot-preview[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@dependabot.com>",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Signed-off-by: dependabot-preview[bot] <5bdcd3c0d4d24ae3e71b3b452a024c6324c7e4bb@dependabot.com>",FALSE,FALSE,TRUE,FALSE,bump,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Homebrew/brew,6e203a280c5201203bd985481031fa48061c1536,"tests: silence test_detect_failed_configure
 
 The standard `nostdout` method doesn't work here because Formula#system
@@ -4408,19 +4408,19 @@ does some redirection of its own; both stdout and stderr have to be of
 the same type, so just do it manually here.
 
 Signed-off-by: Jack Nagel <43386ce32af96f5c56f2a88e458cb94cebee3751@gmail.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,not work,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 coil-kt/coil,d5ac8a7abcae46575f1a65771f72adc5848ddf4b,"Rework Transitions API. Remove Transition.Factory. (#216)
 
 * Rework Transitions API. Remove Transition.Factory.
 
 * Documentation.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"rework, remove factory, documentation",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-community,5e029bfe51afc11cd4dd1bb6397343635f2fe7af,"Mercurial Repository info problem fixed
 
 *do not create new HgRepository instance, because info fields will be updated from null and HgVcs.STATUS_TOPIC will be published without necessarily
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,problem fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openHPI/xikolo-ios,56d4ad8ffdf814198b088b582fd2c4571ed32b96,"Fix jumping login inputs
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/llvm-propeller,e1076e5a77fc96cadf12c2b9700b78dd88d20a1d,"Fix use of `echo` command in test script
 
 On win32 we use lit's executeBuiltinEcho to implement the
@@ -4428,17 +4428,17 @@ echo command and this version only currently supports flags
 that are separate.
 
 llvm-svn: 333495
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zig-lang/zig,d2535c003c6188fcc362028e01ef9f7fb3356727,"ir: Fix regression with self-referencing containers
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 TechEmpower/FrameworkBenchmarks,13469be9f523aeba7325421e9de1be0195d7d402,"Update README.md
 
 Fixed up an incorrect command in the README.
 
-README used run-test.py. Changed to run-tests.py",,,,,,,,random_batch_18_nov_2020,,,,,,,
+README used run-test.py. Changed to run-tests.py",FALSE,TRUE,FALSE,FALSE,fixed readme,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/intellij-community,5d09f2616cf6e0f7179d3b65116603d82f719bfb,"Fix tests: disable TabListAction in headless mode
 
-GitOrigin-RevId: ca4d03596c58f13971eb77f902c58972d7a10f91",,,,,,,,random_batch_18_nov_2020,,,,,,,
+GitOrigin-RevId: ca4d03596c58f13971eb77f902c58972d7a10f91",FALSE,FALSE,FALSE,TRUE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 WeblateOrg/weblate,aa29b64e67b45eeece888fd5607e9a9c6667090a,"Translated using Weblate.
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 ColinIanKing/stress-ng,19441df411c5be1ddd9ffad030b4bff080c3fa80,"Fix oom error message with corrupt name because name is not yet set
