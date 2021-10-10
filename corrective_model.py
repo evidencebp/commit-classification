@@ -158,6 +158,7 @@ valid_terms = [
     'error(?: |-)?check(ing)?',
     'error(?: |-)?handling',
     'error message(s)?',
+    'error metric(s)?',
     'error report(s|ing)?',
     'fixed(?: |-)?point',
     'fix(?:ed) ticket(?:s)?',
@@ -175,6 +176,7 @@ valid_terms = [
     'page(?:s)? break(?:s)?',
     'fix changes merge',
     '(understand|understood)\scorrectly',
+    'on error',
 
 
 ] + code_review_fixes
