@@ -147,3 +147,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [On the differences between quality increasing and other changes in open source Java projects](https://arxiv.org/pdf/2109.03544.pdf) [repo](https://github.com/atrautsch/emse2021_replication)
 
 [Comparing Commit Messages and Source Code Metrics for the Prediction Refactoring Activities](https://www.mdpi.com/1999-4893/14/10/289) [repo](https://github.com/smilevo/refactoring-metrics-prediction)
+
+[Quick remedy commits and their impact on mining software repositories](https://link.springer.com/article/10.1007/s10664-021-10051-z) [repo](https://github.com/USI-INF-Software/EMSE-ICPC2020-quick-remedy-commit)
