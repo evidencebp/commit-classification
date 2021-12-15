@@ -4440,54 +4440,54 @@ JetBrains/intellij-community,5d09f2616cf6e0f7179d3b65116603d82f719bfb,"Fix tests
 
 GitOrigin-RevId: ca4d03596c58f13971eb77f902c58972d7a10f91",FALSE,FALSE,FALSE,TRUE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 WeblateOrg/weblate,aa29b64e67b45eeece888fd5607e9a9c6667090a,"Translated using Weblate.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translated,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ColinIanKing/stress-ng,19441df411c5be1ddd9ffad030b4bff080c3fa80,"Fix oom error message with corrupt name because name is not yet set
 
 Need to format name before passing it as a parameter, else we just
 print garbage from the stack
 
 Signed-off-by: Colin Ian King <d100aa70785e45ee8deab668147d941941915c21@canonical.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix (but not error message),,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 weblyzard/weblyzard_api,c7d33f7342e13704c513dea31f6ca5f010bd668c,"add: unittest for BooleanAdapter.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 qtproject/qt-creator,7b467cbad6969fc0532014eaef6f2fbbf25bdf24,"CMake: Make sure paths are clean in server-mode
 
 Change-Id: I93c61a24e63d8920731b4197d88248d13219eb81
 Reviewed-by: Tobias Hunger <012f8d714267bccc9d4766fbeace9f175fcc70c4@qt.io>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,make sure,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 aspnet/AspNetCore,29a3a109c602d032b9da8ca0230f6b68a5befe6c,"Update dependencies.props
 
 [auto-updated: dependencies]
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hazelcast/hazelcast,993252a9dc87390b7b871fbc265398cf78f68cbb,"Removing todo checks.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 folio-org/okapi,1415ec629aa5e2ea165e66ae533b567cfe28c357,"SemVer, ModuleId: JavaDoc, unit tests, code review OKAPI-781 (#862)
 
 Ensure transitive sorting property
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"javadoc, code review",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 blinksh/blink,ff3822bc6bdc0d801d7603c3f70207cd5e6d942b,"Build 30
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-firefly-iii/firefly-iii,8ee6cd6c41433d6655c5cc36adcadee214723579,New translations,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+firefly-iii/firefly-iii,8ee6cd6c41433d6655c5cc36adcadee214723579,New translations,FALSE,TRUE,FALSE,FALSE,translations,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 eljost/pysisyphus,7036a5f85611ece2ba279e2617ee3db3044b7d95,"printing info about HEI index
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,printing,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gc3-uzh-ch/elasticluster,f4bc71fdef74a106c389fcd60386ecba6b6b37ce,"Hopefully fix passing `--verbose` options to Ansible at lng last!
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"hopefully, fix",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hartwigmedical/hmftools,08657c7c5557aeb53c7adf9ba264370f5696c0bd,"DEV-950: refactor
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 concrete5/concrete5,2d6f288db32cf7269d475cdbe55de1578a1a8824,"Merge pull request #6581 from a3020/add_instructions_to_run_one_test
 
-Add instructions to run a single test",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Add instructions to run a single test",FALSE,TRUE,FALSE,FALSE,add instructions,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 googleprojectzero/sandbox-attacksurface-analysis-tools,77ac71fedf8d57a846bbe9d0c68f87bdf1cf9bea,"Cleanup to use C#7 features.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 facebook/mysql-5.6,bf9244b50e2205d40b4a374cd09df6a9ead28e71,"one more portability fix
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 AshamaneProject/AshamaneCore,51e3a687d5be8b2b7a86c4ec7a698e85c707d8b9,"Core/Movement: Fix random position finding near edges, avoid big z-coordinate differences
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 picoCTF/picoCTF,e9ef9d253938548a68775e2f457fd75522f67c97,"Fixed small achievement bugs and added support for basic problem viewer achievements
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,TRUE,"fixed, bugs added support",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ndoit/fenrir,785273d277e64e6d152d4e15b6155412036f8658,"Merge pull request #871 from ndoit/tests-94
 
-Fixing some bugs in subject area and collection deserialize.",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Fixing some bugs in subject area and collection deserialize.",FALSE,FALSE,FALSE,TRUE,"fixing, bugs",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hfreire/browser-as-a-service,4beb27b9f541f8169f3a74e864e127dd15342e3b,"chore(deps-dev): bump snyk from 1.348.2 to 1.349.0
 
 Bumps [snyk](https://github.com/snyk/snyk) from 1.348.2 to 1.349.0.
@@ -4497,26 +4497,26 @@ Bumps [snyk](https://github.com/snyk/snyk) from 1.348.2 to 1.349.0.
 
 Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
 
-Co-authored-by: dependabot-preview[bot] <6a4c1c4838f800d1998274cd5234e1f65c55e90c@users.noreply.github.com>",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Co-authored-by: dependabot-preview[bot] <6a4c1c4838f800d1998274cd5234e1f65c55e90c@users.noreply.github.com>",FALSE,FALSE,TRUE,FALSE,bump synk,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Parsl/parsl,cfc301de5cd6f0bba770a15f2270e7fe20789bd0,"Fixes to get ipp:ssh:slurm work correctly
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fixes, work correctly",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tblume/systemd-testsuite-suse,3a1e008f60e462d3f910c230dd56f5f7e7b18862,"keymap: Add HP ProBook 640 G2
 
 Fixes #2997
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add (not fixes num),by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bredelings/BAli-Phy,ce64058f765c87f1c16489bbb89d41e9568454ed," * tools/tree-dist.C: standardize( ): remove an lstr() that I missed.
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,i missed,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 KNMI/GeoWeb-FrontEnd,f3a32d65297d0bb8ae64ec339a903439a45f5bc8,"Made Adaguc component working
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,made,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 iteratec/OpenSpeedMonitor,69397fc13bb551ef671d3e89742c0dd36b5823af,"add create MeasuredEvent fuctionality
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 workcraft/workcraft,edc27f307ce73d880c8cc83c963a1c4722419e6e,"Merge proposal for  #155 approved. Windows runner script is updated.
 
 Fixes #155.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,,#155 type is a bug,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wso2/carbon-analytics,f3246b55a6a79d40d382c7cf60a45edd3bdf13f9,"adding latest jmx agent and message tracer code
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mediathekview/MediathekView,2b286085a0c76d283e153ad7bd0de3144222cbf7,"History, Abos kleine URLs
 	geändert:   dist/MediathekView.jar
 	geändert:   src/mediathek/controller/io/starter/ListeStarts.java
@@ -4527,15 +4527,17 @@ mediathekview/MediathekView,2b286085a0c76d283e153ad7bd0de3144222cbf7,"History, A
 	geändert:   src/mediathek/gui/GuiDownloads.java
 	geändert:   src/mediathek/tool/CellRendererFilme.java
 	geändert:   src/version.properties
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"In German ""History, subscriptions to small urls
+changed: ""
+",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openSUSE/osc,0d941e8766c604b447acf8da02c4212818fc826f,"show package status when repository configuration is broken
 
 it was just dropped before due to lack of status element for the package
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,show,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 martykan/forecastie,1d9f5f8441c057b7d2fa3c75ac3ea9768b18e1cf,"Translation for error messages
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translation,by code (which uses the translation too),,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 darglein/saiga,fd5b6e001467389f3031109f4b2eacca9269db6f,"keep original triangle id in bvh
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,keep in ,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 librenms/librenms,b4af9197ba433f4379e1e229f3402725390b18ea,"newdevice: Added basic detection for  hanwha techwin devices (#7397)
 
 * Basic hanwha techwin support
@@ -4545,7 +4547,7 @@ librenms/librenms,b4af9197ba433f4379e1e229f3402725390b18ea,"newdevice: Added bas
 * Changed file names to ipolis rather than the vendor name
 
 * oid fixes
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,TRUE,"added, changed, fixes",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/gnome-shell-extensions,190243ee895a708e253278f5f2623bf90c7cbc9d,"lint: Add ""legacy"" configuration
 
 Regarding coding style, gjs is moving in a direction that departs quite
@@ -4569,191 +4571,191 @@ template strings are still relatively new, so we haven't adopted them
 yet.
 
 https://gitlab.gnome.org/GNOME/gnome-shell-extensions/merge_requests/50
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OpenSCAP/openscap,27fff9d3196b04460d0deccd5bac91aa53bdebc9,"Rename Compiling Section
 
 We should be more specific that we mean ""on Linux"" to distinguish
 from the Windows build.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,rename section,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 uclouvain/osis,cc7cc8b7b5b072331b44a347053bb8fbb5cc298b,"Merge branch 'dev' of https://github.com/uclouvain/osis into OSIS-1509
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 InnovateUKGitHub/innovation-funding-service,de975c162a41734e01dfe6881e1ef160a72d4f9b,"Fixed comp error
 
 
-Former-commit-id: 9ebc907ef6122c8d727dd986577d8b3937fd2536",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Former-commit-id: 9ebc907ef6122c8d727dd986577d8b3937fd2536",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 adaptlearning/adapt_authoring,bd041b75f6ab4e40578e6bc881b3300680f2303f,"Update user management styling to match UI refresh
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 nteract/nteract,696bb4dddd3be44d66eaf6c18addeeef3a191f8d,"output stylish
 add tslint-eslint-rules
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 borisyankov/DefinitelyTyped,23fc42b8a01892a159be41883de644a790753df3,"feat(es6-promises) added `import/require` support + tests
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,feat,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 scientilla/scientilla,6f9b4842193805bc84ae2186fa39cb263aa79761,"Remove db restrictions on user model because of waterline-ldap-auth, set default value active & synchronized user model
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 seek4science/seek,b7c10e003e8ea98d532f350adee3bc5c87bcfc0b,"removed create investigation pop-up link in study form.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Jackett/Jackett,55818f9cb6f9592027018b8c9afef4de9e2622a1,"Add Ghost City tracker (#488)
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pressbooks/pressbooks,fe85314bb531661e8662c8a85cfaa4fffba12e69,"Update localization.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,,FALSE,localization,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 watson-developer-cloud/ios-sdk,499b236055eeaeb18a0ff1704633fe7503badce8,"Test adjustments
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adjustments,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alisw/AliRoot,1d2abf931cd49d811041630bce0497926eb8dac4,"Remove one pad clusters only for the track refit
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 google/site-kit-wp,2a9199d020dd00eacac3c56d8eb28fa8a0172f00,"Refactor has*Tag selectors as registry selectors.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,,FALSE,refactor,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 projectchrono/chrono,e9ac87fb9037ebb1076d3a4d3ba728b1f34717d4,"Update demos and tests to reflect FEA relocation
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 metabrainz/picard,cf538b51025f9e2b77367391d65fd8073c6a72ab,"Merge pull request #800 from zas/fix_tab_stops
 
-Re-define or set tabstops to improve keyboard navigation through options",,,,,,,,random_batch_18_nov_2020,,,,,,,
-steinbaugh/steinbaugh.github.io,12b8ee9b4d084e4d8d7782598a8fec3b2c13cc7f,Update linux_mint_setup.md,,,,,,,,random_batch_18_nov_2020,,,,,,,
-nortikin/sverchok,3d7ad14d531e3ea59ffd4043806b5ee3132f7c42,Update ScriptedNode_documentation.md,,,,,,,,random_batch_18_nov_2020,,,,,,,
+Re-define or set tabstops to improve keyboard navigation through options",FALSE,FALSE,,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+steinbaugh/steinbaugh.github.io,12b8ee9b4d084e4d8d7782598a8fec3b2c13cc7f,Update linux_mint_setup.md,FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+nortikin/sverchok,3d7ad14d531e3ea59ffd4043806b5ee3132f7c42,Update ScriptedNode_documentation.md,FALSE,TRUE,FALSE,FALSE,"documentation, md",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 minj/foxtrick,2dfab7bb3b6e810f18ff4830de36310b52e8084c,"mark-all-as-read.js: merge CSS files.
 
 git-svn-id: b503a97dd78f589f885ec9b28f2afaa6d34e6fa2@7007 1e3807c3-0949-0410-b78e-337b627472c1
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 joaander/hoomd-blue,301c6bcc4407cb6cf0b7783146f936df647c8228,"set cudaMemAdviseSetReadMostly on particle group index arrays
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,set,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 SeleniumHQ/selenium,0a46fcdf3ec631668433380b88f4013f3802961f,"EranMes: Fixing issue 116, identifying a host name mismatch when the certificate contains wildcards and is actually valid.
 
 
 r8825
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixing,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 BOT-Man-JL/BOT-Man-JL.github.io,152dc80d307d0e0658f7c71817cb88b8a9c0a104,"Init macro meta;
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,init,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,e469719344ae1cdde90a4c8c3746588f8c86f6cf,"serial: at91: add dma support in usart binding descriptions
 
 Signed-off-by: Elen Song <7b02f5298de50b2547d5a5710802de9ac29a4a72@atmel.com>
 Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@linuxfoundation.org>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Radarr/Radarr,34edeac3911a39146e4afeca4b36112b4f47ec84,"Fixed: Updated check for hashed releases.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 geneweb/geneweb,8ca21f6b51b2102f01d1b725248c56c38ae7ba67,"-
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,no syntactic evidence,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Yelp/paasta,60a527ac570c5c710171cb72b52d62c8752ab37b,"Remove debug print
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 opentower/carnap,72256d5d550a93a76dbabe005963e1227f380bc9,"Add separative set theory language
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 qtproject/qt-creator,85e1b3665261a545541e21b972856369fdb82be3,"Check for 0x0 access
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,check,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Alluxio/alluxio,518f6ffde92f045ab38799afc6da70dbf86623f5,"Improve and simplify attach cli command
 
 
 
 pr-link: Alluxio/alluxio#10218
-change-id: cid-bd70a9907fd2ec05ce28e872b66cb9e1ff3bc5dc",,,,,,,,random_batch_18_nov_2020,,,,,,,
+change-id: cid-bd70a9907fd2ec05ce28e872b66cb9e1ff3bc5dc",TRUE,TRUE,FALSE,FALSE,"improve, simplify",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cakephp/cakephp,9114a9e27560741c7bdfda028f58ac938048db72,"Fix typehints.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 cvmfs/cvmfs,f1777e93781fb2a632394a3f3eebf8ac7a365693,"Update integration test configuration
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 electron/electron,0b7e7458c94db2f0d7a4a8a35e61db2d8e990d6a,"WIP: Adding UT
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 RockRaidersInc/ROS-Main,8a7fc95959b4b004f74e235f5275c54d9bf77529,"asdf
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,"no syntactic evidence, by source code",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 telstra/open-kilda,5c9834785261c605db3b87f3867b8b251620f624,"#720: fixed code review comments
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,fixed comments,maybe refactor?,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 iiet/iiet-git,77f501bcd20a04289d073b0a328466316ec46bd2,"Merge branch '48673-lazy-load-performance-bar-in-frontend' into 'master'
 
 Resolve ""Lazy-load performance bar in frontend""
 
 Closes #48673
 
-See merge request gitlab-org/gitlab-ce!20607",,,,,,,,random_batch_18_nov_2020,,,,,,,
+See merge request gitlab-org/gitlab-ce!20607",FALSE,FALSE,TRUE,FALSE,resolve,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/gnome-music,c6bfc7e49bf740e6a8432df3cf8874bd06c0e8b6,"mpris: Make app attribute internal
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,,,,random_batch_18_nov_2020,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 eXist-db/exist,5eda78214356288cd3dbe385f47912d073ec6288,"bugfixes, dont hide errors and ensure values are present before accessing
 
 svn path=/trunk/eXist/; revision=15122
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,bugfixes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 OpenTrons/opentrons_sdk,89ed192398a7d806dfdd0d0ee558bb0a938b6bda,"Containers: Support for custom well positions.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,,support,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 candlepin/subscription-manager,3adf94e5e8c862085e431874c756df8a6abd9efd,"breaking clients. comment our ssl cert stuff until its functional on cp
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,breaking,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,dcbf1280796be7c0b74c4231f0ac9dd8aa1e2591,"epca: Restore driver
 
 Convert the driver to use the added hardware break support
 
 Signed-off-by: Alan Cox <91e38e63b890fbb214c8914809fde03c73e7f24d@redhat.com>
 Signed-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,convert,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alisw/AliRoot,681fa27cfdf07d22c9058515780d84219d9246e0,"Adding new components to the linkdef file
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 gocd/www.go.cd,0f8e293e694c9cf133d2bf1fa7e8dacc6e6ae3f9,"Blog: Distributed test execution with Go + TLB. update - 9
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,blog,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alphagov/govuk-puppet,1a7bf7da84f45c2f6e100c0573953c8b654b8334,"Merge pull request #824 from gds/52225601-puppet_agent_package
 
-[#52225601] Manage puppet agents with Deb packages",,,,,,,,random_batch_18_nov_2020,,,,,,,
+[#52225601] Manage puppet agents with Deb packages",FALSE,FALSE,TRUE,FALSE,manage,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 chainer/chainercv,728d09736cf90dd0020c55c5f1c4a3b56e423eeb,"add demo
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-howtographql/howtographql,70a61ae319591543aa19906972cb4dcb408f97f2,Another typo,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+howtographql/howtographql,70a61ae319591543aa19906972cb4dcb408f97f2,Another typo,FALSE,TRUE,FALSE,FALSE,typo,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 schwabdidier/GazePlay,734fa58c28c047773d840f23686b42c073f31ddc,"Merge pull request #509 from kuhlkrein/master
 
-new Configuration options",,,,,,,,random_batch_18_nov_2020,,,,,,,
+new Configuration options",FALSE,FALSE,TRUE,FALSE,new options,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 amazeeio/lagoon,4aaed418518c53a62575db6294fe639f522af93d,"keep track of databases that aren't found  due to naming differences.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,keep track,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ntop/ntopng,610cb69b9c7099265d067f64e9c74b5f38a6c6a1,"builtin packet dump code cleanup (moving to continuous recording)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,cleanup,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 elki-project/elki,a644824bacbdf0fbe668e8cc90672a6d017005c5,"Large refactoring.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,refactoring,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ucfopen/canvasapi,9b39f26068ac7dfbc1aabec699ee50b3db120393,"adding test coverage for create_admin
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,adding,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 koala-framework/koala-framework,a1f01a94ca51152152e11e9150b6b6c5db75bc71,"Add Root Plugin: PreResolveUrl
 
 Allows a root plugin to modify the url before resolving it
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 guix-mirror/guix,91cf806425f3ebd7a5256c904ed882095e5ea12b,"gnu: libuv: Update to 1.29.1.
 
 * gnu/packages/libevent.scm (libuv): Update to 1.29.1.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kubernetes/kubernetes,cddb4a327a3216f1161af857c82c6945ee75ccc2,"Update CHANGELOG-1.11.md for v1.11.7.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,,FALSE,changelog,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 phac-nml/irida,e6fc316064523c678f697178e07982e1e67f5fb2,"Merge branch 'pipeline-launch-layout' into 'development'
 
 Pipeline launch page wrapping
 
-See merge request irida/irida!1230",,,,,,,,random_batch_18_nov_2020,,,,,,,
+See merge request irida/irida!1230",FALSE,FALSE,TRUE,FALSE,wrapping,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 projectchrono/chrono,fcbc115bd33c3a124a1a7b150da8a38a2b13ac4c,"lubrication force model added
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 labsai/EDDI,d6b4dd66fd1557b8ffe4c304e7c6b5bd5b7c3ba9,"improved integration testing
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,improved,by code,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kiegroup/drools,93dcd6f37c06bb093ba7558667609dfd8e65f826,"JBRULES-2642: fixing negative number
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixing,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rails/rails,4278e7f2b34b12a9107baf9d5da0fa75384fbfa1,"adds missing require for having ActiveSupport::InheritableOptions defined
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,adds missing,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apache/camel,0056199b7d27cfa18e2b474388bd52ffd03c5e56,"Upgrade testcontainers-java to v1.8.2
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,upgrade,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moby/moby,be4586fffd0f4eb095fd6d94ad067dbf220c1bd3,"Merge pull request #33488 from raja-sami-10p/pkg/idtools
 
-Increase Coverage of pkg/idtools",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Increase Coverage of pkg/idtools",FALSE,FALSE,TRUE,FALSE,increase coverage,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 taigaio/taiga-front,aba2f0e4030b1f5a3e732b72010fc1ab7eb6c26e,"rename stats variables
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,rename,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 estatio/estatio,3ba1808e9c8afa3533ab5b3363b45f614801058b,"EST-1576: fixes unit tests, improves comparator for Party
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,TRUE,"fixes, improve",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 hubzero/hubzero-cms,20f7efe12a2e27a1523e24e19a614e152b1a4b40,"[maint] Updating plg_answers_* copyright
 XML files already contain copyright and license info. Separate copyright
 block is redundant.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,"[maint], copyright",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 telefonicaid/fiware-orion,83123636d6b4ca49b91d95345f98a37e6fde85b2,"usage CLI shift fix
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 deeponion/deeponion,287f54fc90c29301faede8d4ac2ea24a91441917,"Add CHECKLOCKTIMEVERIFY (BIP65) soft-fork logic
 
 Based on the earlier BIP66 soft-fork logic implemented by Pieter
 Wuille's 5a47811da5158df763aa2fca09ce646ee0c51e7b
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 f-droid/fdroiddata,77462e63a02e21fc8ec08a10bab076e3c3dc36b5,"Update CV of Avare to 5.8.9 (209)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,CV (Current Version),by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 8398a7/abilitysheet,3a370c6f4b808540327b97cca01afef78bd9da75,"IIDX-106 update ruby version
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mapsme/omim,1253cba0070a4484ba2ae2269871ab6894bdd195,"Make separate 'tag' tag processing
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,make seperate,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 kieker-monitoring/kieker,e850d153c90a560267c45e7e7ebfcd9e0a3fa73e,"update Makefile to reactivate make-libraries.sh and fixed naming scheme from makefile to Makefile
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update makefile,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NeoGeographyToolkit/StereoPipeline,6e314c90ecd8a984de1a5fd4eae52b20651fb1c7,"stereo_gui: Support for vwip files and --nodata-value to wipe a noisy background
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
 iiet/iiet-git,ca404170f0173f180b530fbc331fc73e122a4317,"exclude script type=text/template from dom scrubbing
