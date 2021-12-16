@@ -26,8 +26,8 @@ removal_terms = [
     , 'remov' + VERB_E_SUFFIX
     , 'was'
 ]
-excluded_terms = ['update TODO(\.)?'
-    , "(%s)%s(%s)/" % ("|".join(removal_terms), NEAR_ENOUGH, "|".join(positive_terms))
+excluded_terms = ['update todo'
+    , "(%s)%s(%s)" % ("|".join(removal_terms), NEAR_ENOUGH, "|".join(positive_terms))
     , "(%s)/" % ("|".join(positive_terms))
     , '\.xxx'
     , '=xxx'
@@ -35,13 +35,15 @@ excluded_terms = ['update TODO(\.)?'
 
 def build_positive_regex():
 
+    #return "(%s)" % ("|".join(positive_terms))
+
     return build_sepereted_term(positive_terms)
 
 
 
 def build_excluded_regex():
-
-    return build_sepereted_term(excluded_terms)
+    return "(%s)" % ("|".join(excluded_terms))
+    #return build_sepereted_term(excluded_terms)
 
 def build_not_positive_regex():
 
@@ -49,10 +51,12 @@ def build_not_positive_regex():
 
 
 def is_satd(commit_text):
+    #commit_text = re.sub(r"\s+", " ", commit_text.strip())
+    text = commit_text.lower()
 
-    return (len(re.findall(build_positive_regex(), commit_text))
-            - len(re.findall(build_excluded_regex(), commit_text))
-            - len(re.findall(build_not_positive_regex(), commit_text)))  > 0
+    return (len(re.findall(build_positive_regex(), text))
+            - len(re.findall(build_excluded_regex(), text))
+            - len(re.findall(build_not_positive_regex(), text)))  > 0
 
 
 
@@ -108,6 +112,9 @@ if __name__ == '__main__':
     print_concepts_functions_for_bq(commit='4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10')
     evaluate_satd_classifier()
 
-    text = """TODO\n""".lower()
+    text = """remove TODO""".lower()
     print("Label", is_satd(text))
     print("concept in text", re.findall(build_positive_regex(), text))
+    print("exclusion in text", re.findall(build_excluded_regex(), text))
+    print(build_excluded_regex())
+    print("v1", re.findall("(because|clean(?:s|ed|ing)?|fix(?:s|ed|ing)?|implement(?:s|ed|ing)?|list(?:s|ed|ing)?|remov(?:e|es|ed|ing)|was)[\S\s]{0,40}", text))
