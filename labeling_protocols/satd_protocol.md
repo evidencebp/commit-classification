@@ -14,4 +14,5 @@ Self admitted technical debt is a case in which the developer admits that a give
   1. Implementing a SATD comment is not SATD (since it removes the technical debt).
   1. Updating TODO comment is SATD
   1. Referring to general TODO lists (e.g., "Update TODO") is not SATD. Adding a specific TODO is SATD.
+  1. Technical debt in documentation is SATD. 
   
