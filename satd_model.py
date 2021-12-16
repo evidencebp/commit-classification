@@ -86,7 +86,7 @@ exploratory_terms = [
 positive_terms = ['fixme', 'hack'
                  , 'todo'
                  , 'xxx'
-                  ] #+ exploratory_terms
+                  ] + exploratory_terms
 
 removal_terms = [
     'because'
