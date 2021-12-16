@@ -23,12 +23,15 @@ removal_terms = [
     , 'fix' + REGULAR_SUFFIX
     , 'implement' + REGULAR_SUFFIX
     , 'list' + REGULAR_SUFFIX
+    , 'mov' + VERB_E_SUFFIX
     , 'remov' + VERB_E_SUFFIX
+    , 'resolv' + VERB_E_SUFFIX
+    , 'updat' + VERB_E_SUFFIX
     , 'was'
 ]
 excluded_terms = ['update todo'
     , "(%s)%s(%s)" % ("|".join(removal_terms), NEAR_ENOUGH, "|".join(positive_terms))
-    , "(%s)/" % ("|".join(positive_terms))
+    , "(%s)(/|\.|=)" % ("|".join(positive_terms))
     , '\.xxx'
     , '=xxx'
                   ]
@@ -109,12 +112,45 @@ def evaluate_satd_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10')
+    print_concepts_functions_for_bq(commit='7bea7aa3de54a7763a52d93161615fe345483b19')
     evaluate_satd_classifier()
 
-    text = """remove TODO""".lower()
+    text = """""Merge branch 'for-linus' of git://git.infradead.org/users/vkoul/slave-dma
+
+Pull slave-dmaengine updates from Vinod Koul:
+ ""For dmaengine contributions we have:
+   - designware cleanup by Andy
+   - my series moving device_control users to dmanegine_xxx APIs for
+     later removal of device_control API
+   - minor fixes spread over drivers mainly mv_xor, pl330, mmp, imx-sdma
+     etc""
+
+* 'for-linus' of git://git.infradead.org/users/vkoul/slave-dma: (60 commits)
+  serial: atmel: add missing dmaengine header
+  dmaengine: remove FSLDMA_EXTERNAL_START
+  dmaengine: freescale: remove FSLDMA_EXTERNAL_START control method
+  carma-fpga: move to fsl_dma_external_start()
+  carma-fpga: use dmaengine_xxx() API
+  dmaengine: freescale: add and export fsl_dma_external_start()
+  dmaengine: add dmaengine_prep_dma_sg() helper
+  video: mx3fb: use dmaengine_terminate_all() API
+  serial: sh-sci: use dmaengine_terminate_all() API
+  net: ks8842: use dmaengine_terminate_all() API
+  mtd: sh_flctl: use dmaengine_terminate_all() API
+  mtd: fsmc_nand: use dmaengine_terminate_all() API
+  V4L2: mx3_camer: use dmaengine_pause() API
+  dmaengine: coh901318: use dmaengine_terminate_all() API
+  pata_arasan_cf: use dmaengine_terminate_all() API
+  dmaengine: edma: check for echan->edesc => NULL in edma_dma_pause()
+  dmaengine: dw: export probe()/remove() and Co to users
+  dmaengine: dw: enable and disable controller when needed
+  dmaengine: dw: always export dw_dma_{en,dis}able
+  dmaengine: dw: introduce dw_dma_on() helper
+  ...
+"
+""".lower()
     print("Label", is_satd(text))
     print("concept in text", re.findall(build_positive_regex(), text))
     print("exclusion in text", re.findall(build_excluded_regex(), text))
-    print(build_excluded_regex())
-    print("v1", re.findall("(because|clean(?:s|ed|ing)?|fix(?:s|ed|ing)?|implement(?:s|ed|ing)?|list(?:s|ed|ing)?|remov(?:e|es|ed|ing)|was)[\S\s]{0,40}", text))
+    #print(build_excluded_regex())
+    #print("v1", re.findall("(because|clean(?:s|ed|ing)?|fix(?:s|ed|ing)?|implement(?:s|ed|ing)?|list(?:s|ed|ing)?|remov(?:e|es|ed|ing)|was)[\S\s]{0,40}", text))
