@@ -13,17 +13,86 @@ from language_utils import  regex_to_big_query, generate_bq_function, match, SCH
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
 
-# Using the list from
+# Based on the lists from
+# Prevalence, Contents and Automatic Detection of KL-SATD by Leevi Rantala and Mika Mäntylä and David Lo
 # An exploratory study on self-admitted technical debt by Potdar, Aniket and Shihab, Emad
-positive_terms = ['fixme'#, 'hack'
+
+exploratory_terms = [
+'hack'
+, 'retarded'
+, 'at a loss'
+, 'stupid'
+, 'remove this code'
+, 'ugly'
+, 'take care'
+, "something's gone wrong"
+, 'nuke'
+, 'is problematic'
+, 'may cause problem'
+, 'hacky'
+, 'unknown why we ever experience this'
+, 'treat this as a soft error'
+, 'silly'
+, 'workaround for bug'
+, 'kludge'
+, 'fixme'
+, "this isn't quite right"
+, 'trial and error'
+, 'give up'
+, 'this is wrong'
+, 'hang our heads in shame'
+, 'temporary solution'
+, 'causes issue'
+, 'something bad is going on'
+, 'cause for issue'
+, "this doesn't look right"
+, 'is this next line safe'
+, 'this indicates a more fundamental problem'
+, 'temporary crutch'
+, 'this can be a mess'
+, "this isn't very solid"
+, 'this is temporary and will go away'
+, 'is this line really safe'
+, 'there is a problem'
+, 'some fatal error'
+, 'something serious is wrong'
+, "don't use this"
+, 'get rid of this'
+, 'doubt that this would work'
+, 'this is bs'
+, 'give up and go away'
+, 'risk of this blowing up'
+, 'just abandon it'
+, 'prolly a bug'
+, 'probably a bug'
+, 'hope everything will work'
+, 'toss it'
+, 'barf'
+, 'something bad happened'
+, 'fix this crap'
+, 'yuck'
+, 'certainly buggy'
+, 'remove me before production'
+, 'you can be unhappy now'
+, 'this is uncool'
+, 'bail out'
+, "it doesn't work yet"
+, 'crap'
+, 'inconsistency'
+, 'abandon all hope'
+, 'kaboom'
+]
+
+positive_terms = ['fixme', 'hack'
                  , 'todo'
-                 #, 'xxx'
-                  ]
+                 , 'xxx'
+                  ] #+ exploratory_terms
 
 removal_terms = [
     'because'
     , 'clean' + REGULAR_SUFFIX
     , 'delet' + VERB_E_SUFFIX
+    , 'expand' + REGULAR_SUFFIX
     , 'fix' + REGULAR_SUFFIX
     , 'implement' + REGULAR_SUFFIX
     , '(get|got|gets|getting)\srid'
@@ -34,7 +103,10 @@ removal_terms = [
     , 'updat' + VERB_E_SUFFIX
     , 'was'
 ]
-excluded_terms = ['update todo'
+excluded_terms = [
+    'todo list(s)?'
+    , 'todo note(s)?'
+    , 'update todo'
     , "(%s)%s(%s)" % ("|".join(removal_terms), NEAR_ENOUGH, "|".join(positive_terms))
     , "(%s)(/|\.|=)" % ("|".join(positive_terms))
     , '\.xxx'
@@ -117,11 +189,22 @@ def evaluate_satd_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='1b9acf0a800300d27ea3b45be2239b44773bf897')
+    print_concepts_functions_for_bq(commit='11b22c84b83172b515a8137ce42dda037858a637')
     evaluate_satd_classifier()
 
     text = """
+"Logs will now be put in one file for both server and client (#880)
 
+* Fixed error if NitroxLauncher things process has exited but actually it's still processing write.
+
+* - Set Subnautica installation directory as default location for all Nitrox Logs (if available)
+- Allowed for logs from either server or client to be in one log file
+- Change log format to include logger name which equals to the executing application name
+
+* Reduced server save logs
+
+* Added todo to server save time to pause saving if no players are on
+"
 """.lower()
     print("Label", is_satd(text))
     print("concept in text", re.findall(build_positive_regex(), text))
