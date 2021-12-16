@@ -1,0 +1,422 @@
+repo_name,commit,message,Is_satd,Justification,Certain,Comment,Sampling
+apereo/cas,caaf504bfc141034b3aca29eb47d0edd4614d320,"error calling oidc authorization with prompt=none (#4764)
+
+CAS server throws an error when we call
+the authorization endpoint with prompt=none
+(I use this endpoint to execute a silent token renewal
+when using the oidc implicit flow).
+
+The error thrown is
+
+```
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template
+[
+  https://cas.local.fr/cas/oidc/authorize?client_id=pegase&redirect_uri=xxx
+  &response_type=id_token%20token&scope=openid%20profile&state=xxx&nonce=xxx
+  &prompt=none&id_token_hint=xxx
+],
+template might not exist or might not be accessible by any of the configured
+Template Resolvers
+at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+```
+
+Co-authored-by: agonzalez <d75cb2368e1f6a1db679a0029ebfb8df48757833@pc-scol.fr>
+Co-authored-by: apereocas-bot <653f983be0a5e5d5d6b8340afe4336dd2b761ffb@users.noreply.github.com>",FALSE,"""=xxx""",,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+chromium/chromium,7ec7c1899afc8537bb25ce373aa2e136aa7788dc,"Split out HttpUtil::SpecForRequest() into a more generic function of net_util.h.
+
+This was a TODO, since that function is useful outside of HTTP.
+
+In the process, I uncovered some test cases in proxy_service that are passing in invalid URLs (by virtue of the extra DCHECK). This doesn't make much sense to me to support that, so I have changed them.
+
+Review URL: http://codereview.chromium.org/160558
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@22359 0039d316-1c4b-4281-b951-d872f2087c98
+",FALSE,was a TODO,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+kubevirt/kubevirt,3850f943e841576b71ba569da6f152494c8243b3,"Ensure nogo has a working env during `make deps-update`
+
+If the sandbox is not already generated, bazel calls which happen in
+`hack/bootstrap.sh` need the inefassign BUILD.bazel already before the
+bootstrap file is sourced. Moving it to the beginning of the file.
+
+Signed-off-by: Roman Mohr <6da0130c5aeef94e5bbaabadbf8017270be25c64@redhat.com>
+",FALSE,`hack/bootstrap.sh`,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+prisma/prisma,e3da3162a0c1abb907837791c016e04364c81667,"remove comments And Description from line 26
+
+because in the last preview version its fixed and i removed that TODO description And Comment.
+Thank you
+
+Former-commit-id: f624eae55f7cd5562e3051329aaee0d2bc3dcb9e
+Former-commit-id: fc822a75cb0b7fb03e5c0ed6ed4defb5d3cecfff",FALSE,removed that TODO,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+eduNEXT/edunext-platform,a301abd5adeb0a0346014007982b2bb113289b4a,"Enrollment hack for allowing Berkeley to add their students.
+",TRUE,hack,FALSE,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+MariaDB/server,c163b6831e260455c36ba58809b80b25b59f1d0a,"data0type.ic:
+  Change the sorting order of TEXT columns in InnoDB: pad with spaces at the end in comparisons; we MUST UPDATE the MySQL MANUAL to warn about the need to rebuild tables (also MyISAM) in certain cases in an upgrade to 5.0.3; TODO: study what complications the missing DATA_BINARY_TYPE flag in InnoDB < 4.0.14 causes: we would compare then also BLOBs with space padding, not just TEXT
+",TRUE,TODO:,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+elogind/elogind,b98d424bf74c7c656cc31d4343e06bab6b5220a6,"update TODO
+",FALSE,update TODO (list),,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+facebook/flow,d23ae2c57dbc6923313c732c6032f9a48a3df980,"[hack] Dont start new server on hhconfig version change
+
+Summary:
+Copying docs from serverProcess.ml
+```
+  (**
+   * The problem we need to solve is this: when the Monitor wants to start
+   * a new Server instance, it might not be safe to do so because we might
+   * end up running the a version of the Server not meant for this state of
+   * the repo (as specified in the .hhconfig file).
+   *
+   * Monitor might want to start a Server because the last one died (crashed,
+   * or exited due to hhconfig change), or the Informant has decided to start
+   * a new instance on a better saved state. Because the .hhconfig file has
+   * indicated a version change is occuring and the logic to parse this version
+   * change and locate the binaries for that version are not inside server
+   * code, we need to force that logic to be exercised on the user side, and
+   * only start a new server after we've confirmed that it has been exercised
+   * (which is confirmed by a new client connecting and succeeding the build_id
+   * handshake; alternatively, failing that handshake and then this Monitor
+   * correctly exits).
+   *
+   * So, whenever we want to start a new Server, the Monitor must check the
+   * hhconfig file's version number. If it doesn't match the version at the
+   * time of this Monitor's startup, we enter this state Died_config_changed.
+   *
+   * Only a new client connection after entering this state can transition
+   * use away from this state.
+   *
+   * NB: Monitor could be mid-way handling a new client connection when it
+   * processes the next Informant decision. In which case, we can't guarantee
+   * that the client that connected did in fact exercise the version lookup
+   * logic; so the only safe thing to do is enter the Died_config_changed
+   * state until the *next* client that connects.
+   *
+   * These transitions are centralized in ServerMonitor.kill_and_maybe_restart_server
+   * Don't do them elsewhere or you will screw it up.
+   *
+   * State transition looks sort of like:
+   *
+   *
+   *                [ Died_config_changed ]
+   *                       ^       \
+   *                      /         \ new client connection
+   *             maybe  /            \ connection triggers
+   *     restart but  /                \ maybe_restart which actually
+   *  config not mat/ching              \ does start one this time
+   *              /                      \
+   *            /                         \
+   * [ Any server state ]-------------> [ new server instance ]
+   *                        restart
+   *                         and
+   *                        config
+   *                       matches
+   *
+   *
+   * Why don't we just exit the Monitor automatically, instead of keeping it
+   * around with a server in this Died_config_changed state? We want Nuclide
+   * to know that things are dandy and it should retry connecting without
+   * the user having to click anything.
+   *)
+```
+
+Reviewed By: ljw1004
+
+Differential Revision: D8176596
+
+fbshipit-source-id: 537a3dffa0a3e251c72fbc23d0ccde0f6e188e3f
+",TRUE,[hack],,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+sosy-lab/java-smt,94c31fa9c76db948e785ebe0aa8eae2de38edc4e,"Bugfix for Z3 visitor
+
+true/false are also Z3_APP_AST.
+
+TODO: does it occur with other solvers? Can other applications with 0 arity be constants?
+",TRUE,TODO:,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+jgaeddert/liquid-dsp,33ee4e924303e9a525604127c79a6af5f2a76884,"fft: adding todo
+",TRUE,adding TODO,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+commsy/commsy,1d7847354a612b7162f92d333a2d21873d3f47ed,"new private room: calendar
+- todo: show selections
+",TRUE,TODO,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+kartta-labs/editor-website,e1213a4651e72beb660dddcf467d353744e3f336,"Use Rails.xxx instead of RAILS_XXX
+",FALSE,Rails.xxx,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+dolphin-emu/dolphin,978a10e6b1de05f580ceada4d93ab5859fa4051a,"Added Skies of Arcadia Legends projection hack
+",TRUE,hack,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+stinsonga/emacs-mirror,12ca4638338f671e7cba8693b7230409a0fcb9ea,"; * test/lisp/textmodes/css-mode-tests.el: Add TODO.
+",TRUE,Added TODO,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+universal-ctags/ctags,23d2f194c84475c159f64f66e8835ef2cdca6238,"JavaScript: support fields in a class
+
+Close #2849 as side effect of this change.
+
+input0.js (quoted from #2849):
+
+    class EmptyArrayTest {
+      field1 = [];
+
+      method1() {
+	console.log('field1 has', this.field1.length, 'items');
+      }
+    }
+
+output0.tags:
+
+    EmptyArrayTest	input.js	/^class EmptyArrayTest { $/;""	c
+    field1	input.js	/^  field1 = [];$/;""	M	class:EmptyArrayTest
+    method1	input.js	/^  method1() { $/;""	m	class:EmptyArrayTest
+
+""field1"" is captured as a member/M kind tag.
+
+References:
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#field_declarations
+* https://github.com/tc39/proposal-class-fields
+* https://tc39.es/proposal-class-fields/
+
+TODO:
+* private methods
+* class methods
+
+Signed-off-by: Masatake YAMATO <bdfff7006d3a5967c7c741d652a74f5445442e11@redhat.com>
+",TRUE,TODO,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+stan-dev/stan,6d5a4fcde21dc57d53f419b93364bdf9a61ef15b,"removed line in TODO regarding precompiled header
+",FALSE,removed line in TODO,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+openssl/openssl,757264207ad8650a89ea903d48ad89f61d56ea9c,"Port Ben's parallell Makefile hack to VMS
+
+As far as I know, there is no MMS / MMK with parallellism today.
+However, it might be added in the future (perhaps in MMK at least), so
+we may as well prepare for it now.
+
+Reviewed-by: Rich Salz <c04971a99e5a9ee80eaab4b1deb37e845b0bd697@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/3282)",TRUE,hack,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+apache/jackrabbit-oak,e9d9205a66ed07de4b42e924753e514cf7dc2843,"OAK-4106: Reclaimed size reported by FileStore.cleanup is off
+FIXME tag
+
+git-svn-id: 67138be12999c61558c3dd34328380c8e4523e73@1745340 13f79535-47bb-0310-9956-ffa450edef68
+",TRUE,FIXME,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+openSUSE/kernel-source,26e4b732898b310ebffe9f537c8d24acaf89f65a,"rpm/kernel-binary.spec.in: Fix placement of the reproducible build hack
+",FALSE,fix placement,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+servo/servo,d21657a9e5cfdb858c1a99a246001ceac05bb982,"Auto merge of #19028 - MortimerGoro:webgl2, r=emilio
+
+Kick off WebGL 2.0 implementation
+
+<!-- Please describe your changes on the following line: -->
+
+This PR kicks off the WebGL 2.0 implementation:
+
+- Include WebGL2RenderingContext.webidl and comment unimplemented methods
+- Create WebGL2 struct hierarchy with WebGL 1.0 backwards compatibility
+- Add WebGL 2.0 entry points to canvas
+- Select the correct GL Version on GLContext backends (related PR https://github.com/emilio/rust-offscreen-rendering-context/pull/108)
+- Add WebGL version selection in shader compilations
+- Create a WebGL 2.0 preference
+
+I tried a complex three.js demo using canvas.getContext(""webgl2"") and the backwards compatibility worked great.
+
+Next steps:
+
+- I'll add WebGLVersion selection/filtering to WebGLExtensions and move some extensions to core in WebGL 2.0 (e.g. VAOs)
+- I'll add the WebGL 2.0 conformance WPT
+- I'll create a mega-issue with a the list of all TODO methods for a complete WebGL 2.0 implementation (as @emilio did with WebGL 1.0), so we can start start getting community involvement.
+
+---
+<!-- Thank you for contributing to Servo! Please replace each `[ ]` by `[X]` when the step is complete, and replace `__` with appropriate data: -->
+- [x] `./mach build -d` does not report any errors
+- [x] `./mach test-tidy` does not report any errors
+- [ ] These changes fix #__ (github issue number if applicable).
+
+<!-- Either: -->
+- [ ] There are tests for these changes OR
+- [x] These changes do not require tests because I will add the entire webgl 2.0 WPT in a different PR
+
+<!-- Also, please make sure that ""Allow edits from maintainers"" checkbox is checked, so that we can help you if you get stuck somewhere along the way.-->
+
+<!-- Pull requests that do not address these steps are welcome, but they will require additional verification as part of the review process. -->
+
+<!-- Reviewable:start -->
+---
+This change is [<img src=""https://reviewable.io/review_button.svg"" height=""34"" align=""absmiddle"" alt=""Reviewable""/>](https://reviewable.io/reviews/servo/servo/19028)
+<!-- Reviewable:end -->
+",FALSE,I'll create a list ,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+phetsims/function-builder,6874d87253cdc75305e108579c1f1968810a63b9,"TODO
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+telefonicaid/fiware-orion,6f04a860e99de789cda3781a4afd6b4f6ceeed3c,"Added a FIXME
+",TRUE,FIXME,,,16_dec_2021_pos_terms_list
+DIRACGrid/DIRAC,f4a67fdac8181bdb05aa6c1eaeb9bbbc727a5013,"FIXME Comment
+",TRUE,FIXME,,,16_dec_2021_pos_terms_list
+laurentb/weboob,cd5f29a0f9cb4fd51271ca2f0e3e9a6da84cb2c0,"fixes on fortuneo module
+
+    browser.py:
+        added condition on login page
+        test in home removed
+    pages/accounts_list.py
+        code  refactor
+        BrokenPageError is thrown if the <tr> table is void
+        cosmetic changes
+        added a TODO for FrenchTransaction implementation
+        not needed code lines deleted
+        list concatenation in a smarter way
+    pages/login.py
+        BrowserUnavailable() implemented to throw an exception when the site is in maintenance
+        smarter list concatenation
+    test.py
+        working test (was not really implemented)
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+CanalTP/navitia,897b8021c13de7952ea8c6fafffb87b7dc2f7006,"GTFS: handling of slashs
+
+TODO, work in progress to handle slashes in gtfs
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+kubernetes/kops,af867403f986429ccff8ae28e703a8d23e98ecdb,"More autofix of expected test output
+
+Rename to HACK_UPDATE_EXPECTED_IN_PLACE as it isn't just terraform any more.
+",TRUE,rename to HACK,,,16_dec_2021_pos_terms_list
+tprrt/linux-stable,17d8bb061fcf8ba6a56adcf193d7d255966cff79,"[media] DocBook/dvbproperty.xml: Reorganize the parameters
+
+Put the parameters at the sequencial order as they appear inside
+the frontend.h header.
+
+TODO: fix the per-standard section, to reflect the parameters
+that should actually be used for each transmission system type.
+
+Signed-off-by: Mauro Carvalho Chehab <ad86ba2154032c9f55743a190faa2459a9d61d42@redhat.com>
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+stinsonga/emacs-mirror,c3b4957fff207e1b7c92ddc8a1b0401892574fce,"Cosmetic changes.
+
+src/cm.c (calccost, cmgoto): Cosmetic changes.
+src/keyboard.c (kbd_buffer_get_event, Fcurrent_input_mode): Ditto.
+src/term.c: Cosmetic changes.
+
+src/termchar.h (top_frame): Removed obsolete TODO comment.
+
+git-archimport-id: 6a009bcaac90060bfd81b04a308d5da0a17447a0@elte.hu--2004/emacs--multi-tty--0--patch-67
+",FALSE,removed TODO,,,16_dec_2021_pos_terms_list
+ARPA-SIMC/meteo-vm2,86542c87bc736b277bc7f4989dc6cd50dcd0cb5c,"TODO
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+lonelycode/tyk,f004769cb2afbf13a1e0cea4bc21bccf6dadd4cd,"Fixed some ugliness with hook configurations coming in as BSON objects. TODO: Needs to be more elegant
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+google/gvisor,5802051b3d60a802713fabbd805614f22c9291ea,"Update TODO to #238
+
+Move TODO to #238 so that proper synchronization of operations is handled
+when we create the urpc client.
+
+Issue #238
+Fixes #512
+
+PiperOrigin-RevId: 305383924
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+chromium/chromium,30d78dd34a4d60691e8dd5784f472fdad1631349,"Remove a FIXME about returning CSS values as specified
+
+The only restriction in serializing CSS values is the round-trip
+property, i.e.
+
+style.left = a;
+b = style.left;
+style.left = b;
+assert(style.left == b)
+
+R=alancutter
+
+Review URL: https://codereview.chromium.org/787583002
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@186741 bbb929c8-8fbe-4397-9dbb-9b2b20218538
+",FALSE,removed FIXME,,,16_dec_2021_pos_terms_list
+nwjs/chromium.src,29d40036eed4e3d0f5658d13a5cbc2b9eb447c4f,"chromeos: Implement a TODO to rename the class TextInputSection as well
+the section name in System Options.
+
+BUG=None
+TEST=compiles
+
+Review URL: http://codereview.chromium.org/935001
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@41707 0039d316-1c4b-4281-b951-d872f2087c98
+",FALSE,Implement a TODO,,,16_dec_2021_pos_terms_list
+gramps-project/gramps,ab6f7ac74f843570a71f20114d36cd16af3110de,"* src/gramps_main.py (back_pressed, fwd_pressed): Pass event to the
+build_menu functions; (build_backhistmenu, build_fwdhistmenu): Use
+event for popping the menu.
+
+* NEWS, TODO: catch up with the current CVS state.
+
+* src/Utils.py (history_broken, clearHistory_broken, wasHistory_broken):
+Add functions.
+* src/plugins/ReorderIds.py(__init__): Call Utils.history_broken upon
+reordering.
+* src/gramps_main.py (clear_history): Add function;
+(redraw_histmenu, fwd_clicked, back_clicked): Clear history if catching
+an exception (should be actually handled by reorder plugin, leaving here
+
+
+svn: r2320
+",TRUE,TODO,,,16_dec_2021_pos_terms_list
+Abjad/abjad,8c035250f04bd24f0fd883df49f99bcde663b405,"Updated TODO.
+",FALSE,"Updated TODO.
+",,,16_dec_2021_pos_terms_list
+wordpress-mobile/WordPress-iOS,a0e71c9cce1540b4db20578a338db3c5be8afde0,"Timestamp and sign FIXME
+",TRUE,FIXME,,,16_dec_2021_pos_terms_list
+tprrt/linux-stable,8cc11f5ab5384dad6c63905f71882e65cd70b7b7,"microblaze: Cleanup linker script using new linker script macros.
+
+I wasn't able to further clean up the linker script using the
+INIT_DATA_SECTION macro because of the FIXME comment for the
+.init.ramfs section; when that is resolved we should convert
+microblaze to use INIT_DATA_SECTION.
+
+Signed-off-by: Tim Abbott <d0224c9164b19e926c250294e7a569c6d5ad5163@ksplice.com>
+Cc: Michal Simek <3a191dd2be46e826fee926d532b136ed65cb5318@monstr.eu>
+Cc: 1969c2f5333fcd29c58e45a80778895ee5b1b5bd@itee.uq.edu.au
+Cc: Sam Ravnborg <f16bed56189e249fe4ca8ed10a1ecae60e8ceac0@ravnborg.org>
+Signed-off-by: Michal Simek <3a191dd2be46e826fee926d532b136ed65cb5318@monstr.eu>
+",FALSE,because of the FIXME comment,,,16_dec_2021_pos_terms_list
+tgstation/tgstation,a107e9cc7bb39d55b065cf95a67097f3bbe916c0,"More Hydroponics Stuff:
+* New blender icons that don't suck!
+* New Plant: Corn. Hmmm... corm.
+
+Thanks to Guest XXX on the forums for the corn and blender icons (and the poppy ones I'm not using yet).
+
+git-svn-id: af9c09e5e5bfa333f52f6fefeba857070ad34abf@506 316c924e-a436-60f5-8080-3fe189b3f50e
+",FALSE,Guest XXX,,,16_dec_2021_pos_terms_list
+kingjon3377/strategicprimer-viewer,46ffd1d6aa0865d997babcb8c4ce277d341eba52,"PathWrapper: Convert TODO comment to todo() annotation.
+",TRUE,TODO modification,,,16_dec_2021_pos_terms_list
+kjambunathan/org-mode-ox-odt,feb269826a559ccdb507375d42078bd033deed5f,"Fix recent bug with timestamp properties
+
+Matt Lundin writes
+
+> I believe that commit b8e0d6fdb41f2165d675e89fcb54b741c971f6f4 broke
+> accessing timestamps with the org-entry-get.
+>
+> With that commit, several functions I use to check whether an entry has
+> a timestamp stopped working.
+>
+> In other words,
+>
+> (org-entry-get nil ""TIMESTAMP_IA"")
+>
+> or
+>
+> (org-entry-get nil ""TIMESTAMP"")
+>
+> always return nil, even if a timestamp exists.
+>
+> Strangely, the org-entry-properties alist includes values for TIMESTAMP
+> and TIMESTAMP_IA.
+>
+> I tested this by evaluating the expressions in the sample entry below:
+>
+> --8<---------------cut here---------------start------------->8---
+> * TODO Test							   :computer:
+>  <2009-12-19 Sat>
+>  [2009-12-19 Sat 17:47]
+>
+> (org-entry-get nil ""TIMESTAMP_IA"")
+> (org-entry-get nil ""TIMESTAMP"")
+> (org-entry-properties)
+> --8<---------------cut here---------------end--------------->8---
+",TRUE,TODO test,FALSE,,16_dec_2021_pos_terms_list
+chromium/chromium,cfd4edea3329365255946c018fd30607fab56d57,"Add unittests for SetElideBehavior/SetWhitespaceElision relayout
+
+This CL is adding unittests to ensures the layout is recomputed when
+the behavior or whitespace elision is updated.
+
+This fix is cleaning a TODO left in the code.
+
+R=260f5074942ca36dab941199ff6b19fcaa26ccde@chromium.org
+
+Bug: 1085014
+Change-Id: I803b6285bc03771b5026db63950bd60ebee1231c
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2545222
+Reviewed-by: Michael Wasserman <260f5074942ca36dab941199ff6b19fcaa26ccde@chromium.org>
+Commit-Queue: Etienne Bergeron <72977556adb407c83e4c510020c5fe46488477ad@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#828370}
+",FALSE,cleaning a TODO,,,16_dec_2021_pos_terms_list
