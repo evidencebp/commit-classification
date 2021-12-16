@@ -9,7 +9,7 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq\
-    , build_sepereted_term, build_non_positive_linguistic
+    , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH, term_seperator
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
 
@@ -17,7 +17,21 @@ from model_evaluation import classifiy_commits_df, evaluate_performance, evaluat
 # An exploratory study on self-admitted technical debt by Potdar, Aniket and Shihab, Emad
 positive_terms = ['fixme', 'hack', 'todo', 'xxx']
 
-excluded_terms = ['__PLACEHOLDER__']
+removal_terms = [
+    'because'
+    , 'clean' + REGULAR_SUFFIX
+    , 'fix' + REGULAR_SUFFIX
+    , 'implement' + REGULAR_SUFFIX
+    , 'list' + REGULAR_SUFFIX
+    , 'remov' + VERB_E_SUFFIX
+    , 'was'
+]
+excluded_terms = ['update TODO(\.)?'
+    , "(%s)%s(%s)/" % ("|".join(removal_terms), NEAR_ENOUGH, "|".join(positive_terms))
+    , "(%s)/" % ("|".join(positive_terms))
+    , '\.xxx'
+    , '=xxx'
+                  ]
 
 def build_positive_regex():
 
@@ -87,10 +101,13 @@ def evaluate_satd_classifier():
     evaluate_concept_classifier(concept='satd'
                                 , text_name='message'
                                 , classification_function=is_satd
-                                , samples_file=join(DATA_PATH, 'satd_texts_tests.csv'))
+                                , samples_file=join(DATA_PATH, 'satd_samples.csv'))
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='fedd454d2bf47de43b2bc80d52172ab8aac33bc7')
-    #evaluate_satd_classifier()
+    print_concepts_functions_for_bq(commit='4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10')
+    evaluate_satd_classifier()
 
+    text = """TODO\n""".lower()
+    print("Label", is_satd(text))
+    print("concept in text", re.findall(build_positive_regex(), text))
