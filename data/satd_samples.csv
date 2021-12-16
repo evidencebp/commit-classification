@@ -231,7 +231,7 @@ Next steps:
 ---
 This change is [<img src=""https://reviewable.io/review_button.svg"" height=""34"" align=""absmiddle"" alt=""Reviewable""/>](https://reviewable.io/reviews/servo/servo/19028)
 <!-- Reviewable:end -->
-",FALSE,I'll create a list ,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
+",FALSE,I'll create a list,,,15_dec_2021_pos_4ed9f7272f45a3dd6c4dd7f04fe3ab77f633ab10
 phetsims/function-builder,6874d87253cdc75305e108579c1f1968810a63b9,"TODO
 ",TRUE,TODO,,,16_dec_2021_pos_terms_list
 telefonicaid/fiware-orion,6f04a860e99de789cda3781a4afd6b4f6ceeed3c,"Added a FIXME
@@ -420,3 +420,82 @@ Reviewed-by: Michael Wasserman <260f5074942ca36dab941199ff6b19fcaa26ccde@chromiu
 Commit-Queue: Etienne Bergeron <72977556adb407c83e4c510020c5fe46488477ad@chromium.org>
 Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#828370}
 ",FALSE,cleaning a TODO,,,16_dec_2021_pos_terms_list
+Humbedooh/ponymail,59cacf8476842bca2171dc8fecd7a84e57e8c98c,"kludge some more for now
+",TRUE,kludge,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+japgolly/scalajs-react,242052e509d911c85e60fd5a6b74ed04acb74bb2,"TODO -1
+",TRUE,todo,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+goblint/analyzer,2fd5b54b5907142e54bd88edf9d7cc7c9b1da702,"Add TODO test where ambiguous pointer invariant could refine pointer
+",TRUE,todo,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+findstr/silly,b1ddb7414d24d4f1efd99cbe929d5dadf82f9b04,"bugfix silly.env
+
+shell env can't effect the struct silly_config
+",TRUE,silly,FALSE,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+nwjs/chromium.src,ce2abe5385bcf31e6647429a422f0156de4ccc7a,"Exynos VDA: increase MFC input buffer size limit to 1MiB.
+
+The previous limit constant of 512KiB is too small to accomodate high bit-rate 1080p
+content such as TheLorax_1080p.mp4 (see bug report). The increased limit prevents
+over-size frame errors in AppendToInputFrame().
+
+TODO(posciak): determine MFC input buffer size based on level limits. This is tracked
+under a separate issue: http://crbug.com/255116.
+
+BUG=245505
+TEST=trybot, manually verified the bug is fixed on daisy.
+R=fischman@chromium.org
+
+Review URL: https://codereview.chromium.org/18063007
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@209041 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,TODO,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+gnachman/iTerm2,6cbaadc8dad16b5f1cb6ed8b7978d36b64a110a4,"Add a TODO which might fix the hard-to-find bug where windows restore wider than they ought to
+",TRUE,TODO,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+emacs-mirror/emacs,1eea231d3ebcc2801fe1a8459e60fdb687631ba9,"* src/xwidget.c (Fset_frame_visible): Hack to force a frame to be
+considered as visible to trigger the display engine.
+* lisp/xwidget.el (xwidget-display): Force the display engine to create a
+xwidget_view of the given xwidget.
+",TRUE,hack to force,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+qgis/QGIS,8a2e6c030f4f64b1d1adbcef242f7f6d5a7dd097,"[FEATURE]: Export legend groups and layers with legendinterface and use this information to display groups in the composer legend. Todo: fix drag and frop in composer legend, readXML, cleanups in composer legend model
+
+git-svn-id: 736967b34281393df2c2d27a33b8980e2cefa726@13476 c8812cc2-4d05-0410-92ff-de0c093fc19c
+",TRUE,todo,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+bcgov/MyGovBC-MSP,a8954aaf3ea6ed9379c833c0784a8558f692cbeb,"todo comment
+",TRUE,todo,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+nwjs/chromium.src,e0935cc22a6c10461b004b9f3c0b0f7f4d52c137,"SPDY - persist SPDY settings.
+
+HttpServerProperties stores SPDY settings in SettingsMap
+whose key is settings ID and value is a (flags, value)
+pair (SettingsFlagsAndValue).
+
+The format of the persisted data is same as before (restored
+the old code that persisted the data). Verified it with an older
+version of the Preferences file that is very large. Verified
+that we have sent the right data  (sorted and unique settings)
+to the server and that duplicates were removed from the file.
+
+Changed all the code above SpdyFramer to use the above
+spdy::SettingsMap and spdy::SettingsFlagsAndValue
+data structures.
+
+When chrome sends Spdy Settings to the server, it uses
+the current SpdyFramer's API calls to create Settings
+frame.
+
+TODO: 
+1) Delete spdy::SpdySettings and spdy::SpdySetting
+   and replace them with SettingsMap, SpdySettingsIds, 
+   SpdySettingsFlags and value.
+2) Add version to the persisted data.
+
+
+BUG=117760
+R=rch, willchan
+TEST=network unit tests and browser unit tests.
+
+Review URL: http://codereview.chromium.org/9802003
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@128737 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,todo,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+simtr/The-Powder-Toy,5919cefa85db406f1777df2231f20d78fde73c44,"Decorations are per particle TODO: remove references to the decorations buffer
+",TRUE,todo,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+kpeeters/cadabra2,c3af8988ea48b01dae1bc4365212014a02e824f2,"Add fixme comment
+",TRUE,fixme,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
