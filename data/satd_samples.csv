@@ -420,3 +420,625 @@ Reviewed-by: Michael Wasserman <260f5074942ca36dab941199ff6b19fcaa26ccde@chromiu
 Commit-Queue: Etienne Bergeron <72977556adb407c83e4c510020c5fe46488477ad@chromium.org>
 Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#828370}
 ",FALSE,cleaning a TODO,,,16_dec_2021_pos_terms_list
+repo_name,commit,message,Is_satd,Justification,Certain,Comment,Sampling
+fusioninventory/fusioninventory-agent,cec2137cdab5657bd5e148aeba790bec1764c452,"TODO: no need to use which to on UNIX
+",TRUE,TODO,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+BlackHole/enigma2-obh10,3e15a17f749d3b589b97425b52857680891ec7ab,"filepush: Use a condition instead of restarting a thread on skip
+
+pause/resume is used (exclusively) to be able to skip. The contract
+is that nothing is being written after ""pause"". Instead of stopping
+the complete thread, just put the thread into a suspended mode using
+a condition/mutex pair on ""pause"", and release it on ""resume"".
+
+Starting a thread takes a whole bunch of resources, so needlessly
+destroying and creating threads is really bad idea. This should
+improve ""skip"" performance a bit, because the caller no longer needs
+to wait for the filepush thread to start.
+
+TODO: Capture the condition/mutex into a C++ class.
+",TRUE,TODO,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+legobmw99/Allomancy,9d5d60801df1cd63a60a51afc40b60edcadaad45,"Pretty sure most everything is done. TODO: crafting, gen, polish
+",TRUE,todo,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+UDA-EJIE/uda-rup,6252fe293b3d158211ad2c4a6fd17030f61e717d,"Cambio Menor: Todo OK
+",TRUE,todo,FALSE,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+facebook/flow,16e50a6247aaf7601d6a93613615c5c09ba077d6,"[hack] Factor ServerConfig to be a little nicer
+
+Summary: Extracting a key and casting it to a certain type is a pretty
+common operation
+
+Reviewed By: @jwatzman
+
+Differential Revision: D2098537
+",TRUE,[hack],,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+InnovateUKGitHub/innovation-funding-service,8e5ee60d4f8692c8a3ac98d5e02b4f76cdbab470,"Merge branch 'development' into feature/INFUND-2051-remove-the-0-in-finance-fields
+
+* development:
+  INFUND-3007 Needed to extend the check if the field is readonly. Added todo on INFUND-2107
+  Moving the IfsErrorController to core, otherwise the management app doesn't have a 404 page for requests that don't reach a controller.
+  INFUND-1589 partner status table
+  INFUND-3170 - amended ""Back to IFS application"" links in error pages to redirect to the user dashboards
+  INFUND-2797 and INFUND-2798 - manual testing and tweaks
+  INFUND-2700: Changed the WYSIWYG and Mark as complete test suites
+  INFUND-2811
+  INFUND-2797 and INFUND-2798 - adding applicationNumber into email arguments
+  INFUND-2797 and INFUND-2798 - added success and rejection email templates
+  Fixing server link and updating Pending tags
+  INFUND-2810
+  INFUND-2796 - added new service call to send out Notifications to Lead Applicants
+  INFUND-2700: changed the global setup keyword
+  INFUND-2602
+  INFUND-2700: Adjusted the test of the Application form test suite to use new application
+  Fixing failing tests
+  INFUND-2698: Created a global keyword for the creation of a new application in the test suites setup
+  Tomcat culling
+  INFUND-2256: Added an extra check for the redirection of the user when he goes back after the creation of the account
+",TRUE,added todo,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+tprrt/linux-stable,d352ac68148b69937d39ca5d48bcc4478e118dbf,"Btrfs: add and improve comments
+
+This improves the comments at the top of many functions.  It didn't
+dive into the guts of functions because I was trying to
+avoid merging problems with the new allocator and back reference work.
+
+extent-tree.c and volumes.c were both skipped, and there is definitely
+more work todo in cleaning and commenting the code.
+
+Signed-off-by: Chris Mason <a169954b4cb1a46cee25f659d3bddfebe02b5fba@oracle.com>
+",TRUE,todo,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+google/llvm-propeller,3e64d066de3e11a34ac02a2fab9f648ff056d4e2,"[X86][XOP] Added FIXME comments to missed shuffle combine opportunities
+
+Requested by @silvas
+
+llvm-svn: 293916
+",TRUE,fixme comments,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+ImageEngine/gaffer,1d9bf47ac0d177180e909d8bae598a79541dd658,"Fixed vertical sizing of Timeline in default layout.
+
+This is a bit of a hack but having spent half the day looking at it I think this is the most pragmatic approach for now - see comments for details.
+",TRUE,a bit of a hack,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+collectiveaccess/providence,0642430b4c1e2d46d0aff677ada8f210ee64886b,"PROV-622, PROV-623 Catch and handle deadlock and gone away database errors in mysql driver. Still todo:
+
+1. Add similar handling in mysqli and pdo_mysql drivers
+2. Change database error handling to forward to a decent looking HTML page
+",TRUE,todo,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+StanfordLegion/legion,ceaa5ac540062bde96f10093d026ace590546012,"legion: small hack for backwards compatibility of dynamic task registration
+",TRUE,small hack,,,16_dec_2021_pos_7bea7aa3de54a7763a52d93161615fe345483b19
+commit,message,Is_satd,Justification,Certain,Comment,Sampling,
+4e91352bc3e441237807ec44afaa4578b4b01326,"cleanup and reindenting of WeakAuras.lua, marked one global in WAOptions as todo
+",TRUE,todo,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+e7661ec2262d685f3f67b090101ac913f4074e5c,"queteur
+* hide list tronc_queteur for queteur creation
+* force select current UniteLocal (from JWT Token) at creation time
+* force mobile number to int + regexp
+* Hide help span when field is no longer in error
+* autocomplete to look for referent volunteer (todo: display the value when loading the form)
+* fix condition of display of file upload
+* fix link on tronc_queteur list
+* regexp sur le nivol
+* remove ""minor"" column from table and queries and code
+* update insert/update queries
+*  when birthdate are 1902-02-02 or 2007-07-07, set birthdate to null. (replacement for minor column where we miss the actual birth date)
+* add dependency on 'ng-file-upload'
+
+server side
+* remove reference to ""minor"" column
+* minor updates to reflect UI changes
+",TRUE,todo,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+fa3adf939294f504e1b791ce6ccd134facdeba37,"Add static metadata for struct/exception Hack codegen
+
+Summary:
+Exposes metadata about structs/unions and exceptions on each struct class.
+
+Here's an example of what this struct metadata looks like (taken from the test fixtures):
+
+```
+  public static function getStructMetadata()[]: \tmeta_ThriftStruct {
+    return \tmeta_ThriftStruct::fromShape(
+      shape(
+        ""name"" => ""module2.FBStruct"",
+        ""fields"" => vec[
+          \tmeta_ThriftField::fromShape(
+            shape(
+              ""id"" => 1,
+              ""type"" => \tmeta_ThriftType::fromShape(
+                shape(
+                  ""t_primitive"" => \tmeta_ThriftPrimitiveType::THRIFT_STRING_TYPE,
+                )
+              ),
+              ""name"" => ""str_value"",
+            )
+          ),
+        ],
+        ""is_union"" => false,
+      )
+    );
+  }
+```
+
+#forcetdhashing
+
+Reviewed By: mshneer
+
+Differential Revision: D28814475
+
+fbshipit-source-id: 2d9b92f91b4c4dee5f44412c7a15432d4f2295f9
+",TRUE,hack,FALSE,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+fa038e03504c7d0dfd438b1dfdd6da7081e75617,"[x86] favor vector constant load to avoid GPR to XMM transfer, part 2
+
+This replaces the build_vector lowering code that was just added in
+D80013
+and matches the pattern later from the x86-specific ""vzext_movl"".
+That seems to result in the same or better improvements and gets rid
+of the 'TODO' items from that patch.
+
+AFAICT, we always shrink wider constant vectors to 128-bit on these
+patterns, so we still get the implicit zero-extension to ymm/zmm
+without wasting space on larger vector constants. There's a trade-off
+there because that means we miss potential load-folding.
+
+Similarly, we could load scalar constants here with implicit
+zero-extension even to 128-bit. That saves constant space, but it
+means we forego load-folding, and so it increases register pressure.
+This seems like a good middle-ground between those 2 options.
+
+Differential Revision: https://reviews.llvm.org/D80131
+",FALSE,gets rid,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+19a69025d78324d5bba65736a6b007577ab29c38,"Más mejoras en el doc.
+Todavia falta, por si alguien se apunta.
+Hay que mejorar los @xxx  y tambien organizar mejor los packages.
+Mientras esta quedando asi:
+http://www.kumbiaphp.com/api/beta2/  para los usuarios
+http://kumbiaphp.com/api/beta2-dev/ para los desarrolladores y usuarios avanzados.
+Lo iremos actualizando a menudo (estoy creando un bash script para automatizar la creación y subida al server)
+Debe estar correcto para la salida de la beta2",FALSE,xxx,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+938774502ab9a1b9aec0595c9ccaa35e933b77d1,"branches/zip: When logging updates or deletes in the undo log, store long
+enough prefixes of externally stored columns, so that purge will not have
+to dereference any BLOB pointers, which may be invalid.  This will not be
+necessary for logging inserts, because inserts are no-ops in purge, and
+the record will remain locked during transaction rollback.
+
+TODO: in dict_build_table_def_step() or dict_build_index_def_step(),
+prevent the creation of tables with too many columns for which a
+prefix index is defined.  This is because there is a size limit of undo
+log records, and for each prefix-indexed column, the log must store
+REC_MAX_INDEX_COL_LEN + BTR_EXTERN_FIELD_REF_SIZE bytes.
+
+trx_undo_page_report_insert(): Assert that the index is clustered.
+
+trx_undo_page_fetch_ext(): New function, for fetching the BLOB prefix
+in trx_undo_page_report_modify().
+
+trx_undo_page_report_modify(): Write long enough prefixes of the externally
+stored columns to the undo log.
+
+trx_undo_rec_get_partial_row(): Remove the parameter ""ext"".  Assert that
+the undo log contains long enough prefixes of the externally stored columns.
+
+purge_node_t: Remove the field ""ext"".
+",TRUE,TODO,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+cd8a224756150b035d774eb3f24b8ac8657b97c8,"TODO #445
+
+Signed-off-by: Chris Malley <74b2712074b149d140079dbd7e875955d192e617@pixelzoom.com>
+",TRUE,TODO,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+9591e0d1af09b5d4c4dd143d37a5f8ec6059716e,"delete TODO
+",FALSE,delete,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+0666dc961de9c82f912ad0e483986d98d45cd477,"USB: Bring in constants from host source code.
+
+TODO: Deduplicate this when I'm not feeling so lazy.
+",TRUE,delete,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+085fda978980c74b927e880b8e52ef22ebe51f40,"add bootstrap theme, udpate todo and readme files
+
+updating TODO
+
+Update readme.md
+",FALSE,update (with a typo),,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+c988e67507934e0198233729b7f326154b211a7f,"ASoC: ak4458: replace codec to component
+
+Now we can replace Codec to Component. Let's do it.
+
+Note:
+	xxx_codec_xxx()		->	xxx_component_xxx()
+	.idle_bias_off = 0	->	.idle_bias_on = 1
+	.ignore_pmdown_time = 0	->	.use_pmdown_time = 1
+	-			->	.endianness = 1
+	-			->	.non_legacy_dai_naming = 1
+
+Signed-off-by: Kuninori Morimoto <a3b51ccb87d18302c1692defcfbf83319d1737eb@renesas.com>
+Signed-off-by: Mark Brown <b51b9a92386687a9ac927cebfa0f978adeb8cea5@kernel.org>
+",FALSE,xxx,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+4e48dee8f23c298741514c436eb5aa3bbee4350c,"DW-1108 [LINBIT] drbd: resize: reduce own sanity checks, trust peer
+
+Try to further reduce/avoid ""resize loop"" situations.
+
+If the peer sends obviously bogus sizes, disconnect.
+
+If I cannot grow to at least the current size of the peer, disconnect.
+
+If I receive a resize packet, and I'm diskless myself,
+just trust the sending peer.
+
+If I receive a resize packet that would resize beyond what I know
+of some peer which is currently not reachable, complain, but allow:
+hopefully the sending peer knows more than I do.
+
+TODO: drbd_determine_dev_size() needs to learn to ignore
+""peer_device->max_size"" constraints ""sometimes"",
+when it is ""obvious"" that what we know about the peer is outdated,
+even if we have an established connection to that peer.
+",TRUE,todo,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+e4b1ddc6a40ff350a05b5c88de3f63dd72ca3c57,"Added Underdog and Combat Medic to buff tracker.
+
+Fixed inaccuracy in combat medic localization.
+Added icons for Hostage Taker, Painkillers, and Pain in Crimes for buff tracker, currently unused.
+
+Todo:
+	Add last few skills.
+	Slightly rework how skills are added/removed from buff tracker to reduce redundancy.
+",TRUE,todo,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+341d7aaff7d71311d9b8d06e22237f3e6cbcdba0,"fix grub2 installation on Debian Wheezy
+
+--target has been introduced in grub2. This patch ensure we use
+the minimal version before adding the --target XXX flag.
+
+Debian Wheezy and Precise share the same limitation regarding the
+root device.
+
+Change-Id: I5b3ad42b9fb536d13fb65d84339bc15bc23d99a3
+",FALSE,xxx flag,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+62be54861bf817be4b04d283877bf38f4a8e5277,"virerror: Introduce new error type NO_SERVER
+
+This serves the same purpose as VIR_ERR_NO_xxx where xxx is any object
+that API can be called upon.  Only this particular one is used for
+daemon's servers.
+
+Signed-off-by: Martin Kletzander <e82f23e74d43760279ebcc505dac4ae70d5627d0@redhat.com>
+",FALSE,xxx,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+5fd0a2b9ea66c41762a862518d25e6d7482490b6,"Attempts to pull reimplementations of TAPION and TAPIN better into line with originals.
+
+Also improves whole flow of the fast tape hack that uses them.
+",FALSE,imporve hack,FALSE,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+987e90f5332a777140d0766189981792b859306a,"commentTools waits for macroDataVersion storage to go
+
+todo: really actually move commentTools.migrateData into migrate.js
+",TRUE,todo,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+e05aaf9207e2cf8b1368081829e62a33cb6a5ac0,"feature #30909 [Translator] Add comments when dumping po files (deguif)
+
+This PR was merged into the 4.3-dev branch.
+
+Discussion
+----------
+
+[Translator] Add comments when dumping po files
+
+| Q             | A
+| ------------- | ---
+| Branch?       | master
+| Bug fix?      | no
+| New feature?  | yes
+| BC breaks?    | no
+| Deprecations? | no
+| Tests pass?   | ?    <!-- please add some, will be required by reviewers -->
+| Fixed tickets | #29962
+| License       | MIT
+| Doc PR        |
+
+This code
+```php
+$catalogue = new MessageCatalogue('fr');
+$dumper = new PoFileDumper();
+
+$catalogue->set('key.one', 'First key', 'custom');
+$catalogue->setMetadata('key.one', ['sources' => 'src/file_1', 'comments' => 'Comment', 'flags' => 'fuzzy'], 'custom');
+
+$catalogue->set('key.second', 'Second key', 'custom');
+$catalogue->setMetadata('key.second', ['sources' => ['src/file_1', 'src/file_2'], 'comments' => ['Comment 1', 'Comment 2'], 'flags' => ['fuzzy', 'another']], 'custom');
+
+$dumper->dump($catalogue, [
+    'path' => 'xxx',
+]);
+```
+
+Will produces this output:
+```
+msgid """"
+msgstr """"
+""Content-Type: text/plain; charset=UTF-8\n""
+""Content-Transfer-Encoding: 8bit\n""
+""Language: fr\n""
+
+# Comment
+#, fuzzy
+#: src/file_1
+msgid ""key.one""
+msgstr ""First key""
+
+# Comment 1
+# Comment 2
+#, fuzzy,another
+#: src/file_1 src/file_2
+msgid ""key.second""
+msgstr ""Second key""
+```
+
+Commits
+-------
+
+31b3a55787 Add comments when dumping po files
+",FALSE,xxx,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+375da054aede7e15906379e1ec306324c1fc7dbd,"Revert ""Remove code that was added to debug bug 445616""
+
+This reverts commit ef1fe50267324c895f20b66ba4dc72ee3b38301f.
+
+Reason for revert: It's not clear that the underlying bug was fixed
+and this change may have made ICU initialization failures happen
+silently, leading to later misbehavior.
+
+To be clear, this adds back code to help debug bug 445616.
+
+I'm also taking ownership of the TODO items.
+
+Original change's description:
+> Remove code that was added to debug bug 445616
+>
+> Looks like the bug was fixed, so we don't need this.
+>
+> Bug: 445616
+> Change-Id: Id33ecc6249b1e68337650c733d0877e3326732bf
+> Reviewed-on: https://chromium-review.googlesource.com/885021
+> Commit-Queue: Sergey Ulanov <sergeyu@chromium.org>
+> Reviewed-by: Daniel Cheng <16123c1b20e8652874389dd38d18c4766d539508@chromium.org>
+> Reviewed-by: Jungshik Shin <jshin@chromium.org>
+> Reviewed-by: Scott Graham <e134406e1863f3b48b0795831afac5c0595efb36@chromium.org>
+> Cr-Commit-Position: refs/heads/master@{#532612}
+
+TBR=16123c1b20e8652874389dd38d18c4766d539508@chromium.org,sergeyu@chromium.org,e134406e1863f3b48b0795831afac5c0595efb36@chromium.org,jshin@chromium.org
+
+Bug: 445616
+Change-Id: I2f5dad591791dea8d1427fdceddbf873efbf5f22
+Reviewed-on: https://chromium-review.googlesource.com/1099980
+Reviewed-by: Daniel Cheng <16123c1b20e8652874389dd38d18c4766d539508@chromium.org>
+Reviewed-by: Bruce Dawson <fe9e26f3989304bf7275ed139c57fd059c63d22d@chromium.org>
+Reviewed-by: Scott Graham <e134406e1863f3b48b0795831afac5c0595efb36@chromium.org>
+Commit-Queue: Bruce Dawson <fe9e26f3989304bf7275ed139c57fd059c63d22d@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#567485}",FALSE,taking ownership of todo,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+bdbdac7649fac05f88c9f7ab18121a17fb591687,"ethtool: provide UAPI for PHY master/slave configuration.
+
+This UAPI is needed for BroadR-Reach 100BASE-T1 devices. Due to lack of
+auto-negotiation support, we needed to be able to configure the
+MASTER-SLAVE role of the port manually or from an application in user
+space.
+
+The same UAPI can be used for 1000BASE-T or MultiGBASE-T devices to
+force MASTER or SLAVE role. See IEEE 802.3-2018:
+22.2.4.3.7 MASTER-SLAVE control register (Register 9)
+22.2.4.3.8 MASTER-SLAVE status register (Register 10)
+40.5.2 MASTER-SLAVE configuration resolution
+45.2.1.185.1 MASTER-SLAVE config value (1.2100.14)
+45.2.7.10 MultiGBASE-T AN control 1 register (Register 7.32)
+
+The MASTER-SLAVE role affects the clock configuration:
+
+-------------------------------------------------------------------------------
+When the  PHY is configured as MASTER, the PMA Transmit function shall
+source TX_TCLK from a local clock source. When configured as SLAVE, the
+PMA Transmit function shall source TX_TCLK from the clock recovered from
+data stream provided by MASTER.
+
+iMX6Q                     KSZ9031                XXX
+------\                /-----------\        /------------\
+      |                |           |        |            |
+ MAC  |<----RGMII----->| PHY Slave |<------>| PHY Master |
+      |<--- 125 MHz ---+-<------/  |        | \          |
+------/                \-----------/        \------------/
+                                               ^
+                                                \-TX_TCLK
+
+-------------------------------------------------------------------------------
+
+Since some clock or link related issues are only reproducible in a
+specific MASTER-SLAVE-role, MAC and PHY configuration, it is beneficial
+to provide generic (not 100BASE-T1 specific) interface to the user space
+for configuration flexibility and trouble shooting.
+
+Signed-off-by: Oleksij Rempel <bd2f850eb9fc30b7969dba3dbea58e1f9037402e@pengutronix.de>
+Reviewed-by: Andrew Lunn <02e0a999c50b1f88df7a8f5a04e1b76b35ea6a88@lunn.ch>
+Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
+",FALSE,xxx,,,16_dec_2021_pos_1b9acf0a800300d27ea3b45be2239b44773bf897,
+SubnauticaNitrox/Nitrox,84f834a3da1b0456f465662df5498ff01d3d3c1e,"Logs will now be put in one file for both server and client (#880)
+
+* Fixed error if NitroxLauncher things process has exited but actually it's still processing write.
+
+* - Set Subnautica installation directory as default location for all Nitrox Logs (if available)
+- Allowed for logs from either server or client to be in one log file
+- Change log format to include logger name which equals to the executing application name
+
+* Reduced server save logs
+
+* Added todo to server save time to pause saving if no players are on
+",TRUE,added todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+CompassionCH/compassion-switzerland,db4564e14b389cba1a6709ff14d0b8ec89652cea,"Incoming messages events and child pictures object.
+
+- Incoming messages can have different events.
+  Update method on Children handle the events differently
+  (casestudy, picture, transfer)
+- New object for storing children pictures (TODO)
+
+Conflicts:
+	message_center_compassion/model/child_compassion.py
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+ncareol/nidas,033f6938ec23b15f19453d8e19a1a89d6721f008,"
+nidas/core/Project:  don't throw UnknownHostException in find* methods
+    if an IP address is not found for a host. If it ain't found, it
+    ain't found.
+
+nidas/core/*Resampler* nidas/core/SConscript
+    Added Resampler base class and NearestResamplerAtRate derived.
+
+nidas/core/IOStream:  added skip method (used by search code),
+    putback method is now called backup
+
+nidas/dynld/SampleInputStream
+    Added simple sequential search method.
+        TODO: add support for an index record at the beginning of the files
+    Fixed new infinite loop bug in addSampleTag.
+
+nidas/util/FileSet.cc
+    Bug fix when no files found for time period - need to back up.
+
+nidas/apps/isff/prep.cc
+    Working, but much kludge to be cleaned out
+
+
+
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+dpinney/omf,50d1774a9d0f0f6b50d47f0850904283d26af0bd,"new and improved
+
+Still have a UI issue with the USCRN station button TODO
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+dereneaton/ipyrad,902773e012020dd5fdbea8d6d8c79debb8b3d931,"todo notes
+",FALSE,todo notes,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+anbox/anbox,bfeefaf71973c1d39435a3a3c1fde664d68c4b57,"Suppress EGL warning spam
+
+""libEGL warning: FIXME: egl/x11 doesn't support front buffer rendering.""
+floods logs otherwise
+
+#1092 #861
+",TRUE,FIXME,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+observantrecords/Observant-Records-WordPress,9419dc2fe08519174b25c605cffde14d6bc2324d,"Some tweaks to [27106]:
+
+* Add more @todo markings and remove one that's been resolved.
+* Restore a missing comma in a `.wp-badge` background rule, and add a comment reminding us why it's there.
+
+see #18380.
+
+Built from https://develop.svn.wordpress.org/trunk@27107
+
+
+git-svn-id: 4b95c1a29378dac08c481a35c0b6950a1bdff99c@26974 1a063a9b-81f0-0310-95a4-ce76da25c4cd
+",TRUE,@todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+googleapis/nodejs-logging-bunyan,e179bbb38eda51535b51093d0925db79ddfd17e5,"logging-{winston,bunyan}: format logs to work better with Log Viewer and Error Reporting (#1997)
+
+* logging-{winston,bunyan}: format logs to work better with Log Viewer and Error Reporting
+
+Stackdriver Logs Viewer picks up the summary line from the 'message' field
+of the jsonPayload or from the textPayload. See:
+https://cloud.google.com/logging/docs/view/logs_viewer_v2#expanding
+
+Furthermore, for error messages at severity 'error' and higher, Stackdriver
+Error Reporting will pick up error messages if the full stack trace is
+included in the textPayload or in the `message` property of the
+jsonPaylod. See:
+https://cloud.google.com/error-reporting/docs/formatting-error-messages
+
+Fixes: https://github.com/GoogleCloudPlatform/google-cloud-node/issues/1989
+
+* error reporting prefers jsonPayload
+
+* drop devDep on async
+
+* add TODO about serviceContext.service and global resource types
+
+* bunyan: address comments
+
+* winston: address comments
+
+* winston: remove : when appending the stack
+
+* address comments
+
+* one liner
+
+* ensure test records have a level
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+opendevshop/devshop,e9a56a23da1d3d465ebcadc09b8b0b7d53f84f6e,"Adding TODO About environment target on clone task.
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+rocksaying/rocksaying.github.io,3f2dfeebc66050a2b951cadc6eae9dfea827e246,"add todo list.
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+TeamLapen/Vampirism,fdf590330b709cc36ee6c37aadf87ab780b42476,"Registry rewrite (#224)
+
+* Started working on #213
+
+* Finished working on #213
+TODO: Test, cleanup, documentation.
+
+* Added python script to check if all language keys are present in the lang file
+
+* Postponed weapon table JSON recipes #223
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+google/llvm-propeller,a486f447339b3747ee647ea2eb4aace5a81fb8a0,"Add a TODO comment.  FastISel works by parsing each basic block from the bottom
+up.  Thus, improving the support for compares is goodness because it increases
+the number of terminator instructions we can handle.  This creates many more 
+opportunities for target specific fast-isel.
+
+llvm-svn: 143079
+",TRUE,added todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+qpdf/qpdf,15c17e58a2abc2f9e2d5784a9bfa5d0770d64fc9,"TODO: add note about issue 476 with broken files
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+kingjon3377/strategicprimer-viewer,b9e389948e3618e135a9c31b8633160318782cd6,"ExplorationRunner: Expand a TODO comment with an explanation of why the status quo is as it is.
+",FALSE,expand,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+eternnoir/pyTelegramBotAPI,b14cf1ecd4fe8269d3a95dc02524e56a7dd39aae,"Add TODO to readme.
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+grpc/grpc,b95bb89d13e8abd51c783a5dc8be82dc85653cf2,"Add TODO comment
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+oblac/jodd,a02ea3756654d44bfd845e3aa97195aea6f5ebe4,"Added another todo
+",TRUE,todo,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+mralext20/alex-bot,af719fca4b4b3ec9e3b7130d6ab2925946c02b40,"add todo system
+
+*blatently copies tag system*
+",TRUE,todo,FALSE,system?,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+GNOME/nautilus,406ed6a98b4cdae16fc1cba818afae4b257cd7ca,"	Darin and I started out thinking we were going to start entering
+	bugs for the FIXME items but we were distracted into fixing bugs
+	and tweaking code that we found while doing so.
+
+	* check-FIXME.pl: Won't search old ChangeLogs for FIXMEs either;
+	changed FIXME format from ""FIXME bug xxx"" to ""FIXME bugzilla.eazel.com xxx""
+
+	* components/history/ntl-history-view.c:
+	(hyperbola_navigation_history_notify_location_change): Moved bookmark
+	naming hack here and added FIXME explaining it.
+
+	* libnautilus-extensions/nautilus-bookmark.h,
+	* libnautilus-extensions/nautilus-bookmark.c:
+	(nautilus_bookmark_new), (nautilus_bookmark_new_with_name):
+	Combined these two into one routine that takes both the uri and
+	title; removed hack for trying to come up with good name for
+	bookmark here.
+	(nautilus_bookmark_get_pixmap_and_mask): Changed to call
+	_get_pixbuf instead of duplicating code.
+	(nautilus_bookmark_get_pixbuf): Changed interface to return
+	pixbuf or NULL instead of boolean result & ""out"" parameter.
+
+	* src/nautilus-bookmark-list.c,
+	* src/nautilus-bookmarks-window.c,
+	* src/nautilus-window-menus.c,
+	* src/ntl-window-msgs.c:
+	Updated callers of nautilus_bookmark_new and _new_with_name.
+",TRUE,fixme,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+tprrt/linux-stable,e2bd64d92a10f34b425cf3884c6032588c661335,"signal/alpha: Document a conflict with SI_USER for SIGTRAP
+
+Setting si_code to __SI_FAULT results in a userspace seeing
+an si_code of 0.  This is the same si_code as SI_USER.  Posix
+and common sense requires that SI_USER not be a signal specific
+si_code.  As such this use of 0 for the si_code is a pretty
+horribly broken ABI.
+
+Given that alpha is on it's last legs I don't know that it is worth
+fixing this, but it is worth documenting what is going on so that
+no one decides to copy this bad decision.
+
+This was introduced during the 2.5 development cycle so this
+mess has had a long time for people to be able to depend upon it.
+
+v2: Added FPE_FIXME for alpha as Helge Deller <5b1e7895819cf7d6bc77091b09bbfd6d330a4e74@gmx.de> pointed out
+    with his alternate patch one of the cases is SIGFPE not SIGTRAP.
+
+Cc: Helge Deller <5b1e7895819cf7d6bc77091b09bbfd6d330a4e74@gmx.de>
+Cc: Richard Henderson <aea4fd857e97ee7d33f60175ba9388a955b9d916@twiddle.net>
+Cc: Ivan Kokshaysky <ec437ab60af367f0fec0f6a3cd47f9cbad7b487f@jurassic.park.msu.ru>
+Cc: Matt Turner <789b315743a28dd066a4ba1459c35951c291d8a6@gmail.com>
+Cc: 92b16e4f8d3bce14a77cfee1aa13cdb592ef5039@vger.kernel.org
+Acked-by: Richard Henderson <aea4fd857e97ee7d33f60175ba9388a955b9d916@twiddle.net>
+History Tree: https://git.kernel.org/pub/scm/linux/kernel/git/tglx/history.git
+Ref: 0a635c7a84cf (""Fill in siginfo_t."")
+Signed-off-by: ""Eric W. Biederman"" <8a741aa8cbd77ebc4a56ddb528ce9fd15d42f034@xmission.com>
+",TRUE,fixme,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
+kplian/pxp,aa9edeb03e26b7fbc14a60e1cd39b7b537236518,"changes on restaurar_todo.py
+",FALSE,todo in file name,,,16_dec_2021_pos_11b22c84b83172b515a8137ce42dda037858a637
