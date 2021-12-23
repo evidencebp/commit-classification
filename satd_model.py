@@ -18,80 +18,82 @@ from model_evaluation import classifiy_commits_df, evaluate_performance, evaluat
 # An exploratory study on self-admitted technical debt by Potdar, Aniket and Shihab, Emad
 
 exploratory_terms = [
-'hack'
-, 'retarded'
+#'hack',
+'retarded'
 , 'at a loss'
 , 'stupid'
 , 'remove this code'
 , 'ugly'
 , 'take care'
-, "something's gone wrong"
-, 'nuke'
+, "(gone|is|went) wrong"
+#, 'nuke'
 , 'is problematic'
 , 'may cause problem'
 , 'hacky'
-, 'unknown why we ever experience this'
-, 'treat this as a soft error'
+#, 'unknown why we ever experience this'
+, 'soft error'
 , 'silly'
-, 'workaround for bug'
+, 'workaround'
 , 'kludge'
-, 'fixme'
-, "this isn't quite right"
+#, 'fixme'
+, "(isn't|not) quite right"
 , 'trial and error'
-, 'give up'
+#, 'give up'
 , 'this is wrong'
-, 'hang our heads in shame'
-, 'temporary solution'
-, 'causes issue'
-, 'something bad is going on'
+#, 'hang our heads in shame'
+, 'temporary (crutch|solution)'
+, 'temporary'
+, '(will cause|might cause|causes) issue(s)?'
+, 'something bad'
 , 'cause for issue'
 , "this doesn't look right"
-, 'is this next line safe'
-, 'this indicates a more fundamental problem'
-, 'temporary crutch'
+#, 'is this next line safe'
+#, 'this indicates a more fundamental problem'
 , 'this can be a mess'
-, "this isn't very solid"
-, 'this is temporary and will go away'
-, 'is this line really safe'
-, 'there is a problem'
-, 'some fatal error'
-, 'something serious is wrong'
+, "(isn't|not) (very )?solid"
+#, 'is this line really safe'
+#, 'there is a problem'
+#, 'some fatal error'
+#, 'something serious is wrong'
 , "don't use this"
 , 'get rid of this'
 , 'doubt that this would work'
 , 'this is bs'
-, 'give up and go away'
+#, 'give up and go away'
 , 'risk of this blowing up'
 , 'just abandon it'
-, 'prolly a bug'
+#, 'prolly a bug'
 , 'probably a bug'
 , 'hope everything will work'
 , 'toss it'
-, 'barf'
-, 'something bad happened'
+#, 'barf'
+#, 'something bad happened'
 , 'fix this crap'
 , 'yuck'
 , 'certainly buggy'
-, 'remove me before production'
-, 'you can be unhappy now'
+, 'remove (me|it) before production'
+#, 'you can be unhappy now'
 , 'this is uncool'
-, 'bail out'
-, "it doesn't work yet"
+#, 'bail out'
+, "it doesn't work"
 , 'crap'
 , 'inconsistency'
-, 'abandon all hope'
-, 'kaboom'
+#, 'abandon all hope'
+#, 'kaboom'
 ]
 
-positive_terms = ['fixme', 'hack'
+positive_terms = ['fixme'#, 'hack'
+                 , 'low quality'
+                 , 'tech(nical)?\sdebt'
                  , 'todo'
-                 , 'xxx'
+                 #, 'xxx'
                   ] + exploratory_terms
 
 removal_terms = [
     'because'
     , 'clean' + REGULAR_SUFFIX
     , 'delet' + VERB_E_SUFFIX
+    , '(do|does|did|doing)'
     , 'expand' + REGULAR_SUFFIX
     , 'fix' + REGULAR_SUFFIX
     , 'implement' + REGULAR_SUFFIX
@@ -104,7 +106,10 @@ removal_terms = [
     , 'was'
 ]
 excluded_terms = [
-    'todo list(s)?'
+    'todo.txt'
+    , 'todo director(y|ies)'
+    , 'todo folder(s)?'
+    , 'todo list(s)?'
     , 'todo note(s)?'
     , 'update todo'
     , "(%s)%s(%s)" % ("|".join(removal_terms), NEAR_ENOUGH, "|".join(positive_terms))
@@ -189,22 +194,34 @@ def evaluate_satd_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='11b22c84b83172b515a8137ce42dda037858a637')
+    print_concepts_functions_for_bq(commit='532f3ca99e5fe09cfa89a2045704481e0a042d89')
     evaluate_satd_classifier()
 
     text = """
-"Logs will now be put in one file for both server and client (#880)
+"Never dispatch mutation events in shadow DOM
+https://bugs.webkit.org/show_bug.cgi?id=79278
 
-* Fixed error if NitroxLauncher things process has exited but actually it's still processing write.
+Reviewed by Ryosuke Niwa.
 
-* - Set Subnautica installation directory as default location for all Nitrox Logs (if available)
-- Allowed for logs from either server or client to be in one log file
-- Change log format to include logger name which equals to the executing application name
+Source/WebCore:
 
-* Reduced server save logs
+Test: fast/dom/shadow/suppress-mutation-events-in-shadow.html
 
-* Added todo to server save time to pause saving if no players are on
-"
+* dom/ContainerNode.cpp:
+(WebCore::ContainerNode::removeChildren): Move allowEventDispatch() call later,
+now that childrenChanged won't trigger mutation events in shadow dom.
+(WebCore::dispatchChildInsertionEvents): Bail out if in shadow tree.
+(WebCore::dispatchChildRemovalEvents): ditto.
+* dom/Node.cpp:
+(WebCore::Node::dispatchSubtreeModifiedEvent): ditto.
+
+LayoutTests:
+
+* fast/dom/shadow/suppress-mutation-events-in-shadow-expected.txt: Added.
+* fast/dom/shadow/suppress-mutation-events-in-shadow.html: Added.
+
+
+git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@109790 bbb929c8-8fbe-4397-9dbb-9b2b20218538"
 """.lower()
     print("Label", is_satd(text))
     print("concept in text", re.findall(build_positive_regex(), text))
