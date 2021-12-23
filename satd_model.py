@@ -33,7 +33,7 @@ exploratory_terms = [
 #, 'unknown why we ever experience this'
 , 'soft error'
 , 'silly'
-, 'workaround'
+, 'work(\s|-)?around'
 , 'kludge'
 #, 'fixme'
 , "(isn't|not) quite right"
@@ -95,13 +95,16 @@ removal_terms = [
     , 'delet' + VERB_E_SUFFIX
     , '(do|does|did|doing)'
     , 'expand' + REGULAR_SUFFIX
+    , 'finish' + REGULAR_SUFFIX
     , 'fix' + REGULAR_SUFFIX
     , 'implement' + REGULAR_SUFFIX
     , '(get|got|gets|getting)\srid'
     , 'list' + REGULAR_SUFFIX
     , 'mov' + VERB_E_SUFFIX
     , 'remov' + VERB_E_SUFFIX
+    , 'replac' + VERB_E_SUFFIX
     , 'resolv' + VERB_E_SUFFIX
+    , 'revert' + REGULAR_SUFFIX
     , 'updat' + VERB_E_SUFFIX
     , 'was'
 ]
@@ -194,34 +197,25 @@ def evaluate_satd_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='532f3ca99e5fe09cfa89a2045704481e0a042d89')
+    print_concepts_functions_for_bq(commit='ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2')
     evaluate_satd_classifier()
 
     text = """
-"Never dispatch mutation events in shadow DOM
-https://bugs.webkit.org/show_bug.cgi?id=79278
+"HUE-1658 [oozie] Cron like scheduling
 
-Reviewed by Ryosuke Niwa.
+Replace old double dropdown by an text crontab.
+Try to go convert old frequency format to the new crontab one.
+Adding a new coordinator util lib as it needs to work on both edit and create
+coordinator tab.
 
-Source/WebCore:
+Dashboard should detect if the coordinator is using the crontab format and
+try display it in english with the plugin (todo in another jira)
+Choice was made to remove the previous form. Frequencies like every 3 days
+is a bit more complicated are not supported by the plugin and some like
+every 2 days are not supported by cron AFAIK.
 
-Test: fast/dom/shadow/suppress-mutation-events-in-shadow.html
-
-* dom/ContainerNode.cpp:
-(WebCore::ContainerNode::removeChildren): Move allowEventDispatch() call later,
-now that childrenChanged won't trigger mutation events in shadow dom.
-(WebCore::dispatchChildInsertionEvents): Bail out if in shadow tree.
-(WebCore::dispatchChildRemovalEvents): ditto.
-* dom/Node.cpp:
-(WebCore::Node::dispatchSubtreeModifiedEvent): ditto.
-
-LayoutTests:
-
-* fast/dom/shadow/suppress-mutation-events-in-shadow-expected.txt: Added.
-* fast/dom/shadow/suppress-mutation-events-in-shadow.html: Added.
-
-
-git-svn-id: bf5cd6ccde378db821296732a091cfbcf5285fbd@109790 bbb929c8-8fbe-4397-9dbb-9b2b20218538"
+Maybe add the advanced options to use the old dropdown.
+"
 """.lower()
     print("Label", is_satd(text))
     print("concept in text", re.findall(build_positive_regex(), text))

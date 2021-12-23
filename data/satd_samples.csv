@@ -499,3 +499,107 @@ simtr/The-Powder-Toy,5919cefa85db406f1777df2231f20d78fde73c44,"Decorations are p
 ",TRUE,todo,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
 kpeeters/cadabra2,c3af8988ea48b01dae1bc4365212014a02e824f2,"Add fixme comment
 ",TRUE,fixme,,,16_dec_2021_pos_532f3ca99e5fe09cfa89a2045704481e0a042d89
+ElementsProject/elements,6093aa1bb03b03331cc2f48d8f6b749f8817c016,"[Qt, OSX] QProgressBar CPU-Issue workaround
+
+fixes #5295
+",TRUE,workaround,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+moby/moby,57286aad252a4f22e499c85dd1c27e034f7d87e2,"Merge pull request #14235 from mlarcher/mlarcher-patch-2
+
+Add workaround in docs for git bash usage issue",TRUE,workaround,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+dataloom/conductor-client,af6c12d44fb7d8c9a72b0df04d0c9d855503a5c6,"LATTICE-2417 some refactor + finish todo
+",FALSE,finish todo,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+groue/GRDB.swift,059b8800f6984e766b5487b63e13c8fc9bf64947,"TODO
+",TRUE,todo,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+e154/smart-home,b5afc1a889026384aeae8dc92d15106b4cfa3759,"issues #64 technical debt
+",TRUE,technical debt,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+aleDsz/ragnaMOBA,ddbbf5e6036b169aad8bc52072fc86085c46510a,"* Added temporary check to skill_delunitgroup to prevent crashes when 'group' is NULL and added some debug messages to track down the source of the crash (bugreport:3504).
+
+git-svn-id: 7d70fff0c83e6c1b79d3d732061cbed0706e890a@14599 54d463be-8e91-2dee-dedb-b68131a5f0ec
+",TRUE,Added temporary,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+spring-cloud-incubator/spring-cloud-gateway,5bff2b22b3e06b716eb9a31092a7f88f71085ab4,"Adds TODO
+",TRUE,TODO,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+OpenLiberty/open-liberty,a66c0682f14d0cf6c5f09c85ae7574c15fa495b8,"Merge pull request #567 from njr-11/512-replace-temporary-strategy-of-interrupting-for-invokeAny
+
+replace temporary approach of interrupting for invokeAny",FALSE,replace temporary,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+apple/swift-corelibs-foundation,060f21f5ffa22d2128d22efad49c8a12cb893175,"Revert ""[Foundation] Workaround for importer NS_REFINED_FOR_SWIFT failure in development environments""
+
+This reverts commit ed78ec0f8345a9ee1b61bda683e327896f6fdf2e.
+",FALSE,revert workaround,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+nwjs/chromium.src,30999dd424c2e897fbe53e606189f55d83b98a4f,"Work around a High Sierra fullscreen bug by getting rid of fractional pixel differences in video aspect ratio.
+
+When a 720x1280 video is made fullscreen on a 1440x900 DIP screen, this
+happens to its dimensions:
+
+    720x1280 -[scale]-> 506.25x900 -[integer]-> 506x900
+
+The AVSampleBufferDisplayLayer used for video content layers has its
+videoGravity set to AVLayerVideoGravityResize, which doesn't preserve
+aspect ratio. Under certain circumstances, the small difference in
+aspect ratio triggers a macOS bug with low power detachment where the
+video's x position changes rapidly each frame as long as the window
+stays in detached mode. I've been able to make it happen if:
+
+- The machine is a MacBook Pro.
+- The OS is at least 10.13.
+- The display is set to native 2x resolution (""Looks like 1440x900"").
+- The machine is running on integrated graphics if it has dual graphics.
+
+A recording of the issue is attached to the crbug.
+
+This workaround is sort of terrible and maybe Apple can suggest a better
+one: when a video layer's aspect ratio can be made to exactly match the
+source aspect ratio by adding a fractional pixel to either dimension, do
+so (making sure to keep the video centered).
+
+Bug: 792632
+Change-Id: I8b149606cbccb6033c36d3ad400f7a63a4d462ce
+Reviewed-on: https://chromium-review.googlesource.com/812114
+Commit-Queue: Sidney San Martín <8106f9dcc312093d0dcb4b241b9172485b967357@chromium.org>
+Reviewed-by: ccameron <f9ce8b24463404b3357b14328d3efe2556d27298@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#523924}",TRUE,work around,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+cloudera/hue,140dc40d3c543792186040cb7486540809a2bff2,"HUE-1658 [oozie] Cron like scheduling
+
+Replace old double dropdown by an text crontab.
+Try to go convert old frequency format to the new crontab one.
+Adding a new coordinator util lib as it needs to work on both edit and create
+coordinator tab.
+
+Dashboard should detect if the coordinator is using the crontab format and
+try display it in english with the plugin (todo in another jira)
+Choice was made to remove the previous form. Frequencies like every 3 days
+is a bit more complicated are not supported by the plugin and some like
+every 2 days are not supported by cron AFAIK.
+
+Maybe add the advanced options to use the old dropdown.
+",TRUE,todo,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+shemminger/iproute2,98447086f875a21ceccae9be00a36908fe8321d6,"ip: include libc headers first
+
+Including libc headers first helps as a workaround to redefinition of struct
+ethhdr with a suitably patched musl libc that suppresses the kernel
+if_ether.h.
+
+Signed-off-by: Baruch Siach <53ccad33e0625915318fb3bc832e5c1c413d1294@tkos.co.il>
+",TRUE,workaround,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+bitcoinj/bitcoinj,d2e4284930e00b9685b8832815199f3312c3b200,"Improve the block locator we send to remote peers as a temporary hack for the lack of exponential thinning. Patch from Jan. Updates issue 84.
+",TRUE,temporary hack,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+KDE/akonadi,78e509d8d90312c386700785f7ca4b1c57fbca6b,"Compare referential actions as well when checking existing foreign keys.
+
+Ugly, but does the job for now.
+",TRUE,"Ugly, but does the job for now.","""Ugly, but does the job for now."" should be the definition of SATD",,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+lamassu/lamassu-server,8ad2e92725ca9c44d354c096079c805027d9806e,"todo
+",TRUE,todo,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+matecat/MateCat,44976817864bc4df0c1e6c1c3f2f502a15447e9d,"Temporary patch to old project with <x id=""nbsp""/>
+",TRUE,temporary,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+gongminmin/KlayGE,c40f771f69d9c7dd5affa76d43028f94da118b8e,"KlayGE: DevHelper: Workaround for assimp's mDuration in millisecond issue
+",TRUE,workaround,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+apache/incubator-mxnet,4aff7defae1d88eccd49d1a4d01c799dd4477b8d,"[MXNET-409] Temporary fix for ARM64 builds - switch to own dockerhub (#10849)
+
+* Move to own dockcross repository
+
+* switch account
+",TRUE,temporary,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+xXKeyleXx/MyPet,4c35aba13431d51eb3949b02bb56bb8d77b32b41,"excluded mcmmo-repo temporary
+",TRUE,temporary,not sure about the exclusion content,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+iomad/iomad,f26c5297418be02f0f64bcca983dcaa5648b876c,"MDL-15252 fixing changes to lang files to solve bugs in  edit_multianswer_form, some lang texts are temporary
+so do not translate
+",TRUE,temporary,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
