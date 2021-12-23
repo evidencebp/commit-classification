@@ -24,7 +24,7 @@ exploratory_terms = [
 , 'stupid'
 , 'remove this code'
 , 'ugly'
-, 'take care'
+, '(should|must|have to) take care'
 , "(gone|is|went) wrong"
 #, 'nuke'
 , 'is problematic'
@@ -109,7 +109,8 @@ removal_terms = [
     , 'was'
 ]
 excluded_terms = [
-    'todo.txt'
+    'temporary (file(s)?|list(s)?|location(s)?|place(s)?)'
+    , 'todo.txt'
     , 'todo director(y|ies)'
     , 'todo folder(s)?'
     , 'todo list(s)?'
@@ -197,24 +198,12 @@ def evaluate_satd_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2')
+    print_concepts_functions_for_bq(commit='2a2c9188771486bdb2dccc6089ceaf79187014fa')
     evaluate_satd_classifier()
 
     text = """
-"HUE-1658 [oozie] Cron like scheduling
-
-Replace old double dropdown by an text crontab.
-Try to go convert old frequency format to the new crontab one.
-Adding a new coordinator util lib as it needs to work on both edit and create
-coordinator tab.
-
-Dashboard should detect if the coordinator is using the crontab format and
-try display it in english with the plugin (todo in another jira)
-Choice was made to remove the previous form. Frequencies like every 3 days
-is a bit more complicated are not supported by the plugin and some like
-every 2 days are not supported by cron AFAIK.
-
-Maybe add the advanced options to use the old dropdown.
+"Take care of interaction changes before preview
+Avoid to keep the askForSave state when switching to another item
 "
 """.lower()
     print("Label", is_satd(text))

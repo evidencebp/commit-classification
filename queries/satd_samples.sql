@@ -28,7 +28,7 @@ repo_name
 , '' as Justification
 , '' as Certain
 , '' as Comment
-, '23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2' as Sampling
+, '23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa' as Sampling
 from
 general.commit_satd
 where

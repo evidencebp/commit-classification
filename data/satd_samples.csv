@@ -603,3 +603,1221 @@ xXKeyleXx/MyPet,4c35aba13431d51eb3949b02bb56bb8d77b32b41,"excluded mcmmo-repo te
 iomad/iomad,f26c5297418be02f0f64bcca983dcaa5648b876c,"MDL-15252 fixing changes to lang files to solve bugs in  edit_multianswer_form, some lang texts are temporary
 so do not translate
 ",TRUE,temporary,,,23_dec_2021_pos_ee9407ac1244dca96f9b8e2bf2b5ac4fcea16ca2
+architecture-building-systems/CityEnergyAnalyst,b2c3a7a668cf76ebb38fdc766c1cdedd2ff19572,"changes to U values to assert those of Zug (temporary)
+",TRUE,temporary,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+itchio/itchio-app,1882cfe67451a22699a3b299c983f72e28381f82,"Set the max-width of GameStats
+
+This prevents long titles (like light novel titles, for instance) from
+causing the GameStats to push the MainAction and manage game buttons
+off-screen, and instead wrap words. This still is ugly for very narrow
+windows (titles overflow vertically, pushing the stats below the screen)
+but at least now all of the buttons are visible.
+",TRUE,ugly,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+djcb/mu,978c94a2ba551cd34e1152e892ed544a7728ff35,"* mu-util: forward-port the MacOS/g_slice workaround
+",TRUE,workaround,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+webgme/webgme-engine,a6e6d55774dca640b589388beea2b76ba0707f72,"WIP At project/branch switch make sure panel is reactivated (#1362)
+
+WIP Exit split-panel mode at project/branch switches.
+
+WIP Smaller splitter and no snap area.
+
+WIP Use margin when determining currentSplitter.
+Add min size
+
+WIP add ""Exit split mode"" option.
+
+WIP Resizing working (however truncation can lead to issues)
+
+WIP relPos are updated at splitter-move and panel-add/del.
+TODO: Resize of entire panel.
+
+WIP splitter boundaries working.
+TODO: Start position and update of relpos during resizes etc.
+
+WIP Logic for assigning new splitter implemented.
+TODO: Resizing start points and boundaries.
+
+WIP Start on reassigning currentSplitter.
+
+Lengths of splitters updated accordingly.
+deletePanel somewhat working..
+
+WIP Can add multiple panels and somewhat resize.
+TODO: Removing panels.
+TODO: Update splitters lengths after resize.
+TODO: Splitter resize region.
+TODO: External resize.
+
+WIP Assign splitters accordingly.
+
+WIP add split control.
+
+WIP Split panel registers on mousedown, click and mouseup.
+Do not setActive of a Panel that is active already.
+
+WIP Fix issue with Visualizer being destroyed at SP-shift.
+
+WIP Two panels are somewhat functional again.
+
+WIP Ensure activeObject is emitted by clearing it silently first
+
+WIP Remove references to state in order to clean the API.
+Former-commit-id: 6d73417f6cb1e67ecbf235829dd65bc77cfeb0f2",TRUE,TODO,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+infobip/mobile-messaging-sdk-ios,4d630b6fbc934b28540c7e7883f04a0577dbbf32,"Merge pull request #101 in MML/infobip-mobile-messaging-ios from okoroleva-MM-2164-ChatPoc to master
+
+Squashed commit of the following:
+
+commit 9612e4bf2134f30f8615d3e8a05da86209f7195e
+Author: tjuric <tereza.juric@infobip.com>
+Date:   Tue Apr 24 11:33:10 2018 +0200
+
+    cleanup
+
+commit 51ab819ca6dc60e5f3c802aefd77eafdd3d5b6cc
+Author: tjuric <tereza.juric@infobip.com>
+Date:   Tue Apr 24 11:14:33 2018 +0200
+
+    app code changed with placeholder
+
+commit e2cad1decd799fd0c2fe1620114ce2e6490120cb
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Apr 18 17:31:46 2018 +0300
+
+    aligns with latest sdk changes and migrates to swift 4.1
+
+commit a32dddad150d4d716acb6139caede331d890f807
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Apr 18 12:36:22 2018 +0300
+
+    refininements related to migration to swift 4.1
+
+commit a0ee80daa53f51f5eca708f525b1aaf1662bef03
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Apr 17 20:49:16 2018 +0300
+
+    aligned
+
+commit a9fef7ab4a108915ebbdfdda3921f670d0c09e91
+Merge: c99b3ac 5d3226d
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Apr 17 20:39:50 2018 +0300
+
+    Merge branch 'akadochnikvo-GetRidOfWeirdWayOfIntegration' into okoroleva-MM-2164-ChatPoc
+
+    # Conflicts:
+    #	.swift-version
+    #	Classes/Core/HTTP/MMResponses.swift
+    #	Classes/Core/InternalStorage/MMCoreDataExtensions.swift
+    #	Classes/Core/MobileMessaging.swift
+    #	Classes/Core/MobileMessagingAppDelegate.swift
+    #	Classes/Core/Operations/AppOperations/MessageFetchingOperation.swift
+    #	Classes/Core/Operations/AppOperations/MessagePostingOperation.swift
+    #	Classes/Core/Operations/AppOperations/RegistrationOperation.swift
+    #	Classes/Core/Operations/AppOperations/SystemDataSynchronizationOperation.swift
+    #	Classes/Core/Operations/MMMessageHandler.swift
+    #	Classes/Core/Utils/ApnsRegistrationManager.swift
+    #	Classes/Core/Utils/MMPostponer.swift
+    #	Classes/Core/Utils/MMUtils.swift
+    #	Classes/Geofencing/GeoEventReportingOperation.swift
+    #	Classes/Geofencing/MMGeoMessage.swift
+    #	Classes/InteractiveNotifications/MMNotificationCategory.swift
+    #	Classes/MessageStorage/MMDefaultMessageStorage.swift
+    #	Classes/MessageStorage/Message.swift
+    #	Example/Tests/MobileMessagingTests/GeofencingServiceTests.swift
+    #	Example/Tests/MobileMessagingTests/MessageStorageTests.swift
+    #	MobileMessaging.xcodeproj/project.pbxproj
+
+commit 5d3226d73b36adc960c37350fc9b3fe7ea4959cf
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Apr 17 18:54:40 2018 +0300
+
+    wip
+
+commit be6bcebab856ec79a9db4e5622e0fcf48727b5ae
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Apr 17 17:47:40 2018 +0300
+
+    no message
+
+commit 6802f8f14b9d5e3bcb404fe46698260c968be405
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Apr 17 15:42:59 2018 +0300
+
+    wip
+
+commit c99b3ac7e685374d9e87e32530195b29a791579d
+Author: Andrey Kadochnikov <Andrey.Kadochnikov@infobip.com>
+Date:   Thu Apr 12 10:01:05 2018 +0200
+
+    Merge pull request #97 in MML/infobip-mobile-messaging-ios from akadochnikov-MM-2414-removingNickname to okoroleva-MM-2164-ChatPoc
+
+    Squashed commit of the following:
+
+    commit 58b92b8b749528dea663b914e92210f8ae788c8f
+    Author: Andrey K <kaskaaddnb@gmail.com>
+    Date:   Wed Apr 11 17:21:43 2018 +0300
+
+        username trimming
+
+    commit 704659d723db79723bced86290583aaa21a5c0a3
+    Author: Andrey K <kaskaaddnb@gmail.com>
+    Date:   Wed Apr 11 17:01:17 2018 +0300
+
+        nickname removed. readonly property ""username"" put instead.
+
+commit b2ac9ec2d73723bd7be0b6e85ca8225ae72038d7
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Feb 14 21:54:49 2018 +0300
+
+    check registration health prior to communcate with mobile api
+
+commit c442ed6cab18beeb6137ec53f17bc070b69fa812
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Feb 14 19:12:30 2018 +0300
+
+    bugfixes
+
+commit bd5841ea3b17e0de821e0896aae69ad19c5ecb43
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Feb 14 18:39:10 2018 +0300
+
+    no message
+
+commit 7447122b17963e4970d13ded4c3f06e4d58d7a25
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Feb 14 18:10:31 2018 +0300
+
+    no message
+
+commit 51d703c31a8a804ba361141143043638d30a537c
+Merge: ef77676 3648931
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Feb 14 18:07:38 2018 +0300
+
+    Merge branch 'akadochnikov-MM-2466-RegistrationHealthCheck' into okoroleva-MM-2164-ChatPoc
+
+    # Conflicts:
+    #	Classes/Core/MMInstallation.swift
+    #	Classes/Core/MobileMessaging.swift
+    #	Classes/Core/Operations/AppOperations/RegistrationResetOperation.swift
+    #	Classes/Core/Utils/MMUtils.swift
+    #	MobileMessaging.xcodeproj/project.pbxproj
+
+commit 36489319ebcbb10a8e8e9edf814696b760a1c456
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Feb 14 17:45:22 2018 +0300
+
+    no message
+
+commit ef77676c8a2c6627adbaa9c012abb35d93323587
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Feb 13 17:20:50 2018 +0300
+
+    fix for user data fetching
+
+commit 9fb6a9b88e09f3ec310059ea63af254d22f4ed5c
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Feb 12 17:53:31 2018 +0300
+
+    backup restoration detector
+
+commit 4ba29a923a360bc310b421f4cd63d81af5132ca9
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Feb 12 16:27:59 2018 +0300
+
+    no message
+
+commit f065b3e2d58db781088cbfb268c55d1761a73363
+Merge: c8d4dfa 55fb33a
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Feb 12 16:17:29 2018 +0300
+
+    Merge branch 'akadochnikov-MM-2466-ReserveCopyHandling' into okoroleva-MM-2164-ChatPoc
+
+    # Conflicts:
+    #	Classes/Core/HTTP/MMAPIKeysAndValues.swift
+    #	Classes/Core/Models/MMMessage.swift
+    #	Classes/Core/Utils/MMUtils.swift
+    #	Example/fastlane/Fastfile
+    #	MobileMessaging.xcodeproj/project.pbxproj
+
+commit 55fb33a2089105871cb187e78d3e2f39c86046a7
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Feb 12 16:14:06 2018 +0300
+
+    fast storage for device token
+
+commit c8d4dfaec513eb37c520f6440ff4d87b64d9cd8e
+Merge: 6c80264 373d996
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Jan 31 11:25:25 2018 +0300
+
+    Merge branch 'master' into okoroleva-MM-2164-ChatPoc
+
+    # Conflicts:
+    #	Classes/Core/MobileMessaging.swift
+    #	Classes/Core/MobileMessagingAppDelegate.swift
+    #	Classes/Core/Operations/AppOperations/MessageHandlingOperation.swift
+    #	Classes/Core/UserNotificationCenterDelegate.swift
+    #	Classes/Core/Utils/MMLocalNotifications.swift
+    #	Classes/InteractiveNotifications/NotificationsInteractionService.swift
+    #	Example/Tests/MobileMessagingTests/FetchMessagesTest.swift
+    #	Example/Tests/MobileMessagingTests/GeofencingServiceTests.swift
+    #	Example/Tests/MobileMessagingTests/InteractiveNotificationsTests.swift
+    #	Example/Tests/MobileMessagingTests/MMTestCase.swift
+    #	Example/Tests/MobileMessagingTests/MessageReceivingTests.swift
+    #	MobileMessaging.xcodeproj/project.pbxproj
+
+commit 6c802649ecebbefeb9b7688a05403ff3c63348b5
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Jan 22 14:28:59 2018 +0300
+
+    added `isChanged` API for user
+
+commit ac51ceb456ef864bd504297bf8d39c0c5b1f8dc2
+Author: Olga Koroleva <Olga.Koroleva@infobip.com>
+Date:   Mon Jan 22 11:46:35 2018 +0100
+
+    Merge pull request #90 in MML/infobip-mobile-messaging-ios from okoroleva-MM-2425-ChatFixes to okoroleva-MM-2164-ChatPoc
+
+    Squashed commit of the following:
+
+    commit 959801d773de9053f616d1b119af545dff746e8f
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Mon Jan 22 08:23:43 2018 +0300
+
+        debug logs removed
+
+    commit a2f78af89e597c16bd5ec67627d28aefe1f89a46
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Fri Jan 19 13:03:51 2018 +0300
+
+        cleanup
+
+    commit 9dd2362222f395e179ea033a42a9a2d29698fc63
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Fri Jan 19 11:31:23 2018 +0300
+
+        for test
+
+    commit cb97f3edcb8c7b11f9a9cf003efead4e0dae8d1d
+    Author: okoroleva <olga.koroleva@infobip.com>
+    Date:   Thu Jan 18 16:42:08 2018 +0300
+
+        weak ownership fixes
+
+    commit 94da5eb7287e2947b84e2de7cddd7f7ac60acc43
+    Author: okoroleva <olga.koroleva@infobip.com>
+    Date:   Thu Jan 18 16:11:15 2018 +0300
+
+        weak objects in ChatSettingsManager array
+
+    commit df2c0b250af8961c1d65b7fb3f49b76311eee6a0
+    Author: okoroleva <olga.koroleva@infobip.com>
+    Date:   Thu Jan 18 11:42:56 2018 +0300
+
+        ChatVC and Navigation separated from ChatService
+
+    commit d0c3109de632147a0c76ba55ee17f68706342d01
+    Author: okoroleva <olga.koroleva@infobip.com>
+    Date:   Thu Jan 18 11:22:03 2018 +0300
+
+        chatViewController became var
+
+    commit c410b056debb222fcf6b47f57d75b3b0591a30d2
+    Author: okoroleva <olga.koroleva@infobip.com>
+    Date:   Thu Jan 18 10:52:58 2018 +0300
+
+        static returned back
+
+    commit 163dd908dfc38c0884993d861e1cec87946998fc
+    Author: okoroleva <olga.koroleva@infobip.com>
+    Date:   Thu Jan 18 10:21:52 2018 +0300
+
+        chatViewController made non static
+
+commit aabaac3afd31e0ed3b4b440d86cb9ace047391a0
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Jan 22 13:24:01 2018 +0300
+
+    no message
+
+commit ad7661535f649cf7da2651088e93441eba49029a
+Merge: 3776bbc 31b8e30
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Jan 19 19:04:41 2018 +0300
+
+    Merge branch 'akadochnikov-MM-2419-ForegroundNotificationsAPI' into okoroleva-MM-2164-ChatPoc
+
+    # Conflicts:
+    #	Classes/Core/MMInstallation.swift
+    #	Classes/Core/MobileMessagingAppDelegate.swift
+    #	Classes/Core/UserNotificationCenterDelegate.swift
+    #	Classes/InteractiveNotifications/MMNotificationCategory.swift
+    #	Classes/InteractiveNotifications/NotificationsInteractionService.swift
+    #	Example/MobileMessagingExample.xcodeproj/project.pbxproj
+    #	Example/Tests/MobileMessagingTests/MessageReceivingTests.swift
+    #	MobileMessaging.xcodeproj/project.pbxproj
+
+commit 31b8e3066bb93e7f0b9015bf4a507fcf33525e29
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Jan 19 15:40:23 2018 +0300
+
+    more pr fixes
+
+commit 14ba2d96a535d16c36efd596f773e9955e911958
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Jan 19 14:58:27 2018 +0300
+
+    PR fixes
+
+commit 13b79f608011ef3e99ed3097ff0154a528eb03a6
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 18:37:18 2018 +0300
+
+    resetting delegate on mm stop
+
+commit 356e69c483c707b937ab9219a9da696a86c2fdc7
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 17:08:26 2018 +0300
+
+    protocol methods now optional
+
+commit 68a1725e834adb720a93760482407f5817fd5ed3
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 17:05:18 2018 +0300
+
+    sources refinings
+
+commit 6bad06c546649f51f3d045635691e4f5440ea6ae
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 17:03:47 2018 +0300
+
+    no message
+
+commit 4d65f43ae78cf8fb47ffafd5f02a4f9735825d5f
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 17:01:10 2018 +0300
+
+    no message
+
+commit 2d839a68796309a2db78907d84abdb6a4de79bd3
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 16:54:09 2018 +0300
+
+    did receive new messag in foreground
+
+commit 37cb80b092efd04f71ae4c44872e02c6e377fcbd
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 16:44:51 2018 +0300
+
+    tests done
+
+commit 0b2e3aa18cb192727ffa466296ee8106e6e7c95c
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Jan 18 13:15:37 2018 +0300
+
+    code changed. tests not aligned
+
+commit fbd8d14f09cda923ae8b5fa6795a202c637b9a6c
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Jan 17 18:25:37 2018 +0300
+
+    code changed. tests not aligned
+
+commit 2261469a1682d8f48811dbf0040644ace711718c
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Jan 17 14:19:16 2018 +0300
+
+    docs for default message handling
+
+commit 28ec67314b0a8ee2fd787a7c31d0ca93008cf46d
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Jan 17 12:06:05 2018 +0300
+
+    pr fixes
+
+commit 8bf09b021c168cabbaa3dc587514e6cafacff4a1
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Jan 16 18:23:39 2018 +0300
+
+    implementation
+
+commit 3776bbc6849d3e58a4522e3cce40e2ed474d9e95
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Jan 15 18:21:33 2018 +0300
+
+    invisible cleaning
+
+commit b81d0778c5680f781645d13aa6fc40ab1804674c
+Author: tjuric <tereza.juric@infobip.com>
+Date:   Fri Jan 12 17:03:28 2018 +0100
+
+    MM-2416 - Rename method withMobileChatDefaultStorage -> withMobileChat
+
+commit 2e89360e4a131e4110b34484de22a10b84d6c119
+Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+Date:   Fri Jan 12 15:00:58 2018 +0300
+
+    MM-2411 ChatParticipant.nickName renamed to nickname for consistency with Android and Chat API
+
+commit 788c8e2c2010273bf5fc8c6fdd3e35c9bd8b84b7
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Jan 10 10:52:36 2018 +0300
+
+    different code refinements
+
+commit e6e9a16da04d3609f7586b309d88cc2fde123672
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Dec 18 13:23:52 2017 +0300
+
+    refinements
+
+commit 2d17c3faa0e6ab8e5f3e22bbed71e7eda61ca6e7
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Dec 11 20:30:44 2017 +0300
+
+    need to test it
+
+commit 32496a31a348608260d82c2e80d8f948f6ec18ca
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Dec 11 16:30:49 2017 +0300
+
+    objc compose bar dependencies removed
+
+commit 1e8d9af00908ca9581061608fd20dfe07d592f13
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Dec 11 16:28:57 2017 +0300
+
+    no message
+
+commit 39aadcae361dedf230e0492dad6dd7abb4c6d9e2
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Dec 11 14:52:06 2017 +0300
+
+    wip
+
+commit 30bae1574a23d540d22111901de15ea832b5d6f7
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Dec 8 15:47:30 2017 +0100
+
+    wip
+
+commit 99eb681ea1b88204af727075cf186dac339816bd
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Dec 5 12:25:09 2017 +0100
+
+    no message
+
+commit c12e2c1b521ccd2cdc22fd7b9f452ce4e2f63433
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Dec 5 12:12:03 2017 +0100
+
+    no message
+
+commit 2456aa9fcfc68e6403ae7ace1f22d341c466a5c0
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Dec 5 12:08:53 2017 +0100
+
+    no message
+
+commit 0255b0c9be0775d632171320e3d28caf0b7f5c19
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Dec 5 11:57:05 2017 +0100
+
+    no message
+
+commit 067fe97b53960af0690f91cfb0cab1d16e03c8ed
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Dec 5 11:37:29 2017 +0100
+
+    pbxproj fixed
+
+commit 099b9c5b68778464a7c7fac33d7c56c814b2f568
+Merge: 917913e 28b0fa0
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Dec 5 11:15:32 2017 +0100
+
+    Merge branch 'master' into okoroleva-MM-2164-ChatPoc
+
+    * master:
+      Merge pull request #85 in MML/infobip-mobile-messaging-ios from akadochnikov-MM-2331-CalendarIssues to master
+      Version bump to 3.0.0
+      Merge pull request #84 in MML/infobip-mobile-messaging-ios from okoroleva-MM-2102-ConvertToSwitf4 to master
+      Version bump to 2.8.10
+      Merge pull request #81 in MML/infobip-mobile-messaging-ios from akadochnikov-MM-2283-DynamicBaseUrl to master
+      Merge pull request #82 in MML/infobip-mobile-messaging-ios from okoroleva-AddiPhoneXModelsToSystemData to master
+      Version bump to 2.8.9
+      Merge pull request #80 in MML/infobip-mobile-messaging-ios from okoroleva-MM-2251_CordovaDelegateFix to master
+      Version bump to 2.8.8
+      Merge pull request #79 in MML/infobip-mobile-messaging-ios from okoroleva-NotificationDelegateTextInputFix to master
+
+    # Conflicts:
+    #	.swift-version
+    #	Classes/Core/MobileMessaging.swift
+    #	Classes/Core/Models/MMMessage.swift
+    #	Classes/Core/Operations/AppOperations/UserDataSynchronizationOperation.swift
+    #	Classes/Core/UserNotificationCenterDelegate.swift
+    #	Classes/Core/Utils/MMNSErrorExtension.swift
+    #	Example/MobileMessagingExample.xcodeproj/project.pbxproj
+    #	Example/Tests/MobileMessagingTests/FetchMessagesTest.swift
+    #	Example/Tests/MobileMessagingTests/TestUtils.swift
+    #	MobileMessaging.xcodeproj/project.pbxproj
+
+commit 917913e92c150c4df53e8d2caf5731c6bd9a0123
+Author: Olga Koroleva <Olga.Koroleva@infobip.com>
+Date:   Tue Dec 5 10:56:35 2017 +0100
+
+    Merge pull request #83 in MML/infobip-mobile-messaging-ios from okoroleva-MM-2299-ChatPocSwift4Support to okoroleva-MM-2164-ChatPoc
+
+    Squashed commit of the following:
+
+    commit 83e394a63e0f43bf58abb24417d2799d74ac7ec2
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Thu Nov 30 16:04:19 2017 +0300
+
+        add ChatUtils to proj
+
+    commit c368c977484af33a8b8f81ae06a34d30b44b4a75
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Thu Nov 30 13:56:34 2017 +0300
+
+        enchancements
+
+    commit cb718774a7762cc5f5964178b55f86345fea85c2
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Thu Nov 30 13:35:29 2017 +0300
+
+        in progress
+
+    commit 0ea76bb4f03b6575b785e130a9428830ded1e52e
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Thu Nov 30 11:50:33 2017 +0300
+
+        Fixing Chat example
+
+    commit 9e525ba243e8ce6c75af5572a9e8d1d3b7c99871
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Wed Nov 29 17:20:38 2017 +0300
+
+        in progress
+
+    commit 028ffb48fc8951c88f3d99627f66aab868e7be47
+    Author: olga.koroleva <olga.koroleva@corp.mail.ru>
+    Date:   Wed Nov 29 16:50:16 2017 +0300
+
+        in progress
+
+commit acd88a79be11200becf6c92f4a82acca228e453e
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 21 19:10:09 2017 +0300
+
+    chat compatible actions
+
+commit e7a7c2f2e88bf807bec728eef4cebc3af77f7271
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 21 17:26:40 2017 +0300
+
+    handling action buttons in chat
+
+commit ed198098060046d2e399ca8a94e5261877c5e71c
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 21 16:20:08 2017 +0300
+
+    action buttons for chat messages
+
+commit 405f4c0cb3bd5d654b7a2fdbe2a8e2d4435be7a4
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 21 16:19:45 2017 +0300
+
+    mobile messaging bundle api
+
+commit 2425f553d47d58159153d8ba2a03d9df8f8feeb7
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 21 16:06:16 2017 +0300
+
+    fixes bug when bundle no loaded yet (i.e. https://stackoverflow.com/questions/8438859/nsbundle-not-loaded-yet-error)
+
+commit 9f0dd6f7c82dff54ddddfa7099f697b56a385408
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 21 12:39:19 2017 +0300
+
+    new feature todo
+
+commit 3a2d35c323e98342e22d42cc88ad4f41f35cb74f
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 15 11:16:52 2017 +0300
+
+    ui refinements, code refactoring
+
+commit fd4e7f2cbd66cd63cc30506daddaeb03b0d94d54
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 14 17:13:49 2017 +0300
+
+    different improvements
+
+commit 588074931aedff8609b3a9fae70bb6dd3bfc2855
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Nov 13 16:32:15 2017 +0300
+
+    chat messages controller refinements
+
+commit 2de16ee3cceb3710eb9c44a91dc4abc636f5c00e
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Nov 13 16:00:35 2017 +0300
+
+    migration to chat messages controller
+
+commit 13837f5472b1ea0b206bddb985b6590c937a9d18
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Nov 13 15:23:48 2017 +0300
+
+    improved caht appearance settings MM-2264
+
+commit 025920eb9944b6ac918231cb9d76d2bf5ffc9ac9
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Nov 13 12:33:15 2017 +0300
+
+    no message
+
+commit bbd570ea33c363d0c1b9891b2848309044030c02
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 10 19:26:00 2017 +0300
+
+    no message
+
+commit 8b9aae80beefe70e8e0b4d99a0dd96bbb9b20259
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 10 17:19:50 2017 +0300
+
+    chat example app (no text input, no nav bar)
+
+commit 2fe2ffb8d1611b64cf675f11a96d19ad0df409fb
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 10 12:58:00 2017 +0300
+
+    no message
+
+commit ceec4da21e4a8fced8b885df30b9a64fca483e82
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 10 12:23:22 2017 +0300
+
+    reverts chat related stuff
+
+commit bb9947814b55e69c43a7a5a013705b69b06b51c6
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 8 20:21:01 2017 +0300
+
+    counters api refinements
+
+commit 57fbbab6f2953a456a6425d807912917fadc156f
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 8 18:32:13 2017 +0300
+
+    counters api refinements
+
+commit eee70eb69c8cd0d9640885500a3849c79cae1cb1
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 8 15:15:26 2017 +0300
+
+    viewcontrollers API for storyboard compatibility
+
+commit 8b91106b48f98f77de6a5fc6e3b644e2e55c49f1
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 8 15:14:45 2017 +0300
+
+    messages counters
+
+commit cba960cd267aea4a60806e835831243150c99613
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 7 18:53:21 2017 +0300
+
+    chat editing features, chat appearance
+
+commit dda8414f14215bf671614e088c9fe10e75925b3a
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 7 15:13:49 2017 +0300
+
+    navigation chat vc
+
+commit 589229ad5c53daea7600e2be713f0da7f07baf48
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Nov 7 11:17:25 2017 +0300
+
+    afnetworking prefixed - not to collide with users dependencies
+
+commit 235e6232ae5ef554e23fe8fb56cf8baab46868d6
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 3 16:45:10 2017 +0300
+
+    aligns tests
+
+commit ec4ccffd778e36ef174b02aa53bd4e485ec2f365
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 3 15:57:01 2017 +0300
+
+    refines messages models
+
+commit a2032ad0254724a9af4d091895f6d6f26015e92b
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 3 14:45:18 2017 +0300
+
+    no message
+
+commit 65f3315c22418feeba42c11cbba97b47edd7f879
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 3 14:08:22 2017 +0300
+
+    no message
+
+commit e01746a3ac7e6fe62aa9ed035f569c7a061e9cc0
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 3 11:44:27 2017 +0300
+
+    to be reverted before release
+
+commit 09e5b39d992ef6b2a06b2db117d0843771cf0a20
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Nov 3 11:43:10 2017 +0300
+
+    fixes
+
+commit fc99852a751f02771a27bffdfc0e8f03ccd9663a
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 19:44:18 2017 +0300
+
+    fixes messages constructors
+
+commit d9b2b10d2acbeb631fdb22ab6e58a194827346c3
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 18:46:55 2017 +0300
+
+    no message
+
+commit b30317a9f86cab4e141d48a0b19defeff45bdec0
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 18:30:56 2017 +0300
+
+    no message
+
+commit 750a8ac9e87791601922ee481cf8c2c65db2fc5e
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 18:19:49 2017 +0300
+
+    no message
+
+commit 18bc028750f31bb46974c0b43fc1dbd564fd40fe
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 18:11:02 2017 +0300
+
+    no message
+
+commit 5ff224ead2d8b75e920af8bcbc808f2b940a3494
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 17:55:35 2017 +0300
+
+    no message
+
+commit 8414644f1b778659231bbf6c4609b4bf4450638f
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 17:46:31 2017 +0300
+
+    ui assets and fixes
+
+commit 1e0f577ac8d1a96da377bfad94b49ae9ffead69b
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Nov 2 15:56:04 2017 +0300
+
+    wip
+
+commit 5581e7472e654d6b343a72d0590f5519d78ade7a
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 1 18:30:27 2017 +0300
+
+    docs
+
+commit 5cb1e7afdbcdb2e049254017a0ea808df1ab6e9e
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 1 10:31:56 2017 +0300
+
+    warning cleaning
+
+commit b455be95780be0d9b6c04607e8f9006968dd3923
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Nov 1 10:21:07 2017 +0300
+
+    xcode 9.1 fix
+
+commit 8942b8f55d0b7266a9a50c0ea759f62bf72d07dc
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Oct 31 19:32:54 2017 +0300
+
+    no message
+
+commit b4f4d58ed7c8b949ff1a8acc6deb7895cd998f1c
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Oct 31 16:44:39 2017 +0300
+
+    seen data for base - > mt message
+
+commit d40d0286a1fb9cf06f8f82416adec5f739585991
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Oct 31 16:13:05 2017 +0300
+
+    missed messages fields
+
+commit 0988088e5a24000d6c747234ea179288b0abca2b
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Oct 31 13:49:45 2017 +0300
+
+    mark chat message seen
+
+commit 21c3e940e35bebe8f78dab65f4c1edb2b1f897f2
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Oct 31 12:54:53 2017 +0300
+
+    message storage api for fetching all messages ids
+
+commit dde2b1769317695cad5f09329b2d8d737b00a6b8
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Oct 31 12:54:31 2017 +0300
+
+    core data helpers fixed
+
+commit 6dbb469681da3c36df055709cb955d0da8cec062
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 30 19:26:25 2017 +0300
+
+    mark all seen
+
+commit 8ed0fee290ef46c9a12483858687d1422c01df20
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 30 19:03:59 2017 +0300
+
+    chat message from base message constructor
+
+commit 0f6a3300bbdda59add31bd48930193e7bf586514
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 30 17:07:00 2017 +0300
+
+    no message
+
+commit 37f81c75c55de51cb7bde359c483b991dd4a492b
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 30 16:12:53 2017 +0300
+
+    no message
+
+commit 31fb0ed72953144a9c0ac37fe9f2004014567d53
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 30 11:56:37 2017 +0300
+
+    no message
+
+commit 8589d57d0fe5527af03a11a4e446f789a1117795
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 30 11:34:14 2017 +0300
+
+    generic frc
+
+commit cb0f2184a4927457dc3b404443fe125edce6ddbf
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Sun Oct 29 19:26:19 2017 +0300
+
+    no message
+
+commit 561022799b296263d8f012ae081d1bf639358f33
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Sun Oct 29 19:22:49 2017 +0300
+
+    no message
+
+commit 77b218ae8bea02bd0f177b5a41cdf75b2ec3b072
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Sun Oct 29 19:12:43 2017 +0300
+
+    no message
+
+commit 8877d17e7e90af416ebf77d8daf432a2ab2848e2
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Sun Oct 29 19:04:04 2017 +0300
+
+    no message
+
+commit 43d18a21749cada3e71a7ff8590665494bc11518
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Sun Oct 29 19:00:23 2017 +0300
+
+    no message
+
+commit 6def0e6aabec5ced7100fd955b6c9b342fc59b59
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Sun Oct 29 18:49:07 2017 +0300
+
+    no message
+
+commit c1867da94b5dd4177b6bd05bd3a4fed1f16adb60
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Sun Oct 29 18:36:38 2017 +0300
+
+    frc
+
+commit 6a88dd24c667eaa366d11ddf0281487ac51476eb
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Oct 27 18:49:46 2017 +0300
+
+    custom data
+
+commit 82e9a6a30f16b24ca028b14d5d1fbf407645aabc
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Oct 27 13:36:45 2017 +0300
+
+    string constants
+
+commit bc41c72e013fc7a682fe1bfa23832e51a782f82d
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 26 18:17:45 2017 +0300
+
+    bugfixes
+
+commit 8a6bfa923ecbb0d932bb2c5e6decde08bb46ab4f
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 26 16:02:05 2017 +0300
+
+    no message
+
+commit 116b7cac6194aaa45c08dcadf5d1856e7db29cc0
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 26 15:40:00 2017 +0300
+
+    test passes
+
+commit 7d2fce0cc22133184bee2e3600f731529c3a6978
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 26 15:31:02 2017 +0300
+
+    no message
+
+commit b7706d7eafe5895ccefbc2da7ddfde79487b2071
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 26 12:07:02 2017 +0300
+
+    no message
+
+commit f8229c694e29d9d6745a0783cda0198494bec0c9
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Tue Oct 24 18:27:03 2017 +0300
+
+    no message
+
+commit a89e53e101b107791f653a29dff52905ffb645e3
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 23 13:41:14 2017 +0300
+
+    no message
+
+commit 0ba7766a8fdae7017852c1ecee108b481537d7ac
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 23 12:39:51 2017 +0300
+
+    no message
+
+commit 741e7153b9a0cc2279595f08fea714eb09632937
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 23 11:56:50 2017 +0300
+
+    no message
+
+commit a8925eb45782fce037b5f7adc5b35b352010230e
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Mon Oct 23 09:59:19 2017 +0300
+
+    no message
+
+commit 5874fd2b471772485fe1d095a9d4abefc898b645
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Fri Oct 20 18:58:48 2017 +0300
+
+    message storages
+
+commit 998301896c812058dbfea9c5fd98eb747b771769
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 19 17:44:40 2017 +0300
+
+    refactoring
+
+commit e9a001c26c3eef8eaee4464f5bd45308c63cc2d0
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 19 15:35:39 2017 +0300
+
+    no message
+
+commit ebd7b889461f448f1fd9522820837d58f405bb48
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 19 15:23:40 2017 +0300
+
+    docs
+
+commit 2492191222bc74c59c127d4f17bb7cfe4b13958c
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Thu Oct 19 14:45:53 2017 +0300
+
+    no message
+
+commit 16efe02029a63a9fe3cc9c2dc16256ae02a8bcc4
+Author: Andrey K <kaskaaddnb@gmail.com>
+Date:   Wed Oct 18 18:31:33 2017 +0300
+
+    refactoring message models - single base message and many interfaces
+
+commit 55752d33e0bcd9143dee12f78ecd07f02861e0db
+Author: okoroleva <olga.koroleva@infobip.com>
+Date:   Fri Oct 6 16:30:04 2017 +0300
+
+    inprogress
+",TRUE,todo,,part of a hugh squashed commit,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+drodin/Stratagus,8011f21deab1a4c156273be42333044b541331da,"Added comments, saying FIXME: should write documentations.
+",TRUE,fixme,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+nikrou/phyxo,dd74f6c8c60216092441aa0ed84bc8caeca58b5c,"Sylvia theme: .content reviewed (a temporary solution (with inactive backgrounds).
+
+git-svn-id: 07d450c9015c98804e48b520a2aeaa7bff74be0c@2509 68402e56-0260-453c-a942-63ccdbb3a9ee
+",TRUE,temporary,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+chromium/chromium,15bff7ce55e4fb1980d5dafdebf22cb624b8de77,"Roll src/third_party/chromite edf765329fe2..730cf55c47c3 (5 commits)
+
+https://chromium.googlesource.com/chromiumos/chromite.git/+log/edf765329fe2..730cf55c47c3
+
+git log edf765329fe2..730cf55c47c3 --date=short --no-merges --format='%ad %ae %s'
+2019-10-17 saklein@chromium.org SdkService: Add delete endpoint.
+2019-10-17 jrosenth@chromium.org lib/git: return unicode strings by default
+2019-10-17 jrosenth@chromium.org lib/git: rename pretty parameter to Log to format
+2019-10-17 jrosenth@chromium.org lib/gob_util_unittest: remove HTTP 409 test
+2019-10-17 jrosenth@chromium.org lib/gob_util_unittest: Open temporary file in w+ mode
+
+Created with:
+  gclient setdep -r src/third_party/chromite@730cf55c47c3
+
+If this roll has caused a breakage, revert this CL and stop the roller
+using the controls here:
+https://autoroll.skia.org/r/chromite-chromium-autoroll
+Please CC chrome-os-gardeners@google.com on the revert to ensure that a human
+is aware of the problem.
+
+To report a problem with the AutoRoller itself, please file a bug:
+https://bugs.chromium.org/p/skia/issues/entry?template=Autoroller+Bug
+
+Documentation for the AutoRoller is here:
+https://skia.googlesource.com/buildbot/+/master/autoroll/README.md
+
+CQ_INCLUDE_TRYBOTS=luci.chromium.try:chromeos-kevin-rel
+TBR=chrome-os-gardeners@google.com
+
+Bug: None
+Change-Id: If5d0ebeb08bbe9eddf85ac6982a018a709a0ed9c
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/1865047
+Reviewed-by: chromium-autoroll <a3680534fa21f849f725bea9c9fb3f7f637bcd8d@skia-public.iam.gserviceaccount.com>
+Commit-Queue: chromium-autoroll <a3680534fa21f849f725bea9c9fb3f7f637bcd8d@skia-public.iam.gserviceaccount.com>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#706795}
+",TRUE,temporary,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+pureqml/qmlcore,17cc561f9a8be6ef1f52870f20de7558dc32393d,"added default value for visible property (+workaround)
+",TRUE,workaround,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+dslutz/qemu,d3eb5eaeb56e48891bb98ab5f092f43e142e3f28,"x86: avoid AREG0 for FPU helpers
+
+Make FPU helpers take a parameter for CPUState instead
+of relying on global env.
+
+Introduce temporary wrappers for FPU load and store ops. Remove
+wrappers for non-AREG0 code. Don't call unconverted helpers
+directly.
+
+Signed-off-by: Blue Swirl <71067387f5d06443b335a306002ce1c8e5bf2777@gmail.com>
+",TRUE,temporary,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+jtablesaw/tablesaw,addefaa997be655e15b89df089040d8614a00484,"Added JavaDoc for all public methods in Table, except where a TODO was added as research is required.
+",FALSE,except where TODO,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+zephyrproject-rtos/zephyr,4d5e67ed13537431a1f9913ad0ebc8e785a89968,"arch/x86: Unbreak SMP startup on x86_64
+
+A last minute ""cleanup"" to the EFI startup path (on a system where I
+had SMP disabled) moved the load of the x86_cpuboot[0] entry into RBP
+into the main startup code, which is wrong because on auxiliary CPUs
+that's already set up by the 16/32 bit entry code to point to the
+OTHER entries.
+
+Put it back where it belongs.
+
+Signed-off-by: Andy Ross <c70f9a6bf6ee0cd69c8af4ce5e6b131945769315@intel.com>
+",FALSE,which is wrong,,"fix, not SATD",23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+GNOME/gnome-software,b216339a9fc5ea13e268b85f90c43379ec27aa5b,"Fix the creation of the extra AppStream files
+
+The temporary files that get the contents of the downloaded extra
+AppStream files should be closed before the move into the system
+location.
+",FALSE,temporary files,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+facebook/flow,09921b3b9a86ade748fdb505be48db4c1ae71b84,"Flesh out check polarity visitor
+
+Summary:
+This code was a bit of a mess. I spent some time wrapping my head around this,
+and here's a bunch of cleanup.
+
+1. We're only visiting types that arise from annotations, which means that a
+bunch of types will never appear. I changed the visitor to raise an exception on
+these cases, to make it clear they are unexpected, not simply unhandled. I also
+added some comments to justify potentially unintuitive cases.
+
+2. I changed the patterns to be a bit more future proof. I avoided wildcards in
+records like objtype and insttype, opting to fully destructure and explicitly
+ignore fields.
+
+3. I filled out some missing cases exposed by (2).
+
+Note that EvalT and CustomFunT types will certainly appear in annotations, but
+remain TODO even after this diff.
+
+In general, I suspect that this logic should instead be interleaved with the
+code that constructs these types, instead of implementing a separate, carefully
+constructed visitor. This is not because of the cost of traversing types, which
+I expect is negligible. Rather, it's evidently subtle to write this visitor
+correctly, whereas an interleaved logic would more likely be correct by
+construction.
+
+Reviewed By: jbrown215
+
+Differential Revision: D15764671
+
+fbshipit-source-id: 79d5df72bd62cba962615374de34f48a04542795
+",TRUE,todo,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+nwjs/chromium.src,01c9a7e71ca435651723e8cbcab0b3ad4c5351e2,"[pdf] Use a temporary list when unloading pages
+
+When traversing the |deferred_page_unloads_| list and handling the
+unloads it's possible for new pages to get added to the list which will
+invalidate the iterator.
+
+This CL swaps the list with an empty list and does the iteration on the
+list copy. New items that are unloaded while handling the defers will be
+unloaded at a later point.
+
+Bug: 780450
+Change-Id: Ic7ced1c82227109784fb536ce19a4dd51b9119ac
+Reviewed-on: https://chromium-review.googlesource.com/758916
+Commit-Queue: dsinclair <f70dc21b1b6a10340b65b6dcc0bde33e44f9236b@chromium.org>
+Reviewed-by: Lei Zhang <79648d9aca10df37c1b962af0b65ebfac3e19883@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#515056}",FALSE,utemporary list,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+Freetz/freetz,b69cf0cf6778b5fe85b29d2c4a5afd3782fb2077,"freetzomunt:
+ * select ext3 by default if HAS_AVM_EXT3
+ * select fat by default, all boxes which uses freetzmount have fat
+ * select ntfs by default depending on packages/plugins
+ * fix FREETZ_PACKAGE_NTFS selection (AVM Plugins)
+ * TODO: ext2
+
+git-svn-id: df43320aa0a1a24c9a9e16bc38e368682294d27e@8365 f5190166-0702-4917-9039-51ec32eddaf5
+",TRUE,todo,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+oat-sa/extension-tao-itemqti,515be34091846f56f71eb66cafa19d5e46ba5981,"Take care of interaction changes before preview
+Avoid to keep the askForSave state when switching to another item
+",FALSE,take care,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+FStarLang/FStar,87d303210b6d7efb83cfa77f99cc36f218427c1d,"another workaround
+",TRUE,workaround,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+opencog/opencog,282fb5b324a6994d3ae7033330ff01214bb7fd82,"Merge pull request #32 from linas/todo
+
+More-or-less working verbal look-at",TRUE,todo,FALSE,context not clear. todo is the pr name,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+grpc/grpc,2a47c6537b79de4f1d9d24aa42f8b5837b3471c4,"BoringSSL.podspec: Workaround Swift compiler problem.
+
+Maybe it’s Cocoapods.
+",TRUE,workaround,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
