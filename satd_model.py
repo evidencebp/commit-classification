@@ -43,7 +43,7 @@ exploratory_terms = [
 #, 'hang our heads in shame'
 , 'temporary (crutch|solution)'
 , 'temporary'
-, '(will cause|might cause|causes) issue(s)?'
+, '(will cause|might cause) issue(s)?' # causes might be in present, part of a bug fix
 , 'something bad'
 , 'cause for issue'
 , "this doesn't look right"
@@ -78,6 +78,7 @@ exploratory_terms = [
 , "it doesn't work"
 , 'crap'
 , 'inconsistency'
+, 'until fixed'
 #, 'abandon all hope'
 #, 'kaboom'
 ]
@@ -90,7 +91,8 @@ positive_terms = ['fixme'#, 'hack'
                   ] + exploratory_terms
 
 removal_terms = [
-    'because'
+    'address' + REGULAR_SUFFIX
+    , 'because'
     , 'clean' + REGULAR_SUFFIX
     , 'delet' + VERB_E_SUFFIX
     , '(do|does|did|doing)'
@@ -109,7 +111,8 @@ removal_terms = [
     , 'was'
 ]
 excluded_terms = [
-    'temporary (file(s)?|list(s)?|location(s)?|place(s)?)'
+    'temporary(\s|_)(allocator|buffer|data|file|folder|list|location|place)(s)?'
+    , 'temporary(\s|_)director(y|ies)'
     , 'todo.txt'
     , 'todo director(y|ies)'
     , 'todo folder(s)?'
@@ -198,12 +201,199 @@ def evaluate_satd_classifier():
 
 
 if __name__ == '__main__':
-    print_concepts_functions_for_bq(commit='2a2c9188771486bdb2dccc6089ceaf79187014fa')
+    print_concepts_functions_for_bq(commit='c5ba4cd1971da27f74ce1319415626143092d317')
     evaluate_satd_classifier()
 
     text = """
-"Take care of interaction changes before preview
-Avoid to keep the askForSave state when switching to another item
+"Add new django tutorial (#4869)
+
+* Cloud Run with Django tutorial
+
+* Cloud Run with Django tutorial
+
+* black, .env file update
+
+* Document Dockerfile, add PYTHONUNBUFFERED
+
+* Document cloudmigrate.yaml
+
+* Formatiting
+
+* Bump django, remove mysql
+
+* Update secretmanager
+
+* Update pinned dependencies
+
+* ensure path is set correctly with api update
+
+* format
+
+* Generalise cloudmigrate file
+
+* update service default
+
+* add tests
+
+* Update CODEOWNERS
+
+* Licence headers
+
+* Remove envvar declaration
+
+* cleanup readme
+
+* Fix import names, region tags
+
+* black
+
+* Cloud Run with Django tutorial
+
+* black, .env file update
+
+* Document Dockerfile, add PYTHONUNBUFFERED
+
+* Document cloudmigrate.yaml
+
+* Formatiting
+
+* Bump django, remove mysql
+
+* Update secretmanager
+
+* Update pinned dependencies
+
+* ensure path is set correctly with api update
+
+* format
+
+* Generalise cloudmigrate file
+
+* update service default
+
+* add tests
+
+* Update CODEOWNERS
+
+* Licence headers
+
+* Remove envvar declaration
+
+* cleanup readme
+
+* Fix import names, region tags
+
+* black
+
+* black
+
+* Format YAML
+
+* bump dependencies
+
+* Update var names, remove sql instance creation
+
+* PR Feedback
+
+* Debug failing command
+
+* Remove IAM calls - possible permissions issues
+
+* debug
+
+* force local settings if in nox/test
+
+* add IDs to cloud build
+
+* Update region tags
+
+* Get instance name from envvar
+
+* Make secrets dynamic, optionally overload names by envvar
+
+* Remove create/destroy of static setting
+
+* Consolidate envvars
+
+* fix region tags
+
+* lint, import error
+
+* Testing instance name is fqdn, need just name for gcloud sql calls
+
+* Ensure project specified on gcloud calls
+
+* set project when using gsutil
+
+* order of flags in gsutil matters
+
+* ensure all subprocesses include project
+
+causes issues otherwise
+
+* Add and remove more project tags
+
+* Update comments
+
+* match on exact project name, not substring
+
+* lint
+
+* Can't hide the settings name in the setting itself 🧐
+
+* big oof
+
+* migrations require __init__.py to be detected
+
+* Bump overnight patch
+
+* Debug 503
+
+* Service requires custom settings envvar
+
+* attempt fixing local tests
+
+* lint
+
+* revert accidental appengine change
+
+* envvars
+
+* ohno
+
+* wrong varname
+
+* Update run/django/noxfile_config.py
+
+Co-authored-by: Leah E. Cole <a5082685b0b89abc4f85079ca3a58177707489f8@users.noreply.github.com>
+
+* Add licence header
+
+* Formatting
+
+* black
+
+* Add typehinting, remove debugging
+
+* ⚠️  noxfile change - add typehints
+
+* ⚠️ noxfile change - fix method signature
+
+* ⚠️ noxfile change - fix nox session type
+
+* ⚠️ noxfile change - import order
+
+* hadolint Dockerfile
+
+* revert hadolint
+
+* Add linking
+
+* Remove gcloudignore
+
+* Testing: i have a theory this is why tests started failing
+
+Co-authored-by: Leah E. Cole <a5082685b0b89abc4f85079ca3a58177707489f8@users.noreply.github.com>"
 "
 """.lower()
     print("Label", is_satd(text))

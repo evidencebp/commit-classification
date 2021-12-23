@@ -1821,3 +1821,303 @@ grpc/grpc,2a47c6537b79de4f1d9d24aa42f8b5837b3471c4,"BoringSSL.podspec: Workaroun
 
 Maybe it’s Cocoapods.
 ",TRUE,workaround,,,23_dec_2021_pos_2a2c9188771486bdb2dccc6089ceaf79187014fa
+ossrs/srs,e2865c6ac173aac7eb80d7db8d0b055c7681a4cc,"workaround for #511, the fly stfd in close. 2.0.211
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+tprrt/linux-stable,95b19f684c61ffc9b039e02c5d1113c2d8cd7105,"locking/percpu-rwsem: Make percpu_free_rwsem() after kzalloc() safe
+
+This is the temporary ugly hack which will be reverted later. We only
+need it to ensure that the next patch will not break ""change sb_writers
+to use percpu_rw_semaphore"" patches routed via the VFS tree.
+
+The alloc_super()->destroy_super() error path assumes that it is safe
+to call percpu_free_rwsem() after kzalloc() without percpu_init_rwsem(),
+so let's not disappoint it.
+
+Signed-off-by: Oleg Nesterov <20b70f0af00562e63758b9ee42012ecc96c58590@redhat.com>
+Signed-off-by: Paul E. McKenney <1e0ce936bb9b355d257bf5790d2513c3f28be22b@linux.vnet.ibm.com>
+Reviewed-by: Josh Triplett <c028c213ed5efcf30c3f4fc7361dbde0c893c5b7@joshtriplett.org>
+",TRUE,temporary ugly hack,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+plumed/plumed2,26be2631e72e6bb5223c0406ac794cc527234848,"Comment out temporary unused functions
+",TRUE,describes creating dead code ,FALSE,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+vitrivr/cineast,7865546ca6258f8e6b055b31d60f975d333a5782,"Temporary fixes because of internal ADAM-changes
+",TRUE,TRUE,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+next-l/enju_library,1bc3ce4f2ef8df365a8c726471037e39bcc6a591,"workaround for destroying picture_files https://github.com/rails/rails/pull/9448
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+chromium/chromium,5908b8088dacdc73ecc6b0dc9ab9cea3a32f6a40,"WebUI NTP: iframe 'pointer-events: none' for most-visited drag/drop
+
+During a shortcut drag, an iframe behind ntp-most-visited will prevent
+'dragover' events from firing. To workaround this, 'pointer-events: none'
+can be set on the iframe. When doing this after the 'dragstart' event is
+fired is too late. We can instead set 'pointer-events: none' when the
+pointer enters ntp-most-visited.
+
+'pointerenter' and pointerleave' events fire during drag. The iframe
+'pointer-events' needs to be reset to the original value when 'dragend'
+fires if the pointer has left ntp-most-visited.
+
+Change-Id: Ib06d78d6d6bc05a1bf96c3e080f1ed4fb76a9b42
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/2142750
+Reviewed-by: Tibor Goldschwendt <bcec7f2b10e4b8eb36e0698acc89e4fc8bf58b37@chromium.org>
+Commit-Queue: Esmael Elmoslimany <649e2872edc5186cd24a522b2c79d194ced7b6e4@chromium.org>
+Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#758071}
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+EMResearch/EvoMaster,f45c82082ac7ed32e490f3e38ab85645995f5dea,"Initial stages:
+
+1. Generate random objects based on swagger definitions collected from the SUT
+
+TODO:
+- ensure it doesn't crash if the swagger definitions are null
+- recover from some faults (e.g. proxyprint's file/null problem)
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+sgrif/diesel,1d4bf998dc64e8d23cf400a7bb0beb56aa57554a,"Rewrite `#[derive(QueryableByName)]` in derives2
+
+Since `QueryableByName` is one of the more recently written derives, it
+should have been a really straightforward port. Unfortunately, the
+tests for this derive hit multiple rustc bugs
+
+- https://github.com/rust-lang/rust/issues/47983
+- https://github.com/rust-lang/rust/issues/47311
+
+I love what we were able to do with the error message here. We could
+even go so far as to have the `help` lines point at the struct itself
+for the `table_name` annotation if we want to.
+
+I also much prefer the workaround for
+https://github.com/rust-lang/rust/issues/47311 in this PR to the one I
+did in #1529. I'll need to update that PR if this is merged first.
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+angstsmurf/spatterlight,1551b1ba4480e009fb7e006dde4ffc11a4377931,"Kludge to not detect release number-less Suspended as Zork I. Fixes #24
+",TRUE,kludge,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+MariaDB/server,1de7e5c09f915333cd21fc3786259a3967ddf69a,"Makefile.am:
+  Ensure use of libedit ""config.h"" by adding ""-I. -I$(srcdir)"" to DEFS,
+  work around for problem with automake 1.10 (bug#24809)
+
+
+cmd-line-utils/libedit/Makefile.am:
+  Ensure use of libedit ""config.h"" by adding ""-I. -I$(srcdir)"" to DEFS,
+  work around for problem with automake 1.10 (bug#24809)
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+wvlet/airframe,3c5eed424c73918ec0d8d0e2efde422efa81d214,"airframe-log: Add a workaround if System.err is replaced for logging (#1756)
+
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+CZ-NIC/turris-os,272ebcedf708210247209f301f39a81c78988ef5,"[s3c24xx] gta02: Workaround hardware bug on rev 5 and earlier
+
+
+git-svn-id: c673a1a018ba15e3442847f58d2337db82164816@17130 3c298f89-4303-0410-b956-a3cf2f4a3e73
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+hashicorp/terraform,9891d0354a48e671c054c2ca44daafb8ad42ee52,"providers: use addrs.Provider as map keys for provider.Factory (#23548)
+
+* terraform/context: use new addrs.Provider as map key in provider factories
+* added NewLegacyProviderType and LegacyString funcs to make it explicit that these are temporary placeholders
+
+This PR introduces a new concept, provider fully-qualified name (FQN), encapsulated by the `addrs.Provider` struct.",TRUE,temporary palcholders,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+tprrt/linux-stable,bae3a8d3308ee69a7dbdf145911b18dfda8ade0d,"x86/apic: Do not initialize LDR and DFR for bigsmp
+
+Legacy apic init uses bigsmp for smp systems with 8 and more CPUs. The
+bigsmp APIC implementation uses physical destination mode, but it
+nevertheless initializes LDR and DFR. The LDR even ends up incorrectly with
+multiple bit being set.
+
+This does not cause a functional problem because LDR and DFR are ignored
+when physical destination mode is active, but it triggered a problem on a
+32-bit KVM guest which jumps into a kdump kernel.
+
+The multiple bits set unearthed a bug in the KVM APIC implementation. The
+code which creates the logical destination map for VCPUs ignores the
+disabled state of the APIC and ends up overwriting an existing valid entry
+and as a result, APIC calibration hangs in the guest during kdump
+initialization.
+
+Remove the bogus LDR/DFR initialization.
+
+This is not intended to work around the KVM APIC bug. The LDR/DFR
+ininitalization is wrong on its own.
+
+The issue goes back into the pre git history. The fixes tag is the commit
+in the bitkeeper import which introduced bigsmp support in 2003.
+
+  git://git.kernel.org/pub/scm/linux/kernel/git/tglx/history.git
+
+Fixes: db7b9e9f26b8 (""[PATCH] Clustered APIC setup for >8 CPU systems"")
+Suggested-by: Thomas Gleixner <00e4cf8f46a57000a44449bf9dd8cbbcc209fd2a@linutronix.de>
+Signed-off-by: Bandan Das <48f3f89ac3fac5337b47faa8a2f93eb8b298844e@redhat.com>
+Signed-off-by: Thomas Gleixner <00e4cf8f46a57000a44449bf9dd8cbbcc209fd2a@linutronix.de>
+Cc: 4fbacc2fa0ffdbb11bf1ad6925b886ebd08dd15f@vger.kernel.org
+Link: https://lkml.kernel.org/r/20190826101513.5080-2-48f3f89ac3fac5337b47faa8a2f93eb8b298844e@redhat.com
+
+
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+pragma-/pbot,805215ce81c7e2235e8f581cd1d5b2cc83418f5d,"Add paren.py module (shows precedence of expressions by adding parentheses)
+
+TODO: Add 'show_nick' factoid/module key so nickname logic doesn't need to be
+      added to module sources
+
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+braidchat/braid,40b0f79bd61582af25bae233d186ee9e858d5e07,"add TODO comment
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+unitystation/unitystation,700e77ef80e492e1df031c8ebc5719cbf6805ad0,"Remove wall layers from Stencil and set tile color on ray contact
+
+Instead of trying to cut around the walls this change removes the walls from the stencil mask all together and sets all wall tiles to black on start. When a FoV ray hits the tile then the tile color is set to white, showing the wall.
+
+TODO:
+- Turn wall tiles back to black when no longer being hit by ray
+- Use the same method on doors
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+igraph/igraph,08006b46a8abb0ae3f91c1b5ed8b7a5256fbcf7d,"internal isoclass functions: add TODO for creating internal header
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+theborg3of5/ahk,f19a98f0aaa8423ca142a8ab34e628d2002baa54,"Todo cleanup and additions.
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+yesodweb/persistent,6f9541106ea97e825dbb46bcb954f632697e3d63,"Test suite workaround for lpsmith/postgresql-simple#123
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+MarkUsProject/Markus,ad6e34f68c4076cf561b927ad7a8f5b3e9ba2e97,"Hacky workaround to get links to look nice
+",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+servo/webrender,4679db0f323db7881f00eed36184873ecfdd4a4d,"Temporary disable native fonts until fixed properly with e10s support.
+",TRUE,until fixed,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+tprrt/linux-stable,78236571a538860dc2f0842ff6c7789522eb1e63,"rfkill: rate-limit rfkill-input workqueue usage (v3)
+
+Limit the number of ""expensive"" rfkill workqueue operations per second, in
+order to not hog system resources too much when faced with a rogue source
+of rfkill input events.
+
+The old rfkill-input code (before it was refactored) had such a limit in
+place.  It used to drop new events that were past the rate limit.  This
+behaviour was not implemented as an anti-DoS measure, but rather as an
+attempt to work around deficiencies in input device drivers which would
+issue multiple KEY_FOO events too soon for a given key FOO (i.e. ones that
+do not implement mechanical debouncing properly).
+
+However, we can't really expect such issues to be worked around by every
+input handler out there, and also by every userspace client of input
+devices.  It is the input device driver's responsability to do debouncing
+instead of spamming the input layer with bogus events.
+
+The new limiter code is focused only on anti-DoS behaviour, and tries to
+not lose events (instead, it coalesces them when possible).
+
+The transmitters are updated once every 200ms, maximum.  Care is taken not
+to delay a request to _enter_ rfkill transmitter Emergency Power Off (EPO)
+mode.
+
+If mistriggered (e.g. by a jiffies counter wrap), the code delays processing
+*once* by 200ms.
+
+Signed-off-by: Henrique de Moraes Holschuh <1416ae054606eb9be8fa0d7696a4ddff667a3601@hmh.eng.br>
+Cc: Ivo van Doorn <eb95d5f7a69eb0f8d26a960fe33483acdf581277@gmail.com>
+Cc: Dmitry Torokhov <10a8c465cefc9bdd6c925e26964d23c90f1141cc@mail.ru>
+Signed-off-by: John W. Linville <2a53bac7a5d324865ef46ec4c38b2c0fba1456b4@tuxdriver.com>
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+humancompatibleai/imitation,dcd91bfc2411a6acd3ab2a460bdf8345dd314579,"expert_demos, train_adversarial: Add seals configs (#298)
+
+* WIP
+
+* remove debug log statement
+
+* missed some renames
+
+* expert_demos, train_adversarial: Add seals configs
+
+* Remove code coverage for Sacred config scripts
+
+Code coverage checks currently fail whenever we add a new
+Sacred config or namedconfig function because the body of these
+functions is never meant to be executed. This patch excludes the
+files containing these functions from CodeCov checks.
+
+(Example of failure: #298)
+
+* .codecov.yml: Also exclude coverage in patch
+
+* contextualize TODO",TRUE,todo,FALSE,contextualize?,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+mattsc/AI-demos,1deaa4f11047b2cd8b3f3257f2606cc2213d38bd,"Fred utils: add a TODO comment
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+robolectric/robolectric,f012a121ca1bdfdc11b8a732423d69262e50642d,"Allow apps to set their own FakeHttpLayer.
+
+This is a lame, temporary work around for the fact that
+we don't have upstream's ability to disable the fake HTTP
+layer. Pulling that behavior into our branch turns out to
+be quite difficult, and this unblocks more pressing work.
+",TRUE,"This is a lame, temporary work around",,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+wbx-github/uclibc-ng,eb51bac1b3f43c4fcccdf8206afb8a070fecaa07,"libm/e_scalb.c: remove unused #ifdef _SCALB_INT branches
+libm/s_ldexp.c: add TODO
+
+",TRUE,TODO,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+observantrecords/Observant-Records-WordPress,c8853cff92efa2a7812b80ae1d4d9aa05e9b1e4d,"Set `autocomplete=""off""` on the password reset form itself, in addition to the individual inputs, to work around a Chrome bug.
+
+fixes #24364. props azaozz.
+
+git-svn-id: 4b95c1a29378dac08c481a35c0b6950a1bdff99c@24553 1a063a9b-81f0-0310-95a4-ce76da25c4cd
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+lampepfl/dotty,3f6858b4863eb9df9eaacb36b62f4d6b53a18115,"Add TODO respect meta-annotations
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+lionixevolve/LionixCRM,8e4a76ac8c6403a9e7cec8ed2f738f4d0aeebfd6,"Fix V8 API authorization header passing with apache+php-fpm
+
+With apache+php-fpm the authorization header gets stripped and never
+reaches the app. The .htaccess already includes some rules to pass them through
+with an env var, but because of the rule order this is never applied.
+
+Fix the rewrite rules by moving the env var rules before the rules marked as [L]ast.
+
+Passing an env var with a rewrite rule results in apache prefixing the env
+var with ""REDIRECT_"". To work around this copy REDIRECT_HTTP_AUTHORIZATION to
+HTTP_AUTHORIZATION in case only the former is set.
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+Ardour/ardour,c7d0a52a0b806f1d96d92f224cdfb81da4e93262,"Work around badly chosen argument name in giomm
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+bordertechorg/wcomponents,b2d93f23d4d4b55d32b97c36483c478ebe17d95a,"Merge pull request #528 from marksreeves/charlie
+
+Safari bug workaround",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+openxc/vi-firmware,5f3ebdc78b16e8a95a2e105f2059b6e64841c1fd,"Work around watchdog issues on PIC32 by feeding when USB is blocked.
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+dancerj/monthly-report,bf6546a70f9a9d23941378a59a6ae9f4969ed518,"TODO: not make it debsen.
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+hekate-io/hekate,ccbe25ed3908d9f3c7b92500df0c783bcd2cee23,"Temporary removed Codacy badge due to unsupported checkstyle suppression.
+",TRUE,temporary,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+Micronaet/micronaet-mx,6bba07452cb3e844bbc27ae6428ff922c2b75862,"Moved (not real overrided) in mx_sale date_deadline TODO check data in it (after remove in production)
+",TRUE,TODO,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+nwjs/chromium.src,04ca3323ac8603409239d9ee5f12cae3fb42142c,"Added localization support to chat manager extension. 
+TODO=more languages 
+
+BUG=none 
+TEST=The following should be language specific: 
+-- name & description of the extension 
+-- title of the central roster pop-up window 
+-- countdown messages and button when there is no initial connection 
+
+Contributed by ivaylobakalov@chromium.org.
+Patched from http://codereview.chromium.org/4407002/show
+Review URL: http://codereview.chromium.org/4542001
+
+git-svn-id: de016e52bd170d2d4f2344f9bf92d50478b649e0@65140 0039d316-1c4b-4281-b951-d872f2087c98
+",TRUE,TODO,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+libunwind/libunwind,972aec70ba48f64db9b635a47a497cd65489d343,"Patch to work around lexgrog bug
+
+(Logical change 1.73)
+",TRUE,work around,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+apache/wicket,613180e036b79c64516f40b90793b423cc112c4f,"WIP: Ajax redirect handling using http headers. 
+- Ajax requests is now identified using a Wicket-Ajax header. This can be used even if the session is expired, to create a proper redirect to the expired page. 
+- When redirecting we use a different header than Location. We use Ajax-Location, which is then parsed on the client and a redirect is made using window.location.
+- All setResponsePage handling is now a redirect if it's an ajax request.
+- WebResponse knows about the WebRequest.
+- RequestCycle.getRedirect is no longer final, cause we need to override it in WebRequestCycle.getRedirect (which is then final).
+- Tested in IE6, FF1.5, Opera9
+
+TODO:
+- Test
+- Safari, Konqueror, IE5, etc.
+- Test
+- Backport
+- Test
+- Whatever I have forgotten.
+
+git-svn-id: ac804e38dcddf5e42ac850d29d9218b7df6087b7@461831 13f79535-47bb-0310-9956-ffa450edef68
+",TRUE,todo,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+google/llvm-propeller,5cb9a184e084cb46ded0f1992a57a0f9cbe4a82e,"Protect against the case where the current inlined depth is wrong, and leads us to think we can't even get the
+frame at index 0.  We should ALWAYS be able to get that.
+
+<rdar://problem/13497571>
+
+llvm-svn: 178205
+",TRUE,is wrong,FALSE,not sure if fixed now or will be fixed,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
+thrust/thrust,666d7821e6bc5c5d6263f6dc4755f1feb6c52fae,"Merge pull request #437 from jaredhoberock/small-fixes
+
+Workaround unused variable warnings in CUDA's scan implementation.",TRUE,workaround,,,23_dec_2021_pos_c5ba4cd1971da27f74ce1319415626143092d317
