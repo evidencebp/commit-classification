@@ -4757,28 +4757,28 @@ kieker-monitoring/kieker,e850d153c90a560267c45e7e7ebfcd9e0a3fa73e,"update Makefi
 
 ",FALSE,FALSE,TRUE,FALSE,update makefile,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NeoGeographyToolkit/StereoPipeline,6e314c90ecd8a984de1a5fd4eae52b20651fb1c7,"stereo_gui: Support for vwip files and --nodata-value to wipe a noisy background
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,support,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 iiet/iiet-git,ca404170f0173f180b530fbc331fc73e122a4317,"exclude script type=text/template from dom scrubbing
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-InfiniteFlightAirportEditing/Airports,b3509550f07551274b4654b02f06fff9a42e056c,KMDH-Done from Scratch-Kilt McHaggis,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,exclude,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+InfiniteFlightAirportEditing/Airports,b3509550f07551274b4654b02f06fff9a42e056c,KMDH-Done from Scratch-Kilt McHaggis,FALSE,FALSE,TRUE,FALSE,,"by code, modified a data file",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 guix-mirror/guix,f5688801b29cf7f442b62de5cf53bdbf5afe186b,"emacs: info: Show a message after copying button label.
 
 * emacs/guix-info.el (guix-info-button-copy-label): Use
   'guix-copy-as-kill' to display a message with what was killed.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-ElvisResearchGroup/L42,6a263e921db8bf0117f259a0f75a69b50b02d201,.,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,show,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+ElvisResearchGroup/L42,6a263e921db8bf0117f259a0f75a69b50b02d201,.,FALSE,FALSE,TRUE,FALSE,,"no syntactic evidence, by code",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 versatica/mediasoup,7b26cacc7e00328caec984ba0dd72e58057c42c9,"Improve cppcheck.sh
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,improve,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 waferbaby/usesthis,50c4c6ab4f685bf9ab9dd8f759b10120c9736622,"Switch this over to only match actual iPhone-ish things.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,switch to only match,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 opendatateam/udata,97112e0d981b09199764fffe657c31c1b3bb966e,"Updating translations
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translations,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Senspark/ee-x,b15bba253bf4cd8ea78d1262cf5d1369a099ae19,"Fix setting anchor point.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wordpress-mobile/WordPress-Android,1a1cb398c504ea6107e7f6fc2b22e2fe7b7a4790,"Update Zendesk origin string
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 apioo/fusio-impl,5f03d0204403f4a6def0466994c96a018a6c229b,"add interval
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 graphhopper/graphhopper,0da97d03589b7520d17a9daa9fdf25205758e795,"Made point hint matching stricter and avoid problems for short street names (#1406)
 
 * made point hint stricter and avoid problems for short street names
@@ -4798,18 +4798,19 @@ This reverts commit c36aad76ef95944bbfcb3380598bda3f92449fef.
 * added more removal words
 
 * some more
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,TRUE,"additions, fixes, making static","a ""Bingo commit!""",,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rhinstaller/anaconda,f967bb70df79c268670f42e7884401f0a416ab95,"Copy all of live filesystem to target (#746844)
 
 Instead of depending on currentSize to be correct just copy the whole
 live filesystem over to the target.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,insteat of depending,this changes possibly incorrect implementatio to a correct. Hence it is not a refactor or a bug fix,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 sekiguchi-nagisa/ydsh,4bd944fd5cea146d779df38efdfdf7abcd2c06a6,"add kill method to Signal type
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 moravianlibrary/CPK,6c5db81c9f2e8b1a6a8cb46255db943e842ee03b,"unused variable removed
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,"unused variable removed
+",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 JetBrains/ideavim,7360f964b188db15cfdcf744423eaff99237f24a,"Fixed 'w' motion at the last word
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ajweeks/FlexEngine,ca8a43b60ef059fe7b636f883a78ee0514463a2a,"Update submodules
 
 Most notablu, ImGui code was largly removed from renderers
@@ -4821,62 +4822,62 @@ be called before and after other draw calls.
 
 Rename instances of ""i32nalFormat"" to ""internalFormat"" (that's
 why you don't replace-all...)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"update, rename",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 groue/GRDB.swift,a5c8f23ba447c9bc0c7e0d6a83d4cc2846df0a9b,"Support for variable observed region of ValueObservation based on actual selection
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,support,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 emundus/v6,6dde1c173978495bea2e68201f22f6956e7b5234,"Block the users trying to send the wrong file types
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,block,defensive functionality,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 FabioZumbi12/RedProtect,15d6613f8cf95df94d28b5dc1ae63b820014376f,"[All] Check for mariadb driver.
 [Spigot] Updated and make regions be on center.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"check, updated",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 pymor/dune-gdt,01ab0de20876cfd839430f78ba4d4a2c37b17542,"[functionals.elliptic-ipdg] add EllipticIpdgFaceVectorFunctional
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 awslabs/s2n,18461ba453fda653bc2709fc24262a424f6201dd,"Improve variable naming
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,improve naming,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 NaturalHistoryMuseum/scratchpads2,8b44a045d323b4c8623ac6b1a465d3b73811400a,"Use the batch API to load the files.
 
 
-Former-commit-id: e84904290e6423033997c55d264d385864bf26e7",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Former-commit-id: e84904290e6423033997c55d264d385864bf26e7",FALSE,FALSE,TRUE,FALSE,use to load,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 docker/docker.github.io,b68183aabcb8e9cbc74aee397eae79de396f4b4a,"Merge pull request #1335 from vieux/fix_panic
 
-fix panic when createContainer returns nil,nil",,,,,,,,random_batch_18_nov_2020,,,,,,,
+fix panic when createContainer returns nil,nil",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 spring-projects/spring-security,06a0ec1a9ffd40cac180de7e48bfd7936aabc422,"SEC-2285: Polish Security Headers Documentation
 
 Explain why (passivity) XML Namespace doesn't enable security headers by
 default.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-wordpress-mobile/WordPress-Android,5489ec71031202fee771b13c942c25e86038603a,version updated.,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,documentation,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+wordpress-mobile/WordPress-Android,5489ec71031202fee771b13c942c25e86038603a,version updated.,FALSE,TRUE,FALSE,FALSE,version update,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vespa-engine/vespa,8000ea333521c9f9e315e799d616683d3d805274,"Set query properties recursively
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 karelzak/util-linux,40f5054b302776c4695968189a06d4abede47735,"po: update es.po (from translationproject.org)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,translation,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wikimedia/wikipedia-ios,250c72e0ff29b7e5f9e362661336e2e07e300a79,"fall back on nav bar's height for modals
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 lammps/lammps,0f45cd61a5424a98a27c497dc8af2531a3d0f06a,"Merge pull request #196 from akohlmey/charmm-cmap-updates
 
-Some more cmap-related updates for ch2lmp",,,,,,,,random_batch_18_nov_2020,,,,,,,
+Some more cmap-related updates for ch2lmp",FALSE,FALSE,TRUE,FALSE,updates,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 dolphin-emu/dolphin,b8691df723ab635b3db41e86c9324b3adb952abe,"Allow loading controller profiles from game ini.
 
 Currently loads the same profile for all 4 controllers, and overwrites the default control settings.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,allow,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 linq2db/linq2db,9bf68dfdee0a2d86e6a2991862e08cca4548731c,"Added Installation article.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,article,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 nodegit/nodegit,8f61bf56d0908adead949e27bbe4d0b5bef30694,"move preinstall to install?
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,FALSE,FALSE,FALSE,move,seems a follow up that uses the preinstall (by code0,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 SonarSource/sonarqube,3e456a20cd0151d4f3837af375451eed99553885,"SONAR-1707 feed the column SNAPSHOTS.BUILD_DATE on files and directories
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,feed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 llvm-mirror/clang,88cf226caee50956ef47edd4d44cf7b80703a26c,"Get rid of bogus warnings when the second argument in va_start is either an implicit cast expr or a paren expr.
 
 git-svn-id: ffe668792ed300d6c2daa1f6eba2e0aa28d7ec6c@46950 91177308-0d34-0410-b5e6-96231b3b80d8
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,Get rid of bogus warnings,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 endeavourhealth/EDS,f6e4d7cc6bd88cf3bb3bbfb453ebf802fb6ec7ff,"Lowering thread pools in Enterprise filer
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-steinbaugh/seqcloud,17b456d522499bacde633e16755350ff02ba871e,Update README.md,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+steinbaugh/seqcloud,17b456d522499bacde633e16755350ff02ba871e,Update README.md,FALSE,TRUE,FALSE,FALSE,readme.md,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 TheBusyBiscuit/Slimefun4,152dcac0c70d85c7568599c3954d80da48cedec8,"fixed the changes SoSeDiK suggested/requested
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fixed yet changes, suggeted,requested",,FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 FreeRDP/FreeRDP,a202fe405728758f1d51519c5feb76fc335a3529,"freerdp: fix several type related warnings
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,fixing warning are not bug fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,50a88cb7eddb971077ae7dff76b116747c12c371,"Input: add SW_ROTATE_LOCK switch type
 
 This switch is used to signal that user want to disable screen
@@ -4885,9 +4886,9 @@ transitions from portrait to landscape mode and back.
 Signed-off-by: Jekyll Lai <215086efed7ef2f591ac60c8bced46bc0b566c95@wistron.com>
 Signed-off-by: Alan Cox <91e38e63b890fbb214c8914809fde03c73e7f24d@linux.intel.com>
 Signed-off-by: Dmitry Torokhov <10a8c465cefc9bdd6c925e26964d23c90f1141cc@mail.ru>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bitpay/copay,8eec9e2d9d9be47e08a4d4fc97fabe6e941037a4,"fixes for tests
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixes,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 iiet/iiet-git,5ef2bd192aa9b3ecbfc23e83c6984e2a818fb736,"Merge branch '24059-round-robin-repository-storage' into 'master'
 
 Resolve ""Introduce round-robin project creation to spread load over multiple shards""
@@ -4927,7 +4928,7 @@ Allow multiple shards to be enabled in the admin settings page, balancing projec
 
 Closes #24059
 
-See merge request !7273",,,,,,,,random_batch_18_nov_2020,,,,,,,
+See merge request !7273",FALSE,FALSE,TRUE,FALSE,introduce,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 GNOME/nautilus,63b1cb172c1d3fa463bdc705d3222e5f33216b92,"Add new functions for extensions: nautilus_file_info_has_volume,
 
 2005-10-03  Alexander Larsson  <alexl@redhat.com>
@@ -4940,26 +4941,26 @@ GNOME/nautilus,63b1cb172c1d3fa463bdc705d3222e5f33216b92,"Add new functions for e
 	nautilus_file_info_get_volume, nautilus_file_info_get_drive
 
 	Patch from Trevor Davenport
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tgstation/tgstation,6bc8085dced4793e54bbd477c49f30ea703047f3,"forgotten file
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"forgotten - added files forgotten before (hence, introduced a problem)",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 jddurand/c-marpaESLIF,6c2d54762e70d621d2d1d4e7669d9a3aa1354f5c,"Squashed '3rdparty/github/cmake-utils-remote/' changes from 09fb2f1..8923133
 
 8923133 Install of export file bis
 
 git-subtree-dir: 3rdparty/github/cmake-utils-remote
 git-subtree-split: 89231332a81d1e2fcbc01a191fedeb25d24c80dc
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,install,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 YAFNET/YAFNET,e4c22502ed1a498a60140c35120e91e60be616bd,"fixed bug....
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"fixed, bug",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MerryMage/dynarmic,91e851a9917691c868bf5abb67e14f4a21af0f8f,"CMakeLists: Enable /W4 on MSVC
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,enable,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 ManageIQ/manageiq,245b19308a22cc4f8d40598d72ec6a30e1be1087,"Add Miq product features: View Graph, View Hybrid and View Tabular
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 IBMStreams/streamsx.topology,b8558e308c501b414d63de1a69657af1cf281136,"Remove trace at debug
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 AOSC-Dev/aosc-os-abbs,0da796dfcad691c9af91af8390632542c8ca8202,"maxima: update to 5.40.0
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,update to 5,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Koha-Community/Koha,4587d898dc29c3677eafc250a752a190353d8609," Bug 15049: (Signed off) Hide currency but preserv alert
 
 This follow up hides currency, but the alert pops
@@ -4983,11 +4984,11 @@ Signed-off-by: JM Broust <jean-manuel.broust@univ-lyon2.fr>
 Signed-off-by: Jonathan Druart <jonathan.druart@bugs.koha-community.org>
 
 Signed-off-by: Brendan A Gallagher <d88b10c6bc7c38a4ffb541994aef7d8a7f8e3819@bywatersolutions.com>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"bug, to test",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wordpress-mobile/WordPress-FluxC-Android,7f1b0f55b251d29a812fe98f170a6061a827e1c7,"Fix insights store test
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 spulec/moto,4f445a3db582c251f88d48866393947a57ae9bb7,"Handle describe-streams error when log events does not exist.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,handle error,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 llvm-mirror/llvm,3d57035bd97a794234c14fba744883a5867b25cc,"[LV] Avoid vectorizing first order recurrence when phi uses are outside loop
 
 In the vectorization of first order recurrence, we vectorize such
@@ -5006,36 +5007,36 @@ Differential Revision: https://reviews.llvm.org/D31910
 Reviewers: mssimpso
 
 git-svn-id: 0ff597fd157e6f4fc38580e8d64ab130330d2411@299985 91177308-0d34-0410-b5e6-96231b3b80d8
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"avoid, ""this is not true"", follow up patch",not clear if reference to follow up patch is WIP or SATD,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 biocore/qiita,a51dea5bc3aa65310a177e66ad5a49b3f3f554c2,"Merge pull request #1623 from josenavas/issue-1619
 
-URGENT: Fixes Issue 1619",,,,,,,,random_batch_18_nov_2020,,,,,,,
+URGENT: Fixes Issue 1619",FALSE,FALSE,FALSE,TRUE,fixes (and urgent?),,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 akrherz/iem,d027e958e8ef212635b3656ceaffffaff9798ff1,"what a sorry excuse of code this is
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,FALSE,,"SATD, commit not found",FALSE,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 McLeodMoores/starling,ee2d508296dc78969a695dbc891d38ba7d6c0834,"[ENG-155] Added support in BerkeleyDBValueSpecificationIdentifierSource for id refreshes.
 
 There's now a special magical entry in the database which stores the highest value
 ever allocated, which can then be used for restarts to make sure that there isn't
 duplicate allocation after restarts.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,added,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Ardour/ardour,02e6d14e2330be710c91294166cf38a87d00f799,"make no-zero-line be the default for wave views (still shown for normal audio region views
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,make,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 grafana/loki,e0db03cf9f9644cd1cc60dcd875e4d0920cedc52,"delete s3 storage doc
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-Ardour/ardour,ec4eb85cb9ae9ca4166fb6ec6d556a599e205abd,OSX use xjadeo directly (no IPC indirection),,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,doc,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ardour/ardour,ec4eb85cb9ae9ca4166fb6ec6d556a599e205abd,OSX use xjadeo directly (no IPC indirection),FALSE,FALSE,TRUE,FALSE,use directly,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 xwiki/xwiki-commons,4f39481d91f08b6bc7ad1243e349da113c5abfc8,"XCOMMONS-845: Upgrade to httpcore 4.4.2
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,upgrade,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rakudo/rakudo,55c359e8e448831e5c307f8f058d1e982ddf78dd,"Make Array use List.is-lazy
 
 No reason to special case Array
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-foobnix/LirbiReader,1a4d244f55c76e4c0cb78b2db87f96a54ec106b6,update cpu,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,make,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+foobnix/LirbiReader,1a4d244f55c76e4c0cb78b2db87f96a54ec106b6,update cpu,FALSE,FALSE,TRUE,FALSE,update,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Wilfred/remacs,e94817d7cd4406765f6a2728ddbaf16ed7e0dac4,"* make-dist: When breaking links, remove the link before moving
 	the copy onto it, to avoid interactive behavior.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,by description,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 lukeautry/tsoa,6dc02f780c476525ed410a0c0283cab9c78c23fc,"TypeParameters: Consider defaults
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 angular/angular,346e1c14d93c2f20f8429e90375c51080dfa6358,"build: update setup-rbe.sh script and documentation to remove http-remote-cache config (#33907)
 
 We have determined that the upload time cost of remote caching via http is too costly
@@ -5047,34 +5048,34 @@ It is worth noting that this remote http-caching is entirely separate from RBE c
 mechanisms.
 
 PR Close #33907
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,TRUE,FALSE,update script and documentation,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 consulo/consulo,e196dc0d9c6971e6771ebfc06d1cc005ff8437ac,"unnecessary dependencies
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,FALSE,FALSE,FALSE,unnecessary,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wix/react-native-navigation,8945528eeedaafb79ebb744b063f0499f974a5a6,"Update changelog
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,changlog,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 slartus/4pdaClient-plus,f182e3b200c9bdc4b604acf1c1877aaf638b32fa,"Merge remote-tracking branch 'origin/master'
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 openHPI/xikolo-ios,bed15003d448ba336da0cbd3beda320b2dd3486b,"Move cell height calculation to certificate cell
 
 - Create typealias for certificate tuple
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,TRUE,FALSE,"move, create",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 alisw/AliRoot,9ea6d4323ddea5f63b13fcf4a59a1bc04d9c74b2,"Add-on by F. Blanco: code to manage leading particle and cuts with respect to that
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
-tensorflow/ngraph-bridge,17cc39a099132e57fc4aad378475c37c4381f38c,Update README.md,,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,(new) add-on,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+tensorflow/ngraph-bridge,17cc39a099132e57fc4aad378475c37c4381f38c,Update README.md,FALSE,TRUE,FALSE,FALSE,readme.md,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 rails/rails,70a5e5638bfd3b2543bb9d4805cbefec84b6b1ce,"Pass a base relation to build_default_scope when joining
 
 This allows the default scope to be built using the current table alias.
 Resolves #12770
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"pass, allow",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 materials-commons/materialscommons.org,0fce1460d8c760206c032ea8a2c8fd1e9385977c,"change in my tools page - Browse by
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,change,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 oat-sa/extension-tao-itemqti,a61a6c918a2118a99184c925a3fc9867e4654d3c,"Submit Button removed for QTI items.
 
 git-svn-id: f59f457545ec18fc0283a04e9bdca3d662964e5c@19810 62dfeb86-a93f-4914-9d13-15c0a160985d
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 MrMC/mrmc,b89acc24548a1f8f835261d3bc841cc6cf6fb14d,"[videodb] remove unused CVideoInfoTag::m_strShowPath
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,removed unused,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 arturbosch/detekt,8a7763c87b6eb6811b048a0e34c4b489bea18cce,"[Gradle] Configuration cache support (#2813)
 
 * Remove property usage in custom report extensions
@@ -5087,65 +5088,65 @@ They are created on demand when needed at configuration time. Wherefore a proper
 
 * Deprecate report destination property wrappers
 
-In the future they shall be internal and can get simplified to @Nested project.provider { customReports }",,,,,,,,random_batch_18_nov_2020,,,,,,,
+In the future they shall be internal and can get simplified to @Nested project.provider { customReports }",FALSE,FALSE,TRUE,FALSE,"remove, support",,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 schul-cloud/schulcloud-server,7e0ed119f0c302297179fe351c04a84c08bf69b6,"Use new env variable
 
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,use,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 learningequality/kolibri,37a581a9bd08c7a956c6044a15d288482aa07d36,"remove the duplicated step of uploading artifacts
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 radare/radare2,720eb5f08e0f04a879a62db1d2509039b71915fe,"Fix for zombie child processes after using rlangpipe
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 BeWelcome/rox,10e816fb4543b888a8899d049a737b3990eecf75,"Merge branch 'develop' of gitorious.org:bewelcome/rox into develop
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wavesplatform/WavesGUI,0e45e2e720fa7b3f453ea4510238a9c2d6f3954d,"client-738: macOS btn centering fix
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fix,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mikisvaz/rbbt-util,0e8d6df5330bc1aa15e99ac3e981de9c10f33764,"Merge branch 'master' of github.com:mikisvaz/rbbt-util
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 crispab/codekvast,34d2446383f109ae16eaa850defa8f0b643be1f5,"Polished the UX of the Login pages again.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,polished the UX,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 prusa3d/Slic3r,be8acc5ac41e9472d45224bce19b36d9c36affb3,"Moved ""wiping_volumes_extruders"", ""wiping_volumes_matrix"" from
 print settings to project settings.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,moved settings (functionaly change),,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 scala/scala,b3fcc3119ac2e5b11999891c099b235e9a90d82b,"add more info for contributors
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,info,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mozilla/kuma,87a61fa93e5e3523ec8bb46298a7935ed838c416,"Merge branch 'docs'
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,docs,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 guidance-guarantee-programme/pension_guidance,407b9d177724a8465bba9714f8507439e1dd9f7c,"Remove subtle link style
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,remove,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 vmware/govmomi,0bad2bc2f569f975d7d6829eda58c236806b2462,"govc: add vm.power doc
 
 Fixes #1656
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add (not sure why doc),by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 tpoikela/battles,e99bdfe8d2f737458d998a8e2c2461d8560e2ec6,"Fixed a small bug in getWidthsAndGenPos(). Test now passes.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,bug,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 polymonster/pmtech,44130293164c677b76480adec99bdd0f2c631feb,"re-add system call with PEN_SYSTEM, and disable on ios
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,re-add,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 KDE/smb4k,486d1dcac3b0b919ae90c80b2d09d704d750d062,"Improve ::specifyUser() function.
 
 svn path=/trunk/playground/network/smb4k/; revision=1093344
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",TRUE,TRUE,FALSE,FALSE,improve,by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 mitodl/micromasters,d4d4b9e7c01288d7cbdfff6df3a8492ca0e6e6b0,"Set ""Place of Birth"" facet to accept multiple values
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,set,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 lino-framework/xl,692aaca75e86c5e5957c4c548d2fdd8532405ec0,"cannot mark guest as absent or present (fixed #1317)
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,"cannot, fixed",by code,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 wordpress-mobile/WordPress-Android,571b0b7ebd4446e6628da1e6ee51dec7fa583342,"add license file
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,license,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 llvm-mirror/llvm,0d1769155f43e7505bbe41916df2c0ca8548b03d,"This was fixed
 
 
 git-svn-id: 0ff597fd157e6f4fc38580e8d64ab130330d2411@52090 91177308-0d34-0410-b5e6-96231b3b80d8
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,FALSE,TRUE,fixed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Arie/serveme,b7b09f8514a9426d5f3cffa4f3d33e07b47793aa,"Better description of new cloud location
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,TRUE,FALSE,FALSE,description,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 eXist-db/exist,5557ea21b131d947432a9d0406aa5b514193c78f,"[ignore] Allow query timeout and max output size to be configured via request attributes for XQueryServlet. Required to prevent users from doing nasty things on the demo server.
 
 svn path=/trunk/eXist/; revision=16699
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,"allow, required to prevent nasty",defensive programming?,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 citusdata/citus,ed3af403fd0f0baa90481fe3fd80d3df8aa33121,"Add Metadata Snapshot Infrastructure
 
 This change adds the required infrastructure about metadata snapshot from MX
 codebase into Citus, mainly metadata_sync.c file and master_metadata_snapshot UDF.
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,add infrastructure,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 Taeung/tip,1f9eedc2ad7ea89175ead78a175944e7152f3688,"staging: vt6656: removed custom pointer definitions
 
 No checkpatch findings were resolved.
@@ -5155,7 +5156,7 @@ sed -i 's/\bDWORD_PTR\b/u32/g' drivers/staging/vt6656/*.[ch]
 
 Signed-off-by: Andres More <39d9550ef0329f2ac694c4df041b7b0c8d60a9e5@gmail.com>
 Signed-off-by: Greg Kroah-Hartman <4645f7897fd33786a2ee1264d590b3c400559d85@linuxfoundation.org>
-",,,,,,,,random_batch_18_nov_2020,,,,,,,
+",FALSE,FALSE,TRUE,FALSE,removed,,,random_batch_18_nov_2020,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 axkr/symja_android_library,02a11832b5f6eb3821755645ea0185bdb2ba60df,Improve comparisons of Intervals,,,,,,,,random_batch_18_nov_2020,,,,,,,
 publiclab/Leaflet.DistortableImage,73517260d7d5681309b90857323768ddb6db09d4,"Cleanup code and add comment explaining the meaning of the parameters passed to L.MatrixUtil#general2DProjection.
 ",,,,,,,,random_batch_18_nov_2020,,,,,,,
