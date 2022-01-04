@@ -17,4 +17,6 @@ Self admitted technical debt is a case in which the developer admits that a give
   1. Technical debt in documentation is SATD. 
   1. "Work in progress(WIP)" is not considered as SATD since it is uncompleted work, not low-quality work.
   1. A temporary change is considered SATD since it commits to a new future change.
+  1. Bug fixed are not considered as SATD. Bugs, in general, are a problem in the solution and not a not optimal solution.
+  Also, bugs are admitted when fixed, hence this is a removal of the problem, not its introduction.
   
