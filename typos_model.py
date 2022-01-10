@@ -161,7 +161,7 @@ positive_terms = [
 ,'liberry' # mistake of library
 ,'lisence' # mistake of license
 ,'lightening' # mistake of lightning
-,'loose' # mistake of lose
+#,'loose' # mistake of lose yet a valid word
 ,'maintainance' # mistake of maintenance
 ,'maintnance' # mistake of maintenance
 ,'marshmellow' # mistake of marshmallow
@@ -212,7 +212,7 @@ positive_terms = [
 ,'potatos' # mistake of potatoes
 ,'preceed' # mistake of precede
 ,'presance' # mistake of presence
-,'principal' # mistake of principle
+#,'principal' # mistake of principle yet a valid word
 ,'privelege' # mistake of privilege
 ,'priviledge' # mistake of privilege
 ,'professer' # mistake of professor
