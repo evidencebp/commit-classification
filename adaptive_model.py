@@ -6,7 +6,7 @@ from configuration import DATA_PATH
 from conventional_commits import build_cc_adaptive_regex
 from labeling_util import get_false_positives, get_false_negatives
 
-from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
+from language_utils import file_scheme, term_seperator, build_separated_terms, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
     , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, unnedded_terms\
     , code_review_fixes, no_message, NEAR_ENOUGH
@@ -125,7 +125,7 @@ def build_adaptive_action_regex():
 
 def build_adaptive_regex(use_conventional_commits=True):
 
-    adaptive_context_re = build_sepereted_term(adaptive_context, just_before=True)
+    adaptive_context_re = build_separated_terms(adaptive_context, just_before=True)
 
 
     base_re = "((%s)\s[\s\S]{0,50}(%s)%s)" % (adaptive_context_re
@@ -162,10 +162,10 @@ def build_non_adaptive_context():
     non_adaptive_entities = documentation_entities + software_terms + unnedded_terms + [file_scheme]
 
 
-    return '(%s)' % "|".join(['(?:%s)\s[\s\S]{0,50}(?:%s)' % (build_sepereted_term(adaptive_context, just_before=True)
+    return '(%s)' % "|".join(['(?:%s)\s[\s\S]{0,50}(?:%s)' % (build_separated_terms(adaptive_context, just_before=True)
                                                             , "|".join(entities))
                      , non_adaptive_header
-                     , '(?:%s)\s[\s\S]{0,50}(?:%s)' % (build_sepereted_term(adaptive_actions, just_before=True)
+                     , '(?:%s)\s[\s\S]{0,50}(?:%s)' % (build_separated_terms(adaptive_actions, just_before=True)
                                                             , "|".join(non_adaptive_entities))
                      ])
 
@@ -185,7 +185,7 @@ def is_adaptive(text):
 
 def build_core_adaptive_regex():
 
-    return '(%s)' % build_sepereted_term(core_adaptive_terms)
+    return '(%s)' % build_separated_terms(core_adaptive_terms)
 
 def is_core_adaptive(text):
 
@@ -282,7 +282,7 @@ def evaluate_adaptive_classifier():
 
 if __name__ == '__main__':
     print_adaptive_functions(commit='4b76d8e76af938824f91f4b99247731c21e37ff9')
-    evaluate_adaptive_classifier()
+    #evaluate_adaptive_classifier()
 
     text = """
 "Leverage pip to access installed packages

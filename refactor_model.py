@@ -1,7 +1,7 @@
 import re
 
 from conventional_commits import build_cc_refactor_regex
-from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
+from language_utils import file_scheme, term_seperator, build_separated_terms, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
     , software_terms, build_non_positive_linguistic, software_goals_modification, software_goals, static_analyzers
 
@@ -89,8 +89,8 @@ perfective_header_action = [
     , '(?:move|moved|moves|moving) to'
     , 'separat(?:e|es|ed|ing)'
     , 'split(?:s|ing)?', '->'
-    , build_sepereted_term(static_analyzers) + 'fix(es|ed)?'
-    , 'fix(es|ed)?' + build_sepereted_term(static_analyzers)
+    , build_separated_terms(static_analyzers) + 'fix(es|ed)?'
+    , 'fix(es|ed)?' + build_separated_terms(static_analyzers)
 
     #, '(private|public|protected|static)'
 ]
@@ -132,7 +132,7 @@ refactor_context = [ 'clean(ing)?(-| )?up(s)?'
     , 're(?:-| )?packag(?:e|es|ed|ing)'
     #, 'code review'
     #, 'collapse'
-    #, "(?:(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)%s)" % (build_sepereted_term(feedback_action
+    #, "(?:(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)%s)" % (build_separated_terms(feedback_action
     #                                                                                      , just_before=True)
     #                                                                 , term_seperator
     #                                                                 , term_seperator
@@ -183,7 +183,7 @@ adaptive_context = [
 
 def build_core_refactor_regex():
 
-    return '(%s)' % build_sepereted_term(core_refactor_terms)
+    return '(%s)' % build_separated_terms(core_refactor_terms)
 
 def is_core_refactor(text):
     return match(text, build_core_refactor_regex())
@@ -194,7 +194,7 @@ def build_refactor_regex(use_conventional_commits=True):
                                                        , "|".join(perfective_header_action)
                                                        , term_seperator)
 
-    activity_regerx = "(?:(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)%s)" % (build_sepereted_term(modification_activity
+    activity_regerx = "(?:(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)%s)" % (build_separated_terms(modification_activity
                                                                                           , just_before=True)
                                                                      , term_seperator
                                                                      , term_seperator
@@ -202,12 +202,12 @@ def build_refactor_regex(use_conventional_commits=True):
                                                                      , "|".join(refactor_entities)
                                                                      , term_seperator)
     if use_conventional_commits:
-        agg_re = "(%s)|(%s)|(%s)|(%s)" % (build_sepereted_term(refactor_context)
+        agg_re = "(%s)|(%s)|(%s)|(%s)" % (build_separated_terms(refactor_context)
                           , activity_regerx
                           , header_regex
                           , build_cc_refactor_regex())
     else:
-        agg_re = "(%s)|(%s)|(%s)" % (build_sepereted_term(refactor_context)
+        agg_re = "(%s)|(%s)|(%s)" % (build_separated_terms(refactor_context)
                           , activity_regerx
                           , header_regex)
     return agg_re
@@ -215,7 +215,7 @@ def build_refactor_regex(use_conventional_commits=True):
 
 
 def build_refactor_goals_regex():
-    goals_regerx = "(?:(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)%s)" % (build_sepereted_term(software_goals_modification
+    goals_regerx = "(?:(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)%s)" % (build_separated_terms(software_goals_modification
                                                                                        , just_before=True)
                                                                   , term_seperator
                                                                   , term_seperator
@@ -239,14 +239,14 @@ def build_non_code_perfective_regex():
                             , 'support(?:s|ed|ing)?'
                             ]
     modifiers = modification_activity + non_perfective_context
-    activity_regerx = "((?:%s)(?:\s|%s[\s\S]{0,50}%s)(?:%s))" % (build_sepereted_term(modifiers, just_before=True)
+    activity_regerx = "((?:%s)(?:\s|%s[\s\S]{0,50}%s)(?:%s))" % (build_separated_terms(modifiers, just_before=True)
                                                                                 , term_seperator
                                                                                 , term_seperator
                                                                                 , "|".join(prefective_entities
                                                                                            + non_perfective_entities))
     doc_header_regex =  '(?:^|^[\s\S]{0,25}%s)(?:%s)[\s\S]{0,25}(?:%s)' % (term_seperator
                                                        , "|".join(perfective_header_action)
-                                                       , build_sepereted_term(documentation_entities))
+                                                       , build_separated_terms(documentation_entities))
 
 
     no_prefective_action = "|".join([
@@ -256,7 +256,7 @@ def build_non_code_perfective_regex():
         , '(?:make|made|making|makes)(?:%s|%s[\s\S]{0,50}%s)sense' % (term_seperator, term_seperator, term_seperator)
         , 'improv(?:e|es|ed|ing) handling'
         , 'need(?:s|ing)?\srefactor(?:ing)?'
-        , '(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)' %(build_sepereted_term(non_perfective_entities,just_before=True)
+        , '(?:%s)(?:%s|%s[\s\S]{0,50}%s)(?:%s)' %(build_separated_terms(non_perfective_entities,just_before=True)
                                                    ,term_seperator
                                                    , term_seperator
                                                    , term_seperator
@@ -275,7 +275,7 @@ def build_documentation_entities_context(positive_re):
 
     return '(?:%s)' % "|".join([
         # TODO - take care of documentation entities spereatly
-         '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(documentation_entities, just_before=True)
+         '(?:%s)[\s\S]{0,10}(?:%s)' % (build_separated_terms(documentation_entities, just_before=True)
                                         ,positive_re)
     ])
 
@@ -301,9 +301,9 @@ def positive_refactor_to_bq():
     print( "# Refactor :build_refactor_regex()")
     #print( ",")
     print( regex_to_big_query(build_refactor_regex()))
-    print( "# Refactor :build_sepereted_term(removal)")
+    print( "# Refactor :build_separated_terms(removal)")
     print( "+")
-    print( regex_to_big_query(build_sepereted_term(removal)))
+    print( regex_to_big_query(build_separated_terms(removal)))
 
     print( "# Refactor :build_refactor_goals_regex()")
     print( "+")
@@ -324,8 +324,8 @@ def non_positive_linguistic_refactor_goals_to_bq():
     print( regex_to_big_query(build_non_positive_linguistic(build_refactor_goals_regex())))
 
 def non_positive_linguistic_removal_to_bq():
-    print("# Refactor :build_non_positive_linguistic(build_sepereted_term(removal))")
-    print(regex_to_big_query(build_non_positive_linguistic(build_sepereted_term(removal))))
+    print("# Refactor :build_non_positive_linguistic(build_separated_terms(removal))")
+    print(regex_to_big_query(build_non_positive_linguistic(build_separated_terms(removal))))
 
 
 def documentation_entities_context_refactor_to_bq():
@@ -350,7 +350,7 @@ def refactor_to_bq():
 
 
 def built_is_refactor(commit_text):
-    removal_re = build_sepereted_term(removal)
+    removal_re = build_separated_terms(removal)
 
     return (match(commit_text, build_refactor_regex())
             + match(commit_text, removal_re)
@@ -360,12 +360,12 @@ def built_is_refactor(commit_text):
                     , build_documentation_entities_context(build_refactor_regex(use_conventional_commits=False)))
             - match(commit_text
                     , build_non_positive_linguistic(build_refactor_regex(use_conventional_commits=False)))
-            - match(commit_text, build_non_positive_linguistic(build_sepereted_term(removal)))
+            - match(commit_text, build_non_positive_linguistic(build_separated_terms(removal)))
             - match(commit_text, build_non_positive_linguistic(build_refactor_goals_regex()))
             ) > 0
 
 def build_perfective_regex():
-    non_code = build_sepereted_term (prefective_entities)
+    non_code = build_separated_terms (prefective_entities)
 
     perfective = "(%s)" %  non_code
 

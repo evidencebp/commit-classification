@@ -2,7 +2,7 @@
 
 import re
 
-from language_utils import file_scheme, term_seperator, build_sepereted_term, \
+from language_utils import file_scheme, term_seperator, build_separated_terms, \
     regex_to_big_query, generate_bq_function, SCHEMA_NAME
 
 

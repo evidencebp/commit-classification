@@ -22,7 +22,7 @@ from configuration import DATA_PATH
 from conventional_commits import build_cc_corrective_regex
 from labeling_util import get_false_positives, get_false_negatives
 
-from language_utils import file_scheme, term_seperator, build_sepereted_term, negation_terms, modals\
+from language_utils import file_scheme, term_seperator, build_separated_terms, negation_terms, modals\
     , regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, documentation_entities, prefective_entities\
     , static_analyzers, NEAR_ENOUGH, software_entities, code_review_fixes, normalize
 from model_evaluation import classifiy_commits_df, evaluate_performance
@@ -169,9 +169,9 @@ valid_terms = [
     '(if|would)[\s\S]{0,40}go wrong',
     'line(?:s)? break(?:s)?',
     'typo(s)?\sfix(es)?',
-    'fix(ed|es|ing)?' + build_sepereted_term(software_entities) + 'name(s)?',
-    build_sepereted_term(static_analyzers) + 'fix(es|ed)?',
-    'fix(es|ed)?' + build_sepereted_term(static_analyzers) ,
+    'fix(ed|es|ing)?' + build_separated_terms(software_entities) + 'name(s)?',
+    build_separated_terms(static_analyzers) + 'fix(es|ed)?',
+    'fix(es|ed)?' + build_separated_terms(static_analyzers) ,
     '^### Bug Fix', # tends to be a title, later stating if the commit is a bug fix
     'edit the jira link to the correct issue', # Another occurring title
     'page(?:s)? break(?:s)?',
@@ -214,7 +214,7 @@ def build_valid_find_regex():
     #    (valid_fix_object) + ")" + sepertion + fix_re + term_seperator
 
     #other_valid_re = "(%s)" % "|".join(valid_terms)
-    other_valid_re = build_sepereted_term(valid_terms)
+    other_valid_re = build_separated_terms(valid_terms)
     return "((%s)|(%s)|(%s))" % (prefix, suffix, other_valid_re)
 
 
@@ -225,7 +225,7 @@ def build_bug_fix_regex(use_conventional_commits=True):
    # strict_header = "^(?:%s)%s"  % ( "|".join([ "do not" ,"don't"])
    #                                                    , term_seperator)
 
-    bug_fix_re = build_sepereted_term(bug_terms)
+    bug_fix_re = build_separated_terms(bug_terms)
 
 
     if use_conventional_commits:
@@ -237,7 +237,7 @@ def build_bug_fix_regex(use_conventional_commits=True):
 
 def build_negeted_bug_fix_regex():
     bug_fix_re = build_bug_fix_regex(use_conventional_commits=False)
-    negation_re = build_sepereted_term(negation_terms)
+    negation_re = build_separated_terms(negation_terms)
 
 
     return "%s[\s\S]{0,20}%s" % (negation_re, bug_fix_re)
@@ -245,7 +245,7 @@ def build_negeted_bug_fix_regex():
 
 def build_core_bug_regex():
 
-    return '(%s)' % build_sepereted_term(core_bug_terms)
+    return '(%s)' % build_separated_terms(core_bug_terms)
 
 def is_core_bug(commit_text):
     text = commit_text.lower()

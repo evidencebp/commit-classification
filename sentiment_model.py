@@ -9,7 +9,7 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq\
-    , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH\
+    , build_separated_terms, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH\
  , programming_languges
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
@@ -594,13 +594,13 @@ excluded_negative_sentiment=['paranoia code', "april fool's", "april fool", '(fa
 
 def build_positive_sentiment_regex():
 
-    return build_sepereted_term(positive_sentiment)
+    return build_separated_terms(positive_sentiment)
 
 
 
 def build_positive_sentiment_excluded_regex():
 
-    return build_sepereted_term(excluded_positive_sentiment)
+    return build_separated_terms(excluded_positive_sentiment)
 
 def build_not_positive_sentiment_regex():
 
@@ -635,13 +635,13 @@ def positive_sentiment_to_bq():
 
 def build_negative_sentiment_regex():
 
-    return build_sepereted_term(negative_sentiment)
+    return build_separated_terms(negative_sentiment)
 
 
 
 def build_negative_sentiment_excluded_regex():
 
-    return build_sepereted_term(excluded_negative_sentiment)
+    return build_separated_terms(excluded_negative_sentiment)
 
 def build_not_negative_sentiment_regex():
 

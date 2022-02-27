@@ -206,7 +206,7 @@ programming_languges = [i.lower() for i in ['Python', 'JavaScript', 'Java', 'C\+
        'Open Policy Agent', 'RobotFramework']]
 
 
-def build_sepereted_term(term_list : List, just_before =False):
+def build_separated_terms(term_list : List, just_before =False):
     if just_before:
         sep = "%s(%s)" % (term_seperator, "|".join(term_list))
     else:
@@ -222,14 +222,14 @@ def build_non_positive_linguistic(positive_re
 
 
     return '(?:%s)' % "|".join([
-        ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(modals, just_before=True)
+        ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_separated_terms(modals, just_before=True)
                                       ,  positive_re)
-        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(neg, just_before=True)
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_separated_terms(neg, just_before=True)
                                         ,  positive_re)
-        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_sepereted_term(non_actionable_context, just_before=True)
+        , ('(?:%s)' + NEAR_ENOUGH + '(?:%s)') % (build_separated_terms(non_actionable_context, just_before=True)
                                         ,  positive_re)
         # TODO - take care of documentation entities spereatly
-        #, '(?:%s)[\s\S]{0,10}(?:%s)' % (build_sepereted_term(documentation_entities, just_before=True)
+        #, '(?:%s)[\s\S]{0,10}(?:%s)' % (build_separated_terms(documentation_entities, just_before=True)
         #                                ,positive_re)
     ])
 

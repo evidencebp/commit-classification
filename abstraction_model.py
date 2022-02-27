@@ -6,7 +6,7 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq\
-    , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH\
+    , build_separated_terms, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH\
  , programming_languges, software_goals
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
@@ -114,13 +114,13 @@ excluded_abstraction_terms = ['reduc(es|e|ed|ing) abstraction'
 # Corrective
 def build_core_abstraction_regex():
 
-    return build_sepereted_term(core_abstraction_terms)
+    return build_separated_terms(core_abstraction_terms)
 
 
 
 def build_excluded_abstraction_regex():
 
-    return build_sepereted_term(excluded_abstraction_terms)
+    return build_separated_terms(excluded_abstraction_terms)
 
 
 def build_not_abstraction_regex():

@@ -9,7 +9,7 @@ import pandas as pd
 
 from configuration import DATA_PATH
 from language_utils import  regex_to_big_query, generate_bq_function, match, SCHEMA_NAME, print_logic_to_bq\
-    , build_sepereted_term, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH, term_seperator
+    , build_separated_terms, build_non_positive_linguistic, REGULAR_SUFFIX, VERB_E_SUFFIX, NEAR_ENOUGH, term_seperator
 from model_evaluation import classifiy_commits_df, evaluate_performance, evaluate_concept_classifier
 
 
@@ -129,13 +129,13 @@ def build_positive_regex():
 
     #return "(%s)" % ("|".join(positive_terms))
 
-    return build_sepereted_term(positive_terms)
+    return build_separated_terms(positive_terms)
 
 
 
 def build_excluded_regex():
     #return "(%s)" % ("|".join(excluded_terms))
-    return build_sepereted_term(excluded_terms)
+    return build_separated_terms(excluded_terms)
 
 def build_not_positive_regex():
 
