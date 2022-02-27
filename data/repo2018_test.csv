@@ -101,7 +101,7 @@ Closes-Bug: #1272045
 Change-Id: I1e8deb91558478973b280ed25bf3b90da4e2b045
 ",1,0,0,True,2,0,corrective,fail,,False,False,False,True,True,False,True,False,False
 rakudo/rakudo,2f489f2c8f65a48b6ee9376ac4da9c5fba07d8f1,"fix spelling of function name in perl6multisub.pmc
-",1,0,0,True,0,0,perfective,fix spelling -> rename,,True,True,False,False,True,False,False,False,False
+",1,0,0,True,0,0,perfective,fix spelling -> rename,,True,True,False,False,False,False,False,False,True
 opencog/link-grammar,a30d459f41a335be054f527412a608dd5bbef7f9,"Antroji linksniuot׳³ֲ²ײ²ֲ´׳³ג€™׳’ג€�ֲ¬׳’ג‚¬ן¿½
 
 
@@ -541,7 +541,7 @@ arianne/stendhal,dfcdaa106f8840717fe383215c7822392b126a47,"put sheep in zoo and 
 github/orchestrator,a91ac2fb0eeab9d2357cbbf567de4ba6a701dc7b,"[de]register-hostname-unresolve supported
 ",0,0,0,False,0,0,adaptive,supported,check - should hit,False,False,True,False,False,False,False,False,True
 0xAX/emacs,9a150fcc34cce0daf2dd671c9948eb8d5b70b1c1,"ChangeLog fix.
-",1,0,0,True,0,0,corrective,fix,,False,False,False,True,True,False,True,False,False
+",1,0,0,True,0,0,corrective,fix,,False,False,False,True,False,False,True,False,False
 Microsoft/PTVS,ee2b7ac9f7034c0f43241e7c583cc91ad10b054e,"Merge pull request #3214 from zooba/issue-2488-2682
 
 Fixes #2488 and #2682",1,0,0,True,0,1,corrective,fix,,False,False,False,True,True,False,False,True,False
@@ -724,7 +724,7 @@ efficient and hopefully less error prone.",1,0,0,True,0,0,adaptive,,by code,Fals
 WoWAnalyzer/WoWAnalyzer,184dbd360d83099ac8d5875b95f219e9b1057c69,"Missed a thing
 ",0,0,0,False,0,0,corrective,a code change that claimed to be missed,uncertain,False,False,False,True,True,False,False,False,False
 kfowler/emacs,a47a5be5e7a7c87783c799a67c1ae2c7b019ea88,"Initial revision
-",0,0,0,False,0,0,adaptive,by code,,False,False,True,False,False,False,False,False,True
+",0,0,0,False,0,0,adaptive,by code,,False,False,True,False,False,False,False,True,True
 movim/movim,1b0d29f6cf947584c46a0c37e5c16a6d66c086d1,"Fix #107
 ",1,0,0,True,0,0,corrective,fix,,False,False,False,True,True,False,False,False,False
 scoophealth/oscar,323b23d5010268deb3bf4b14407c5ceb3df0468a,"class MeasurementsExt moved to ""model"" package
@@ -1116,7 +1116,7 @@ bioconda/bioconda-recipes,12fcb3d777ced5dfdac338cc064a976e9617a793,"kat v2.4.0 u
 * kat v2.4.0 update
 
 * kat 2.4.0 fix sha256
-",1,0,0,True,0,1,multi,"update, fix",,False,False,True,True,True,False,False,True,False
+",1,0,0,True,0,1,multi,"update, fix",,False,False,True,True,False,False,False,True,True
 zurb/foundation-sites,437ba675222e7021910bb628e164d75d61b0bb33,"Merge branch '5.0-wip' of github.com:zurb/foundation into 5.0-wip
 ",0,0,0,False,0,1,merge,merge,,,,,,False,False,False,True,True
 nortikin/sverchok,5691bbbcdde92c68d343f521f422ff807aac5ca5,"colors.py
@@ -3493,7 +3493,7 @@ When passing a const message string to the error reporting APIs
 RBD forgot to use ""%s"" to avoid GCC format string warnings
 
 Signed-off-by: Daniel P. Berrange <bb938cf255e055ff3507f2627d214e8e62118fcf@redhat.com>
-",2,2,0,False,0,1,corrective,add missing,check - should hit,False,False,False,True,False,False,False,True,True
+",2,2,0,False,0,1,corrective,add missing,check - should hit,False,False,False,True,True,False,False,True,False
 bitpay/copay,3191ba200c7fcaea8d13c8805128aefa2e82f218,"do not select wallet on 'ready' message
 ",0,0,0,False,0,0,adaptive,select,,False,False,True,False,False,False,False,False,True
 qemu/skiboot,61bc50ac6d261353b8c3ff9605fb976f83c24aad,"PCI: Remove pci_put_phb()
@@ -5482,7 +5482,7 @@ stinsonga/emacs-mirror,0276743672672ce0caec7861741293a4ae11cb52,"Doc string fix 
 
 * lisp/leim/quail/latin-alt.el (""dutch""): Doc fix.  Reported by
 Robert Pluim <rpluim@gmail.com>.
-",2,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",2,0,0,True,0,0,,,,,,,,False,False,True,False,False
 ILSCeV/Lara,450fd18fa25f74badd707e0791ada6dbefdc3da4,"Merge branch 'lara-2.0-beta' of https://github.com/4D44H/lara-vedst into lara-2.0-beta
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 wikimedia/mediawiki-extensions-MobileFrontend,fb5ec7a60d8a65b196314f5d9c54b68fcf4cd622,"Hygiene: Folder rename + Document MFAllowNonJavaScriptEditing config variable
@@ -6463,7 +6463,7 @@ Fallout from the new bootstrap.
 * po/.gitignore: Likewise.
 ",0,0,0,False,0,0,,,,,,,,False,False,True,False,False
 emacs-mirror/emacs,f59006cb6e45c0611c6658e8375369f930e02589,"(set-mark): Doc fix.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 vvfosprojects/sovvf,5f670fa8052ba3110447cb2d97d5c586cab65434,"Eliminato un import inutile
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 joomla-projects/media-manager-improvement,415c0fc4408943f5cc2acdfac4edf3e4fa89c65b,Update categories.php,0,0,0,False,0,1,,,,,,,,False,False,False,True,True
@@ -6841,7 +6841,7 @@ ulaval/modul-components,6f449a236bca2fc2422a1aa6c6b0c066404dac64,"Feature/modul-
 * clean useless import
 
 * modul-29 - code review fix
-",1,0,0,True,2,1,multi,"add, clean useless",check - should hit,True,True,True,False,True,True,True,True,False
+",1,0,0,True,2,1,multi,"add, clean useless",check - should hit,True,True,True,False,False,True,True,True,False
 ebi-uniprot/QuickGOBE,d48b829856bc328eef9d9507987609a54aff4d39,"geneproduct pom for jmeter tests
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 raonix-github/openwrt,87ed057f2e824c886a2d443e67aabb247cb68957,"libnl-tiny: export unl_genl_multicast_id()
@@ -6869,7 +6869,7 @@ input-output-hk/cardano-sl,268133dd1bc90d1b8dea47bf10cebcc989dac5a8,"Fix csl-112
 
 by creating an external bat script and terminating cardano-launcher
 before running updater
-",1,0,0,True,0,0,,,,,,,,True,False,False,True,False
+",1,0,0,True,0,0,,,,,,,,False,False,False,True,True
 AladW/aurutils,85a5390b36845fe1e6fa7a5acfc842e1c37adb7a,"unneeded ""exit""
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 raonix-github/openwrt,3040f27dde8fbeef84cce15ddecd5ece89629530,"pptp: use resolveip, schedule restart if dns lookups fail
@@ -7693,7 +7693,7 @@ raster-foundry/raster-foundry,4015a0beddf8171b26a5ff7fe7812d4891f85a4d,"Mark cer
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 opensalt/opensalt,fc3ecba664d24f117823e4d4f4a8af8588386555,"Merge pull request #175 from opensalt/spelling
 
-Fixed spelling of predecesor to predecessor",1,0,0,True,0,1,,,,,,,,True,False,False,True,False
+Fixed spelling of predecesor to predecessor",1,0,0,True,0,1,,,,,,,,False,False,False,True,True
 StamusNetworks/scirius,f36e18293a246d8d73b262bbd891de6d8fb71fc9,"hunt: add a basic scirius logo
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 apache/jackrabbit-oak,8f32f970df483710b5f4d77277fd0221815b812f,"OAK-6: Setup integration tests and TCK tests
@@ -7703,7 +7703,7 @@ update test exclusions
 git-svn-id: 67138be12999c61558c3dd34328380c8e4523e73@1384406 13f79535-47bb-0310-9956-ffa450edef68
 ",0,0,0,False,0,1,,,,,,,,False,False,False,False,True
 tutao/tutanota,e859007b5670f6a7a36fb9d37783563ed758ceea,"fixed iss1300: BadRequestException when logging out
-",1,0,0,True,0,0,,,,,,,,True,False,False,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,False,False,True
 AnalyticalGraphicsInc/cesium,b6eb300f22892cac94499ef4244fc64aa835ab61,Merge branch '3d-tiles' into rename-debug-labels,0,0,0,False,1,1,,,,,,,,True,False,False,True,False
 SpinVR/three.js,9111feba82907796d14937a8c09c02fc621a27e6,"Merge pull request #10303 from Mugen87/dev
 
@@ -7861,7 +7861,7 @@ Move deployment collision avoidance e2e test to integration
 
 ```release-note
 NONE
-```",1,1,0,False,-1,1,,,,,,,,False,False,True,True,False
+```",1,1,0,False,-1,1,,,,,,,,True,False,True,True,False
 SnowdogApps/magento2-alpaca-theme,4430bb323436c9765be5e36b84bd045261b168a2,"#39906 - Change links to buttons in sidebar and wishlist
 
 ",0,0,0,False,0,0,,,,,,,,False,False,False,True,True
@@ -7910,7 +7910,7 @@ kfowler/emacs,79b6e0a971a3c3f56092e0d33aac43fbd0e3eef1,"Some doc for epa-mail-al
 * lisp/epa.el (epa-mail-aliases): Doc fix.
 
 * etc/NEWS: Related edit.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 openwrt/openwrt,a84d51c85d93628fecba6dfba7e791231af19f7c,"linux-firmware: update md5sum
 
 Since the md5sum of the mirrored Git clone archive has been set in the Makefile
@@ -8223,7 +8223,7 @@ without, say, burying the additional arguments in the last argument
 Swift SVN r4366
 ",0,0,0,False,0,1,,,,,,,,False,True,True,True,False
 mjmlio/mjml,a86c9a62ebf43bf476fdd00541f99b8ce9e2ea19,"last doc fix
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 centreon/centreon,ff462d67f5ed3e50edd169ef1e86332ae77f2364,"* Apply style to graph template listing and form
 ",0,0,0,False,0,0,,,,,,,,False,False,True,False,False
 malinink/easy-tests,b624a01502e863bd43cc595110fac11655f23685,"Revert newline
@@ -9898,7 +9898,7 @@ See merge request !8766",0,0,0,False,2,1,,,,,,,,False,False,True,True,False
 cBioPortal/cbioportal,6ffa1acff590645f225a0a1c6c837f4e228f29b2,"moved changes related to mutation table and MAF importer script from oncotator branch
 ",0,0,0,False,0,0,,,,,,,,False,False,False,True,True
 kfowler/emacs,90806abcfcaa932e30f80a2f530200b7811c5401,"(imenu-syntax-alist): Doc fix.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 apache/spark,ec0eae486331c3977505d261676b77a33c334216,"[SPARK-18875][SPARKR][DOCS] Fix R API doc generation by adding `DESCRIPTION` file
 
 ## What changes were proposed in this pull request?
@@ -10382,7 +10382,7 @@ Signed-off-by: Felix Fietkau <nbd@openwrt.org>
 
 SVN-Revision: 43755
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
-alphagov/notifications-admin,782d68a071be492f9c326c87f2ad5ccabb967901,Add line break,0,0,0,False,0,1,,,,,,,,True,False,False,True,False
+alphagov/notifications-admin,782d68a071be492f9c326c87f2ad5ccabb967901,Add line break,0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 mopsalarm/Pr0,4ad2b413146e6b0ccf485d1aa768fcc4297a5a10,"Translate MessageReplyReceiver and MimeTypeHelper to Kotlin
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 ZencashOfficial/arizen,76cd09606aed657e9e495cae80486c019a8643e6,"files reformat
@@ -10942,7 +10942,7 @@ kfowler/emacs,bb7cdf58f6ad1ddbf2dad90568440d756fa831f1,"Doc fixes related to vc-
 * vc/vc-sccs.el (vc-sccs-print-log):
 * vc/vc-svn.el (vc-svn-print-log):
 * vc/vc.el (vc-print-log-internal): Doc fixes.
-",2,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",2,0,0,True,0,0,,,,,,,,False,False,True,False,False
 stephenegriffin/mfcmapi,7c10e5c0b460c4849ac3330ef1445c506a6b4612,"fixup core stdafx references
 ",1,0,0,True,0,0,,,,,,,,True,False,False,False,False
 tenstream/tenstream,f68b9dbc4ec826aac751ac9c0bcbd9bca78cb6a5,"add example for tenstream rrtm_lw_sw
@@ -11792,7 +11792,7 @@ flowable/flowable-engine,6ea8932737fba45e1f923dec7f6bc8cb2af4793c,"Added indexes
 onedata/oneclient,83d4c1af948ce9e0323a033a557b8c1897741ea4,"VFS-674 Preliminary work on demacrifying tests.
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 kfowler/emacs,4b112ac47504c028c602bc80e42b032ed226bf2a,"Initial revision
-",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
+",0,0,0,False,0,0,,,,,,,,False,False,False,True,True
 sendgrid/docs,4c2522e272804bd3cd2b51de35b511970c25a909,"Merge pull request #2088 from Zaftula/patch-16
 
 Update two_factor_authentication_faq.md",0,0,0,False,0,2,,,,,,,,False,False,True,True,False
@@ -12645,7 +12645,7 @@ micahflee/onionshare,91005bc0e0e93a363d6cc6ac863bee7d8d112875,Create fi.json,0,0
 Homebrew/homebrew-core,c0e5152477a4a10455a36e1e2f281b1872647ffc,"uhd: update 003.010.002.000_1 bottle.
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 kfowler/emacs,d2ee9b136d5f2cef10237583324f7cfc1892a4cb,"(vc-diff-switches): Doc fix.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 3-form/ceilings,ad39d578f4eb072fc0b65d0920cc10a00c37440b,"Release v0.0.78
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 Homebrew/homebrew-core,398a8ad49c7f017406247832f16d959d35939528,"fn: update 0.4.26 bottle.
@@ -12858,7 +12858,7 @@ molpopgen/fwdpy11,ec8af8023abda709b68a36bf5beeb18369eb6e3e,"Change C++ type name
 edx/edx-platform,4d230d629d88732b426e77638df91834b2e0dcb1,"Move the core of the bin enumeration code into resolvers.py
 ",0,0,0,False,1,0,,,,,,,,False,True,True,False,False
 0xAX/emacs,6ec6d6f469928db58895fb38ea8d6aadfd5f5a60,"(open-network-stream): Doc fix.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 JMRI/EngineDriver,a762ab4b651950a64c27d87673487f8fae308e09,"Merge branch 'master' of https://github.com/JMRI/EngineDriver
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 robolectric/robolectric,622241aea2ca9bdc1110e5c4696366eabc28d6b0,"Add Mike to pairs file
@@ -13850,7 +13850,7 @@ CZ-NIC/turris-os,6147ee7cc33eefcf1fe74f9b4a8c15df1dc1f009,"[orion] generic: enha
 Signed-off by: Matthias Buecher <mail@maddes.net>
 
 git-svn-id: c673a1a018ba15e3442847f58d2337db82164816@33174 3c298f89-4303-0410-b956-a3cf2f4a3e73
-",0,0,0,False,2,1,,,,,,,,False,False,False,True,True
+",0,0,0,False,2,1,,,,,,,,True,False,False,True,False
 nayutaco/ptarmigan,941ec1f5f4b705af60de256a8be17c1b87ebb5fc,"routing: ׳³ֲ³ײ»ן¿½׳²ֲ²ײ²ֲ¨׳²ֲ»׳’ג‚¬ֲ ׳³ֲ³׳’ג‚¬ג€�׳²ֲ²ײ²ֲ®׳³ג€™׳’ג€�ֲ¬׳’ג‚¬ן¿½׳³ֲ³׳’ג‚¬ן¿½׳³ג€™׳’ג€�ֲ¬׳�ֲ¿ֲ½׳³ג€™׳’ג€�ֲ¬׳’ג€�ֲ¢׳³ֲ³׳’ג‚¬ֲ¢׳²ֲ»׳’ג‚¬ֲ ׳²ֲ²ײ²ֲ¥׳³ֲ³׳’ג€�ֲ¢׳³ג€™׳’ג€�ֲ¬׳’ג‚¬ן¿½׳²ֲ²ײ²ֲ¢׳³ֲ³׳’ג‚¬ג€�׳³ג€™׳’ג€�ֲ¬ײ²ֲ¢׳²ֲ²ײ²ֲ°׳³ֲ³׳’ג‚¬ן¿½׳³ן¿½ײ²ֲ¿ײ²ֲ½׳²ֲ²ײ²ֲ«׳³ֲ³׳’ג‚¬ן¿½׳³ן¿½ײ²ֲ¿ײ²ֲ½׳³ג€™׳’ג‚¬ן¿½ײ²ֲ¢׳³ֲ³׳’ג‚¬ן¿½׳³ג€™׳’ג€�ֲ¬׳�ֲ¿ֲ½׳³ג€™׳’ג€�ֲ¬ײ²ֲ¹
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 webpack/webpack,a84a0433c993d10fbd240df4f65e705976de48c2,"better optimizing
@@ -13858,7 +13858,7 @@ webpack/webpack,a84a0433c993d10fbd240df4f65e705976de48c2,"better optimizing
 emacs-mirror/emacs,81f0e05a02013bd1c9ea177e234561348b108578,"* src/cmds.c (Fself_insert_command): Get last-command-event via (new) arg.
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 kfowler/emacs,9b7bc07699051b2ef7461f378f4aa7b8f90e1f80,"Comment fixes.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 kubernetes/kubernetes,ecfe25d57d24f2c6a316de054e6137e4c6aef78b,"don't do attach and deatch when volume status is error
 ",1,0,0,True,0,0,,,,,,,,True,False,False,False,False
 bkimminich/juice-shop,66731103dda9045c755a4423684bdfe620fc8d3e,New translations en.json (Italian),0,0,0,False,0,0,,,,,,,,False,False,True,False,False
@@ -14235,7 +14235,7 @@ Signed-off-by: Keith Wiles <f97a07384723981b442bf4ce37d40edbfd008094@intel.com>
 Acked-by: Pascal Mazon <f8a8edbbccb52ea5be26461cb34f4752a08c0c30@6wind.com>
 ",2,0,0,True,0,0,,,,,,,,True,False,True,False,False
 stinsonga/emacs-mirror,d594a73b961f69f12500d5cbc83e48ae07a2b401,"(Fsearch_backward, Fsearch_forward): Doc fix.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 stinsonga/emacs-mirror,9c856db9d285755632fb5bb9465cd5bdffe5b319,"(Fdo_auto_save): Handle the case that echo_area_message
 is set.
 (Finsert_file_contents): Prevent redisplay optimizations.
@@ -14765,7 +14765,7 @@ git-svn-id: http://joomlacode.org/svn/joomla/development/trunk@5636 6f6e1ebd-4c2
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 hluk/CopyQ,3d623cb1da5ddd22c67d4447a92bc62c5b3c8097,Intaller translated into Spanish,0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 spectrecoin/spectre,d62726750f8c99c465b4ee3d1cf2cc1f71d5d950,"Removed label of used base image as it breaks the build as it is no longer a multi stage build
-",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
+",0,0,0,False,0,1,,,,,,,,True,False,False,True,False
 scala/scala,b75812d518cf672c90a903b33625f52c75b3c8f9,"Mention WIP in README
 ",0,0,0,False,0,-1,,,,,,,,False,False,True,False,False
 heyui/heyui,625ca21fb27229c7d4dc3b6de5e922e79cf7f151,"publish׳³ֲ³ײ»ן¿½׳³ג€™׳’ג€�ֲ¬ײ²ֲ¡׳²ֲ²ײ²ֲ³npm׳³ֲ³׳’ג‚¬ג€�׳³ן¿½ײ²ֲ¿ײ²ֲ½׳³ג€™׳’ג€�ֲ¬׳�ֲ¿ֲ½׳³ֲ³׳’ג‚¬ג€�׳³ג€™׳’ג€�ֲ¬׳’ג‚¬ן¿½׳²ֲ²ײ²ֲ¶commit
@@ -15239,7 +15239,7 @@ GiovanniBussi/test-travis-ci,4af69601ba62b6f7575ebd055211a2e6aa9d5147,"changelog
 africanmathsinitiative/R-Instat,7ad4fec84b447d048321239c9f5da1b08aa11cf1,"adding point selection option to netcdf import
 ",0,0,0,False,0,2,,,,,,,,False,False,False,True,True
 ARMmbed/mbed-os,05b19683ff601a4b3755c4e0c37aa386cd20cd22,"Typos corrected in optparser info strings
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 concord-consortium/rigse,84b46f9efdc7f0c7a2005f9435febeb498607120,fixed test to handle rename of login button,1,0,0,True,1,0,,,,,,,,True,True,True,False,False
 input-output-hk/cardano-sl,7da756315b5986e74d2a24546057316fd7ef62ef,"[DAE-4] Fix daedalus frontend build
 ",1,0,0,True,0,0,,,,,,,,True,False,False,False,False
@@ -15468,7 +15468,7 @@ Patches applied:
    * lisp/cus-edit.el (custom-variable-type): Doc fix.
 
 Revision: 4bb0566de8ca4848075d64ca6dd14fea11761eb1@sv.gnu.org/emacs--devo--0--patch-797
-",1,0,0,True,0,0,,,,,,,,True,False,True,True,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,True,False
 stinsonga/emacs-mirror,80070cca29719721131a14f1760619d5228ca677,"message format spec fixes, commit # 10
 ",1,1,0,False,0,0,,,,,,,,False,False,False,True,True
 goreleaser/goreleaser,3277b53d17bc614a8c71f650bc24c518dffd95fe,"improved config
@@ -15670,7 +15670,7 @@ All uses changed.
 (apropos-rewrite-regexp): Doc fix.
 (apropos-variable, apropos-command apropos, apropos-value):
 Change prompt; carry through the argument renaming.
-",1,0,0,True,3,0,,,,,,,,True,True,True,False,False
+",1,0,0,True,3,0,,,,,,,,False,True,True,False,False
 substance/substance,d03dffec938d287e3a3ecac3aa48208ceb3ec117,"Improved documentation.
 ",0,0,0,False,-1,0,,,,,,,,False,False,True,False,False
 GNOME/glib,995f75cdd79d5e293d18b0d551fc3d9d9639a19e,"gitlab-ci: Add 32bit MinGW jobs using MSYS2
@@ -16536,7 +16536,7 @@ Travis needs this hook to update project monitor",0,0,0,False,0,1,,,,,,,,False,F
 grpc/grpc,cfda2bdd43570e225c6a58aed22d1f1c78ff501a,"Test that we dont wrap-around sequence numbers
 ",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
 0xAX/emacs,4bb6c266e4c36335826f4668076ec72af74a3971,"(Fcurrent_local_map): Doc fix.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 lede-project/source,551aff096d4a7a636d86c58b8234284e4bd73f15,"sync busybox with trunk (update to v1.1.3).
 
 SVN-Revision: 3823
@@ -17261,7 +17261,7 @@ TheBastionBot/Bastion,a6a53babb12baf63b4f1ea0bb57819233be48ac2,"locales(en_us): 
 Azure/azure-quickstart-templates,f7379f846ce909ff99b11365342bd659ca509dde,"added metadata.json
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 0xAX/emacs,d25390d0aa414081348ae831d4ed7907e102a929,"Initial revision
-",0,0,0,False,0,0,,,,,,,,False,False,False,False,True
+",0,0,0,False,0,0,,,,,,,,False,False,False,True,True
 QEF/q-e_schrodinger,e4ce86b8a1335e0c838084d76adc6233014f3118,"One more attempt to clean up the mess with magnetism: constraint ""total""
 for magnetization removed for LSDA. ""tot_magnetization"" already does the job.
 
@@ -17334,7 +17334,7 @@ freeciv/freeciv,fadf97eb671877bece5bb137136e401a574904f1,"Clean up a gcc warning
 
 [[originally from CVS; cvs2svn created svn r1039]]
 ",0,0,0,False,0,0,,,,,,,,False,False,True,False,True
-yiisoft/yii2,9f72973b835c20450950af27d92aaed1f80b6da4,Bug in XML format,1,0,0,True,0,0,,,,,,,,False,False,False,False,True
+yiisoft/yii2,9f72973b835c20450950af27d92aaed1f80b6da4,Bug in XML format,1,0,0,True,0,0,,,,,,,,True,False,False,False,False
 MassDistributionMedia/rc-ca-blinds,1b5452a1748c0f958c494c3a5519f7485795461f,"Add basic documentation to installation scripts.
 ",0,0,0,False,0,0,,,,,,,,False,False,True,False,False
 hashicorp/nomad,0d03f1b0171d5e26b4da81a9099ab57c1a1eb5a1,"Update the clustering next steps to go to the UI page.
@@ -17916,7 +17916,7 @@ worked, but
 did not.
 
 Fixes SR-5433 (rdar://problem/33239714).
-",1,0,0,True,1,0,,,,,,,,True,True,True,False,False
+",1,0,0,True,1,0,,,,,,,,False,True,True,False,False
 kubernetes/kubernetes,694630724a1e5036d35ed9c12dc97dd2989d15d6,"Rename TPR to CRD to be consistent
 
 TPR has been completely removed. We should rename TPR
@@ -18079,7 +18079,7 @@ See patch #6457
 [[originally from svn r31023]]
 ",0,0,0,False,0,3,,,,,,,,False,False,False,True,True
 hande-qmc/hande,5b1794add05f5ca9545b8dff9cd44f4a4893e029,"Pedantic format correction to column headings
-",1,0,0,True,0,0,,,,,,,,False,False,False,False,True
+",1,0,0,True,0,0,,,,,,,,True,False,False,False,False
 Stellarium/stellarium,2ddf38d9817b8086f5f35f12a114348015cda5a3,"Integration of new gui and MapPicture feature
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 MedShake/MedShakeEHR-base,6034473bedfe41ba05f46f154c2af317c23f30e9,Correction pr׳³ֲ²ײ²ֲ³׳²ֲ²ײ²ֲ©vention de perte de donn׳³ֲ²ײ²ֲ³׳²ֲ²ײ²ֲ©es,1,0,0,True,0,0,,,,,,,,True,False,False,False,False
@@ -18271,7 +18271,7 @@ AOSC-Dev/aosc-os-abbs,8b70276b9fe86923077dcff178906219f3d214c0,"knotes: update t
 unicef/etools-partnership-management,223037bef5a25c3cfab834d5687e0179df1140de,"Merge branch 'feature--polymer2-migration' into migrate-reports-pages
 ",0,0,0,False,0,1,,,,,,,,False,False,False,True,True
 0xAX/emacs,ff315081a1dd8aa3efc30d65f32f8af503059f86,"; * lisp/replace.el (query-replace-regexp, replace-regexp): Doc fixes.
-",1,0,0,True,0,0,,,,,,,,True,False,True,False,False
+",1,0,0,True,0,0,,,,,,,,False,False,True,False,False
 CA-IRIS/mn-iris,0e638f9a8bd0b3b3a49b3e2b15d19a1d694a2bd5,"Fixed problem with combining scheduled msgs with user msgs on DMS.
 ",1,0,0,True,0,0,,,,,,,,True,False,False,True,False
 fjalvingh/domui,5bc9509c695fffd5d110add5db4ea09d4a615c79,"Bugfix: named unpooled connections to different userID were returned to the

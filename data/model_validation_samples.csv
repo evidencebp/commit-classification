@@ -339,7 +339,7 @@ Signed-off-by: Herbert Xu <ef65de1c7be0aa837fe7b25ba9a7739905af6a55@gondor.apana
 ",2,0,0,True,True,False,fix,,True,True,False,False,False
 dylex/android_external_busybox,b78c782c85705494634a936f6a9b0c6fcaf0860a,awk: style fixes; remove one xstrdup/free pair; testsuite,"awk: style fixes; remove one xstrdup/free pair; testsuite
 
-",0,0,0,False,True,False,style fixes,,True,False,True,True,False
+",0,0,0,False,True,False,style fixes,,False,False,True,True,False
 TeamExodus/external_skia,0a1c3872de6642ada98bd7226ff9ed14750241b9,Remove the non-separable blur because it is no longer used.,"Remove the non-separable blur because it is no longer used.
 
 R=senorblanco@chromium.org, reed@google.com
@@ -887,7 +887,7 @@ Signed-off-by: Eric Van Hensbergen <f6aaec02cb2023b586fda1596c965a5752b892b4@gma
 trickyMan/linux-socfpga,4c2cac8908ded8436191bd058e52d2737fd7fd31,[IEEE80211]: Use correct size_t printf format string in ieee80211_rx.c,"[IEEE80211]: Use correct size_t printf format string in ieee80211_rx.c
 
 Signed-off-by: David S. Miller <fe08d3c717adf2ae63592e4c9aec6e3e404d8e3e@davemloft.net>
-",1,0,0,True,True,True,correct,,False,False,False,False,True
+",1,0,0,True,True,True,correct,,True,False,False,False,False
 gao-feng/net,ad008d42bcec99911b3270a8349f8ec8405a1c4e,[SCSI] mptbase: fix use-after-free's,"[SCSI] mptbase: fix use-after-free's
 
 ioc->name is used in the printk's after ioc has been freed.  Free
@@ -1445,7 +1445,7 @@ TBR=dtseng, robertshield, weitaosu
 Review URL: https://codereview.chromium.org/1233453008
 
 Cr-Commit-Position: 972c6d2dc6dd5efdad1377c0d224e03eb8f276f7@{#338435}
-",0,0,0,False,True,False,enable,,True,False,False,True,False
+",0,0,0,False,True,False,enable,,False,False,False,True,True
 medspx/QGIS,c94b708e5a0080ef2cc1268f678d5f9764bc509f,Changed version=3.2 to version=3.1.2 in UI file,"Changed version=3.2 to version=3.1.2 in UI file
 
 
@@ -2474,7 +2474,7 @@ CODA should not be using defines in the global name space of
 that nature, prefix them with CODA_.
 
 Signed-off-by: Jens Axboe <08e836a620179c237f631ad0545a7ebdf54201f3@fusionio.com>
-",1,0,0,True,True,True,fixup,,True,False,False,False,False
+",1,0,0,True,True,True,fixup,,False,False,False,False,True
 openwrt/linux,d9575dad59de382dd1f1ddcaa6de38d9844691fe,ath9k: Set appropriate bit for AR9565 in btc control register,"ath9k: Set appropriate bit for AR9565 in btc control register
 
 Signed-off-by: Bala Shanmugam <20f23d02313b3c300d83ca8fd332cacde29470cb@qca.qualcomm.com>
