@@ -151,3 +151,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [Quick remedy commits and their impact on mining software repositories](https://link.springer.com/article/10.1007/s10664-021-10051-z) [repo](https://github.com/USI-INF-Software/EMSE-ICPC2020-quick-remedy-commit)
 
 [What Makes a Good Commit Message?](https://arxiv.org/pdf/2202.02974.pdf) [repo](https://zenodo.org/record/5909693#.YgfIny2l1DM)
+
+[Defect Identification, Categorization, and Repair: Better Together](https://arxiv.org/pdf/2204.04856.pdf) [repo](https://zenodo.org/record/5353354#.YlqBS8hBy3B)
