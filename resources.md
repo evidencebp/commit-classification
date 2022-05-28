@@ -153,3 +153,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [What Makes a Good Commit Message?](https://arxiv.org/pdf/2202.02974.pdf) [repo](https://zenodo.org/record/5909693#.YgfIny2l1DM)
 
 [Defect Identification, Categorization, and Repair: Better Together](https://arxiv.org/pdf/2204.04856.pdf) [repo](https://zenodo.org/record/5353354#.YlqBS8hBy3B)
+
+[BugBuilder: An Automated Approach to Building Bug Repository](https://liuhuigmail.github.io/publishedPappers/TSE2022BugBuilder.pdf) [BugBuilder](https://github.com/liuhuigmail/BugBuilder) [GrowingBugRepository](https://github.com/liuhuigmail/GrowingBugRepository)
