@@ -155,3 +155,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [Defect Identification, Categorization, and Repair: Better Together](https://arxiv.org/pdf/2204.04856.pdf) [repo](https://zenodo.org/record/5353354#.YlqBS8hBy3B)
 
 [BugBuilder: An Automated Approach to Building Bug Repository](https://liuhuigmail.github.io/publishedPappers/TSE2022BugBuilder.pdf) [BugBuilder](https://github.com/liuhuigmail/BugBuilder) [GrowingBugRepository](https://github.com/liuhuigmail/GrowingBugRepository)
+
+[TSSB-3M: Mining single statement bugs at massive scale](https://arxiv.org/pdf/2201.12046.pdf) [repo](https://cedricrupb.github.io/TSSB3M/)
