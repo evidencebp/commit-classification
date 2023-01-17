@@ -157,3 +157,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [BugBuilder: An Automated Approach to Building Bug Repository](https://liuhuigmail.github.io/publishedPappers/TSE2022BugBuilder.pdf) [BugBuilder](https://github.com/liuhuigmail/BugBuilder) [GrowingBugRepository](https://github.com/liuhuigmail/GrowingBugRepository)
 
 [TSSB-3M: Mining single statement bugs at massive scale](https://arxiv.org/pdf/2201.12046.pdf) [repo](https://cedricrupb.github.io/TSSB3M/)
+
+[What really changes when developers intend to improve their source code: a commit-level study of static metric value and static analysis warning changes](https://link.springer.com/article/10.1007/s10664-022-10257-9) [dataset](https://github.com/atrautsch/emse2021_replication)
