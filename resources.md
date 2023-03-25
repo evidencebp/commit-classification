@@ -160,4 +160,6 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 
 [What really changes when developers intend to improve their source code: a commit-level study of static metric value and static analysis warning changes](https://link.springer.com/article/10.1007/s10664-022-10257-9) [dataset](https://github.com/atrautsch/emse2021_replication)
 
-[Defectors: A Large, Diverse Python Dataset for Defect Prediction](https://arxiv.org/abs/2303.04738) [dataset](https://zenodo.org/record/7708984#.ZAyD4XZBy3A)
+[Defectors: A Large, Diverse Python DataCommit Message Matters: Investigating Impact and Evolution of Commit Message Qualityset for Defect Prediction](https://arxiv.org/abs/2303.04738) [dataset](https://zenodo.org/record/7708984#.ZAyD4XZBy3A)
+
+[Commit Message Matters: Investigating Impact and Evolution of Commit Message Quality](http://stairs.ics.uci.edu/papers/2023/Commit_Messages.pdf) [dataset](https://zenodo.org/record/7042943#.ZB74inZBy3C)
