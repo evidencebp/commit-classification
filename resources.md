@@ -162,6 +162,8 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 
 [Defectors: A Large, Diverse Python DataCommit Message Matters: Investigating Impact and Evolution of Commit Message Qualityset for Defect Prediction](https://arxiv.org/abs/2303.04738) [dataset](https://zenodo.org/record/7708984#.ZAyD4XZBy3A)
 
+[An Empirical Study on Bugs Inside PyTorch: A Replication Study](https://arxiv.org/pdf/2307.13777.pdf) [dataset](https://github.com/datasetsharing/pytorchbugdataset/blob/main/PyTorchBugDataset.xlsx)
+
 [Commit Message Matters: Investigating Impact and Evolution of Commit Message Quality](http://stairs.ics.uci.edu/papers/2023/Commit_Messages.pdf) [dataset](https://zenodo.org/record/7042943#.ZB74inZBy3C)
 
 [BugBuilder: An Automated Approach to Building Bug Repository](https://ieeexplore.ieee.org/document/9782533) [dataset](https://github.com/liuhuigmail/GrowingBugRepository)
