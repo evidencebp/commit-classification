@@ -169,3 +169,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [BugBuilder: An Automated Approach to Building Bug Repository](https://ieeexplore.ieee.org/document/9782533) [dataset](https://github.com/liuhuigmail/GrowingBugRepository)
 
 [gitmoji - structured and colorful commit classification using emojis](https://gitmoji.dev/)
+
+[An Analysis of Improving Bug Fixing in Software Development](https://www.scitepress.org/Papers/2023/121195/121195.pdf)
