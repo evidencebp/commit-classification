@@ -166,6 +166,8 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 
 [Commit Message Matters: Investigating Impact and Evolution of Commit Message Quality](http://stairs.ics.uci.edu/papers/2023/Commit_Messages.pdf) [dataset](https://zenodo.org/record/7042943#.ZB74inZBy3C)
 
+[Shedding Light on Software Engineering-specific Metaphors and Idioms](https://arxiv.org/abs/2312.10297) [dataset](https://anonymous.4open.science/r/SE-Figurative-Language-1586)
+
 [BugBuilder: An Automated Approach to Building Bug Repository](https://ieeexplore.ieee.org/document/9782533) [dataset](https://github.com/liuhuigmail/GrowingBugRepository)
 
 [gitmoji - structured and colorful commit classification using emojis](https://gitmoji.dev/)
