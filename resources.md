@@ -173,3 +173,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [gitmoji - structured and colorful commit classification using emojis](https://gitmoji.dev/)
 
 [An Analysis of Improving Bug Fixing in Software Development](https://www.scitepress.org/Papers/2023/121195/121195.pdf)
+
+[Known Vulnerabilities of Open Source Projects: Where Are the Fixes?](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10381645)
