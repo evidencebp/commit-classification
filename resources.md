@@ -176,4 +176,6 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 
 [Known Vulnerabilities of Open Source Projects: Where Are the Fixes?](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10381645)
 
-[Review of Open Software Bug Datasets](https://link.springer.com/chapter/10.1007/978-3-031-45648-0_1)
+[Review of Open Software Bug Datasets](https://link.springer.com/chapter/10.1007/978-3-031-45648-0_1
+
+[On Refining the SZZ Algorithm with Bug Discussion Data](https://link.springer.com/article/10.1007/s10664-024-10511-2) [dataset](https://zenodo.org/records/11484723)
