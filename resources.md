@@ -179,3 +179,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [Review of Open Software Bug Datasets](https://link.springer.com/chapter/10.1007/978-3-031-45648-0_1
 
 [On Refining the SZZ Algorithm with Bug Discussion Data](https://link.springer.com/article/10.1007/s10664-024-10511-2) [dataset](https://zenodo.org/records/11484723)
+
+[Multilabel classification for defect prediction in software engineering](https://www.nature.com/articles/s41598-025-93242-8) [dataset](https://github.com/jalajpachouly/multilable-prediction)
