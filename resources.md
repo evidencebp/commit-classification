@@ -181,3 +181,5 @@ Imbalanced Learning Environment](http://www.mecs-press.org/ijitcs/ijitcs-v13-n3/
 [On Refining the SZZ Algorithm with Bug Discussion Data](https://link.springer.com/article/10.1007/s10664-024-10511-2) [dataset](https://zenodo.org/records/11484723)
 
 [Multilabel classification for defect prediction in software engineering](https://www.nature.com/articles/s41598-025-93242-8) [dataset](https://github.com/jalajpachouly/multilable-prediction)
+
+[HaPy-Bug – Human Annotated Python Bug Resolution Dataset](https://arxiv.org/pdf/2504.04810) [dataset](https://figshare.com/articles/dataset/HaPy-Bug_Human_Annotated_Python_Bug_Resolution_Dataset/24448663)
